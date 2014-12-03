@@ -1,0 +1,23 @@
+#To create your environment for the first time:
+git clone https://github.com/paktinat/Notes Notes
+
+#To set your environment:
+eval `./notes/tdr runtime -csh`
+
+#Go to this directory and modify your files
+cd notes/AN-14-275/trunk/
+
+#To compile the document
+tdr --style=an b AN-14-275
+
+#To add a new file
+git add new_file
+
+#To commit your changes
+git commit -a
+
+#To push everything to the repository
+git push origin master
+
+
+
