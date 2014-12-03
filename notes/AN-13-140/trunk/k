@@ -1,0 +1,75 @@
+******************************************************************************
+* tdr (version 215631) *
+* *
+* Builds TDRs and others such documents Lucas Taylor, 6 Jan 2005 *
+* *
+* Initialisation (once per session/new shell) *
+* -------------- *
+* > eval `tdr runtime -sh` // for Bourne-shell or Korn shell *
+* > eval `tdr runtime -csh` // for c-shell or tc shell *
+* *
+* Usage: *
+* ----- *
+* > tdr [options] build target // process target.tex to produce pdf, etc. *
+* *
+* target = [ blank ] // builds user guide, use --style=note *
+* Example targets: ctdr // Computing TDR *
+* ptdr1|ptrd2 // Physics TDR Vol I|II *
+* slhc-eoi // SLHC Expression of Interest *
+* mtcc // Magnet test and Cosmic Challenge document *
+* foo // builds any file foo.tex in current directory. *
+* ----- *
+* options: *
+* --verbose: log messages from TeX *
+* (default is --noverbose) *
+* --style=: document style, one of tdr/note/an/pas/cr/in/paper *
+* (default --style=tdr) *
+* --copyPdf: copy the final pdf back to the document home directory. If --copyPdf=svn, copies with svn version. *
+* (default false) *
+* --export: create a copy of the entire target for export. *
+* produces a compressed tarball under Unix. *
+* (default --noexport) *
+* --draft: mark the output as a draft version *
+* (default --draft; override with --nodraft) *
+* --clean: clean the tmp working area before execution *
+* (default --clean; override with --noclean) *
+* > tdr clean // deletes temporary output files *
+* > tdr veryclean // normal clean and also emacs backups etc. *
+* > tdr help // display this help *
+* *
+******************************************************************************
+* PAS specific administrative options: *
+* --wrap: produce an archive containing output pdf+copies of figs *
+* in the output directory *
+* (default --nowrap) *
+* --preview: preview the upload to CDS (implies --wrap) *
+* *
+* --upload: upload the pdf+copies of figs to CDS (implies --wrap) *
+* *
+* --reload=: CDS document number to reupload (implies --upload) *
+* *
+******************************************************************************
+* Paper specific administrative options: *
+* --arxiv: produce an archive containing output pdf+copies of figs *
+* (nodraft; arxiv specific processing inclusions, authorlist) *
+* --preprint: CERN preprint style forced on top of paper style *
+* --latex: use eps for graphics files *
+* *
+* --cernNo: CERN generated preprint number, e.g. 2010-003 *
+* --cernDate: issuance date for preprint e.g. '05 Feb 2010' *
+* --message: string placed after the abstract, typically *
+* Submitted to XXX *
+* --appendix=: document has appendices, do not start authorlist with appendix command *
+* (default --no-appendix) *
+* --supplement: document is a supplement, suppress abstract and full author list *
+* *
+*----------------------------------------------------------------------------*
+* To post-process to standard journal styles: *
+* --aps=: options for revtex4-style processing (= - for defaults) *
+* reprint, prl, showpacs (showkeys, draft, preprint, prd) *
+* --plb=: options for elsevier (plb)-style processing (= - for defaults) *
+* 3p, twocolumn, times *
+* --epjc=: options for Springer Verlag (Europhysics C) processing (= - for defaults) *
+* twocolumn *
+* --jhep=: options for JHEP processing (= - for defaults) [not really post-processing]*
+******************************************************************************
