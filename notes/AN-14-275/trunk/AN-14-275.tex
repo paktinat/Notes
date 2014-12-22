@@ -11,6 +11,11 @@
 %%%%%%%%%%%%% local definitions %%%%%%%%%%%%%%%%%%%%%
 % This allows for switching between one column and two column (cms@external) layouts
 % The widths should  be modified for your particular figures. You'll need additional copies if you have more than one standard figure size.
+
+
+\input{commands.tex}
+
+
 \newlength\cmsFigWidth
 \ifthenelse{\boolean{cms@external}}{\setlength\cmsFigWidth{0.85\columnwidth}}{\setlength\cmsFigWidth{0.4\textwidth}}
 \ifthenelse{\boolean{cms@external}}{\providecommand{\cmsLeft}{top\xspace}}{\providecommand{\cmsLeft}{left\xspace}}
@@ -24,10 +29,18 @@
 %Author is always "The CMS Collaboration" for PAS and papers, so author, etc, below will be ignored in those cases
 %For multiple affiliations, create an address entry for the combination
 %To mark authors as primary, use the \author* form
-\address[neu]{Northeastern University}
-\address[fnal]{Fermilab}
-\address[cern]{CERN}
-\author[cern]{The CMS Collaboration}
+\address[ipm]{School of Particles and Accelerators, IPM, Tehran, Iran}
+\address[ut]{University of Tehran, Tehran, Iran, also at IPM}
+\address[iut]{Isfahan University of Technology, Isfahan, Iran, also at IPM}
+\address[ucl]{UCL, Belgium}
+
+\author[ipm]{Hamed Bakhshian}
+\author[iut]{Shirin Chenarani}
+\author[ipm]{Esmaeel Eskandari}
+\author[ut]{Ali Fahim}
+\author[ucl]{Abideh Jafari}
+\author[ipm]{Saeid Paktinat Mehdiabadi}
+\author[ipm]{Maryam Zeinali}
 
 % >> Date
 % The date is in yyyy/mm/dd format. Today has been
@@ -55,7 +68,7 @@
 % (2) no %.
 % (3) No curly braces {}.
 \hypersetup{%
-pdfauthor={George Alverson, Lucas Taylor, A. Cern Person},%
+pdfauthor={IPM tautau group},%
 pdftitle={Search for chargino pair production in di-tau final states},%
 pdfsubject={CMS},%
 pdfkeywords={CMS, physics, software, computing}}
