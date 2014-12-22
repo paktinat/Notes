@@ -7,7 +7,7 @@ eval `./notes/tdr runtime -csh`
 #Go to this directory and modify your files
 cd notes/AN-14-275/trunk/
 
-#On the cms-computing update your tex by the following command
+#On the cms-computing update your tex by the following command (you can add the following line to your .tcshrc)
 setenv PATH /dataLOCAL/texlive/2013/bin/x86_64-linux/:$PATH
 
 #To compile the document
