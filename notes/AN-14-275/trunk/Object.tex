@@ -4,8 +4,58 @@
 Electron
 Eskandari
 
-Muon 
-Chenarani
+
+\subsection{Muon identification and reconstruction}
+
+
+Muons are required to be reconstructed by the Tracker or the Global muon reconstruction algorithm and to be identified as 
+muons by tight particle flow algorithm.
+
+The particle flow algorithm identifes  muons by separating them in the several step.
+
+
+$\bullet$  the number of pixel hit(s) associated to muon track$\geq $1
+
+$\bullet$  Cut on number of tracker layers with hits $\geq $ 6
+
+$\bullet$ the number of hit in muon system $\geq $ 1
+
+$\bullet$ Tracker track matched with at least one muon segment (in any station)
+
+$\bullet$ $\chi ^{2}/NDoF $ for the global track fit$< $ 10 ,
+
+$\bullet$ Impact parameter constrains between the muon track and the selected primary vertex 
+ $d_{z} < $0.5 cm and $d_{0} <$ 0.2 cm.
+
+\subsection{Muon and electron isolation}
+
+In order to reduce the background contributions from QCD multi–jet events, electrons and
+muons are required to be isolated. The isolation is computed as the $P_{T}$ sum of charged particles (including charged hadrons, 
+electrons and muons), neutral hadrons plus photons reconstructed by the PF algorithm within a cone of size
+$\Delta R_{iso}$ = 0.4 around the direction of the muon respectively electron. 
+
+
+In the innermost region
+(``veto cone'') neutral
+hadrons and photons  are excluded from the computation of the isolation $P_{T}$ sum in order to prevent energy deposits in the electromagnetic and hadronic
+calorimeters. Charged particles close to the direction of electrons  are excluded too in order to avoid tracks due to conversions of photons emitted by Bremsstrahlung processes to spoil the isolation.
+
+For the muon isolation the photon and neutral hadron candidates are required to have a transverse energy of MET $>$ 0.5 GeV. This reduces pile–up effects. The correction of pile–up to isolation is done by applying $\Delta\beta$ corrections.
+\begin{linenomath}
+\begin{equation}
+\label{eq:muonisolation1}
+I_{e/ \mu}=\Sigma P_{T}^{charged }(\Delta z <2mm)+max(P_{T}^{photon}+P_{T}^{h0 }-\Delta \beta,0),
+\end{equation}
+\end{linenomath}
+The $\Delta\beta$ corrections are computed by summing the transverse momenta of charged particles
+that have longitudinal impact parameters $\Delta z > 2$ mm with respect to the lepton production
+vertex and scaling the sum by a factor 0.5:
+\begin{linenomath}
+\begin{equation}
+\label{eq:muonisolation2}
+\Delta\beta=0.5 \Sigma P_{T}^{charged }(\Delta z <2mm).
+\end{equation}
+\end{linenomath}
 
 Tau
 Nadjieh
