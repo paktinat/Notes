@@ -1,7 +1,129 @@
 \section{Datasets and MC samples}
 \label{sect:dataMC}
+To reconstruct the objects, the CMSSW\_5\_3\_7\_patch5 is used for both data and MC.
+The data used in this analysis corresponds to \IL of proton-proton collisions in the center of mass energy of $\sqrt{s}$ = 8 TeV 
+which was taken in 2012. The datasets used for $e\tau_{had}$, $\mu\tau_{had}$ and $\tau_{had}\tau_{had}$ channels, the run range and the corresponding integrated luminosities are mentioned Table \ref{Tab.DataSamples}.
 
-Eskandari
+Only the lumisections with fully operative CMS subdetectors are used (golden JSON files$^{1}$). To optimize the search method, MC 
+samples are used for different Standard Model backgrounds and signals. These samples are officially generated and reconstructed by the CMS
+collaboration. The full list of the MC samples and their cross sections are given in Table \ref{Tab.MCSamples}. For most of the samples the most 
+accurate calculation of the cross sections available in the literature (usually NLO and NNLO) are used. 
 
 
 
+\begin{table}[!h]
+\begin{center}
+%{\footnotesize
+\begin{tabular}{|l|c|c|}
+\hline
+\multicolumn{3}{|c|}{$e\tau_{had}$ and $\mu\tau_{had}$ channels} \\
+\hline
+Dataset Name & Run--range & Luminosity \\
+\hline
+/TauPlusX/Run2012A-22Jan2013-v1/AOD$^{1}$   & 190456--193621 & 0.887\\
+/TauPlusX/Run2012B-22Jan2013-v1/AOD$^{1}$   & 193833--196531 & 4.446\\
+/TauPlusX/Run2012C-22Jan2013-v1/AOD$^{1}$   & 198022--203742 & 7.153\\
+/TauPlusX/Run2012D-22Jan2013-v1/AOD$^{1}$   & 203777--208686 & 7.318\\
+\hline
+\hline
+\multicolumn{3}{|c|}{$\tau_{had}\tau_{had}$ channel} \\
+\hline
+Dataset Name & Run--range & Luminosity \\
+\hline
+/Tau/Run2012A-22Jan2013-v1/AOD$^{1}$   & 190456--193621 & 0.887 \\
+/TauParked/Run2012B-22Jan2013-v1/AOD$^{1}$ & 193833--196531 & 4.446 \\
+/TauParked/Run2012C-22Jan2013-v1/AOD$^{1}$ & 198022--203742 & 7.153 \\
+/TauParked/Run2012D-22Jan2013-v1/AOD$^{1}$ & 203777--208686 & 7.318 \\
+\hline
+
+\end{tabular}
+%} % end footnotesize
+\end{center}
+$^{1}$ Cert\_190456-208686\_8TeV\_22Jan2013ReReco\_Collisions12\_JSON.txt \\
+\end{table}
+\label{Tab.DataSamples}
+
+
+
+
+\begin{table}[!ht]
+\begin{center}
+\caption{ 
+  List of Monte Carlo samples used as backgrounds.
+}
+\small{
+\begin{tabular}{|l|l|c|}
+\hline
+\multicolumn{3}{|c|}{MC samples } \\
+\hline
+Dataset Description                &   Dataset Name                                            & Cross-Section [pb]    \\
+\hline
+\multicolumn{3}{|c|}{$QCD$ used in $e/\mu\tau_{had}$ channels }\\
+\hline
+$QCD BCtoE$                        &    /QCD\_Pt\_20...inf\_BCtoE\_TuneZ2star\_8TeV\_pythia6$^{2}$                &\\
+$QCD EM\_Enriched$                 &    /QCD\_Pt\_20...inf\_EMEnriched\_TuneZ2star\_8TeV\_pythia6$^{2}$           & \\
+$QCD Mu\_Enriched $                &    /QCD\_Pt-15...inf\_MuEnrichedPt5\_TuneZ2star\_8TeV\_pythia6$^{2}$         &\\
+$Gamma+jets$                       &    /GJets\_HT-40...inf\_8TeV-madgraph$^{2}$                                  &\\
+\hline
+\multicolumn{3}{|c|}{$QCD$ used in $\tau_{had}\tau_{had}$ channel }\\
+\hline
+QCD                                &   /QCD\_HT-100...inf\_TuneZ2star\_8TeV-madgraph-pythia6$^{2}$            &\\
+\hline
+
+\multicolumn{3}{|c|}{$top$ }\\
+\hline
+                                   &   /T\_tW-channel-DR\_TuneZ2star\_8TeV-powheg-tauola$^{2}$       & $22.4$                \\
+                                   &   /Tbar\_tW-channel-DR\_TuneZ2star\_8TeV-powheg-tauola$^{2}$    & $22.4$\\
+                                   &   /T\_s-channel\_TuneZ2star\_8TeV-powheg-tauola$^{2}$           & $3.79$\\
+                                   &   /Tbar\_s-channel\_TuneZ2star\_8TeV-powheg-tauola$^{2}$        & $1.76$\\
+                                   &   /T\_t-channel\_TuneZ2star\_8TeV-powheg-tauola$^{2}$           & $56.4$\\
+                                   &   /Tbar\_t-channel\_TuneZ2star\_8TeV-powheg-tauola$^{2}$        & $30.7$\\
+
+$\ttbar$                           &   /TTJets\_MassiveBinDECAYTTJets\_TuneZ2star\_8TeV$^{2}$  &  $245.8$       \\
+&-madgraph-tauola&\\
+\hline
+\multicolumn{3}{|c|}{$Z+jets (Drell-Yan)$ }\\
+\hline
+$Z \rightarrow ll$                 &   /DYJetsToLL\_M-10To50filter\_8TeV-madgraph-tarball$^{2}$      &   $876.8$               \\
+$Z \rightarrow ll$                 &   /DYJetsToLL\_M-50\_TuneZ2Star\_8TeV-madgraph-tarball$^{2}$    &   $3503.7$               \\
+$Z+1$jet                           &   /DY1JetsToLL\_M-50\_TuneZ2Star\_8TeV-madgraph$^{2}$           &   $666.3$               \\
+$Z+2$jets                          &   /DY2JetsToLL\_M-50\_TuneZ2Star\_8TeV-madgraph$^{2}$           &   $215.0$               \\
+$Z+3$jets                          &   /DY3JetsToLL\_M-50\_TuneZ2Star\_8TeV-madgraph$^{2}$           &   $60.7$               \\
+$Z+4$jets                          &   /DY4JetsToLL\_M-50\_TuneZ2Star\_8TeV-madgraph$^{2}$           &   $27.3$               \\
+\hline
+\multicolumn{3}{|c|}{$W+jets$ }\\
+\hline
+
+$W+$jets                           &   /WJetsToLNu\_TuneZ2Star\_8TeV-madgraph-tarball$^{2}$          &  $36257.2$              \\
+$W+1$jet                           &   /W2JetsToLNu\_TuneZ2Star\_8TeV-madgraph-tarball$^{2}$         &  $6381.2$               \\
+$W+2$jets                          &   /W2JetsToLNu\_TuneZ2Star\_8TeV-madgraph-tarball$^{2}$         &  $2039.8$               \\
+$W+3$jets                          &   /W3JetsToLNu\_TuneZ2Star\_8TeV-madgraph-tarball$^{2}$         &  $612.5$               \\
+$W+4$jets                          &   /W4JetsToLNu\_TuneZ2Star\_8TeV-madgraph-tarball$^{2}$         &  $251.0$                \\
+\hline
+\multicolumn{3}{|c|}{$Di-Bosons$ }\\
+\hline
+$WW$                                 &   /WWJetsTo2L2Nu\_TuneZ2star\_8TeV-madgraph-tauola$^{2}$        &  $5.8$                \\
+$WZ$                                 &   /WZJetsTo3LNu\_TuneZ2\_8TeV-madgraph-tauola$^{2}$             &  $1.1$                \\
+$WZ$                                 &   /WZJetsTo2L2Q\_TuneZ2star\_8TeV-madgraph-tauola$^{2}$         &  $2.2$                \\
+$ZZ$                                 &   /ZZJetsTo4L\_TuneZ2star\_8TeV-madgraph-tauola$^{2}$           &  $0.2$                \\
+$ZZ$                                 &   /ZZJetsTo2L2Nu\_TuneZ2star\_8TeV-madgraph-tauola$^{2}$        &  $0.7$                \\
+$ZZ$                                 &   /ZZJetsTo2L2Q\_TuneZ2star\_8TeV-madgraph-tauola$^{2}$         &  $2.5$                \\
+\hline
+\multicolumn{3}{|c|}{$Others$ }\\
+\hline
+$t\bar{t}+Gamma+jets$              &   /TTGJets\_8TeV-madgraph$^{2}$                                  &  $2.166$              \\
+$t\bar{t}+Higgs+jets$              &   /TTH\_Inclusive\_M-125\_8TeV\_pythia6$^{2}$                    &  $0.13$               \\
+$t\bar{t}+W+jets$                  &   /TTWJets\_8TeV-madgraph$^{2}$                                  &  $0.232$              \\
+$t\bar{t}+Z+jets$                  &   /TTZJets\_8TeV-madgraph$^{2}$                                  &  $0.2057$                \\
+$t\bar{t}+WW+jets$                 &   /TTWWJets\_8TeV-madgraph$^{2}$                                 &  $0.002037$                \\
+
+
+\hline
+\end{tabular}
+}
+\end{center}
+$^{2}$ /Summer12-DR53X-PU\_S10\_START53\_V7A-v1/AODSIM}\\
+
+
+\label{Tab.MCSamples}
+\end{table}
