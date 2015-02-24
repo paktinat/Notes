@@ -2,18 +2,20 @@
 \label{sect:dataMC}
 To reconstruct the objects, the CMSSW\_5\_3\_7\_patch5 is used for both data and MC.
 The data used in this analysis corresponds to \IL of proton-proton collisions in the center of mass energy of $\sqrt{s}$ = 8 TeV 
-which was taken in 2012. The datasets used for $e\tau_{had}$, $\mu\tau_{had}$ and $\tau_{had}\tau_{had}$ channels, the run range and the corresponding integrated luminosities are mentioned Table \ref{Tab.DataSamples}.
+which was taken in 2012. The datasets used for $e\tau_{had}$, $\mu\tau_{had}$ and $\tau_{had}\tau_{had}$ channels, the run range and the corresponding integrated luminosities are mentioned Table ~\ref{Tab.DataSamples}.
 
 Only the lumisections with fully operative CMS subdetectors are used (golden JSON files$^{1}$). To optimize the search method, MC 
 samples are used for different Standard Model backgrounds and signals. These samples are officially generated and reconstructed by the CMS
-collaboration. The full list of the MC samples and their cross sections are given in Table \ref{Tab.MCSamples}. For most of the samples the most 
+collaboration. The full list of the MC samples and their cross sections are given in Table ~\ref{Tab.MCSamples}. For most of the samples the most 
 accurate calculation of the cross sections available in the literature (usually NLO and NNLO) are used. 
 
 
 
 \begin{table}[!h]
+
 \begin{center}
 %{\footnotesize
+\small{
 \begin{tabular}{|l|c|c|}
 \hline
 \multicolumn{3}{|c|}{$e\tau_{had}$ and $\mu\tau_{had}$ channels} \\
@@ -38,19 +40,21 @@ Dataset Name & Run--range & Luminosity \\
 
 \end{tabular}
 %} % end footnotesize
+}
 \end{center}
 $^{1}$ Cert\_190456-208686\_8TeV\_22Jan2013ReReco\_Collisions12\_JSON.txt \\
-\end{table}
+\caption{
+  List of datasets analyzed by different channels.
+}
 \label{Tab.DataSamples}
+\end{table}
+
 
 
 
 
 \begin{table}[!ht]
 \begin{center}
-\caption{ 
-  List of Monte Carlo samples used as backgrounds.
-}
 \small{
 \begin{tabular}{|l|l|c|}
 \hline
@@ -119,11 +123,15 @@ $t\bar{t}+WW+jets$                 &   /TTWWJets\_8TeV-madgraph$^{2}$           
 
 
 \hline
+
 \end{tabular}
 }
 \end{center}
-$^{2}$ /Summer12-DR53X-PU\_S10\_START53\_V7A-v1/AODSIM}\\
+$^{2}$ /Summer12-DR53X-PU\_S10\_START53\_V7A-v1/AODSIM\\
 
-
+\caption{ 
+  List of Monte Carlo samples used as backgrouns.
+}
 \label{Tab.MCSamples}
+
 \end{table}
