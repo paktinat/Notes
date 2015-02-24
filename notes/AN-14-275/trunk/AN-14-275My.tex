@@ -55,16 +55,10 @@
 % 2. **DO NOT use %**                  to comment out sections of the abstract: the extractor will still grab those lines (and they won't be comments any longer!).
 % 3. For PASs: **DO NOT use tex macros**         in the abstract: CDS MathJax processor used on the abstract doesn't understand them _and_ will only look within $$. The abstracts for papers are hand formatted so macros are okay.
 \abstract{
- A search for SUSY in chargino pair production is performed when the charginos decay to a tau, neutrino 
- and neutralino. Different channels use 18.1 to 19.6 $fb^{-1}$ of proton-proton collisions at $\sqrt(s)$ = 8 TeV.
- At least one of the taus is required to decay hadronically.
- MT2 is used as a search variable to distinguish between signal and background. 
- In a special part of the phase space, moderate MT2, the sum of the transverse  
- mass of two taus found to be a useful variable. In different bins of the search, 
- data is found to be in a good agreement with the background prediction, so we 
- set 95\% confidence level limits on the masses of the lightest chargino and neutralino.
- In the context of the simplified models, charginos lighter than XXX and neutralinos below YYYY
- are excluded in the 95\% confidence level.
+   This is an example of a \textit{CMS Note} written in \LaTeX
+    using the \emph{cms-tdr} document class and processed using the
+    same \texttt{tdr} perl script used in generating the CMS Physics TDRs.
+    Instructions for producing CMS Notes and Internal Notes are given.
 }
 
 % >> PDF Metadata
@@ -98,10 +92,8 @@ pdfkeywords={CMS, physics, software, computing}}
 \input{SelectionMuTau}
 \input{SelectionEleTau}
 \input{Backgrounds}
-\input{BackgroundsTauTau} 
 \input{Systematics}
 \input{Statistics}
 \input{Conclusion}
-
 \bibliography{auto_generated}
 %%% DO NOT ADD \end{document}!
