@@ -1,4 +1,16 @@
 \section{Systematics}
 \label{sect:sys}
 
-everybody takes care of his/her channel.
+\subsection{Signal Systematic Uncertainties}
+\subsection{B-veto}
+The jet activity of our signal is coming from ISR and due to generating our signal with PYTHIA generator which can not simulate ISR properly, taking into account only $2 \rightarrow 2$ scattering processes, therefore ISR jet momenta spectra as well as the multiplicity cannot be Trusted. Because of this issue it is possible to generate light-flavor jet which can be tagged wrongly as a b-jet and by applying a b-veto cut we miss that signal event. On the other side MADGRAPH generator, which is a matrix element generator provids a better description of ISR jets and because it can simulate $2 \rightarrow 4$ interactions. 
+We take advantage of this point by choosing a signal-like MADGRAPH generated MC sample like $WW$ which mimics the signal from the generation point of view and comparing it with the signal according to the following recipe, originating from $fixME$   :
+we relax b-veto cut and read the yields of WW and signal and then we apply this cut and read the yields again and we obtain:
+
+$WW_ratio: WW_bveto/ WW_relaxed
+susy_ratio: susy_bveto/susy_relaxed
+Uncertainty 1: (susy_ratio  Then due to not having a WW enriched region in data we use the previous WW sample multiplied by 0 b-tag SF as data and we re-do the above calculation for data (WW * 0b-tag SF) means applying and relaxing b-tagging and we have:
+data_ratio: data_bveto/ WW_relaxed
+Uncertainty 2: (data_ratio and finally we obtain:
+B-tagged jet vet systematic: (Uncertainty1*Uncertainty1 + Uncertainty2*Uncertainty2)^1/2  $
+
