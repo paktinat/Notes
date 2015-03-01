@@ -1,24 +1,23 @@
-%\section{The definition of $\rm {M_{T2}}$}
-\section{\texorpdfstring{The definition of $\rm {M_{T2}}$}{The definition of MT2}}
+%\section{The definition of $\rm {\mttwo}$}
+\section{\texorpdfstring{The definition of $\rm {\mttwo}$}{The definition of MT2}}
 \label{sect:mt2def}
-
-Nadjieh
-
-The variable transverse masss is used to measure the mass of the W-boson~\cite{Arnison:1983rp,Banner:1983jy,Affolder:2000bpa,Abazov:2002bu} in its decay to a lepton and a neutrino, where only the transverse missing energy due to undetected neutrino could be measured. It is defined as 
+The variable transverse masss is used to measure the mass of the W boson~\cite{Arnison:1983rp,Banner:1983jy,Affolder:2000bpa,Abazov:2002bu} in its decay to a lepton and a neutrino, where only the transverse missing energy due to undetected neutrino could be measured. It is defined as 
 \begin{linenomath}
 \begin{equation}
 \label{eq:mtdef}
-m_{T}^{2}= 2\,( E_T^lE_T^\nu-\vec{p_T}^l.\vec{p_T}^\nu ),
+\mt^{2}= 2\,( \et^l\et^\nu-\vec{\pt}^l.\vec{\pt}^\nu ),
 \end{equation}
 \end{linenomath}
-where for neutrino, $E_T^\nu=p_T^\nu$. The kinmatic endpoint of $m_T$ is an estimator for the W-mass, i.e. $m_T^2\leq m_W^2$. \\
-The $M_{T2}$ variable~\cite{Lester:1999tx,Barr:2003rg} is introduced and used in this analysis to discriminate between SUSY signal and the SM backgrounds while it is originally intended to estimate the mass of unseen particles. The kinematic endpoint of $M_{T2}$ carries model independent information about the mass difference between the primary and the secondary supersymmetric particles. It is in particular useful to study events containing two simultaneous decays of a supersymmetric particle into a visible and an undetectable particle (e.g. neutralino). It is defined as
+where for neutrino, $\et^\nu=\pt^\nu$. The kinmatic endpoint of $\mt$ is an estimator for the W boson mass, i.e. $\mt^2\leq m_{\rm W}^2$. 
+
+The $\mttwo$ variable~\cite{Lester:1999tx,Barr:2003rg} is introduced and used in this analysis to discriminate between SUSY signal and the SM backgrounds while it is originally intended to estimate the mass of unseen particles. The kinematic endpoint of $\mttwo$ carries model independent information about the mass difference between the primary and the secondary supersymmetric particles. It is in particular useful to study events containing two simultaneous decays of a supersymmetric particle into a visible and an undetectable particle (e.g. neutralino). For the current analysis, $\mttwo$ is defined as
 \begin{linenomath}
 \begin{equation}
 \label{eq:mt2def}
-M_{T2}(m_{\chi})= \min_{p_{T}^{\chi_1}+p_{T}^{\chi_2}=E_T^{miss}}\,\left[\,\max\,\{ \, m_{T}(p_T^{\chi_1};m_{\chi}),\,m_{T}(p_T^{\chi_2};m_{\chi})\,\}\,\right],
+\mttwo(m_{\neutralino})= \min_{\pt^{\chione}+\pt^{\stau}=\met}\,\left[\,\max\,\{ \, \mt(\pt^{\chione};m_{\neutralino}),\,\mt(\pt^{\stau};m_{\neutralino})\,\}\,\right].
 \end{equation}
 \end{linenomath}
-where $\chi$ stands for the neutralino whose mass is a free parameter in the evaluation of $M_{T2}$. The choice of maximum $m_T$ is reasonable since none of the two transverse mass exceeds the mass of parents. The chosen transverse mass is minimized over the range of $m_{\chi}$ which again ensures that $m_T$ is less than the parents mass. \\
-While for boosted systems in the transverse plain $M_{T2}$ can be computed only numerically, there are analytic solutions~\cite{Cho:2007dh} for unboosted scenarios. There, one can write the $M_{T2}$ endpoint as a function of the masses. \\
-To reconstruct the visible system as the input for $M_{T2}$ calculation, the visible part of the event (jets in this analysis) is decomposed into two \textit{pseudojets}. The procedure is known as \textit{hemisphere} reconstruction and is already used in~\cite{CMS-PAS-SUS-12-002}. The two massless jets with the highest invariant mass define the primary two directions of hemispheres. Other jets are added to one of the hemispheres based on the minimal Lund distance ( see e.g. ~\cite{Sjostrand:2006za}). The resulting $M_{T2}$ variable is proven to well reject the multi-jet processes with non-genuine $E_{T}^{miss}$~\cite{CMS-PAS-SUS-12-002}. \\
+While for boosted systems in the transverse plain $\mttwo$ can be computed only numerically, there are analytic solutions~\cite{Cho:2007dh} for unboosted scenarios. There, one can write the $\mttwo$ endpoint as a function of the masses. If $m_{\neutralino}$ were known, the $\mttwo$ would be a function of $m_{\chione}-m_{\stau}$. \textbf{FIXME}: We set $m_{\neutralino} =0$ in our calculations.
+
+As illustrated in Fig.~\ref{fig:Productions} , two $\tau$ leptons are expected in the final state. Therefore the visible part of the event of this analysis changes from two hadronically decaying $\tau$ leptons ($\hadtau$) to a combination of a muon or an electron with a $\hadtau$ candidate. The resulting $\mttwo$ variable is expected to well reject the multi-jet processes with non-genuine $\met$~\cite{CMS-PAS-SUS-12-002}.
+
