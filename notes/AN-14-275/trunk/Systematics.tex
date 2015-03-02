@@ -1,6 +1,9 @@
 \section{Systematic Uncertainties}
 \label{sect:sys}
 \subsection{Signal Systematic Uncertainties}
+\subsubsection{Luminosity}
+The uncertainty on the luminosity  is $2.6\%$ for $2012$ data.
+
 \subsubsection{ISR}
 The jet activity of our signal is coming from Initial State Radition(ISR) and due to generating our signal with PYTHIA generator which can not simulate ISR properly, taking into account only $2 \rightarrow 2$ scattering processes, therefore ISR jet momenta spectra as well as the multiplicity cannot be Trusted. Because of this issue it is possible to generate lightc-flavor jet which can be tagged wrongly as a b-jet and by applying a b-veto cut we miss that signal event. On the other side MADGRAPH generator, which is a matrix element generator provids a better description of ISR jets and because it can simulate $2 \rightarrow 4$ interactions. 
 We take advantage of this point by choosing a signal-like MADGRAPH generated MC sample like $WW$ which mimics the signal from the generation point of view and comparing it with the signal point whose M(\chione) = 100 GeV and M(\nuetraliono) = 0 GeV and this point resembles WW with respect to $\sqrt {\hat{s}}$. It is followd the below recipe, originating from $fixME$.
@@ -26,7 +29,7 @@ Then due to not having a WW enriched region in data we use the previous WW sampl
 %\label{eq:suWW}
 %I\_{e/ \mu}=\Sigma P\_{T}^{charged }(\Delta z <2mm)+max(P\_{T}^{photon}+P\_{T}^{h0 }\_\Delta \beta,0),
 data\_ratio &= \frac{data\_bveto}{data\_relaxed} = \frac{80282.30}{84226.93} = 0.956 \\ \nonumber
-Unc2 &= \frac{data\_ratio - WW\_ratio}{WW\_ratio} = 0.03 \%
+Unc2 &= \frac{data\_ratio - WW\_ratio}{WW\_ratio} = 0.003 \%
 \end{align}
 %\end{linenomath}
 
@@ -36,37 +39,65 @@ and finally the ISR systemtic uncertaintiy due to B-mistagged jet veto is 3 \%.
 
 The other source of systematic uncertainty due to existence of ISR in signal events is using of $min\delta \phi (\met , Jets)$ ($ > 1$) variable against QCD events. We use the same method as above to obtain the systematic uncertainty of applying this variable. But this time we use Higgs to $\tau \tau$ sample which mimics our signal like WW and we chose it because Higgs sample has the most similar cumulative distribution function,i.e. the efficiency of this cut, to our signal that is shown in. %Fig.~\ref{}.     
 
-%% \begin{align}
+\begin{align}
+Higgs\_ratio &= \frac{Higgs\_bveto}{Higgs\_relaxed} = \frac{89288.14}{180562.56} = 0.491 \\ \nonumber
+susy\_ratio &= \frac{susy\_bveto}{susy\_relaxed} = \frac{1020.33}{2206.07} = 0.466 \\ \nonumber
+Unc1 &= \frac{susy\_ratio - Higgs\_ratio}{Higgs\_ratio} = 3 \% 
+\end{align}
 
-%% Higgs\_ratio &= \frac{Higgs\_bveto}{Higgs\_relaxed} = \frac{88968.51}{93058.33} = 0.953\\ \nonumber
-%% susy\_ratio &= \frac{susy\_bveto}{susy\_relaxed} = \frac{2041.88}{2206.07} = 0.922 \\ \nonumber
-%% Unc1 &= \frac{susy\_ratio - Higgs\_ratio}{Higgs\_ratio} = 2\% 
 
-%% \end{align}
+\subsubsection{Lepton Energy Scale}
 
-and finally the ISR systemtic uncertaintiy due to B-mistagged jet veto is 2 \%.
+The electron energy scale is varied by $1\%$ ($2.5\%$) for electrons reconstructed in the barrel (endcap) region of the ECAL.
+The uncertainty on muon momenta is assumed to be negligible. The energy scale of hadronically decaying taus is varied by $3\%$, following the recommendation of the Tau POG~\cite{TauPOG} and it is taken into account the effect of this variation on \met and \pT relateds variables and we obtaind the up and down changes of different variables on final yields in different channels which is reported in table.
 
-%% \begin{table}[!h]
-%% \begin{center}
-%% \begin{tabular}{|c|c|c|c|c|c|c|}
-%% \hline
-%%  Higgs\_ratio & susy\_ratio & data\_ratio & Unc1 & Unc2 & total uncertainty \\\hline 
-%%            &             &             &      &      &                    \\     \hline   
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+                                    &$QCD$&$Z+jets$&$W+jets$&$WW+jets$&$Top$& $All MC$ & $Susy$ & Data \\\hline 
+$e\tau_{had}$ channel               &     &        &        &         &     &          &        &      \\\hline   
+$\mu\tau_{had}$ channel             &     &        &        &         &     &          &        &      \\\hline  
+$\tau_{had}\tau_{had}$ channel bin1 &     &        &        &         &     &          &        &      \\\hline
+$\tau_{had}\tau_{had}$ channel bin2 &     &        &        &         &     &          &        &      \\\hline
+\end{tabular} 
+\end{center}
+\caption{Tau energy scale systematic effect on MC in different channels
+}
+\label{Tab.susyHiggs}
+\end{table}     
 
-%% \end{tabular}
-%% \end{center}
-%% \caption{a
-%% }
-%% \label{Tab.susyHiggs}
-%% \end{table}     
 
-%%            & WW\_ratio & susy\_ratio & data\_ratio & Unc1 & Unc2 & total uncertainty \\\hline 
-%% $e \tau_{had} channel$                  &           &             &             &      &      &                    \\     \hline   
-%% $\mu \tau_{had} channel$                  &           &             &             &      &      &                    \\     \hline   
-%% $\tau_{had} \tau_{had} channel bin1$                  &           &             &             &      &      &                    \\        \hline
-%% $\tau_{had} \tau_{had} channel bin2$                  &           &             &             &      &      &                    \\        \hline
-\subsubsection{Tau Energy Scale}
-Tau pt is varieid by 5\% up and down followd by Tau POG~\cite{TauPOG} recommendation ,and then it is taken into account the effect of this variation on \met and \pT relateds variables and we obtaind the up and down changes of different variables on final yields in different channels which is reported in table.
-   
+\subsubsection{Lepton trigger, identification, isolation efficiency}
 
+  The uncertainties on electron and muon trigger, identification and isolation efficiencies
+  are determined by the uncertainties on the Monte Carlo--to--data scale--factors 
+  which is coming from HtoTauTau twiki.
+  We add the uncertainties in quadrature and, after rounding, obtain a value of $2\%$ for electrons as well as muons of all $P_{T}$ and $\eta$.
+  The uncertainty on the $\tau_{had}$ identification efficiency 
+  been measured using $Z/\gamma^{*} \to \tau\tau \to \mu\tau_{had}$ events
+  and amounts to $6\%$~\cite{TauPOG}.
+  The uncertainty on the efficiency of the hadronic tau leg of the $e\tau_{had}$ and $\mu\tau_{had}$ ($\tau_{had}\tau_{had}$) trigger
+  amounts to $3.0\%$ ($4.5\%$ per leg).
+
+\subsubsection{PDF}
+The effect of PDF on cross section is considered using $CTEQ66$ and $MSTW2008nlo90cl$ for PDF and it is shown for some generic susy points in Table.~\ref{Tab.PDF}.
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+                                    &$\sigma (fb) \_ CTEQ66$          & $\frac{\sigma \_ CTEQ66 - \sigma \_ MSTW2008}{\sigma \_ CTEQ66}$  \\\hline 
+M(\chione) = 100 GeV                &$5823.40^{+0.0 \% + 3.4 \%}_{-0.6 \% - 3.2 \%}$         & 3 \%         \\\hline   
+M(\chione) = 200 GeV                &$379.24^{+0.4 \% + 4.5 \%}_{-0.4 \% - 4.4 \%}$          & 6 \%        \\\hline  
+M(\chione) = 300 GeV                &$67.51^{+0.2 \% + 5.9 \%}_{-0.2 \% - 5.1 \%}$           & 7 \%        \\\hline
+M(\chione) = 400 GeV                &$17.51.40^{+0.0 \% + 6.8 \%}_{-0.3 \% - 6.3 \%}$        & 8 \%        \\\hline
+M(\chione) = 500 GeV                &$5.53^{+0.0 \% + 8.1 \%}_{-0.9 \% - 7.0 \%}$            & 12 \%        \\\hline
+\end{tabular} 
+\end{center}
+\caption{Xsection systematic uncertainty due to different PDF
+}
+\label{Tab.PDF}
+\end{table}     
 \subsubsection{Pile-up}
+
+
