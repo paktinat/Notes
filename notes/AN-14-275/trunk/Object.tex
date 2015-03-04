@@ -1,7 +1,7 @@
 \section{Physics Object Definition and Preselection}
 \label{sect:objdef}
 \subsection{Electron identification and reconstruction}
-Electron identification is based on a MVA (Boosted Decision Tree) method ~\cite{Hocker:2007ht} which its training takes care of cleaning of electrons collection from $jet \rightarrow e$  fakes. The training process takes advantage of two bins of $\pt$ and three bins of $\eta$, running over a sample of $Z \rightarrow ee$  events selected in data. Those oppositely charged electrons pair closest to Z-boson peak mass is taken as "signal" and the other electron candidates as "background". The training input variables are described in ~\cite{CMS_AN_2013-188}. Different discriminators is trained on electrons which pass the criteria of single electron trigger and for an inclusive sample of electrons, which the second one is chosen.
+Electron identification is based on a MVA (Boosted Decision Tree) method ~\cite{Hocker:2007ht} which its training takes care of cleaning of electrons collection from jet\,$\rightarrow e$  fakes. The training process takes advantage of two bins of $\pt$ and three bins of $\eta$, running over a sample of $Z \rightarrow ee$  events selected in data. Those oppositely charged electrons pair closest to Z-boson peak mass is taken as "signal" and the other electron candidates as "background". The training input variables are described in ~\cite{CMS_AN_2013-188}. Different discriminators is trained on electrons which pass the criteria of single electron trigger and for an inclusive sample of electrons, which the second one is chosen.
 According on the BDT output,it can be defined a loose and tight working-points for an electron in different bins of $\pt$ and $\eta$ which is given in Table ~\ref{Tab.electronMVAIDwp}.
 
 \begin{table}[!h]
@@ -10,10 +10,10 @@ According on the BDT output,it can be defined a loose and tight working-points f
 \hline
 \multicolumn{2}{|c|}{Kinematic range}                & Loose & Tight \\
 \hline
-$P_{T} < 20$~\GeV & $\vert \eta \vert < 0.8$         & 0.925 & 0.925 \\
+$\pt < 20$~\GeV & $\vert \eta \vert < 0.8$         & 0.925 & 0.925 \\
                   & $0.8 < \vert \eta \vert < 1.479$ & 0.915 & 0.915 \\
                   & $\vert \eta \vert > 1.479$       & 0.965 & 0.965 \\
-$P_{T} > 20$~\GeV & $\vert \eta \vert < 0.8$         & 0.905 & 0.925 \\
+$\pt > 20$~\GeV & $\vert \eta \vert < 0.8$         & 0.905 & 0.925 \\
                   & $0.8 < \vert \eta \vert < 1.479$ & 0.955 & 0.975 \\
                   & $\vert \eta \vert > 1.479$       & 0.975 & 0.985 \\
 \hline
@@ -33,35 +33,35 @@ muons by tight particle flow algorithm.
 The particle flow algorithm identifies  muons by separating them in the several step.
 
 
-$\bullet$  the number of pixel hit(s) associated to muon track$\geq $1
+$\bullet$ The number of pixel hit(s) associated to muon track\,$\geq $\,1
 
-$\bullet$  Cut on number of tracker layers with hits $\geq $ 6
+$\bullet$ Cut on number of tracker layers with hits $\geq $\,6
 
-$\bullet$ the number of hit in muon system $\geq $ 1
+$\bullet$ The number of hit in muon system $\geq $\,1
 
 $\bullet$ Tracker track matched with at least one muon segment (in any station)
 
-$\bullet$ $\chi ^{2}/NDoF $ for the global track fit$< $ 10 ,
+$\bullet$ $\chi ^{2}/{\rm NDF} $ for the global track fit\,$< $\,10 ,
 
 $\bullet$ Impact parameter constrains between the muon track and the selected primary vertex 
- $d_{z} < $0.5 cm and $d_{0} <$ 0.2 cm.
+ $d_{z} < $\,0.5 cm and $d_{0} <$\,0.2 cm.
 
 \subsection{Muon and electron isolation}
 
 In order to reduce the background contributions from QCD multi–jet events, electrons and
-muons are required to be isolated. The isolation is computed as the $P_{T}$ sum of charged particles (including charged hadrons, 
+muons are required to be isolated. The isolation is computed as the $\pt$ sum of charged particles (including charged hadrons, 
 electrons and muons), neutral hadrons plus photons reconstructed by the PF algorithm within a cone of size
-$\Delta R_{iso}$ = 0.4 around the direction of the muon respectively electron. 
+$\Delta R_{\rm iso}$ = 0.4 around the direction of the muon respectively electron. 
 
 In the innermost region
 (``veto cone'') neutral
-hadrons and photons  are excluded from the computation of the isolation $P_{T}$ sum in order to prevent energy deposits in the electromagnetic and hadronic calorimeters. Charged particles close to the direction of electrons  are excluded too in order to avoid tracks due to conversions of photons emitted by Bremsstrahlung processes to spoil the isolation.
+hadrons and photons  are excluded from the computation of the isolation $\pt$ sum in order to prevent energy deposits in the electromagnetic and hadronic calorimeters. Charged particles close to the direction of electrons  are excluded too in order to avoid tracks due to conversions of photons emitted by Bremsstrahlung processes to spoil the isolation.
 
-For the muon isolation the photon and neutral hadron candidates are required to have a transverse energy of MET $>$ 0.5 GeV. This reduces pile-up effects. The correction of pile-up to isolation is done by applying $\Delta\beta$ corrections.
+For the muon isolation the photon and neutral hadron candidates are required to have a transverse energy of $\MET>0.5\,\GeV$. This reduces pile-up effects. The correction of pile-up to isolation is done by applying $\Delta\beta$ corrections.
 \begin{linenomath}
 \begin{equation}
 \label{eq:muonisolation1}
-I_{e/ \mu}=\Sigma P_{T}^{charged }(\Delta z <2\,mm)+max(P_{T}^{photon}+P_{T}^{h0 }-\Delta \beta,0),
+I_{e/ \mu}\,=\,\Sigma\, \pt^{\rm charged }(\Delta z <2\,mm)+max(\pt^{\rm photon}+\pt^{h0 }-\Delta \beta,0),
 \end{equation}
 \end{linenomath}
 The $\Delta\beta$ corrections are computed by summing the transverse momenta of charged particles
@@ -70,7 +70,7 @@ vertex and scaling the sum by a factor 0.5:
 \begin{linenomath}
 \begin{equation}
 \label{eq:muonisolation2}
-\Delta\beta=0.5 \Sigma P_{T}^{charged }(\Delta z <2mm).
+\Delta\beta\,=\,0.5\, \Sigma \pt^{\rm charged }(\Delta z <2mm).
 \end{equation}
 \end{linenomath}
 
