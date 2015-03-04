@@ -1,31 +1,23 @@
 \section{\texorpdfstring{The definition of $\rm {\mttwo}$}{The definition of MT2}}
 \label{sect:mt2def}
-%The variable transverse masss is used to measure the mass of the W boson~\cite{Arnison:1983rp,Banner:1983jy,Affolder:2000bpa,Abazov:2002bu} in its decay to a lepton and a neutrino, where only the transverse missing energy due to undetected neutrino could be measured. It is defined as 
-%\begin{linenomath}
-%\begin{equation}
-%\label{eq:mtdef}
-%\mt^{2}= 2\,( \et^l\et^\nu-\vec{\pt}^l.\vec{\pt}^\nu ),
-%\end{equation}
-%\end{linenomath}
-%where for neutrino, $\et^\nu=\pt^\nu$. The kinmatic endpoint of $\mt$ is an estimator for the W boson mass, i.e. $\mt^2\leq m_{\rm W}^2$. 
-The $\mttwo$ variable~\cite{Lester:1999tx,Barr:2003rg} is used in this analysis to discriminate between the supersymmetry signal and the SM backgrounds as proposed in~\cite{Barr:2009wu}. However, the variable is originally introduced to measure the mass of primary pair-produced particles, decaying eventually to undetected particles (e.g. neutralino). Assuming the two primary supersymmetric particles undergo the same decay chain with visible and undetectable particles in the final state, the system can be described by the visible mass ($\mvisi$), transverse energy ($\etvisi$) and transverse momentum ($\vptvisi$) of each branch ($i=1,2$) together with missing transverse momentum (${\displaystyle{\not}\vec{p}}_{\rm T}$) which is shared between the two. The ${\displaystyle{\not}\vec{p}}_{\rm T}$ is considered as the sum of the neutralinos transverse momenta, $\vec{p}_{\rm T}^{\neutralino(i)}$. For decay chains including SM neutrinos, the ${\displaystyle{\not}\vec{p}}_{\rm T}$ gets some generally minor contributions from $\pt^{\nu}$'s.
+The $\mttwo$ variable~\cite{Lester:1999tx,Barr:2003rg} is used in this analysis to discriminate between the supersymmetry signal and the SM backgrounds as proposed in~\cite{Barr:2009wu}. However, the variable is originally introduced to measure the mass of primary pair-produced particles, decaying eventually to undetected particles (e.g. neutralino). Assuming the two primary supersymmetric particles undergo the same decay chain with visible and undetectable particles in the final state, the system can be described by the visible mass ($\mvisi$), transverse energy ($\etvisi$) and transverse momentum ($\vptvisi$) of each branch ($i=1,2$) together with missing transverse momentum ($\ptvecmiss$) which is shared between the two. The $\ptvecmiss$ is considered as the sum of the neutralinos transverse momenta, $\vec{p}_{\rm T}^{\PSGczDo(i)}$. For decay chains including SM neutrinos, the $\ptvecmiss$ gets some generally minor contributions from $\pt^{\nu}$'s.
 
 The transverse mass of each branch can be written as 
 \begin{linenomath}
 \begin{equation}
 \label{eq:mtdef}
-(\mt^{(i)})^{2}= (\mvisi)^2+m^2_{\neutralino}+2(\etvisi\et^{\neutralino(i)}-\vptvisi\dot\pt^{\neutralino(i)}).
+(\mt^{(i)})^{2}= (\mvisi)^2+m^2_{\PSGczDo}+2(\etvisi\et^{\PSGczDo(i)}-\vptvisi\dot\pt^{\PSGczDo(i)}).
 \end{equation}
 \end{linenomath}
 For the correct neutralino mass, this distribution has an endpoint at the mass of the primary particle, similar to the W boson transeverse mass used to measure $m_{\rm W}$~\cite{Arnison:1983rp,Banner:1983jy,Affolder:2000bpa,Abazov:2002bu}. 
 
-As a generalization to the transverse mass, the $\mttwo$ variable is proposed to overcome the problem of unknown $\pt^{\neutralino(i)}$. The kinematic endpoint of $\mttwo$ carries model independent information about the mass difference between the primary and the secondary particles. In the current analysis and for a given $m_{\neutralino}$, the $\mttwo$ variable is defined as
+As a generalization to the transverse mass, the $\mttwo$ variable is proposed to overcome the problem of unknown $\pt^{\PSGczDo(i)}$. The kinematic endpoint of $\mttwo$ carries model independent information about the mass difference between the primary and the secondary particles. In the current analysis and for a given $m_{\PSGczDo}$, the $\mttwo$ variable is defined as
 \begin{linenomath}
 \begin{equation}
 \label{eq:mt2def}
-\mttwo(m_{\neutralino})= \min_{\vec{p}_{\rm T}^{\neutralino(1)}+\vec{p}_{\rm T}^{\neutralino(2)}={\displaystyle{\not}\vec{p}}_{\rm T}}\,\left[\,\max\,\{ \, \mt^{(1)},\,\mt^{(2)}\,\}\,\right].
+\mttwo(m_{\PSGczDo})= \min_{\vec{p}_{\rm T}^{\PSGczDo(1)}+\vec{p}_{\rm T}^{\PSGczDo(2)}=\ptvecmiss}\,\left[\,\max\,\{ \, \mt^{(1)},\,\mt^{(2)}\,\}\,\right].
 \end{equation}
 \end{linenomath}
-For the correct value of $m_{\neutralino}$, the kinematic endpoint of the $\mttwo$ distribution is at the mass of the primary particle while it shifts accordingly with the $m_{\neutralino}$ being lower or higher than the correct value. In this analysis we choose the visible system to be massless and we set $m_{\neutralino}=0$. The visible part of the event here changes from two hadronically decaying $\tau$ leptons ($\hadtau$) to a combination of a muon or an electron with a $\hadtau$ candidate. 
+For the correct value of $m_{\PSGczDo}$, the kinematic endpoint of the $\mttwo$ distribution is at the mass of the primary particle while it shifts accordingly with the $m_{\PSGczDo}$ being lower or higher than the correct value. In this analysis we choose the visible system to be massless and we set $m_{\PSGczDo}=0$. The visible part of the event here changes from two hadronically decaying $\tau$ leptons ($\hadtau$) to a combination of a muon or an electron with a $\hadtau$ candidate. 
 
-Because of our choice for $m_{\neutralino}=0$, the resulting $\mttwo$ variable is expected to well reject not only events with no genuine $\met$ but events with a back-to-back topology ($\mttwo=0$) regardless of the value of $\met$ or $\pt$. 
+Because of our choice for $m_{\PSGczDo}=0$, the resulting $\mttwo$ variable is expected to well reject not only events with no genuine $\MET$ but events with a back-to-back topology ($\mttwo=0$) regardless of the value of $\MET$ or $\pt$. 
