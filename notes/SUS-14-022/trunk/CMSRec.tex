@@ -1,0 +1,56 @@
+\section{Experimental setup, event reconstruction}
+\label{sect:CMSRec}
+
+
+The central feature of the CMS apparatus is a superconducting solenoid of 6\unit{m} internal diameter, providing a magnetic field of 3.8\unit{T}. Within the superconducting solenoid volume are a silicon pixel and strip tracker, a lead tungstate crystal electromagnetic calorimeter (ECAL), and a brass and scintillator hadron calorimeter (HCAL), each composed of a barrel and two endcap sections. Muons are measured in gas-ionization detectors embedded in the steel flux-return yoke outside the solenoid. Extensive forward calorimetry complements the coverage provided by the barrel and endcap detectors. 
+A more detailed description of the CMS detector, together with a definition of the coordinate system used and the relevant kinematic variables, can be found in Ref.~\cite{Chatrchyan:2008zzk}.
+The object definition of this analysis is very close to the object reconstruction and identification in $H\to\tau\tau$ analysis previously published \cite{Khachatryan:2014wca}. Just for the completeness, a short review is given here. 
+
+
+An average of 21 $\Pp\Pp$ interactions occurred per LHC bunch crossing in 2012.
+For each reconstructed collision vertex the sum of the  $\pt^2$ of all tracks associated to the vertex is computed and the one with the largest value is taken as the primary collision vertex, where $\pt$ is the transverse momentum. The additional $\Pp\Pp$ collisions are referred to as pileup. 
+
+
+
+The particle-flow event algorithm~\cite{CMS-PAS-PFT-09-001,CMS-PAS-PFT-10-001} reconstructs and identifies each individual particle with an optimized combination of information from the various elements of the CMS detector. The energy of photons is directly obtained from the ECAL measurement, corrected for zero-suppression effects. The energy of electrons is determined from a combination of the electron momentum at the primary interaction vertex as determined by the tracker, the energy of the corresponding ECAL cluster, and the energy sum of all bremsstrahlung photons spatially compatible with originating from the electron track. The energy of muons is obtained from the curvature of the corresponding track. The energy of charged hadrons is determined from a combination of their momentum measured in the tracker and the matching ECAL and HCAL energy deposits, corrected for zero-suppression effects and for the response function of the calorimeters to hadronic showers. Finally, the energy of neutral hadrons is obtained from the corresponding corrected ECAL and HCAL energy. 
+The resulting particles are used to reconstruct the missing transverse energy vector \vecMET, defined as the negative of the vector sum of the transverse momenta of all reconstructed particles , and its magnitude \MET.
+
+The ECAL energy resolution for electrons with $\ET {\approx} 45$\GeV from $\Z \rightarrow \Pe \Pe$ decays is better than 2\% in the central region of the ECAL barrel $(\abs{\eta} < 0.8)$ where pseudorapidity $\eta$ is defined as $\eta = -ln [tan(\theta/2)]$,  $\theta$ being 
+the polar angle of the particle's track with respect to the counterclockwise beam direction. The resulotion is between 2\% and 5\% elsewhere. For low-bremsstrahlung electrons, where 94\% or more of their energy is contained within a $3 \times 3$ array of crystals, the energy resolution improves to 1.5\% for $\abs{\eta} < 0.8$~\cite{CMS:2013hoa}. 
+Muons are measured in the pseudorapidity range $\abs{\eta}< 2.4$, with detection planes made using three technologies: drift tubes, cathode strip chambers, and resistive plate chambers. Matching muons to tracks measured in the silicon tracker results in a relative transverse momentum resolution for muons with $20 <\pt < 100\GeV$ of 1.3--2.0\% in the barrel and better than 6\% in the endcaps, The \pt resolution in the barrel is better than 10\% for muons with \pt up to 1\TeV~\cite{Chatrchyan:2012xi}. 
+
+
+Jets are reconstructed offline from the energy deposits in the calorimeter towers, clustered by the anti-$k_\mathrm{t}$ algorithm \cite{Cacciari:2008gp, Cacciari:2011ma} with a size parameter of 0.5. In this process, the contribution from each calorimeter tower is assigned a momentum, the absolute value and the direction of which are given by the energy measured in the tower, and the coordinates of the tower. The raw jet energy is obtained from the sum of the tower energies, and the raw jet momentum by the vectorial sum of the tower momenta, which results in a nonzero jet mass. The raw jet energies are then corrected to establish a relative uniform response of the calorimeter in $\eta$ and a calibrated absolute response in transverse momentum \pt. 
+
+
+
+Hadronically-decaying tau leptons are reconstructed using the hadron-plus-strips algorithm~\cite{Chatrchyan:2012zz}. The constituents of the reconstructed jets are used to identify individual $\Pgt$ decay modes with one charged hadron and up to two neutral pions, or three charged hadrons. The presence of extra particles within the jet, not compatible with the reconstructed decay mode of the $\Pgt$, is used as a criterion to discriminate \Tau decays from jets. Additional discriminators are used to separate \Tau decays from electrons and muons.
+
+
+Tau leptons from Higgs boson decays are expected to be isolated in the detector, while leptons from heavy-flavor (c and b) decays and decays in flight are expected to be found inside jets. A measure of isolation is used to discriminate the signal from the QCD multijet background, based on the charged hadrons, photons, and neutral hadrons falling within a cone around the lepton momentum direction.
+Electron, muon, and tau lepton isolation are estimated as
+\begin{equation}\begin{aligned}
+I_{\Pe,\Pgm} &=  \sum_{\rm charged}  \pt + \text{max}\left( 0, \sum_{\rm neutral}  \pt
+                                        +  \sum_{\gamma} {\pt} - 0.5 \sum_{\rm charged, pileup} \pt  \right ), \\
+I_{\Tau} &=  \sum_{\rm charged}  \pt + \text{max}\left( 0, \sum_{\gamma} {\pt} - 0.46 \sum_{\rm charged, pileup} \pt  \right ),
+\label{eq:reconstruction_isolation}
+\end{aligned}\end{equation}
+where $\sum_\text{charged}\pt$ is the scalar sum of the transverse momenta of the charged hadrons, electrons, and muons from the primary vertex located in a cone centered around the lepton direction of size $\Delta R = \sqrt{(\Delta\eta)^2+(\Delta\phi)^2}$ of 0.4 for electrons and muons and 0.5 for tau leptons.
+The sums $\sum_\text{neutral}\pt$ and $\sum_{\gamma} \pt$ represent the same quantities for neutral hadrons and photons, respectively. In the case of electrons and muons the innermost region is excluded
+to avoid the footprint in the calorimeter of the lepton itself from entering the sum.
+Charged particles close to the direction of the electrons are excluded as well, to prevent tracks originating from the conversion of photons emitted by the bremsstrahlung process from spoiling the isolation. In the case of \Tau, the particles used in the reconstruction of the lepton are excluded. The contribution of pileup photons and neutral hadrons
+is estimated from the scalar sum of the transverse momenta of charged hadrons from pileup vertices in the isolation cone $\sum_\text{charged, pileup}$. This sum is multiplied by a factor of 0.5 that approximately corresponds to the ratio of neutral-to-charged hadron production in the hadronization process of inelastic $\Pp\Pp$ collisions. In the case of \Tau, a value of 0.46 is used, as the neutral hadron contribution is not used in the computation of $I_{\tauh}$. An $\eta$, \pt, and lepton-flavor dependent threshold on the isolation variable is applied.
+
+In order to mitigate the effects of pileup on the reconstruction of \MET, a multivariate regression correction is used where the inputs are separated in those components coming from the primary vertex and those which are not~\cite{CMS-JME-12-002}.
+The correction improves the \MET resolution in $\cPZ\to\Pgm\Pgm$ events by roughly a factor of two in the case where 25 additional pileup events are present.
+
+Most of the backgrounds like $\cPZ$+jets, $\PW$+jets, $\cPqt\cPaqt$ and di-boson production are generated using the \MADGRAPH 5.1~\cite{Alwall:2011uj} generator, but single-top-quark events generated by {\POWHEG} 1.0~\cite{Nason:2004rx,Frixione:2007vw,Alioli:2009je,Alioli:2010xd}.
+For parton shower  and fragmentation, the generators are interfaced with \PYTHIA 6.4~\cite{Sjostrand:2006za}.
+The Signal events are generated by  \PYTHIA. To have a good simulation for the $\Pgt$ decays, the generators are interfaced with  \TAUOLA~\cite{Davidson:2010rw}. The \PYTHIA is used to simulate the additional interactions. The number of the additional interactions is reweighted to have the similar distribution with data. To take into account the detector effects, a detailed simulation of the CMS detector based on {\GEANTfour}~\cite{Agostinelli:2002hh} is used for all of the generated background events. To reduce  computational requirements, the signal events are simulated using a fast simulation \cite{Abdullin:2011zz} instead of {\GEANTfour}. 
+The simulated events are reconstructed with the same algorithms as the data.
+
+
+
+
+
+
