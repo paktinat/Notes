@@ -32,7 +32,6 @@ Two cut flow tables according to each of search bins are presented, which can be
 %\begin{sidewaystable}
 \begin{table}
 \begin{center}
-\scalebox{1.3}{
 \begin{tabular}{lcccccccc}
 \hline\hline
   &SUSY&QCD&VV&W ($\ell\nu$)&DY&Top&Total Bkg&\\
@@ -40,10 +39,9 @@ Two cut flow tables according to each of search bins are presented, which can be
 pre-selection &10.90&135.29&1.11&31.93&13.17&5.26&186.76$\pm$135.47&\\
 $\mttwo>90\GeV$&4.10&0.00&0.02&0.00&0.56&0.00&0.58$\pm$0.07&\\
 \hline\hline
-\end{tabular}}
+\end{tabular}
 \caption{Cut-flow-table for di-$\hadtau$ channel: search bin\#1.}
 \label{tbl:cutflowtable1}
-\scalebox{1.3}{
 \begin{tabular}{lcccccccc}
 \hline\hline
   &SUSY&QCD&VV&W ($\ell\nu$)&DY&Top&Total Bkg&\\
@@ -53,7 +51,7 @@ $\mttwo < $ 90 &6.80&135.29&1.09&31.93&12.60&5.26&186.17$\pm$135.47&\\
 $\SumMT > $ 250 &3.85&0.00&0.23&1.02&0.83&2.63&4.71$\pm$1.49&\\
 b-jet veto &3.13&0.00&0.15&0.43&0.81&0.53&1.91$\pm$0.87&\\
 \hline\hline
-\end{tabular}}
+\end{tabular}
 \caption{Cut-flow-table for di-$\hadtau$ channel: search bin\#2.}
 \label{tbl:cutflowtable2}
 \end{center}
@@ -69,10 +67,32 @@ The distributions of $\mttwo$ and $\SumMT$ after applying pre-selection cuts are
 \label{fig:comparison}
 \end{figure}
 \subsection{DY background estimation}
+\subsection{W+jets background estimation}
+\subsubsection{Method description}
+As shown in the cut-flow-table, the number of W+jets events surviving the selection cuts are found to be zero in search bin\#1 or 0.43$\pm$0.40 in search bin\#2. In other words, due to the low statistics of W+jets events, the efficiency of $\mttwo$ is obtained to be zero, in bin\#1, or very close to zero with a huge statistical uncertainty, namely 93\% in bin\#2. The statistical uncertainty on the yields for W+jets events can be improved by extracting the $\mttwo$ cut efficieny in a sample with more statistics. This region is defined by relaxing some cuts which have marginal effects on $\mttwo$ variable. This way, the yields for W+jets events are reported with more statistical accuracy. In the next subsection, the validation of this method will be discussed.\\
+
+\subsubsection{Method validation}
+Figure~\ref{fig:justification_MT2}  
+\begin{figure}[htbp]
+\centering
+\includegraphics[angle=0,scale=0.35]{TauTauFigs/withMT2GT40.png}
+\includegraphics[angle=0,scale=0.35]{TauTauFigs/withMT2GT40ZVeto.png} \\
+\caption{Cut efficiency for \mttwo (left) and \SumMT (right) in samples with various selections as labeled in each bin.}
+\label{fig:justification_MT2}
+\end{figure}
+Figure~\ref{fig:justification_SumMT}  
+\begin{figure}[htbp]
+\centering
+\includegraphics[angle=0,scale=0.35]{TauTauFigs/WJetsEst_bin2.png}
+\includegraphics[angle=0,scale=0.35]{TauTauFigs/WJetsEst_bin2_miscApplied.png} \\
+\includegraphics[angle=0,scale=0.35]{TauTauFigs/WJetsEst_bin2_BJetVetoApplied.png} \\
+\caption{Cut efficiency for \mttwo (left) and \SumMT (right) in samples with various selections as labeled in each bin.}
+\label{fig:justification_SumMT}
+\end{figure}
 \subsection{Exclusion limit}
 \begin{figure}[htbp]
 \centering
 \includegraphics[angle=0,scale=0.35]{TauTauFigs/diTau_exclusion.png}
 \caption{Exclusion limit plot.}
-\label{fig:comparison}
+\label{fig:exclusion}
 \end{figure}
