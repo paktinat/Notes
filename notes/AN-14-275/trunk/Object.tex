@@ -1,6 +1,6 @@
-\section{Physics Object Definition and Preselection}
+\section{Physics Object Definition}
 \label{sect:objdef}
-\subsection{Electron identification and reconstruction}
+\subsection{Electron}
 Electron identification is based on a MVA (Boosted Decision Tree) method ~\cite{Hocker:2007ht} which its training takes care of cleaning of electrons collection from jet\,$\rightarrow e$  fakes. The training process takes advantage of two bins of $\pt$ and three bins of $\eta$, running over a sample of $Z \rightarrow ee$  events selected in data. Those oppositely charged electrons pair closest to Z-boson peak mass is taken as "signal" and the other electron candidates as "background". The training input variables are described in ~\cite{CMS_AN_2013-188}. Different discriminators is trained on electrons which pass the criteria of single electron trigger and for an inclusive sample of electrons, which the second one is chosen.
 According on the BDT output,it can be defined a loose and tight working-points for an electron in different bins of $\pt$ and $\eta$ which is given in Table ~\ref{Tab.electronMVAIDwp}.
 
@@ -26,7 +26,7 @@ $\pt > 20$~\GeV & $\vert \eta \vert < 0.8$         & 0.905 & 0.925 \\
 \end{table}     
 
 To reject those electrons which is coming from photon conversions, it is demanded that the electron hits each layer of Pixel detector. Furthermore if there is an oppositely charged track near electron which is fitted to a common vertex inside of tracker volume. 
-\subsection{Muon identification and reconstruction}
+\subsection{Muon}
 Muons are required to be reconstructed by the Tracker or the Global muon reconstruction algorithm and to be identified as 
 muons by tight particle flow algorithm.
 
@@ -74,7 +74,7 @@ vertex and scaling the sum by a factor 0.5:
 \end{equation}
 \end{linenomath}
 
-\subsection{\texorpdfstring{Hadronic $\tau$ reconstruction and identification}{Hadronic tau reconstruction and identification}} 
+\subsection{\texorpdfstring{Hadronic $\tau$}{Hadronic tau}} 
 \label{sec:hadTau}
 The "Hadron plus Strip" (HPS) algorithm~\cite{2012JInst...7.1001C} is employed to reconstruct the hadronic decays of $\tau$ leptons with the jet constituents as input. The algorithm is seeded by PF jets reconstructed using the anti-$k_{\rm T}$ procedure with a distance parameter of $R=0.5$. To discriminate against quark and gluon jets, jets with extra particles not compatible with the hadronic $\tau$ decays are rejected. Additional criteria are used to suppress the contributions from electrons and muons in the hadronic $\tau$ ($\hadtau$) collection.
 
