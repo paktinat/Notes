@@ -14,8 +14,8 @@ method can be found in section \ref{sect:stat}.
 
 \subsection{\texorpdfstring{$\tauTau$ Channel}{tau-tau Channel}}
 \label{sect:tauTauCuts}
-In the context of MSSM, supersymmetric objects are produced in pairs to conserve R-parity quantum number. Therefore in the production of charginos from proton-proton collisions, one may consider the following interaction $$pp\rightarrow\PSGcpDo\PSGcmDo}\rightarrow\sTau^{+}\nu_\tau \sTau^{-}\nu_\tau\rightarrow\tau^{+}\PSGczDo\nu_\tau\tau^{-}\PSGczDo\nu_\tau\rightarrow\tau^{+}\tau^{-} + 2\,\PSGczDo + 2\,\nu_\tau.$$ In the detector, what can be observed are only 2 tau leptons plus missing transverse energy from the presence of neturinos and neutralinos in the final state.\\
-The tau leptons can decay leptonically, in 35\% of the time, or can decay via hadrons, which is occuring with 65\% of probability. Since there are two leptons in the final state, then the probability of having $\PSGcpDo\PSGcmDo \rightarrow \hadtau+e/\mu+\MET$ is about 46\%, while the probability of occuring $\PSGcpDo\PSGcmDo \rightarrow \hadtau+\hadtau+\MET$ is about 42\%. Hereafter, final states containing a lepton are referred to as $e/\mu\text{-}\hadtau$ channel and those events where the two taus decays via hadrons are referred to as di$\text{-}\hadtau$. This section describes the cuts to enhance di$\text{-}\hadtau$ events. The list of cuts to select the $e/\mu\text{-}\hadtau$ events can be found in Section~\ref{sect:eleTauCuts} and ~\ref{sect:muTauCuts}.\\    
+%In the context of MSSM, supersymmetric objects are produced in pairs to conserve R-parity quantum number. Therefore in the production of charginos from proton-proton collisions, one may consider the following interaction $$pp\rightarrow\PSGcpDo\PSGcmDo\rightarrow\sTau^{+}\nu_\tau \sTau^{-}\nu_\tau\rightarrow\tau^{+}\PSGczDo\nu_\tau\tau^{-}\PSGczDo\nu_\tau\rightarrow\tau^{+}\tau^{-} + 2\,\PSGczDo + 2\,\nu_\tau.$$ In the detector, what can be observed are only 2 tau leptons plus missing transverse energy from the presence of neturinos and neutralinos in the final state.\\
+%The tau leptons can decay leptonically, in 35\% of the time, or can decay via hadrons, which is occuring with 65\% of probability. Since there are two leptons in the final state, then the probability of having $\PSGcpDo\PSGcmDo \rightarrow \hadtau+e/\mu+\MET$ is about 46\%, while the probability of occuring $\PSGcpDo\PSGcmDo \rightarrow \hadtau+\hadtau+\MET$ is about 42\%. Hereafter, final states containing a lepton are referred to as $\leptonTau$ channel and those events where the two taus decays via hadrons are referred to as $\tauTau$. This section describes the cuts to enhance $\tauTau$ events. The list of cuts to select the $\leptonTau$ events can be found in Section~\ref{sect:leptonTauCuts}.\\    
 In the final state with 2 hadronic taus, events are required to pass the following list of cuts
 \begin{itemize}
 \item at least two reconstructed opposit-sign tau objects, with $\pt>45\GeV$ and $|\eta|<2.1$, are required;\\ Since the online trigger cuts require two taus with $\pt>35\GeV$, then it can be justified to have an offline cut on $\pt>45\GeV$. 
@@ -49,7 +49,7 @@ pre-selection &10.90&135.29&1.11&31.93&13.17&5.26&186.76$\pm$135.47&\\
 $\mttwo>90\GeV$&4.10&0.00&0.02&0.00&0.56&0.00&0.58$\pm$0.07&\\
 \hline\hline
 \end{tabular}
-\caption{Cut-flow-table for di-$\hadtau$ channel: search bin\#1.}
+\caption{Cut-flow-table for $\tauTau$ channel: search bin\#1.}
 \label{tbl:cutflowtable1}
 \begin{tabular}{lcccccccc}
 \hline\hline
@@ -61,7 +61,7 @@ $\SumMT > $ 250 &3.85&0.00&0.23&1.02&0.83&2.63&4.71$\pm$1.49&\\
 b-jet veto &3.13&0.00&0.15&0.43&0.81&0.53&1.91$\pm$0.87&\\
 \hline\hline
 \end{tabular}
-\caption{Cut-flow-table for di-$\hadtau$ channel: search bin\#2.}
+\caption{Cut-flow-table for $\tauTau$ channel: search bin\#2.}
 \label{tbl:cutflowtable2}
 \end{center}
 \end{table}
@@ -76,7 +76,7 @@ The distributions of $\mttwo$ and $\SumMT$ after applying pre-selection cuts are
 \end{figure}
 
 \subsection{\texorpdfstring{$\leptonTau$ Channel}{lepton-tau Channel}}
-\label{sect:eleTauCuts}
+\label{sect:leptonTauCuts}
 In lepton ($e$ and $\mu$) $+$ \Tau channels, tight isolated $\Tau$ objects are selected. To reduce the rate of the fake $\Tau$'s orginated from $e$ and $\mu$, the same cuts on the discriminators against $e$ and $\mu$ which are used in the Higgs search analysis \cite{CMS_AN_2013-188} have been applied. In $e + \Tau$ channel, $\Tau$ objects which pass \emph{MediumMVA3Rejection} against $e$ and the \emph{LooseMuon2RejectionPF} discriminator against $\mu$ are selected. In the $\mu + \Tau$ channel, the tight working point of the \emph{Muon2Rejection} is requested and the Loose working point of the discriminator against electron is applied.
 
 $\mu$'s with $\PT > 20 \GeVc$ and $|\eta|<2.1$ are selected in the $\mu + \Tau$ channel. The $\mu$'s should pass tight particle flow identification and a tight cut ($<0.1$) on the isolation.
