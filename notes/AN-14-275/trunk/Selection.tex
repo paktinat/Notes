@@ -77,13 +77,13 @@ The distributions of $\mttwo$ and $\SumMT$ after applying pre-selection cuts are
 
 \subsection{\texorpdfstring{$\leptonTau$ Channel}{lepton-tau Channel}}
 \label{sect:leptonTauCuts}
-In lepton ($e$ and $\mu$) $+$ \Tau channels, tight isolated $\Tau$ objects are selected. To reduce the rate of the fake $\Tau$'s orginated from $e$ and $\mu$, the same cuts on the discriminators against $e$ and $\mu$ which are used in the Higgs search analysis \cite{CMS_AN_2013-188} have been applied. In $e + \Tau$ channel, $\Tau$ objects which pass \emph{MediumMVA3Rejection} against $e$ and the \emph{LooseMuon2RejectionPF} discriminator against $\mu$ are selected. In the $\mu + \Tau$ channel, the tight working point of the \emph{Muon2Rejection} is requested and the Loose working point of the discriminator against electron is applied.
+In lepton ($e$ and $\mu$) $+$ \Tau channels, tight isolated $\Tau$ objects are selected. To reduce the rate of the fake $\Tau$'s orginated from $e$ and $\mu$, the same cuts on the discriminators against $e$ and $\mu$ which are used in the Higgs search analysis \cite{CMS_AN_2013-188} have been applied. In $e\Tau$ channel, $\Tau$ objects which pass \emph{MediumMVA3Rejection} against $e$ and the \emph{LooseMuon2RejectionPF} discriminator against $\mu$ are selected. In the $\mu\Tau$ channel, the tight working point of the \emph{Muon2Rejection} is requested and the Loose working point of the discriminator against electron is applied.
 
-$\mu$'s with $\PT > 20 \GeVc$ and $|\eta|<2.1$ are selected in the $\mu + \Tau$ channel. The $\mu$'s should pass tight particle flow identification and a tight cut ($<0.1$) on the isolation.
+$\mu$'s with $\PT > 20 \GeVc$ and $|\eta|<2.1$ are selected in the $\mu\Tau$ channel. The $\mu$'s should pass tight particle flow identification and a tight cut ($<0.1$) on the isolation.
  
-In $e + \Tau$ channel, each event is requested to have an electron with $\PT >25 \GeVc$ in the $|\eta| < 2.1 $ region. A tight cut of $0.1$ on the isolation and $0.1$ on the $dZ$ of the selected electron are also applied.
+In $e\Tau$ channel, each event is requested to have an electron with $\PT >25 \GeVc$ in the $|\eta| < 2.1 $ region. A tight cut of $0.1$ on the isolation and $0.1$ on the $dZ$ of the selected electron are also applied.
 
-To suppress dilepton and multilepton backgrounds, events with an extra $e$ or $\mu$ with $\PT >10 \GeV$ are rejected. For the extra electron, a wider window of $|\eta|<2.3$ is scanned and a looser isolation cut of $0.2$ is applied. To veto the extra $\mu$, a selection similar to the $\mu$ selection in $\mu+\tau$ channel is applied.
+To suppress dilepton and multilepton backgrounds, events with an extra $e$ or $\mu$ with $\PT >10 \GeV$ are rejected. For the extra electron, a wider window of $|\eta|<2.3$ is scanned and a looser isolation cut of $0.2$ is applied. To veto the extra $\mu$, a selection similar to the $\mu$ selection in $\mu\hadtau$ channel is applied.
 
 After requesting two opposite sign leptons in the events, a loose cut on MET $(30 \GeV)$ is applied to suppress QCD events. As there is no b-quark in the signal, rejecting events with one or more b-tagged jets with $\PT > 20 \GeV$ helps a lot in reducing $t\bar{t}$ and $W+b$ backgrounds.
 
@@ -109,7 +109,7 @@ $\tauMT > 200 \GeV$ & 3.47 & 0.00 & 0.05 & 1.2 & 0.38 & 0.02 & 1.74$\pm$0.63 & 3
 \hline
 \hline
 \end{tabular}
-\caption{Cut-flow-table for $e-\Tau$ channel}
+\caption{Cut-flow-table for $e\hadtau$ channel}
 \label{tbl:cutflowtableeletau}
 \end{tiny}
 \end{center}
@@ -135,19 +135,19 @@ $\tauMT > 200\GeV$ & 2.41 & 0 & 0.34 & 0.79 & 0.28 & 0 & 1.40$\pm$0.49 & 5\\
 \hline
 \hline
 \end{tabular}
-\caption{Cut-flow-table for $\mu-\Tau$ channel}
+\caption{Cut-flow-table for $\mu\hadtau$ channel}
 \label{tbl:cutflowtablemuotau}
 \end{tiny}
 \end{center}
 \end{table}
 
-The cut flow tables for the $e$/$\mu$ $\,+\tau$ pre-selections are shown in tables~\ref{tbl:cutflowtableeletau} and~\ref{tbl:cutflowtablemuotau} respectively. The distribution of the \PT of the $\Tau$ and $MET$ in the pre-selected events in both channels are shown in FIGS~\ref{fig:datamceletau} and~\ref{fig:datamcmuotau} . The good agreement between data and MC confirms that the needed correction factors are considrred carefully.
+The cut flow tables for the $e$/$\mu$ $\tau$ pre-selections are shown in tables~\ref{tbl:cutflowtableeletau} and~\ref{tbl:cutflowtablemuotau} respectively. The distribution of the \PT of the $\Tau$ and $MET$ in the pre-selected events in both channels are shown in FIGS~\ref{fig:datamceletau} and~\ref{fig:datamcmuotau} . The good agreement between data and MC confirms that the needed correction factors are considrred carefully.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[angle=0,scale=0.35]{SelectionEleTau/TauPt.pdf}
 \includegraphics[angle=0,scale=0.35]{SelectionEleTau/MET.pdf}
-\caption{Left: \Tau\PT. Right: \MET. in Preselected $e-\Tau$ events.}
+\caption{Left: \Tau\PT. Right: \MET. in Preselected $e\hadtau$ events.}
 \label{fig:datamceletau}
 \end{figure}
 
@@ -155,17 +155,17 @@ The cut flow tables for the $e$/$\mu$ $\,+\tau$ pre-selections are shown in tabl
 \centering
 \includegraphics[angle=0,scale=0.35]{SelectionMuTau/tauPt_muTau.pdf}
 \includegraphics[angle=0,scale=0.35]{SelectionMuTau/pfMET_muTau.pdf}
-\caption{Left: \Tau\PT. Right: \MET. in Preselected $\mu-\Tau$ events.}
+\caption{Left: \Tau\PT. Right: \MET. in Preselected $\mu\hadtau$ events.}
 \label{fig:datamcmuotau}
 \end{figure}
 
-Similar to the $\Tau\Tau$ channel, first we find the optimized cut on the $MT2$ to suppress backgrounds especially $W+jet$ events. As it has been shown in FIG~\ref{fig:mt2leptontau}, the best value to cut on, similar to the $\Tau\Tau$ channel is $MT2 > 90 GeV$ for both $e/\mu+\Tau$ channels. Such a high cut on the $MT2$ increases the sensitivity of the study to signal events with high $\chipm$ and $\chiz$ mass differences. We then investigate the shape of different variables for signal and backgrounds and try to find the most optimized cut to have the best exclusion. The most sensitive variable for both channels are found to be the $\Tau$ transverse mass. As it has been shown in FIG~\ref{fig:taumtleptontau}, the best cut value for the high mass difference signal is $M_{T}^{\Tau} > 200 GeV$. You can find the composition of the backgrounds and number of remaining signals for both channels in the last row of the cut flow tables (tables~\ref{tbl:cutflowtableeletau} and~\ref{tbl:cutflowtablemuotau}).
+Similar to the $\Tau\Tau$ channel, first we find the optimized cut on the $MT2$ to suppress backgrounds especially $W+jet$ events. As it has been shown in FIG~\ref{fig:mt2leptontau}, the best value to cut on, similar to the $\Tau\Tau$ channel is $MT2 > 90 GeV$ for both $l\Tau$ channels. Such a high cut on the $MT2$ increases the sensitivity of the study to signal events with high $\chipm$ and $\chiz$ mass differences. We then investigate the shape of different variables for signal and backgrounds and try to find the most optimized cut to have the best exclusion. The most sensitive variable for both channels are found to be the $\Tau$ transverse mass. As it has been shown in FIG~\ref{fig:taumtleptontau}, the best cut value for the high mass difference signal is $M_{T}^{\Tau} > 200 GeV$. You can find the composition of the backgrounds and number of remaining signals for both channels in the last row of the cut flow tables (tables~\ref{tbl:cutflowtableeletau} and~\ref{tbl:cutflowtablemuotau}).
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[angle=0,scale=0.35]{SelectionEleTau/MT2.pdf}
 \includegraphics[angle=0,scale=0.35]{SelectionMuTau/MT2_muTau.pdf}
-\caption{\mttwo distribution of preselected events in (Left) $e-\Tau$ and (RIGHT) $\mu-\Tau$ channels.}
+\caption{\mttwo distribution of preselected events in (Left) $e\hadtau$ and (RIGHT) $\mu\hadtau$ channels.}
 \label{fig:mt2leptontau}
 \end{figure}
 
@@ -173,8 +173,8 @@ Similar to the $\Tau\Tau$ channel, first we find the optimized cut on the $MT2$ 
 \centering
 \includegraphics[angle=0,scale=0.35]{SelectionEleTau/TauMT.pdf}
 \includegraphics[angle=0,scale=0.35]{SelectionMuTau/tauMT_MuTau.pdf}
-\caption{\tauMT distribution for events with $\mttwo>90\GeV$ in (Left) $e-\Tau$ and (RIGHT) $\mu-\Tau$ channels.}
+\caption{\tauMT distribution for events with $\mttwo>90\GeV$ in (Left) $e\hadtau$ and (RIGHT) $\mu\hadtau$ channels.}
 \label{fig:taumtleptontau}
 \end{figure}
 
-Opposite to the $\Tau\Tau$ channel, the events with $MT2<90 GeV$ are not useful in electron/$\mu + \tau$ channels because of the contamination of the $W+jets$ events.
+Opposite to the $\Tau\Tau$ channel, the events with $MT2<90 GeV$ are not useful in electron/$\mu\Tau$ channels because of the contamination of the $W+jets$ events.
