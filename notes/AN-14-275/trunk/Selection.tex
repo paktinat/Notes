@@ -18,28 +18,37 @@ method can be found in section \ref{sect:stat}.
 %The tau leptons can decay leptonically, in 35\% of the time, or can decay via hadrons, which is occuring with 65\% of probability. Since there are two leptons in the final state, then the probability of having $\PSGcpDo\PSGcmDo \rightarrow \hadtau+e/\mu+\MET$ is about 46\%, while the probability of occuring $\PSGcpDo\PSGcmDo \rightarrow \hadtau+\hadtau+\MET$ is about 42\%. Hereafter, final states containing a lepton are referred to as $\leptonTau$ channel and those events where the two taus decays via hadrons are referred to as $\tauTau$. This section describes the cuts to enhance $\tauTau$ events. The list of cuts to select the $\leptonTau$ events can be found in Section~\ref{sect:leptonTauCuts}.\\    
 In the final state with 2 hadronic taus, events are required to pass the following list of cuts
 \begin{itemize}
-\item at least two reconstructed opposit-sign tau objects, with $\pt>45\GeV$ and $|\eta|<2.1$, are required;\\ Since the online trigger cuts require two taus with $\pt>35\GeV$, then it can be justified to have an offline cut on $\pt>45\GeV$. 
-\item both taus are required to pass medium isolation criteria;\\ In the online selection, it is also required two medium isolated taus.
-\item extra muons and leptons are vetoed;\\ In order to reject background from di-boson events, events with extra leptons are failed for further analysis.
-\item the invariant mass of the two taus, $m_{\tau\tau}$, should be above 12 \GeV;\\ This cut removes backgrounds from multi-jet events. 
-\item events under the Z mass peak are rejected, namely $|m_{\tau\tau}-m_{\Z}^{\rm rec}|>15\GeV$;\\ This requirement acts against DY background events. 
-\item A cut on $\mindphifour$ is applied to be above 1;\\ This cut is introduced against multi-jet events.   
-\item $\mttwo>40\GeV$. 
+\item \textbf{2 $\boldsymbol\tau_h$ Selection} At least two reconstructed opposit-sign tau objects, 
+with $\pt>45\GeV$ and $|\eta|<2.1$, are required. Since the online trigger cuts require two taus with 
+$\pt>35\GeV$, then it can be justified to have an offline cut on $\pt>45\GeV$. 
+Both taus not only are required to pass \emph{MediumCombinedIsoDBSumPtCorr3Hits} isolation requirement, 
+but also should pass the Loose working point of the MVA3 anti-e discriminator, being \emph{LooseElectronMVA3Rejection}, 
+as well as the Loose working point of the Muon2 anti-$\mu$ discriminator, being \emph{LooseMuon2Rejection}.
+\item \textbf{$\boldsymbol e$ and $\boldsymbol\mu$ Veto} Extra electrons and muons are vetoed. This would help to reject backgrounds from di-boson events.
+\item \textbf{Z Veto} Events under the reconstructed Z mass peak are rejected, namely $|m_{\tau\tau}-m_{\Z}^{\rm rec}|>15\GeV$. 
+In the reconstructed $\Z\rightarrow \Tau\Tau$ events passing above-mentioned set of cuts, events under the Z mass peak are fitted 
+with a Gaussian function. The mean value of the fit is found to be about 70 GeV. Hence the invariant mass of two taus, $m_{\tau\tau}$, should be 
+either below 55 GeV or above 85 GeV. Also in order to decrease the contamination from multi-jet backgrounds, events are required to fulfill $m_{\tau\tau} > 12\GeV$. 
+\item \textbf{$\boldsymbol\mindphifour > $ 1} This cut is introduced against multi-jet events.  
+\item \textbf{$\boldsymbol\mttwo>40\GeV$} Since SM background events with low \MET or fake \MET arrising from miss-measured reconstructed object
+ contribute to the lower values of $\mttwo$, then a moderate cut on this variable would enhace signal over background ratio.  
 \end{itemize}
 After applying pre-selection cuts, two extra set of cuts are introduced, where each of them is sensitive to some regions of $\chione\PSGczDo$ mass plane: one aimed the regions with large mass difference between charginos and neutralinos, the other one is dedicated for low mass regions. It should be noted that the two search bins are chosen to be exclusive in order to be able to combine the statistics at the end.
-\subsubsection{Search \binone: sensitive to high $\Delta m$}
+\begin{itemize}
+\item \textbf{Search \binone: sensitive to high $\boldsymbol\Delta m$}
 A first set of cuts includes a cut on $\mttwo$.
 \begin{itemize}
 \item $\mttwo>90\GeV$.
 \end{itemize}
-\subsubsection{Search \bintwo: sensitive to low $\Delta m$}
+\item \textbf{Search \bintwo: sensitive to low $\boldsymbol\Delta m$}
 A second set of cuts includes some cuts on different variables listed below.
 \begin{itemize}
+\item b-jets tagged with CSVM algorithm are vetoed.
 \item $\mttwo<90\GeV$;
 \item $\SumMT>250\GeV$;
-\item b-jets tagged with CSVM algorithm are vetoed.
 \end{itemize}
-The cut-flow-table can be found in Table~\ref{tbl:cutflowtable}. The yields for three SUSY signal points, corresponding to a low mass difference $(m_{\chione}=180\GeV,mom_{\PSGczDo}=60\GeV)$, a moderate mass difference $(m_{\chione}=240\GeV,m_{\PSGczDo}=40\GeV)$ and a high mass difference $(m_{\chione}=380\GeV,m_{\PSGczDo}=1\GeV)$, are presented in the table.   
+\end{itemize}
+The cut-flow-table can be found in Table~\ref{tbl:cutflowtable}. The yields for three SUSY signal points, corresponding to a low mass difference $(m_{\chione}=180\GeV,m_{\PSGczDo}=60\GeV)$, a moderate mass difference $(m_{\chione}=240\GeV,m_{\PSGczDo}=40\GeV)$ and a high mass difference $(m_{\chione}=380\GeV,m_{\PSGczDo}=1\GeV)$, are presented in the table.   
 \begin{sidewaystable}
 %\begin{table}
 \begin{center}
@@ -50,8 +59,8 @@ The cut-flow-table can be found in Table~\ref{tbl:cutflowtable}. The yields for 
 \hline\hline
 \multirow{5}{*}{Pre-Selection}&2 $\tau_h$ Selection& 46.81 &27.14& 9.99 &81.53&19272.05&11.21&543.42&1961.29&95.85&21965.34$\pm$6387.87&18526.00\\
 &$e$ and $\mu$ Veto& 46.81 &27.14& 9.99 &81.53&19272.05&11.21&543.42&1961.29&95.85&21965.34$\pm$6387.87&18526.00\\
-&Z Veo& 45.63 &25.54 & 8.99 &70.50&18825.02&10.86&527.83&1333.37&88.53&20856.11$\pm$6383.93&17554.00\\
-&misc $>$ 1& 22.78 &14.01 & 5.88 &13.91&8426.98&3.66&192.11&276.27&13.67&8926.59$\pm$4404.31&5105.00\\
+&Z Veto& 45.63 &25.54 & 8.99 &70.50&18825.02&10.86&527.83&1333.37&88.53&20856.11$\pm$6383.93&17554.00\\
+&$\mindphifour > $ 1& 22.78 &14.01 & 5.88 &13.91&8426.98&3.66&192.11&276.27&13.67&8926.59$\pm$4404.31&5105.00\\
 &$M_{T2} > $ 40& 13.22 &10.90 & 5.12 &0.89&135.29&1.11&31.93&13.17&5.26&187.65$\pm$135.47&131.00\\
 \hline
 \binone&$M_{T2} > $ 90& 0.97 &4.10 & 3.56 &0.17&0.00&0.02&0.00&0.56&0.00&0.75$\pm$0.08&1.00\\
@@ -70,15 +79,15 @@ The cut-flow-table can be found in Table~\ref{tbl:cutflowtable}. The yields for 
 The distributions of $\mttwo$ and $\SumMT$ after applying pre-selection cuts are shown in Figure~\ref{fig:comparison}. There is only one QCD event with slightly large weight contributing to the plots. Hence the disagreement between data and MC in a couple of bins of $\SumMT$ distribution can be justifed. In order to be blind to data, in both distributions data events are not shown at some points. Overally, it can be concluded that data and MC are in reasonable agreement. 
 \begin{figure}[htbp]
 \centering
-\includegraphics[angle=0,scale=0.35]{TauTauFigs/MT2_4bins.pdf}
-\includegraphics[angle=0,scale=0.35]{TauTauFigs/SumMT_8bins.pdf} \\
+\includegraphics[angle=0,scale=0.35]{TauTauFigs/MT2_preSel.png}
+\includegraphics[angle=0,scale=0.35]{TauTauFigs/SumMT_preSel.png} \\
 \caption{Left: \mttwo. Right: \SumMT.}
 \label{fig:comparison}
 \end{figure}
 
 \subsection{\texorpdfstring{$\leptonTau$ Channel}{lepton-tau Channel}}
 \label{sect:leptonTauCuts}
-In lepton ($e$ and $\mu$) $+$ \Tau channels, tight isolated $\Tau$ objects are selected. To reduce the rate of the fake $\Tau$'s orginated from $e$ and $\mu$, the same cuts on the discriminators against $e$ and $\mu$ which are used in the Higgs search analysis \cite{CMS_AN_2013-188} have been applied. In $e\Tau$ channel, $\Tau$ objects which pass \emph{MediumMVA3Rejection} against $e$ and the \emph{LooseMuon2RejectionPF} discriminator against $\mu$ are selected. In the $\mu\Tau$ channel, the tight working point of the \emph{Muon2Rejection} is requested and the Loose working point of the discriminator against electron is applied.
+In lepton ($e$ and $\mu$) $+$ \Tau channels, tight isolated $\Tau$ objects are selected. To reduce the rate of the fake $\Tau$'s orginated from $e$ and $\mu$, the same cuts on the discriminators against $e$ and $\mu$ which are used in the Higgs search analysis \cite{CMS_AN_2013-188} have been applied. In $e\Tau$ channel, $\Tau$ objects which pass \emph{MediumElectronMVA3Rejection} against $e$ and the \emph{LooseMuon2Rejection} discriminator against $\mu$ are selected. In the $\mu\Tau$ channel, the tight working point of the \emph{Muon2Rejection} is requested and the Loose working point of the discriminator against electron is applied.
 
 $\mu$'s with $\PT > 20 \GeVc$ and $|\eta|<2.1$ are selected in the $\mu\Tau$ channel. The $\mu$'s should pass tight particle flow identification and a tight cut ($<0.1$) on the isolation.
  
@@ -86,7 +95,7 @@ In $e\Tau$ channel, each event is requested to have an electron with $\PT >25 \G
 
 To suppress dilepton and multilepton backgrounds, events with an extra $e$ or $\mu$ with $\PT >10 \GeV$ are rejected. For the extra electron, a wider window of $|\eta|<2.3$ is scanned and a looser isolation cut of $0.2$ is applied. To veto the extra $\mu$, a selection similar to the $\mu$ selection in $\mu\hadtau$ channel is applied.
 
-After requesting two opposite sign leptons in the events, a loose cut on MET $(30 \GeV)$ is applied to suppress QCD events. As there is no b-quark in the signal, rejecting events with one or more b-tagged jets with $\PT > 20 \GeV$ helps a lot in reducing $t\bar{t}$ and $W+b$ backgrounds.
+After requesting two opposite sign leptons in the events, a loose cut on \MET $(30 \GeV)$ is applied to suppress QCD events. As there is no b-quark in the signal, rejecting events with one or more b-tagged jets with $\PT > 20 \GeV$ helps a lot in reducing $t\bar{t}$ and $W+b$ backgrounds.
 
 To reject QCD low mass resonances, the invariant mass of the lepton and the $\Tau$ is requested to be greater than $15\ \GeV$. Another cut on the invariant mass of the di-lepton system is applied to remove the peak of the $Z+jets$ events. It has been found that the visible mass of the $Z\to\tau\tau\to\,e +\Tau$ moves to $60 \pm 15 GeV$ due to mis-reconstruction of the energy of the $\Tau$ and also the missing energy due to the decay of the $\tau$ to electron. So the events with invariant mass in the range of $[45,75]$ are cutted away. The minimum angle in the transverse plane between the \MET and the jets with \PT $>$ 40 \GeVc and $|\eta| <$ 5.0 is asked to be greater than 1.0. As the last pre-selection cut, events with $MT2<40 GeV$ are discarded to kill the bulk of the QCD events and get rid of related uncertainities due to mis-reconstruction of the QCD events. As it has mentioned above, the signal events are expected to have high $MT2$ values and are not removed with such a cut.
 
@@ -142,7 +151,7 @@ $\tauMT > 200\GeV$ & 2.41 & 0 & 0.34 & 0.79 & 0.28 & 0 & 1.40$\pm$0.49 & 5\\
 \end{center}
 \end{table}
 
-The cut-flow-tables for the $e\Tau$ and $\mu\Tau$ pre-selections are shown in tables~\ref{tbl:cutflowtableeletau} and~\ref{tbl:cutflowtablemuotau} respectively. The distribution of the \PT of the $\Tau$ and $MET$ in the pre-selected events in both channels are shown in FIGS~\ref{fig:datamceletau} and~\ref{fig:datamcmuotau} . The good agreement between data and MC confirms that the needed correction factors are considrred carefully.
+The cut-flow-tables for the $e\Tau$ and $\mu\Tau$ pre-selections are shown in tables~\ref{tbl:cutflowtableeletau} and~\ref{tbl:cutflowtablemuotau} respectively. The distribution of the \PT of the $\Tau$ and \MET in the pre-selected events in both channels are shown in FIGS~\ref{fig:datamceletau} and~\ref{fig:datamcmuotau} . The good agreement between data and MC confirms that the needed correction factors are considrred carefully.
 
 \begin{figure}[htbp]
 \centering
