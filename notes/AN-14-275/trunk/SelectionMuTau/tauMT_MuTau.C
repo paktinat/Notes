@@ -1,9 +1,9 @@
 {
 //=========Macro generated from canvas: muTau_log_comp_overlay/
-//=========  (Thu Mar  5 19:55:31 2015) by ROOT version5.34/03
-   TCanvas *muTau_log_comp_overlay = new TCanvas("muTau_log_comp_overlay", "",1,52,600,600);
+//=========  (Sun Mar  8 17:47:10 2015) by ROOT version5.34/03
+   TCanvas *muTau_log_comp_overlay = new TCanvas("muTau_log_comp_overlay", "",1,52,600,630);
    gStyle->SetOptFit(1);
-   muTau_log_comp_overlay->Range(-121.6216,-3.071787,554.0541,2.418219);
+   muTau_log_comp_overlay->Range(-121.6216,-3.072356,554.0541,2.4202);
    muTau_log_comp_overlay->SetFillColor(0);
    muTau_log_comp_overlay->SetFillStyle(4000);
    muTau_log_comp_overlay->SetBorderMode(0);
@@ -26,15 +26,15 @@
    h_stack->SetName("h_stack");
    h_stack->SetTitle("");
    h_stack->SetMinimum(0.02);
-   h_stack->SetMaximum(63.58448);
+   h_stack->SetMaximum(63.83611);
    
    TH1F *h__stack_1 = new TH1F("h__stack_1","",10,0,500);
-   h__stack_1->SetMinimum(0.007269659);
-   h__stack_1->SetMaximum(108.1231);
+   h__stack_1->SetMinimum(0.007267394);
+   h__stack_1->SetMaximum(108.5729);
    h__stack_1->SetDirectory(0);
    h__stack_1->SetStats(0);
    h__stack_1->SetLineWidth(2);
-   h__stack_1->GetXaxis()->SetTitle("M_{T}^{#tau_{h}}");
+   h__stack_1->GetXaxis()->SetTitle("tauMT");
    h__stack_1->GetXaxis()->SetNdivisions(505);
    h__stack_1->GetXaxis()->SetLabelFont(42);
    h__stack_1->GetXaxis()->SetLabelSize(0.05);
@@ -257,10 +257,52 @@
    h__WWjets->GetZaxis()->SetTitleSize(0.035);
    h__WWjets->GetZaxis()->SetTitleFont(42);
    h_stack->Add(h__WWjets,"");
-   h_stack->Draw("hist");
    Double_t xAxis6[11] = {0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500}; 
    
-   TH1D *h__SUSY_no0 = new TH1D("h__SUSY_no0","",10, xAxis6);
+   TH1D *h__Higgs = new TH1D("h__Higgs","",10, xAxis6);
+   h__Higgs->SetBinContent(3,0.05032606);
+   h__Higgs->SetBinContent(4,0.06525523);
+   h__Higgs->SetBinContent(5,0.02751728);
+   h__Higgs->SetBinContent(6,0.0184111);
+   h__Higgs->SetBinContent(8,0.008923499);
+   h__Higgs->SetBinError(3,0.01878047);
+   h__Higgs->SetBinError(4,0.02096276);
+   h__Higgs->SetBinError(5,0.01379651);
+   h__Higgs->SetBinError(6,0.01065476);
+   h__Higgs->SetBinError(8,0.008923499);
+   h__Higgs->SetEntries(38);
+   h__Higgs->SetStats(0);
+
+   ci = TColor::GetColor("#ff0000");
+   h__Higgs->SetFillColor(ci);
+
+   ci = TColor::GetColor("#ff0000");
+   h__Higgs->SetLineColor(ci);
+   h__Higgs->SetLineWidth(2);
+
+   ci = TColor::GetColor("#ff0000");
+   h__Higgs->SetMarkerColor(ci);
+   h__Higgs->GetXaxis()->SetNdivisions(505);
+   h__Higgs->GetXaxis()->SetLabelFont(42);
+   h__Higgs->GetXaxis()->SetLabelSize(0.07);
+   h__Higgs->GetXaxis()->SetTitleSize(0.07);
+   h__Higgs->GetXaxis()->SetTitleOffset(1.1);
+   h__Higgs->GetXaxis()->SetTitleFont(42);
+   h__Higgs->GetYaxis()->SetNdivisions(505);
+   h__Higgs->GetYaxis()->SetLabelFont(42);
+   h__Higgs->GetYaxis()->SetLabelSize(0.07);
+   h__Higgs->GetYaxis()->SetTitleSize(0.07);
+   h__Higgs->GetYaxis()->SetTitleOffset(1.3);
+   h__Higgs->GetYaxis()->SetTitleFont(42);
+   h__Higgs->GetZaxis()->SetLabelFont(42);
+   h__Higgs->GetZaxis()->SetLabelSize(0.035);
+   h__Higgs->GetZaxis()->SetTitleSize(0.035);
+   h__Higgs->GetZaxis()->SetTitleFont(42);
+   h_stack->Add(h__Higgs,"");
+   h_stack->Draw("hist");
+   Double_t xAxis7[11] = {0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500}; 
+   
+   TH1D *h__SUSY_no0 = new TH1D("h__SUSY_no0","",10, xAxis7);
    h__SUSY_no0->SetBinContent(3,0.4196464);
    h__SUSY_no0->SetBinContent(4,0.6736728);
    h__SUSY_no0->SetBinContent(5,1.135247);
@@ -325,7 +367,7 @@
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__Wjets","W+jets","f");
+   entry=leg->AddEntry("h__Wjets","W","f");
 
    ci = TColor::GetColor("#00cc00");
    entry->SetFillColor(ci);
@@ -338,7 +380,7 @@
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__Zjets","Z+jets","f");
+   entry=leg->AddEntry("h__Zjets","ZX","f");
 
    ci = TColor::GetColor("#006600");
    entry->SetFillColor(ci);
@@ -364,13 +406,26 @@
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__WWjets","WW+jets","f");
+   entry=leg->AddEntry("h__WWjets","WW","f");
 
    ci = TColor::GetColor("#000066");
    entry->SetFillColor(ci);
    entry->SetFillStyle(1001);
 
    ci = TColor::GetColor("#000066");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry=leg->AddEntry("h__Higgs","Higgs","f");
+
+   ci = TColor::GetColor("#ff0000");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#ff0000");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
@@ -393,8 +448,8 @@
    leg->Draw();
    
    TH1F *h___1 = new TH1F("h___1","",10,0,500);
-   h___1->SetMinimum(0.02124748);
-   h___1->SetMaximum(39.2008);
+   h___1->SetMinimum(0.02123974);
+   h___1->SetMaximum(39.3647);
    h___1->SetDirectory(0);
    h___1->SetStats(0);
    h___1->SetLineWidth(2);
@@ -415,24 +470,24 @@
    h___1->GetZaxis()->SetTitleSize(0.035);
    h___1->GetZaxis()->SetTitleFont(42);
    h___1->Draw("sameaxis");
-   TLatex *   tex = new TLatex(0.18,0.943,"MT2 > 90");
+   TLatex *   tex = new TLatex(0.18,0.943,"");
 tex->SetNDC();
    tex->SetTextSize(0.0305);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.615,0.943,"#sqrt{s} = 8 TeV, L = 19.60 fb^{-1}");
+      tex = new TLatex(0.614094,0.9440559,"#sqrt{s} = 8 TeV, L = 19.60 fb^{-1}");
 tex->SetNDC();
    tex->SetTextSize(0.0305);
    tex->SetLineWidth(2);
    tex->Draw();
    
    TH1F *h___2 = new TH1F("h___2","",10,0,500);
-   h___2->SetMinimum(0.02124748);
-   h___2->SetMaximum(39.2008);
+   h___2->SetMinimum(0.02123974);
+   h___2->SetMaximum(39.3647);
    h___2->SetDirectory(0);
    h___2->SetStats(0);
    h___2->SetLineWidth(2);
-   h___2->GetXaxis()->SetTitle("M_{T}^{#tau_{h}}");
+   h___2->GetXaxis()->SetTitle("tauMT");
    h___2->GetXaxis()->SetNdivisions(505);
    h___2->GetXaxis()->SetLabelFont(42);
    h___2->GetXaxis()->SetLabelSize(0.05);
@@ -451,7 +506,12 @@ tex->SetNDC();
    h___2->GetZaxis()->SetTitleSize(0.035);
    h___2->GetZaxis()->SetTitleFont(42);
    h___2->Draw("sameaxis");
+      tex = new TLatex(5.350986,132.5949,"MT2 > 90");
+   tex->SetTextSize(0.03146853);
+   tex->SetLineWidth(2);
+   tex->Draw();
    muTau_log_comp_overlay->Modified();
    muTau_log_comp_overlay->cd();
    muTau_log_comp_overlay->SetSelected(muTau_log_comp_overlay);
+   muTau_log_comp_overlay->ToggleToolBar();
 }
