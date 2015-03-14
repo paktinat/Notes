@@ -4,10 +4,7 @@ To reconstruct the objects, the CMSSW\_5\_3\_7\_patch5 is used for both data and
 The data used in this analysis corresponds to \IL of proton-proton collisions in the center of mass energy of $\sqrt{s}$ = 8 TeV 
 which was taken in 2012. The datasets used for $e\tau_{had}$, $\mu\tau_{had}$ and $\tau_{had}\tau_{had}$ channels, the run range and the corresponding integrated luminosities are mentioned Table ~\ref{Tab.DataSamples}.
 
-Only the lumisections with fully operative CMS sub-detectors are used (golden JSON files$^{1}$). To optimize the search method, MC 
-samples are used for different Standard Model backgrounds and signals. These samples are officially generated and reconstructed by the CMS
-collaboration. The full list of the MC samples and their cross sections are given in Table ~\ref{Tab.MCSamples}. For most of the samples the most 
-accurate calculation of the cross sections available in the literature (usually NLO and NNLO) are used. 
+Only the lumisections with fully operative CMS sub-detectors are used the golden JSON file,Cert\_190456-208686\_8TeV\_22Jan2013ReReco\_Collisions12\_JSON.txt. To optimize the search method, MC samples are used for different Standard Model backgrounds and signals. These samples are officially generated and reconstructed by the CMS collaboration. The full list of the MC samples and their cross sections are given in Table ~\ref{Tab.MCSamples}. For most of the samples the most accurate calculation of the cross sections available in the literature (usually NLO and NNLO) are used. 
 
 
 
@@ -19,28 +16,27 @@ accurate calculation of the cross sections available in the literature (usually 
 \hline
 \multicolumn{3}{|c|}{$e\tau_{had}$ and $\mu\tau_{had}$ channels} \\
 \hline
-Dataset Name & Run--range & Luminosity \\
+Dataset Name & Run--range & Luminosity(\fbinv) \\
 \hline
-/TauPlusX/Run2012A-22Jan2013-v1/AOD$^{1}$   & 190456--193621 & 0.887\\
-/TauPlusX/Run2012B-22Jan2013-v1/AOD$^{1}$   & 193833--196531 & 4.446\\
-/TauPlusX/Run2012C-22Jan2013-v1/AOD$^{1}$   & 198022--203742 & 7.153\\
-/TauPlusX/Run2012D-22Jan2013-v1/AOD$^{1}$   & 203777--208686 & 7.318\\
+/TauPlusX/Run2012A-22Jan2013-v1/AOD   & 190456--193621 & 0.887\\
+/TauPlusX/Run2012B-22Jan2013-v1/AOD   & 193833--196531 & 4.446\\
+/TauPlusX/Run2012C-22Jan2013-v1/AOD   & 198022--203742 & 7.153\\
+/TauPlusX/Run2012D-22Jan2013-v1/AOD   & 203777--208686 & 7.318\\
 \hline
 \hline
 \multicolumn{3}{|c|}{$\tau_{had}\tau_{had}$ channel} \\
 \hline
 Dataset Name & Run--range & Luminosity \\
 \hline
-/Tau/Run2012A-22Jan2013-v1/AOD$^{1}$   & 190456--193621 & 0.887 \\
-/TauParked/Run2012B-22Jan2013-v1/AOD$^{1}$ & 193833--196531 & 4.446 \\
-/TauParked/Run2012C-22Jan2013-v1/AOD$^{1}$ & 198022--203742 & 7.153 \\
-/TauParked/Run2012D-22Jan2013-v1/AOD$^{1}$ & 203777--208686 & 7.318 \\
+/Tau/Run2012A-22Jan2013-v1/AOD   & 190456--193621 & 0.887 \\
+/TauParked/Run2012B-22Jan2013-v1/AOD & 193833--196531 & 4.446 \\
+/TauParked/Run2012C-22Jan2013-v1/AOD & 198022--203742 & 7.153 \\
+/TauParked/Run2012D-22Jan2013-v1/AOD & 203777--208686 & 7.318 \\
 \hline
 
 \end{tabular}
 }
 \end{center}
-$^{1}$ Cert\_190456-208686\_8TeV\_22Jan2013ReReco\_Collisions12\_JSON.txt \\
 \caption{
   List of datasets analysed by different channels.
 }
@@ -172,3 +168,50 @@ $^{2}$ /summer12-..START53*/AODSIM\\
 \end{table}
 
 The investigated susy signal in this analysis is $pp \rightarrow \chip \chim \rightarrow \tau^+ \tau^- \MET$ named "TChipChimSlepSnu" which \PYTHIA is used to produce LHE files and then it is passed through the CMS official Fast-Sim process.
+
+\begin{table}[!h]
+\begin{center}
+\small{
+\begin{tabular}{|l|c|c|}
+\hline
+HLT Path   & L1 Seed  & Luminosity(\fbinv) \\
+\hline
+\multicolumn{3}{|c|}{$e\tau_{had}$ channel} \\
+\hline
+Ele15\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_LooseIsoPFTau20    &  SingleEG12            &  $1.1$    \\
+Ele15\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_TightIsoPFTau20    &  SingleEG12            &  $0.7$    \\
+Ele18\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_MediumIsoPFTau20   &  SingleEG15            &  $1.7$    \\
+Ele20\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_MediumIsoPFTau20   &  SingleEG18            &  $0.9$    \\
+Ele20\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_MediumIsoPFTau20   &  SingleEG20            &  $0.0023$ \\
+Ele20\_CaloIdVT\_CaloIsoRhoT\_TrkIdT\_TrkIsoT\_LooseIsoPFTau20 & $^{1}$                 &  $0.7$    \\
+Ele22\_eta2p1\_WP90Rho\_LooseIsoPFTau20}                        & $^{2}$                 & $18.7$    \\   
+\hline
+\multicolumn{3}{|c|}{$mu\tau_{had}$ channel} \\
+\hline
+IsoMu12\_LooseIsoPFTau10                                       &    SingleMu7           &  $0.02$ \\
+IsoMu15\_LooseIsoPFTau15                                       &    SingleMu10          &  $2.0$  \\
+IsoMu15\_eta2p1\_LooseIsoPFTau20                               &    SingleMu14\_eta2p1  &  $2.5$  \\
+IsoMu18\_eta2p1\_LooseIsoPFTau20                               &    SingleMu16er        &  $1.6$  \\
+IsoMu18\_eta2p1\_LooseIsoPFTau20                               &    SingleMu16er        &  $0.7$  \\
+IsoMu17\_eta2p1\_LooseIsoPFTau20                               &    SingleMu14er        & $18.7$  \\
+\hline
+\multicolumn{3}{|c|}{$\tau_{had}\tau_{had}$ channel} \\
+\hline
+DoubleMediumIsoPFTau35\_Trk5\_eta2p1                          &  $^{3}$                       & $3.9$ \\
+DoubleMediumIsoPFTau35\_Trk1\_eta2p1                          &  $^{3}$                       & $14.2$ \\
+\hline
+\end{tabular}
+
+\end{center}
+}
+\small{
+$^{1}$ SingleIsoEG18er or SingleEG20 \\
+$^{2}$ SingleIsoEG18er or SingleIsoEG20er or SingleEG22 \\
+$^{3}$ L1\_DoubleTauJet44er or L1\_DoubleJetC64 \\
+}
+\caption{
+  Trigger paths used by $e\tau_{had}$, $\mu\tau_{had}$ and $\tau_{had}\tau_{had}$ channels
+  in $2012$ data. All the paths given in the table remained unprescaled during the whole and $2012$ data--taking period.
+}
+\label{tab:evtSelTriggerPaths}
+\end{table}
