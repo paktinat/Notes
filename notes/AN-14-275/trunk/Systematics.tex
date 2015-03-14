@@ -2,12 +2,12 @@
 \label{sect:sys}
 \subsection{Signal Systematic Uncertainties}
 \subsubsection{Luminosity}
-The uncertainty on the luminosity  is $2.6\%$ for $2012$ data.
+The uncertainty on the luminosity  is $2.6\%$ for $2012$ data ~\cite{LUMI}.
 
 \subsubsection{ISR}
-The jet activity of our signal is coming from Initial State Radition(ISR) and due to generating our signal with \PYTHIA generator which can not simulate ISR properly, taking into account only $2 \rightarrow 2$ scattering processes, therefore ISR jet momenta spectra as well as the multiplicity cannot be Trusted. Because of this issue it is possible to generate lightc-flavor jet which can be tagged wrongly as a b-jet and by applying a b-veto cut we miss that signal event. On the other side \MADGRAPH generator, which is a matrix element generator provids a better description of ISR jets and because it can simulate $2 \rightarrow 4$ interactions. 
-We take advantage of this point by choosing a signal-like \MADGRAPH generated MC sample like WW which mimics the signal from the generation point of view and comparing it with the signal point whose $m(\chione) = 100\,\GeV$ and $m(\PSGczDo) = 0\,\GeV$ and this point resembles WW with respect to $\sqrt {\hat{s}}$. It is followd the below recipe, originating from $fixME$.
-By applying and relaxing the b-veto cut it is obtained the yields of WW and signal and by the uncertainty is Unc1:
+The jet activity of our signal is coming from Initial State Radiation(ISR) and due to generating our signal with \PYTHIA generator which can not simulate ISR properly, taking into account only $2 \rightarrow 2$ scattering processes, therefore ISR jet momenta spectra as well as the multiplicity cannot be Trusted. Because of this issue it is possible to generate light c-flavour jet which can be tagged wrongly as a b-jet and by applying a b-veto cut we miss that signal event. On the other side \MADGRAPH generator, which is a matrix element generator provides a better description of ISR jets and because it can simulate $2 \rightarrow 4$ interactions. 
+We take advantage of this point by choosing a signal-like \MADGRAPH generated MC sample like WW which mimics the signal from the generation point of view and comparing it with the signal point whose $m(\chione) = 100\,\GeV$ and $m(\PSGczDo) = 0\,\GeV$ and this point resembles WW with respect to $\sqrt {\hat{s}}$. It is followed the below recipe, originating from $fixME$.
+By applying and relaxing the b-veto cut it is obtained the yields of WW and signal and by the uncertainty is A:
 
 %\begin{linenomath}
 %\begin{equation}
@@ -17,82 +17,83 @@ By applying and relaxing the b-veto cut it is obtained the yields of WW and sign
 \begin{align}
 WW\_ratio &= \frac{WW\_bveto}{WW\_relaxed} = \frac{88968.51}{93058.33} = 0.953\\ \nonumber
 susy\_ratio &= \frac{susy\_bveto}{susy\_relaxed} = \frac{2041.88}{2206.07} = 0.922 \\ \nonumber
-Unc1 &= \frac{susy\_ratio - WW\_ratio}{WW\_ratio} = 3 \% 
+A &= \frac{susy\_ratio - WW\_ratio}{WW\_ratio} = 3 \% \nonumber
 \end{align}
 
 %\end{equation}
 %\end{linenomath}
 
-Then due to not having a WW enriched region in data we use the previous WW sample multiplied by 0 b-tag SF as data and we redo the above calculation for data (WW $\times {\rm 0b\_tag SF}$) means applying and relaxing b-tagging and we have Unc2:
+Then due to not having a WW enriched region in data we use the previous WW sample multiplied by 0 b-tag SF as data and we redo the above calculation for data (WW $\times {\rm 0b\_tag SF}$) means applying and relaxing b-tagging and we have B:
 %\begin{linenomath}
 \begin{align}
 %\label{eq:suWW}
 %I\_{e/ \mu}=\Sigma P\_{T}^{charged }(\Delta z <2mm)+max(P\_{T}^{photon}+P\_{T}^{h0 }\_\Delta \beta,0),
 data\_ratio &= \frac{data\_bveto}{data\_relaxed} = \frac{80282.30}{84226.93} = 0.956 \\ \nonumber
-Unc2 &= \frac{data\_ratio - WW\_ratio}{WW\_ratio} = 0.003 \%
+B &= \frac{data\_ratio - WW\_ratio}{WW\_ratio} = 0.003 \% \nonumber
 \end{align}
 %\end{linenomath}
 
-and finally the ISR systemtic uncertaintiy due to B-mistagged jet veto is 3 \%.
+and finally the ISR systematic uncertainty due to B-mistagged jet veto is 3 \%.
 
 \subsubsection{\texorpdfstring{Systematic uncertainty due to $\mindphifour$}{Systematic uncertainty due to minDeltaPhi4}}
-The other source of systematic uncertainty due to existence of ISR in signal events is using of $\mindphifour$ ($ > 1$) variable against QCD events. We use the same method as above to obtain the systematic uncertainty of applying this variable. But this time we use Higgs to $\tau \tau$ sample which mimics our signal like WW and we chose it because Higgs sample has the most similar cumulative distribution function,i.e. the efficiency of this cut, to our signal that is shown in. %Fig.~\ref{}.     
+The other source of systematic uncertainty due to existence of ISR in signal events is using of $\mindphifour$ ($ > 1$) variable against QCD events. We use the same method as above to obtain the systematic uncertainty of applying this variable. But this time we use Higgs to $\tau \tau$ sample which mimics our signal like WW.
+%and we chose it because Higgs sample has the most similar cumulative distribution function,i.e. the efficiency of this cut, to our signal that is shown in. %Fig.~\ref{}.     
 
 \begin{align}
 Higgs\_ratio &= \frac{Higgs\_bveto}{Higgs\_relaxed} = \frac{89288.14}{180562.56} = 0.491 \\ \nonumber
 susy\_ratio &= \frac{susy\_bveto}{susy\_relaxed} = \frac{1020.33}{2206.07} = 0.466 \\ \nonumber
-Unc1 &= \frac{susy\_ratio - Higgs\_ratio}{Higgs\_ratio} = 3 \% 
+A &= \frac{susy\_ratio - Higgs\_ratio}{Higgs\_ratio} = 3 \% 
 \end{align}
 
 
-\subsubsection{Lepton Energy Scale}
+\subsubsection{Tau Energy Scale}
 
 %The electron energy scale is varied by $1\%$ ($2.5\%$) for electrons reconstructed in the barrel (endcap) region of the ECAL.
 %The uncertainty on muon momenta is assumed to be negligible. 
-The energy scale of hadronically decaying taus is varied by $3\%$, following the recommendation of the Tau POG~\cite{TauPOG} and it is taken into account the effect of this variation on \MET and \pt relateds variables and we obtaind the up and down changes of different variables on final yields in different channels which is reported in table.
+The energy scale of hadronically decaying taus is varied by $3\%$, following the recommendation of the Tau POG~\cite{TauPOG} and it is taken into account the effect of this variation on \MET and \pt related variables and we obtained the up and down changes of different variables on final yields in different channels which is reported in table.
 
 
 
-\begin{table}[!h]
-\tiny{
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-\hline
-                             & QCD & ZX    & W  & WW   & Top    & All MC & Susy & Data \\\hline 
-$e\hadtau$ channel           & $0.0 ^{+0.0} _{-0.0} $ & $0.38 ^{+0.05} _{-0.03}  $    &  $1.2 ^{+0.0} _{-0.0} $      &  $0.05 ^{+0.0} _{-0.0} $   &$0.02 ^{+0.12} _{-0.0} $           & $1.74 ^{+0.13} _{-0.03} $       & $3.47 ^{+0.33} _{-0.0} $ & $3.0 ^{+0.0} _{-1.0}$    \\\hline   
+%% \begin{table}[!h]
+%% \tiny{
+%% \begin{center}
+%% \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+%% \hline
+%%                              & QCD & ZX    & W  & WW   & Top    & All MC & Susy & Data \\\hline 
+%% $e\hadtau$ channel           & $0.0 ^{+0.0} _{-0.0} $ & $0.38 ^{+0.05} _{-0.03}  $    &  $1.2 ^{+0.0} _{-0.0} $      &  $0.05 ^{+0.0} _{-0.0} $   &$0.02 ^{+0.12} _{-0.0} $           & $1.74 ^{+0.13} _{-0.03} $       & $3.47 ^{+0.33} _{-0.0} $ & $3.0 ^{+0.0} _{-1.0}$    \\\hline   
 
-$\mu\hadtau$ channel &  $0.0 ^{+0.0} _{-0.0} $     &  $0.28 ^{+0.11} _{-0.0} $      &  $0.79 ^{+0.0} _{-0.32} $  & $0.34 ^{+0.07} _{-0.05} $        &  $0.0 ^{+0.04} _{-0.06} $   &    $1.4 ^{+0.22} _{-0.34} $      &  $2.41 ^{+0.17} _{-0.02} $      & $5.0 ^{+1.0} _{-2.0} $     \\\hline  
+%% $\mu\hadtau$ channel &  $0.0 ^{+0.0} _{-0.0} $     &  $0.28 ^{+0.11} _{-0.0} $      &  $0.79 ^{+0.0} _{-0.32} $  & $0.34 ^{+0.07} _{-0.05} $        &  $0.0 ^{+0.04} _{-0.06} $   &    $1.4 ^{+0.22} _{-0.34} $      &  $2.41 ^{+0.17} _{-0.02} $      & $5.0 ^{+1.0} _{-2.0} $     \\\hline  
 
-$\tauTau$ channel bin1 &  $0.0 ^{+0.0} _{-0.0}$   &    $0.56 ^{+0.7} _{-0.09}$    &  $0.0 ^{+0.0} _{-0.0}$      &  $0.02 ^{+0.0} _{-0.02}$        &   $0.0 ^{+0.0} _{-0.0}$        &    $0.58 ^{+0.7} _{-0.11}$     & $4.1^{+0.24} _{-0.26} $    & $0.0 ^{+0.0} _{-0.0}$\\\hline
+%% $\tauTau$ channel bin1 &  $0.0 ^{+0.0} _{-0.0}$   &    $0.56 ^{+0.7} _{-0.09}$    &  $0.0 ^{+0.0} _{-0.0}$      &  $0.02 ^{+0.0} _{-0.02}$        &   $0.0 ^{+0.0} _{-0.0}$        &    $0.58 ^{+0.7} _{-0.11}$     & $4.1^{+0.24} _{-0.26} $    & $0.0 ^{+0.0} _{-0.0}$\\\hline
 
-$\tauTau$ channel bin2 &  $0.0 ^{+0.0} _{-0.0}$   &     $0.81 ^{+0.39} _{-0.7}$     &    $0.43 ^{+0.0} _{-0.0}$     &     $0.15 ^{+0.1} _{-0.02}$     &   $0.53 ^{+0.0} _{-0.23}$   &      $1.91 ^{+0.28} _{-1.94}$     &     $3.13 ^{+0.12} _{-0.27}$   &  $0.0 ^{+0.0} _{-0.0}$    \\\hline
-\end{tabular} 
-\end{center}
-\caption{Tau energy scale systematic effect on MC in different channels}
-\label{Tab.susyHiggs}
+%% $\tauTau$ channel bin2 &  $0.0 ^{+0.0} _{-0.0}$   &     $0.81 ^{+0.39} _{-0.7}$     &    $0.43 ^{+0.0} _{-0.0}$     &     $0.15 ^{+0.1} _{-0.02}$     &   $0.53 ^{+0.0} _{-0.23}$   &      $1.91 ^{+0.28} _{-1.94}$     &     $3.13 ^{+0.12} _{-0.27}$   &  $0.0 ^{+0.0} _{-0.0}$    \\\hline
+%% \end{tabular} 
+%% \end{center}
+%% \caption{Tau energy scale systematic effect on MC in different channels}
+%% \label{Tab.susyHiggs}
 
-}
-\end{table}     
+%% }
+%% \end{table}     
 
-\begin{table}[!h]
-\tiny{
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-\hline
-                             & QCD & ZX    & W  & WW   & Top    & All MC & Susy & Data \\\hline 
-$e\hadtau$ channel           & $0.0 ^{+0.0 \%} _{-0.0 \%} $ & $0.38 ^{+13 \%} _{-5 \%}  $    &  $1.2 ^{+0.0 \%} _{-0.0 \%} $      &  $0.05 ^{+0.0 \%} _{-0.0 \%} $   &$0.02 ^{+600.0 \%} _{-0.0 \%} $           & $1.74 ^{+8 \%} _{-2 \%} $       & $3.47 ^{+9 \%} _{-0.0 \%} $ & $3.0 ^{+0.0 \%} _{-33 \%}$    \\\hline   
+%% \begin{table}[!h]
+%% \tiny{
+%% \begin{center}
+%% \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+%% \hline
+%%                              & QCD & ZX    & W  & WW   & Top    & All MC & Susy & Data \\\hline 
+%% $e\hadtau$ channel           & $0.0 ^{+0.0 \%} _{-0.0 \%} $ & $0.38 ^{+13 \%} _{-5 \%}  $    &  $1.2 ^{+0.0 \%} _{-0.0 \%} $      &  $0.05 ^{+0.0 \%} _{-0.0 \%} $   &$0.02 ^{+600.0 \%} _{-0.0 \%} $           & $1.74 ^{+8 \%} _{-2 \%} $       & $3.47 ^{+9 \%} _{-0.0 \%} $ & $3.0 ^{+0.0 \%} _{-33 \%}$    \\\hline   
 
-$\mu\hadtau$ channel &  $0.0 ^{+0.0 \%} _{-0.0 \%} $     &  $0.28 ^{+40 \%} _{-0.0 \%} $      &  $0.79 ^{+0.0 \%} _{-40 \%} $  & $0.34 ^{+20 \%} _{-15 \%} $        &  $0.0 ^{+0.0 \%} _{-0.0 \%} $   &    $1.4 ^{+ 16 \%} _{- 24 \%} $      &  $2.41 ^{+7 \%} _{-0.0 \%} $      & $5.0 ^{+20 \%} _{-40 \%} $     \\\hline  
+%% $\mu\hadtau$ channel &  $0.0 ^{+0.0 \%} _{-0.0 \%} $     &  $0.28 ^{+40 \%} _{-0.0 \%} $      &  $0.79 ^{+0.0 \%} _{-40 \%} $  & $0.34 ^{+20 \%} _{-15 \%} $        &  $0.0 ^{+0.0 \%} _{-0.0 \%} $   &    $1.4 ^{+ 16 \%} _{- 24 \%} $      &  $2.41 ^{+7 \%} _{-0.0 \%} $      & $5.0 ^{+20 \%} _{-40 \%} $     \\\hline  
 
-$\tauTau$ channel bin1 &  $0.0 ^{+0.0 \%} _{-0.0 \%}$   &    $0.56 ^{+12 \%} _{-16 \%}$    &  $0.0 ^{+0.0 \%} _{-0.0 \%}$      &  $0.02 ^{+0.0 \%} _{-100 \%}$        &   $0.0 ^{+0.0 \%} _{-0.0 \%}$        &    $0.58 ^{+12 \%} _{-19 \%}$     & $4.1^{+5 \%} _{-5 \%} $    & $0.0 ^{+0.0 \%} _{-0.0 \%}$\\\hline
+%% $\tauTau$ channel bin1 &  $0.0 ^{+0.0 \%} _{-0.0 \%}$   &    $0.56 ^{+12 \%} _{-16 \%}$    &  $0.0 ^{+0.0 \%} _{-0.0 \%}$      &  $0.02 ^{+0.0 \%} _{-100 \%}$        &   $0.0 ^{+0.0 \%} _{-0.0 \%}$        &    $0.58 ^{+12 \%} _{-19 \%}$     & $4.1^{+5 \%} _{-5 \%} $    & $0.0 ^{+0.0 \%} _{-0.0 \%}$\\\hline
 
-$\tauTau$ channel bin2 &  $0.0 ^{+0.0 \%} _{-0.0 \%}$   &     $0.81 ^{+48 \%} _{-9 \%}$     &    $0.43 ^{+0.0 \%} _{-0.0 \%}$     &     $0.15 ^{+66 \%} _{-13 \%}$     &   $0.53 ^{+0.0 \%} _{-43 \%}$   &      $1.91 ^{+15 \%} _{-100 \%}$     &     $3.13 ^{+4 \%} _{-8 \%}$   &  $0.0 ^{+0.0 \%} _{-0.0 \%}$    \\\hline
-\end{tabular} 
-\end{center}
-\caption{Tau energy scale systematic effect on MC in different channels}
-\label{Tab.susyHiggs}
-}
-\end{table}     
+%% $\tauTau$ channel bin2 &  $0.0 ^{+0.0 \%} _{-0.0 \%}$   &     $0.81 ^{+48 \%} _{-9 \%}$     &    $0.43 ^{+0.0 \%} _{-0.0 \%}$     &     $0.15 ^{+66 \%} _{-13 \%}$     &   $0.53 ^{+0.0 \%} _{-43 \%}$   &      $1.91 ^{+15 \%} _{-100 \%}$     &     $3.13 ^{+4 \%} _{-8 \%}$   &  $0.0 ^{+0.0 \%} _{-0.0 \%}$    \\\hline
+%% \end{tabular} 
+%% \end{center}
+%% \caption{Tau energy scale systematic effect on MC in different channels}
+%% \label{Tab.susyHiggs}
+%% }
+%% \end{table}     
 
 
 \begin{table}[!h]
@@ -101,7 +102,7 @@ $\tauTau$ channel bin2 &  $0.0 ^{+0.0 \%} _{-0.0 \%}$   &     $0.81 ^{+48 \%} _{
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 \hline
                              & QCD & ZX    & W  & WW   & Top    & All MC & Susy & Data \\\hline 
-$e\hadtau$ channel           & $0.0\pm0.0^{+0.0}_{-0.0} $ & $0.38\pm0.06^{+0.13}_{-0.08}$ & $1.29\pm0.62^{+0.0}_{-0.0} $  & $0.05\pm0.04^{+0.0\%}_{-0.0\%} $ &$0.02\pm0.02^{+112.0\%} _{-0.0\%}$  & $1.74\pm0.63^{+8\%}_{-2\%}$ & $3.47 ^{+9 \%} _{-0.0 \%} $ & $3.0\pm1.73 ^{+0.0 \%} _{-33 \%}$    \\\hline   
+$e\hadtau$ channel           & $0.0\pm0.0^{+0.0}_{-0.0} $ & $0.38\pm0.06^{+0.13}_{-0.08}$ & $1.29\pm0.62^{+0.0}_{-0.0} $  & $0.05\pm0.04^{+0.0\%}_{-0.0\%} $ &$0.02\pm0.02^{+78.0\%} _{-0.0\%}$  & $1.74\pm0.63^{+8\%}_{-2\%}$ & $3.47 ^{+9 \%} _{-0.0 \%} $ & $3.0\pm1.73 ^{+0.0 \%} _{-33 \%}$    \\\hline   
 
 $\mu\hadtau$ channel &  $0.0 ^{+0.0 \%} _{-0.0 \%} $     &  $0.28 \pm 0.05 ^{0.14} _{-0.06} $      &  $0.79 \pm 0.47^{0.8} _{0.35} $  & $0.34 \pm 0.14 ^{0.37} _{0.24} $        &  $0.0\pm0.0 ^{+0.67} _{-0.06} $   &    $1.4 \pm 0.49 ^{} _{} $      &  $2.26 \pm 0.35^{+0.17} _{-0.19} $      & $5.0 ^{} _{} $     \\\hline  
 
@@ -110,7 +111,7 @@ $\tauTau$ channel bin1 &  $0.0\pm 0.0 ^{+0.0 \%} _{-0.0 \%}$   &    $0.56 \pm 0.
 $\tauTau$ channel bin2 &  $0.0 \pm 0.0 ^{+0.0 \%} _{-0.0 \%}$   &     $0.81 \pm 0.56 ^{+0.39} _{-0.7}$     &    $0.43 \pm 0.4 ^{+0.0 \%} _{-0.0 \%}$     &     $0.15 \pm 0.07 ^{0.0} _{-0.02}$     &   $0.53 \pm 0.53 ^{+0.0} _{0.0}$   &      $1.91 \pm 0.87 ^ {} _{}$     &     $3.13 \pm 0.24 ^{} _{}$   &  $2.0 \pm 1.41 ^{} _{}$    \\\hline
 \end{tabular} 
 %\end{center}
-\caption{a}
+\caption{Tau energy scale systematic effect on MC in different channels}
 \label{Tab.susyHiggs}
 }
 \end{table}     
@@ -118,7 +119,7 @@ $\tauTau$ channel bin2 &  $0.0 \pm 0.0 ^{+0.0 \%} _{-0.0 \%}$   &     $0.81 \pm 
 
 \subsubsection{Lepton trigger, identification, isolation efficiency}
 
-  The uncertainties on electron and muon trigger, identification and isolation efficiencies are $2\%$ for electrons ref ... as well as muons of all $P_{T}$ and $\eta$.  The uncertainty on the $\hadtau$ identification efficiency amounts to $6\%$ ref ....
+  The uncertainties on electron and muon trigger, identification and isolation efficiencies are $2\%$ for electrons ~\cite{CMS_AN_2013-171} as well as muons of all $P_{T}$ and $\eta$.  The uncertainty on the $\hadtau$ identification efficiency amounts to $6\%$ ~\cite{CMS_AN_2013-171}
   The uncertainty on the efficiency of the hadronic tau leg of the $e\hadtau$ and $\mu\hadtau$ ($\tauTau$) trigger
   amounts to $3.0\%$ ($4.5\%$ per leg).
 
@@ -142,4 +143,4 @@ m(\chione) = 500 GeV                &$5.53^{+0.0 \% + 8.1 \%}_{-0.9 \% - 7.0 \%}
 \end{table}     
 \subsubsection{Pile-up}
 
-We varied minimum bias cross section $5 \%$ up and down following ref , and conservatively  it causes  $7 \%$ systematic for all channels.    
+We varied minimum bias cross section $5 \%$ up and down following ~\cite{PU_SYS}  , and conservatively  it causes  $7 \%$ systematic for all channels.    
