@@ -15,7 +15,7 @@ variable and a kinematic variable chosen as \mttwo in search \binone or \SumMT i
 The definitions of the control regions are summarized in Table~\ref{2QCDbg}. \\
 The distribution of the transfer factor as a 
 function of the search variable is shown in Figure~\ref{fig:1QCDbg}. The correlation 
-between the two variables used to define the four exclusive regions is marginal, since the ratio plots can be fit with a straight line using a $pol0$ function. The fit function is also shown in the plots. 
+between the two variables used to define the four exclusive regions is marginal, since the ratio plots can be fitted with a straight line using a $pol0$ function. The fit function is also shown in the plots. 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.49\textwidth]{QCDbginTauTau/Bin1_transferfactor.png}
@@ -52,7 +52,13 @@ of other SM contributions estimated from MC simulation.
 In order to increase the contributions from QCD events, the cut on the $\mindphifour>1$ is removed.
 But instead a cut efficiency should be taken into account to evaluate the final estimations. The 
 fraction of QCD events with all selection cuts with respect to the QCD events with all selection 
-cuts but the $\mindphifour>1$ are shown in Figure~\ref{fig:3QCDbg}.
+cuts but the $\mindphifour>1$ are shown in Figure~\ref{fig:3QCDbg}. The value of the cut efficiency 
+in the last bin of the left plot is used to be multiplied with the transfer factor to estimate the 
+QCD background events in the search \binone. While for the right plot, the distribution is fitted with a $pol1$ function to 
+take into account the fluctuations of the cut efficiencies in the first few bins. Then the cut efficiency extracted from 
+this plot is simply defined as the evaluation of the fit function at $\SumMT=250$. It should be noted that, performing such a 
+$pol1$ fit function on the left plot would yield to a negative value for the cut efficiency and then it was decided to  
+take the value in the last bin as a conservative estimate of the cut efficiency which is used in the final QCD background estimation results. 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.49\textwidth]{QCDbginTauTau/Bin1_miscefficiency.png}
@@ -61,9 +67,9 @@ cuts but the $\mindphifour>1$ are shown in Figure~\ref{fig:3QCDbg}.
 cuts but the $\mindphifour>1$ as a function of \mttwo (left) and \SumMT (right).}
 \label{fig:3QCDbg}
 \end{figure}
-\\The results of the ABCD method are summarized in table \ref{4QCDbg} and the distributions of the kinematic variables for data, SM backgrounds and SUSY are shown in the Figure~\ref{fig:5QCDbg}. The SM background distributions
-are taken from MC simulation, except for the QCD-multi-jet contribution, which is estimated
-using the ABCD method.
+\\The results of the ABCD method are summarized in Table~\ref{4QCDbg}. The result of the ABCD method is also shown in the distributions 
+of the search variables are shown in Figure~\ref{fig:5QCDbg}. The SM background distributions are taken from MC simulation, except for 
+the QCD multi-jet contribution, which is estimated using the ABCD method.
 \begin{table}
 \begin{center}
 \begin{tabular}{|l|c|c|c|c|c|c|c|}
