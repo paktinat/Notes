@@ -10,7 +10,7 @@ P is the number of the  prompt $\hadtau$'s and F is the number of the  fake $\ha
 \begin{equation}
  T = pP + fF
 \end{equation} 
-p (f) is the prompt (fake) rate, the probability that a loosely selected prompt (fake) $\hadtau$ can pass the  tight  selection. The loose category (L) can be divided to two parts, 
+p (f) is the prompt (fake) rate, the probablity that a loosely selected prompt (fake) $\hadtau$ can pass the  tight  selection. The loose category (L) can be divided to two parts, 
 tight (T) and non-tight (NT), so one can write:
 \begin{equation}
    F * (f - p) = ((1 - p) * L - NT)
@@ -37,7 +37,7 @@ Electron Tau & /SingleElectron/Run2012D-22Jan2013-v1/AOD    & HLT\_Ele27\_WP80\_
 \end{table}
 
 %In the muTau channel, exactly one muon is required which passes the selection criteria of the muon in the signal region and has \pt > 27 GeV. 
-Lepton selection and extra lepton rejections are exactly same as the signal selection. Only the \pt of the favourite lepton is forced to 
+Lepton selection and extra lepton rejections are exactly same as the signal selection. Only the \pt of the favorite lepton is forced to 
 be 3 \GeV higher than the online cut resulting to \pt $>$ 27 \GeV for muon and \pt $>$ 30 \GeV for electron.
 The rejections can reduce the contribution of the VV, DY and $\ttbar$ events. To further suppress the $\ttbar$ contamination, the b-veto 
 similar to the signal selection is applied. The \MET is asked to be greater than 30 GeV, similar to the preselections. The selection of the $\hadtau$ is 
@@ -46,22 +46,87 @@ tightly selected $\hadtau$'s.
 The ratio of these two categories determines the fake rate. To avoid any bias from the trigger, the $\hadtau$'s closer than $\Delta$R = 0.2 to the 
 lepton are rejected. 
 The fake rate can be measured in the bins of $\hadtau$ \pt and $\eta$, but it is observed that the dependency is very small and can be ignored, 
-so we use a single value for the fake rate which is    0.4464 +- 0.0062 (data).
+so we use a single value for the fake rate which is    0.45 $\pm$ 0.0062.
 
 The prompt rate (p) is measured in the MC DY events. All of the preselections except the Z-veto and $\hadtau$ isolation are applied. The $\hadtau$ isolation 
 is relaxed from {\it Tight} to {\it Loose}. Only the events that a generated $\tau$ decays hadronically are considered. If a reconstructed $\hadtau$ is 
 closer than $\Delta R = 0.1$ to the generated $\tau$, it is selected. Among these $\hadtau$'s, the prompt rate is defined as the fraction of the loose $\hadtau$'s 
-which are tight. The prompt rate can be measured in the bins of \mttwo, but the statistics in the high \mttwo region which is our favourite 
+which are tight. The prompt rate can be measured in the bins of \mttwo, but the statistics in the high \mttwo region which is our favorite 
 region is too low that we can not conclude anything about the shape of the prompt rate in this region, so we choose it as a constant value
-0.77 +- 0.0032 in the whole \mttwo region.
+0.77 $\pm$ 0.0032 in the whole \mttwo region.
 
 Figure \ref{fig:LepTauClusure}
-\begin{figure}[h]
+\begin{figure}[!Hhtb]
 \centering
 \includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateMuTau/Estimation_pfWJets_ExtraLepExcl_SameSignWeightedHiggs.png}
 \includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateMuTau/Estimation_pfWJets_ExtraLepExcl_SameSignWeightedHiggs.png}
 \caption{left: . right: .}
 \label{fig:LepTauClusure}
 \end{figure}
-shows the results when the method is used to estimate the fake contamination of the \Wpm+Jets events that pass the selection. 
-The fake rate is evaluated 0.43 +- 0.0065(WJets)
+shows the results when the method is used to estimate the fake contamination of the W+Jets events that pass the selection. 
+The fake rate is evaluated in the same sample with similar procedure as the SingleMu dataset. The measured fake rate  is very close to
+the prevous vale 0.43 $\pm$  0.0065. To calculate the fakerate, the MC truth are used to select the events with a fake \Tau 
+and a prompt muon. The method is applied on the same events with a loose \Tau selection and compared to the W+Jets events with at least 
+a fake \Tau. The force on the prompt muon is removed here. To have a handle against the signal contamination when later the method is applied 
+on data, in the loosely selected events, the cut on \tauMT is also removed. The final estimation from the method is corrected by the efficiency 
+of \tauMT $>$ 200 GeV cut which is read from MC. It can be seen that the estimation is close to the MC truth within the uncertainties.
+The reported uncertainties only contain the statistical uncertainties on the used numbers and the systematic uncertainties due to arithmatics 
+which is involved. Table \ref{tbl:LepTauEstimationClosure}
+\begin{table}
+\begin{center}
+\begin{tiny}
+\begin{tabular}{llll}
+\hline
+\hline
+               &  W+Jets& Estimation & ratio\\
+\hline
+\hline
+full selection &  135.56 $\pm$ 13.81 & 108.78    & 0.80 \\
+$20.00-40.00$  &  27.04 $\pm$ 0.00   & 21.64     & 0.80 \\
+$40.00-50.00$  &  9.91 $\pm$ 0.00    & 7.87      & 0.79 \\
+$50.00-70.00$  &  32.53 $\pm$ 0.00   & 26.47     & 0.81 \\
+$70.00-90.00$  &  20.45 $\pm$ 0.00   & 17.47     & 0.85 \\
+$90.00-300.00$ &  0.79 $pm$ 0.00    & 1         & 1.27\\
+\hline
+\hline
+\end{tabular}
+\caption{}
+\label{tbl:LepTauEstimationClosure}
+\end{tiny}
+\end{center}
+\end{table}
+compares the MC truth and the estimation from the method in different bins of \mttwo. Applying the method on data and comparing with MC truth is 
+shown in figure \ref{fig:LepTauEstimationData}.
+\begin{figure}[!Hhtb]
+\centering
+\includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateMuTau/Estimation_ExtraLepExcl_SameSignWeightedHiggs.png}
+\includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateMuTau/Estimation_ExtraLepExcl_SameSignWeightedHiggs.png}
+\caption{left: . right: .}
+\label{fig:LepTauEstimationData}
+\end{figure}
+The select the MC events, all the selection cuts, except the \mttwo cut is applied. 
+The MC truth are used to find the events with at least a fake \Tau. Table \ref{tbl:LepTauEstimationData}
+\begin{table}
+\begin{center}
+\begin{tiny}
+\begin{tabular}{lllllllllll}
+\hline
+\hline
+               &  QCD     &  ZX     &  W     & Top      & WW      & Higgs     & MC                 &  Estimation &ratio        &      \\             
+\hline
+\hline
+full selection & 0.53     & 1.1     & 135.56 & 20.5     & 2.7     & 0.35       & 160.74 $\pm$ 18.19 & 142.05    &  0.88 \\
+$20.00-40.00$  & 0.00     & 0.03    & 27.04  & 1.86     & 0.21    & 0.08       & 29.23 $\pm$ 0.02   & 24.89     &  0.85 \\
+$40.00-50.00$  & 0.00     & 0.02    & 9.91   & 0.57     & 0.28    & 0.02       & 10.79 $\pm$ 0.01   & 8.88      &  0.82 \\
+$50.00-70.00$  & 0.00     & 0.05    & 32.53  & 15.35    & 0.55    & 0.07       & 48.56 $\pm$ 0.02   & 39        &  0.80 \\
+$70.00-90.00$  & 0.00     & 0       & 20.45  & 0.63     & 0.35    & 0.03       & 21.46 $\pm$ 0.01   & 19.63     &  0.91 \\
+$90.00-300.00$ & 0.00     & 0.03    & 0.79   & 0        & 0.15    & 0.05       & 1.02 $\pm$ 0.02    & 0.61      &   0.60
+\hline
+\hline
+\end{tabular}
+\caption{}
+\label{tbl:LepTauEstimationClosure}
+\end{tiny}
+\end{center}
+\end{table}
+compares the MC truth and the estimation from the method in different bins of \mttwo.
