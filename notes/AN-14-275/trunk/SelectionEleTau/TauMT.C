@@ -11,7 +11,7 @@
    TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->SetFrameBorderMode(0);
   
 // ------------>Primitives in pad: TauMT_ratio_AllSUSY_plotpad_TauMT_MT2Cut
-   TPad *TauMT_ratio_AllSUSY_plotpad_TauMT_MT2Cut = new TPad("TauMT_ratio_AllSUSY_plotpad_TauMT_MT2Cut", "Pad containing the overlay plot",0,0.211838,1,1);
+   TPad *TauMT_ratio_AllSUSY_plotpad_TauMT_MT2Cut = new TPad("TauMT_ratio_AllSUSY_plotpad_TauMT_MT2Cut", "Pad containing the overlay plot",0,0.02,1,1); //.211838
    TauMT_ratio_AllSUSY_plotpad_TauMT_MT2Cut->Draw();
    TauMT_ratio_AllSUSY_plotpad_TauMT_MT2Cut->cd();
    TauMT_ratio_AllSUSY_plotpad_TauMT_MT2Cut->Range(-83.44463,-2.453209,550.7343,2.138869);
@@ -42,7 +42,7 @@
    Int_t ci;   // for color index setting
    ci = TColor::GetColor("#000099");
    MT2Cut_TauMT_stack_4->SetLineColor(ci);
-   MT2Cut_TauMT_stack_4->GetXaxis()->SetTitle("TauMT");
+   MT2Cut_TauMT_stack_4->GetXaxis()->SetTitle("M_{T}^{#tau_{h}}");
    MT2Cut_TauMT_stack_4->GetXaxis()->SetLabelFont(42);
    MT2Cut_TauMT_stack_4->GetXaxis()->SetLabelSize(0.035);
    MT2Cut_TauMT_stack_4->GetXaxis()->SetTitleSize(0.035);
@@ -239,13 +239,13 @@
    MT2Cut_TauMT->Draw("hist");
    
    TH1D *h2_copy__39 = new TH1D("h2_copy__39","",10,0,500);
-   h2_copy__39->SetBinContent(3,16);
-   h2_copy__39->SetBinContent(4,6);
+   // h2_copy__39->SetBinContent(3,16);
+   // h2_copy__39->SetBinContent(4,6);
    // h2_copy__39->SetBinContent(5,1);
    // h2_copy__39->SetBinContent(7,1);
    // h2_copy__39->SetBinContent(10,1);
-   h2_copy__39->SetBinError(3,4);
-   h2_copy__39->SetBinError(4,2.44949);
+   // h2_copy__39->SetBinError(3,4);
+   // h2_copy__39->SetBinError(4,2.44949);
    // h2_copy__39->SetBinError(5,1);
    // h2_copy__39->SetBinError(7,1);
    // h2_copy__39->SetBinError(10,1);
@@ -274,7 +274,7 @@
    h2_copy__39->GetZaxis()->SetLabelSize(0.035);
    h2_copy__39->GetZaxis()->SetTitleSize(0.035);
    h2_copy__39->GetZaxis()->SetTitleFont(42);
-   h2_copy__39->Draw("sameE");
+   // h2_copy__39->Draw("sameE");
    
    TH1D *MT2Cut_TauMT_SUSY_380_1__40 = new TH1D("MT2Cut_TauMT_SUSY_380_1__40","",10,0,500);
    MT2Cut_TauMT_SUSY_380_1__40->SetBinContent(3,0.9566879);
@@ -333,7 +333,7 @@ tex->SetNDC();
 
    ci = TColor::GetColor("#000099");
    MT2Cut_TauMT__41->SetLineColor(ci);
-   MT2Cut_TauMT__41->GetXaxis()->SetTitle("TauMT");
+   MT2Cut_TauMT__41->GetXaxis()->SetTitle("M_{T}^{#tau_{h}}");
    MT2Cut_TauMT__41->GetXaxis()->SetLabelFont(42);
    MT2Cut_TauMT__41->GetXaxis()->SetLabelSize(0.035);
    MT2Cut_TauMT__41->GetXaxis()->SetTitleSize(0.035);
@@ -371,7 +371,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2Cut_TauMT_Wtolnu","Wtolnu","f");
+   entry=leg->AddEntry("MT2Cut_TauMT_Wtolnu","W","f");
 
    ci = TColor::GetColor("#00cc00");
    entry->SetFillColor(ci);
@@ -397,7 +397,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2Cut_TauMT_DY","ZX+Jets","f");
+   entry=leg->AddEntry("MT2Cut_TauMT_DY","ZX","f");
 
    ci = TColor::GetColor("#006600");
    entry->SetFillColor(ci);
@@ -423,15 +423,15 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2Cut_TauMT_data","data","l");
+   //  entry=leg->AddEntry("MT2Cut_TauMT_data","data","l");
 
-   ci = TColor::GetColor("#ff0000");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
+   // ci = TColor::GetColor("#ff0000");
+   // entry->SetLineColor(ci);
+   // entry->SetLineStyle(1);
+   // entry->SetLineWidth(2);
+   // entry->SetMarkerColor(1);
+   // entry->SetMarkerStyle(21);
+   // entry->SetMarkerSize(1);
    entry=leg->AddEntry("MT2Cut_TauMT_SUSY_380_1","SUSY(380,1)","l");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
@@ -445,7 +445,7 @@ tex->SetNDC();
   
 // ------------>Primitives in pad: TauMT_ratio_AllSUSY_ratiopad_TauMT_MT2Cut
    TauMT_ratio_AllSUSY_ratiopad_TauMT_MT2Cut = new TPad("TauMT_ratio_AllSUSY_ratiopad_TauMT_MT2Cut", "Pad containing the ratio",0,0.01863354,0.9967105,0.2189441);
-   TauMT_ratio_AllSUSY_ratiopad_TauMT_MT2Cut->Draw();
+   //TauMT_ratio_AllSUSY_ratiopad_TauMT_MT2Cut->Draw();
    TauMT_ratio_AllSUSY_ratiopad_TauMT_MT2Cut->cd();
    TauMT_ratio_AllSUSY_ratiopad_TauMT_MT2Cut->Range(-84.4542,-0.8571431,547.3882,2.214286);
    TauMT_ratio_AllSUSY_ratiopad_TauMT_MT2Cut->SetFillColor(0);
@@ -483,7 +483,7 @@ tex->SetNDC();
    h1_copy__42->SetLineColor(ci);
    h1_copy__42->SetLineWidth(2);
    h1_copy__42->SetMarkerColor(ci);
-   h1_copy__42->GetXaxis()->SetTitle("TauMT");
+   h1_copy__42->GetXaxis()->SetTitle("M_{T}^{#tau_{h}}");
    h1_copy__42->GetXaxis()->SetLabelFont(42);
    h1_copy__42->GetXaxis()->SetLabelSize(0);
    h1_copy__42->GetXaxis()->SetTitleSize(0.2);
@@ -567,7 +567,7 @@ tex->SetNDC();
    h1_copy__44->SetLineColor(ci);
    h1_copy__44->SetLineWidth(2);
    h1_copy__44->SetMarkerColor(ci);
-   h1_copy__44->GetXaxis()->SetTitle("TauMT");
+   h1_copy__44->GetXaxis()->SetTitle("M_{T}^{#tau_{h}}");
    h1_copy__44->GetXaxis()->SetLabelFont(42);
    h1_copy__44->GetXaxis()->SetLabelSize(0);
    h1_copy__44->GetXaxis()->SetTitleSize(0.2);
@@ -590,5 +590,5 @@ tex->SetNDC();
    TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->cd();
    TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->Modified();
    TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->cd();
-   TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->SetSelected(TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut);
+   //TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->SetSelected(TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut);
 }

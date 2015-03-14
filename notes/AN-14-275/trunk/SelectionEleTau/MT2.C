@@ -11,7 +11,7 @@
    MT2_ratio_AllSUSYc_ratio_MT2_MT2PreCut->SetFrameBorderMode(0);
   
 // ------------>Primitives in pad: MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut
-   TPad *MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut = new TPad("MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut", "Pad containing the overlay plot",0,0.211838,1,1);
+   TPad *MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut = new TPad("MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut", "Pad containing the overlay plot",0,0.25,1,1);
    MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut->Draw();
    MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut->cd();
    MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut->Range(21.64218,-2.833548,161.1615,4.817775);
@@ -42,7 +42,7 @@
    Int_t ci;   // for color index setting
    ci = TColor::GetColor("#000099");
    MT2PreCut_MT2_stack_2->SetLineColor(ci);
-   MT2PreCut_MT2_stack_2->GetXaxis()->SetTitle("MT2");
+   MT2PreCut_MT2_stack_2->GetXaxis()->SetTitle("M_{T2}");
    MT2PreCut_MT2_stack_2->GetXaxis()->SetLabelFont(42);
    MT2PreCut_MT2_stack_2->GetXaxis()->SetLabelSize(0.035);
    MT2PreCut_MT2_stack_2->GetXaxis()->SetTitleSize(0.035);
@@ -406,7 +406,7 @@ tex->SetNDC();
 
    ci = TColor::GetColor("#000099");
    MT2PreCut_MT2__19->SetLineColor(ci);
-   MT2PreCut_MT2__19->GetXaxis()->SetTitle("MT2");
+   MT2PreCut_MT2__19->GetXaxis()->SetTitle("M_{T2}");
    MT2PreCut_MT2__19->GetXaxis()->SetLabelFont(42);
    MT2PreCut_MT2__19->GetXaxis()->SetLabelSize(0.035);
    MT2PreCut_MT2__19->GetXaxis()->SetTitleSize(0.035);
@@ -444,7 +444,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2PreCut_MT2_Wtolnu","Wtolnu","f");
+   entry=leg->AddEntry("MT2PreCut_MT2_Wtolnu","W","f");
 
    ci = TColor::GetColor("#00cc00");
    entry->SetFillColor(ci);
@@ -457,7 +457,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2PreCut_MT2_VV","VV","f");
+   entry=leg->AddEntry("MT2PreCut_MT2_VV","WW","f");
 
    ci = TColor::GetColor("#66ff66");
    entry->SetFillColor(ci);
@@ -470,7 +470,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2PreCut_MT2_DY","ZX+Jets","f");
+   entry=leg->AddEntry("MT2PreCut_MT2_DY","ZX","f");
 
    ci = TColor::GetColor("#006600");
    entry->SetFillColor(ci);
@@ -564,7 +564,7 @@ tex->SetNDC();
    h1_copy__20->SetLineColor(ci);
    h1_copy__20->SetLineWidth(2);
    h1_copy__20->SetMarkerColor(ci);
-   h1_copy__20->GetXaxis()->SetTitle("MT2");
+   h1_copy__20->GetXaxis()->SetTitle("M_{T2}");
    h1_copy__20->GetXaxis()->SetLabelFont(42);
    h1_copy__20->GetXaxis()->SetLabelSize(0);
    h1_copy__20->GetXaxis()->SetTitleSize(0.2);
@@ -668,7 +668,7 @@ tex->SetNDC();
    h1_copy__22->SetLineColor(ci);
    h1_copy__22->SetLineWidth(2);
    h1_copy__22->SetMarkerColor(ci);
-   h1_copy__22->GetXaxis()->SetTitle("MT2");
+   h1_copy__22->GetXaxis()->SetTitle("M_{T2}");
    h1_copy__22->GetXaxis()->SetLabelFont(42);
    h1_copy__22->GetXaxis()->SetLabelSize(0);
    h1_copy__22->GetXaxis()->SetTitleSize(0.2);
