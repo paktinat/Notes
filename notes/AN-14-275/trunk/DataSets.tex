@@ -14,19 +14,16 @@ Only the lumisections with fully operative CMS sub-detectors are used the golden
 \small{
 \begin{tabular}{|l|c|c|}
 \hline
-\multicolumn{3}{|c|}{$e\tau_{had}$ and $\mu\tau_{had}$ channels} \\
-\hline
 Dataset Name & Run--range & Luminosity(\fbinv) \\
+\hline
+\multicolumn{3}{|c|}{$e\tau_{had}$ and $\mu\tau_{had}$ channels} \\
 \hline
 /TauPlusX/Run2012A-22Jan2013-v1/AOD   & 190456--193621 & 0.887\\
 /TauPlusX/Run2012B-22Jan2013-v1/AOD   & 193833--196531 & 4.446\\
 /TauPlusX/Run2012C-22Jan2013-v1/AOD   & 198022--203742 & 7.153\\
 /TauPlusX/Run2012D-22Jan2013-v1/AOD   & 203777--208686 & 7.318\\
 \hline
-\hline
 \multicolumn{3}{|c|}{$\tau_{had}\tau_{had}$ channel} \\
-\hline
-Dataset Name & Run--range & Luminosity \\
 \hline
 /Tau/Run2012A-22Jan2013-v1/AOD   & 190456--193621 & 0.887 \\
 /TauParked/Run2012B-22Jan2013-v1/AOD & 193833--196531 & 4.446 \\
@@ -63,7 +60,7 @@ Dataset Name                                            & Cross-Section (pb)    
 %QCD Mu\_Enriched                 &
 /QCD\_Pt-15...inf\_MuEnrichedPt5\_TuneZ2star\_8TeV\_pythia6$^{2}$         & Ref. ~\cite{Prep}\\
 %$\gamma$+jets                       &
-/GJets\_HT-40...inf\_8TeV-madgraph$^{2}$                                  & Ref ~\cite{Prep}\\
+/GJets\_HT-40...inf\_8TeV-madgraph$^{2}$                                  & Ref. ~\cite{Prep}\\
 \hline
 \multicolumn{2}{|c|}{QCD used in $\tau_{had}\tau_{had}$ channel }\\
 \hline
@@ -170,28 +167,19 @@ $^{2}$ /summer12-..START53*/AODSIM\\
 The investigated susy signal in this analysis is $pp \rightarrow \chip \chim \rightarrow \tau^+ \tau^- \MET$ named "TChipChimSlepSnu" which \PYTHIA is used to produce LHE files and then it is passed through the CMS official Fast-Sim process.
 
 \begin{table}[!h]
-\begin{center}
 \small{
+\begin{center}
 \begin{tabular}{|l|c|c|}
 \hline
 HLT Path   & L1 Seed  & Luminosity(\fbinv) \\
 \hline
 \multicolumn{3}{|c|}{$e\tau_{had}$ channel} \\
 \hline
-Ele15\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_LooseIsoPFTau20    &  SingleEG12            &  $1.1$    \\
-Ele15\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_TightIsoPFTau20    &  SingleEG12            &  $0.7$    \\
-Ele18\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_MediumIsoPFTau20   &  SingleEG15            &  $1.7$    \\
-Ele20\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_MediumIsoPFTau20   &  SingleEG18            &  $0.9$    \\
-Ele20\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_MediumIsoPFTau20   &  SingleEG20            &  $0.0023$ \\
 Ele20\_CaloIdVT\_CaloIsoRhoT\_TrkIdT\_TrkIsoT\_LooseIsoPFTau20 & $^{1}$                 &  $0.7$    \\
-Ele22\_eta2p1\_WP90Rho\_LooseIsoPFTau20}                        & $^{2}$                 & $18.7$    \\   
+Ele22\_eta2p1\_WP90Rho\_LooseIsoPFTau20                        & $^{2}$                 & $18.7$    \\   
 \hline
 \multicolumn{3}{|c|}{$mu\tau_{had}$ channel} \\
 \hline
-IsoMu12\_LooseIsoPFTau10                                       &    SingleMu7           &  $0.02$ \\
-IsoMu15\_LooseIsoPFTau15                                       &    SingleMu10          &  $2.0$  \\
-IsoMu15\_eta2p1\_LooseIsoPFTau20                               &    SingleMu14\_eta2p1  &  $2.5$  \\
-IsoMu18\_eta2p1\_LooseIsoPFTau20                               &    SingleMu16er        &  $1.6$  \\
 IsoMu18\_eta2p1\_LooseIsoPFTau20                               &    SingleMu16er        &  $0.7$  \\
 IsoMu17\_eta2p1\_LooseIsoPFTau20                               &    SingleMu14er        & $18.7$  \\
 \hline
@@ -201,10 +189,7 @@ DoubleMediumIsoPFTau35\_Trk5\_eta2p1                          &  $^{3}$         
 DoubleMediumIsoPFTau35\_Trk1\_eta2p1                          &  $^{3}$                       & $14.2$ \\
 \hline
 \end{tabular}
-
 \end{center}
-}
-\small{
 $^{1}$ SingleIsoEG18er or SingleEG20 \\
 $^{2}$ SingleIsoEG18er or SingleIsoEG20er or SingleEG22 \\
 $^{3}$ L1\_DoubleTauJet44er or L1\_DoubleJetC64 \\
