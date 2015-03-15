@@ -30,8 +30,8 @@
 %For multiple affiliations, create an address entry for the combination
 %To mark authors as primary, use the \author* form
 \address[ipm]{School of Particles and Accelerators, IPM, Tehran, Iran}
-\address[ut]{University of Tehran, Tehran, Iran, also at IPM}
 \address[iut]{Isfahan University of Technology, Isfahan, Iran, also at IPM}
+\address[ut]{University of Tehran, Tehran, Iran, also at IPM}
 \address[ucl]{Universite Catholique de Louvain, UCL, Louvain, Belgium}
 
 \author[ipm]{Hamed Bakhshian}
@@ -56,15 +56,12 @@
 % 3. For PASs: **DO NOT use tex macros**         in the abstract: CDS MathJax processor used on the abstract doesn't understand them _and_ will only look within $$. The abstracts for papers are hand formatted so macros are okay.
 \abstract{
  A search for SUSY in chargino pair production is performed when the charginos, $\chipm$, decay to a $\tau$ lepton, neutrino, $\nu_\tau$, 
- and neutralino, $\PSGczDo$. Different channels use 18.1 to 19.6  \fbinv  of proton-proton collisions at $\sqrt{s}$ = 8\,TeV.
+ and neutralino, $\PSGczDo$. Different final states use 18.1 to 19.6  \fbinv  of proton-proton collisions at $\sqrt{s}$ = 8\,TeV.
  At least one of the $\tau$ leptons is required to decay hadronically.
- $\mttwo$ is used as a search variable to distinguish between signal and background. 
- In a special part of the phase space, moderate $\mttwo$, the sum of the transverse  
- mass of two $\tau$ leptons was found to be a useful variable. In different bins of the search, 
- no significant excess is seen with respect to the standard model prediction, so 95\% 
-confidence level limits are set on the masses of the lightest chargino and neutralino.
- In the context of the simplified models, charginos lighter than XXX and neutralinos below YYYY
- are excluded in the 95\% confidence level.
+ $\mttwo$ of two leptons is used as a search variable to distinguish between signal and background. 
+ In a special part of the phase space with a moderate $\mttwo$, the sum of the transverse  
+ mass of two $\tau$ leptons was found to be a useful variable. 
+%In different bins of the search,  no significant excess is seen with respect to the standard model prediction, so 95\% confidence level limits are set on the masses of the lightest chargino and neutralino. In the context of the simplified models, charginos lighter than XXX and neutralinos below YYYY are excluded at 95\% confidence level.
 }
 
 % >> PDF Metadata
@@ -92,6 +89,7 @@ pdfkeywords={CMS, physics, software, computing}}
 \input{MT2Definition}
 \input{DataSets}
 \input{Object}
+\input{dataMCSF}
 %\input{SearchStrategy}
 \input{Selection}
 \input{SelectionTauTau}
