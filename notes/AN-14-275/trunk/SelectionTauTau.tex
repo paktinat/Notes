@@ -6,18 +6,21 @@ In the final state with 2 hadronic taus, events are required to pass the followi
 \begin{itemize}
 \item \textbf{2 $\boldsymbol\tau_h$ Selection} At least two reconstructed opposite-sign tau objects, 
 with $\pt>45\GeV$ and $|\eta|<2.1$, are required. Since the online trigger cuts require two taus with 
-$\pt>35\GeV$, then it can be justified to have an offline cut on $\pt>45\GeV$. 
+$\pt>35\GeV$, there is an offline cut on $\pt>45\GeV$ to get closer to the plateau of the trigger efficiency. 
 Both taus not only are required to pass \emph{MediumCombinedIsoDBSumPtCorr3Hits} isolation requirement, 
 but also should pass the Loose working point of the MVA3 anti-e discriminator, being \emph{LooseElectronMVA3Rejection}, 
-as well as the Loose working point of the Muon2 anti-$\mu$ discriminator, being \emph{LooseMuon2Rejection}.
-\item \textbf{$\boldsymbol e$ and $\boldsymbol\mu$ Veto} Extra electrons and muons are vetoed. This would help to reject backgrounds from di-boson events.
+as well as the Loose working point of the Muon2 anti-$\mu$ discriminator, being \emph{LooseMuon2Rejection}. 
+In order to reject low mass QCD resonances, the invariant mass of two taus is required to be above 15 GeV. 
+\item \textbf{$\boldsymbol e$ and $\boldsymbol\mu$ Veto} Extra electrons and muons are vetoed. This 
+cut would help to reject backgrounds from di-boson events. Electron and muon rejection 
+are exactly the same as in $\mu\Tau$ channel which is described in Sec.~\ref{sect:leptonTauCuts}.
 \item \textbf{Z Veto} Events under the reconstructed Z mass peak are rejected, namely $|m_{\tau\tau}-m_{\Z}^{\rm rec}|>15\GeV$. 
 In the reconstructed $\Z\rightarrow \Tau\Tau$ events passing above-mentioned set of cuts, events under the Z mass peak are fitted 
 with a Gaussian function. The mean value of the fit is found to be about 70 GeV. Hence the invariant mass of two taus, $m_{\tau\tau}$, should be 
-either below 55 GeV or above 85 GeV. Also in order to decrease the contamination from multi-jet backgrounds, events are required to fulfil $m_{\tau\tau} > 12\GeV$. 
+either below 55 GeV or above 85 GeV.  
 \item \textbf{$\boldsymbol\mindphifour > $ 1} This cut is introduced against multi-jet events.  
 \item \textbf{$\boldsymbol\mttwo>40\GeV$} Since SM background events with low \MET or fake \MET arrising from miss-measured reconstructed object
- contribute to the lower values of $\mttwo$, then a moderate cut on this variable would enhance signal over background ratio.  
+ contribute to the lower values of $\mttwo$, then a moderate cut on this variable would improve data over MC ratio.  
 \end{itemize}
 After applying pre-selection cuts, two extra set of cuts are introduced, where each of them is sensitive to some regions of $\chione\PSGczDo$ mass plane: one aimed the regions with large mass difference between charginos and neutralinos, the other one is dedicated for low mass regions. It should be noted that the two search bins are chosen to be exclusive in order to be able to combine the statistics at the end.
 \begin{itemize}
@@ -34,40 +37,43 @@ A second set of cuts includes some cuts on different variables listed below.
 \item $\SumMT>250\GeV$;
 \end{itemize}
 \end{itemize}
-The cut-flow-table can be found in Table~\ref{tbl:cutflowtable}. The yields for three SUSY signal points, corresponding to a low mass difference $(m_{\chione}=180\GeV,m_{\PSGczDo}=60\GeV)$, a moderate mass difference $(m_{\chione}=240\GeV,m_{\PSGczDo}=40\GeV)$ and a high mass difference $(m_{\chione}=380\GeV,m_{\PSGczDo}=1\GeV)$, are presented in the table.   
+The cut-flow-table can be found in table~\ref{tbl:cutflowtable}. The yields for three SUSY signal points, corresponding to a low mass difference $(m_{\chione}=180\GeV,m_{\PSGczDo}=60\GeV)$, a moderate mass difference $(m_{\chione}=240\GeV,m_{\PSGczDo}=40\GeV)$ and a high mass difference $(m_{\chione}=380\GeV,m_{\PSGczDo}=1\GeV)$, are presented in the table.   
 \begin{sidewaystable}
 %\begin{table}
 \begin{center}
 \begin{small}
 \begin{tabular}{llccccccccccc}
 \hline\hline
-&  &SUSY(180,60)&(240,40)&(380,1)&Higgs&QCD&VV&Wtolnu&DY&Top&Total Bkg&Tau-Data\\
+&  &SUSY(180,60)&(240,40)&(380,1)&Higgs&QCD&WW&W&DY&Top&Total Bkg&Data\\
 \hline\hline
-\multirow{5}{*}{Pre-Selection}&2 $\tau_h$ Selection& 46.81 &27.14& 9.99 &81.53&19272.05&11.21&543.42&1961.29&95.85&21965.34$\pm$6387.87&18526.00\\
-&$e$ and $\mu$ Veto& 46.81 &27.14& 9.99 &81.53&19272.05&11.21&543.42&1961.29&95.85&21965.34$\pm$6387.87&18526.00\\
+\multirow{4}{*}{Pre-Selection}&di-$\tau_h$ Selection and lepton veto& 46.81 &27.14& 9.99 &81.53&19272.05&11.21&543.42&1961.29&95.85&21965.34$\pm$6387.87&18526.00\\
+%&$e$ and $\mu$ Veto& 46.81 &27.14& 9.99 &81.53&19272.05&11.21&543.42&1961.29&95.85&21965.34$\pm$6387.87&18526.00\\
 &Z Veto& 45.63 &25.54 & 8.99 &70.50&18825.02&10.86&527.83&1333.37&88.53&20856.11$\pm$6383.93&17554.00\\
 &$\mindphifour > $ 1& 22.78 &14.01 & 5.88 &13.91&8426.98&3.66&192.11&276.27&13.67&8926.59$\pm$4404.31&5105.00\\
 &$M_{T2} > $ 40& 13.22 &10.90 & 5.12 &0.89&135.29&1.11&31.93&13.17&5.26&187.65$\pm$135.47&131.00\\
 \hline
-\binone&$M_{T2} > $ 90& 0.97 &4.10 & 3.56 &0.17&0.00&0.02&0.00&0.56&0.00&0.75$\pm$0.08&1.00\\
+\binone&$M_{T2} > $ 90& 0.97 &4.10 & 3.56 &0.17&0.00&0.02&0.00&0.56&0.00&0.75$\pm$0.08&?\\
+%\binone&$M_{T2} > $ 90& 0.97 &4.10 & 3.56 &0.17&0.00&0.02&0.00&0.56&0.00&0.75$\pm$0.08&1.00\\
 \hline
 \multirow{3}{*}{\bintwo}&b-jet veto& 11.16 &8.96& 4.34 &0.75&135.20&0.96&29.13&11.15&0.78&177.98$\pm$135.36&115.00\\
-&$M_{T2} < $ 90& 10.35 &5.62& 1.34 &0.61&135.20&0.94&29.13&10.65&0.78&177.32$\pm$135.36&114.00\\
-&$\Sigma M_T^{\tau_i} > $ 250& 3.92 &3.13& 0.86 &0.07&0.00&0.15&0.43&0.81&0.53&1.99$\pm$0.87&2.00\\
+&$M_{T2} < $ 90& 10.35 &5.62& 1.34 &0.61&135.20&0.94&29.13&10.65&0.78&177.32$\pm$135.36&?\\
+&$\Sigma M_T^{\tau_i} > $ 250& 3.92 &3.13& 0.86 &0.07&0.00&0.15&0.43&0.81&0.53&1.99$\pm$0.87&?\\
+%&$M_{T2} < $ 90& 10.35 &5.62& 1.34 &0.61&135.20&0.94&29.13&10.65&0.78&177.32$\pm$135.36&114.00\\
+%&$\Sigma M_T^{\tau_i} > $ 250& 3.92 &3.13& 0.86 &0.07&0.00&0.15&0.43&0.81&0.53&1.99$\pm$0.87&2.00\\
 \hline\hline
 \end{tabular}
-\caption{Cut-flow-table for $\tauTau$ channel.}
+\caption{Cut-flow-table for $\tauTau$ channel. The quoted uncertainty is only statistical.}
 \label{tbl:cutflowtable}
 \end{small}
 \end{center}
 %\end{table}
 \end{sidewaystable}
-The distributions of $\mttwo$ and $\SumMT$ after applying pre-selection cuts are shown in Figure~\ref{fig:comparison}. There is only one QCD event with slightly large weight contributing to the plots. Hence the disagreement between data and MC in a couple of bins of $\SumMT$ distribution can be justified. In order to be blind to data, in both distributions data events are not shown at some points. Overally, it can be concluded that data and MC are in reasonable agreement. 
+The distributions of $\mttwo$ and $\SumMT$ after applying pre-selection cuts are shown in figure~\ref{fig:comparison}. There is only one QCD event with slightly large weight contributing to the plots. Hence the disagreement between data and MC in a couple of bins of $\SumMT$ distribution can be justified. In order to be blind to data, in both distributions data events are not shown at some points. Overally, it can be concluded that data and MC are in reasonable agreement. 
 \begin{figure}[htbp]
 \centering
 \includegraphics[angle=0,scale=0.35]{TauTauFigs/MT2_preSel.png}
 \includegraphics[angle=0,scale=0.35]{TauTauFigs/SumMT_preSel.png} \\
-\caption{Left: \mttwo. Right: \SumMT.}
+\caption{The distributions of \mttwo (left) and \SumMT (right) after pre-selection. The b-jet veto cut is also applied on the right plot.}
 \label{fig:comparison}
 \end{figure}
 
