@@ -5,9 +5,9 @@
 The uncertainty on the luminosity  is $2.6\%$ for $2012$ data ~\cite{LUMI}.
 
 \subsubsection{ISR}
-The jet activity of our signal is coming from Initial State Radiation(ISR) and due to generating our signal with \PYTHIA generator which can not simulate ISR properly, taking into account only $2 \rightarrow 2$ scattering processes, therefore ISR jet momenta spectra as well as the multiplicity cannot be Trusted. Because of this issue it is possible to generate light c-flavour jet which can be tagged wrongly as a b-jet and by applying a b-veto cut we miss that signal event. On the other side \MADGRAPH generator, which is a matrix element generator provides a better description of ISR jets and because it can simulate $2 \rightarrow 4$ interactions. 
-We take advantage of this point by choosing a signal-like \MADGRAPH generated MC sample like WW which mimics the signal from the generation point of view and comparing it with the signal point whose $m(\chione) = 100\,\GeV$ and $m(\PSGczDo) = 0\,\GeV$ and this point resembles WW with respect to $\sqrt {\hat{s}}$. It is followed the below recipe, originating from $fixME$.
-By applying and relaxing the b-veto cut it is obtained the yields of WW and signal and by the uncertainty is A:
+The jet activity of our signal is coming from Initial State Radiation(ISR). Our signal is generated with \PYTHIA event generator which can not simulate ISR properly and this is because of that it can consider only $2 \rightarrow 2$ scattering processes. Therefore ISR jet momenta spectra as well as the multiplicity cannot be trusted. Because of this issue it is possible to generate light jets which can be tagged wrongly as a b-jet and by applying a b-veto cut we miss that signal event. On the other side \MADGRAPH generator, which is a matrix element generator provides a better description of ISR jets which it can simulate $2 \rightarrow 4$ interactions. 
+We take advantage of this point by choosing a signal-like \MADGRAPH generated MC sample which mimics the signal from the generation point of view and comparing it with the signal point whose $m(\chione) = 100\,\GeV$ and $m(\PSGczDo) = 0\,\GeV$. This point resembles WW with respect to $\sqrt {\hat{s}}$.
+By applying and relaxing the b-veto cut it is obtained the yields of WW and signal:
 
 %\begin{linenomath}
 %\begin{equation}
@@ -46,7 +46,7 @@ A &= \frac{susy\_ratio - Higgs\_ratio}{Higgs\_ratio} = 3 \%
 \end{align}
 
 
-\subsubsection{Tau Energy Scale}
+\subsubsection{\hadtau Energy Scale}
 
 %The electron energy scale is varied by $1\%$ ($2.5\%$) for electrons reconstructed in the barrel (endcap) region of the ECAL.
 %The uncertainty on muon momenta is assumed to be negligible. 
@@ -143,4 +143,4 @@ m(\chione) = 500 GeV                &$5.53^{+0.0 \% + 8.1 \%}_{-0.9 \% - 7.0 \%}
 \end{table}     
 \subsubsection{Pile-up}
 
-We varied minimum bias cross section $5 \%$ up and down following ~\cite{PU_SYS}  , and conservatively  it causes  $7 \%$ systematic for all channels.    
+We varied minimum bias cross section $5 \%$ up and down following ~\cite{PU_SYS}  , and it causes  $7 \%$ systematic for all channels.    
