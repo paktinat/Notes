@@ -1,5 +1,7 @@
 \section{Physics Object Definition}
 \label{sect:objdef}
+To define the physics objects of the analysis, we follow the recommendations and selections of another CMS analysis which search for Higgs bosons decaying to $\tau$ pairs \cite{CMS_AN_2013-188}. Due to the very similar final states, it is well motivated to avoid duplication of the efforts to define and optimize the object selections. For the completeness of the note, the object selections are reviewed shortly here. More detail can be found in \cite{CMS_AN_2013-188} and \cite{twiki}
+
 \subsection{Electron}
 Electron identification is based on a MVA (Boosted Decision Tree) method ~\cite{Hocker:2007ht} which its training takes care of cleaning of electrons collection from jet\,$\rightarrow e$  fakes. The training process takes advantage of two bins of $\pt$ and three bins of $\eta$, running over a sample of $Z \rightarrow ee$  events selected in data. Those oppositely charged electrons pair closest to Z-boson peak mass is taken as "signal" and the other electron candidates as "background". The training input variables are described in ~\cite{CMS_AN_2013-188}. Different discriminators is trained on electrons which pass the criteria of single electron trigger and for an inclusive sample of electrons, which the second one is chosen.
 According to the BDT output,it can be defined a loose and tight working points for an electron in different bins of $\pt$ and $\eta$ which is given in Table ~\ref{Tab.electronMVAIDwp}.
@@ -30,8 +32,7 @@ To reject those electrons which is coming from photon conversions, it is require
 Muons are required to be reconstructed by the Tracker or the Global muon reconstruction algorithm and to be identified as 
 muons by tight particle flow algorithm.
 
-The particle flow algorithm identifies  muons by separating them in several steps.
-
+The particle flow algorithm identifies  muons by applying several criteria.
 
 $\bullet$ The number of pixel hit(s) associated to muon track\,$\geq $\,1
 
@@ -57,7 +58,7 @@ In the innermost region
 (``veto cone'') neutral
 hadrons and photons  are excluded from the computation of the isolation $\pt$ sum in order to prevent energy deposits in the electromagnetic and hadronic calorimeters. Charged particles close to the direction of electrons  are excluded too in order to avoid tracks due to conversions of photons emitted by Bremsstrahlung processes to spoil the isolation.
 
-For the muon isolation the photon and neutral hadron candidates are required to have a transverse energy of $\MET>0.5\,\GeV$. This reduces pile-up effects. The correction of pile-up to isolation is done by applying $\Delta\beta$ corrections.
+For the lepton isolation the photon and neutral hadron candidates are required to have a transverse energy of $\pt>0.5\,\GeV$. This reduces pile-up effects. The correction of pile-up to isolation is done by applying $\Delta\beta$ corrections.
 \begin{linenomath}
 \begin{equation}
 \label{eq:muonisolation1}
@@ -70,7 +71,7 @@ vertex and scaling the sum by a factor 0.5:
 \begin{linenomath}
 \begin{equation}
 \label{eq:muonisolation2}
-\Delta\beta\,=\,0.5\, \Sigma \pt^{\rm charged }(\Delta z <2mm).
+\Delta\beta\,=\,0.5\, \Sigma \pt^{\rm charged }(\Delta z > 2mm).
 \end{equation}
 \end{linenomath}
 
@@ -80,9 +81,24 @@ The "Hadron plus Strip" (HPS) algorithm~\cite{2012JInst...7.1001C} is employed t
 
 Based on the expected particles in the final state of the hadronic $\tau$ decay, different combinations of charged hadrons and $\pi^0$ candidates are considered. The $\pi^0 (\to\gamma\gamma)$ candidates are reconstructed using PF photons with $\pt>2.5\,\GeV$, falling into $\eta-\phi$ "strips" with specific size~\cite{CMS_AN_2013-171}. While a \textbf{single charged hadron} is an indication of $\tau^{\pm}\to\pi^{\pm}\nu_{\tau}$, a combination of \textbf{three charged hadrons} fulfilling a set of requirements are considered as the process of $\tau^{\pm}\to a_1^{\pm}\nu_{\tau}\to\pi^{\pm}\pi^{\mp}\pi^{\pm}\nu_{\tau}$. \textbf{One charged hadron plus two Strips} with a dedicated selection is assigned to $\tau^{\pm}\to a_1^{\pm}\nu_{\tau}\to\pi^{\pm}\pi^{0}\pi^{0}\nu_{\tau}$ decays. Finally the signature of  $\tau^{\pm}\to\rho^{\pm}\nu_{\tau}\to\pi^{\pm}\pi^{0}\nu_{\tau}$ decay is searched for in \textbf{one charged hadron plus one Strip} combinations. All charged hadrons and strips in the $\tau$ decay mode reconstruction must be within a narrow cone around the jet axis where the cone size depends on the $\tau$ jet $\pt$. Details on specific selections for each category as well as the $\pt$ dependence of the cone size can be found in Ref.~\cite{CMS_AN_2013-171}
 
-The isolation variable is defined as the sum of the $\pt$ of charged hadrons and the $\et$ of photons within a cone of $\Delta R = 0.5$ around the $\hadtau$ axis. Particles used to reconstruct the $\hadtau$ candidate are excluded. The contribution of pile-up to the $\Tau$ isolation is accounted for by applying the so-called $\Delta\beta$ corrections. The selection criteria for charged hadrons in the isolation sum together with the pile-up subtraction procedure can be found in Ref.~\cite{CMS_AN_2013-171}. The Loose, Medium and Tight working points correspond to isolation variables less than 2.0, 1.0 and 0.8\,$\GeV$, respectively.
+The isolation variable is defined as the sum of the $\pt$ of charged hadrons and the $\et$ of photons within a cone of $\Delta R = 0.5$ around the $\hadtau$ axis. Particles used to reconstruct the $\hadtau$ candidate are excluded. The contribution of pile-up to the $\Tau$ isolation is accounted for by applying the so-called $\Delta\beta$ corrections. The selection criteria for charged hadrons in the isolation sum together with the pile-up subtraction procedure can be found in Ref.~\cite{CMS_AN_2013-171}. The Loose, Medium and Tight working points of {\it CombinedIsoDBSumPtCorr3Hits} algorithm correspond to isolation variables less than 2.0, 1.0 and 0.8\,$\GeV$, respectively.
 
 The $\hadtau$ candidates are vetoed if signals exist in the muon system close to the $\hadtau$ direction. Loose, Medium and Tight working points are provided, corresponding to different $\hadtau$ identification efficiencies and $\mu\to\hadtau$ fake rates~\cite{CMS_AN_2013-171}. To discriminate against electrons i.e., rejecting $e\to\hadtau$ fakes, a multivariate discriminator is trained for which the Loose, Medium, Tight and very-Tight working points are defined based on the outputs of 16 different BDT's. Each BDT is associated to a category of $\hadtau$ candidates where the classification of $\hadtau$'s is performed according to their kinematics and decay mode as well as their closeness to a GSF electron. The working points are optimized to achieve the lowest $e\to\tau$ rate possible with a given $\hadtau$ identification efficiency~\cite{CMS_AN_2012-417}.
+
+%Tau leptons from Higgs boson decays are expected to be isolated in the detector, while leptons from heavy-flavor (c and b) decays and decays in flight are expected to be found inside jets. A measure of isolation is used to discriminate the signal from the QCD multijet background, based on the charged hadrons, photons, and neutral hadrons falling within a cone around the lepton momentum direction.
+%Electron, muon, and tau lepton isolation are estimated as
+%\begin{equation}\begin{aligned}
+%I_{\Pe,\Pgm} &=  \sum_{\rm charged}  \pt + \text{max}\left( 0, \sum_{\rm neutral}  \pt
+%                                        +  \sum_{\gamma} {\pt} - 0.5 \sum_{\rm charged, pileup} \pt  \right ), \\
+%I_{\Tau} &=  \sum_{\rm charged}  \pt + \text{max}\left( 0, \sum_{\gamma} {\pt} - 0.46 \sum_{\rm charged, pileup} \pt  \right ),
+%\label{eq:reconstruction_isolation}
+%\end{aligned}\end{equation}
+%where $\sum_\text{charged}\pt$ is the scalar sum of the transverse momenta of the charged hadrons, electrons, and muons from the primary vertex located in a cone centered around the lepton direction of size $\Delta R = \sqrt{(\Delta\eta)^2+(\Delta\phi)^2}$ of 0.4 for electrons and muons and 0.5 for tau leptons.
+%The sums $\sum_\text{neutral}\pt$ and $\sum_{\gamma} \pt$ represent the same quantities for neutral hadrons and photons, respectively. In the case of electrons and muons the innermost region is excluded
+%to avoid the footprint in the calorimeter of the lepton itself from entering the sum.
+%Charged particles close to the direction of the electrons are excluded as well, to prevent tracks originating from the conversion of photons emitted by the bremsstrahlung process from spoiling the isolation. In the case of \Tau, the particles used in the reconstruction of the lepton are excluded. The contribution of pileup photons and neutral hadrons
+%is estimated from the scalar sum of the transverse momenta of charged hadrons from pileup vertices in the isolation cone $\sum_\text{charged, pileup}$. This sum is multiplied by a factor of 0.5 that approximately corresponds to the ratio of neutral-to-charged hadron production in the hadronization process of inelastic $\Pp\Pp$ collisions. In the case of \Tau, a value of 0.46 is used, as the neutral hadron contribution is not used in the computation of $I_{\tauh}$. An $\eta$, \pt, and lepton-flavor dependent threshold on the isolation variable is applied.
+
 
 \subsection{Jet and MET reconstruction}
 \label{sec:jetmet}
