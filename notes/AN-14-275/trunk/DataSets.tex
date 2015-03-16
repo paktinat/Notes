@@ -1,13 +1,9 @@
 \section{Datasets and MC samples}
 \label{sect:dataMC}
 To reconstruct the objects, the CMSSW\_5\_3\_7\_patch5 is used for both data and Monte Carlo(MC).
-The data used in this analysis corresponds to 18.3 \fbinv in \hadtau\hadtau channel and \IL in $l\hadtau$ channel of proton-proton collisions in the center of mass energy of $\sqrt{s}$ = 8 TeV 
+The data used in this analysis corresponds to 18.1 \fbinv in \hadtau\hadtau channel and 19.6 \fbinv in $l\hadtau$ channel of proton-proton collisions in the center of mass energy of $\sqrt{s}$ = 8 TeV 
 which was taken in 2012. The datasets used for $e\tau_{had}$, $\mu\tau_{had}$ and $\tau_{had}\tau_{had}$ channels, the run range and the corresponding integrated luminosities are mentioned Table ~\ref{Tab.DataSamples}.
-
-For data the golden JSON file,\small{Cert\_190456-208686\_8TeV\_22Jan2013ReReco\_Collisions12\_JSON.txt} is used and it can be found in Table.~\ref{Tab.Triggers} the list of trigger paths which is used for this analysuis data. MC samples are used for different standard model backgrounds and signals. These samples are officially generated and reconstructed by the CMS collaboration. The full list of the MC samples and their cross sections are given in Table ~\ref{Tab.MCSamples}. For most of the samples the most accurate calculation of the cross sections available in the literature (usually NLO and NNLO) are used. 
-
-
-\begin{table}[!h]
+\begin{table}[!Hhtb]
 
 \begin{center}
 \small{
@@ -39,8 +35,43 @@ Dataset Name & Run--range & Luminosity(\fbinv) \\
 \label{Tab.DataSamples}
 \end{table}
 
-
-\begin{table}[!ht]
+For data the golden JSON file,{\small Cert\_190456-208686\_8TeV\_22Jan2013ReReco\_Collisions12\_JSON.txt} is used and it can be found in Table.~\ref{Tab.Triggers} the list of trigger paths which is used for this analysis data. 
+\begin{table}[!Hhtb]
+\small{
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+HLT Path   & L1 Seed  & Luminosity(\fbinv) \\
+\hline
+\multicolumn{3}{|c|}{$e\tau_{had}$ channel} \\
+\hline
+Ele20\_CaloIdVT\_CaloIsoRhoT\_TrkIdT\_TrkIsoT\_LooseIsoPFTau20 & $^{1}$                 &  $0.7$    \\
+Ele22\_eta2p1\_WP90Rho\_LooseIsoPFTau20                        & $^{2}$                 & $18.7$    \\   
+\hline
+\multicolumn{3}{|c|}{$mu\tau_{had}$ channel} \\
+\hline
+IsoMu18\_eta2p1\_LooseIsoPFTau20                               &    SingleMu16er        &  $0.7$  \\
+IsoMu17\_eta2p1\_LooseIsoPFTau20                               &    SingleMu14er        & $18.7$  \\
+\hline
+\multicolumn{3}{|c|}{$\tau_{had}\tau_{had}$ channel} \\
+\hline
+DoubleMediumIsoPFTau35\_Trk5\_eta2p1                          &  $^{3}$                       & $3.9$ \\
+DoubleMediumIsoPFTau35\_Trk1\_eta2p1                          &  $^{3}$                       & $14.2$ \\
+\hline
+\end{tabular}
+\end{center}
+$^{1}$ SingleIsoEG18er or SingleEG20 \\
+$^{2}$ SingleIsoEG18er or SingleIsoEG20er or SingleEG22 \\
+$^{3}$ L1\_DoubleTauJet44er or L1\_DoubleJetC64 \\
+}
+\caption{
+  Trigger paths used by $e\tau_{had}$, $\mu\tau_{had}$ and $\tau_{had}\tau_{had}$ channels
+  for $2012$ data. All the paths given in the table remained unprescaled during the whole and $2012$ data--taking period.
+}
+\label{Tab.Triggers}
+\end{table}
+MC samples are used for different standard model backgrounds and signals. These samples are officially generated and reconstructed by the CMS collaboration. The full list of the MC samples and their cross sections are given in Table ~\ref{Tab.MCSamples}. For most of the samples the most accurate calculation of the cross sections available in the literature (usually NLO and NNLO) are used. 
+\begin{table}[!Hhtb]
 \begin{center}
 \small{
 \begin{tabular}{|l|c|}
@@ -163,41 +194,6 @@ $^{1}$ /summer12-..START53*/AODSIM\\
 \label{Tab.MCSamples}
 
 \end{table}
+The investigated SUSY signal in this analysis is {\small $pp \rightarrow \chip \chim \rightarrow \tau^+ \tau^- \MET$} called {\small "TChipChimSlepSnu"} produced with \PYTHIA $6.0$ at the level of LHE. \TAUOLA is used to decay precisely the produced $\tau$'s, then the generated events are
+passed through the CMS official Fast-Sim process.
 
-The investigated SUSY signal in this analysis is $pp \rightarrow \chip \chim \rightarrow \tau^+ \tau^- \MET$ named "TChipChimSlepSnu" produced with \PYTHIA $6.0$ at the level of LHE and then it is passed through the CMS official Fast-Sim procces.
-
-
-\begin{table}[!h]
-\small{
-\begin{center}
-\begin{tabular}{|l|c|c|}
-\hline
-HLT Path   & L1 Seed  & Luminosity(\fbinv) \\
-\hline
-\multicolumn{3}{|c|}{$e\tau_{had}$ channel} \\
-\hline
-Ele20\_CaloIdVT\_CaloIsoRhoT\_TrkIdT\_TrkIsoT\_LooseIsoPFTau20 & $^{1}$                 &  $0.7$    \\
-Ele22\_eta2p1\_WP90Rho\_LooseIsoPFTau20                        & $^{2}$                 & $18.7$    \\   
-\hline
-\multicolumn{3}{|c|}{$mu\tau_{had}$ channel} \\
-\hline
-IsoMu18\_eta2p1\_LooseIsoPFTau20                               &    SingleMu16er        &  $0.7$  \\
-IsoMu17\_eta2p1\_LooseIsoPFTau20                               &    SingleMu14er        & $18.7$  \\
-\hline
-\multicolumn{3}{|c|}{$\tau_{had}\tau_{had}$ channel} \\
-\hline
-DoubleMediumIsoPFTau35\_Trk5\_eta2p1                          &  $^{3}$                       & $3.9$ \\
-DoubleMediumIsoPFTau35\_Trk1\_eta2p1                          &  $^{3}$                       & $14.2$ \\
-\hline
-\end{tabular}
-\end{center}
-$^{1}$ SingleIsoEG18er or SingleEG20 \\
-$^{2}$ SingleIsoEG18er or SingleIsoEG20er or SingleEG22 \\
-$^{3}$ L1\_DoubleTauJet44er or L1\_DoubleJetC64 \\
-}
-\caption{
-  Trigger paths used by $e\tau_{had}$, $\mu\tau_{had}$ and $\tau_{had}\tau_{had}$ channels
-  for $2012$ data. All the paths given in the table remained unprescaled during the whole and $2012$ data--taking period.
-}
-\label{Tab.Triggers}
-\end{table}
