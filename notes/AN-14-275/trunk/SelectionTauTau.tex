@@ -46,7 +46,7 @@ The cut-flow-table can be found in table~\ref{tbl:cutflowtable}. The yields for 
 \hline\hline
 &  &SUSY(180,60)&(240,40)&(380,1)&Higgs&QCD&WW&W&DY&Top&Total Bkg&Data\\
 \hline\hline
-\multirow{4}{*}{Pre-Selection}&di-$\tau_h$ Selection and lepton veto& 46.81 &27.14& 9.99 &81.53&19272.05&11.21&543.42&1961.29&95.85&21965.34$\pm$6387.87&18526.00\\
+\multirow{4}{*}{Pre-Selection}& di-$\tau_h$ Selection, lepton veto& 46.81 &27.14& 9.99 &81.53&19272.05&11.21&543.42&1961.29&95.85&21965.34$\pm$6387.87&18526.00\\
 %&$e$ and $\mu$ Veto& 46.81 &27.14& 9.99 &81.53&19272.05&11.21&543.42&1961.29&95.85&21965.34$\pm$6387.87&18526.00\\
 &Z Veto& 45.63 &25.54 & 8.99 &70.50&18825.02&10.86&527.83&1333.37&88.53&20856.11$\pm$6383.93&17554.00\\
 &$\mindphifour > $ 1& 22.78 &14.01 & 5.88 &13.91&8426.98&3.66&192.11&276.27&13.67&8926.59$\pm$4404.31&5105.00\\
@@ -68,7 +68,11 @@ The cut-flow-table can be found in table~\ref{tbl:cutflowtable}. The yields for 
 \end{center}
 %\end{table}
 \end{sidewaystable}
-The distributions of $\mttwo$ and $\SumMT$ after applying pre-selection cuts are shown in figure~\ref{fig:comparison}. There is only one QCD event with slightly large weight contributing to the plots. Hence the disagreement between data and MC in a couple of bins of $\SumMT$ distribution can be justified. In order to be blind to data, in both distributions data events are not shown at some points. Overally, it can be concluded that data and MC are in reasonable agreement. 
+The distributions of $\mttwo$ and $\SumMT$ after applying pre-selection cuts are shown in figure~\ref{fig:comparison}. Due to the high cross section of the QCD multijets, some events from MC can appear in the plots with a large weight. To avoid this problem,
+a same sign selection (SS) is done on data and MC. All other cuts are same. The non-QCD contribution in SS selection is read from MC and 
+subtracted from the SS data. The result is used as QCD in figure \ref{fig:comparison}. 
+In order to be blind to data, in both distributions data events are not shown at the tails. Overally, it can be concluded that data and MC are in reasonable agreement. 
+%There is only one QCD event with slightly large weight contributing to the plots. Hence the disagreement between data and MC in a couple of bins of $\SumMT$ distribution can be justified. 
 \begin{figure}[htbp]
 \centering
 \includegraphics[angle=0,scale=0.35]{QCDbginTauTau/Bin1_QCDdatadriven_Samesign.png}
@@ -76,4 +80,3 @@ The distributions of $\mttwo$ and $\SumMT$ after applying pre-selection cuts are
 \caption{The distributions of \mttwo (left) and \SumMT (right) after pre-selection. The b-jet veto cut is also applied on the right plot.}
 \label{fig:comparison}
 \end{figure}
-
