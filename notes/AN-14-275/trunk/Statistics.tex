@@ -5,42 +5,36 @@
 To interpret the results, we first recapitulate a little of assumptions and the consequent numbers.
 In this analysis, we examine the data in three different channels.
 These channels include \tauTau, \muTau and \eTau.
-The signal region for the \muTau and \eTau channels is defined in one bin, which is $\mttwo > 90$ and $\tauMT > 200$ .
-Due to the sensitivity of \tauTau channel to the signal, we look at the data in two different bins.
-The first bin is $\mttwo > 90$ and the second one is $40 < \mttwo < 90$ and $\SumMT > 250$.
+The signal region for the \muTau and \eTau channels is defined in one bin, which is $\mttwo > 90$ \GeV and $\tauMT > 200$ \GeV.
+%Due to the sensitivity of \tauTau channel to the signal, we look at the data in two different bins.
+In the \tauTau channel, two signal bins are defined.
+The first bin is $\mttwo > 90$ \GeV and the second one is $40 < \mttwo < 90$ \GeV and $\SumMT > 250$ \GeV.
 We eventually combine all four bins to utilize more information from the observed and the predicted distributions.
+It was checked that applying the cuts of each channel on other channels do not remain any event and 
+there is not any overlap between the channels, so the channels can be statistically combined.
 
 
 Backgrounds are taken into account in two categories, including Monte-Carlo-Driven (MCD) and Data-Driven (DD).
 However, due to the method of background estimation in the \tauTau channel, \binone and \bintwo of this channel have one more category called W-jets (W).
 As a summary of results, the background yields and systematic uncertainities are listed in Table \ref{tbl:yieldSysSummary}.
-As seen in the Table, the overall background yields of all categories, for the \tauTau channel \binone and \bintwo and \eTau and \muTau channels are  1.5, 3.01, 2.7 and 1.06 respectively (sum of three first rows of Table \ref{tbl:yieldSysSummary}).
-MCD backgrounds are feed to the package as a Gamma distribution with the corresponding statistical weights for each bin.
-Furthermore, 25\% systematic uncertainity on MCD backgrounds is also considered.
-All systematics are taken through LogNormal distributions.
-Systematic uncertainities for each bin of DD backgrounds are 111\%, 215\%, 50\% and 69\% respectively.  
-W backgronds have 37\% and 45\% systematic uncertainity for the first and second bins respectively.
-And finally, 20\% systematic uncertainity on signal yields is considered. 
-
-
 \begin{table}[h]
 \begin{center}
 %\begin{tiny}
-\begin{tabular}{l|l|l|l|l}
+\begin{tabular}{c|c|c|c|c|c}
 \hline
 \hline
-	& \tauTau\binone & \tauTau\bintwo & \eTau\binone & \muTau\binone \\
+	& bkg	& \tauTau\binone & \tauTau\bintwo & \eTau\binone & \muTau\binone \\
 \hline
 \hline
-MCD (yield) & 0.75 & 1.56 & 0.2 & 0.45 \\
-DD (yield) & 0.09 & 0.65 & 2.5 & 0.61 \\
-W (yield) & 0.66	 & 0.8 & - & - \\
+\multirow{3}{*}{yields}&MCD  & 0.75 & 1.56 & 0.2 & 0.45 \\
+                      &DD  & 0.09 & 0.65 & 2.5 & 0.61 \\
+                      &W  & 0.66	 & 0.8 & - & - \\
 %\hline				
 %MCD (sta.) & 81x0.00926 &  4x0.39 & 800x0.00025 & 8x0.0563 \\
 \hline
-MCD (sys.) & 25\%	 & 25\% & 25\% & 25\% \\
-DD (sys.) & 111\% & 	215\% & 50\% & 69\% \\
-W (sys.) & 37\% & 45\% & - & - \\
+\multirow{3}{*}{Systematics}&MCD  & 25\%	 & 25\% & 25\% & 25\% \\
+                      &DD  & 111\% & 	215\% & 50\% & 69\% \\
+                      &W & 37\% & 45\% & - & - \\
 \hline
 \hline
 \end{tabular}
@@ -49,6 +43,14 @@ W (sys.) & 37\% & 45\% & - & - \\
 %\end{tiny}
 \end{center}
 \end{table}
+As seen in the table, the overall background yields of all categories, for the \tauTau channel \binone and \bintwo and \eTau and \muTau channels are  1.5, 3.01, 2.7 and 1.06 respectively (sum of three first rows of Table \ref{tbl:yieldSysSummary}).
+MCD backgrounds are feed to the package as a Gamma distribution with the corresponding statistical weights for each bin.
+Furthermore, 25\% systematic uncertainity on MCD backgrounds is also considered.
+All systematics are taken through LogNormal distributions.
+Systematic uncertainities for each bin of DD backgrounds are 111\%, 215\%, 50\% and 69\% respectively.  
+W backgronds have 37\% and 45\% systematic uncertainity for the first and second bins respectively.
+And finally, 20\% systematic uncertainity on signal yields is considered. Due to the large signal sample
+which is used, no statistical uncertainty is assigned to signal.
 
 
 If no excess of data over the background prediction is observed, 
@@ -78,13 +80,7 @@ After incorporating systematic uncertainties, an observed CLs smaller than 0.05 
 %As discussed in Section \ref{sect:introduction}, the final state is full of $\tau$ and $ \sTau \rightarrow \tau + \PSGczDo  $.
 %Hence many channels could be define, due to decays of tau to electrons, muons and hadrons.    
 
-Panels represented in Figure \ref{fig:limit_bins} show the impact of each bin on the combined result, represented by the final exclusion limit shown in Figure \ref{fig:limit_final}. The top-left panel of Figure \ref{fig:limit_bins} shows the expected exclusion region in the plane of $m_{\chione}-m_{\PSGczDo}$
-calculated by the simulated samples in the first bin of \tauTau channel. The top-right panel in Figure \ref{fig:limit_bins} is produced by using both bins of \tauTau channel.
-As seen, the inclusion of \bintwo in the \tauTau channel causes a little expansion of the exclusion limit toward the left side (low mass $\chione$).
-Two bottom panels of Figure \ref{fig:limit_bins} show the expected exclusion limit when \eTau (left) and \muTau (right) channels are 
-added to the \tauTau channel.  As seen, these channels individually improves the limit on the right side of plane (high mass $\chione$).
-
-
+Panels represented in figure \ref{fig:limit_bins}
 %%%%%%%%%%
 \begin{linenomath}
 \begin{figure}[h]
@@ -101,16 +97,7 @@ The bottom ones show the expected exclusion limit when \eTau (left) and \muTau (
 \end{figure}
 \end{linenomath}
 %%%%%%%%%%
-
-
-Figure \ref{fig:limit_final} shows the expected upper limit on the cross section of the chargino pair production in terms of Simplified Models \cite{alves:sms}. 
-Calculation of the expected exclusion limit shows that the research has potential to exclude 
-a sizable region of the phase space, surrounded by the lines of $m_{\chione} = 500\GeV$ and $m_{\PSGczDo} = 150\GeV$ with 
-the total dataset of 2012.
-The Red curve represents the expected reach by ATLAS %\cite{cutandcountAN}
-search. As the figure shows, our analysis (the blue solid curve) is well above the ATLAS result in the $m_{\chione}-m_{\PSGczDo}$ plane.
-
-
+ show the impact of each bin on the combined result, represented by the final exclusion limit shown in figure \ref{fig:limit_final}. 
 %%%%%%%%%%
 \begin{linenomath}
 \begin{figure}[h]
@@ -124,3 +111,15 @@ with the total dataset of 2012.
 \end{figure}
 \end{linenomath}
 %%%%%%%%%%
+The top-left panel of figure \ref{fig:limit_bins} shows the expected exclusion region in the plane of $m_{\chione}-m_{\PSGczDo}$
+calculated by the simulated samples in the first bin of \tauTau channel. The top-right panel in figure \ref{fig:limit_bins} is produced by using both bins of \tauTau channel.
+As seen, the inclusion of \bintwo of the \tauTau channel causes a little expansion of the exclusion limit towards 
+the diagonal (low mass difference).
+Two bottom panels of figure \ref{fig:limit_bins} show the expected exclusion limit when \eTau (left) and \muTau (right) channels are 
+added to the \tauTau channel.  As seen, these channels individually improve the limit on the right side of plane (high mass difference).
+figure \ref{fig:limit_final} shows the expected upper limit on the cross section of the chargino pair production in terms of Simplified Models \cite{alves:sms}. 
+Calculation of the expected exclusion limit shows that the research has potential to exclude 
+a sizable region of the phase space, surrounded by the lines of $m_{\chione} = 450\GeV$ and $m_{\PSGczDo} = 100\GeV$ with 
+the total dataset of 2012.
+The red curve represents the expected reach by ATLAS %\cite{cutandcountAN}
+search. As the figure shows, our analysis (the blue solid curve) is well above the ATLAS result in the $m_{\chione}-m_{\PSGczDo}$ plane.

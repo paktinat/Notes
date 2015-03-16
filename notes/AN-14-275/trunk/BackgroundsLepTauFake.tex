@@ -1,7 +1,7 @@
 \subsection{\texorpdfstring{Fake Background Estimation in $\leptonTau$ Channel}{Fake Background Estimation in lepton-tau Channel}}
 \label{sect:bkgLeptau}
 In the $e/\mu\hadtau$ channels, the main background is the W+jets, when the \Wpm boson decays to a lepton and a jet fakes a hadronic $\tau$.
-We use a fake rate method to estimate this background \cite{CMS_AN_2010-261}. 
+We use a fake rate method to estimate this background \cite{CMS_AN_2010-261} in the \muTau channel.
 The idea is that when the loose signal selection is applied, the number of the loose $\hadtau$'s ($L$) is:
 \begin{equation}
 L = P + F
@@ -19,8 +19,8 @@ $f$ * $F$ is the contamination of the fake $\hadtau$'s in the signal region.
 
 The fake rate ($f$) is measured as the ratio of the tightly selected $\hadtau$'s to the loosely 
 selected $\hadtau$'s in a sample which is dominated by the fake $\hadtau$'s. The fake rate is estimated in an environment which is as similar as possible to 
-the signal region. The datasets and the triggers which are used to estimate the fake rate in different channels are shown in 
-table \ref{Tab.DataFR}.
+the signal region. The dataset and the triggers which are used to estimate the fake rate %in different channels 
+are shown in table \ref{Tab.DataFR}.
 \begin{table}[!htb]
 \begin{center}
 \begin{tabular}{|l|c|c|}
@@ -28,17 +28,18 @@ table \ref{Tab.DataFR}.
 Channel      & Data Set                                     & Trigger \\\hline
 Muon Tau     & /SingleMu/Run2012D-22Jan2013-v1/AOD          & HLT\_IsoMu24\_v(16-17)\\
              &                                              & HLT\_IsoMu24\_eta2p1\_v(14-15)\\\hline
-Electron Tau & /SingleElectron/Run2012D-22Jan2013-v1/AOD    & HLT\_Ele27\_WP80\_v11\\
+%Electron Tau & /SingleElectron/Run2012D-22Jan2013-v1/AOD    & HLT\_Ele27\_WP80\_v11\\
 \hline
 \end{tabular}
-\caption{The datasets and triggers for fake rate estimation.}
+\caption{The dataset and triggers for fake rate estimation.}
 \label{Tab.DataFR}
 \end{center}
 \end{table}
 
 %In the muTau channel, exactly one muon is required which passes the selection criteria of the muon in the signal region and has \pt > 27 GeV. 
-Lepton selection and extra lepton rejections are exactly same as the signal selection. Only the \pt of the favorite lepton is forced to 
-be 3 \GeV higher than the online cut resulting to \pt $>$ 27 \GeV for muon and \pt $>$ 30 \GeV for electron.
+Lepton selection and extra lepton rejections are exactly same as the signal selection. Only the \pt of the %favorite 
+leading lepton is forced to 
+be 3 \GeV higher than the online cut resulting to \pt $>$ 27 \GeV for muon.% and \pt $>$ 30 \GeV for electron.
 The rejections can reduce the contribution of the VV, DY and $\ttbar$ events. To further suppress the $\ttbar$ contamination, the b-veto 
 similar to the signal selection is applied. The \MET is asked to be greater than 30 GeV, similar to the preselections. The selection of the $\hadtau$ is exactly same as the signal selection, except the $\hadtau$ isolation which is {\it Loose} for the loosely selected $\hadtau$'s and {\it Tight} for the tightly selected $\hadtau$'s. 
 The ratio of the  categories determines the fake rate. To avoid any bias from the trigger, the $\hadtau$'s closer than $\Delta$R = 0.2 to the 
@@ -46,9 +47,11 @@ lepton are rejected. The \muTau pair are also forced to be same sign to decrease
 The fake rate can be measured in the bins of $\hadtau$ \pt and $\eta$, but it is observed that the dependency is very small and can be ignored, 
 so we use a single value for the fake rate which is 0.45 $\pm$ 0.0062.
 
-The prompt rate ($p$) is measured in the MC DY events. All of the preselections except the Z-veto and $\hadtau$ isolation are applied. The $\hadtau$ isolation 
+The prompt rate ($p$) is measured in the MC DY events. All of the preselections except the $mu$ selection and extra lepton rejection %the Z-veto and $\hadtau$ isolation 
+are applied. 
+The $\hadtau$ isolation 
 is relaxed from {\it Tight} to {\it Loose}. Only the events that a generated $\tau$ decays hadronically are considered. If a reconstructed $\hadtau$ is 
-closer than $\Delta R = 0.1$ to the generated $\tau$, it is selected. Among these $\hadtau$'s, the prompt rate is defined as the fraction of the loose $\hadtau$'s 
+closer than $\Delta R = 0.1$ to the generated $\tau$, it is selected. Among these $\Tau$'s, the prompt rate is defined as the fraction of the loose $\hadtau$'s 
 which are tight. The prompt rate can be measured in the bins of \mttwo, but the statistics in the high \mttwo region which is our favorite 
 region is too low that we can not conclude anything about the shape of the prompt rate in this region, so we choose it as a constant value
 0.77 $\pm$ 0.0032 in the whole \mttwo region.
@@ -57,8 +60,8 @@ Figure \ref{fig:LepTauClusure}
 \begin{figure}[!Hhtb]
 \centering
 \includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateMuTau/Estimation_pfWJets_ExtraLepExcl_SameSignWeightedHiggs.png}
-\includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateMuTau/Estimation_pfWJets_ExtraLepExcl_SameSignWeightedHiggs.png}
-\caption{left: . right: .}
+%\includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateMuTau/Estimation_pfWJets_ExtraLepExcl_SameSignWeightedHiggs.png}
+\caption{MC truth (green) compared to the result of the method. W+jets events with a fake \Tau are used for the closure.}
 \label{fig:LepTauClusure}
 \end{figure}
 shows the results when the method is used to estimate the fake contamination of the W+Jets events that pass the selection. 
@@ -83,11 +86,11 @@ $20.00-40.00$  &  27.04 $\pm$ 0.00   & 21.64     & 0.80 \\
 $40.00-50.00$  &  9.91 $\pm$ 0.00    & 7.87      & 0.79 \\
 $50.00-70.00$  &  32.53 $\pm$ 0.00   & 26.47     & 0.81 \\
 $70.00-90.00$  &  20.45 $\pm$ 0.00   & 17.47     & 0.85 \\
-$90.00-300.00$ &  0.79 $pm$ 0.00    & 1         & 1.27\\
+$90.00-300.00$ &  0.79 $\pm$ 0.00    & 1         & 1.27\\
 \hline
 \hline
 \end{tabular}
-\caption{}
+\caption{MC truth and estimation from the fake rate method. W+jets events with a fake \Tau are used for the closure.}
 \label{tbl:LepTauEstimationClosure}
 \end{center}
 \end{table}
@@ -96,8 +99,8 @@ shown in figure \ref{fig:LepTauEstimationData}.
 \begin{figure}[!Hhtb]
 \centering
 \includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateMuTau/Estimation_ExtraLepExcl_SameSignWeightedHiggs.png}
-\includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateMuTau/Estimation_ExtraLepExcl_SameSignWeightedHiggs.png}
-\caption{left: . right: .}
+%\includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateMuTau/Estimation_ExtraLepExcl_SameSignWeightedHiggs.png}
+\caption{Different MC events containg a fake \Tau are compared with the result of the method applied on data.}
 \label{fig:LepTauEstimationData}
 \end{figure}
 To select the MC events, all the selection cuts, except the \mttwo cut are applied. 
@@ -119,7 +122,7 @@ $90.00-300.00$ & 0.00     & 0.03    & 0.79   & 0        & 0.15    & 0.05       &
 \hline
 \hline
 \end{tabular}
-\caption{}
+\caption{Numbers for figure \ref{fig:LepTauEstimationData}}
 \label{tbl:LepTauEstimationData}
 \end{center}
 \end{table}
