@@ -1,13 +1,61 @@
 
-\section[Statistics]{Statistical Interpretation of the results}\label{sect:stat}
+\section[Statistics]{Summary and statistical interpretation of the results}\label{sec:stat}
 
-\newcommand{\PSGcpmDo}{\ensuremath{\widetilde{\chi}_{1}^{\pm}}\xspace}
+To interpret the results, we first recapitulate a little of assumptions and the consequent numbers.
+In this analysis, we examine the data in three different channels.
+These channels include \tauTau, \muTau and \eTau.
+The signal region for the \muTau and \eTau channels is defined in one bin, which is $\mttwo > 90$ and $\tauMT > 200$ .
+Due to the sensitivity of \tauTau channel to the signal, we look at the data in two different bins.
+The first bin is $\mttwo > 90$ and the second one is $40 < \mttwo < 90$ and $\SumMT > 250$.
+We eventually combine all four bins to utilize more information from the observed and the predicted distributions.
 
 
-Since no excess of data over the background prediction has been observed, 
+Backgrounds are taken into account in two categories, including Monte-Carlo-Driven (MCD) and Data-Driven (DD).
+However, due to the method of background estimation in the \tauTau channel, \binone and \bintwo of this channel have one more category called W-jets (W).
+As a summary of results, the background yields and systematic uncertainities are listed in Table \ref{tbl:yieldSysSummary}.
+As seen in the Table, the overall background yields of all categories, for the \tauTau channel \binone and \bintwo and \eTau and \muTau channels are  1.5, 3.01, 2.7 and 1.06 respectively (sum of three first rows of Table \ref{tbl:yieldSysSummary}).
+MCD backgrounds are feed to the package as a Gamma distribution with the corresponding statistical weights for each bin.
+Furthermore, 25\% systematic uncertainity on MCD backgrounds is also considered.
+All systematics are taken through LogNormal distributions.
+Systematic uncertainities for each bin of DD backgrounds are 111\%, 215\%, 50\% and 69\% respectively.  
+W backgronds have 37\% and 45\% systematic uncertainity for the first and second bins respectively.
+And finally, 20\% systematic uncertainity on signal yields is considered. 
+
+
+\begin{table}[h]
+\begin{center}
+%\begin{tiny}
+\begin{tabular}{l|l|l|l|l}
+\hline
+\hline
+	& \tauTau\binone & \tauTau\bintwo & \eTau\binone & \muTau\binone \\
+\hline
+\hline
+MCD (yield) & 0.75 & 1.56 & 0.2 & 0.45 \\
+DD (yield) & 0.09 & 0.65 & 2.5 & 0.61 \\
+W (yield) & 0.66	 & 0.8 & - & - \\
+%\hline				
+%MCD (sta.) & 81x0.00926 &  4x0.39 & 800x0.00025 & 8x0.0563 \\
+\hline
+MCD (sys.) & 25\%	 & 25\% & 25\% & 25\% \\
+DD (sys.) & 111\% & 	215\% & 50\% & 69\% \\
+W (sys.) & 37\% & 45\% & - & - \\
+\hline
+\hline
+\end{tabular}
+\caption{Summary of background yields and corresponding systematic uncertainities.}
+\label{tbl:yieldSysSummary}
+%\end{tiny}
+\end{center}
+\end{table}
+
+
+If no excess of data over the background prediction is observed, 
 we close our study with setting upper limits on the testing signals.
 This is conducted using a modified frequentist approach, namely CLs method \cite{read:CLs}.
-In this method, the test statistic $q_\mu$ \cite{cowan:asymptoticCLs} is a function of the profile likelihood-ratio,
+In this method, the test statistic $q_\mu$ 
+%\cite{cowan:asymptoticCLs} 
+is a function of the profile likelihood-ratio,
 
 \begin{align}
 q_\mu = -2 \ln \frac{\mathcal{L}(data ;\, b + \mu s)}{\mathcal{L}(data ;\, b + \hat{\mu} s)},
@@ -23,38 +71,30 @@ CL_s = \frac{p(q_\mu \geq q_\mu^{obs} | b + \mu s )}{p(q_\mu \geq q_\mu^{obs} | 
 We compute CLs using a software package provided by the CMS Higgs PAG \cite{higgspag:software}.
 After incorporating systematic uncertainties, an observed CLs smaller than 0.05 for a signal strength of $\mu = 1$, excludes the given signal at $95\%$ CL. Indeed, the package determines which signal strength $\mu$ excludes the testing signal at $95\%$ CL. Therefore all resulting $\mu \leq 1$ define the excluded region in the parameter space of the given signal. 
 
+%To investigate the exclusion power of our research, we study the topology of direct stau pair production and the \PSGcpDo\PSGcmDo production in Simplified Models \cite{alves:sms}. 
+%This research deal with tau family decay of charginoes including 
+%$ \chione \rightarrow \sTau + \nu ~~\mathrm{and}~~  \chione \rightarrow \sNu_{\tau} + \tau $.
+%As discussed in Section \ref{sect:introduction}, the final state is full of $\tau$ and $ \sTau \rightarrow \tau + \PSGczDo  $.
+%Hence many channels could be define, due to decays of tau to electrons, muons and hadrons.    
 
-To investigate the exclusion power of our research, we study the topology of direct stau pair production and the $\PSGcpDo\PSGcmDo$ production in Simplified Models \cite{alves:sms}. 
-This research deal with tau family decay of charginoes including 
-$ \PSGcpmDo \rightarrow \sTau + \nu ~~\mathrm{and}~~  \PSGcpmDo \rightarrow \sNu_{\tau} + \tau $.
-As discussed in Section \ref{sect:introduction}, the final state is full of $ \tau $ and $ \sTau \rightarrow \tau + \PSGczDo  $.
-Hence many channels could be define, due to decays of tau to electrons, muons and hadrons.    
-
-
-In this analysis, we examine the data in three different channels.
-These channels include $\tau_{had}-\tau_{had}~$, $\mu-\tau_{had}~$ and $e-\tau_{had}~$.
-The signal region for the $\mu-\tau_{had}~$ and $e-\tau_{had}~$ channels is defined in one bin, which is $MT2 > 90$ and $tauMT > 200$ .
-Due to the sensitivity of $\tau_{had}-\tau_{had}~$ channel to the signal, we look at the data in two different bins.
-The first bin is $MT2 > 90$ and the second one is $40 < MT2 < 90$ and $sumMT>250$.
-We eventually combine all four bins to utilize more information from the observed and the predicted distributions.
-Panels represented in Figure \ref{fig:limit_bins} show the impact of each bin on the combined result, represented by the final exclusion limit shown in Figure \ref{fig:limit_final}. The top-left panel of Figure \ref{fig:limit_bins} shows the expected exclusion region in the plane of $m_{PSGcpmDo}-m_{\PSGczDo}$
-calculated by the simulated samples in the first bin of $\tau_{had}-\tau_{had}~$ channel. The top-right panel in Figure \ref{fig:limit_bins} is produced by using both bins of $\tau_{had}-\tau_{had}~$ channel.
-As seen, the inclusion of bin 2 in the $\tau_{had}-\tau_{had}~$ channel causes a little expansion of the exclusion limit toward the left side (low mass 
-$\PSGcpmDo$).
-Two bottom panels of Figure \ref{fig:limit_bins} show the expected exclusion limit when $e-\tau_{had}~$ (left) and $\mu-\tau_{had}~$ (right) channels are included in the $\tau_{had}-\tau_{had}~$ channel.  As seen, each channel individually improves the limit on the right side of plane (high mass $\PSGcpmDo$).
+Panels represented in Figure \ref{fig:limit_bins} show the impact of each bin on the combined result, represented by the final exclusion limit shown in Figure \ref{fig:limit_final}. The top-left panel of Figure \ref{fig:limit_bins} shows the expected exclusion region in the plane of $m_{\chione}-m_{\PSGczDo}$
+calculated by the simulated samples in the first bin of \tauTau channel. The top-right panel in Figure \ref{fig:limit_bins} is produced by using both bins of \tauTau channel.
+As seen, the inclusion of \bintwo in the \tauTau channel causes a little expansion of the exclusion limit toward the left side (low mass $\chione$).
+Two bottom panels of Figure \ref{fig:limit_bins} show the expected exclusion limit when \eTau (left) and \muTau (right) channels are 
+added to the \tauTau channel.  As seen, these channels individually improves the limit on the right side of plane (high mass $\chione$).
 
 
 %%%%%%%%%%
 \begin{linenomath}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.49\textwidth,keepaspectratio=true]{StatisticsFig/NewFigs/TauTau_Bin1Rel.png}
-\includegraphics[width=0.49\textwidth,keepaspectratio=true]{StatisticsFig/NewFigs/TauTau_Bin1Rel_Bin2.png}
-\includegraphics[width=0.49\textwidth,keepaspectratio=true]{StatisticsFig/NewFigs/TauTau_EleTauBin1.png}
-\includegraphics[width=0.49\textwidth,keepaspectratio=true]{StatisticsFig/NewFigs/TauTau_MuTauBin1.png}
+\includegraphics[width=0.49\textwidth,keepaspectratio=true]{StatisticsFig/RealisticsSystematics/Exclusion_TauTauBin1Rel.png}
+\includegraphics[width=0.49\textwidth,keepaspectratio=true]{StatisticsFig/RealisticsSystematics/Exclusion_TauTauBin1Rel_Bin2.png}
+\includegraphics[width=0.49\textwidth,keepaspectratio=true]{StatisticsFig/RealisticsSystematics/Exclusion4Bins_MuTauExcl.png}
+\includegraphics[width=0.49\textwidth,keepaspectratio=true]{StatisticsFig/RealisticsSystematics/Exclusion4Bins_EleTauExcl.png}
 \caption{These figures show the impact of each bin on the final combination. 
-The top panels are related to the $\tau_{had}-\tau_{had}~$ channel including the bin 1 alone (left) and combination of bins 1 and 2 (right).
-The bottom ones show the expected exclusion limit when $e-\tau_{had}~$ (left) and $\mu-\tau_{had}~$ (right) channels are included in the $\tau_{had}-\tau_{had}~$ channel.
+The top panels are related to the \tauTau channel including the \binone alone (left) and combination of \binone and \bintwo (right).
+The bottom ones show the expected exclusion limit when \eTau (left) and \muTau (right) channels are included in the \tauTau channel.
 }
 \label{fig:limit_bins}
 \end{figure}
@@ -62,94 +102,24 @@ The bottom ones show the expected exclusion limit when $e-\tau_{had}~$ (left) an
 %%%%%%%%%%
 
 
-Figure \ref{fig:limit_final} shows the expected upper limit on the cross section of the chargino pair production in terms of Simplified Models. 
-The signal rates for each bin are 0.5420, 1.7200, 1.5800 and 0.7680, 
-while overall background rates are 3.01, 1.5, 2.7 and 1.06 respectively.
-However, backgrounds are taken into account in two categories, including Monte-Carlo-Driven (MCD), Data-Driven (DD).
-Due to the method of background estimation in the $\tau_{had}-\tau_{had}~$ channel, bins 1 and 2 have a more category called W-jets (W).    
-MCD backgrounds are feed to the package as a Gamma distribution with the corresponding statistical weights for each bin.
-Furthermore, 25\% systematic uncertainity on MCD backgrounds is also considered.
-All systematics are taken through LogNormal distributions.
-Systematic uncertainities for each bin of DD backgrounds are 15\%, 11\%, 50\% and 69\% respectively. (numbers must be corrected)  
-W backgronds have 37\% and 45\% systematic uncertainity for the first and second bins respectively.
-And finally, 20\% systematic uncertainity on signal yields is considered. 
+Figure \ref{fig:limit_final} shows the expected upper limit on the cross section of the chargino pair production in terms of Simplified Models \cite{alves:sms}. 
 Calculation of the expected exclusion limit shows that the research has potential to exclude 
-%excludes 
-a sizable region of the phase space, surrounded by the lines of $m_{\PSGcpmDo} = 500\GeV$ and $m_{\PSGczDo} = 150\GeV$ with an integrated luminosity of $19.6\,\fbinv$.
+a sizable region of the phase space, surrounded by the lines of $m_{\chione} = 500\GeV$ and $m_{\PSGczDo} = 150\GeV$ with 
+the total dataset of 2012.
 The Red curve represents the expected reach by ATLAS %\cite{cutandcountAN}
- search. As the figure shows our analysis (the blue solid curve) improves the ATLAS result in the $m_{\PSGcpmDo}-m_{\PSGczDo}$ plane.
+search. As the figure shows, our analysis (the blue solid curve) is well above the ATLAS result in the $m_{\chione}-m_{\PSGczDo}$ plane.
+
 
 %%%%%%%%%%
 \begin{linenomath}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth,keepaspectratio=true]{StatisticsFig/NewFigs/Final_4BinRel.png}
-\caption{Expected exclusion power in terms of Simplified Models %(T2tt-topology) 
-with an integrated luminosity of $20\,\fbinv$. Backgrounds are predicted using Monte-Carlo simulations and a rough estimate of systematic uncertainties equal 
-$10\%$ is taken into account.}
+\includegraphics[width=0.7\textwidth,keepaspectratio=true]{StatisticsFig/RealisticsSystematics/Exclusion4Bins.png}
+\caption{Expected exclusion power in terms of Simplified Models
+with the total dataset of 2012. 
+%Backgrounds are predicted using Monte-Carlo simulations and a rough estimate of systematic uncertainties equal $10\%$ is taken into account.
+}
 \label{fig:limit_final}
 \end{figure}
 \end{linenomath}
 %%%%%%%%%%
-
-
-%\rule{\textwidth}{1pt}
-
-%In this study, we analyze data in 8 different bins (multi-bin analysis) to utilize more information from 
-%the observed and the predicted distributions.
-%bins' contents of the observations and the predictions.
-%The bins are defined in reconstructed top quark multiplicity, zero or more. In addition, events are categorized based on the $\mttwo$ values: $125\GeV \leq \mttwo < 150\GeV,\; 150\GeV \leq \mttwo < 200\GeV,\; 200\GeV \leq \mttwo < 250\GeV,\; 250\GeV \leq \mttwo < \infty$.
-%These bins are determined, for an event, based on whether the event contents reconstructed top quarks or not (2 bins) times which bin of $\mttwo$ is occupied by the event (4 bins of $125\GeV \leq \mttwo < 150\GeV,\; 150\GeV \leq \mttwo < 200\GeV,\; 200\GeV \leq \mttwo < 250\GeV,\; 250\GeV \leq \mttwo < \infty$). 
-
-%To investigate the exclusion power of our research, we study the topology of direct stop pair production  in Simplified Models \cite{alves:sms}, with $\tilde{t}\to \PSGczDo t$ (T2tt). 
-%Calculation of the expected exclusion limit shows that  
-%the research has potential to exclude 
-%excludes 
-%a sizable region of the phase space, surrounded by the lines of $m_{\tilde{t}} = 600\GeV$ and $m_{\PSGczDo} = 175\GeV$ with an integrated luminosity of $19.6\,\fbinv$.
-
-
-
-%Figure \ref{fig:limit_20inf} shows the expected upper limit on the cross section of the stop pair production in terms of Simplified Models. 
-%Furthermore, the figure shows the expected exclusion power considering 
-%$40\%$ systematic uncertainties on signal and background rates which are predicted using Monte-Carlo simulations. The black 
-%dashed curve represents the expected reach by the common Cut$\&$Count \cite{cutandcountAN} search using $\MET$ trigger. 
-%As the figure shows our analysis (the blue solid curve) can be comparable with other analyses and   
-%it has the potential to be complementary to other analyses in some regions of the phase space.  
-
-
-
-%%%%%%%%%%
-%\begin{linenomath}
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=0.9\textwidth,keepaspectratio=true]{StatisticsFig/Exc_131030_196ifb.png}
-%\caption{Expected exclusion power in terms of Simplified Models (T2tt-topology) with an integrated luminosity of $20\,\fbinv$. Backgrounds are predicted using Monte-Carlo simulations and a rough estimate of systematic uncertainties equal 
-%$40\%$ is taken into account.}
-%\label{fig:limit_20inf}
-%\end{figure}
-%\end{linenomath}
-%%%%%%%%%%
-
-
-%%%%%%%%%%
-%\begin{linenomath}
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=0.7\textwidth,keepaspectratio=true]{StatisticsFig/limit_30sys_05inf_20130625.png}
-%\caption{}
-%\label{fig:limit_05inf}
-%\end{figure}
-%\end{linenomath}
-%%%%%%%%%%
-
-%%%%%%%%%%
-%\begin{linenomath}
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=0.7\textwidth,keepaspectratio=true]{StatisticsFig/limit_304050sys_20inf_20130625.png}
-%\caption{}
-%\label{fig:limit_20inf}
-%\end{figure}
-%\end{linenomath}
-%%%%%%%%%%
-
