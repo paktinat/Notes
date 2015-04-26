@@ -73,19 +73,22 @@ is also taken into account, to be 25\% of the central value and added in quadrat
 statistical errors. 
 \begin{table}
 \begin{center}
-\scalebox{0.86}{
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+\scalebox{0.6}{
+\begin{tabular}{|l|c|c|c|c|c|c|c|}
 \hline
- & Sample & RegionA & RegionB & RegionC & T=C/B &$\mindphifour$efficiency& Estimation\\\hline\hline
-\multirow{3}{*}{\binone}& Data&10.00 $\pm$ 3.16 & 880.00 $\pm$ 29.66& 430.00 $\pm$ 20.74& \multirow{3}{*}{0.41$\pm$0.04} & \multirow{3}{*}{0.04 $\pm$ 0.04}&\multirow{3}{*}{0.09 $\pm$ 0.10}\\ \cline{2-5}
-&NonQCD(MC)& 4.47$\pm$1.84 & 122.5$\pm$21.46 & 119.86$\pm$20.59& & \\\cline{2-5}
-&Data-NonQCD(MC)&5.53$\pm$3.66 & 757.5$\pm$36.61& 310.14$\pm$29.22& & \\\cline{2-5}
+ Region      & Sample   & RegionA    & RegionB     & RegionC     & T=C/B &$\mindphifour$efficiency& Estimation\\
 \hline\hline
-\multirow{3}{*}{\bintwo}&Data & 20.00$\pm$4.47 &723.00$\pm$26.89 &348.00 $\pm$ 18.65 & \multirow{3}{*}{ 0.41 $\pm$ 0.04} & \multirow{3}{*}{ 0.12$\pm$0.25}&\multirow{3}{*}{0.65 $\pm$ 1.4}&\\%0.6 $\pm$0.43 $\pm$0.17(fit error)} & \\
-\cline{2-5}
-&NonQCD(MC)& 6.53$\pm$2.44&78.28$\pm$14.82 & 85.97$\pm$15.89& & \\\cline{2-5}
-&Data-NonQCD(MC)& 13.47$\pm$5.1 &644.72$\pm$30.7 & 262.03$\pm$24.51& & \\\cline{2-5}
+             & Susy     & 0.0+-0.0  &0.03+-0.02   &    9.01+-0.41    &                       &         & \\
+search\binone& Data      & 6.00+-2.45 &  357.00+-18.89   &430.00+-20.74  &  0.92+-0.1          &   0.03 +- 0.04 &0.15 +- 0.22 +- 0.13(Fit error) \\
+             &NonQCD(MC)     & 0.65 +- 0.50  &  22.12+-5.16  & 119.86+- 20.59  &             &                  &             \\
+             &Data-NonQCD(MC)& 5.35+-2.50    & 334.88+-19.59    &310.14+-29.22   &             &                  &             \\
 \hline\hline
+ 
+\hline\hline
+             & Susy          & 0.02+-0.02 &  0.01+-0.01 &  2.80+-0.22 &            &                  &            \\
+search\bintwo& Data          & 8.00 +- 2.83  &292.00+-17.09&348.00+-18.65&  0.94+-0.1 & 0.15 +- 0.09     &0.57 +- 0.79 +- 0.32 (Fit error)          \\
+             &NonQCD(MC)     & 2.35 +- 1.26  &15.23+- 4.14 & 85.97+-5.89  &            &                &             \\
+             &Data-NonQCD(MC)& 5.65 +-3.10&  276.77+-17.58    &  262.03+-24.51     &     & &     \\ \hline\hline
 \end{tabular}}
 \caption{The ingredients needed for the ABCD method are summarized. The quoted 
 uncertainties on data are statistical. For the nonQCD(MC) events, the systematical uncertainty  
@@ -100,8 +103,9 @@ of the search variables are shown in figure~\ref{fig:5QCDbg}. The SM background 
 the QCD multi-jet contribution, which is estimated using the ABCD method.
 \begin{figure}[iHhtb]
 \centering
-\includegraphics[width=0.49\textwidth]{QCDbginTauTau/Bin1_QCDdatdriven.png}
-\includegraphics[width=0.49\textwidth]{QCDbginTauTau/Bin2_QCDdatdriven.png} \\
+\includegraphics[angle=0,scale=0.35]{QCDbginTauTau/Bin1_QCDestimation.png}
+\includegraphics[angle=0,scale=0.35]{QCDbginTauTau/Bin2_QCDestimation.png}
+
 \caption{The distributions of the \mttwo (left) and \SumMT (right) before the requirement on the given variable
 is applied. The QCD multi-jet contribution is estimated from data using the ABCD method.}
 \label{fig:5QCDbg}
