@@ -303,22 +303,27 @@
    Double_t xAxis7[11] = {0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500}; 
    
    TH1D *h__SUSY_no0 = new TH1D("h__SUSY_no0","",10, xAxis7);
-   h__SUSY_no0->SetBinContent(3,0.4196464);
-   h__SUSY_no0->SetBinContent(4,0.6736728);
-   h__SUSY_no0->SetBinContent(5,1.135247);
-   h__SUSY_no0->SetBinContent(6,0.5928689);
-   h__SUSY_no0->SetBinContent(7,0.4218087);
-   h__SUSY_no0->SetBinContent(8,0.1225222);
-   h__SUSY_no0->SetBinContent(10,0.1359002);
-   h__SUSY_no0->SetBinError(3,0.1546851);
-   h__SUSY_no0->SetBinError(4,0.2080488);
-   h__SUSY_no0->SetBinError(5,0.2704603);
-   h__SUSY_no0->SetBinError(6,0.1851893);
-   h__SUSY_no0->SetBinError(7,0.1606636);
-   h__SUSY_no0->SetBinError(8,0.086668);
-   h__SUSY_no0->SetBinError(10,0.09610505);
-   h__SUSY_no0->SetBinError(11,0.06701629);
-   h__SUSY_no0->SetEntries(63);
+
+  h__SUSY_no0->SetBinContent(2,0.003267594);
+   h__SUSY_no0->SetBinContent(3,0.4562888);
+   h__SUSY_no0->SetBinContent(4,0.9323536);
+   h__SUSY_no0->SetBinContent(5,0.8222412);
+   h__SUSY_no0->SetBinContent(6,0.5489533);
+   h__SUSY_no0->SetBinContent(7,0.3169679);
+   h__SUSY_no0->SetBinContent(8,0.1779943);
+   h__SUSY_no0->SetBinContent(9,0.08330822);
+   h__SUSY_no0->SetBinContent(10,0.1393834);
+   h__SUSY_no0->SetBinError(2,0.003267594);
+   h__SUSY_no0->SetBinError(3,0.03956309);
+   h__SUSY_no0->SetBinError(4,0.05616865);
+   h__SUSY_no0->SetBinError(5,0.05223696);
+   h__SUSY_no0->SetBinError(6,0.04324783);
+   h__SUSY_no0->SetBinError(7,0.03333636);
+   h__SUSY_no0->SetBinError(8,0.02416066);
+   h__SUSY_no0->SetBinError(9,0.01685289);
+   h__SUSY_no0->SetBinError(10,0.02139597);
+   h__SUSY_no0->SetBinError(11,0.01612062);
+   h__SUSY_no0->SetEntries(1090);
    h__SUSY_no0->SetStats(0);
 
    ci = TColor::GetColor("#660000");
@@ -432,7 +437,7 @@
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__SUSY_no0","SUSY","f");
+   entry=leg->AddEntry("h__SUSY_no0","SUSY(380,1)","f");
 
    ci = TColor::GetColor("#660000");
    entry->SetFillColor(ci);
