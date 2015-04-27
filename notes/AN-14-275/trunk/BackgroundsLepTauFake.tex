@@ -57,19 +57,21 @@ which are tight. The prompt rate can be measured in the bins of \mttwo, but the 
 region is so low that we can not conclude anything about the shape of the prompt rate in this region, so we choose it as a constant value
 0.77 $\pm$ 0.0032 in the whole \mttwo region.
 
-Figure \ref{fig:LepTauClusure}
 \begin{figure}[!Hhtb]
 \centering
 \includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateMuTau/Estimation_pfWJets_ExtraLepExcl_SameSignWeightedHiggs.png}
+\includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateEleTau/Closure.png}
 %\includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateMuTau/Estimation_pfWJets_ExtraLepExcl_SameSignWeightedHiggs.png}
-\caption{MC truth (green) compared to the result of the method. W+jets events with a fake \Tau are used for the closure.}
+\caption{MC truth (green) compared to the result of the method in \muTau (left) and \eTau (right) channels. W+jets events with a fake \Tau are used for the closure.}
 \label{fig:LepTauClusure}
 \end{figure}
-shows the results when the method is used to estimate the fake contamination of the W+Jets events that pass the selection. 
-The fake rate is evaluated in the same sample with similar procedure as the data. The measured fake rate  is very close to
-the previous value 0.43 $\pm$  0.0065. To calculate the fake rate, the MC truth are used to select the events with a fake \Tau 
+Figure \ref{fig:LepTauClusure} shows the results when the method is used to estimate the fake contamination of the W+Jets events that pass the selection. 
+The fake rate is evaluated in the same sample with similar procedure as the data. The measured fake rate is very close to
+the value obtained in data and is 0.43 $\pm$  0.0065. To calculate the fake rate, the MC truth are used to select the events with a fake \Tau 
 and a prompt muon. The method is applied on the same events with a loose \Tau selection and compared to the W+Jets events with at least 
-a fake \Tau. The requirement of prompt muon is removed here. To have a handle against the signal contamination when later the method is applied 
+a fake \Tau. The requirement of prompt muon is removed here.
+
+To have a handle against the signal contamination when later the method is applied 
 on data, in the loosely selected events, the cut on \tauMT is also removed. The final estimation from the method is corrected by the efficiency 
 of \tauMT $>$ 200 GeV cut which is read from MC. It can be seen that the estimation is close to the MC truth within the uncertainties.
 The reported uncertainties only contain the statistical uncertainties on the used numbers and the systematic uncertainties due to arithmetic 
@@ -91,7 +93,7 @@ $90.00-300.00$ &  0.79 $\pm$ 0.00    & 1         & 1.27\\
 \hline
 \hline
 \end{tabular}
-\caption{MC truth and estimation from the fake rate method. W+jets events with a fake \Tau are used for the closure.}
+\caption{MC truth and estimation from the fake rate method in \muTau channel. W+jets events with a fake \Tau are used for the closure.}
 \label{tbl:LepTauEstimationClosure}
 \end{center}
 \end{table}
@@ -100,8 +102,9 @@ shown in figure \ref{fig:LepTauEstimationData}.
 \begin{figure}[!Hhtb]
 \centering
 \includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateMuTau/Estimation_ExtraLepExcl_SameSignWeightedHiggs.png}
+\includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateEleTau/FREstimation.png}
 %\includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateMuTau/Estimation_ExtraLepExcl_SameSignWeightedHiggs.png}
-\caption{Different MC events containing a fake \Tau are compared with the result of the method applied on data.}
+\caption{Different MC events containing a fake \Tau are compared with the result of the method applied on data. The results for \muTau is shown in the left plot and \eTau is shown in the right plot.}
 \label{fig:LepTauEstimationData}
 \end{figure}
 To select the MC events, all the selection cuts, except the \mttwo cut are applied. 
@@ -123,8 +126,10 @@ $90.00-300.00$ & 0.00     & 0.03    & 0.79   & 0        & 0.15    & 0.05       &
 \hline
 \hline
 \end{tabular}
-\caption{Numbers for figure \ref{fig:LepTauEstimationData}}
+\caption{Numbers for figure \ref{fig:LepTauEstimationData} in \muTau channel.}
 \label{tbl:LepTauEstimationData}
 \end{center}
 \end{table}
 compares the MC truth and the estimation from the method in different bins of \mttwo.
+
+The effect of variating the fake rate and prompt rate values within their statistical uncertainties has also been studies. It has been found in the order of a few percents which is negligible comparing to the statistical uncertainties.
