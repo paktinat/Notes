@@ -1,4 +1,4 @@
-void /home/hbakhshi/Desktop/STau/tauPt()
+void TauPt()
 {
 //=========Macro generated from canvas: TauPt_ratio_AllSUSYc_ratio_TauPt_MT2PreCut/
 //=========  (Sun Mar 15 18:57:59 2015) by ROOT version6.02/04
@@ -99,7 +99,7 @@ void /home/hbakhshi/Desktop/STau/tauPt()
    MT2PreCut_TauPt_QCD1->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_TauPt_QCD1->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_TauPt_QCD1->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_TauPt->Add(MT2PreCut_TauPt_QCD,"");
+   MT2PreCut_TauPt->Add(MT2PreCut_TauPt_QCD1,"");
    
    TH1D *MT2PreCut_TauPt_W2 = new TH1D("MT2PreCut_TauPt_W2","",12,20,260);
    MT2PreCut_TauPt_W2->SetBinContent(1,2935.276);
@@ -151,7 +151,7 @@ void /home/hbakhshi/Desktop/STau/tauPt()
    MT2PreCut_TauPt_W2->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_TauPt_W2->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_TauPt_W2->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_TauPt->Add(MT2PreCut_TauPt_W,"");
+   MT2PreCut_TauPt->Add(MT2PreCut_TauPt_W2,"");
    
    TH1D *MT2PreCut_TauPt_ZX3 = new TH1D("MT2PreCut_TauPt_ZX3","",12,20,260);
    MT2PreCut_TauPt_ZX3->SetBinContent(1,35.30835);
@@ -202,7 +202,7 @@ void /home/hbakhshi/Desktop/STau/tauPt()
    MT2PreCut_TauPt_ZX3->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_TauPt_ZX3->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_TauPt_ZX3->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_TauPt->Add(MT2PreCut_TauPt_ZX,"");
+   MT2PreCut_TauPt->Add(MT2PreCut_TauPt_ZX3,"");
    
    TH1D *MT2PreCut_TauPt_Top4 = new TH1D("MT2PreCut_TauPt_Top4","",12,20,260);
    MT2PreCut_TauPt_Top4->SetBinContent(1,131.6206);
@@ -246,7 +246,7 @@ void /home/hbakhshi/Desktop/STau/tauPt()
    MT2PreCut_TauPt_Top4->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_TauPt_Top4->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_TauPt_Top4->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_TauPt->Add(MT2PreCut_TauPt_Top,"");
+   MT2PreCut_TauPt->Add(MT2PreCut_TauPt_Top4,"");
    
    TH1D *MT2PreCut_TauPt_WW5 = new TH1D("MT2PreCut_TauPt_WW5","",12,20,260);
    MT2PreCut_TauPt_WW5->SetBinContent(1,32.46979);
@@ -299,7 +299,7 @@ void /home/hbakhshi/Desktop/STau/tauPt()
    MT2PreCut_TauPt_WW5->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_TauPt_WW5->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_TauPt_WW5->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_TauPt->Add(MT2PreCut_TauPt_WW,"");
+   MT2PreCut_TauPt->Add(MT2PreCut_TauPt_WW5,"");
    
    TH1D *MT2PreCut_TauPt_Higgs6 = new TH1D("MT2PreCut_TauPt_Higgs6","",12,20,260);
    MT2PreCut_TauPt_Higgs6->SetBinContent(1,0.4076344);
@@ -347,7 +347,7 @@ void /home/hbakhshi/Desktop/STau/tauPt()
    MT2PreCut_TauPt_Higgs6->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_TauPt_Higgs6->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_TauPt_Higgs6->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_TauPt->Add(MT2PreCut_TauPt_Higgs,"");
+   MT2PreCut_TauPt->Add(MT2PreCut_TauPt_Higgs6,"");
    MT2PreCut_TauPt->Draw("hist");
    
    TH1D *h2_copy7 = new TH1D("h2_copy7","",12,20,260);
@@ -399,31 +399,33 @@ void /home/hbakhshi/Desktop/STau/tauPt()
    h2_copy7->Draw("sameE");
    
    TH1D *MT2PreCut_TauPt_SUSY_380_18 = new TH1D("MT2PreCut_TauPt_SUSY_380_18","",12,20,260);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(1,0.5679579);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(2,2.354775);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(3,1.283481);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(4,1.527288);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(5,1.207104);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(6,1.184654);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(7,0.5544854);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(8,0.3397011);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(10,0.117502);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(11,0.1150468);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(12,0.4498971);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(13,0.1616989);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinError(1,0.1806283);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinError(2,0.7270208);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinError(3,0.4540832);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinError(4,0.5464585);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinError(5,0.554365);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinError(6,0.4448032);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinError(7,0.3534804);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinError(8,0.1388088);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinError(10,0.08308959);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinError(11,0.0813566);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinError(12,0.3962049);
-   MT2PreCut_TauPt_SUSY_380_18->SetBinError(13,0.09401397);
-   MT2PreCut_TauPt_SUSY_380_18->SetEntries(113);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(1,0.4708086);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(2,1.039617);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(3,1.069743);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(4,1.03797);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(5,0.72811);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(6,0.5536063);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(7,0.3929764);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(8,0.2553181);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(9,0.2179363);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(10,0.1593946);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(11,0.1158356);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(12,0.07809024);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinContent(13,0.1646306);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinError(1,0.03812719);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinError(2,0.05674442);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinError(3,0.05678096);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinError(4,0.05668694);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinError(5,0.0469657);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinError(6,0.04116303);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinError(7,0.03494347);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinError(8,0.02844038);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinError(9,0.02568756);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinError(10,0.0220296);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinError(11,0.01850754);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinError(12,0.01570843);
+   MT2PreCut_TauPt_SUSY_380_18->SetBinError(13,0.02261116);
+   MT2PreCut_TauPt_SUSY_380_18->SetEntries(2176);
    MT2PreCut_TauPt_SUSY_380_18->SetDirectory(0);
    MT2PreCut_TauPt_SUSY_380_18->SetStats(0);
    MT2PreCut_TauPt_SUSY_380_18->SetFillStyle(0);

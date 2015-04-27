@@ -1,4 +1,4 @@
-void /home/hbakhshi/Desktop/STau/MET()
+void MET()
 {
 //=========Macro generated from canvas: MET_ratio_AllSUSYc_ratio_MET_MT2PreCut/
 //=========  (Sun Mar 15 19:02:14 2015) by ROOT version6.02/04
@@ -91,7 +91,7 @@ void /home/hbakhshi/Desktop/STau/MET()
    MT2PreCut_MET_QCD1->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_MET_QCD1->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_MET_QCD1->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_MET->Add(MT2PreCut_MET_QCD,"");
+   MT2PreCut_MET->Add(MT2PreCut_MET_QCD1,"");
    
    TH1D *MT2PreCut_MET_W2 = new TH1D("MT2PreCut_MET_W2","",11,30,360);
    MT2PreCut_MET_W2->SetBinContent(1,2045.939);
@@ -140,7 +140,7 @@ void /home/hbakhshi/Desktop/STau/MET()
    MT2PreCut_MET_W2->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_MET_W2->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_MET_W2->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_MET->Add(MT2PreCut_MET_W,"");
+   MT2PreCut_MET->Add(MT2PreCut_MET_W2,"");
    
    TH1D *MT2PreCut_MET_ZX3 = new TH1D("MT2PreCut_MET_ZX3","",11,30,360);
    MT2PreCut_MET_ZX3->SetBinContent(1,52.06821);
@@ -191,7 +191,7 @@ void /home/hbakhshi/Desktop/STau/MET()
    MT2PreCut_MET_ZX3->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_MET_ZX3->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_MET_ZX3->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_MET->Add(MT2PreCut_MET_ZX,"");
+   MT2PreCut_MET->Add(MT2PreCut_MET_ZX3,"");
    
    TH1D *MT2PreCut_MET_Top4 = new TH1D("MT2PreCut_MET_Top4","",11,30,360);
    MT2PreCut_MET_Top4->SetBinContent(1,57.42687);
@@ -233,7 +233,7 @@ void /home/hbakhshi/Desktop/STau/MET()
    MT2PreCut_MET_Top4->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_MET_Top4->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_MET_Top4->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_MET->Add(MT2PreCut_MET_Top,"");
+   MT2PreCut_MET->Add(MT2PreCut_MET_Top4,"");
    
    TH1D *MT2PreCut_MET_WW5 = new TH1D("MT2PreCut_MET_WW5","",11,30,360);
    MT2PreCut_MET_WW5->SetBinContent(1,26.53518);
@@ -281,7 +281,7 @@ void /home/hbakhshi/Desktop/STau/MET()
    MT2PreCut_MET_WW5->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_MET_WW5->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_MET_WW5->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_MET->Add(MT2PreCut_MET_WW,"");
+   MT2PreCut_MET->Add(MT2PreCut_MET_WW5,"");
    
    TH1D *MT2PreCut_MET_Higgs6 = new TH1D("MT2PreCut_MET_Higgs6","",11,30,360);
    MT2PreCut_MET_Higgs6->SetBinContent(1,0.4583633);
@@ -326,7 +326,7 @@ void /home/hbakhshi/Desktop/STau/MET()
    MT2PreCut_MET_Higgs6->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_MET_Higgs6->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_MET_Higgs6->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_MET->Add(MT2PreCut_MET_Higgs,"");
+   MT2PreCut_MET->Add(MT2PreCut_MET_Higgs6,"");
    MT2PreCut_MET->Draw("hist");
    
    TH1D *h2_copy7 = new TH1D("h2_copy7","",11,30,360);
@@ -379,25 +379,31 @@ void /home/hbakhshi/Desktop/STau/MET()
    h2_copy7->Draw("sameE");
    
    TH1D *MT2PreCut_MET_SUSY_380_18 = new TH1D("MT2PreCut_MET_SUSY_380_18","",11,30,360);
-   MT2PreCut_MET_SUSY_380_18->SetBinContent(1,0.568106);
-   MT2PreCut_MET_SUSY_380_18->SetBinContent(2,1.459906);
-   MT2PreCut_MET_SUSY_380_18->SetBinContent(3,2.569523);
-   MT2PreCut_MET_SUSY_380_18->SetBinContent(4,1.727718);
-   MT2PreCut_MET_SUSY_380_18->SetBinContent(5,1.681464);
-   MT2PreCut_MET_SUSY_380_18->SetBinContent(6,0.8455435);
-   MT2PreCut_MET_SUSY_380_18->SetBinContent(7,0.3862691);
-   MT2PreCut_MET_SUSY_380_18->SetBinContent(9,0.5095182);
-   MT2PreCut_MET_SUSY_380_18->SetBinContent(11,0.1155439);
-   MT2PreCut_MET_SUSY_380_18->SetBinError(1,0.1805074);
-   MT2PreCut_MET_SUSY_380_18->SetBinError(2,0.5917144);
-   MT2PreCut_MET_SUSY_380_18->SetBinError(3,0.7061864);
-   MT2PreCut_MET_SUSY_380_18->SetBinError(4,0.5881659);
-   MT2PreCut_MET_SUSY_380_18->SetBinError(5,0.5742535);
-   MT2PreCut_MET_SUSY_380_18->SetBinError(6,0.3858912);
-   MT2PreCut_MET_SUSY_380_18->SetBinError(7,0.1465752);
-   MT2PreCut_MET_SUSY_380_18->SetBinError(9,0.4006675);
-   MT2PreCut_MET_SUSY_380_18->SetBinError(11,0.08170505);
-   MT2PreCut_MET_SUSY_380_18->SetEntries(113);
+   MT2PreCut_MET_SUSY_380_18->SetBinContent(1,0.3780464);
+   MT2PreCut_MET_SUSY_380_18->SetBinContent(2,1.180097);
+   MT2PreCut_MET_SUSY_380_18->SetBinContent(3,1.289551);
+   MT2PreCut_MET_SUSY_380_18->SetBinContent(4,1.200254);
+   MT2PreCut_MET_SUSY_380_18->SetBinContent(5,0.8934537);
+   MT2PreCut_MET_SUSY_380_18->SetBinContent(6,0.5820131);
+   MT2PreCut_MET_SUSY_380_18->SetBinContent(7,0.3283002);
+   MT2PreCut_MET_SUSY_380_18->SetBinContent(8,0.2084558);
+   MT2PreCut_MET_SUSY_380_18->SetBinContent(9,0.1285522);
+   MT2PreCut_MET_SUSY_380_18->SetBinContent(10,0.03935437);
+   MT2PreCut_MET_SUSY_380_18->SetBinContent(11,0.02044211);
+   MT2PreCut_MET_SUSY_380_18->SetBinContent(12,0.0355172);
+   MT2PreCut_MET_SUSY_380_18->SetBinError(1,0.03333808);
+   MT2PreCut_MET_SUSY_380_18->SetBinError(2,0.05954868);
+   MT2PreCut_MET_SUSY_380_18->SetBinError(3,0.06333707);
+   MT2PreCut_MET_SUSY_380_18->SetBinError(4,0.06067858);
+   MT2PreCut_MET_SUSY_380_18->SetBinError(5,0.05266876);
+   MT2PreCut_MET_SUSY_380_18->SetBinError(6,0.04258413);
+   MT2PreCut_MET_SUSY_380_18->SetBinError(7,0.0319254);
+   MT2PreCut_MET_SUSY_380_18->SetBinError(8,0.02527065);
+   MT2PreCut_MET_SUSY_380_18->SetBinError(9,0.01995272);
+   MT2PreCut_MET_SUSY_380_18->SetBinError(10,0.01111784);
+   MT2PreCut_MET_SUSY_380_18->SetBinError(11,0.007606706);
+   MT2PreCut_MET_SUSY_380_18->SetBinError(12,0.01054057);
+   MT2PreCut_MET_SUSY_380_18->SetEntries(2176);
    MT2PreCut_MET_SUSY_380_18->SetDirectory(0);
    MT2PreCut_MET_SUSY_380_18->SetStats(0);
    MT2PreCut_MET_SUSY_380_18->SetFillStyle(0);

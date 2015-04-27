@@ -1,4 +1,4 @@
-void /home/hbakhshi/Desktop/STau/MT2()
+void MT2()
 {
 //=========Macro generated from canvas: MT2_ratio_AllSUSYc_ratio_MT2_MT2PreCut/
 //=========  (Sun Mar 15 19:05:14 2015) by ROOT version6.02/04
@@ -94,7 +94,7 @@ void /home/hbakhshi/Desktop/STau/MT2()
    MT2PreCut_MT2_QCD13->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_MT2_QCD13->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_MT2_QCD13->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_MT2->Add(MT2PreCut_MT2_QCD,"");
+   MT2PreCut_MT2->Add(MT2PreCut_MT2_QCD13,"");
    
    TH1D *MT2PreCut_MT2_W14 = new TH1D("MT2PreCut_MT2_W14","",11,40,150);
    MT2PreCut_MT2_W14->SetBinContent(1,1981.713);
@@ -145,7 +145,7 @@ void /home/hbakhshi/Desktop/STau/MT2()
    MT2PreCut_MT2_W14->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_MT2_W14->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_MT2_W14->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_MT2->Add(MT2PreCut_MT2_W,"");
+   MT2PreCut_MT2->Add(MT2PreCut_MT2_W14,"");
    
    TH1D *MT2PreCut_MT2_ZX15 = new TH1D("MT2PreCut_MT2_ZX15","",11,40,150);
    MT2PreCut_MT2_ZX15->SetBinContent(1,44.01333);
@@ -196,7 +196,7 @@ void /home/hbakhshi/Desktop/STau/MT2()
    MT2PreCut_MT2_ZX15->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_MT2_ZX15->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_MT2_ZX15->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_MT2->Add(MT2PreCut_MT2_ZX,"");
+   MT2PreCut_MT2->Add(MT2PreCut_MT2_ZX15,"");
    
    TH1D *MT2PreCut_MT2_Top16 = new TH1D("MT2PreCut_MT2_Top16","",11,40,150);
    MT2PreCut_MT2_Top16->SetBinContent(1,96.4837);
@@ -241,7 +241,7 @@ void /home/hbakhshi/Desktop/STau/MT2()
    MT2PreCut_MT2_Top16->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_MT2_Top16->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_MT2_Top16->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_MT2->Add(MT2PreCut_MT2_Top,"");
+   MT2PreCut_MT2->Add(MT2PreCut_MT2_Top16,"");
    
    TH1D *MT2PreCut_MT2_WW17 = new TH1D("MT2PreCut_MT2_WW17","",11,40,150);
    MT2PreCut_MT2_WW17->SetBinContent(1,31.93119);
@@ -292,7 +292,7 @@ void /home/hbakhshi/Desktop/STau/MT2()
    MT2PreCut_MT2_WW17->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_MT2_WW17->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_MT2_WW17->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_MT2->Add(MT2PreCut_MT2_WW,"");
+   MT2PreCut_MT2->Add(MT2PreCut_MT2_WW17,"");
    
    TH1D *MT2PreCut_MT2_Higgs18 = new TH1D("MT2PreCut_MT2_Higgs18","",11,40,150);
    MT2PreCut_MT2_Higgs18->SetBinContent(1,0.4916734);
@@ -343,7 +343,7 @@ void /home/hbakhshi/Desktop/STau/MT2()
    MT2PreCut_MT2_Higgs18->GetZaxis()->SetLabelSize(0.035);
    MT2PreCut_MT2_Higgs18->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_MT2_Higgs18->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_MT2->Add(MT2PreCut_MT2_Higgs,"");
+   MT2PreCut_MT2->Add(MT2PreCut_MT2_Higgs18,"");
    MT2PreCut_MT2->Draw("hist");
    
    TH1D *h2_copy19 = new TH1D("h2_copy19","",11,40,150);
@@ -397,31 +397,31 @@ void /home/hbakhshi/Desktop/STau/MT2()
    h2_copy19->Draw("sameE");
    
    TH1D *MT2PreCut_MT2_SUSY_380_120 = new TH1D("MT2PreCut_MT2_SUSY_380_120","",11,40,150);
-   MT2PreCut_MT2_SUSY_380_120->SetBinContent(1,0.8953774);
-   MT2PreCut_MT2_SUSY_380_120->SetBinContent(2,0.4583039);
-   MT2PreCut_MT2_SUSY_380_120->SetBinContent(3,0.7394523);
-   MT2PreCut_MT2_SUSY_380_120->SetBinContent(4,1.112854);
-   MT2PreCut_MT2_SUSY_380_120->SetBinContent(5,0.963799);
-   MT2PreCut_MT2_SUSY_380_120->SetBinContent(6,0.8984576);
-   MT2PreCut_MT2_SUSY_380_120->SetBinContent(7,0.9797941);
-   MT2PreCut_MT2_SUSY_380_120->SetBinContent(8,0.8945044);
-   MT2PreCut_MT2_SUSY_380_120->SetBinContent(9,0.7891094);
-   MT2PreCut_MT2_SUSY_380_120->SetBinContent(10,0.6669546);
-   MT2PreCut_MT2_SUSY_380_120->SetBinContent(11,0.1156797);
-   MT2PreCut_MT2_SUSY_380_120->SetBinContent(12,1.349306);
-   MT2PreCut_MT2_SUSY_380_120->SetBinError(1,0.4287604);
-   MT2PreCut_MT2_SUSY_380_120->SetBinError(2,0.1628942);
-   MT2PreCut_MT2_SUSY_380_120->SetBinError(3,0.20533);
-   MT2PreCut_MT2_SUSY_380_120->SetBinError(4,0.5379895);
-   MT2PreCut_MT2_SUSY_380_120->SetBinError(5,0.4348574);
-   MT2PreCut_MT2_SUSY_380_120->SetBinError(6,0.4218853);
-   MT2PreCut_MT2_SUSY_380_120->SetBinError(7,0.409085);
-   MT2PreCut_MT2_SUSY_380_120->SetBinError(8,0.4309303);
-   MT2PreCut_MT2_SUSY_380_120->SetBinError(9,0.3859514);
-   MT2PreCut_MT2_SUSY_380_120->SetBinError(10,0.4099542);
-   MT2PreCut_MT2_SUSY_380_120->SetBinError(11,0.08185349);
-   MT2PreCut_MT2_SUSY_380_120->SetBinError(12,0.5557851);
-   MT2PreCut_MT2_SUSY_380_120->SetEntries(113);
+   MT2PreCut_MT2_SUSY_380_120->SetBinContent(1,0.5903318);
+   MT2PreCut_MT2_SUSY_380_120->SetBinContent(2,0.5130615);
+   MT2PreCut_MT2_SUSY_380_120->SetBinContent(3,0.7001395);
+   MT2PreCut_MT2_SUSY_380_120->SetBinContent(4,0.624527);
+   MT2PreCut_MT2_SUSY_380_120->SetBinContent(5,0.5864418);
+   MT2PreCut_MT2_SUSY_380_120->SetBinContent(6,0.5325573);
+   MT2PreCut_MT2_SUSY_380_120->SetBinContent(7,0.479533);
+   MT2PreCut_MT2_SUSY_380_120->SetBinContent(8,0.4701194);
+   MT2PreCut_MT2_SUSY_380_120->SetBinContent(9,0.401308);
+   MT2PreCut_MT2_SUSY_380_120->SetBinContent(10,0.3015217);
+   MT2PreCut_MT2_SUSY_380_120->SetBinContent(11,0.2726927);
+   MT2PreCut_MT2_SUSY_380_120->SetBinContent(12,0.8118031);
+   MT2PreCut_MT2_SUSY_380_120->SetBinError(1,0.04194813);
+   MT2PreCut_MT2_SUSY_380_120->SetBinError(2,0.03866267);
+   MT2PreCut_MT2_SUSY_380_120->SetBinError(3,0.04606118);
+   MT2PreCut_MT2_SUSY_380_120->SetBinError(4,0.04319544);
+   MT2PreCut_MT2_SUSY_380_120->SetBinError(5,0.04287541);
+   MT2PreCut_MT2_SUSY_380_120->SetBinError(6,0.04096121);
+   MT2PreCut_MT2_SUSY_380_120->SetBinError(7,0.03843324);
+   MT2PreCut_MT2_SUSY_380_120->SetBinError(8,0.03801377);
+   MT2PreCut_MT2_SUSY_380_120->SetBinError(9,0.03483344);
+   MT2PreCut_MT2_SUSY_380_120->SetBinError(10,0.0308521);
+   MT2PreCut_MT2_SUSY_380_120->SetBinError(11,0.02940458);
+   MT2PreCut_MT2_SUSY_380_120->SetBinError(12,0.05076234);
+   MT2PreCut_MT2_SUSY_380_120->SetEntries(2176);
    MT2PreCut_MT2_SUSY_380_120->SetDirectory(0);
    MT2PreCut_MT2_SUSY_380_120->SetStats(0);
    MT2PreCut_MT2_SUSY_380_120->SetFillStyle(0);
