@@ -1,35 +1,31 @@
 \subsection{\texorpdfstring{W+jets Background Estimation in $\tauTau$ Channel}{W+jets Background Estimation in tau-tau Channel}}
 \subsubsection{Method Description}
 As shown in table~\ref{tbl:cutflowtable}, the number of W+jets events surviving 
-the selection cuts are found to be zero in search \binone or 0.43$\pm$0.40 in search \bintwo. 
-Therefore, the statistical uncertainties on the expected yields of W+jets events
-are huge, e.g. it reaches to 93\% in \bintwo. 
+the selection cuts are found to be zero in search \binone and it may suffer from the low statistics of the W+jets sample. In addition, we need to verify if the W+jets events are simulated well and agree with data.
  The statistical uncertainty on the yields for W+jets events can be improved by extracting 
-the $\mttwo$ or $\SumMT$ cut efficiency, depending on the search bins, in a sample with more 
-statistics. To make this sample, some cuts with small effects on the search variables are 
+the $\mttwo$ cut efficiency in a sample with more statistics. To make this sample, some cuts with small correlation on the search variables are 
 relaxed. Various samples with different relaxed cuts are examined to check the idea of small correlation 
 between search variable and relaxed cuts. In the next section, the validation of this method will be discussed.\\
-When the cut efficiency for the $\mttwo$ or $\SumMT$ variable is found, then it is multiplied by the W+jets 
-yields before cutting on the search variable. This means, according to table~\ref{tbl:cutflowtable}, the cut efficiency for 
-$\mttwo$ ($\SumMT$) found in a relaxed sample should be multiplied by 31.93 (29.13) to get an 
-estimate for the W+jets events in search \binone (search \bintwo).\\
+When the cut efficiency for the $\mttwo$ variable is found, then it is multiplied by the W+jets 
+yields before cutting on this variable. This means, according to table~\ref{tbl:cutflowtable}, the cut efficiency for 
+$\mttwo$ found in a relaxed sample should be multiplied by 31.93 to get an 
+estimate for the W+jets events in search \binone.\\
 The systematics that can be assigned to this method is the maximum
 variation of the estimations among those relaxed samples.
 \subsubsection{Method Validation}
-The idea is to check the effect of three (four) set of cuts independently, 
-on the \mttwo or \SumMT cut efficiency in search \binone (\bintwo). 
+The idea is to check the effect of three set of cuts independently, 
+on the \mttwo cut efficiency in search \binone. 
 Therefore, starting with a baseline selection cuts, defined as two 
-medium-isolated opposite sign \Tau's, the $\mttwo$ or $\SumMT$ cut 
+medium-isolated opposite sign \Tau's, the $\mttwo$ cut 
 efficiency is calculated, for those events passing and failing the following list of cuts (one-by-one)
 \begin{itemize}
 \item lepton veto
 \item $\mindphifour>$ 1
 \item Z veto 
-\item b-jet veto (only for search \bintwo)
 \end{itemize}
 
  The cut efficiencies and final estimated values for 
-search \binone can be found in figure~\ref{fig:wjets_1}. 
+search \binone can be found in figure~\ref{fig:wjets_1}. These plots can be used to verify the method. 
 \begin{figure}[iHhtb]
 \centering
 \includegraphics[angle=0,scale=0.35]{TauTauFigs/eff_bin1.png}
@@ -42,19 +38,6 @@ list of cuts mentioned in the text, respectively.}
 \label{fig:wjets_1}
 \end{figure}
 
-The same plots for search \bintwo are shown in figure~\ref{fig:wjets_2}. These plots can be used to verify the method. 
-\begin{figure}[iHhtb]
-\centering
-\includegraphics[angle=0,scale=0.35]{TauTauFigs/eff_bin2.png}
-\includegraphics[angle=0,scale=0.35]{TauTauFigs/est_bin2.png} \\
-\caption{The distribution of $\SumMT>250$ cut 
-efficiency (left) and final estimated W+jets events (right) in search \bintwo.
- The first bin corresponds to the sample of events passing the baseline selection cuts. 
-The next eight bins correspond to the samples where passing and failing the 
-list of cuts mentioned in the text, respectively.}
-\label{fig:wjets_2}
-\end{figure}
-
 [{\bf FIXME} update the extracted values from the plots, according to the discussion in the SUSY meeting] A summary of the estimated W+jets events can be found in table~\ref{tbl:wjetsEstimation}. 
 
 \begin{table}
@@ -64,12 +47,9 @@ list of cuts mentioned in the text, respectively.}
 & W+jets Estimated Results\\
 \hline
 \binone & 0.66 $\pm$ 0.15 (stat.) $\pm$ 0.20 (sys.)\\
-\hline
-\bintwo & 0.80 $\pm$ 0.20 (stat.) $\pm$ 0.10 (sys.)\\
 \hline\hline 
 \end{tabular}
-\caption{The W+jets estimation results. The systematics assigned to each search bin 
-comes from the maximum variation of the estimations on that bin (neglecting the 7th bin) [{\bf FIXME} justify this with a plot: comment from SUSY meeting].}
+\caption{The W+jets estimation results. The systematics comes from the maximum variation of the estimations (neglecting the 7th bin) [{\bf FIXME} justify this with a plot: comment from SUSY meeting].}
 \label{tbl:wjetsEstimation}
 \end{center}
 \end{table}
@@ -100,4 +80,6 @@ To validate the shape of the W+jets sample, we compare the ratio of events with 
 The procedures to find the W+jets in data and consider the uncertainties are exactly same as the procdures for exctracting the normalization  
 factor. This ratio is found to be 0.00213 $\pm$ 0.00086 in data and  0.0029 $\pm$ 0.0019 in MC. The values are consistent with each other within 
 the considered uncertainties.
+
+As the simulation of W+jets events agrees well with data, for the search \bintwo, the expected number of W+jets from MC which is $0.43\pm0.4$ is trusted and is used.
 
