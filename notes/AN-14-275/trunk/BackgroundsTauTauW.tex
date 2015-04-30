@@ -1,17 +1,17 @@
 \subsection{\texorpdfstring{W+jets Background Estimation in $\tauTau$ Channel}{W+jets Background Estimation in tau-tau Channel}}
 \subsubsection{Method Description}
+
 As shown in table~\ref{tbl:cutflowtable}, the number of W+jets events surviving 
-the selection cuts are found to be zero in search \binone and it may suffer from the low statistics of the W+jets sample. In addition, we need to verify if the W+jets events are simulated well and agree with data.
+the selection cuts is found to be zero in search \binone, which may suffer from the low statistics of the W+jets sample. In addition, we need to verify if the W+jets events are simulated well and agree with data.
  The statistical uncertainty on the yields for W+jets events can be improved by extracting 
-the $\mttwo$ cut efficiency in a sample with more statistics. To make this sample, some cuts with small correlation on the search variables are 
+the $\mttwo$ cut efficiency in a sample with more statistics. To make this sample, some cuts with small correlation on the search variable are 
 relaxed. Various samples with different relaxed cuts are examined to check the idea of small correlation 
 between search variable and relaxed cuts. In the next section, the validation of this method will be discussed.\\
 When the cut efficiency for the $\mttwo$ variable is found, then it is multiplied by the W+jets 
 yields before cutting on this variable. This means, according to table~\ref{tbl:cutflowtable}, the cut efficiency for 
 $\mttwo$ found in a relaxed sample should be multiplied by 31.93 to get an 
 estimate for the W+jets events in search \binone.\\
-The systematics that can be assigned to this method is the maximum
-variation of the estimations among those relaxed samples.
+
 \subsubsection{Method Validation}
 The idea is to check the effect of three set of cuts independently, 
 on the \mttwo cut efficiency in search \binone. 
@@ -24,32 +24,53 @@ efficiency is calculated, for those events passing and failing the following lis
 \item Z veto 
 \end{itemize}
 
- The cut efficiencies and final estimated values for 
-search \binone can be found in figure~\ref{fig:wjets_1}. These plots can be used to verify the method. 
+In order to evaluate the systematics, the cut efficiencies from the scaled samples with 
+up and down Tau Energy Scale (as the main source of systematics) are also evaluated.
+To make these scaled samples, the four-vector of all tau objects 
+are scaled up and down by 3\% and all $p_T$-related variables such as $E_T^{miss}$ 
+and $M_{T2}$ are recalculated.\\
+The final estimated W+jets events in search \binone for nominal as well as up and down scaled samples 
+can be found in figure~\ref{fig:wjets_1}.  
 \begin{figure}[iHhtb]
 \centering
-\includegraphics[angle=0,scale=0.35]{TauTauFigs/eff_bin1.png}
-\includegraphics[angle=0,scale=0.35]{TauTauFigs/est_bin1.png} \\
-\caption{The distribution of $\frac{\mttwo>90}{\mttwo>40}$ cut 
-efficiency (left) and final estimated W+jets events (right) in search \binone.
- The first bin corresponds to the sample of events passing the baseline selection cuts. 
+\includegraphics[angle=0,scale=0.35]{TauTauFigs/WJets_bin1.pdf}
+\caption{The distribution of the finnal estimated W+jets events in search \binone is shown in black. 
+ The first bin of the histogram corresponds to the sample of events passing the baseline selection cuts. 
 The next six bins correspond to the samples where passing and failing the 
-list of cuts mentioned in the text, respectively.}
+list of cuts mentioned in the text, respectively. Also shown are the estimated W+jets events in up and down scaled samples to evaluate the systematics.}
 \label{fig:wjets_1}
 \end{figure}
 
-[{\bf FIXME} update the extracted values from the plots, according to the discussion in the SUSY meeting] A summary of the estimated W+jets events can be found in table~\ref{tbl:wjetsEstimation}. 
+Each of the three plots in figure~\ref{fig:wjets_1} are fitted with a pol0 function. The results are summarized in table~\ref{tbl:fitpars}.
+\begin{table}
+\begin{center}
+\begin{tabular}{lc}
+\hline\hline
+  & Fit Parameters (pol0) \\
+\hline\hline
+WJetsEst\_down & 0.788636 $\pm$ 0.117645 \\
+WJetsEst\_nominal & 0.929172 $\pm$ 0.128074 \\
+WJetsEst\_up & 1.01895 $\pm$ 0.132591 \\
+\hline\hline
+\end{tabular}
+\caption{The fit parameters obtained from W+jets estimation results in nominal, up and down scaled samples.}
+\label{tbl:fitpars}
+\end{center}
+\end{table}
 
+The systematics that can be assigned is the maximum variation of the up and down central values with 
+respect to the nominal one. A summary of the estimated W+jets events in search \binone can be found in table~\ref{tbl:wjetsEstimation}. 
 \begin{table}
 \begin{center}
 \begin{tabular}{lc}
 \hline\hline
 & W+jets Estimated Results\\
 \hline
-\binone & 0.66 $\pm$ 0.15 (stat.) $\pm$ 0.20 (sys.)\\
+\binone & 0.93 $\pm$ 0.13 (stat.) $\pm$ 0.14 (sys.)\\
 \hline\hline 
 \end{tabular}
-\caption{The W+jets estimation results. The systematics comes from the maximum variation of the estimations (neglecting the 7th bin) [{\bf FIXME} justify this with a plot: comment from SUSY meeting].}
+\caption{The W+jets estimation results in search \binone. The systematics comes from the maximum 
+variation of the estimation found from up and down scaled samples with respect to the nominal one.}
 \label{tbl:wjetsEstimation}
 \end{center}
 \end{table}
@@ -73,7 +94,7 @@ shows the \mttwo distribution for the selected events. We use the range 40 $<\mt
 W+jets sample. In this range more than 90\% of the MC events are from the W+jets sample. 
 All of the non-W MC events in this range are subtracted from 
 the data in the same range. The result is compared with the MC prediction for the W+jets in this range. The k-factor for the W+jets sample is 
-found to be 1.05 $\pm$ 0.13 which is compatibe with 1 within the errors. To evaluate the uncertainty, all of the statistical uncertaities on data 
+found to be 1.05 $\pm$ 0.13 which is compatible with 1 within the errors. To evaluate the uncertainty, all of the statistical uncertainties on data 
 and MC are considered plus 25\% systematic uncertainty on the MC samples.
 
 To validate the shape of the W+jets sample, we compare the ratio of events with \mttwo $>$ 90 \GeV and  \mttwo $>$ 40 \GeV in data and MC.
