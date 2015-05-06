@@ -18,35 +18,56 @@ tight ($T$) and non-tight ($NT$), so one can write:
 $f$ * $F$ is the contamination of the fake $\hadtau$'s in the signal region. 
 
 The fake rate ($f$) is measured as the ratio of the tightly selected $\hadtau$'s to the loosely 
-selected $\hadtau$'s in a sample which is dominated by the fake $\hadtau$'s. The fake rate is estimated in an environment which is as similar as possible to 
-the signal region. The dataset and the triggers which are used to estimate the fake rate %in different channels 
-are shown in table \ref{Tab.DataFR}.
-\begin{table}[!htb]
-\begin{center}
-\begin{tabular}{|l|c|c|}
-\hline
-\hline
-Channel      & Data Set                                     & Trigger \\\hline\hline
-Muon Tau     & /SingleMu/Run2012D-22Jan2013-v1/AOD          & HLT\_IsoMu24\_v(16-17)\\
-             &                                              & HLT\_IsoMu24\_eta2p1\_v(14-15)\\\hline
+selected $\hadtau$'s in a sample which is dominated by the fake $\hadtau$'s. The fake rate is estimated in an environment which is as 
+similar as possible to the signal region. 
+%The dataset and the triggers which are used to estimate the fake rate %in different channels 
+%are shown in table \ref{Tab.DataFR}.
+%\begin{table}[!htb]
+%\begin{center}
+%\begin{tabular}{|l|c|c|}
+%\hline
+%\hline
+%Channel      & Data Set                                     & Trigger \\\hline\hline
+%Muon Tau     & /SingleMu/Run2012D-22Jan2013-v1/AOD          & HLT\_IsoMu24\_v(16-17)\\
+%             &                                              & HLT\_IsoMu24\_eta2p1\_v(14-15)\\\hline
 %Electron Tau & /SingleElectron/Run2012D-22Jan2013-v1/AOD    & HLT\_Ele27\_WP80\_v11\\
+%\hline
+%\end{tabular}
+%\caption{The dataset and triggers for fake rate estimation.}
+%\label{Tab.DataFR}
+%\end{center}
+%\end{table}
+%In the muTau channel, exactly one muon is required which passes the selection criteria of the muon in the signal region and has \pt > 27 GeV. 
+%Lepton selection and extra lepton rejections are exactly same as the signal selection. Only the \pt of the %favorite 
+%leading lepton is forced to 
+%be 3 \GeV higher than the online cut resulting to \pt $>$ 27 \GeV for muon.% and \pt $>$ 30 \GeV for electron.
+%The rejections can reduce the contribution of the VV, DY and $\ttbar$ events. To further suppress the $\ttbar$ contamination, the b-veto 
+%similar to the signal selection is applied. The \MET is asked to be greater than 30 GeV, similar to the preselections. 
+All preselection cuts are applied exactly same as the signal selection,  except the lepton and \Tau are forced to be same sign. 
+The $\hadtau$ isolation is {\it Loose} for the loosely selected $\hadtau$'s and {\it Tight} for the tightly selected $\hadtau$'s.
+The ratio of the  categories determines the fake rate. 
+%To avoid any bias from the trigger, the $\hadtau$'s closer than $\Delta$R = 0.2 to the 
+%lepton are rejected. 
+%The \muTau pair are also forced to be same sign to decrease the prompt \Tau's.
+The fake rate can be measured in the bins of $\hadtau$ \pt and $\eta$, but it is observed that the dependency is very small and can be ignored, 
+so we use a single value for the fake rate which is 0.44 $\pm$ 0.0095. The composition of the loosely selected events is shown in table \ref{tbl:Composition}. 
+\begin{table}[!Hhtb]
+\begin{center}
+\begin{tabular}{ccccccccc}
+\hline
+\hline
+  SUSY(380,1) & QCD &    W    & ZX     &    Top    &  WW  & Higgs &                MC & Data \\
+\hline
+ 0.08         & 0.0 & 5601.78 & 329.69 &   119.81  & 9.86 & 1.24  & 6062.37 +- 106.09 & 7035\\
+\hline
 \hline
 \end{tabular}
-\caption{The dataset and triggers for fake rate estimation.}
-\label{Tab.DataFR}
+\caption{The composition of the loosely selected events in the $\mu\hadtau$ channel to find the fake rate.}
+\label{tbl:Composition}
 \end{center}
 \end{table}
-
-%In the muTau channel, exactly one muon is required which passes the selection criteria of the muon in the signal region and has \pt > 27 GeV. 
-Lepton selection and extra lepton rejections are exactly same as the signal selection. Only the \pt of the %favorite 
-leading lepton is forced to 
-be 3 \GeV higher than the online cut resulting to \pt $>$ 27 \GeV for muon.% and \pt $>$ 30 \GeV for electron.
-The rejections can reduce the contribution of the VV, DY and $\ttbar$ events. To further suppress the $\ttbar$ contamination, the b-veto 
-similar to the signal selection is applied. The \MET is asked to be greater than 30 GeV, similar to the preselections. The selection of the $\hadtau$ is exactly same as the signal selection, except the $\hadtau$ isolation which is {\it Loose} for the loosely selected $\hadtau$'s and {\it Tight} for the tightly selected $\hadtau$'s. 
-The ratio of the  categories determines the fake rate. To avoid any bias from the trigger, the $\hadtau$'s closer than $\Delta$R = 0.2 to the 
-lepton are rejected. The \muTau pair are also forced to be same sign to decrease the prompt \Tau's.
-The fake rate can be measured in the bins of $\hadtau$ \pt and $\eta$, but it is observed that the dependency is very small and can be ignored, 
-so we use a single value for the fake rate which is 0.45 $\pm$ 0.0062.
+The reported uncertainties are just statistical. It can be seen that the environment is very similar to the signal selection environment where the 
+extracted fake rate would be applied.
 
 The prompt rate ($p$) is measured in the MC DY events. All of the preselections except the $mu$ selection and extra lepton rejection %the Z-veto and $\hadtau$ isolation 
 are applied. 
@@ -109,7 +130,7 @@ shown in figure \ref{fig:LepTauEstimationData}.
 \end{figure}
 To select the MC events, all the selection cuts, except the \mttwo cut are applied. 
 The MC truth are used to find the events with at least a fake \Tau. Table \ref{tbl:LepTauEstimationData}
-\begin{table}
+\begin{table}[!Hhtb]
 \begin{center}
 \begin{tabular}{lllllllllll}
 \hline
