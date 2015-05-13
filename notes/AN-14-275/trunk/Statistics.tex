@@ -14,7 +14,8 @@ there is not any overlap between the channels, so the channels can be statistica
 
 
 Backgrounds are taken into account in two categories, including Monte-Carlo-Driven (MCD) and Data-Driven (DD).
-However, due to the method of background estimation in the \tauTau channel, \binone and \bintwo of this channel have one more category called W-jets (W).
+However, due to the method of background estimation in the \tauTau channel, \binone  this channel has one more category 
+called W-jets (W).
 As a summary of results, the background yields and systematic uncertainties are listed in Table \ref{tbl:yieldSysSummary}.
 \begin{table}[h]
 \begin{center}
@@ -25,15 +26,15 @@ As a summary of results, the background yields and systematic uncertainties are 
 	& bkg	& \tauTau\binone & \tauTau\bintwo & \eTau\binone & \muTau\binone \\
 \hline
 \hline
-\multirow{3}{*}{yields} &MCD  & 0.75  & 1.56 & 0.2 & 0.45 \\
+\multirow{3}{*}{yields} &MCD  & 0.75  & 1.99 & 0.2 & 0.45 \\
                         &DD   & 0.15  & 0.82 & 2.5 & 0.61 \\
-                        &W    & 0.93  & 0.43 &  -  &  -  \\
+                        &W    & 0.93  &  - &  -  &  -  \\
 %\hline				
 %MCD (sta.) & 81x0.00926 &  4x0.39 & 800x0.00025 & 8x0.0563 \\
 \hline
 \multirow{3}{*}{Systematics}&MCD  & 25\%   &   25\% & 25\% & 25\% \\
                             &DD   & 170\%  &   79\% & 50\% & 69\% \\
-                            &W    & 21\%   &   96\% &   -  & - \\
+                            &W    & 21\%   &    -  &   -  & - \\
 \hline
 \hline
 \end{tabular}
@@ -42,15 +43,16 @@ As a summary of results, the background yields and systematic uncertainties are 
 %\end{tiny}
 \end{center}
 \end{table}
-As seen in the table, the overall background yields of all categories, for the \tauTau channel \binone and \bintwo and \eTau and \muTau channels are  1.5, 3.01, 2.7 and 1.06 respectively (sum of three first rows of Table \ref{tbl:yieldSysSummary}).
+As seen in the table, the overall background yields of all categories, 
+for the \tauTau channel \binone and \bintwo and \eTau and \muTau channels are  
+1.83, 2.81, 2.7 and 1.06 respectively (sum of three first rows of Table \ref{tbl:yieldSysSummary}).
 MCD backgrounds are feed to the package as a Gamma distribution with the corresponding statistical weights for each bin.
-Furthermore, 25\% systematic uncertainity on MCD backgrounds is also considered.
-All systematics are taken through LogNormal distributions.
-Systematic uncertainties for each bin of DD backgrounds are 111\%, 215\%, 50\% and 69\% respectively.  
-W backgrounds have 37\% and 45\% systematic uncertainity for the first and second bins respectively.
-And finally, 20\% systematic uncertainity on signal yields is considered. Due to the large signal sample
-which is used, no statistical uncertainty is assigned to signal.
-
+Furthermore, 25\% systematic uncertainity on MCD backgrounds is also considered. These systematic uncertainties are considered uncorrelated.
+All systematics are taken through LogNormal distributions. 
+Systematic uncertainties for each bin of DD backgrounds are 170\%, 79\%, 50\% and 69\% respectively. The QCD background estimations for 
+both bins of \tauTau channel use the same category of events, so the estimation in two bins are treated 100\% correlated.
+W background has 21\% systematic uncertainity, and finally, 20\% systematic uncertainity on signal yields is considered. 
+Due to the large signal sample which is used, no statistical uncertainty is assigned to signal.
 
 If no excess of data over the background prediction is observed, 
 we close our study with setting upper limits on the testing signals.
