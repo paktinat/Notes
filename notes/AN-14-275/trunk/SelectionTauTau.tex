@@ -46,20 +46,17 @@ The cut-flow-table can be found in table~\ref{tbl:cutflowtable}. The yields for 
 \hline\hline
 &  &SUSY(180,60)&(240,40)&(380,1)&Higgs&QCD&WW&W&DY&Top&Total Bkg&Data\\
 \hline\hline
-\multirow{4}{*}{Pre-Selection}&{\small di-$\tau_h$ Selection, lepton veto} & 46.81 &27.14& 9.99 &81.53&19272.05&11.21&543.42&1961.29&95.85&21965.34$\pm$6387.87&18526.00\\
-%&$e$ and $\mu$ Veto& 46.81 &27.14& 9.99 &81.53&19272.05&11.21&543.42&1961.29&95.85&21965.34$\pm$6387.87&18526.00\\
-&Z Veto& 45.63 &25.54 & 8.99 &70.50&18825.02&10.86&527.83&1333.37&88.53&20856.11$\pm$6383.93&17554.00\\
-&$\mindphifour > $ 1& 22.78 &14.01 & 5.88 &13.91&8426.98&3.66&192.11&276.27&13.67&8926.59$\pm$4404.31&5105.00\\
-&$M_{T2} > $ 40& 13.22 &10.90 & 5.12 &0.89&135.29&1.11&31.93&13.17&5.26&187.65$\pm$135.47&131.00\\
+\multirow{5}{*}{Pre-Selection}&2 $\tau_h$ Selection&41.97&30.96&11.28&87.67&22081.57&13.71&595.80&2133.23&115.33&25027.32$\pm$6971.15&19615.00\\
+&$e$ and $\mu$ Veto&38.68&27.89&9.87&81.53&19272.05&11.21&543.42&1961.29&95.85&21965.34$\pm$6387.87&18526.00\\
+&Z Veo&37.80&26.28&9.21&70.50&18825.02&10.86&527.83&1333.37&88.53&20856.11$\pm$6383.93&17554.00\\
+&$\mindphifour > $ 1&17.95&15.16&6.13&13.91&8426.98&3.66&192.11&276.27&13.67&8926.59$\pm$4404.31&5105.00\\
+&$M_{T2} > $ 40&9.50&11.66&5.60&0.89&135.29&1.11&31.93&13.17&5.26&187.65$\pm$135.47&131.00\\
 \hline
-\binone&$M_{T2} > $ 90& 0.97 &4.10 & 3.56 &0.17&$<$135.29&0.02&$<$1.28&0.56&$<$0.47&0.75$\pm$0.08&?\\
-%\binone&$M_{T2} > $ 90& 0.97 &4.10 & 3.56 &0.17&0.00&0.02&0.00&0.56&0.00&0.75$\pm$0.08&1.00\\
+\binone&$M_{T2} > $ 90&0.59&3.89&3.81&0.17&$<$135.29&0.02&$<$1.28&0.56&$<$0.47&0.75$\pm$0.08&1.00\\
 \hline
-\multirow{3}{*}{\bintwo}&b-jet veto& 11.16 &8.96& 4.34 &0.75&135.20&0.96&29.13&11.15&0.78&177.98$\pm$135.36&115.00\\
-&$M_{T2} < $ 90& 10.35 &5.62& 1.34 &0.61&135.20&0.94&29.13&10.65&0.78&177.32$\pm$135.36&?\\
-&$\Sigma M_T^{\tau_i} > $ 250& 3.92 &3.13& 0.86 &0.07&$<$135.20&0.15&0.43&0.81&0.53&1.99$\pm$0.87&?\\
-%&$M_{T2} < $ 90& 10.35 &5.62& 1.34 &0.61&135.20&0.94&29.13&10.65&0.78&177.32$\pm$135.36&114.00\\
-%&$\Sigma M_T^{\tau_i} > $ 250& 3.92 &3.13& 0.86 &0.07&0.00&0.15&0.43&0.81&0.53&1.99$\pm$0.87&2.00\\
+\multirow{3}{*}{\bintwo}&b-jet veto&7.92 &9.33 &4.67 &0.75&135.20&0.96&29.13&11.15&0.78&177.98$\pm$135.36&115.00\\
+&$M_{T2} < $ 90&7.42 &6.17 &1.51 &0.61&135.20&0.94&29.13&10.65&0.78&177.32$\pm$135.36&114.00\\
+&$\Sigma M_T^{\tau_i} > $ 250&2.17&3.36  &1.08&0.07&$<$135.20&0.15&0.43&0.81&0.53&1.99$\pm$0.87&2.00\\
 \hline\hline
 \end{tabular}
 \caption{Cut-flow-table for $\tauTau$ channel. The quoted uncertainties are only statistical. When the remaining events from MC are zero, the weight of the events is reported as the upper bound.}
@@ -68,12 +65,15 @@ The cut-flow-table can be found in table~\ref{tbl:cutflowtable}. The yields for 
 \end{center}
 %\end{table}
 \end{sidewaystable}
-The distributions of $\mttwo$ and $\SumMT$ after applying pre-selection cuts are shown in figure~\ref{fig:comparison}.  Hence the disagreement between data and MC in a couple of bins of $\SumMT$ distribution can be justified. In order to be blind to data, in both distributions data events are not shown at some points. Overall, it can be concluded that data and MC are in reasonable agreement. 
+The distributions of $\mttwo$ and $\SumMT$ after applying pre-selection cuts are shown in figure~\ref{fig:comparison}. 
+The b-jet veto cut is also applied on the $\SumMT$ distribution. For both plots, the shape of QCD MC events 
+is taken from same-sign events, which means that same selection cuts as pre-selection are applied except for the charge 
+requirement which is reversed. Then the distribution of QCD MC events are found from data after non-QCD MC subtraction 
+in the same-sign region. It can be concluded that data and MC are in reasonable agreement within the statistical uncertainties. 
 \begin{figure}[!Hhtb]
 \centering
-\includegraphics[angle=0,scale=0.35]{QCDbginTauTau/Bin1_QCDdatadriven_Samesign.png}
-\includegraphics[angle=0,scale=0.35]{QCDbginTauTau/Bin2_QCDdatadriven_Samesign.png} \\
+\includegraphics[angle=0,scale=0.35]{TauTauFigs/MT2_SSQCD_dataunblinding.png}
+\includegraphics[angle=0,scale=0.35]{TauTauFigs/SumMT_SSQCD_dataunblinding.png} \\
 \caption{The distributions of \mttwo (left) and \SumMT (right) after pre-selection. The b-jet veto cut is also applied on the right plot.}
 \label{fig:comparison}
 \end{figure}
-
