@@ -3,8 +3,25 @@
 In different channels, the contribution of the events with a fake \Tau is usually estimated using the data. For the prompt \Tau's, we trust 
 the MC, but the MC is validated in a signal like region. In continue different backgrounds and the the used method are listed.
 
-\subsection{\texorpdfstring{Fake \Tau's in \ell\Tau channels}{Fake Taus in Lepton-Tau Channels}}
-A fake rate method is used to estimate the contribution of the fake \Tau's in \ell\Tau channels. 
+\subsection{\texorpdfstring{QCD Background Estimation in $\tauTau$ Channel}{QCD Background Estimation in tau-tau Channel}}
+Due to the large cross section of the QCD multijet events and lack of the statistics, there is a large statistical uncertainty on the 
+yield of the QCD events from MC. On the other hand, these events contribute to the signal selection of the \tauTau channel, when two jets are 
+fakely identified as \Tau's. The fake rate can be different between the data and MC, so a data driven method is developed to estimate the 
+contribution of the QCD multijet events. 
+An ABCD method is used when the two uncorrelated variables are the search variable (\mttwo in \binone and \SumMT in \bintwo) and the 
+isolation of the \Tau's. In the signal region, loose \Tau's are excluded, but in the control region, only the pairs with at least a loose \Tau 
+are selected. These pairs are requested to be same sign to suppress the signal contamination. To further increase the statistics 
+in different regions, the cut on the minimum angle in the transverse plane between the \MET and the jets is removed. The efficiency of this
+cut is multiplied to the final estimation. In the low \mttwo or \SumMT, the ratio of the signal like events over the same-sign loose pairs 
+is found and verfied to be flat. 
+%A horizental line is fitted to
+This ratio is multiplied to the same-sign loose pairs in high \mttwo or \SumMT and corrected by the efficiency of the 
+cut on the minimum angle between the \MET and the jets, to find the QCD contamination in the signal region. The method to extract the
+ratio and the efficiency are varied to estimate the systematic uncertainty of the estimated value.
+
+
+\subsection{\texorpdfstring{Fake \Tau's in $\ell\Tau$ channels}{Fake Taus in Lepton-Tau Channels}}
+A fake rate method is used to estimate the contribution of the fake \Tau's in $\ell\Tau$ channels. 
 The idea is that when the loose signal selection is applied, the number of the loose $\hadtau$'s ($L$) is:
 \begin{equation}
 L = P + F
@@ -23,4 +40,9 @@ The fake rate ($f$) is measured as the ratio of the tightly selected $\hadtau$'s
 selected $\hadtau$'s in a sample which is dominated by the fake $\hadtau$'s. The fake rate is estimated in an environment which is exactly 
 same as the signal selection, but the charges of the \Tau and lepton are similar instead of the opposite in the case of the signal selection.
 The prompt rate ($p$) is measured in the MC DY events. The method is applied on MC events when only the Wjets events are selected and 
-also on the full MC events with fake \Tau's. In both cases, the method closes properly. 
+also on the full MC events with fake \Tau's. In both cases, the method closes properly and the estimated values lie within 
+the uncertainties of the MC truth. The uncertainties include both statistical and systematical uncertainties which will be listed later in 
+the paper. The uncertainties due to variation of the method to estimate the fake rate or prompt rate and their statistical uncertainties 
+are found to be negligible.
+
+
