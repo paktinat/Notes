@@ -2,7 +2,7 @@
 \section{\texorpdfstring{Selection Cuts for Lepton-\Tau Channel}{Selection Cuts for Lepton-Tau Channel}}
 \label{sect:eleTauCuts}
 
-In the lepton-\Tau final states, events are selected when one electron(muon) with \PT $>$ XX (YY) GeV/$c$ and $|\eta|$ $<$ 2.1 and at least 
+In the lepton-\Tau final states, events are selected when one electron(muon) with \PT $>$ 25 (20) GeV/$c$ and $|\eta|$ $<$ 2.1 and at least 
 one oppositely charged \Tau with \PT $>$ 20 GeV/$c$ and $|\eta|$ $<$ 2.1 exist. $I_{\Tau}$ of the hadronic tau must be less than XX GeV.
 In the case of more than one pair, the pair that maximizes the sum $\PT^{\Tau} + \PT^{Lep}$ is selected.
 Vetoing the second lepton with \PT $>$ 10 GeV and loose isolation criteria helps to suppress the $Z\rightarrow \mu\mu, ee$ background.
@@ -25,7 +25,7 @@ to get rid of related uncertainities due to mis-reconstruction of the QCD events
 Similar to the \tauTau channel, a hard cut on \mttwo (90 \GeV) is useful to supress different SM backgrounds, especially $W$+jet events.
 Such a high cut on the \mttwo increases the sensitivity of the study to signal events with high mass difference. The \Tau transverse mass (\tauMT)
 is found to be a good discriminator to further suppress the $W$-jets events which is the main background in this step. 
-Opposite to the \tauTau channel, the events with \mttwo $<$ 90 \GeV are not useful in Leptop + \Tau channel and they can not add any power to 
+Opposite to the \tauTau channel, the events with \mttwo $<$ 90 \GeV are not useful in Lepton + \Tau channel and they can not add any power to 
 the final exclusion. The bins from electron \Tau and muon \Tau channels are defined by the following selections:
 \begin{itemize}
 \item \mttwo $>$ 90 \GeV.
@@ -54,3 +54,24 @@ $\mu\hadtau$& 2.09 & 0 & 0.79 & 0.28 & 0 & 0.34 & 0.05 & 1.46$\pm$.49 & 5 \\
 %\end{tiny}
 \end{center}
 \end{table}
+
+Figures \ref{fig:mt2leptontau} and \ref{fig:taumtleptontau} show the \mttwo and \tauMT distributions before applying the cut on \tauMT.
+\begin{figure}[!Hhtb]
+\centering
+\includegraphics[angle=0,scale=0.35]{SelectionEleTau/MT2.png}
+\includegraphics[angle=0,scale=0.35]{SelectionMuTau/MT2_Ratio_Preselection_unBlinded.png}
+\caption{\mttwo distribution of preselected events in (Left) $e\hadtau$ and (Right) $\mu\hadtau$ channels.}
+\label{fig:mt2leptontau}
+\end{figure}
+
+
+\begin{figure}[!Hhtb]
+\centering
+\includegraphics[angle=0,scale=0.35]{SelectionEleTau/TauMT.png}
+\includegraphics[angle=0,scale=0.35]{SelectionMuTau/tauMT_Ratio_MT2gt90_unBlinded.png}
+\caption{\tauMT distribution for events with $\mttwo>90\GeV$ in (Left) $e\hadtau$ and (Right) $\mu\hadtau$ channels.}
+\label{fig:taumtleptontau}
+\end{figure}
+Opposite to the $\Tau\Tau$ channel, the events with $\mttwo<90 \GeV$ are not useful in $\ell\Tau$ channels because of the contamination of
+the W+jets events. It was investigated if increasing the \pt of the objects can increase the sensitivity in this bin, but no improvement was seen.
+

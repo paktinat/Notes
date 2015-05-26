@@ -1,4 +1,4 @@
-\section{Selection Cuts for TauTau Channel}
+\section{\texorpdfstring{Selection Cuts for \Tau\Tau Channel}{Selection Cuts for Tau-Tau Channel}}
 \label{sect:tauTauCuts}
 The selection of the events from the collisions is done with the dedicated triggers that use the combination of muon, electron 
 and tau lepton reconstructed in the trigger levels ~\cite{CMS:2013hoa,Chatrchyan:2012xi,Chatrchyan:2011nv}.
@@ -58,3 +58,16 @@ Theevent yields can be found in table~\ref{tbl:cutflowtable}. The yields for thr
 \end{center}
 \end{table}
 %\end{sidewaystable}
+
+The distributions of $\mttwo$ and $\SumMT$ after applying pre-selection cuts are shown in figure~\ref{fig:comparison}.
+The b-jet veto cut is also applied on the $\SumMT$ distribution. For both plots, the shape of QCD MC events
+is taken from same-sign events, which means that same selection cuts as pre-selection are applied except for the charge
+requirement which is reversed. Then the distribution of QCD MC events are found from data after non-QCD MC subtraction
+in the same-sign region. It can be concluded that data and MC are in reasonable agreement within the statistical uncertainties.
+\begin{figure}[!Hhtb]
+\centering
+\includegraphics[angle=0,scale=0.35]{TauTauFigs/MT2_SSQCD_dataunblinding.png}
+\includegraphics[angle=0,scale=0.35]{TauTauFigs/SumMT_SSQCD_dataunblinding.png} \\
+\caption{The distributions of \mttwo (left) and \SumMT (right) after pre-selection. The b-jet veto cut is also applied on the right plot.}
+\label{fig:comparison}
+\end{figure}
