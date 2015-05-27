@@ -1,72 +1,78 @@
 \section{Introduction}
 \label{sect:introduction}
+
 Supersymmetry \cite{Martin:1997ns} (SUSY) is one of the most promising extensions of the 
-Standard Model of the elementary particles (SM) which solves both the 
+standard model of the elementary particles (SM) which solves both the 
 quadratic divergencies and hierarchy problems simultaneously. It introduces a new symmetry between the bosons and fermions and 
-for every particle an sparticle is defined which is exactly the same, but differ in spin by 1/2. 
+for every particle a sparticle is defined which is exactly the same, but differ in spin by 1/2. 
+%Since the super particles are not discovered yet, the supersymmetry should be a broken symmetry. 
+%Various mechanisms are introduced to break the symmetry softly without changing the other interesting features of the theory.
+Extensive searches at the CERN LHC have pushed the mass of the colored SUSY particles much beyond the previous expectations \cite{susyPhyRes}. 
+Looking for the electroweak production of sparticles is therefore well motivated to not miss possible SUSY signals in a corner. 
 
-In a hadron collider, like LHC, it is expected to see the signature of the colored SUSY partners, 
-but the very extensive search in the LHC experiments pushes the mass of the colored particles much 
-beyond the previous expectations. 
-Looking at other sectors of the SUSY, e.g, electroweak production of the sparticles, is motivated not to miss SUSY in a corner. 
-To cancel the quadratic divergency of the quantum corrections to higgs boson mass,  sleptons, charginos and neutralinos 
-should not be heavier than few hundred \GeV \cite{1988NuPhB.306...63B, deCarlos:1993yy}. So they should be accessible by the current data.
-A search for new physics using ~20 \fbinv of proton-proton collision data from CMS collected in 2012 in the center of mass energy of 
-$\sqrt{s}$ = 8 \TeV  is documented in this report. 
-Although the search is sensitive to any high scale new physics with a missing transverse momentum (\MET), 
-an R-parity conserving SUSY model is used to illustrate the performance of the method.
 
-Due to the special role of the third generation of the sparticles, events with two taus in the final state 
-accompanying with the missing transverse energy (\met) are considered.
-The two taus can be generated in the cascade of the staus or charginos:
+A search for new physics using the full 2012 data is documented in this note. 
+Although the search is sensitive to any high scale 
+new physics with a missing transverse energy (\MET), an R-parity conserving SUSY model is used 
+to illustrate the performance of the method.
+
+The electroweak production of the SUSY particles with the leptonic final state was studies previously \cite{Khachatryan:2014qwa}.
+In the current analysis, due to the special role of the third generation of the sparticles, events with two tau leptons in the final state 
+accompanying with \MET are considered.
+The two tau leptons can be generated in the cascade of the staus or charginos:
 \begin{linenomath}
 \begin{equation}
-p + p \rightarrow \tilde{\chi_{1}^{+}} + \tilde{\chi_{1}^{-}} ~~\mathrm{or}~~  p + p \rightarrow \tilde{\tau} + \tilde{\tau}
+p + p \rightarrow \PSGcpDo +\PSGcmDo ~~\mathrm{or}~~  p + p \rightarrow \sTau + \sTau,
 \end{equation}
 \end{linenomath}
 when 
 \begin{linenomath}
 \begin{equation}
-\tilde{\chi_{1}^{+}} \rightarrow \tilde{\tau} + \nu ~~\mathrm{or}~~  \tilde{\chi_{1}^{+}} \rightarrow \tilde{\nu}_{\tau} + \tau 
+\PSGcpDo \rightarrow \sTau + \nu ~~\mathrm{or}~~  \PSGcpDo \rightarrow \sNu_{\tau} + \tau,
 \end{equation}
 \end{linenomath}
 and 
 \begin{linenomath}
 \begin{equation}
-\tilde{\tau} \rightarrow \tau + \tilde{\chi_{1}^{0}} ~~\mathrm{or}~~  \tilde{\nu}_{\tau} \rightarrow \nu + \tilde{\chi_{1}^{0}} 
+\sTau \rightarrow \tau + \PSGczDo ~~\mathrm{or}~~  \sNu_{\tau} \rightarrow \nu + \PSGczDo.
 \end{equation}
 \end{linenomath}
-and $\tilde{\chi_{1}^{0}}$ can not be detected and appears as missing transverse momentum (\met).
-In this note, we mainly focus on the $\tilde{\chi_{1}^{+}}\tilde{\chi_{1}^{-}}$ production which has a higher 
-production cross section. Figure \ref{fig:Productions} shows our favorite decays.
-
-\begin{figure}[!htb]
+The $\PSGczDo$ can not be detected and appears as \MET.
+Figure \ref{fig:Productions} shows the main processes that can generate our favorite final state.
+\begin{figure}[!Hhtb]
 \centering
-\includegraphics[width=0.3\textwidth]{Introductionfigs/DiChargino.png}
-\includegraphics[width=0.3\textwidth]{Introductionfigs/DiSTau.png}
+\includegraphics[width=0.49\textwidth]{Introductionfigs/DiChargino.png}
+\includegraphics[width=0.49\textwidth]{Introductionfigs/DiSTau.png}
 \caption{Schematic production of double tau from chargino pair and stau pair.}
 \label{fig:Productions}
 \end{figure}
+The production cross section of $\PSGcpDo\PSGcmDo$ is more than one order of magnitude higher than the
+production cross section of \sTau\sTau in the same mass of \sTau and \PSGcpDo,  
+for example for a 150 \GeVcc \sTau or \PSGcpDo, the cross section 
+of the pair production of the particles is 27 $fb$ and 1170 $fb$, respectively. Due to the higher cross section through this note, 
+we mainly focus on the $\PSGcpDo\PSGcmDo$ production. 
 
-The tau leptons can decay to electron or muon in 35\% of the cases (17.5\% for each lepton) 
-or can decay via hadrons in 65\% of the cases. Since there are two leptons in the final state, then the probability of having 
-two hadronic tau, \tauTau is 42\% and Lepton-\Tau is 46\%. We will see that having less background in \tauTau channel, makes it more powerful
-in the final exclusion, although the branching ratio is a little lower.
+%In the context of MSSM, supersymmetric objects are produced in pairs to conserve R-parity quantum number. Therefore in the production of charginos from proton-proton collisions, one may consider the following interaction $$pp\rightarrow\PSGcpDo\PSGcmDo\rightarrow\sTau^{+}\nu_\tau \sTau^{-}\nu_\tau\rightarrow\tau^{+}\PSGczDo\nu_\tau\tau^{-}\PSGczDo\nu_\tau\rightarrow\tau^{+}\tau^{-} + 2\,\PSGczDo + 2\,\nu_\tau.$$ In the detector, what can be observed are only 2 tau leptons plus missing transverse energy from the presence of neturinos and neutralinos in the final state.\\ 
+The tau leptons decay leptonically ($e$ or $\mu$), in 35\% of the time, or decay via hadrons, which occurs in 65\% of the cases. Since there are two tau leptons in the final state, the probability of having $\PSGcpDo\PSGcmDo \rightarrow \hadtau+e/\mu+\MET$ is about 46\%, while the probability for $\PSGcpDo\PSGcmDo \rightarrow \hadtau+\hadtau+\MET$ to occur is about 42\%. Hereafter, final states containing a lepton are referred to as $\leptonTau$ channel and those events where the two taus decay via hadrons are referred to as $\tauTau$. 
+%The selection cuts to enhance $\tauTau$ events will be discussed in Section~\ref{sect:tauTauCuts}. The list of cuts to select $\leptonTau$ events can be found in Section~\ref{sect:leptonTauCuts}.\\     
 
-The search variable which is used to distinguish between the signal and background is the stransverse mass (\mttwo) 
-which is the natural extension of the known transverse mass (\mt) to a case 
+The search variable is the stransverse mass (\mttwo) which is the natural extension of the known transverse mass (\mt) to a case 
 when two massive particles with equal mass are created in pairs and decay via a chain of jets and leptons to two 
-invisible particles. 
-In the case of R-Parity conserving SUSY, the Lightest Supersymmetric Particle (LSP) escapes the detection and appears as 
-a missing transverse momentum.
-The distribution of \mttwo reflects the mass difference between the produced particles and the invisible  particles and is higher for sparticles
+invisible particles, similar to our case.
+%In the case of R-parity conserving SUSY, the Lightest Supersymmetric Particle (LSP), \PSGczDo in our scenario, 
+%escapes  detection and appears as \MET.
+
+The distribution of \mttwo reflects the scale of the produced particles and is much higher for sparticles
 compared to the SM particles. Hence, SUSY should appear as an excess in the tail of the \mttwo distribution.
-It was shown previously \cite{Chatrchyan:2012jx} that \mttwo is a powerful variable to search for SUSY. 
+It was shown previously \cite{Chatrchyan:2012jx} and \cite{Khachatryan:2014qwa} that \mttwo is a powerful variable to search for SUSY in both
+hadronic and leptonic final states.
 
+%The current note is organized as follows, after introduction in the next section the \mttwo variable is introduced. Different datasets 
+%and objects used in this analysis are discussed in sections \ref{sect:dataMC} and \ref{sect:objdef}. The events selections for different channels
+%are shown in section \ref{sect:cuts}. A detailed study of the SM backgrounds is presented in section \ref{sect:bkg}. Section \ref{sect:sys} 
+%is devoted to evaluation of the systematic uncertainties. The final numbers and their statistical interpretation is presented in 
+%section \ref{sect:stat} and finally section \ref{sect:conclusion} concludes the note.
 
-
-
-After introduction in the next section the \mttwo variable is introduced. 
 
 
 
