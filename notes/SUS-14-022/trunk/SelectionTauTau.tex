@@ -1,34 +1,35 @@
-\section{\texorpdfstring{Selection cuts for \Tau\Tau channel}{Selection cuts for Tau-Tau channel}}
+\section{\texorpdfstring{Selection cuts for \Tau\Tau channel}{Selection cuts for tau-tau channel}}
 \label{sect:tauTauCuts}
 The selection of the events from the collisions for different channels 
 is done with the dedicated triggers that use the combination of muon, electron 
-and tau lepton reconstructed in the trigger levels ~\cite{CMS:2013hoa,Chatrchyan:2012xi,Chatrchyan:2011nv}.
+and tau lepton reconstructed in the trigger levels \cite{CMS:2013hoa,Chatrchyan:2012xi,Chatrchyan:2011nv}.
 
 To select the events for \Tau\Tau channel, two reconstructed \Tau which are oppsitlely charged are selected. Both \Tau's are asked to 
 have \PT $>$ 45 \GeV and $|\eta| <$ 2.1 and $I_{\Tau}$ less than 1\GeV. In the case of more than one pair, the pair that minimizes the sum of
 $I_{\Tau}$ is selected.
-The events with extra electrons or muons (\PT $>$ 10 \GeV, $\eta >$ 2.1 and loose isolation criteria) 
+The events with extra electrons or muons (\PT $>$ 10 \GeV, $\eta <$ 2.4 and loose isolation criteria) 
 are rejected to suppress the contribution of the associatiated production of \Z with vector bosons.
 
 A Monte Carlo (MC) study shows that the invariant mass distribution of the two \Tau's coming from a \Z boson can be approximated with a gaussian 
 distribution with a peak close to 70 \GeV and a width of about 15 \GeV, so the events with the invariant mass of  
 the two \Tau's in this range are excluded (\Z-veto). A minimum cut of 15 \GeV on this invariant mass helps to get rid of the low mass
-QCD resonances. The minimum angle in the transverse plane between the \MET and the jets with \PT $>$ 40 \GeV and $|\eta| <$ 5.0 
-is asked to be greater than 1. This is a cut against the QCD multijet events and every event with a fake \MET. A soft cut on 
-\mttwo ($>$ 40 \GeV) increases this rejection.
+QCD resonances. The minimum angle in the transverse plane between the \MET and the jets with \PT $>$ 40 \GeV and $|\eta| <$ 5 
+is asked to be greater than 1. This is a cut against the events with a fake \MET including the QCD multijet events. A soft cut on 
+\mttwo ($>$ 40 \GeV) increases this rejection power.
 
-After applying pre-selection cuts, two extra set of cuts are introduced, one aims the regions with large and medium mass difference between 
+After applying pre-selection cuts, two extra set of cuts are introduced. One aims the regions with large and medium mass difference between 
 charginos and neutralinos, the other one is dedicated for low mass regions. The two search bins are chosen to be exclusive in order 
 to be able to combine the statistics at the end. When the mass difference is sufficiently high, \mttwo has a tail well beyond 80 \GeV, which is 
-the peak  and the end point of the \mt distribution of $W$jets events. The optimized cut for this variable is 90 \GeV. The shift in 
-value of the endpoint is Due to the smearing, the endpoint is seen at  90 \GeV.
+the peak  and the end point of the \mt distribution of $W$jets events in the parton level. 
+Due to the particles' width and the detector effects, 
+the endpoint is moved to the higher values and the optimized cut for this variable is 90 \GeV. 
 
 If the mass diffrenece is not too high, \mttwo can not exceed 80 \GeV, 
-but the sum of the \mt of two \Tau (\SumMT = $\mt^{\Tau^1} + \mt^{\Tau^2}$) can be a good descriminator between the signal and SM backgrounds. 
+but the sum of the \mt of two \Tau, \SumMT = $\mt^{\Tau^1} + \mt^{\Tau^2}$, can be a good descriminator between the signal and SM backgrounds. 
 Two bins are defined as:
 \begin{itemize}
-\item[\binone] \mttwo $>$ 90 \GeV.
-\item[\bintwo] \mttwo $<$ 90 \GeV; \SumMT $>$ 250 \GeV; b-tagged jets are vetoed.
+\item {\bf\binone}: \mttwo $>$ 90 \GeV;
+\item {\bf\bintwo}: \mttwo $<$ 90 \GeV and \SumMT $>$ 250 \GeV; b-tagged jets are vetoed.
 \end{itemize}
 Vetoing the b-tagged jets in the second bin is useful against the backgrounds containting a top quark, especially \ttbar events. 
 
