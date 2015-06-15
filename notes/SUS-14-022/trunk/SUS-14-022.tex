@@ -21,7 +21,7 @@
 %%%%%%%%%%%%%%%  Title page %%%%%%%%%%%%%%%%%%%%%%%%
 \cmsNoteHeader{SUS-14-022} % This is over-written in the CMS environment: useful as preprint no. for export versions
 % >> Title: please make sure that the non-TeX equivalent is in PDFTitle below
-\title{Search for electroweak production of charginos in di-tau final states}
+\title{Search for electroweak production of charginos in di-$\tau$ final states in pp collisions at sqrt(s)= 8 TeV with the CMS detector}
 
 % >> Authors
 %Author is always "The CMS Collaboration" for PAS and papers, so author, etc, below will be ignored in those cases
@@ -45,16 +45,21 @@
 % 2. **DO NOT use %**                  to comment out sections of the abstract: the extractor will still grab those lines (and they won't be comments any longer!).
 % 3. For PASs: **DO NOT use tex macros**         in the abstract: CDS MathJax processor used on the abstract doesn't understand them _and_ will only look within $$. The abstracts for papers are hand formatted so macros are okay.
 \abstract{
- A search for electroweak production of SUSY is performed when two $\tau$ leptons and invisible particles are 
- produced in the final state. At least one of the $\tau$ leptons is required to decay hadronically.
+ A search for electroweak production of supersymmetry is performed 
+with two  $\tau$ leptons in the final state
+%when two $\tau$ leptons and invisible particles are produced in the final state. 
+ At least one of the $\tau$ leptons is required to decay hadronically.
  Different channels use 18.1 to 19.6  \fbinv  of proton-proton collisions at $\sqrt{s}$ = 8\,TeV.
- The $M_{\rm T2}$ variable is used as a search variable to distinguish between signal and background. 
- In a special part of the phase space, moderate $M_{\rm T2}$, the sum of the transverse  
- mass of the two $\tau$ leptons is found to be a useful variable. In different bins of the search, 
+% The $M_{\rm T2}$ variable is used as a search variable to distinguish between signal and background. 
+% In a special part of the phase space, moderate $M_{\rm T2}$, the sum of the transverse  
+% mass of the two $\tau$ leptons is found to be a useful variable. 
+Both $M_{\rm T2}$  variable and the sum of the transverse mass of the two tau leptons
+are used as search variables. 
+In different signal regions, 
  no significant excess is seen with respect to the standard model prediction, so 
  upper limits are set on the masses of the lightest chargino and neutralino.
  In the context of the simplified models, charginos lighter than XXX and neutralino masses below YYYY
- are excluded in the 95\% confidence level.
+ are excluded at 95\% confidence level.
 }    
 
 % >> PDF Metadata
@@ -65,7 +70,7 @@
 % (3) No curly braces {}.
 \hypersetup{%
 pdfauthor={IPM TauTau Group},%
-pdftitle={Search for electroweak production of charginos in di-tau final states},%
+pdftitle={Search for electroweak production of charginos in di-tau final states in pp collisions at sqrt(s)= 8 TeV with the CMS detector},%
 pdfsubject={CMS},%
 pdfkeywords={CMS, physics, software, computing}}
 
@@ -78,8 +83,8 @@ pdfkeywords={CMS, physics, software, computing}}
 %% The latter works for you, but our parser looks for the braces and will break when uploading the document.
 %%%%%%%%%%%%%%%
 \input{Introduction}
-\input{MT2Definition}
 \input{CMSRec}
+\input{MT2Definition}
 \input{SelectionTauTau}
 \input{SelectionLepTau}
 \input{Backgrounds}

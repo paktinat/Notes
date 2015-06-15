@@ -383,33 +383,33 @@ tex->SetNDC();
    leg->SetLineWidth(2);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("MT2_QCD","QCD","f");
+ //   TLegendEntry *entry=leg->AddEntry("MT2_QCD","QCD","f");
 
-   ci = TColor::GetColor("#cccc00");
+//    ci = TColor::GetColor("#cccc00");
+//    entry->SetFillColor(ci);
+//    entry->SetFillStyle(1001);
+
+//    ci = TColor::GetColor("#cccc00");
+//    entry->SetLineColor(ci);
+//    entry->SetLineStyle(1);
+//    entry->SetLineWidth(2);
+//    entry->SetMarkerColor(1);
+//    entry->SetMarkerStyle(21);
+//    entry->SetMarkerSize(1);
+    TLegendEntry *entry=leg->AddEntry("MT2_W","W(MC)","f");
+
+   ci = TColor::GetColor("#00cc00");
    entry->SetFillColor(ci);
    entry->SetFillStyle(1001);
 
-   ci = TColor::GetColor("#cccc00");
+   ci = TColor::GetColor("#00cc00");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2_W","W","f");
-
-   ci = TColor::GetColor("#00cc00");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#00cc00");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2_ZX","ZX","f");
+//    entry=leg->AddEntry("MT2_ZX","ZX","f");
 
    ci = TColor::GetColor("#006600");
    entry->SetFillColor(ci);
@@ -422,7 +422,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2_Top","Top","f");
+//    entry=leg->AddEntry("MT2_Top","Top","f");
 
    ci = TColor::GetColor("#3366cc");
    entry->SetFillColor(ci);
@@ -435,7 +435,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2_WW","WW","f");
+//    entry=leg->AddEntry("MT2_WW","WW","f");
 
    ci = TColor::GetColor("#000066");
    entry->SetFillColor(ci);
@@ -448,7 +448,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2_Higgs","Higgs","f");
+//    entry=leg->AddEntry("MT2_Higgs","Higgs","f");
 
    ci = TColor::GetColor("#ff0000");
    entry->SetFillColor(ci);
@@ -461,14 +461,14 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2_susy","SMS","l");
+//    entry=leg->AddEntry("MT2_susy","SMS","l");
    entry->SetLineColor(1);
    entry->SetLineStyle(3);
    entry->SetLineWidth(4);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2_data","data","l");
+   entry=leg->AddEntry("MT2_data","Estimation (MC)","l");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
