@@ -1,19 +1,26 @@
 \section{Backgrounds}
 \label{sect:bkgLepTau}
-In different channels, the contribution of the events with a fake \Tau is usually estimated using the data. For the prompt \Tau's, we trust 
-the MC, but it is validated in a signal like region. In continue, estimation of different backgrounds are explained.
+In different channels, the contribution of the events with a fake \Tau is estimated using the data. For the prompt \Tau's, we trust 
+the MC, but it is validated in a signal like region. 
+In this section we will discuss the different background estimation
+techniques used.
+%In continue, estimation of different backgrounds are explained.
 
 \subsection{\texorpdfstring{QCD background estimation in $\tauTau$ channel}{QCD background estimation in tau-tau channel}}
-Due to the large cross section of the QCD multijet events and lack of the statistics, there is a large statistical uncertainty on the 
-yield of the QCD events from MC. On the other hand, these events contribute to the signal selection of the \tauTau channel, when two jets are 
+%Due to the large cross section of the QCD multijet events and lack of the statistics, there is a large statistical uncertainty on the 
+%yield of the QCD events from MC. On the other hand, 
+{\bf FIXME ratio description, figures, ..}
+The QCD multijet events contribute to the signal selection of the \tauTau channel, when two jets are 
 fakely identified as \Tau's. The fake rate can be different between data and MC, so a data driven method is developed to estimate the 
 contribution of the QCD multijet events. 
 An ABCD method is used when the two uncorrelated variables are the search variable (\mttwo in \binone and \SumMT in \bintwo) and the 
-isolation of the \Tau's. In the signal region, loose \Tau's ($I_{\Tau} <$ 2 \GeV ) are excluded, but in the control region, only the pairs with at least a loose \Tau 
+isolation of the \Tau's. In the signal region, loosely isolated  \Tau's 
+%($I_{\Tau} <$ 2 \GeV ) 
+are excluded, but in the control region, only the pairs with at least a loosely isolated \Tau 
 are selected. These pairs are requested to be same-sign to suppress the signal contamination. To further increase the statistics 
 in different regions, the cut on the minimum angle in the transverse plane between the \MET and the jets is removed. The efficiency of this
 cut is multiplied to the final estimation. In the low \mttwo or \SumMT, the ratio of the signal like events over the same-sign loose pairs 
-is found and verfied to be flat. 
+is found and verfied to be flat as a function of the search variable. 
 %A horizental line is fitted to
 This ratio is multiplied to the same-sign loose pairs in high \mttwo or \SumMT and corrected by the efficiency of the 
 cut on the minimum angle between the \MET and the jets, to find the QCD contamination in the signal region. The method to extract the
@@ -22,8 +29,8 @@ ratio and the efficiency are varied to estimate the systematic uncertainty of th
 
 
 \subsection{\texorpdfstring{Wjets background estimation in $\tauTau$ channel}{Wjets background estimation in tau-tau channel}}
-In \binone of the \tauTau channel, the number of remaining events for Wjets is zero, but the weight of the events is larger than one and 
-it can introduce a large uncertainty on the yields of the backgrounds. To have a better estimation of the Wjets contribution in the final yields,
+In \binone of the \tauTau channel, the number of remaining events for Wjets has a large statistical uncertainty. 
+To have a better estimation of the Wjets contribution in the final yields,
 the yield before the last cut (\mttwo $>$ 90 \GeV) is multiplied by the efficiency of the cut. To find the efficiency, several cuts are relaxed 
 to have a high statistics sample. The cut efficiency is found in the exclusive samples that either fail or pass each cut. 
 A horizontal line is fitted to the measured values to extract the cut efficiency. The main source of the systematic uncertainty on the backgrounds 
