@@ -1,18 +1,25 @@
 \section{\texorpdfstring{Selection cuts for \Tau\Tau channel}{Selection cuts for tau-tau channel}}
 \label{sect:tauTauCuts}
-The selection of the events from the collisions for different channels 
-is done with the dedicated triggers that use the combination of muon, electron 
-and tau lepton reconstructed in the trigger levels \cite{CMS:2013hoa,Chatrchyan:2012xi,Chatrchyan:2011nv}.
+The selection of the events from the collisions for \Tau\Tau channel
+is done with a dedicated trigger that uses the combination of 
+two $\tau$ leptons reconstructed in the trigger levels \cite{CMS:2013hoa,Chatrchyan:2012xi,Chatrchyan:2011nv}.
+The events with two \Tau's with \PT $>$ 35 \GeV and $|\eta|<$2.1 which have a medium isolation are recorded. 
 
-To select the events for \Tau\Tau channel, two reconstructed \Tau which are oppsitlely charged are selected. Both \Tau's are asked to 
-have \PT $>$ 45 \GeV and $|\eta| <$ 2.1 and $I_{\Tau}$ less than 1\GeV. In the case of more than one pair, the pair that minimizes the sum of
-$I_{\Tau}$ is selected.
+To select the events for \Tau\Tau channel, two reconstructed \Tau which are oppositlely charged are selected. Both \Tau's are asked to 
+have \PT $>$ 45 \GeV and $|\eta| <$ 2.1 and pass the medium isolation criteria.
+%$I_{\Tau}$ less than 1\GeV. 
+In the case of more than one pair, the pair with the tightest isolation 
+%that minimizes the sum of $I_{\Tau}$ 
+is selected.
 The events with extra electrons or muons (\PT $>$ 10 \GeV, $\eta <$ 2.4 and loose isolation criteria) 
-are rejected to suppress the contribution of the associatiated production of \Z with vector bosons.
+are rejected to suppress %the contribution of the associatiated production of \Z with vector bosons.
+the background caused by diboson production.
+%A Monte Carlo (MC) study shows that the invariant mass distribution of the two \Tau's coming from a \Z boson can be approximated 
+%with a gaussian distribution with a peak close to 70 \GeV and a width of about 15 \GeV, so the events with the invariant mass of  
+%the two \Tau's in this range are excluded (\Z-veto). 
 
-A Monte Carlo (MC) study shows that the invariant mass distribution of the two \Tau's coming from a \Z boson can be approximated with a gaussian 
-distribution with a peak close to 70 \GeV and a width of about 15 \GeV, so the events with the invariant mass of  
-the two \Tau's in this range are excluded (\Z-veto). A minimum cut of 15 \GeV on this invariant mass helps to get rid of the low mass
+The di-\Tau events that thier invariant mass is between 55 and 85 \GeV are rejected to suppress the \Z$\rightarrow$\Tau\Tau events (\Z veto).
+A minimum cut of 15 \GeV on this invariant mass helps to get rid of the low mass
 QCD resonances. The minimum angle in the transverse plane between the \MET and the jets with \PT $>$ 40 \GeV and $|\eta| <$ 5 
 is asked to be greater than 1. This is a cut against the events with a fake \MET including the QCD multijet events. A soft cut on 
 \mttwo ($>$ 40 \GeV) increases this rejection power.
