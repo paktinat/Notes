@@ -202,7 +202,7 @@
    h_stack_stack_1_stack_1->SetDirectory(0);
    h_stack_stack_1_stack_1->SetStats(0);
    h_stack_stack_1_stack_1->SetLineWidth(2);
-   h_stack_stack_1_stack_1->GetXaxis()->SetTitle("tauMT");
+   //   h_stack_stack_1_stack_1->GetXaxis()->SetTitle("tauMT");
    h_stack_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
    h_stack_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
    h_stack_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
