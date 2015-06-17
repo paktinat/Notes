@@ -40,9 +40,11 @@ to be able to combine the statistics at the end.
 Two bins are defined as:
 \begin{itemize}
 \item {\bf\binone}: \mttwo $>$ 90 \GeV;
-\item {\bf\bintwo}: \mttwo $<$ 90 \GeV and \SumMT $>$ 250 \GeV; b-tagged jets are vetoed.{\FIXME bvetdo}
+\item {\bf\bintwo}: \mttwo $<$ 90 \GeV and \SumMT $>$ 250 \GeV; b-tagged jets are vetoed.
 \end{itemize}
 Vetoing the b-tagged jets in the second bin is useful against the backgrounds containting a top quark, especially \ttbar events. 
+To tag the b-jets, the medium working point of combined secondary vertex algorithm is used \cite{Chatrchyan:2012jua}. The b-jets have
+\PT $>$ 20 \GeV and $|\eta| < $ 2.4.
 
 The event yields can be found in table~\ref{tbl:cutflowtable}. The yields for three SUSY signal points, 
 corresponding to a low mass difference $(m_{\chione}=180\GeV,~m_{\PSGczDo}=60\GeV)$, 
@@ -51,9 +53,9 @@ a moderate mass difference $(m_{\chione}=240\GeV,~m_{\PSGczDo}=40\GeV)$ and a hi
 \begin{table}[!Hhtb]
 \begin{center}
 \begin{small}
-\begin{tabular}{lccccccccccc}
+\begin{tabular}{lcccccccccc}
 \hline\hline
-  &SUSY(180,60)&(240,40)&(380,1)&Higgs&QCD&WW&W&DY&Top&Total Bkg&Data\\
+  &SUSY(180,60)&(240,40)&(380,1)&Higgs&QCD&WW&W&DY&Top&Total Bkg\\%&Data\\
 \hline\hline
 %\multirow{5}{*}{Pre-Selection}&2 $\tau_h$ Selection&41.97&30.96&11.28&87.67&22081.57&13.71&595.80&2133.23&115.33&25027.32$\pm$6971.15&19615\\
 %&$e$ and $\mu$ Veto&38.68&27.89&9.87&81.53&19272.05&11.21&543.42&1961.29&95.85&21965.34$\pm$6387.87&18526\\
@@ -62,14 +64,14 @@ a moderate mass difference $(m_{\chione}=240\GeV,~m_{\PSGczDo}=40\GeV)$ and a hi
 %&$M_{T2} > $ 40&9.50&11.66&5.60&0.89&135.29&1.11&31.93&13.17&5.26&187.65$\pm$135.47&131\\
 %\hline
 %\binone&$M_{T2} > $ 90&0.59&3.89&3.81&0.17&$<$135.29&0.02&$<$1.28&0.56&$<$0.47&0.75$\pm$0.08&1\\
-\binone &0.59&3.89&3.81&0.17&$<$135.29&0.02&$<$1.28&0.56&$<$0.47&0.75$\pm$0.08&1\\
+\binone &0.59&3.89&3.81&0.17& 0.0 &0.02&0.0&0.56&0.0 &0.75$\pm$0.08\\%&1\\
 \hline
 %\multirow{3}{*}{\bintwo}&b-jet veto&7.92 &9.33 &4.67 &0.75&135.20&0.96&29.13&11.15&0.78&177.98$\pm$135.36&115\\
 %&$M_{T2} < $ 90&7.42 &6.17 &1.51 &0.61&135.20&0.94&29.13&10.65&0.78&177.32$\pm$135.36&114\\
-\bintwo &2.17&3.36  &1.08&0.07&$<$135.20&0.15&0.43&0.81&0.53&1.99$\pm$0.87&2\\
+\bintwo &2.17&3.36  &1.08&0.07& 0.0 &0.15&0.43&0.81&0.53&1.99$\pm$0.87\\%&2\\
 \hline\hline
 \end{tabular}
-\caption{{\bf FIXME 135 remove data} MC driven yields for $\tauTau$ channel. The quoted uncertainties are only statistical. When the remaining events from MC are zero, the weight of the events is reported as the upper bound.}
+\caption{ MC driven yields for $\tauTau$ channel. The quoted uncertainties are only statistical. When the remaining events from MC are zero, the weight of the events is reported as the upper bound.}
 \label{tbl:cutflowtable}
 \end{small}
 \end{center}
@@ -86,6 +88,6 @@ find the distribution of QCD in opposite-sign region.
 \centering
 \includegraphics[angle=0,scale=0.35]{TauTauFigs/MT2_SSQCD_dataunblinding.png}
 \includegraphics[angle=0,scale=0.35]{TauTauFigs/SumMT_SSQCD_dataunblinding.png} \\
-\caption{{\bf FIXME variable bin size, discrepancy 1st bin right}The distributions of \mttwo (left) and \SumMT (right) after pre-selection. The b-jet veto cut is also applied on the right plot.}
+\caption{The distributions of \mttwo (left) and \SumMT (right) after pre-selection. The b-jet veto cut is also applied on the right plot.}
 \label{fig:comparison}
 \end{figure}
