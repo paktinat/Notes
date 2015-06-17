@@ -96,6 +96,7 @@
    h2_copy__2__1->SetDirectory(0);
    h2_copy__2__1->SetStats(0);
    h2_copy__2__1->SetLineWidth(2);
+   h2_copy__2__1->SetLineColor(1);
    h2_copy__2__1->SetMarkerStyle(20);
    h2_copy__2__1->GetXaxis()->SetNdivisions(505);
    h2_copy__2__1->GetXaxis()->SetLabelFont(42);
@@ -656,7 +657,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("NULL","SUSY","f");
+   entry=leg->AddEntry(h_susy,"SUSY(380,1)","f");
    entry->SetFillStyle(1001);
 
    ci = TColor::GetColor("#660000");

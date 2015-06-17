@@ -10,7 +10,8 @@ void MT2()
    MT2_ratio_AllSUSYc_ratio_MT2_MT2PreCut->SetBorderMode(0);
    MT2_ratio_AllSUSYc_ratio_MT2_MT2PreCut->SetBorderSize(2);
    MT2_ratio_AllSUSYc_ratio_MT2_MT2PreCut->SetFrameBorderMode(0);
-  
+   MT2_ratio_AllSUSYc_ratio_MT2_MT2PreCut->SetFrameLineWidth(3);
+
 // ------------>Primitives in pad: MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut
    TPad *MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut = new TPad("MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut", "Pad containing the overlay plot",0,0.1829268,1,1);
    MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut->Draw();
@@ -25,7 +26,7 @@ void MT2()
    MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut->SetRightMargin(0.08);
    MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut->SetTopMargin(0.06895515);
    MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut->SetBottomMargin(0.07206074);
-   MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut->SetFrameBorderMode(0);
+   MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut->SetFrameLineWidth(3);
    MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut->SetFrameBorderMode(0);
    
    THStack *MT2PreCut_MT2 = new THStack();
@@ -595,7 +596,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("NULL","SUSY(380,1)","f");
+   entry=leg->AddEntry(MT2PreCut_MT2_SUSY_380_120,"SUSY(380,1)","f");
    entry->SetFillStyle(1001);
 
    ci = TColor::GetColor("#660000");
@@ -634,7 +635,7 @@ tex->SetNDC();
    MT2_ratio_AllSUSY_ratiopad_MT2_MT2PreCut->SetRightMargin(0.07744107);
    MT2_ratio_AllSUSY_ratiopad_MT2_MT2PreCut->SetTopMargin(0.08490566);
    MT2_ratio_AllSUSY_ratiopad_MT2_MT2PreCut->SetBottomMargin(0.2830189);
-   MT2_ratio_AllSUSY_ratiopad_MT2_MT2PreCut->SetFrameBorderMode(0);
+   MT2_ratio_AllSUSY_ratiopad_MT2_MT2PreCut->SetFrameLineWidth(3);
    MT2_ratio_AllSUSY_ratiopad_MT2_MT2PreCut->SetFrameBorderMode(0);
    
    TH1D *h1_copy22 = new TH1D("h1_copy22","",11,40,150);
@@ -678,7 +679,7 @@ tex->SetNDC();
    h1_copy22->GetXaxis()->SetTitleOffset(0.5);
    h1_copy22->GetXaxis()->SetTitleFont(42);
    h1_copy22->GetYaxis()->SetTitle("Data / MC");
-   h1_copy22->GetYaxis()->SetNdivisions(509);
+   h1_copy22->GetYaxis()->SetNdivisions(505);
    h1_copy22->GetYaxis()->SetLabelFont(42);
    h1_copy22->GetYaxis()->SetLabelSize(0.19);
    h1_copy22->GetYaxis()->SetTitleSize(0.18);
