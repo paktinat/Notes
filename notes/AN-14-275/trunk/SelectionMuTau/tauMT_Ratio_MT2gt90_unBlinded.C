@@ -59,7 +59,7 @@
    h1_copy->SetFillColor(1);
    h1_copy->SetFillStyle(3001);
    h1_copy->SetLineWidth(2);
-   h1_copy->GetXaxis()->SetTitle("tauMT");
+   h1_copy->GetXaxis()->SetTitle("TauMT");
    h1_copy->GetXaxis()->SetNdivisions(505);
    h1_copy->GetXaxis()->SetLabelFont(42);
    h1_copy->GetXaxis()->SetLabelSize(0);
