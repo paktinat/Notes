@@ -2,7 +2,7 @@ void MT2()
 {
 //=========Macro generated from canvas: MT2_ratio_AllSUSYc_ratio_MT2_MT2PreCut/
 //=========  (Sun Mar 15 19:05:14 2015) by ROOT version6.02/04
-   TCanvas *MT2_ratio_AllSUSYc_ratio_MT2_MT2PreCut = new TCanvas("MT2_ratio_AllSUSYc_ratio_MT2_MT2PreCut", "",422,191,600,600);
+   TCanvas *MT2_ratio_AllSUSYc_ratio_MT2_MT2PreCut = new TCanvas("MT2_ratio_AllSUSYc_ratio_MT2_MT2PreCut", "",9,58,600,630);
    gROOT->SetEditHistograms();
    MT2_ratio_AllSUSYc_ratio_MT2_MT2PreCut->SetHighLightColor(2);
    MT2_ratio_AllSUSYc_ratio_MT2_MT2PreCut->Range(0,0,1,1);

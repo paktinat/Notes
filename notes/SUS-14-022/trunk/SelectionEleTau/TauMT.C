@@ -2,7 +2,7 @@ void TauMT()
 {
 //=========Macro generated from canvas: TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut/
 //=========  (Sun May 17 15:18:12 2015) by ROOT version6.02/04
-   TCanvas *TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut = new TCanvas("TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut", "",400,221,600,600);
+   TCanvas *TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut = new TCanvas("TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut", "",9,58,600,630);
    TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->SetHighLightColor(2);
    TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->Range(0,0,1,1);
    TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->SetFillColor(0);
