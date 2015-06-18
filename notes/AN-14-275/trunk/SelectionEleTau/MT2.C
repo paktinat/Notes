@@ -46,9 +46,10 @@ void MT2()
    ci = TColor::GetColor("#000099");
    MT2PreCut_MT2_stack_2->SetLineColor(ci);
    //   MT2PreCut_MT2_stack_2->GetXaxis()->SetTitle("MT2");
+   MT2PreCut_MT2_stack_2->GetXaxis()->SetNdivisions(505);
    MT2PreCut_MT2_stack_2->GetXaxis()->SetLabelFont(42);
-   MT2PreCut_MT2_stack_2->GetXaxis()->SetLabelSize(0.035);
-   MT2PreCut_MT2_stack_2->GetXaxis()->SetTitleSize(0.035);
+   MT2PreCut_MT2_stack_2->GetXaxis()->SetLabelSize(0.05);
+   MT2PreCut_MT2_stack_2->GetXaxis()->SetTitleSize(0.05);
    MT2PreCut_MT2_stack_2->GetXaxis()->SetTitleFont(42);
    MT2PreCut_MT2_stack_2->GetYaxis()->SetTitle("Events");
    MT2PreCut_MT2_stack_2->GetYaxis()->SetLabelFont(42);
