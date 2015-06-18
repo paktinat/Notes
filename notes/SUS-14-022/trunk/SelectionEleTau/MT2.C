@@ -13,7 +13,7 @@ void MT2()
    MT2_ratio_AllSUSYc_ratio_MT2_MT2PreCut->SetFrameLineWidth(3);
 
 // ------------>Primitives in pad: MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut
-   TPad *MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut = new TPad("MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut", "Pad containing the overlay plot",0,0.1829268,1,1);
+   TPad *MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut = new TPad("MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut", "Pad containing the overlay plot",0,0.211838,1,1);
    MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut->Draw();
    MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut->cd();
    MT2_ratio_AllSUSY_plotpad_MT2_MT2PreCut->Range(21.64218,-2.833557,161.1615,4.817841);
@@ -45,7 +45,7 @@ void MT2()
    TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#000099");
    MT2PreCut_MT2_stack_2->SetLineColor(ci);
-   MT2PreCut_MT2_stack_2->GetXaxis()->SetTitle("MT2");
+   //   MT2PreCut_MT2_stack_2->GetXaxis()->SetTitle("MT2");
    MT2PreCut_MT2_stack_2->GetXaxis()->SetLabelFont(42);
    MT2PreCut_MT2_stack_2->GetXaxis()->SetLabelSize(0.035);
    MT2PreCut_MT2_stack_2->GetXaxis()->SetTitleSize(0.035);
@@ -624,7 +624,7 @@ tex->SetNDC();
    MT2_ratio_AllSUSYc_ratio_MT2_MT2PreCut->cd();
   
 // ------------>Primitives in pad: MT2_ratio_AllSUSY_ratiopad_MT2_MT2PreCut
-   TPad *MT2_ratio_AllSUSY_ratiopad_MT2_MT2PreCut = new TPad("MT2_ratio_AllSUSY_ratiopad_MT2_MT2PreCut", "Pad containing the ratio",0,0.01916376,0.9966443,0.2038328);
+   TPad *MT2_ratio_AllSUSY_ratiopad_MT2_MT2PreCut = new TPad("MT2_ratio_AllSUSY_ratiopad_MT2_MT2PreCut", "Pad containing the ratio",0,0.01863354,0.9967105,0.2189441);
    MT2_ratio_AllSUSY_ratiopad_MT2_MT2PreCut->Draw();
    MT2_ratio_AllSUSY_ratiopad_MT2_MT2PreCut->cd();
    MT2_ratio_AllSUSY_ratiopad_MT2_MT2PreCut->Range(21.74468,-0.8955223,160.766,2.268657);
