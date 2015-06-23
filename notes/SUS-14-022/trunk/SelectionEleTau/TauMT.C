@@ -1,13 +1,14 @@
-void /home/hbakhshi/Documents/Notes/Team/notes/AN-14-275/trunk/SelectionEleTau/TauMT()
+void TauMT()
 {
 //=========Macro generated from canvas: TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut/
 //=========  (Sun May 17 15:18:12 2015) by ROOT version6.02/04
-   TCanvas *TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut = new TCanvas("TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut", "",400,221,600,600);
+   TCanvas *TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut = new TCanvas("TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut", "",9,58,600,630);
    TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->SetHighLightColor(2);
    TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->Range(0,0,1,1);
    TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->SetFillColor(0);
    TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->SetBorderMode(0);
    TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->SetBorderSize(2);
+   TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->SetFrameLineWidth(3);
    TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->SetFrameBorderMode(0);
   
 // ------------>Primitives in pad: TauMT_ratio_AllSUSY_plotpad_TauMT_MT2Cut
@@ -24,7 +25,7 @@ void /home/hbakhshi/Documents/Notes/Team/notes/AN-14-275/trunk/SelectionEleTau/T
    TauMT_ratio_AllSUSY_plotpad_TauMT_MT2Cut->SetRightMargin(0.08);
    TauMT_ratio_AllSUSY_plotpad_TauMT_MT2Cut->SetTopMargin(0.06895515);
    TauMT_ratio_AllSUSY_plotpad_TauMT_MT2Cut->SetBottomMargin(0.07206074);
-   TauMT_ratio_AllSUSY_plotpad_TauMT_MT2Cut->SetFrameBorderMode(0);
+   TauMT_ratio_AllSUSY_plotpad_TauMT_MT2Cut->SetFrameLineWidth(3);
    TauMT_ratio_AllSUSY_plotpad_TauMT_MT2Cut->SetFrameBorderMode(0);
    
    THStack *MT2Cut_TauMT = new THStack();
@@ -43,10 +44,11 @@ void /home/hbakhshi/Documents/Notes/Team/notes/AN-14-275/trunk/SelectionEleTau/T
    TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#000099");
    MT2Cut_TauMT_stack_1->SetLineColor(ci);
-   MT2Cut_TauMT_stack_1->GetXaxis()->SetTitle("TauMT");
+//    MT2Cut_TauMT_stack_1->GetXaxis()->SetTitle("TauMT");
+   MT2Cut_TauMT_stack_1->GetXaxis()->SetNdivisions(505);
    MT2Cut_TauMT_stack_1->GetXaxis()->SetLabelFont(42);
-   MT2Cut_TauMT_stack_1->GetXaxis()->SetLabelSize(0.035);
-   MT2Cut_TauMT_stack_1->GetXaxis()->SetTitleSize(0.035);
+   MT2Cut_TauMT_stack_1->GetXaxis()->SetLabelSize(0.05);
+   MT2Cut_TauMT_stack_1->GetXaxis()->SetTitleSize(0.05);
    MT2Cut_TauMT_stack_1->GetXaxis()->SetTitleFont(42);
    MT2Cut_TauMT_stack_1->GetYaxis()->SetTitle("Events");
    MT2Cut_TauMT_stack_1->GetYaxis()->SetLabelFont(42);
@@ -87,7 +89,7 @@ void /home/hbakhshi/Documents/Notes/Team/notes/AN-14-275/trunk/SelectionEleTau/T
    MT2Cut_TauMT_QCD1->GetZaxis()->SetLabelSize(0.035);
    MT2Cut_TauMT_QCD1->GetZaxis()->SetTitleSize(0.035);
    MT2Cut_TauMT_QCD1->GetZaxis()->SetTitleFont(42);
-   MT2Cut_TauMT->Add(MT2Cut_TauMT_QCD,"");
+   MT2Cut_TauMT->Add(MT2Cut_TauMT_QCD1,"");
    
    TH1D *MT2Cut_TauMT_W2 = new TH1D("MT2Cut_TauMT_W2","",10,0,500);
    MT2Cut_TauMT_W2->SetBinContent(3,10.33283);
@@ -125,7 +127,7 @@ void /home/hbakhshi/Documents/Notes/Team/notes/AN-14-275/trunk/SelectionEleTau/T
    MT2Cut_TauMT_W2->GetZaxis()->SetLabelSize(0.035);
    MT2Cut_TauMT_W2->GetZaxis()->SetTitleSize(0.035);
    MT2Cut_TauMT_W2->GetZaxis()->SetTitleFont(42);
-   MT2Cut_TauMT->Add(MT2Cut_TauMT_W,"");
+   MT2Cut_TauMT->Add(MT2Cut_TauMT_W2,"");
    
    TH1D *MT2Cut_TauMT_ZX3 = new TH1D("MT2Cut_TauMT_ZX3","",10,0,500);
    MT2Cut_TauMT_ZX3->SetBinContent(3,0.3265244);
@@ -168,7 +170,7 @@ void /home/hbakhshi/Documents/Notes/Team/notes/AN-14-275/trunk/SelectionEleTau/T
    MT2Cut_TauMT_ZX3->GetZaxis()->SetLabelSize(0.035);
    MT2Cut_TauMT_ZX3->GetZaxis()->SetTitleSize(0.035);
    MT2Cut_TauMT_ZX3->GetZaxis()->SetTitleFont(42);
-   MT2Cut_TauMT->Add(MT2Cut_TauMT_ZX,"");
+   MT2Cut_TauMT->Add(MT2Cut_TauMT_ZX3,"");
    
    TH1D *MT2Cut_TauMT_Top4 = new TH1D("MT2Cut_TauMT_Top4","",10,0,500);
    MT2Cut_TauMT_Top4->SetBinContent(4,0.6260808);
@@ -200,7 +202,7 @@ void /home/hbakhshi/Documents/Notes/Team/notes/AN-14-275/trunk/SelectionEleTau/T
    MT2Cut_TauMT_Top4->GetZaxis()->SetLabelSize(0.035);
    MT2Cut_TauMT_Top4->GetZaxis()->SetTitleSize(0.035);
    MT2Cut_TauMT_Top4->GetZaxis()->SetTitleFont(42);
-   MT2Cut_TauMT->Add(MT2Cut_TauMT_Top,"");
+   MT2Cut_TauMT->Add(MT2Cut_TauMT_Top4,"");
    
    TH1D *MT2Cut_TauMT_WW5 = new TH1D("MT2Cut_TauMT_WW5","",10,0,500);
    MT2Cut_TauMT_WW5->SetBinContent(3,0.9061542);
@@ -236,7 +238,7 @@ void /home/hbakhshi/Documents/Notes/Team/notes/AN-14-275/trunk/SelectionEleTau/T
    MT2Cut_TauMT_WW5->GetZaxis()->SetLabelSize(0.035);
    MT2Cut_TauMT_WW5->GetZaxis()->SetTitleSize(0.035);
    MT2Cut_TauMT_WW5->GetZaxis()->SetTitleFont(42);
-   MT2Cut_TauMT->Add(MT2Cut_TauMT_WW,"");
+   MT2Cut_TauMT->Add(MT2Cut_TauMT_WW5,"");
    
    TH1D *MT2Cut_TauMT_Higgs6 = new TH1D("MT2Cut_TauMT_Higgs6","",10,0,500);
    MT2Cut_TauMT_Higgs6->SetBinContent(3,0.05743365);
@@ -272,7 +274,7 @@ void /home/hbakhshi/Documents/Notes/Team/notes/AN-14-275/trunk/SelectionEleTau/T
    MT2Cut_TauMT_Higgs6->GetZaxis()->SetLabelSize(0.035);
    MT2Cut_TauMT_Higgs6->GetZaxis()->SetTitleSize(0.035);
    MT2Cut_TauMT_Higgs6->GetZaxis()->SetTitleFont(42);
-   MT2Cut_TauMT->Add(MT2Cut_TauMT_Higgs,"");
+   MT2Cut_TauMT->Add(MT2Cut_TauMT_Higgs6,"");
    MT2Cut_TauMT->Draw("hist");
    
    TH1D *h2_copy7 = new TH1D("h2_copy7","",10,0,500);
@@ -291,12 +293,15 @@ void /home/hbakhshi/Documents/Notes/Team/notes/AN-14-275/trunk/SelectionEleTau/T
    h2_copy7->SetEntries(29);
    h2_copy7->SetDirectory(0);
    h2_copy7->SetStats(0);
+   h2_copy7->SetFillColor(1);
+   h2_copy7->SetFillStyle(3001);
+   h2_copy7->SetLineWidth(2);
 
    ci = TColor::GetColor("#ff0000");
    h2_copy7->SetFillColor(ci);
 
    ci = TColor::GetColor("#ff0000");
-   h2_copy7->SetLineColor(ci);
+   h2_copy7->SetLineColor(1);
    h2_copy7->SetLineWidth(2);
    h2_copy7->SetMarkerStyle(20);
    h2_copy7->GetXaxis()->SetLabelFont(42);
@@ -338,6 +343,8 @@ void /home/hbakhshi/Documents/Notes/Team/notes/AN-14-275/trunk/SelectionEleTau/T
    MT2Cut_TauMT_SUSY_380_18->SetDirectory(0);
    MT2Cut_TauMT_SUSY_380_18->SetStats(0);
    MT2Cut_TauMT_SUSY_380_18->SetFillStyle(0);
+   MT2Cut_TauMT_SUSY_380_18->SetLineStyle(3);
+   MT2Cut_TauMT_SUSY_380_18->SetLineColor(1);
    MT2Cut_TauMT_SUSY_380_18->SetLineWidth(4);
    MT2Cut_TauMT_SUSY_380_18->SetMarkerStyle(20);
    MT2Cut_TauMT_SUSY_380_18->GetXaxis()->SetLabelFont(42);
@@ -353,7 +360,7 @@ void /home/hbakhshi/Documents/Notes/Team/notes/AN-14-275/trunk/SelectionEleTau/T
    MT2Cut_TauMT_SUSY_380_18->GetZaxis()->SetTitleSize(0.035);
    MT2Cut_TauMT_SUSY_380_18->GetZaxis()->SetTitleFont(42);
    MT2Cut_TauMT_SUSY_380_18->Draw("samehist");
-   TLatex *   tex = new TLatex(0.13,0.943,"");
+   TLatex *   tex = new TLatex(0.13,0.943,"MT2 > 90");
 tex->SetNDC();
    tex->SetTextSize(0.03);
    tex->SetLineWidth(2);
@@ -397,7 +404,7 @@ tex->SetNDC();
    leg->SetLineWidth(1);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("MT2Cut_TauMT_QCD","QCD","f");
+   TLegendEntry *entry=leg->AddEntry("MT2Cut_TauMT_QCD1","QCD","f");
 
    ci = TColor::GetColor("#cccc00");
    entry->SetFillColor(ci);
@@ -469,37 +476,69 @@ tex->SetNDC();
    entry->SetTextFont(62);
    entry=leg->AddEntry("MT2Cut_TauMT_Higgs","Higgs","f");
 
-   ci = TColor::GetColor("#ff0000");
-   entry->SetFillColor(ci);
+ //   ci = TColor::GetColor("#ff0000");
+//    entry->SetFillColor(ci);
+//    entry->SetFillStyle(1001);
+
+//    ci = TColor::GetColor("#ff0000");
+//    entry->SetLineColor(ci);
+//    entry->SetLineStyle(1);
+//    entry->SetLineWidth(2);
+//    entry->SetMarkerColor(1);
+//    entry->SetMarkerStyle(21);
+//    entry->SetMarkerSize(1);
+//    entry->SetTextFont(62);
+//    entry=leg->AddEntry("MT2Cut_TauMT_data","data","l");
+
+//    ci = TColor::GetColor("#ff0000");
+//    entry->SetLineColor(ci);
+//    entry->SetLineStyle(1);
+//    entry->SetLineWidth(2);
+//    entry->SetMarkerColor(1);
+//    entry->SetMarkerStyle(21);
+//    entry->SetMarkerSize(1);
+//    entry->SetTextFont(62);
+//    entry=leg->AddEntry("MT2Cut_TauMT_SUSY_380_1","380_1","l");
+//    entry->SetLineColor(1);
+//    entry->SetLineStyle(1);
+//    entry->SetLineWidth(4);
+//    entry->SetMarkerColor(1);
+//    entry->SetMarkerStyle(21);
+//    entry->SetMarkerSize(1);
+//    entry->SetTextFont(62);
+   entry->SetFillColor(2);
+   entry->SetFillStyle(1001);
+   entry->SetLineColor(2);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry=leg->AddEntry(MT2Cut_TauMT_SUSY_380_18,"SUSY(380,1)","f");
    entry->SetFillStyle(1001);
 
-   ci = TColor::GetColor("#ff0000");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   ci = TColor::GetColor("#660000");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(2);
+   entry->SetLineWidth(3);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry->SetTextFont(62);
-   entry=leg->AddEntry("MT2Cut_TauMT_data","data","l");
-
-   ci = TColor::GetColor("#ff0000");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(62);
-   entry=leg->AddEntry("MT2Cut_TauMT_SUSY_380_1","380_1","l");
+   entry=leg->AddEntry("NULL","data","p");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(4);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
+   entry->SetMarkerStyle(20);
    entry->SetMarkerSize(1);
-   entry->SetTextFont(62);
+
+
    leg->Draw();
+   tex = new TLatex(136.8155,40,"CMS Preliminary");
+   tex->SetLineWidth(2);
+   tex->Draw();
+
+
    TauMT_ratio_AllSUSY_plotpad_TauMT_MT2Cut->Modified();
    TauMT_ratio_AllSUSYc_ratio_TauMT_MT2Cut->cd();
   
@@ -515,7 +554,7 @@ tex->SetNDC();
    TauMT_ratio_AllSUSY_ratiopad_TauMT_MT2Cut->SetRightMargin(0.075);
    TauMT_ratio_AllSUSY_ratiopad_TauMT_MT2Cut->SetTopMargin(0.06976745);
    TauMT_ratio_AllSUSY_ratiopad_TauMT_MT2Cut->SetBottomMargin(0.2790698);
-   TauMT_ratio_AllSUSY_ratiopad_TauMT_MT2Cut->SetFrameBorderMode(0);
+   TauMT_ratio_AllSUSY_ratiopad_TauMT_MT2Cut->SetFrameLineWidth(3);
    TauMT_ratio_AllSUSY_ratiopad_TauMT_MT2Cut->SetFrameBorderMode(0);
    
    TH1D *h1_copy10 = new TH1D("h1_copy10","",10,0,500);
@@ -540,7 +579,7 @@ tex->SetNDC();
    h1_copy10->SetStats(0);
    h1_copy10->SetFillColor(1);
    h1_copy10->SetFillStyle(3001);
-   h1_copy10->SetLineColor(ci);
+   h1_copy10->SetLineColor(1);
    h1_copy10->SetLineWidth(2);
    h1_copy10->SetMarkerColor(ci);
    h1_copy10->GetXaxis()->SetTitle("TauMT");
@@ -581,7 +620,8 @@ tex->SetNDC();
    h2_copy11->SetStats(0);
 
    ci = TColor::GetColor("#ff0000");
-   h2_copy11->SetFillColor(ci);
+   h2_copy11->SetFillColor(1);
+   h2_copy11->SetLineColor(1);
    h2_copy11->SetLineWidth(2);
    h2_copy11->SetMarkerStyle(20);
    h2_copy11->GetXaxis()->SetLabelFont(42);

@@ -1,23 +1,30 @@
-%\section{The definition of $\rm {\mttwo}$}
 \section{\texorpdfstring{The definition of $\rm {\mttwo}$}{The definition of MT2}}
 \label{sect:mt2def}
-The variable transverse masss is used to measure the mass of the W boson~\cite{Arnison:1983rp,Banner:1983jy,Affolder:2000bpa,Abazov:2002bu} in its decay to a lepton and a neutrino, where only the transverse missing energy due to undetected neutrino could be measured. It is defined as 
+The $\mttwo$ variable~\cite{Lester:1999tx,Barr:2003rg} is used in this analysis to discriminate between the SUSY signal and the SM backgrounds as proposed in~\cite{Barr:2009wu}. The variable is originally introduced to measure the mass of primary pair-produced particles, decaying eventually to undetected particles (e.g. neutralino). Assuming the two primary supersymmetric particles undergo the same decay chain with visible and undetectable particles in the final state, the system can be described by the visible mass ($\mvisi$), transverse energy ($\etvisi$) and transverse momentum ($\vptvisi$) of each branch ($i=1,2$) together with missing transverse momentum ($\ptvecmiss$) which is shared between the two. The $\ptvecmiss$ is considered as the sum of the neutralinos transverse momenta, $\vec{p}_{\rm T}^{\PSGczDo(i)}$. For decay chains including SM neutrinos, the $\ptvecmiss$ gets some generally minor contributions from $\pt^{\nu}$'s.
+
+The transverse mass of each branch can be written as 
 \begin{linenomath}
 \begin{equation}
 \label{eq:mtdef}
-\mt^{2}= 2\,( \et^l\et^\nu-\vec{\pt}^l.\vec{\pt}^\nu ),
+(\mt^{(i)})^{2}= (\mvisi)^2+m^2_{\PSGczDo}+2(\etvisi\et^{\PSGczDo(i)}-\vptvisi\dot\pt^{\PSGczDo(i)}).
 \end{equation}
 \end{linenomath}
-where for neutrino, $\et^\nu=\pt^\nu$. The kinmatic endpoint of $\mt$ is an estimator for the W boson mass, i.e. $\mt^2\leq m_{\rm W}^2$. 
+For the correct neutralino mass, this distribution has an endpoint at the mass of the primary particle, similar to the W boson transverse mass used to measure $m_{\rm W}$~\cite{Arnison:1983rp,Banner:1983jy,Affolder:2000bpa,Abazov:2002bu}. 
 
-The $\mttwo$ variable~\cite{Lester:1999tx,Barr:2003rg} is introduced and used in this analysis to discriminate between SUSY signal and the SM backgrounds while it is originally intended to estimate the mass of unseen particles. The kinematic endpoint of $\mttwo$ carries model independent information about the mass difference between the primary and the secondary supersymmetric particles. It is in particular useful to study events containing two simultaneous decays of a supersymmetric particle into a visible and an undetectable particle (e.g. neutralino). For the current analysis, $\mttwo$ is defined as
+As a generalization to the transverse mass, the $\mttwo$ variable is proposed to overcome the problem of unknown $\pt^{\PSGczDo(i)}$. The kinematic endpoint of $\mttwo$ carries model independent information about the mass difference between the primary and the secondary particles. In the current analysis and for a given $m_{\PSGczDo}$, the $\mttwo$ variable is defined as
 \begin{linenomath}
 \begin{equation}
 \label{eq:mt2def}
-\mttwo(m_{\neutralino})= \min_{\pt^{\chione}+\pt^{\stau}=\met}\,\left[\,\max\,\{ \, \mt(\pt^{\chione};m_{\neutralino}),\,\mt(\pt^{\stau};m_{\neutralino})\,\}\,\right].
+\mttwo(m_{\PSGczDo})= \min_{\vec{p}_{\rm T}^{\PSGczDo(1)}+\vec{p}_{\rm T}^{\PSGczDo(2)}=\ptvecmiss}\,\left[\,\max\,\{ \, \mt^{(1)},\,\mt^{(2)}\,\}\,\right].
 \end{equation}
 \end{linenomath}
-While for boosted systems in the transverse plain $\mttwo$ can be computed only numerically, there are analytic solutions~\cite{Cho:2007dh} for unboosted scenarios. There, one can write the $\mttwo$ endpoint as a function of the masses. If $m_{\neutralino}$ were known, the $\mttwo$ would be a function of $m_{\chione}-m_{\stau}$. \textbf{FIXME}: We set $m_{\neutralino} =0$ in our calculations.
+For the correct value of $m_{\PSGczDo}$, the kinematic endpoint of the $\mttwo$ distribution is at the mass of the primary particle while it shifts accordingly with the $m_{\PSGczDo}$ being lower or higher than the correct value. In this analysis we set $m_{\PSGczDo}=0$. The visible part of the event here changes from two hadronically decaying $\tau$ leptons ($\hadtau$) to a combination of a muon or an electron with a $\hadtau$ candidate. 
 
-As illustrated in Fig.~\ref{fig:Productions} , two $\tau$ leptons are expected in the final state. Therefore the visible part of the event of this analysis changes from two hadronically decaying $\tau$ leptons ($\hadtau$) to a combination of a muon or an electron with a $\hadtau$ candidate. The resulting $\mttwo$ variable is expected to well reject the multi-jet processes with non-genuine $\met$~\cite{CMS-PAS-SUS-12-002}.
-
+Because of our choice for $m_{\PSGczDo}=0$ and $\mvisi=0$, for the back-to-back events like the QCD multijet, 
+the resulting $\mttwo$ regardless of the value of $\MET$ or $\pt$ is close to zero \ref{eq:mtdef} , but for the signal, due to the two missing particles,
+the visible system is not back-to-back and  \mttwo has larger values.
+%variable is expected to well reject not only events with no genuine $\MET$ but events with a back-to-back topology ($\mttwo=0$) . 
+The distribution of \mttwo reflects the scale of the produced particles and is much higher for sparticles
+compared to the SM particles. Hence, SUSY should appear as an excess in the tail of the \mttwo distribution.
+It was shown previously \cite{Khachatryan:2014qwa} and \cite{Chatrchyan:2012jx}    
+that \mttwo is a powerful variable to search for SUSY in both leptonic and hadronic final states.

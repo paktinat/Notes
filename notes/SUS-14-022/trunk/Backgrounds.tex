@@ -1,52 +1,65 @@
 \section{Backgrounds}
 \label{sect:bkgLepTau}
-In different channels, the contribution of the events with a fake \Tau is usually estimated using the data. For the prompt \Tau's, we trust 
-the MC, but the MC is validated in a signal like region. In continue different backgrounds and the the used method are listed.
+In different channels, the contribution of the events with a fake \Tau is estimated using the data. For the prompt \Tau's, we trust 
+the MC, but it is validated in a signal like region. 
+In this section we will discuss the different background estimation
+techniques used.
+%In continue, estimation of different backgrounds are explained.
 
-\subsection{\texorpdfstring{QCD Background Estimation in $\tauTau$ Channel}{QCD Background Estimation in tau-tau Channel}}
-Due to the large cross section of the QCD multijet events and lack of the statistics, there is a large statistical uncertainty on the 
-yield of the QCD events from MC. On the other hand, these events contribute to the signal selection of the \tauTau channel, when two jets are 
-fakely identified as \Tau's. The fake rate can be different between the data and MC, so a data driven method is developed to estimate the 
+\subsection{\texorpdfstring{QCD background estimation in $\tauTau$ channel}{QCD background estimation in tau-tau channel}}
+%Due to the large cross section of the QCD multijet events and lack of the statistics, there is a large statistical uncertainty on the 
+%yield of the QCD events from MC. On the other hand, 
+The QCD multijet events contribute to the signal selection of the \tauTau channel, when two jets are 
+fakely identified as \Tau's. The fake rate can be different between data and MC, so a data driven method is developed to estimate the 
 contribution of the QCD multijet events. 
 An ABCD method is used when the two uncorrelated variables are the search variable (\mttwo in \binone and \SumMT in \bintwo) and the 
-isolation of the \Tau's. In the signal region, loose \Tau's are excluded, but in the control region, only the pairs with at least a loose \Tau 
-are selected. These pairs are requested to be same sign to suppress the signal contamination. To further increase the statistics 
-in different regions, the cut on the minimum angle in the transverse plane between the \MET and the jets is removed. The efficiency of this
-cut is multiplied to the final estimation. In the low \mttwo or \SumMT, the ratio of the signal like events over the same-sign loose pairs 
-is found and verfied to be flat. 
-%A horizental line is fitted to
+isolation of the \Tau's. In the signal region, loosely isolated  \Tau's 
+%($I_{\Tau} <$ 2 \GeV ) 
+are excluded, but in the control region, only the pairs with at least one loosely isolated \Tau are selected. 
+These pairs are requested to be same-sign to suppress the signal contamination. To further increase the statistics 
+in different regions, the cut on the minimum angle in the transverse plane between the \MET and the jets is removed. The final estimation
+is corrected by the efficiency of this cut which is read from data. 
+In the low \mttwo or \SumMT, the ratio of the signal like events over the same-sign loose pairs 
+is found and verified to be flat as a function of the search variable. 
+%A horizontal line is fitted to
 This ratio is multiplied to the same-sign loose pairs in high \mttwo or \SumMT and corrected by the efficiency of the 
-cut on the minimum angle between the \MET and the jets, to find the QCD contamination in the signal region. The method to extract the
-ratio and the efficiency are varied to estimate the systematic uncertainty of the estimated value.
+cut on the minimum angle between the \MET and the jets, to find the QCD contamination in the signal region. 
+To estimate the systematic uncertainty of the estimated value, the method to extract the
+ratio and the efficiency are varied from approximating by a flat line to fitting by a straight line with a floating slope 
+or using the value of the  last bin before the signal region. 
 
 
 
-\subsection{\texorpdfstring{W+jets Background Estimation in $\tauTau$ Channel}{W+jets Background Estimation in tau-tau Channel}}
-In \binone of the \tauTau channel, the number of remaining events for Wjets is zero, but the weight of the events is larger than one and 
-it can introduce a large uncertainty on the yields of the backgrounds. To have a better estimation of the Wjets contribution in the final yields,
+\subsection{\texorpdfstring{Wjets background estimation in $\tauTau$ channel}{Wjets background estimation in tau-tau channel}}
+In \binone of the \tauTau channel, the number of remaining events for Wjets has a large statistical uncertainty. 
+To have a better estimation of the Wjets contribution in the final yields,
 the yield before the last cut (\mttwo $>$ 90 \GeV) is multiplied by the efficiency of the cut. To find the efficiency, several cuts are relaxed 
-to have a high statistics sample. The cut efficiency is found in the exclusive samples that either fail or pass each cut. 
-A horizontal line is fitted to the measured values to extract the cut efficiency. The main source of the systematic uncertainty on the backgrounds 
+to have a high statistics sample. The cut efficiency is found in the exclusive samples that either fail or pass each relaxed cut
+to remove any correlation between the cuts and the \mttwo cut.
+%A horizontal line is fitted to the measured values to extract the cut efficiency. 
+The efficiencies are close to each other and the weighted average of the values is used as the final efficiency.
+The main source of the systematic uncertainty on the backgrounds 
 is the \Tau energy scale. The energy of the \Tau's is scaled up and down by one standard deviation and all related variables are 
-recalculated and the cut efficiency is meaured on the new samples. 
+recalculated and the cut efficiency is measured on the new samples. 
 This variation due to the uncertainty of the \Tau energy scale is considered as the systematic uncertainty of the measured efficiency.
 To validate the MC prediction for Wjets against the data, a Wjets enriched sample is made in \muTau channel, 
-by rejecting the loosely tagged b-jets, relaxing the tau id from tight to loose and forcing the muon and \Tau to have the same sign. 
-In the control sample, Wjets consist more than 90\% of the MC events. The normailzation and shape of the MC distribution  is consistent
+by rejecting the loosely tagged b-jets, relaxing the tau isolation from tight to loose and forcing the muon and \Tau to have the same-sign. 
+In the control sample, Wjets consist more than 90\% of the MC events. The normalization and shape of the MC distribution  is found consistent
 with the data within the uncertainties.
 
-\subsection{\texorpdfstring{DY Background Estimation in $\tauTau$ Channel}{DY Background Estimation in tau-tau Channel}}
+\subsection{\texorpdfstring{DY background estimation in $\tauTau$ channel}{DY background estimation in tau-tau channel}}
 The events containing a \Z boson can be an important background in different channels. To
-evaluate this background, we trust the MC, but we validate the MC in a Z dominated area in
-data. This region is defined in the \muTau channel by relaxing  the \Z veto cut, \mttwo $<$ 20 \GeV, 40 $<$ \tauMT $<$ 100 \GeV and 
+estimate this background, we use the simulated events. The simulation
+is validated in a Z-dominated control region.
+This region is defined in the \muTau channel by relaxing  the \Z veto cut, \mttwo $<$ 20 \GeV, 40 $<$ \tauMT $<$ 100 \GeV and 
 removing the cut on the minimum angle in the transverse plane between the \MET and the jets. Comparing the events under the \Z peak in data and MC 
-confirms that the normalization of the  MC is correct.  To validate the shape in the signal region, the transverse momentum of the \Z system is compared in data 
+confirms that the normalization of the  MC is correct. To validate the shape in the signal region, the transverse momentum of the \Z system is compared in data 
 and MC  and a good agreement is seen within the uncertainties. Due to the correlation between the \mttwo and \pt of the \Z system, we can trust the shape of the 
 DY events from MC.
 
 
-\subsection{\texorpdfstring{Fake \Tau's in $\ell\Tau$ channels}{Fake Taus in Lepton-Tau Channels}}
-A fake rate method is used to estimate the contribution of the fake \Tau's in $\ell\Tau$ channels. 
+\subsection{\texorpdfstring{Fake \Tau's in $\ell\Tau$ channels}{Fake taus in lepton-tau channels}}
+A fake rate method is used to estimate the contribution of the non-prompt and misidentified \Tau's in $\ell\Tau$ channels. 
 The idea is that when the loose signal selection is applied, the number of the loose $\hadtau$'s ($L$) is:
 \begin{equation}
 L = P + F
@@ -63,11 +76,19 @@ tight ($T$) and non-tight ($NT$), so one can write:
 $f$ * $F$ is the contamination of the fake $\hadtau$'s in the signal region. 
 The fake rate ($f$) is measured as the ratio of the tightly selected $\hadtau$'s to the loosely 
 selected $\hadtau$'s in a sample which is dominated by the fake $\hadtau$'s. The fake rate is estimated in an environment which is exactly 
-same as the signal selection, but the charges of the \Tau and lepton are similar instead of the opposite in the case of the signal selection.
-The prompt rate ($p$) is measured in the MC DY events. The method is applied on MC events when only the Wjets events are selected and 
-also on the full MC events with fake \Tau's. In both cases, the method closes properly and the estimated values lie within 
-the uncertainties of the MC truth. The uncertainties include both statistical and systematical uncertainties which will be listed later in 
-the paper. The uncertainties due to variation of the method to estimate the fake rate or prompt rate and their statistical uncertainties 
-are found to be negligible.
+same as the signal selection, but the charges of the \Tau and lepton are same instead of the opposite in the case of the signal selection. 
+The value is corrected by the difference which is found in MC between the fake rate from the same sign and opposite sign selections.
+The prompt rate ($p$) is measured in the MC DY events. 
+To increase the statistics, the cut on \tauMT is relaxed and the final value is corrected by the efficiency of this 
+cut which is read from Wjets events combining the \eTau and \muTau events.
+The method is applied on MC events when only the Wjets events are selected 
+%and also on the full MC events with fake \Tau's. In both cases, 
+The method closes properly and the estimated values lie within the uncertainties of the MC truth. 
+The uncertainties include both statistical uncertainties due to the size of the events in the side bands 
+and systematical uncertainties that the \Tau energy scale is the most important one (See Section \ref{sect:sys}). 
+The uncertainties due to %variation of the method to estimate the 
+fake rate or prompt rate %and their statistical uncertainties 
+are found to be negligible comparing to the statistical uncertainties due to the lack of the  statistics in the side bands  
+and the systematic uncertainty due to \tauMT efficiency.
 
 

@@ -572,7 +572,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("NULL","SUSY(380,1)","f");
+   entry=leg->AddEntry(h_susy,"SUSY(380,1)","f");
    entry->SetFillStyle(1001);
 
    ci = TColor::GetColor("#660000");

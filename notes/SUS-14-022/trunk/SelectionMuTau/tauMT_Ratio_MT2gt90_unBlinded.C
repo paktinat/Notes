@@ -59,7 +59,7 @@
    h1_copy->SetFillColor(1);
    h1_copy->SetFillStyle(3001);
    h1_copy->SetLineWidth(2);
-   h1_copy->GetXaxis()->SetTitle("tauMT");
+   h1_copy->GetXaxis()->SetTitle("TauMT");
    h1_copy->GetXaxis()->SetNdivisions(505);
    h1_copy->GetXaxis()->SetLabelFont(42);
    h1_copy->GetXaxis()->SetLabelSize(0);
@@ -96,6 +96,7 @@
    h2_copy__2__1->SetDirectory(0);
    h2_copy__2__1->SetStats(0);
    h2_copy__2__1->SetLineWidth(2);
+   h2_copy__2__1->SetLineColor(1);
    h2_copy__2__1->SetMarkerStyle(20);
    h2_copy__2__1->GetXaxis()->SetNdivisions(505);
    h2_copy__2__1->GetXaxis()->SetLabelFont(42);
@@ -201,7 +202,7 @@
    h_stack_stack_1_stack_1->SetDirectory(0);
    h_stack_stack_1_stack_1->SetStats(0);
    h_stack_stack_1_stack_1->SetLineWidth(2);
-   h_stack_stack_1_stack_1->GetXaxis()->SetTitle("tauMT");
+   //   h_stack_stack_1_stack_1->GetXaxis()->SetTitle("tauMT");
    h_stack_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
    h_stack_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
    h_stack_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
@@ -656,7 +657,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("NULL","SUSY","f");
+   entry=leg->AddEntry(h_susy,"SUSY(380,1)","f");
    entry->SetFillStyle(1001);
 
    ci = TColor::GetColor("#660000");
