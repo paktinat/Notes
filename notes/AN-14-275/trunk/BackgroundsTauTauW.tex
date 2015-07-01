@@ -31,7 +31,7 @@ are scaled up and down by 3\% and all $p_T$-related variables such as $E_T^{miss
 and $M_{T2}$ are recalculated.\\
 The final estimated Wjets events in search \binone for nominal as well as up and down scaled samples 
 can be found in figure~\ref{fig:wjets_1}.  
-\begin{figure}[iHhtb]
+\begin{figure}[!Hhtb]
 \centering
 \includegraphics[angle=0,scale=0.35]{TauTauFigs/WJets_bin1.pdf}
 \caption{The distribution of the final estimated Wjets events in search \binone is shown in black. 
@@ -42,7 +42,7 @@ list of cuts mentioned in the text, respectively. Also shown are the estimated W
 \end{figure}
 
 Each of the three plots in figure~\ref{fig:wjets_1} are fitted with a pol0 function. The results are summarized in table~\ref{tbl:fitpars}.
-\begin{table}
+\begin{table}[!Hhtb]
 \begin{center}
 \begin{tabular}{lc}
 \hline\hline
@@ -59,21 +59,7 @@ WJetsEst\_up & 1.02 $\pm$ 0.13 \\
 \end{table}
 
 The systematics that can be assigned is the maximum variation of the up and down central values with 
-respect to the nominal one. A summary of the estimated Wjets events in search \binone can be found in table~\ref{tbl:wjetsEstimation}. 
-\begin{table}
-\begin{center}
-\begin{tabular}{lc}
-\hline\hline
-& Wjets Estimated Results\\
-\hline
-\binone & 0.93 $\pm$ 0.13 (stat.) $\pm$ 0.14 (sys.)\\
-\hline\hline 
-\end{tabular}
-\caption{The Wjets estimation results in search \binone. The systematics comes from the maximum 
-variation of the estimation found from up and down scaled samples with respect to the nominal one.}
-\label{tbl:wjetsEstimation}
-\end{center}
-\end{table}
+respect to the nominal one. 
 
 \subsubsection{MC validation for Wjets}
 To verify that the MC has a good description of the Wjets events and it can be trusted for both shape and normalization, a data/MC comparison 
@@ -84,7 +70,7 @@ is done in a Wjets enriched sample. To enrich the sample, \muTau selection is do
 \item \Tau isolation changed from Tight to Loose.
 \end{itemize}
 Figure \ref{fig:mt2_WValidation} 
-\begin{figure}[htbp]
+\begin{figure}[!Hhtb]
 \centering
 \includegraphics[angle=0,scale=0.35]{TauTauFigs/MT2_WValidation.png}
 \caption{The \mttwo distribution in the W-Enriched region. Data and MC agree in both shape and normalization within the uncertainties.}
@@ -94,12 +80,30 @@ shows the \mttwo distribution for the selected events. We use the range 40 $<\mt
 Wjets sample. In this range more than 90\% of the MC events are from the Wjets sample. 
 All of the non-W MC events in this range are subtracted from 
 the data in the same range. The result is compared with the MC prediction for the Wjets in this range. The k-factor for the Wjets sample is 
-found to be 1.05 $\pm$ 0.13 which is compatible with 1 within the errors. To evaluate the uncertainty, all of the statistical uncertainties on data 
-and MC are considered plus 25\% systematic uncertainty on the MC samples.
+found to be 1.05 $\pm$ 0.13 which is compatible with 1 within the errors. To evaluate the uncertainty, 
+all of the statistical uncertainties on data and MC are considered plus 25\% systematic uncertainty on the MC samples.
 
 To validate the shape of the Wjets sample, we compare the ratio of events with \mttwo $>$ 90 \GeV and  \mttwo $>$ 40 \GeV in data and MC.
 The procedures to find the Wjets in data and consider the uncertainties are exactly same as the procedures for extracting the normalization  
-factor. This ratio is found to be 0.00213 $\pm$ 0.00086 in data and  0.0029 $\pm$ 0.0019 in MC. {\bf FIXME: eff difference data mc}
+factor. This ratio is found to be 0.00213 $\pm$ 0.00086 in data and  0.0029 $\pm$ 0.0019 in MC. To take into account the difference between 
+the two values, 27\% systematic uncertainty is assigned to the ratio from the MC (sys. shape) 
+and is added to other systematic uncertainties of the estimation in quadrature.
+A summary of the estimated Wjets events in search \binone can be found in table~\ref{tbl:wjetsEstimation}. 
+\begin{table}[!Hhtb]
+\begin{center}
+\begin{tabular}{lc}
+\hline\hline
+& Wjets Estimated Results\\
+\hline
+\binone & 0.93 $\pm$ 0.13 (stat.) $\pm$ 0.14 (sys. fit) $\pm$ 0.25 (sys. shape)\\
+\hline\hline 
+\end{tabular}
+\caption{The Wjets estimation results in search \binone. The systematics comes from the maximum 
+variation of the estimation found from up and down scaled samples with respect to the nominal one.}
+\label{tbl:wjetsEstimation}
+\end{center}
+\end{table}
 
-As the simulation of Wjets events agrees well with data, for the search \bintwo, the expected number of Wjets from MC which is $0.43\pm0.4$ is trusted and is used.
+As the simulation of Wjets events agrees well with data in the bulk of \mttwo, for the search \bintwo, 
+the expected number of Wjets from MC which is $0.43\pm0.4$ is trusted and is used.
 
