@@ -10,9 +10,25 @@ Just for the completeness, a short review is given here.
 
 %An average of 21 $\Pp\Pp$ interactions occurred per LHC bunch crossing in 2012.
 %For each reconstructed collision vertex the sum of the  $\pt^2$ of all tracks associated to the vertex is computed and the one with the largest value is taken as the primary collision vertex, where $\pt$ is the transverse momentum. The additional $\Pp\Pp$ collisions are referred to as pileup. 
+Events from pp interactions must satisfy the requirements of a two-level trigger system.
+The first level (L1) of the CMS trigger system, composed of custom hardware processors, uses information from the calorimeters and muon detectors to select the most interesting events in a fixed time interval of less than 4\mus. The high-level trigger (HLT) processor farm further decreases the event rate from around 100\unit{kHz} to around 400\unit{Hz}, before data storage. 
 
 The particle-flow event algorithm~\cite{CMS-PAS-PFT-09-001,CMS-PAS-PFT-10-001} reconstructs and identifies each individual particle with an optimized combination of information from the various elements of the CMS detector. The energy of photons is directly obtained from the ECAL measurement, corrected for zero-suppression effects. The energy of electrons is determined from a combination of the electron momentum at the primary interaction vertex as determined by the tracker, the energy of the corresponding ECAL cluster, and the energy sum of all bremsstrahlung photons spatially compatible with originating from the electron track. The energy of muons is obtained from the curvature of the corresponding track. The energy of charged hadrons is determined from a combination of their momentum measured in the tracker and the matching ECAL and HCAL energy deposits, corrected for zero-suppression effects and for the response function of the calorimeters to hadronic showers. Finally, the energy of neutral hadrons is obtained from the corresponding corrected ECAL and HCAL energy. 
-The resulting particles are used to reconstruct the missing transverse energy vector $\VEtmiss$, defined as the negative of the vector sum of the transverse momenta of all reconstructed particles, and its magnitude \MET.
+
+Jets are reconstructed with the anti-\kt clustering
+algorithm~\cite{Cacciari:2008gp} with a distance parameter of 0.5. We apply
+\pt- and $\eta$-dependent corrections to account for residual
+effects of non-uniform detector response~\cite{Chatrchyan:2011ds}.
+A correction to account for multiple pp collisions within the same or a nearby
+bunch crossing (pileup interactions) is estimated on an event-by-event basis using the
+jet-area method described in Ref.~\cite{cacciari-2008-659}, and is
+subtracted from the reconstructed jet \pt.
+To tag jets coming from b-quark decays the combined secondary vertex algorithm is used, that is based on the reconstruction of secondary vertices, together with track-based lifetime information~\cite{Chatrchyan:2012jua}. 
+Jets with  \PT $>$ 40 \GeV and $\abs{\eta} < 5.0$ and b-tagged jets with \PT $>$ 20 \GeV and $\abs{\eta} < 2.4$ are used. 
+
+
+The reconstructed particles from particle flow algorithm are used to reconstruct the missing transverse energy vector $\VEtmiss$, defined as the negative of the vector sum of the transverse momenta of all reconstructed particles, and its magnitude \MET. The resulting \MET is corrected for the 
+changes to the energy of the clustered particles as the jets due to the jet energy corrections. 
 
 %The ECAL energy resolution for electrons with $\ET {\approx} 45$\GeV from $\Z \rightarrow \Pe \Pe$ decays is better than 2\% in the central region of the ECAL barrel $(\abs{\eta} < 0.8)$ where pseudorapidity $\eta$ is defined as $\eta = -ln [tan(\theta/2)]$,  $\theta$ being 
 %the polar angle of the particle's track with respect to the counterclockwise beam direction. The resulotion is between 2\% and 5\% elsewhere. For low-bremsstrahlung electrons, where 94\% or more of their energy is contained within a $3 \times 3$ array of crystals, the energy resolution improves to 1.5\% for $\abs{\eta} < 0.8$~\cite{CMS:2013hoa}. 
@@ -22,8 +38,8 @@ The resulting particles are used to reconstruct the missing transverse energy ve
 %Jets are reconstructed offline from the energy deposits in the calorimeter towers, clustered by the anti-$k_\mathrm{t}$ algorithm \cite{Cacciari:2008gp, Cacciari:2011ma} with a size parameter of 0.5. In this process, the contribution from each calorimeter tower is assigned a momentum, the absolute value and the direction of which are given by the energy measured in the tower, and the coordinates of the tower. The raw jet energy is obtained from the sum of the tower energies, and the raw jet momentum by the vectorial sum of the tower momenta, which results in a nonzero jet mass. The raw jet energies are then corrected to establish a relative uniform response of the calorimeter in $\eta$ and a calibrated absolute response in transverse momentum \pt. 
 
 
-Hadronically-decaying tau leptons are reconstructed using the hadron-plus-strips algorithm~\cite{Chatrchyan:2012zz}. The constituents of the reconstructed jets are used to identify individual $\Pgt$ decay modes with one charged hadron and up to two neutral pions, or three charged hadrons. The presence of extra particles within the jet, not compatible with the reconstructed decay mode of the $\Pgt$, is used as a criterion to discriminate \Tau decays from jets. Additional discriminators are used to separate \Tau decays from electrons and muons.
-The prompt tau leptons are expected to be isolated in the detector, while leptons from heavy-flavor (c and b) decays and decays in flight are expected to be found inside jets. A measure of isolation is used to discriminate the signal from the QCD multijet background, based on the charged hadrons, photons, and neutral hadrons falling within a cone around the lepton momentum direction.
+Hadronically-decaying $\tau$ leptons are reconstructed using the hadron-plus-strips algorithm~\cite{Chatrchyan:2012zz}. The constituents of the reconstructed jets are used to identify individual $\Pgt$ decay modes with one charged hadron and up to two neutral pions, or three charged hadrons. The presence of extra particles within the jet, not compatible with the reconstructed decay mode of the $\Pgt$, is used as a criterion to discriminate \Tau decays from jets. Additional discriminators are used to separate \Tau decays from electrons and muons.
+The prompt $\tau$ leptons are expected to be isolated in the detector, while leptons from heavy-flavor (c and b) decays and decays in flight are expected to be found inside jets. A measure of isolation is used to discriminate the signal from the QCD multijet background, based on the charged hadrons, photons, and neutral hadrons falling within a cone around the lepton momentum direction.
 
 %Electron, muon, and tau lepton isolation are estimated as
 %\begin{equation}\begin{aligned}
@@ -44,7 +60,11 @@ All of the backgrounds like $\cPZ$jets, $\PW$jets, $\cPqt\cPaqt$ and di-boson pr
 For parton shower  and fragmentation, the generators are interfaced with \PYTHIA 6.4~\cite{Sjostrand:2006za}.
 The Signal events are generated by  \PYTHIA. To have a good simulation for the $\Pgt$ decays, the generators are interfaced with  \TAUOLA~\cite{Davidson:2010rw}. The \PYTHIA generator is used to simulate the additional proton-proton interactions. The number of the additional interactions is reweighted to have the same distribution with data. To take into account the detector effects, a detailed simulation of the CMS detector based on {\GEANTfour}~\cite{Agostinelli:2002hh} is used for all of the generated background events. To reduce  computational requirements, the signal events are simulated using a fast simulation \cite{Abdullin:2011zz} instead of {\GEANTfour}. 
 The simulated events are reconstructed with the same algorithms as the data.
-
+For the SM backgrounds, the most accurate calculations of the cross sections available,
+generally with next-to-leading-order (NLO)
+accuracy~\cite{Campbell:2012uf,Campbell:2011bn,xsec_WZ} are used.
+The \textsc{Resummino}~\cite{Fuks:2012qx,Fuks:2013vua,Fuks:2013lya} calculations at NLO+NLL are used to calcualte the signal cross sections, where 
+NLL refers to the next-to-leading-logarithmic precision.
 
 
 
