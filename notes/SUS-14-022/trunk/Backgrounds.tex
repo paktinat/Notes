@@ -12,22 +12,55 @@ In this section we will discuss the different background estimation techniques u
 The QCD multijet events contribute to the signal selection of the \tauTau channel, when two jets are 
 fakely identified as \Tau's. The fake rate can be different between data and MC, so a data driven method is developed to estimate the 
 contribution of the QCD multijet events. 
-An ABCD method is used when the two uncorrelated variables are the search variable (\mttwo in \binone and \SumMT in \bintwo) and the 
-isolation of the \Tau's. In the signal region, loosely isolated  \Tau's 
+Since the search variable (\mttwo in \binone and \SumMT in \bintwo) and the 
+isolation of the \Tau's are uncorrelated in the QCD events, the ratio of the events selected by the signal cuts over the events 
+with loosely isolated \Tau's should be independent from the search variable, so one can find the ratio in the low \mttwo or \SumMT and 
+multiply it to the number of events in the control region which is defined same as the signal region except the \Tau's are loosely isolated. 
+This would give an estimate of the QCD events in the signal region. In the signal region, loosely isolated  \Tau's 
 %($I_{\Tau} <$ 2 \GeV ) 
 are excluded, but in the control region, only the pairs with at least one loosely isolated \Tau are selected. 
 These pairs are requested to be same-sign to suppress the signal contamination. To further increase the statistics 
 in different regions, the cut on the minimum angle in the transverse plane between the \MET and the jets is removed. The final estimation
-is corrected by the efficiency of this cut which is read from data. 
-In the low \mttwo or \SumMT, the ratio of the signal like events over the same-sign loose pairs 
+is corrected by the efficiency of this cut which is read from data and will be described in continue.
+Figure \ref{fig:ABCDQCD} shows different regions discussed here, schematically.
+\begin{figure}[!Hhtb]
+\centering
+\includegraphics[angle=0,scale=0.30]{Bkg/ABCD.png}
+\caption{Schematic description of the regions used to estimate the QCD backgrounds.}
+\label{fig:ABCDQCD}
+\end{figure}
+
+Non-QCD events from MC are subtracted from data to find a QCD sample.
+In the low \mttwo or \SumMT of the QCD sample, the ratio of the signal like events over the same-sign loose pairs 
 is found and verified to be flat as a function of the search variable. 
 %A horizontal line is fitted to
 This ratio is multiplied to the same-sign loose pairs in high \mttwo or \SumMT and corrected by the efficiency of the 
 cut on the minimum angle between the \MET and the jets, to find the QCD contamination in the signal region. 
-To estimate the systematic uncertainty of the estimated value, the method to extract the
+The efficiency of the cut on the minimum angle between the \MET and the jets, is found with the same events as a function of the search variables.
+The value of the efficiency in the last bin in vicinity of the signal region is used to correct the estimation.
+To estimate the systematic uncertainty of the estimated value and take into account the potential correlation between the two values, 
+the method to extract the
 ratio and the efficiency are varied from approximating by a flat line to fitting by a straight line with a floating slope 
 or using the value of the  last bin before the signal region. 
-
+%This is  also a measure  of the correlation between the two variables which are assumed to be uncorrelated. 
+Table \ref{4QCDbg} 
+\begin{table}[!Hhtb]
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline\hline
+ Region      &  Estimation\\
+\hline\hline
+\binone      & 0.15 $\pm$ 0.22 $\pm$ 0.13 \\
+\hline
+\bintwo      & 0.82 $\pm$ 0.65 $\pm$ 0.07  \\
+\hline\hline
+\end{tabular}
+\caption{The final QCD estimation in \tauTau channel. The uncertainty due to method to extract the ratio and efficiency is shown separately 
+as the second part.}
+\label{4QCDbg}
+\end{center}
+\end{table}
+summarizes the final estimation of the QCD contribution in different signal regions.
 
 
 \subsection{\texorpdfstring{$W$jets background estimation in $\tauTau$ channel}{Wjets background estimation in tau-tau channel}}
@@ -48,7 +81,7 @@ To validate the MC prediction for Wjets against the data, a Wjets enriched sampl
 by rejecting the loosely tagged b-jets, relaxing the \Tau isolation from tight to loose and forcing the muon and \Tau to have the same-sign. 
 In the control sample, Wjets consist more than 90\% of the MC events. The normalization of the MC distribution  is found consistent
 with the data within the uncertainties, but the low statistics of MC does not allow to verify the efficiency of \mttwo $>$ 90 \GeV cut, 
-so we correct the MC by the efficiency of data and the uncertainty of the correction is also conidered which is about 70\%. 
+so we correct the MC by the efficiency of data and the uncertainty of the correction is also conidered which is about 77\%. 
 The final value for the contribution of $W$jets in this signal region is 0.69 $\pm$ 0.54.
 
 \subsection{\texorpdfstring{DY background estimation in $\tauTau$ channel}{DY background estimation in tau-tau channel}}
