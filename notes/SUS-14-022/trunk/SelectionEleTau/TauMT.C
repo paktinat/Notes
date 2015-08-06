@@ -64,7 +64,9 @@ void TauMT()
    
    
    TH1D *MT2Cut_TauMT_QCD1 = new TH1D("MT2Cut_TauMT_QCD1","",10,0,500);
-   MT2Cut_TauMT_QCD1->SetEntries(4);
+   MT2Cut_TauMT_QCD1->SetBinContent(3,0.01404214);
+   MT2Cut_TauMT_QCD1->SetBinError(3,0.01404214);
+   MT2Cut_TauMT_QCD1->SetEntries(5);
    MT2Cut_TauMT_QCD1->SetDirectory(0);
    MT2Cut_TauMT_QCD1->SetStats(0);
 
@@ -92,17 +94,17 @@ void TauMT()
    MT2Cut_TauMT->Add(MT2Cut_TauMT_QCD1,"");
    
    TH1D *MT2Cut_TauMT_W2 = new TH1D("MT2Cut_TauMT_W2","",10,0,500);
-   MT2Cut_TauMT_W2->SetBinContent(3,10.33283);
+   MT2Cut_TauMT_W2->SetBinContent(3,8.99275);
    MT2Cut_TauMT_W2->SetBinContent(4,4.556571);
    MT2Cut_TauMT_W2->SetBinContent(5,0.9916761);
    MT2Cut_TauMT_W2->SetBinContent(6,0.1246921);
    MT2Cut_TauMT_W2->SetBinContent(7,0.1692765);
-   MT2Cut_TauMT_W2->SetBinError(3,2.827801);
+   MT2Cut_TauMT_W2->SetBinError(3,2.709796);
    MT2Cut_TauMT_W2->SetBinError(4,2.970974);
    MT2Cut_TauMT_W2->SetBinError(5,0.5845425);
    MT2Cut_TauMT_W2->SetBinError(6,0.1246921);
    MT2Cut_TauMT_W2->SetBinError(7,0.1692765);
-   MT2Cut_TauMT_W2->SetEntries(33);
+   MT2Cut_TauMT_W2->SetEntries(30);
    MT2Cut_TauMT_W2->SetDirectory(0);
    MT2Cut_TauMT_W2->SetStats(0);
 
@@ -130,22 +132,22 @@ void TauMT()
    MT2Cut_TauMT->Add(MT2Cut_TauMT_W2,"");
    
    TH1D *MT2Cut_TauMT_ZX3 = new TH1D("MT2Cut_TauMT_ZX3","",10,0,500);
-   MT2Cut_TauMT_ZX3->SetBinContent(3,0.3265244);
-   MT2Cut_TauMT_ZX3->SetBinContent(4,1.111712);
+   MT2Cut_TauMT_ZX3->SetBinContent(3,0.3253499);
+   MT2Cut_TauMT_ZX3->SetBinContent(4,1.100484);
    MT2Cut_TauMT_ZX3->SetBinContent(5,0.2163953);
    MT2Cut_TauMT_ZX3->SetBinContent(6,0.05343722);
    MT2Cut_TauMT_ZX3->SetBinContent(7,0.0357069);
    MT2Cut_TauMT_ZX3->SetBinContent(8,0.04651853);
    MT2Cut_TauMT_ZX3->SetBinContent(10,0.0305328);
-   MT2Cut_TauMT_ZX3->SetBinError(3,0.0594677);
-   MT2Cut_TauMT_ZX3->SetBinError(4,0.5378119);
+   MT2Cut_TauMT_ZX3->SetBinError(3,0.0594561);
+   MT2Cut_TauMT_ZX3->SetBinError(4,0.5376947);
    MT2Cut_TauMT_ZX3->SetBinError(5,0.04788545);
    MT2Cut_TauMT_ZX3->SetBinError(6,0.02203407);
    MT2Cut_TauMT_ZX3->SetBinError(7,0.0161262);
    MT2Cut_TauMT_ZX3->SetBinError(8,0.02115174);
    MT2Cut_TauMT_ZX3->SetBinError(10,0.01778534);
    MT2Cut_TauMT_ZX3->SetBinError(11,0.01778534);
-   MT2Cut_TauMT_ZX3->SetEntries(169);
+   MT2Cut_TauMT_ZX3->SetEntries(167);
    MT2Cut_TauMT_ZX3->SetDirectory(0);
    MT2Cut_TauMT_ZX3->SetStats(0);
 
@@ -205,15 +207,15 @@ void TauMT()
    MT2Cut_TauMT->Add(MT2Cut_TauMT_Top4,"");
    
    TH1D *MT2Cut_TauMT_WW5 = new TH1D("MT2Cut_TauMT_WW5","",10,0,500);
-   MT2Cut_TauMT_WW5->SetBinContent(3,0.9061542);
+   MT2Cut_TauMT_WW5->SetBinContent(3,0.7492966);
    MT2Cut_TauMT_WW5->SetBinContent(4,0.6124773);
    MT2Cut_TauMT_WW5->SetBinContent(5,0.02362514);
    MT2Cut_TauMT_WW5->SetBinContent(8,0.02707293);
-   MT2Cut_TauMT_WW5->SetBinError(3,0.2137671);
+   MT2Cut_TauMT_WW5->SetBinError(3,0.1935992);
    MT2Cut_TauMT_WW5->SetBinError(4,0.1812524);
    MT2Cut_TauMT_WW5->SetBinError(5,0.02362514);
    MT2Cut_TauMT_WW5->SetBinError(8,0.02707293);
-   MT2Cut_TauMT_WW5->SetEntries(37);
+   MT2Cut_TauMT_WW5->SetEntries(34);
    MT2Cut_TauMT_WW5->SetDirectory(0);
    MT2Cut_TauMT_WW5->SetStats(0);
 
@@ -278,19 +280,19 @@ void TauMT()
    MT2Cut_TauMT->Draw("hist");
    
    TH1D *h2_copy7 = new TH1D("h2_copy7","",10,0,500);
-   h2_copy7->SetBinContent(3,16);
+   h2_copy7->SetBinContent(3,14);
    h2_copy7->SetBinContent(4,6);
    h2_copy7->SetBinContent(5,1);
    h2_copy7->SetBinContent(7,1);
    h2_copy7->SetBinContent(10,1);
-   h2_copy7->SetBinError(3,4);
+   h2_copy7->SetBinError(3,3.741657);
    h2_copy7->SetBinError(4,2.44949);
    h2_copy7->SetBinError(5,1);
    h2_copy7->SetBinError(7,1);
    h2_copy7->SetBinError(10,1);
    h2_copy7->SetBinError(11,1);
-   h2_copy7->SetMaximum(40);
-   h2_copy7->SetEntries(29);
+   h2_copy7->SetMaximum(35);
+   h2_copy7->SetEntries(27);
    h2_copy7->SetDirectory(0);
    h2_copy7->SetStats(0);
    h2_copy7->SetFillColor(1);
@@ -319,9 +321,8 @@ void TauMT()
    h2_copy7->Draw("sameE");
    
    TH1D *MT2Cut_TauMT_SUSY_380_18 = new TH1D("MT2Cut_TauMT_SUSY_380_18","",10,0,500);
-   MT2Cut_TauMT_SUSY_380_18->SetBinContent(2,0.005580414);
-   MT2Cut_TauMT_SUSY_380_18->SetBinContent(3,0.449786);
-   MT2Cut_TauMT_SUSY_380_18->SetBinContent(4,0.8944501);
+   MT2Cut_TauMT_SUSY_380_18->SetBinContent(3,0.4320267);
+   MT2Cut_TauMT_SUSY_380_18->SetBinContent(4,0.8915107);
    MT2Cut_TauMT_SUSY_380_18->SetBinContent(5,0.7917726);
    MT2Cut_TauMT_SUSY_380_18->SetBinContent(6,0.528859);
    MT2Cut_TauMT_SUSY_380_18->SetBinContent(7,0.2939166);
@@ -329,9 +330,8 @@ void TauMT()
    MT2Cut_TauMT_SUSY_380_18->SetBinContent(9,0.09811554);
    MT2Cut_TauMT_SUSY_380_18->SetBinContent(10,0.0789327);
    MT2Cut_TauMT_SUSY_380_18->SetBinContent(11,0.1128815);
-   MT2Cut_TauMT_SUSY_380_18->SetBinError(2,0.003948956);
-   MT2Cut_TauMT_SUSY_380_18->SetBinError(3,0.03768293);
-   MT2Cut_TauMT_SUSY_380_18->SetBinError(4,0.05335834);
+   MT2Cut_TauMT_SUSY_380_18->SetBinError(3,0.0369755);
+   MT2Cut_TauMT_SUSY_380_18->SetBinError(4,0.05327732);
    MT2Cut_TauMT_SUSY_380_18->SetBinError(5,0.04998375);
    MT2Cut_TauMT_SUSY_380_18->SetBinError(6,0.04099785);
    MT2Cut_TauMT_SUSY_380_18->SetBinError(7,0.03053038);
@@ -339,7 +339,7 @@ void TauMT()
    MT2Cut_TauMT_SUSY_380_18->SetBinError(9,0.01764169);
    MT2Cut_TauMT_SUSY_380_18->SetBinError(10,0.01585126);
    MT2Cut_TauMT_SUSY_380_18->SetBinError(11,0.01884423);
-   MT2Cut_TauMT_SUSY_380_18->SetEntries(1104);
+   MT2Cut_TauMT_SUSY_380_18->SetEntries(1095);
    MT2Cut_TauMT_SUSY_380_18->SetDirectory(0);
    MT2Cut_TauMT_SUSY_380_18->SetStats(0);
    MT2Cut_TauMT_SUSY_380_18->SetFillStyle(0);
@@ -565,8 +565,8 @@ tex->SetNDC();
    h1_copy10->SetBinContent(7,1);
    h1_copy10->SetBinContent(8,1);
    h1_copy10->SetBinContent(10,1);
-   h1_copy10->SetBinError(3,0.3451361);
-   h1_copy10->SetBinError(4,0.6250773);
+   h1_copy10->SetBinError(3,0.3790424);
+   h1_copy10->SetBinError(4,0.6260792);
    h1_copy10->SetBinError(5,0.6547444);
    h1_copy10->SetBinError(6,0.8407101);
    h1_copy10->SetBinError(7,1.173153);
@@ -574,7 +574,7 @@ tex->SetNDC();
    h1_copy10->SetBinError(10,0.8237786);
    h1_copy10->SetMinimum(0);
    h1_copy10->SetMaximum(2);
-   h1_copy10->SetEntries(11.84685);
+   h1_copy10->SetEntries(11.77339);
    h1_copy10->SetDirectory(0);
    h1_copy10->SetStats(0);
    h1_copy10->SetFillColor(1);
@@ -603,19 +603,19 @@ tex->SetNDC();
    h1_copy10->Draw("E2");
    
    TH1D *h2_copy11 = new TH1D("h2_copy11","",10,0,500);
-   h2_copy11->SetBinContent(3,1.376588);
-   h2_copy11->SetBinContent(4,0.8586826);
+   h2_copy11->SetBinContent(3,1.380824);
+   h2_copy11->SetBinContent(4,0.8600646);
    h2_copy11->SetBinContent(5,0.7882628);
    h2_copy11->SetBinContent(7,4.878443);
    h2_copy11->SetBinContent(10,32.75167);
-   h2_copy11->SetBinError(3,0.4809388);
-   h2_copy11->SetBinError(4,0.5166583);
+   h2_copy11->SetBinError(3,0.5226472);
+   h2_copy11->SetBinError(4,0.5179376);
    h2_copy11->SetBinError(5,0.8686446);
    h2_copy11->SetBinError(7,6.338494);
    h2_copy11->SetBinError(10,37.90297);
    h2_copy11->SetMinimum(0.4);
    h2_copy11->SetMaximum(3);
-   h2_copy11->SetEntries(1.118164);
+   h2_copy11->SetEntries(1.118441);
    h2_copy11->SetDirectory(0);
    h2_copy11->SetStats(0);
 
@@ -650,8 +650,8 @@ tex->SetNDC();
    h1_copy12->SetBinContent(7,1);
    h1_copy12->SetBinContent(8,1);
    h1_copy12->SetBinContent(10,1);
-   h1_copy12->SetBinError(3,0.3451361);
-   h1_copy12->SetBinError(4,0.6250773);
+   h1_copy12->SetBinError(3,0.3790424);
+   h1_copy12->SetBinError(4,0.6260792);
    h1_copy12->SetBinError(5,0.6547444);
    h1_copy12->SetBinError(6,0.8407101);
    h1_copy12->SetBinError(7,1.173153);
@@ -659,7 +659,7 @@ tex->SetNDC();
    h1_copy12->SetBinError(10,0.8237786);
    h1_copy12->SetMinimum(0);
    h1_copy12->SetMaximum(2);
-   h1_copy12->SetEntries(11.84685);
+   h1_copy12->SetEntries(11.77339);
    h1_copy12->SetDirectory(0);
    h1_copy12->SetStats(0);
    h1_copy12->SetFillColor(1);
