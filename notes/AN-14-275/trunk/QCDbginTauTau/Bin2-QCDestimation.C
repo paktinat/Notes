@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: MT2_ratioc_ratio/
-//=========  (Tue Jun 30 16:51:11 2015) by ROOT version5.34/03
-   TCanvas *MT2_ratioc_ratio = new TCanvas("MT2_ratioc_ratio", "",461,61,600,630);
+//=========  (Tue Aug 18 16:01:27 2015) by ROOT version5.34/03
+   TCanvas *MT2_ratioc_ratio = new TCanvas("MT2_ratioc_ratio", "",66,52,600,630);
    gStyle->SetOptFit(1);
    MT2_ratioc_ratio->Range(0,0,1,1);
    MT2_ratioc_ratio->SetFillColor(0);
@@ -18,7 +18,7 @@
    TPad *MT2_ratio_plotpad = new TPad("MT2_ratio_plotpad", "Pad containing the overlay plot",0,0.211838,1,1);
    MT2_ratio_plotpad->Draw();
    MT2_ratio_plotpad->cd();
-   MT2_ratio_plotpad->Range(66.62215,-2.61172,320.2937,3.202706);
+   MT2_ratio_plotpad->Range(66.62215,-2.606783,320.2937,3.16839);
    MT2_ratio_plotpad->SetFillColor(0);
    MT2_ratio_plotpad->SetFillStyle(4000);
    MT2_ratio_plotpad->SetBorderMode(0);
@@ -39,11 +39,11 @@
    MT2->SetName("MT2");
    MT2->SetTitle("");
    MT2->SetMinimum(0.02);
-   MT2->SetMaximum(343.0339);
+   MT2->SetMaximum(320);
    
    TH1F *MT2_stack_1 = new TH1F("MT2_stack_1","",4,100,300);
-   MT2_stack_1->SetMinimum(0.00641611);
-   MT2_stack_1->SetMaximum(633.536);
+   MT2_stack_1->SetMinimum(0.006447329);
+   MT2_stack_1->SetMaximum(589.0637);
    MT2_stack_1->SetDirectory(0);
    MT2_stack_1->SetStats(0);
    MT2_stack_1->SetLineWidth(2);
@@ -70,15 +70,15 @@
    Double_t xAxis1[5] = {100, 150, 200, 250, 300}; 
    
    TH1D *MT2_Higgs = new TH1D("MT2_Higgs","",4, xAxis1);
-   MT2_Higgs->SetBinContent(1,0.1386374);
-   MT2_Higgs->SetBinContent(2,0.322138);
+   MT2_Higgs->SetBinContent(1,0.07092376);
+   MT2_Higgs->SetBinContent(2,0.318799);
    MT2_Higgs->SetBinContent(3,0.07742545);
    MT2_Higgs->SetBinContent(4,0.07488839);
-   MT2_Higgs->SetBinError(1,0.04954158);
-   MT2_Higgs->SetBinError(2,0.08022583);
+   MT2_Higgs->SetBinError(1,0.03511451);
+   MT2_Higgs->SetBinError(2,0.08018868);
    MT2_Higgs->SetBinError(3,0.03262404);
    MT2_Higgs->SetBinError(4,0.02342941);
-   MT2_Higgs->SetEntries(99);
+   MT2_Higgs->SetEntries(86);
    MT2_Higgs->SetStats(0);
 
    Int_t ci;   // for color index setting
@@ -111,15 +111,13 @@
    Double_t xAxis2[5] = {100, 150, 200, 250, 300}; 
    
    TH1D *MT2_WW = new TH1D("MT2_WW","",4, xAxis2);
-   MT2_WW->SetBinContent(1,0.05448567);
    MT2_WW->SetBinContent(2,0.270886);
    MT2_WW->SetBinContent(3,0.4698851);
    MT2_WW->SetBinContent(4,0.1483787);
-   MT2_WW->SetBinError(1,0.05448567);
    MT2_WW->SetBinError(2,0.1038165);
    MT2_WW->SetBinError(3,0.1340059);
    MT2_WW->SetBinError(4,0.0700099);
-   MT2_WW->SetEntries(37);
+   MT2_WW->SetEntries(36);
    MT2_WW->SetStats(0);
 
    ci = TColor::GetColor("#000066");
@@ -189,16 +187,16 @@
    Double_t xAxis4[5] = {100, 150, 200, 250, 300}; 
    
    TH1D *MT2_ZX = new TH1D("MT2_ZX","",4, xAxis4);
-   MT2_ZX->SetBinContent(1,3.283998);
-   MT2_ZX->SetBinContent(2,5.419224);
+   MT2_ZX->SetBinContent(1,1.158208);
+   MT2_ZX->SetBinContent(2,4.615497);
    MT2_ZX->SetBinContent(3,1.13796);
    MT2_ZX->SetBinContent(4,0.8086002);
-   MT2_ZX->SetBinError(1,1.281744);
-   MT2_ZX->SetBinError(2,1.499324);
+   MT2_ZX->SetBinError(1,0.6784595);
+   MT2_ZX->SetBinError(2,1.398525);
    MT2_ZX->SetBinError(3,0.3865141);
    MT2_ZX->SetBinError(4,0.5637694);
    MT2_ZX->SetBinError(5,0.01049275);
-   MT2_ZX->SetEntries(230);
+   MT2_ZX->SetEntries(207);
    MT2_ZX->SetStats(0);
 
    ci = TColor::GetColor("#006600");
@@ -268,14 +266,14 @@
    Double_t xAxis6[5] = {100, 150, 200, 250, 300}; 
    
    TH1D *MT2_QCD = new TH1D("MT2_QCD","",4, xAxis6);
-   MT2_QCD->SetBinContent(1,21.55049);
-   MT2_QCD->SetBinContent(2,46.7729);
-   MT2_QCD->SetBinContent(3,7.009469);
-   MT2_QCD->SetBinContent(4,0.82);
-   MT2_QCD->SetBinError(1,5.214512);
-   MT2_QCD->SetBinError(2,9.660899);
-   MT2_QCD->SetBinError(3,4.158027);
-   MT2_QCD->SetBinError(4,0.72);
+   MT2_QCD->SetBinContent(1,11.748);
+   MT2_QCD->SetBinContent(2,42.68843);
+   MT2_QCD->SetBinContent(3,6.396727);
+   MT2_QCD->SetBinContent(4,1.15);
+   MT2_QCD->SetBinError(1,4.123398);
+   MT2_QCD->SetBinError(2,9.416249);
+   MT2_QCD->SetBinError(3,3.805273);
+   MT2_QCD->SetBinError(4,1.002);
    MT2_QCD->SetEntries(84);
    MT2_QCD->SetStats(0);
 
@@ -309,17 +307,17 @@
    Double_t xAxis7[5] = {100, 150, 200, 250, 300}; 
    
    TH1D *h2_copy = new TH1D("h2_copy","",4, xAxis7);
-   h2_copy->SetBinContent(1,32);
-   h2_copy->SetBinContent(2,67);
+   h2_copy->SetBinContent(1,15);
+   h2_copy->SetBinContent(2,64);
    h2_copy->SetBinContent(3,13);
    h2_copy->SetBinContent(4,2);
-   h2_copy->SetBinError(1,5.656854);
-   h2_copy->SetBinError(2,8.185353);
+   h2_copy->SetBinError(1,3.872983);
+   h2_copy->SetBinError(2,8);
    h2_copy->SetBinError(3,3.605551);
    h2_copy->SetBinError(4,1.414214);
    h2_copy->SetMinimum(0.05);
-   h2_copy->SetMaximum(343.0339);
-   h2_copy->SetEntries(134);
+   h2_copy->SetMaximum(320);
+   h2_copy->SetEntries(114);
    h2_copy->SetStats(0);
 
    ci = TColor::GetColor("#ff0000");
@@ -346,13 +344,13 @@
    Double_t xAxis8[5] = {100, 150, 200, 250, 300}; 
    
    TH1D *MT2_susy = new TH1D("MT2_susy","",4, xAxis8);
-   MT2_susy->SetBinContent(2,0.7234835);
-   MT2_susy->SetBinContent(3,2.080358);
-   MT2_susy->SetBinContent(4,3.362105);
-   MT2_susy->SetBinError(2,0.1056702);
-   MT2_susy->SetBinError(3,0.1794908);
-   MT2_susy->SetBinError(4,0.2753833);
-   MT2_susy->SetBinError(5,0.146338);
+   MT2_susy->SetBinContent(2,0.6868009);
+   MT2_susy->SetBinContent(3,2.489492);
+   MT2_susy->SetBinContent(4,3.597845);
+   MT2_susy->SetBinError(2,0.1304177);
+   MT2_susy->SetBinError(3,0.2751065);
+   MT2_susy->SetBinError(4,0.358849);
+   MT2_susy->SetBinError(5,0.1757565);
    MT2_susy->SetEntries(419);
    MT2_susy->SetStats(0);
    MT2_susy->SetLineStyle(3);
@@ -374,7 +372,7 @@
    MT2_susy->GetZaxis()->SetTitleSize(0.035);
    MT2_susy->GetZaxis()->SetTitleFont(42);
    MT2_susy->Draw("samehist");
-   TLatex *   tex = new TLatex(0.13,0.943,"0 jets");
+   TLatex *   tex = new TLatex(0.2097315,0.8580392,"0 jets");
 tex->SetNDC();
    tex->SetTextSize(0.03);
    tex->SetLineWidth(2);
@@ -386,8 +384,8 @@ tex->SetNDC();
    tex->Draw();
    
    TH1F *MT2__1 = new TH1F("MT2__1","",4,100,300);
-   MT2__1->SetMinimum(0.00641611);
-   MT2__1->SetMaximum(633.536);
+   MT2__1->SetMinimum(0.006447329);
+   MT2__1->SetMaximum(589.0637);
    MT2__1->SetDirectory(0);
    MT2__1->SetStats(0);
    MT2__1->SetLineWidth(2);
@@ -411,7 +409,7 @@ tex->SetNDC();
    MT2__1->GetZaxis()->SetTitleFont(42);
    MT2__1->Draw("sameaxis");
    
-   TLegend *leg = new TLegend(0.7097315,0.7027696,0.909396,0.920147,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.7097315,0.693897,0.909396,0.920147,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(62);
    leg->SetLineColor(1);
@@ -514,7 +512,7 @@ tex->SetNDC();
    leg->Draw();
   
 // ------------>Primitives in pad: MT2_ratio_plotpad_1
-   MT2_ratio_plotpad_1 = new TPad("MT2_ratio_plotpad_1", "newpad",0.1073826,0.94,0.2114094,0.9733333);
+   MT2_ratio_plotpad_1 = new TPad("MT2_ratio_plotpad_1", "newpad",0.204698,0.8377778,0.3322148,0.8888889);
    MT2_ratio_plotpad_1->Draw();
    MT2_ratio_plotpad_1->cd();
    MT2_ratio_plotpad_1->Range(0,0,1,1);
@@ -528,42 +526,6 @@ tex->SetNDC();
    MT2_ratio_plotpad_1->SetFrameLineWidth(3);
    MT2_ratio_plotpad_1->SetFrameBorderMode(0);
    MT2_ratio_plotpad_1->SetFrameBorderSize(0);
-  
-// ------------>Primitives in pad: MT2_ratio_plotpad_1_1
-   MT2_ratio_plotpad_1_1 = new TPad("MT2_ratio_plotpad_1_1", "newpad",0.1612903,0,1,0.3333333);
-   MT2_ratio_plotpad_1_1->Draw();
-   MT2_ratio_plotpad_1_1->cd();
-   MT2_ratio_plotpad_1_1->Range(0,0,1,1);
-   MT2_ratio_plotpad_1_1->SetFillColor(0);
-   MT2_ratio_plotpad_1_1->SetBorderMode(0);
-   MT2_ratio_plotpad_1_1->SetBorderSize(2);
-   MT2_ratio_plotpad_1_1->SetLeftMargin(0.18);
-   MT2_ratio_plotpad_1_1->SetRightMargin(0.08);
-   MT2_ratio_plotpad_1_1->SetTopMargin(0.07);
-   MT2_ratio_plotpad_1_1->SetBottomMargin(0.17);
-   MT2_ratio_plotpad_1_1->SetFrameLineWidth(3);
-   MT2_ratio_plotpad_1_1->SetFrameBorderMode(0);
-   MT2_ratio_plotpad_1_1->SetFrameBorderSize(0);
-   MT2_ratio_plotpad_1_1->Modified();
-   MT2_ratio_plotpad_1->cd();
-  
-// ------------>Primitives in pad: MT2_ratio_plotpad_1_2
-   MT2_ratio_plotpad_1_2 = new TPad("MT2_ratio_plotpad_1_2", "newpad",0.3225806,0,1,0.4);
-   MT2_ratio_plotpad_1_2->Draw();
-   MT2_ratio_plotpad_1_2->cd();
-   MT2_ratio_plotpad_1_2->Range(0,0,1,1);
-   MT2_ratio_plotpad_1_2->SetFillColor(0);
-   MT2_ratio_plotpad_1_2->SetBorderMode(0);
-   MT2_ratio_plotpad_1_2->SetBorderSize(2);
-   MT2_ratio_plotpad_1_2->SetLeftMargin(0.18);
-   MT2_ratio_plotpad_1_2->SetRightMargin(0.08);
-   MT2_ratio_plotpad_1_2->SetTopMargin(0.07);
-   MT2_ratio_plotpad_1_2->SetBottomMargin(0.17);
-   MT2_ratio_plotpad_1_2->SetFrameLineWidth(3);
-   MT2_ratio_plotpad_1_2->SetFrameBorderMode(0);
-   MT2_ratio_plotpad_1_2->SetFrameBorderSize(0);
-   MT2_ratio_plotpad_1_2->Modified();
-   MT2_ratio_plotpad_1->cd();
    MT2_ratio_plotpad_1->Modified();
    MT2_ratio_plotpad->cd();
    MT2_ratio_plotpad->Modified();
@@ -594,13 +556,13 @@ tex->SetNDC();
    h1_copy->SetBinContent(2,1);
    h1_copy->SetBinContent(3,1);
    h1_copy->SetBinContent(4,1);
-   h1_copy->SetBinError(1,0.3034513);
-   h1_copy->SetBinError(2,0.221055);
-   h1_copy->SetBinError(3,0.3920135);
-   h1_copy->SetBinError(4,0.5702689);
+   h1_copy->SetBinError(1,0.4554153);
+   h1_copy->SetBinError(2,0.232837);
+   h1_copy->SetBinError(3,0.387561);
+   h1_copy->SetBinError(4,0.5992192);
    h1_copy->SetMinimum(0);
    h1_copy->SetMaximum(2);
-   h1_copy->SetEntries(25.81356);
+   h1_copy->SetEntries(20.75541);
    h1_copy->SetStats(0);
    h1_copy->SetFillColor(1);
    h1_copy->SetFillStyle(3001);
@@ -630,17 +592,17 @@ tex->SetNDC();
    Double_t xAxis10[5] = {100, 150, 200, 250, 300}; 
    
    TH1D *h2_copy__2 = new TH1D("h2_copy__2","",4, xAxis10);
-   h2_copy__2->SetBinContent(1,1.278588);
-   h2_copy__2->SetBinContent(2,0.97658);
-   h2_copy__2->SetBinContent(3,0.5953366);
-   h2_copy__2->SetBinContent(4,0.7124274);
-   h2_copy__2->SetBinError(1,0.3554643);
-   h2_copy__2->SetBinError(2,0.1937423);
-   h2_copy__2->SetBinError(3,0.2334451);
-   h2_copy__2->SetBinError(4,0.5799191);
+   h2_copy__2->SetBinContent(1,1.15588);
+   h2_copy__2->SetBinContent(2,1.004469);
+   h2_copy__2->SetBinContent(3,0.6125244);
+   h2_copy__2->SetBinContent(4,0.6374901);
+   h2_copy__2->SetBinError(1,0.4770972);
+   h2_copy__2->SetBinError(2,0.20764);
+   h2_copy__2->SetBinError(3,0.2388255);
+   h2_copy__2->SetBinError(4,0.5255068);
    h2_copy__2->SetMinimum(0.4);
    h2_copy__2->SetMaximum(3);
-   h2_copy__2->SetEntries(22.88557);
+   h2_copy__2->SetEntries(19.25812);
    h2_copy__2->SetDirectory(0);
    h2_copy__2->SetStats(0);
 
@@ -676,13 +638,13 @@ tex->SetNDC();
    h1_copy__3->SetBinContent(2,1);
    h1_copy__3->SetBinContent(3,1);
    h1_copy__3->SetBinContent(4,1);
-   h1_copy__3->SetBinError(1,0.3034513);
-   h1_copy__3->SetBinError(2,0.221055);
-   h1_copy__3->SetBinError(3,0.3920135);
-   h1_copy__3->SetBinError(4,0.5702689);
+   h1_copy__3->SetBinError(1,0.4554153);
+   h1_copy__3->SetBinError(2,0.232837);
+   h1_copy__3->SetBinError(3,0.387561);
+   h1_copy__3->SetBinError(4,0.5992192);
    h1_copy__3->SetMinimum(0);
    h1_copy__3->SetMaximum(2);
-   h1_copy__3->SetEntries(25.81356);
+   h1_copy__3->SetEntries(20.75541);
    h1_copy__3->SetDirectory(0);
    h1_copy__3->SetStats(0);
    h1_copy__3->SetFillColor(1);
