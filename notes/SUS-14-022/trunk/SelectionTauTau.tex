@@ -1,37 +1,41 @@
-\section{\texorpdfstring{Selection cuts for \Tau\Tau channel}{Selection cuts for tau-tau channel}}
+\section{\texorpdfstring{Event selection for the \Tau\Tau channel}{Event selection for the tau-tau channel}}
 \label{sect:tauTauCuts}
-The selection of the events from the collisions for \Tau\Tau channel
-is done with a dedicated trigger that uses the combination of 
-two $\tau$ leptons reconstructed in the trigger levels \cite{CMS:2013hoa,Chatrchyan:2012xi,Chatrchyan:2011nv}.
-The events with two \Tau's with \PT $>$ 35 \GeV and $|\eta|<$2.1 which have a medium isolation are recorded. 
-
-To select the events for \Tau\Tau channel, two reconstructed \Tau which are oppositlely charged are selected. Both \Tau's are asked to 
-have \PT $>$ 45 \GeV and $|\eta| <$ 2.1 and pass the medium isolation criteria.
-%$I_{\Tau}$ less than 1\GeV. 
-In the case of more than one pair, the pair with the tightest isolation 
+In this channel events are first selected with a trigger \cite{CMS:2013hoa,Chatrchyan:2012xi,Chatrchyan:2011nv}
+that requires the existence of
+two loosely identified, isolated \Tau candidates with \PT $>$ 35 \GeV and $|\eta|<$2.1.   Offline,
+the \Tau identification requirements are tightened, the two \Tau candidates must be of
+opposite charge, and the \PT threshold is increased to 45 GeV.
+In events with more than one \Tau\Tau pair, we only consider the pair with the tightest isolation.
+{\bf (What does this mean?  You have two isolation values, so how do you define ``tightest isolation''?)}
 %that minimizes the sum of $I_{\Tau}$ 
-is selected. Also a loose cut on \MET $>$ 30 \GeV is applied to suppress QCD events.
-The events with extra electrons or muons (\PT $>$ 10 \GeV, $\eta <$ 2.4 and loose isolation criteria) 
+
+Events with isolated extra electrons or muons of \PT $>$ 10 \GeV and $|\eta| <$ 2.4 
 are rejected to suppress %the contribution of the associatiated production of \Z with vector bosons.
-the background caused by diboson production.
+backgrounds from diboson decays.
 %A Monte Carlo (MC) study shows that the invariant mass distribution of the two \Tau's coming from a \Z boson can be approximated 
 %with a gaussian distribution with a peak close to 70 \GeV and a width of about 15 \GeV, so the events with the invariant mass of  
 %the two \Tau's in this range are excluded (\Z-veto). 
+The background from \Z$\rightarrow$\Tau\Tau events is reduced by rejecting events where the visible
+di-\Tau invariant mass is between 55 and 85 \GeV.  Furthermore, events where this invariant mass is below 15 GeV
+are also rejected to eliminate low mass QCD resonances.
+The minimum angle $\Delta \Phi$
+in the transverse plane between the $\VEtmiss$ and any of the jets %with \PT $>$ 40 \GeV and $|\eta| <$ 5 
+must be greater than 1.  This requirement reduces backgrounds from QCD multijet events and $W+$jet events.
+We also impose a loose requirement \mttwo $>$ 40 \GeV to increase the rejection power against QCD multijet events.
 
-The di-\Tau events that thier invariant mass is between 55 and 85 \GeV are rejected to suppress the \Z$\rightarrow$\Tau\Tau events (\Z veto).
-Mis-reconstruction of the energy of the $\Tau$'s has moved the visible mass of the $Z\to\Tau\Tau$ to lower values.
-A minimum cut of 15 \GeV on this invariant mass helps to get rid of the low mass
-QCD resonances. The minimum angle in the transverse plane between the \MET and the jets %with \PT $>$ 40 \GeV and $|\eta| <$ 5 
-is asked to be greater than 1. A soft cut on this variable is useful against the events with a fake \MET including the QCD multijet events. 
-But, it was found that tightening the cut can be useful against the $W$jets events.
-A soft cut on \mttwo ($>$ 40 \GeV) increases the rejection power against the QCD multijet events.
 
-After applying pre-selection cuts, two extra set of cuts are introduced which define the serach regions.
-The first search region aims the points with large and medium mass difference between charginos and neutralinos, In this case,  \mttwo  distribution has a tail beyond the 
-SM backgrounds. 
-The other one is dedicated for low mass differences where sum of the \mt of two \Tau, \SumMT = $\mt^{\Tau^1} + \mt^{\Tau^2}$, can be a good descriminator between the signal and SM backgrounds. 
-The variable was used previously in the corresponding analysis in the ATLAS experiment \cite{Aad:2014yka}.
-The two signal regions are chosen to be exclusive in order to be able to combine the statistics at the end. 
+After applying the pre-selection described above,
+extra requirements are introduced to define two search regions.
+The first search region is designed to be sensitive to models
+with large mass difference ($\Delta M$) between charginos and neutralinos.
+In this case, the \mttwo signal distribution extends beyond the 
+distribution of SM backgrounds.
+The second search region is dedicated to models with small $\Delta M$.  In this case
+the sum of the \mt of two \Tau, \SumMT = $\mt^{\Tau^1} + \mt^{\Tau^2}$, is a good discriminator
+between signal and SM backgrounds. 
+This variable was used previously in a similar analysis from the ATLAS experiment \cite{Aad:2014yka}.
+
+
 %When the mass difference is sufficiently high, \mttwo has a tail well beyond 80 \GeV, which is 
 %the peak  and the end point of the \mt distribution of $W$jets events in the parton level. 
 %Due to the particles' width and the detector effects, 
@@ -39,13 +43,17 @@ The two signal regions are chosen to be exclusive in order to be able to combine
 
 %If the mass diffrenece is not too high, %\mttwo can not exceed 80 \GeV, but 
 %the sum of the \mt of two \Tau, \SumMT = $\mt^{\Tau^1} + \mt^{\Tau^2}$, can be a good descriminator between the signal and SM backgrounds. 
-Two signal regions are defined as:
+The two signal regions are defined as:
 \begin{itemize}
-\item {\bf\binone}: \mttwo $>$ 90 \GeV;
-\item {\bf\bintwo}: \mttwo $<$ 90 \GeV and \SumMT $>$ 250 \GeV; b-tagged jets are vetoed.
+\item {\bf SR1}: \mttwo $>$ 90 \GeV;
+\item {\bf SR2}: \mttwo $<$ 90 \GeV and \SumMT $>$ 250 \GeV; b-tagged jets are vetoed.
 \end{itemize}
-Vetoing the b-tagged jets in the second region is useful against the backgrounds containting a top quark, especially \ttbar events. 
-To tag the b-jets, the medium working point of combined secondary vertex algorithm is used \cite{Chatrchyan:2012jua}. 
+The veto on b-tagged jets in SR2 is intended to reduce
+the background from $t\bar{t}$, which
+tends to populate the low \mttwo region.  For this purpose, jets are btagged
+using the the medium working point of the combined secondary vertex algorithm \cite{Chatrchyan:2012jua}. 
+
+
 %The b-jets have \PT $>$ 20 \GeV and $|\eta| < $ 2.4.
 
 %The event yields can be found in table~\ref{tbl:cutflowtable}. The yields for three SUSY signal points, 
@@ -80,21 +88,26 @@ To tag the b-jets, the medium working point of combined secondary vertex algorit
 %\end{table}
 %\end{sidewaystable}
 
-The distributions of $\mttwo$ and $\SumMT$ just before applying the final cut on the search variable 
-are shown in figure~\ref{fig:comparison}. 
-%The b-jet veto cut is also applied on the $\SumMT$ distribution. 
-For both plots, the shape of QCD multijet events
-is taken from same-sign data events, which means that same selection cuts as pre-selection are applied except for the charge
-requirement which is reversed. The same-sign data is dominated by QCD. The same-sign non-QCD MC is subtracted from the same-sign data to
-find the distribution of QCD in opposite-sign region.   
- It can be concluded that data and MC are in reasonable agreement within the statistical uncertainties. The distribution of a SUSY signal point, 
-corresponding to a moderate mass difference $(m_{\chione}=240\GeV,~m_{\PSGczDo}=40\GeV)$ is also shown for illustration.
+The distributions of $\mttwo$ and $\SumMT$ for data and the SM prediction
+are shown in Fig,~\ref{fig:comparison} before the application of the final
+requirements listed above.
+{\bf (Is the b-veto applied?  This needs to be explained.)}
+%The b-jet veto cut is also applied on the $\SumMT$ distribution.
+The SM predictions in Fig.~\ref{fig:comparison} 
+are from Monte Carlo, except for the
+QCD prediction which is taken from same-sign di-tau data events,
+after subtracting a small contribution of same-sign non-QCD events estimated from Monte Carlo.
+The data and SM predictions are in good agreement within the statistical uncertainties.
+The expected distributions for a SUSY signal 
+corresponding to a moderate mass difference $(m_{\chione}=240\GeV,~m_{\PSGczDo}=40\GeV)$
+is also shown for illustration puroposes.
 \begin{figure}[!Hhtb]
 \centering
 %\includegraphics[angle=0,scale=0.35]{TauTauFigs/MT2_SSQCD_dataunblinding.png}
 \includegraphics[angle=0,scale=0.35]{TauTauFigs/mt2.png}
 \includegraphics[angle=0,scale=0.35]{TauTauFigs/summt.png} \\ 
 %\includegraphics[angle=0,scale=0.35]{TauTauFigs/SumMT_SSQCD_dataunblinding.png} \\
-\caption{The distributions of \mttwo (left) and \SumMT (right) after applying all cuts. The last bins are the signal regions.}
+\caption{The distributions of \mttwo (left) and \SumMT (right) after applying all requirements. 
+The last bins of the histograms correspond to the two signal regions (SR1 and SR2). }
 \label{fig:comparison}
 \end{figure}
