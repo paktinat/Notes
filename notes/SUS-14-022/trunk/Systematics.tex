@@ -2,8 +2,6 @@
 \label{sect:sys}
 Systematic uncertainties can affect the shape or normalization of the
 backgrounds estimated from Monte Carlo, as well as the signal acceptance.
-{\bf (What about the systematic on the data-driven baclgrounds?
-  Shouldn't they be mentioned in this section as well?).}
 These uncertainties are listed below and summarized in Table~\ref{Tab.SYS}.
 \input{SystematicsTab}
 
@@ -18,16 +16,16 @@ These uncertainties are listed below and summarized in Table~\ref{Tab.SYS}.
   recalculated.  The resulting variations in final yields are taken as
   systematic
   uncertainties.  They amount to 25\% for backgrounds and 15\% for signal.
-  {\bf (Doesn't the signal uncertainty depend on the signal point?)}
+ % {\bf (Doesn't the signal uncertainty depend on the signal point?)}
 
 \item The uncertainty on electron and muon trigger, identification, and
   isolation efficiencies is $2\%$.
-  {\bf (Shoudn't you say how you obtained these?)}
+%  {\bf (Shoudn't you say how you obtained these?)}
 
 \item The uncertainty on the $\hadtau$ identification efficiency is $6\%$. 
   The uncertainty on the efficiency of the \Tau leg of the $e\hadtau$ and
   $\mu\hadtau$ ($\tauTau$) triggers amount to $3.0\%$ ($4.5\%$ per leg).
-  {\bf (Shoudn't you say how you obtained these?)}
+%  {\bf (Shoudn't you say how you obtained these?)}
 
 \item To evaluate the uncertainty due to pileup, the assumed inelastic
   pp cross-section is varied by 5\%.  This then changes the number
@@ -37,21 +35,21 @@ These uncertainties are listed below and summarized in Table~\ref{Tab.SYS}.
 \item The uncertainty on the signal acceptance due to parton-distribution
   function uncertainties is expected to be small.
   It is about $2\%$ in the similar analysis \cite{Khachatryan:2014qwa}.
-  {\bf (I am not sure you can get away with thise statement in a paper!)}
+%  {\bf (I am not sure you can get away with thise statement in a paper!)}
 
 \item The uncertanty on the signal acceptance associated with initial state
   radiation (ISR) is evaluated by comparing the efficiency of jet-related
-  requirements between \PYTHIA and a matrix element generator
-  {\bf (Which matrix element generator?)} for the $WW$ SM process which
+  requirements between \PYTHIA and \MADGRAPH which is a matrix element generator 
+  for the $WW$ SM process which
   is similar to chargino pair-production.  From these studies we estimate
   a 3\% uncertainty on the bveto efficiency and a 6\% uncertainty on the
   $\Delta \Phi$ requirement.
   The ISR uncertainty is not considered for the background samples, due to the
-  usage of NLO generators.
-  {\bf (This is not correct.  First of all Madgraph is not NLO, it is
-    only partly NLO.  Second, we have a prescription in the SUSY group on how
-    to reweight and/or assign a systematic due to the modeling of
-    the \ttbar transverse momentum)}
+  usage of  matrix element  generators.
+%  {\bf (This is not correct.  First of all Madgraph is not NLO, it is
+%    only partly NLO.  Second, we have a prescription in the SUSY group on how
+%    to reweight and/or assign a systematic due to the modeling of
+%    the \ttbar transverse momentum)}
 
 \end{itemize}
 

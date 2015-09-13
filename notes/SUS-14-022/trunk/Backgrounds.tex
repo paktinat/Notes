@@ -38,7 +38,7 @@ This assumption was checked in the QCD domainated region of data.
 
 To reduce contamination from prompt \tauTau, in the control regions with at least one loose \Tau, 
 the same-sign pairs are selected.  Residual contributions from prompt
-\tauTau are subtracted off based on Monte Carlo expectations.
+\tauTau and $W+$ jets are subtracted off based on Monte Carlo expectations.
 In addition, the cut on $\Delta \Phi$
 is removed to improve on the statistical power of the method. 
 The final estimate of the background
@@ -63,8 +63,8 @@ the $\Delta \Phi$ requirement for QCD events.
 %in different regions, the cut on the minimum angle in the transverse plane between the \MET and the jets is removed. The final estimation
 %is corrected by the efficiency of this cut which is read from data and will be described in continue.
 
-{\bf It seems to me that this procedure would at the same time estimate 
-the $W+$ jets background with one real \Tau and one fake \Tau. (??)}
+%{\bf It seems to me that this procedure would at the same time estimate 
+%the $W+$ jets background with one real \Tau and one fake \Tau. (??)}
 
 
 \begin{figure}[!Hhtb]
@@ -102,18 +102,19 @@ SR1      & 0.13 $\pm$ 0.19 $\pm$ 0.10 \\
 SR2      & 1.15 $\pm$ 0.81 $\pm$ 0.25  \\
 \hline\hline
 \end{tabular}
-\caption{The estmated QCD background in the \tauTau channel. The first uncertainty is statistical, the second is systematic. }
+\caption{The estmated QCD background in the \tauTau channel. The first uncertainty is statistical and systematic of the method, the second is systematic due to correlation assumptions.}
 \label{4QCDbg}
 \end{center}
 \end{table}
 
 Table \ref{4QCDbg} 
-summarizes the estimation of the QCD background contribution in the two signal regions.  The systematic uncertainties are associated with the uncertainty
-on the validity 
+summarizes the estimation of the QCD background contribution in the two signal regions after extrapolation from the control regions and 
+correcting for the $\Delta \Phi$ efficiency.  
+The systematic uncertainties are associated with the uncertainty on the validity 
 of the assumption that isolation and \mttwo or \SumMT are not correlated.
-{\bf (I think that this is what you had in the original text,
-but what about the efficiency of the $\Delta \Phi$ requirement and the 
-same-sign vs. opposite-sign business?)}
+%${\bf (I think that this is what you had in the original text,
+%but what about the efficiency of the $\Delta \Phi$ requirement and the 
+%same-sign vs. opposite-sign business?)}
 
 
 \subsection{\texorpdfstring{$W$jets background estimation in the $\tauTau$ channel}{Wjets background estimation in the tau-tau channel}}
@@ -192,18 +193,15 @@ with the same requirements as the opposite-sign $\ell\Tau$
 selection for the signal.
 The fake rate is corrected by the difference found in MC between the 
 same-sign and opposite-sign fake rates.
-The final value is 0.51 $\pm$ 0.01. {\bf What is this final value? 
+The final value of the fake rate is 0.51 $\pm$ 0.01. {\bf What is this final value? 
 The fake rate?  The predicted background?  You need to make it clear.
 Also: you have a 2\% relative uncertainty on this quantity.  It seems
 way too small for a fake rate or a fake rate prediction!.}
-As a cross check, the fake rate was also measured in a region with reversed
+As a cross check, the fake rate was also measured in an opposite sign region with a reversed
 \MET requirement, i.e., \MET $<$ 30 \GeV.
-A similar value is measured for the fake rate.  {\bf Is this same-sign
-or opposite-sign?  I think opposite-sign?  Needs to be specified.
-Also ``similar'' is unsatisfactory, but I did not change it.
-Do you mean ``consistent''?}.
+A consistent value is measured for the fake rate.  
 The prompt rate ($p$) is measured in Monte Carlo Drell-Yan events, and it is found to 
-be 0.77 $\pm$ 0.0032 independent \mttwo. {\bf (The number of sig. figures
+be 0.77 $\pm$ 0.0032 independent of \mttwo. {\bf (The number of sig. figures
 is not consistent here.  Also, tiny uncertainty!!!!).}
 %To increase the statistics, the cut on \tauMT is relaxed and the final value is corrected by the efficiency of this 
 %cut which is read from Wjets events combining the \eTau and \muTau events.
@@ -213,13 +211,13 @@ It correctly
 predicts the number of $\ell\Tau$ background events in this sample, within the 
 uncertainties.
 These include statistical uncertainties due to the number of events in the 
-sidebands {\bf (Which sidebands?)} as well as 
+sidebands (loosely slected \Tau) as well as 
 systematic uncertainties, which arise mostly from
 the \Tau energy scale uncertainty discussed in Section \ref{sect:sys}. 
 The uncertainties on the %variation of the method to estimate the 
 fake rate and the prompt rate %and their statistical uncertainties 
 are negligible compared to the statistical uncertainties associated with 
-the sidebands. {\bf Again: which sidebands?}
+the sidebands. 
 
 
 \begin{table}[!Hhtb]
@@ -227,7 +225,7 @@ the sidebands. {\bf Again: which sidebands?}
 \begin{tabular}{lccccccccc}
 \hline
 \hline
-Channel    & Total Fake & rel. Stat &  FR Sys & PR Sys & Total Sys \\\hline\hline
+Channel    & Total Fake & rel. Stat &  $f$ Sys & $p$  Sys & Total Sys \\\hline\hline
 \muTau     &   6.83     &  56\%     &  6.5\%  & 0.2\%  & 57\%  \\
 \eTau      &   2.73     &  101\%    &  7\%    & 0.3\%  & 101\%  \\
 \hline
@@ -235,7 +233,7 @@ Channel    & Total Fake & rel. Stat &  FR Sys & PR Sys & Total Sys \\\hline\hlin
 \end{tabular}
 \caption{Estimation of the fake \Tau contribution in the signal region of the $\ell\Tau$ channels. The total systematic is the
 quadrature sum of the fractional systematics. All uncertainties are relative.
-FR (PR) is shorthand for fake (prompt) rate.{\bf (To be consistent with the text, shouldn't you use f and p instead of FR and PR?)}}
+$f$ ($p$) is shorthand for fake (prompt) rate.}
 \label{Tab.FakeEstimation}
 \end{center}
 \end{table}
