@@ -144,18 +144,37 @@ with the data within the uncertainties, but the low statistics of MC does not al
 so we correct the MC by the efficiency of data and the uncertainty of the correction is also conidered which is about 77\%. 
 The final value for the contribution of $W$jets in this signal region is 0.69 $\pm$ 0.54.
 
-\subsection{\texorpdfstring{DY background estimation in the $\tauTau$ channel}{DY background estimation in the tau-tau channel}}
+%\subsection{\texorpdfstring{DY background estimation in the $\tauTau$ channel}{DY background estimation in the tau-tau channel}}
+\subsection{\texorpdfstring{DY background estimation}{DY background estimation}}
 This background is taken from Monte Carlo simulation.  The simulation is 
 validated in a $\mu \tau$ control region obtained by removing the $\Delta \Phi$
 requirement and by
 inverting the Z-veto
 (\mttwo $<$ 20 \GeV, 40 $<$ \tauMT $<$ 100 \GeV).  Note that the transverse momentum 
 of the \Z system, which is correlated with 
-\mttwo, is also well reproduced in simulation.
-
-{\bf At this point you need to give the results of this procedure, ie, the
-background predictions in the two regions, including systematics,
-just like you did in the previous sections.}
+\mttwo, is also well reproduced in simulation. Table \ref{Tab.DYbkg}
+\begin{table}[!Hhtb]
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline\hline
+Channel            &  DY Estimation\\
+\hline\hline
+\eTau              & 0.19  $\pm$  0.03  $\pm$ 0.05 \\\hline
+\muTau             & 0.25  $\pm$  0.06  $\pm$ 0.06 \\\hline
+\tauTau (SR1)      & 0.56  $\pm$  0.07  $\pm$ 0.14 \\\hline
+\tauTau (SR2)      & 0.81  $\pm$  0.56  $\pm$ 0.20 \\
+\hline\hline
+\end{tabular}
+\caption{DY background in different channels. The first uncertainty is statistical and the second is systematic.}
+\label{Tab.DYbkg}
+\end{center}
+\end{table}
+summarizes the DY contribution in different signal regions. 25\% systematic uncertainty is assigned to the central value 
+which is discussed later. For $\ell\Tau$ channels, only the promot contributions are reported. 
+A separate method is developed to estimate the fake contamination in these channels.
+%{\bf At this point you need to give the results of this procedure, ie, the
+%background predictions in the two regions, including systematics,
+%just like you did in the previous sections.}
 
 %The events containing a \Z boson can be an important background in different channels. To
 %estimate this background, we use the simulated events. The simulation
@@ -193,16 +212,18 @@ with the same requirements as the opposite-sign $\ell\Tau$
 selection for the signal.
 The fake rate is corrected by the difference found in MC between the 
 same-sign and opposite-sign fake rates.
-The final value of the fake rate is 0.51 $\pm$ 0.01. {\bf What is this final value? 
-The fake rate?  The predicted background?  You need to make it clear.
-Also: you have a 2\% relative uncertainty on this quantity.  It seems
-way too small for a fake rate or a fake rate prediction!.}
+The final value of the fake rate is 0.51 $\pm$ 0.01. 
+%{\bf What is this final value? 
+%The fake rate?  The predicted background?  You need to make it clear.
+%Also: you have a 2\% relative uncertainty on this quantity.  It seems
+%way too small for a fake rate or a fake rate prediction!.}
 As a cross check, the fake rate was also measured in an opposite sign region with a reversed
 \MET requirement, i.e., \MET $<$ 30 \GeV.
 A consistent value is measured for the fake rate.  
 The prompt rate ($p$) is measured in Monte Carlo Drell-Yan events, and it is found to 
-be 0.77 $\pm$ 0.0032 independent of \mttwo. {\bf (The number of sig. figures
-is not consistent here.  Also, tiny uncertainty!!!!).}
+be 0.7659 $\pm$ 0.0032 independent of \mttwo. 
+%{\bf (The number of sig. figures
+%is not consistent here.  Also, tiny uncertainty!!!!).}
 %To increase the statistics, the cut on \tauMT is relaxed and the final value is corrected by the efficiency of this 
 %cut which is read from Wjets events combining the \eTau and \muTau events.
 
