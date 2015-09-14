@@ -6,7 +6,9 @@ as a \Tau, and those without \Tau misidentifications.
 The fake \Tau backgrounds arise mostly from QCD and $W+$ jets events.  The 
 other backgrounds are from \ttbar, $Z+$ jets, dibosons, and Higgs decays.
 Backgrounds with fake \Tau are estimated with data-driven methods; the 
-remaining backgrounds are taken from Monte Carlo.
+remaining backgrounds are taken from Monte Carlo. The main backgrounds
+are discussed here, but the others are very small, so they are dropped from the 
+discussion.
 
 %In different channels, the contribution of the events with a fake \Tau, namely QCD and $W$jets is estimated using the data. 
 %For the prompt \Tau's, from top, $\cPZ$jets, di-boson and higgs we trust 
@@ -22,7 +24,7 @@ remaining backgrounds are taken from Monte Carlo.
 %So I what I say about same-sign may be quite wrong).}
 
 Events from QCD can enter the signal regions if two quark or gluon jets are 
-misidentified as \Tau, and the rest of the kinematical cuts are also 
+misidentified as \Tau, and the rest of the kinematical selections are also 
 satisfied.  Isolation is an important 
 discriminant between fake \Tau and prompt \Tau.
 Therefore we define control regions in the 
@@ -39,7 +41,7 @@ This assumption was checked in the QCD domainated region of data.
 To reduce contamination from prompt \tauTau, in the control regions with at least one loose \Tau, 
 the same-sign pairs are selected.  Residual contributions from prompt
 \tauTau and $W+$ jets are subtracted off based on Monte Carlo expectations.
-In addition, the cut on $\Delta \Phi$
+In addition, the requirement on $\Delta \Phi$
 is removed to improve on the statistical power of the method. 
 The final estimate of the background
 is taken from the control regions extrapolation with corrections
@@ -120,9 +122,9 @@ of the assumption that isolation and \mttwo or \SumMT are not correlated.
 \subsection{\texorpdfstring{$W$jets background estimation in the $\tauTau$ channel}{Wjets background estimation in the tau-tau channel}}
 %{\bf I did not understand this, so I did not try to edit it.  This background has one real \Tau and one fake \Tau.  So according to the claim that fake \Tau cannot be taken from MC, this should be data-driven.  But when I read this it seems like it is done from MC, with complications associated with the fact that you do not have enough statistics in the Monte Carlo.  So, I am confused.}
 The contribution of the $W$jets background is taken from simulation. %with a large uncertainty. 
-While in \bintwo region the number of simulated $W$jets events is large enough to provide a reliable estimate, in \binone no such events remain after the final requirement of \mttwo $>$ 90 \GeV. Therefore, a valid estimation for the efficiency of this requirement, $\epsilon_{\rm M_{T2}>90}$, is necessary to determine the $W$jets contamination in \binone region.
+While in SR2 region the number of simulated $W$jets events is large enough to provide a reliable estimate, in SR1 no such events remain after the final requirement of \mttwo $>$ 90 \GeV. Therefore, a valid estimation for the efficiency of this requirement, $\epsilon_{\rm M_{T2}>90}$, is necessary to determine the $W$jets contamination in SR1 region.
 
-Since the size of the simulated $W$jets sample is not large enough to adequately populate our desired phase space, $\epsilon_{\rm M_{T2}>90}$ is calculated in a phase space with looser selection criteria. It is first evaluated in a $W$jets sample with a pair of oppsite-charge \Tau's where the \Tau candidates are selected similar to those in signal region. Additional signal selection requirements, such as lepton veto or $\mindphifour>1$, are applied one by one and $\epsilon_{\rm M_{T2}>90}$ is calculated at every step. The values are found to be close to each other; their wighted average is taken as the final estimate for $\epsilon_{\rm M_{T2}>90}$ with weights corresponding to the size of the simulated sample at each step. The uncertainty on the \Tau energy scale introduces the largest variation on $\epsilon_{\rm M_{T2}>90}$. This variation is considered as a systematic uncertainty on the estimated efficiency.
+Since the size of the simulated $W$jets sample is not large enough to adequately populate our desired phase space, $\epsilon_{\rm M_{T2}>90}$ is calculated in a phase space with looser selection criteria. It is first evaluated in a $W$jets sample with a pair of oppsite-charge \Tau's where the \Tau candidates are selected similar to those in signal region. Additional signal selection requirements, such as $\Delta \Phi$ or lepton veto, are applied one by one such that two orthogonal subsamples (passing and failing) are obtained. The $\epsilon_{\rm M_{T2}>90}$ quantity is calculated in all subsamples. The values are found to be close to each other; their wighted average is taken as the final estimate for $\epsilon_{\rm M_{T2}>90}$ with weights corresponding to the size of the simulated sample at each step. The uncertainty on the \Tau energy scale introduces the largest variation on $\epsilon_{\rm M_{T2}>90}$. This variation is considered as a systematic uncertainty on the estimated efficiency.
 
 The simulation of the $W$jets process is validated in a data control sample constructed based on the \muTau signal selection requirements. The selected \muTau pair in this region is required to be same-sign with a less strict \Tau isolation condition. Moreover, jets fulfilling the loose b jet identification criteria are vetoed and the \mttwo requirement is changed to $40<\mttwo<60\,\GeV$. The $W$jets events constitute more than 90\% of this control sample and the overall normalization from simulation is consistent with data, within uncertainties.
 
@@ -223,14 +225,15 @@ be 0.7659 $\pm$ 0.0032 independent of \mttwo.
 %To increase the statistics, the cut on \tauMT is relaxed and the final value is corrected by the efficiency of this 
 %cut which is read from Wjets events combining the \eTau and \muTau events.
 
-The fake rate method is applied to a $W+$ jets Monte Carlo event sample. 
+The fake rate method is applied to a W+jets Monte Carlo event sample. 
 It correctly
 predicts the number of $\ell\Tau$ background events in this sample, within the 
 uncertainties.
 These include statistical uncertainties due to the number of events in the 
 sidebands (loosely slected \Tau) as well as 
-systematic uncertainties, which arise mostly from
-the \Tau energy scale uncertainty discussed in Section \ref{sect:sys}. 
+systematic uncertainties.
+%, which arise mostly from
+%the \Tau energy scale uncertainty discussed in Section \ref{sect:sys}. 
 The uncertainties on the %variation of the method to estimate the 
 fake rate and the prompt rate %and their statistical uncertainties 
 are negligible compared to the statistical uncertainties associated with 
