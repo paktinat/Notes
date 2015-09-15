@@ -335,9 +335,9 @@ FUNCTION {format.eprint}
      { ""}
      { archive empty$
           {"\href{http://www.arXiv.org/abs/" eprint * "}" *
-             "{\texttt{ arXiv:" * eprint * "}}" *}
+             "{\texttt{arXiv:" * eprint * "}}" *}
           {"\href{" archive *  "/" * eprint * "}" *
-             "{\texttt{ " * eprint * "}}" *}
+             "{\texttt{" * eprint * "}}" *}
        if$
      }
      if$
@@ -526,7 +526,7 @@ FUNCTION {format.date.paren}
 FUNCTION {format.collaboration}
 { collaboration empty$
     { "" }
-    { "{ " collaboration * "} " * "Collaboration" * }
+    { "{" collaboration * "}" * " Collaboration" * }
   if$
 }
 
@@ -837,7 +837,7 @@ FUNCTION {link.tag.open}
       pop$ "" noop.command
     }
   if$
-  "{" * swap$ * "} {" *
+  "{" * swap$ * "}{" *
 }
 FUNCTION {link.tag.shut}
 {
@@ -1033,6 +1033,8 @@ FUNCTION {incollection}
   new.block
   note output
   new.sentence
+  format.doi output
+  new.sentence
   format.SLACcitation output
   fin.entry
 }
@@ -1222,6 +1224,9 @@ FUNCTION {techreport}
   address output
   format.date "year" output.check
   new.block
+  new.sentence
+  format.doi output
+  format.eprint output
   note output
   fin.entry
 }

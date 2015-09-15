@@ -1,7 +1,7 @@
 \def\Fileversion$#1: #2 ${\gdef\fileversion{#2}}
-\def\Filedate$#1: #2 #3 ${\gdef\filedate{#2}}
-\Fileversion$Revision: 227894 $
-\Filedate$Date: 2014-02-16 16:53:58 +0330 (Sun, 16 Feb 2014) $
+\def\Filedate$#1: #2-#3-#4 #5 ${\gdef\filedate{#2/#3/#4}}
+\Fileversion$Revision: 302217 $
+\Filedate$Date: 2015-09-02 06:26:49 +0430 (Wed, 02 Sep 2015) $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %  CMS Common definitions style file
@@ -12,8 +12,7 @@
 %                                              L. Taylor 18 Feb 2005
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{ptdr-definitions}[\filedate\space CMS Additional Physics Macros (\fileversion)]
-\RequirePackage{heppennames2}
+\ProvidesPackage{ptdr-definitions}[\filedate\space CMS Additional Macro Definitions (\fileversion)]
 \RequirePackage{xspace}
 \RequirePackage{amsmath}
 
@@ -34,6 +33,7 @@
 % Some software programs (alphabetized)
 \newcommand{\ACERMC} {\textsc{AcerMC}\xspace}
 \newcommand{\ALPGEN} {{\textsc{alpgen}}\xspace}
+\newcommand{\BLACKHAT} {{\textsc{BlackHat}}\xspace}
 \newcommand{\CALCHEP} {{\textsc{CalcHEP}}\xspace}
 \newcommand{\CHARYBDIS} {{\textsc{charybdis}}\xspace}
 \newcommand{\CMKIN} {\textsc{cmkin}\xspace}
@@ -44,6 +44,8 @@
 \newcommand{\COMPHEP} {\textsc{CompHEP}\xspace}
 \newcommand{\EVTGEN} {{\textsc{evtgen}}\xspace}
 \newcommand{\FAMOS} {{\textsc{famos}}\xspace}
+\newcommand{\FASTJET} {{\textsc{FastJet}}\xspace}
+\newcommand{\FEWZ} {{\textsc{fewz}}\xspace}
 \newcommand{\GARCON} {\textsc{garcon}\xspace}
 \newcommand{\GARFIELD} {{\textsc{garfield}}\xspace}
 \newcommand{\GEANE} {{\textsc{geane}}\xspace}
@@ -144,6 +146,7 @@
 \newcommand{\ETslash}{\ensuremath{E_{\mathrm{T}}\hspace{-1.1em}/\kern0.45em}\xspace}
 \newcommand{\VEtmiss}{\ensuremath{{\vec E}_{\mathrm{T}}^{\text{miss}}}\xspace}
 \newcommand{\ptvec}{\ensuremath{{\vec p}_{\mathrm{T}}}\xspace}
+\newcommand{\ptvecmiss}{\ensuremath{{\vec p}_{\mathrm{T}}^{\kern1pt\text{miss}}}\xspace}
 
 % roman face derivative
 \newcommand{\dd}[2]{\ensuremath{\frac{\cmsSymbolFace{d} #1}{\cmsSymbolFace{d} #2}}}
@@ -194,21 +197,24 @@
 \ifthenelse{\boolean{cms@external}}{%
 \newenvironment{scotch}[1]{\protect\centering\ruledtabular\tabular{#1}}{\endtabular\endruledtabular}
 }{
-\newenvironment{scotch}[1]{\protect\centering\tabular{#1}\hline\hline}{\hline\endtabular}
+\newenvironment{scotch}[1]{\protect\centering\tabular{#1}\hline}{\hline\endtabular}
 }
+
 % SM (still to be classified)
 
 \newcommand{\AFB}{\ensuremath{A_\text{FB}}\xspace}
 \newcommand{\wangle}{\ensuremath{\sin^{2}\theta_{\text{eff}}^\text{lept}(M^2_{\Z})}\xspace}
-\newcommand{\stat}{\ensuremath{\,\text{(stat.)}}\xspace}
-\newcommand{\syst}{\ensuremath{\,\text{(syst.)}}\xspace}
-\newcommand{\lum}{\ensuremath{\,\text{(lum.)}}\xspace}
+\newcommand{\stat}{\ensuremath{\,\text{(stat)}}\xspace}
+\newcommand{\syst}{\ensuremath{\,\text{(syst)}}\xspace}
+\newcommand{\thy}{\ensuremath{\,\text{(theo)}}\xspace}
+\newcommand{\lum}{\ensuremath{\,\text{(lumi)}}\xspace}
 \newcommand{\kt}{\ensuremath{k_{\mathrm{T}}}\xspace}
 
 \newcommand{\BC}{\HepParticle{B}{c}{}{}\xspace}
 \newcommand{\bbarc}{\PAQb{}\PQc\xspace}
 \newcommand{\bbbar}{\PQb{}\PAQb\xspace}
 \newcommand{\ccbar}{\PQc{}\PAQc\xspace}
+\newcommand{\qqbar}{\ensuremath{\PQq\PAQq}\xspace}
 \newcommand{\bspsiphi}{\ensuremath{\PBs \to \JPsi\, \PGf}\xspace}
 \newcommand{\EE}{\Pep{}\Pem\xspace}
 \newcommand{\MM}{\PGmp{}\PGmm\xspace}
@@ -241,7 +247,7 @@
 \newcommand{\tanbsq}{\ensuremath{\tan^{2}\beta}\xspace}
 \newcommand{\sidb}{\ensuremath{\sin 2\beta}\xspace}
 \newcommand{\alpS}{\ensuremath{\alpha_S}\xspace}
-\newcommand{\alpt}{\ensuremath{\widetilde{\alpha}}\xspace}
+\newcommand{\alpt}{\ensuremath{\tilde{\alpha}}\xspace}
 
 \newcommand{\QL}{\HepParticle{Q}{L}{}{}\xspace}
 \newcommand{\sQ}{\HepSusyParticle{Q}{}{}{}\xspace}

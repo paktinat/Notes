@@ -1,7 +1,7 @@
 \def\Fileversion$#1: #2 ${\gdef\fileversion{#2}}
 \def\Filedate$#1: #2-#3-#4 #5 ${\gdef\filedate{#2/#3/#4}}
-\Fileversion$Revision: 227897 $
-\Filedate$Date: 2014-02-16 17:54:34 +0330 (Sun, 16 Feb 2014) $
+\Fileversion$Revision: 296247 $
+\Filedate$Date: 2015-07-13 14:23:07 +0430 (Mon, 13 Jul 2015) $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %  CMS Common definitions style file
@@ -33,6 +33,7 @@
 % Some software programs (alphabetized)
 \newcommand{\ACERMC} {\textsc{AcerMC}\xspace}
 \newcommand{\ALPGEN} {{\textsc{alpgen}}\xspace}
+\newcommand{\BLACKHAT} {{\textsc{BlackHat}}\xspace}
 \newcommand{\CALCHEP} {{\textsc{CalcHEP}}\xspace}
 \newcommand{\CHARYBDIS} {{\textsc{charybdis}}\xspace}
 \newcommand{\CMKIN} {\textsc{cmkin}\xspace}
@@ -43,6 +44,8 @@
 \newcommand{\COMPHEP} {\textsc{CompHEP}\xspace}
 \newcommand{\EVTGEN} {{\textsc{evtgen}}\xspace}
 \newcommand{\FAMOS} {{\textsc{famos}}\xspace}
+\newcommand{\FASTJET} {{\textsc{FastJet}}\xspace}
+\newcommand{\FEWZ} {{\textsc{fewz}}\xspace}
 \newcommand{\GARCON} {\textsc{garcon}\xspace}
 \newcommand{\GARFIELD} {{\textsc{garfield}}\xspace}
 \newcommand{\GEANE} {{\textsc{geane}}\xspace}
@@ -143,6 +146,7 @@
 \newcommand{\ETslash}{\ensuremath{E_{\mathrm{T}}\hspace{-1.1em}/\kern0.45em}\xspace}
 \newcommand{\VEtmiss}{\ensuremath{{\vec E}_{\mathrm{T}}^{\text{miss}}}\xspace}
 \newcommand{\ptvec}{\ensuremath{{\vec p}_{\mathrm{T}}}\xspace}
+\newcommand{\ptvecmiss}{\ensuremath{{\vec p}_{\mathrm{T}}^{\kern1pt\text{miss}}}\xspace}
 
 % roman face derivative
 \newcommand{\dd}[2]{\ensuremath{\frac{\cmsSymbolFace{d} #1}{\cmsSymbolFace{d} #2}}}
@@ -190,6 +194,8 @@
 \newcommand{\cPKstz}{\ensuremath{\cmsSymbolFace{K}^{\ast0}}\xspace} %note has xspace
 % future symbols from heppennames2
 \providecommand{\PH}{\ensuremath{\cmsSymbolFace{H}}\xspace} % plain Higgs
+\providecommand{\Ph}{\ensuremath{\cmsSymbolFace{h}}\xspace} % SUSY Higgs
+\providecommand{\Pa}{\ensuremath{\cmsSymbolFace{a}}\xspace}
 \providecommand{\PJGy}{\ensuremath{\cmsSymbolFace{J}\hspace{-.08em}/\hspace{-.14em}\psi}\xspace} % J/Psi (no mass)
 \providecommand{\PBzs}{\ensuremath{\cmsSymbolFace{B}^0_\cmsSymbolFace{s}}\xspace} % B^0_s
 \providecommand{\Pg}{\ensuremath{\cmsSymbolFace{g}}\xspace} % generic gluon
@@ -201,8 +207,11 @@
 \providecommand{\PSGc}{\ensuremath{\widetilde{\chi}}\xspace} % neutralino
 \providecommand{\PSGcz}{\ensuremath{\widetilde{\chi}^0}\xspace} % neutralino with superscript 0
 \providecommand{\PSGczDo}{\ensuremath{\widetilde{\chi}^{0}_{1}}\xspace} % neutralino
+\providecommand{\PSGcmDo}{\ensuremath{\widetilde{\chi}^{-}_{1}}\xspace} % neutralino
 \providecommand{\PSGczDt}{\ensuremath{\widetilde{\chi}^{0}_{2}}\xspace} % neutralino
 \providecommand{\PSGcpm}{\ensuremath{\widetilde{\chi}^\pm}\xspace} % neutralino
+\providecommand{\PSGcpmDo}{\ensuremath{\widetilde{\chi}^\pm_{1}}\xspace} % neutralino
+\providecommand{\PSGcpDo}{\ensuremath{\widetilde{\chi}^{+}_{1}}\xspace} % neutralino
 \providecommand{\Pl}{\ensuremath{\cmsSymbolFace{l}}\xspace} % non-ell lepton
 \providecommand{\PAl}{\ensuremath{\overline{\cmsSymbolFace{l}}}\xspace} % non-ell anti-lepton
 \providecommand{\PGnl}{\ensuremath{\nu_\cmsSymbolFace{l}}\xspace} % lepton neutrino
@@ -214,13 +223,49 @@
 \providecommand{\PGg}{\ensuremath{\gamma}\xspace} % gamma
 \providecommand{\PKzS}{\ensuremath{\cmsSymbolFace{K}^0_\cmsSymbolFace{S}}\xspace} % K short
 \providecommand{\PBs}{\ensuremath{\cmsSymbolFace{B}_\cmsSymbolFace{s}}\xspace} % B sub s
+\providecommand{\PSQu}{\ensuremath{\widetilde{\cmsSymbolFace{u}}}\xspace}
+\providecommand{\PSQd}{\ensuremath{\widetilde{\cmsSymbolFace{d}}}\xspace}
+\providecommand{\PSQc}{\ensuremath{\widetilde{\cmsSymbolFace{c}}}\xspace}
+\providecommand{\PSQs}{\ensuremath{\widetilde{\cmsSymbolFace{s}}}\xspace}
 \providecommand{\PSQt}{\ensuremath{\widetilde{\cmsSymbolFace{t}}}\xspace} % stop
-\providecommand{\PZpr}{\ensuremath{\cmsSymbolFace{Z}^\prime}\xspace} % plain Z'
-\providecommand{\PWpr}{\ensuremath{\cmsSymbolFace{W}^\prime}\xspace} % plain W'
+\providecommand{\PSQb}{\ensuremath{\widetilde{\cmsSymbolFace{b}}}\xspace}
+\providecommand{\PASQt}{\ensuremath{\overline{\widetilde{\cmsSymbolFace{t}}}}\xspace} % anti stop
+\providecommand{\PASQb}{\ensuremath{\overline{\widetilde{\cmsSymbolFace{b}}}}\xspace} % anti sbottom
+\providecommand{\PSGt}{\ensuremath{\widetilde{\tau}}\xspace} % stau
+\providecommand{\PZpr}{\ensuremath{\cmsSymbolFace{Z}^\prime}\xspace} % plain Z' using prime
+\renewcommand{\PWpr}{\ensuremath{\cmsSymbolFace{W}^\prime}\xspace} % use prime like pennames2
 \providecommand{\PGn}{\ensuremath{\nu}\xspace} % generic neutrino
 \providecommand{\PAGn}{\ensuremath{\overline{\nu}}\xspace} % generic neutrino
-
-
+\providecommand{\PSQtDo}{\ensuremath{\widetilde{\cmsSymbolFace{t}}_1}\xspace}
+\providecommand{\PSQtDt}{\ensuremath{\widetilde{\cmsSymbolFace{t}}_2}\xspace}
+\providecommand{\PQt}{\ensuremath{\cmsSymbolFace{t}}\xspace} % t
+\providecommand{\PAQt}{\ensuremath{\overline{\cmsSymbolFace{t}}}\xspace} %
+\providecommand{\PQb}{\ensuremath{\cmsSymbolFace{b}}\xspace} % b
+\providecommand{\PAQb}{\ensuremath{\overline{\cmsSymbolFace{b}}}\xspace} %
+\providecommand{\PGm}{\ensuremath{\mu}\xspace} % muon
+\providecommand{\PGmm}{\ensuremath{\mu^-}\xspace} % muon
+\providecommand{\PGmp}{\ensuremath{\mu^+}\xspace} % muon
+\providecommand{\PGmpm}{\ensuremath{\mu^\pm}\xspace} % muon
+\providecommand{\PGt}{\ensuremath{\tau}\xspace} % tau
+\providecommand{\PAGt}{\ensuremath{\overline{\tau}}\xspace} % anti-tau
+\providecommand{\PQq}{\ensuremath{\cmsSymbolFace{q}}\xspace} % quark (generic)
+\providecommand{\PQd}{\ensuremath{\cmsSymbolFace{d}}\xspace} % down quark
+\providecommand{\PQu}{\ensuremath{\cmsSymbolFace{u}}\xspace} % up quark
+\providecommand{\PQs}{\ensuremath{\cmsSymbolFace{s}}\xspace} % top quark
+\providecommand{\PQc}{\ensuremath{\cmsSymbolFace{c}}\xspace} % top quark
+\providecommand{\PAQq}{\ensuremath{\overline{\cmsSymbolFace{q}}}\xspace} % quark (generic)
+\providecommand{\PAQd}{\ensuremath{\overline{\cmsSymbolFace{d}}}\xspace} % down quark
+\providecommand{\PAQu}{\ensuremath{\overline{\cmsSymbolFace{u}}}\xspace} % up quark
+\providecommand{\PAQs}{\ensuremath{\overline{\cmsSymbolFace{s}}}\xspace} % top quark
+\providecommand{\PAQc}{\ensuremath{\overline{\cmsSymbolFace{c}}}\xspace} % top quark
+\providecommand{\PGne}{\ensuremath{\nu_\cmsSymbolFace{e}}\xspace} % electron neutrino
+\providecommand{\PAGne}{\ensuremath{\overline{\nu}_\cmsSymbolFace{e}}\xspace} % anti-electron neutrino
+\providecommand{\PGnGm}{\ensuremath{\nu_\PGm}\xspace} % muon neutrino
+\providecommand{\PAGnGm}{\ensuremath{\overline{\nu}_\PGm}\xspace} % anti-muon neutrino
+\providecommand{\PGnGt}{\ensuremath{\nu_\PGt}\xspace} % tau neutrino
+\providecommand{\PAGnGt}{\ensuremath{\overline{\nu}_\PGt}\xspace} % anti-tau neutrino
+% our extensions for pennames2
+\providecommand{\Pepm}{\ensuremath{\cmsSymbolFace{e}^\pm}\xspace}
 % for APS style tables
 \ifthenelse{\boolean{cms@external}}{%
 \newenvironment{scotch}[1]{\protect\centering\ruledtabular\tabular{#1}}{\endtabular\endruledtabular}
@@ -232,15 +277,17 @@
 
 \newcommand{\AFB}{\ensuremath{A_\text{FB}}\xspace}
 \newcommand{\wangle}{\ensuremath{\sin^{2}\theta_{\text{eff}}^\text{lept}(M^2_{\Z})}\xspace}
-\newcommand{\stat}{\ensuremath{\,\text{(stat.)}}\xspace}
-\newcommand{\syst}{\ensuremath{\,\text{(syst.)}}\xspace}
-\newcommand{\lum}{\ensuremath{\,\text{(lum.)}}\xspace}
+\newcommand{\stat}{\ensuremath{\,\text{(stat)}}\xspace}
+\newcommand{\syst}{\ensuremath{\,\text{(syst)}}\xspace}
+\newcommand{\thy}{\ensuremath{\,\text{(theo)}}\xspace}
+\newcommand{\lum}{\ensuremath{\,\text{(lumi)}}\xspace}
 \newcommand{\kt}{\ensuremath{k_{\mathrm{T}}}\xspace}
 
 \newcommand{\BC}{\ensuremath{\cmsSymbolFace{B_{c}}}\xspace}
-\newcommand{\bbarc}{\ensuremath{\cPqb\cPaqc}\xspace}
-\newcommand{\bbbar}{\ensuremath{\cPqb\cPaqb}\xspace}
-\newcommand{\ccbar}{\ensuremath{\cPqc\cPaqc}\xspace}
+\newcommand{\bbarc}{\ensuremath{\PQb\PAQc}\xspace}
+\newcommand{\bbbar}{\ensuremath{\PQb\PAQb}\xspace}
+\newcommand{\ccbar}{\ensuremath{\PQc\PAQc}\xspace}
+\newcommand{\qqbar}{\ensuremath{\PQq\PAQq}\xspace}
 \newcommand{\bspsiphi}{\ensuremath{\cmsSymbolFace{B_s} \to \JPsi\, \phi}\xspace}
 \newcommand{\EE}{\ensuremath{\Pep\Pem}\xspace}
 \newcommand{\MM}{\ensuremath{\Pgmp\Pgmm}\xspace}
@@ -251,7 +298,7 @@
 \newcommand{\GAMJET}{\ensuremath{\gamma + \text{jet}}}
 \newcommand{\PPTOJETS}{\ensuremath{\Pp\Pp\to\text{jets}}}
 \newcommand{\PPTOGG}{\ensuremath{\Pp\Pp\to\gamma\gamma}}
-\newcommand{\PPTOGAMJET}{\ensuremath{\Pp\Pp\to\gamma + \mathrm{jet}}}
+\newcommand{\PPTOGAMJET}{\ensuremath{\Pp\Pp\to\gamma + \text{jet}}}
 \newcommand{\MH}{\ensuremath{M_{\PH}}}
 \newcommand{\RNINE}{\ensuremath{R_\mathrm{9}}}
 \newcommand{\DR}{\ensuremath{\Delta R}}

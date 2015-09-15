@@ -5,20 +5,28 @@
     Author: G. Alverson, Northeastern University
     Creation Date: 22-SEP-2010
     """
+# need this for the end=" " feature of print (which replaced ending the print statement with a semicolon). Must precede any executable statment
 from __future__ import print_function
 
-__version__ = "$Revision: 224154 $"
+__version__ = "$Revision: 274755 $"
 #$HeadURL: svn+ssh://svn.cern.ch/reps/tdr2/utils/branches/dev/general/pas-bib.py $
-#$Id: pas-bib.py 224154 2014-01-22 18:13:37Z alverson $
+#$Id: pas-bib.py 274755 2015-01-23 15:22:46Z alverson $
 
+import sys
 import re
 import shutil
-import ldap
+
 import socket
 import os
 import shelve
 from xml.dom import Node
 
+if (sys.version_info[0] > 2) :
+    import io
+    from urllib.request import urlopen
+else:
+    import StringIO as io
+    from urllib2 import urlopen
 def extractBalanced(text, delim):
     """ Extract a delimited section of text: available opening delimiters are '{', '"', and  '<' """
     delims = {"{":"}", '"':'"', "<":">"} # matching closing delims
@@ -61,7 +69,12 @@ class DocListBadXML(DocListException):
     def __str__(self):
         return repr(self.value)
         
-        
+class DocListBadXMLValue(DocListException):
+    """Doc XML does not return expected result."""
+    def __init__(self, value):
+        self.value = value
+    def __str__(self):
+        return repr(self.value)       
 
 class DocList:
     """This class is for creating a BibTeX file from the CDS database. """
@@ -216,7 +229,6 @@ class DocList:
 
     def getDocInfoFromCDS(self, tag):
         """ Get the list of PASs/Papers from CDS and parse. If tag is present, only do tag."""
-        from urllib2 import urlopen
         from xml.dom.minidom import parse
 
         if (self._verbosity > 2): print("+> getDocInfoFromCDS")
@@ -270,10 +282,13 @@ class DocList:
                             cdsTag = m.group(1)+'-'+m.group(2)+'-'+m.group(3)
                             break
                 else:
-                    cdsTag = self.getDatafieldValue(record,"037","a") # example: CMS-PAS-EXO-10-005
-                    m = tagparse.search(cdsTag)
-                    if (not m):
-                        raise DocListError ( "Note tag returned from CDS %s is not of the form XXX-YY-NNN" % tag )
+                    try:
+                        cdsTag = self.getDatafieldValue(record,"037","a") # example: CMS-PAS-EXO-10-005
+                        m = tagparse.search(cdsTag)
+                        if (not m):
+                            raise DocListBadXMLValue ( "Note tag returned from CDS %s is not of the form XXX-YY-NNN" % cdsTag )
+                    except (DocListBadXMLValue):
+                        cdsTag = False
                 if cdsTag:
                     cdsTitle = self.getDatafieldValue(record,"245","a")
                     cdsDate = self.getDatafieldValue(record,"269","c")
@@ -362,7 +377,8 @@ class DocList:
         svn_list = proc.communicate()[0] # get list of possible notes/papers
         self._dlist = re.split("/*\r*\n",svn_list) # remove eol indicator and possible directory indicator (/)
         doc_match = re.compile("[A-Z]{3}-\d{2}-\d{3}") # only PAS/Papers
-        self._dlist = filter( doc_match.search, self._dlist ) 
+        #self._dlist = filter( doc_match.search, self._dlist ) 
+        self._dlist = list(filter( doc_match.search, self._dlist ))
         if (self._verbosity > 1): print(" >> Getting LaTeX titles from the repository")
         if tag:  # the default tag is "" which tests false
             if tag in self._bib: 
@@ -374,7 +390,8 @@ class DocList:
             else:
                 if (self._verbosity > 1): print("+> Tag %s not found in CDS" % tag)
         else:   # loop over all docs
-            for doc, data in self._bib.iteritems():
+            #for doc, data in self._bib.iteritems():
+            for doc, data in self._bib.items():
                 if (not "svnTitle" in self._bib[doc]) or self._overwrite:
                     title = self.extractTitleFromSVN(doc)
                     if (self._verbosity > 1): print(">>> Inserting svn title for "+doc)

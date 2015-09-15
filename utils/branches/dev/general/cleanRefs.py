@@ -2,6 +2,7 @@
 
 """Script to check standard CMS references.
     """
+from __future__ import print_function
 
 __version__ = "$Revision: Test$"
 #$HeadURL: $
@@ -15,6 +16,7 @@ import os
 import io
 import string
 import subprocess
+import collections
 
 
     
@@ -33,6 +35,21 @@ def f5(seq, idfun=None):
        seen[marker] = 1
        result.append(item)
     return result
+def checkForDuplicates(checkItems, checkTag):
+    # duplicate entry check (use doi as unique marker)
+    # python 2.7 and later only
+    if (sys.version_info[0] > 2 or (sys.version_info[0]==2  and sys.version_info[1]>6)) :
+        chklist = [v[checkTag] for v in (vv[1] for i, vv in checkItems.items()) if checkTag in v]
+        if (len(chklist) > len(set(chklist))):
+            print('Have duplicate ',checkTag,'s',sep="")
+            print([v for v, vv in collections.Counter(chklist).items() if vv > 1])
+    else:
+        chklist = [v[checkTag] for v in (vv[1] for i, vv in checkItems.iteritems()) if checkTag in v]
+        if (len(chklist) > len(set(chklist))):
+            print('Have duplicate ',checkTag,'s',sep="")
+            for i in range(len(chklist)): #need ordered iterator
+                if chklist[i] in chklist[i+1:]:
+                    print(chklist[i])
 
 def extractBalanced(text, delim):
     """ Extract a delimited section of text: available opening delimiters are '{', '"', and  '<'.
@@ -70,28 +87,33 @@ class cleanError(Exception):
 
 class cleanRefs:
 
-    def __init__(self, tag, baseDir, verbose):
+    def __init__(self, tag, baseDir, verbose, arxiv):
         self._tag = tag
         self._refs = [] # references from paper: bibkey
         self._verbosity = verbose
-        self._bib = {} # holds tuple (artType, {fieldName:fieldValue}), key is bibkey in bib file (same as used in _refs)
-        self._rules =[ ('VOLUME',re.compile('[A-G]\s*\d'),'Volume with serial number'),
-                       ('VOLUME',re.compile(r'\\bf'), r'Volume with \bf'), # change to be any control sequence
-                       ('VOLUME',re.compile('CMS'), 'PAS as article? Please use TECHREPORT'),
-                       ('AUTHOR',re.compile('[A-Z]\.[A-Z]'),'Author with adjacent initials'),
-                       ('AUTHOR',re.compile('et al\.'), 'Author with explicit et al'),
-                       ('AUTHOR',re.compile(r'\\etal'), 'Author with explicit etal'),
-                       ('AUTHOR',re.compile(r'Adolphi'), 'Adolphi: this may be an error in attribution for the CMS detector paper. Please check'),
-                       ('JOURNAL',re.compile('CMS'), 'PAS as article? Please use TECHREPORT'),
-                       ('JOURNAL',re.compile('[A-z]\.[A-z].'), 'Missing spaces in journal name'),
-                       ('JOURNAL',re.compile('~'), 'Found ~ in a journal name--don\'t override BibTeX'),
-                       ('ISSUE',re.compile('.*'), 'Don\'t normally use the ISSUE field'),
-                       ('EPRINT',re.compile('(?<!/)[0-9]{7}'), 'Old style arXiv ref requires the archive class (see http://arxiv.org/help/arxiv_identifier)'),
-                       ('TITLE',re.compile('(?i)MadGraph.*v4'), 'MadGraph v5 references are preferred over v4 (unless v4 was what was actually used)'),                       
-                       ('DOI',re.compile('doi|DOI'), 'Do not include dx.doi.org'),
-                       ('DOI',re.compile(','), 'Only one doi in the DOI field'),
-                       ('COLLABORATION',re.compile(r'Collaboration'), r'Should not normally use Collaboration: already in the format'), 
-                       ('PAGES',  re.compile('-'), 'Range in page field: we only use first page') ] # rules for checking format: field, compiled re, message. (Add severity?)
+        self._arxiv = arxiv
+        self._bib = {} #dictionary (keyed on bibkey in bib file (same as used in _refs)) which holds the citation tuple (artType, {fieldName:fieldValue}), key is 
+        self._rules =[ ('VOLUME',re.compile('[A-G]\s*\d'),'Volume with serial number','Error'),
+                       ('VOLUME',re.compile(r'\\bf'), r'Volume with \bf','Error'), # change to be any control sequence
+                       ('VOLUME',re.compile('CMS'), 'PAS as article? Please use TECHREPORT','Error'),
+                       ('AUTHOR',re.compile('~'), 'Found author string with explicit spacing...normally not good!','Warning'),
+                       ('AUTHOR',re.compile('[A-Z]\.[A-Z]'),'Author with adjacent initials','Error'),
+                       ('AUTHOR',re.compile('et al\.'), 'Author with explicit et al','Error'),
+                       ('AUTHOR',re.compile(r'\\etal'), 'Author with explicit etal','Error'),
+                       ('AUTHOR',re.compile(r'Adolphi'), 'Adolphi: this may be an error in attribution for the CMS detector paper. Please check','Warning!'),
+                       ('JOURNAL',re.compile('CMS'), 'PAS as article? Please use TECHREPORT','Error'),
+                       ('JOURNAL',re.compile('[A-z]\.[A-z].'), 'Missing spaces in journal name','Error'),
+                       ('JOURNAL',re.compile('~'), 'Found ~ in a journal name--don\'t override BibTeX','Error'),
+                       ('ISSUE',re.compile('.*'), 'Don\'t normally use the ISSUE field','Warning'),
+                       ('EPRINT',re.compile('(?<!/)[0-9]{7}'), 'Old style arXiv ref requires the archive class (see http://arxiv.org/help/arxiv_identifier)','Error'),
+                       ('TITLE',re.compile('(?i)MadGraph.*v4'), 'MadGraph v5 references are preferred over v4 (unless v4 was what was actually used)','Warning'),                       
+                       ('TITLE',re.compile('(?i)MadGraph.*5'), 'Consider using arXiv:1405.0301, MadGraph5_aMC@NLO?','Warning'),                       
+                       ('TITLE',re.compile('POWHEG'), 'Is POWHEG (BOX) correctly referenced? See http://powhegbox.mib.infn.it','Warning'),                       
+                       ('DOI',re.compile('10.1088/1126-6708/2002/06/029|10.1088/1126-6708/2003/08/007|10.1088/1126-6708/2006/03/092|10.1088/1126-6708/2008/07/029|10.1007/JHEP01\(2011\)053'), 'MC@NLO citation found. Did you get them all? See http://www.hep.phy.cam.ac.uk/theory/webber/MCatNLO/ near the bottom','Warning'),
+                       ('DOI',re.compile('doi|DOI'), 'Do not include dx.doi.org','Error'),
+                       ('DOI',re.compile(','), 'Only one doi in the DOI field','Error'),
+                       ('COLLABORATION',re.compile(r'Collaboration'), r'Should not normally use Collaboration: already in the format','Error'), 
+                       ('PAGES',  re.compile('-'), 'Range in page field: we only use first page','Warning') ] # rules for checking format: field, compiled re, message. (Add severity?)
         self._blankCheck = re.compile(r'^\s+$')
         # field ordering not yet implemented (if ever)
         self._fieldOrder = ('AUTHOR','COLLABORATION','TITLE','DOI','JOURNAL','VOLUME','TYPE','NUMBER','YEAR','PAGES','NOTE','URL','EPRINT','ARCHIVEPREFIX') #SLACCITATION always last
@@ -151,18 +173,23 @@ class cleanRefs:
         while m:
             artType = m.group(1).upper()
             [pout, body] = extractBalanced(bibs[p+m.end(0)-1:],'{')
-            t = tagparse.match(body)
-            if (t):
-                tag = t.group(1)
-                items = self.parseBody(tag, body[t.end(0):])
-                if tag in self._bib.keys():
-                    print(">>> Duplicate entry for {0} being discarded".format(tag))
+            if (artType != u'COMMENT'):
+                t = tagparse.match(body)
+                if (t):
+                    tag = t.group(1)
+                    items = self.parseBody(tag, body[t.end(0):])
+                    if tag in self._bib.keys():
+                        print(">>> Duplicate entry for {0} being discarded".format(tag))
+                    else:
+                        self._bib[tag] = (artType, items)
                 else:
-                    self._bib[tag] = (artType, items)
-            else:
-                raise cleanError("WARNING: Could not find a tag in string starting with: {0}".format(body.strip()[0:min([len(body.strip()), 25])])) 
+                    raise cleanError("WARNING: Could not find a tag in string starting with: {0}".format(body.strip()[0:min([len(body.strip()), 25])])) 
             p = p + m.end(0) -1 + pout
             m = bibparse.search(bibs[p:])
+        if self._verbosity > 1:
+            print("Found {0} entries in the bib file. There were {1} used in the aux file.".format(len(self._bib),len(self._refs)))
+            
+
 
 
     def parseBody(self, tag, body):
@@ -207,7 +234,7 @@ class cleanRefs:
                     if fieldName in self._bib[key][1].keys():
                         m = rule[1].search(self._bib[key][1][fieldName])
                         if m:
-                            print("{0}:\t {1} problem; {2}.".format(key, rule[0], rule[2]))
+                            print("{0}:\t {1} {3}: {2}.".format(key, rule[0], rule[2], rule[3]))
                 #
                 # ad hoc checks
                 #
@@ -224,6 +251,10 @@ class cleanRefs:
                         print('{0}:\t Missing EPRINT '.format(key))
                     if not 'JOURNAL' in self._bib[key][1].keys():
                         print('{0}:\t Missing JOURNAL. Reformat as UNPUBLISHED?'.format(key))
+                    else:
+                    ## check for wrong number of digits in JHEP volume: must be two
+                        if (self._bib[key][1]['JOURNAL']==u'JHEP' or self._bib[key][1]['JOURNAL']==u'J. High Energy Phys.') and not re.match('^[0-9]{2}$',self._bib[key][1]['VOLUME']):
+                            print('{0}:\t JHEP volume number given as {1}: should always be exactly two digits (0 left padded).'.format(key,self._bib[key][1]['VOLUME']))
                 # number of authors check
                 if 'AUTHOR' in self._bib[key][1].keys():
                     etal = re.search(' and others', self._bib[key][1]['AUTHOR']) 
@@ -237,9 +268,9 @@ class cleanRefs:
                     if (nauthors > 1) and etal and collab:
                         print('{0}:\t Author count. More authors than necessary for a paper with a collaboration. List only the first plus "and others".'.format(key))
                     if (nauthors > 1 and nauthors < 15) and etal and not(collab):
-                        print('{0}:\t Author count. Incomplete author list. Include all authors up through 15'.format(key))
+                        print('{0}:\t Author count. Incomplete author list. Include all authors for lists as long as 15'.format(key))
                     if (nauthors > 15) and ~collab:
-                        print('{0}:\t Author count. More authors than necessary. Include only the first fifteen plus "and others".'.format(key))
+                        print('{0}:\t Author count. More authors than necessary. Include only the first author plus "and others" for lists longer than 15.'.format(key))
                     if (nauthors==1) and etal and not(collab):
                         print('{0}:\t Author count query. Are there really more than 15 authors for this reference?'.format(key))
                     # diagnostic
@@ -257,32 +288,62 @@ class cleanRefs:
                     if m:
                         print('{1}: Blank value for field {0}'.format(item[0],key))                        
                 #print(self.printCite(key))
+        # duplicate entry check (use doi as unique marker)
+        # python 2.7 and later only
+        checkForDuplicates(self._bib,'DOI')
+        checkForDuplicates(self._bib,'EPRINT')
+
+
+
 
     def rewrite(self):
         """Write out a new bib file. Default for now is just to reset the collab field"""
+
         if self._verbosity > 2:
             print("\n>>>rewrite: Rewriting a new bib file\n")
         outfile = os.path.join(self._baseDir,'auto_generated.bib') # overwrite original
         f = io.open(outfile,'w')
+
+
         for key in self._refs:
             if ('COLLABORATION' in self._bib[key][1].keys() and self._bib[key][1]['COLLABORATION'] in ['CMS', 'ATLAS', 'LHCb', 'ALICE']):
+                #print(self.printCite(key))
                 self._bib[key][1]['AUTHOR'] = '{'+self._bib[key][1]['COLLABORATION']+' Collaboration}'
                 del self._bib[key][1]['COLLABORATION']
-            f.write(self.printCite(key))
+            # option to filter out arXiv info if published article (PRC); may consider adding 'URL' in addition to 'DOI' for journals (Acta Phys. Polonica) w/o DOIs
+            if (not self._arxiv):
+                if ('EPRINT' in self._bib[key][1] and 'DOI' in self._bib[key][1]):
+                   del self._bib[key][1]['EPRINT']            
+                # they also have a hard time figuring out what JINST is...
+                if ('JOURNAL' in self._bib[key][1] and self._bib[key][1]['JOURNAL']==u'JINST'):
+                    self._bib[key][1]['JOURNAL']=u'J. Instrum.'
+                if ('JOURNAL' in self._bib[key][1] and self._bib[key][1]['JOURNAL']==u'JHEP'):
+                    self._bib[key][1]['JOURNAL']=u'J. High Energy Phys.'
+            if key in self._bib:
+                f.write(self.printCite(key))
         f.close()
+        
     def printCite(self, key):
         """Print out a complete bibtex entry"""
         t = ["\t"+zi[0]+"=\t\""+zi[1]+"\",\n" for zi in self._bib[key][1].items()]
         tt = "".join(t)
-        return '@{0}'.format(self._bib[key][0])+'{'+'{0},\n'.format(key)+tt+'}'
+        return '@{0}'.format(self._bib[key][0])+'{'+'{0},\n'.format(key)+tt+'}\n'
 
     def printLog(self):
         print("\n>>> Dumping BibTeX log file\n")
         file =  os.path.join(self._baseDir,self._tag + '_temp.blg')
         f = io.open(file,'r')
+        patFlip = re.compile("You've used [0-9]+ entries")
+        patFlop = re.compile("\(There were [0-9]+ warnings\)")
+        flipFlop = True
         for line in f:
-            print(line), # add comma at end to suppress additional newlines
-
+            if (flipFlop):
+                flipFlop = not patFlip.match(line)
+            else:
+                flipFlop = patFlop.match(line)
+            if (flipFlop):
+                print(line,end=""), 
+ 
 
 
 
@@ -301,8 +362,9 @@ def main(argv):
     parser = OptionParser(usage=usage, version=version)
     parser.add_option("-v", "--verbosity", action="count", dest="verbose", default=False,
                         help="trace script execution; repeated use increases the verbosity more")
-    parser.add_option("-b",  "--base", action="store", dest="base", help="base of build area", default=r"E:\tdr2\utils\trunk\tmp")
+    parser.add_option("-b",  "--base", action="store", dest="base", help="base of build area", default=r"D:\tdr2\utils\trunk\tmp")
     parser.add_option("-r", "--rewrite", action="store_true", dest="rewrite", default=False, help="rewrites the bib file and overwrites in base directory")
+    parser.add_option("--no-arxiv", action="store_false", dest="arxiv", default=True, help="removes arxiv info when doi is supplied; also replaces JINST by J. Instrum.")
     global opts
     (opts, args) = parser.parse_args()
     if opts.verbose:
@@ -318,7 +380,7 @@ def main(argv):
         
    
  
-    myRefs = cleanRefs(tag, opts.base, opts.verbose)
+    myRefs = cleanRefs(tag, opts.base, opts.verbose, opts.arxiv)
     myRefs.getRefList()
     myRefs.getRefs()
     myRefs.checkRefs()

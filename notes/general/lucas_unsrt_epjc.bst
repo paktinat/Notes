@@ -273,45 +273,45 @@ FUNCTION {format.names}
   #1 'nameptr :=
   s num.names$ 'numnames :=
   numnames 'namesleft :=
-    { namesleft #0 > }
-    {
+  { namesleft #0 > }
+  {
     namesleft #4 >
-      {
-        s nameptr "{f.~}{vv~}{ll}{, jj}" format.name$ 't :=
-         t * " {et~al.}"
-         #0 'namesleft :=
-      }
-      {
-        s nameptr "{f.~}{vv~}{ll}{, jj}" format.name$ 't :=
+    {
+      s nameptr "{f.~}{vv~}{ll}{, jj}" format.name$ 't :=
+      t * " {et~al.}"
+      #0 'namesleft :=
+    }
+    {
+      s nameptr "{f.~}{vv~}{ll}{, jj}" format.name$ 't :=
       nameptr #1 >
       {
         namesleft #1 >
-              {
+        {
           nameptr #4 =
-                { ", " * t * "{ et~al.}" *}
-        { ", " * t * }
-                if$
-              }
+          { ", " * t * "{ et~al.}" *}
+          { ", " * t * }
+          if$
+        }
         {
           t "others" =
-                  { " {et~al.}" * }
+          { " {et~al.}" * }
           {
             nameptr #2 =
-        { " and " * t * }
+            { " and " * t * }
             { ", and " * t *}
             if$
           }
           if$
         }
+        if$
+      }
+      't
       if$
+    nameptr #1 + 'nameptr :=
+    namesleft #1 - 'namesleft :=
     }
-    't
-      if$
-      nameptr #1 + 'nameptr :=
-      namesleft #1 - 'namesleft :=
-    }
-      if$
-    }
+    if$
+  }
   while$
 }
 
@@ -336,9 +336,9 @@ FUNCTION {format.eprint}
      { ""}
      { archive empty$
           {"\href{http://www.arXiv.org/abs/" eprint * "}" *
-             "{\texttt{ arXiv:" * eprint * "}}" *}
+             "{\texttt{arXiv:" * eprint * "}}" *}
           {"\href{" archive *  "/" * eprint * "}" *
-             "{\texttt{ " * eprint * "}}" *}
+             "{\texttt{" * eprint * "}}" *}
        if$
      }
      if$
@@ -527,7 +527,7 @@ FUNCTION {format.date.paren}
 FUNCTION {format.collaboration}
 { collaboration empty$
     { "" }
-    { "{ " collaboration * "} " * "Collaboration" * }
+    { "{" collaboration * "}" * " Collaboration" * }
   if$
 }
 
@@ -838,7 +838,7 @@ FUNCTION {link.tag.open}
       pop$ "" noop.command
     }
   if$
-  "{" * swap$ * "} {" *
+  "{" * swap$ * "}{" *
 }
 FUNCTION {link.tag.shut}
 {
@@ -1034,6 +1034,8 @@ FUNCTION {incollection}
   new.block
   note output
   new.sentence
+  format.doi output
+  new.sentence
   format.SLACcitation output
   fin.entry
 }
@@ -1223,6 +1225,9 @@ FUNCTION {techreport}
   address output
   format.date "year" output.check
   new.block
+  new.sentence
+  format.doi output
+  format.eprint output
   note output
   fin.entry
 }

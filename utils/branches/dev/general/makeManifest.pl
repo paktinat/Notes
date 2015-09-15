@@ -5,19 +5,22 @@ use strict;
 use Getopt::Long;
 use File::Copy;
 use File::Basename;
+use File::Spec;
+use Cwd;
+use Cwd qw(abs_path);
 use IO::File;
 use XML::Twig;
 use Text::Balanced qw (extract_bracketed);
 #use PDF::API2; #not installed on lxplus
 
-my $VERSION = sprintf "%d.%03d", q$Revision: 178913 $ =~ /(\d+)/g;
+my $VERSION = sprintf "%d.%03d", q$Revision: 302217 $ =~ /(\d+)/g;
 my $verbose;
-my $texFile = 'example/example.tex';
-my $doc = 'example_pas.pdf';
-my $style = 'pas';
-my $baseDir = 'C:/Documents and Settings/George Alverson/My Documents/CMS/TDRs/notes/notes/example';
-my $outDir = "C:/Temp/test";
-my $logFile = "tmp/example_temp.log";
+my $texFile = 'D:/tdr2/papers/XXX-08-000/trunk/XXX-08-000.tex';
+my $doc = 'XXX-08-000_temp.pdf';
+my $style = 'paper';
+my $baseDir = 'D:/tdr2/papers/XXX-08-000/trunk';
+my $outDir = "D:/tdr2/utils/trunk/tmp";
+my $logFile = "D:/tdr2/utils/trunk/tmp/XXX-08-000_temp.log";
 my $execute = '1';
 my $reportTitle = '1';
 my $contactAddress;
@@ -26,6 +29,9 @@ my $updateRecord;
 my $dataNotMC = 1;
 my $thumbnails = 1; # generate thumbnails of the figures
 my $checkRefs = 1; # currently needs Python >= 2.6.4
+my $artType = 3;
+#Note is a special article type: goes into a 980_a
+my @artTypes = ("Particle Physics - Experiment", "Nuclear Physics - Experiment", "Detectors and Experimental Techniques", "Note");
 GetOptions ('verbose!' => \$verbose,
             'help|?' => \$help,
             'texFile=s' => \$texFile,
@@ -39,10 +45,13 @@ GetOptions ('verbose!' => \$verbose,
             'updateRecord=i' => \$updateRecord,
             'thumbs!' => \$thumbnails,
             'data!' => \$dataNotMC,
-            'checkRefs!' => $checkRefs);
+            'checkRefs!' => \$checkRefs,
+            'artType=i' => \$artType
+             );
+#$verbose=1;             
 if ($verbose)
 {
-    print "$0 called with texFile = $texFile, doc= $doc, style = $style, baseDir = $baseDir, outDir = $outDir, logFile = $logFile, contact = $contactAddress\n";
+    print "$0 called with texFile = $texFile, doc= $doc, style = $style, baseDir = $baseDir, outDir = $outDir, logFile = $logFile, contact = $contactAddress, article type = $artType\n";
 }
 if ($help)
 {
@@ -67,6 +76,7 @@ if ($help)
               - verbose: produce diagnostic output. Defaults to $verbose.\n
               - thumbs: create thumbnails for the figures. Requires ImageMagick and Ghostscript (can be done with Photoshop + script, but not implemented). Defaults to $thumbnails.\n
               - checkRefs: check the references against the standard CMS recommendations
+              - artType: set the article description to (0) 'Particle Physics - Experiment', (1) 'Nuclear Physics - Experiment', or (2) 'Detectors and Experimental Techniques'. Defaults to $artType, which is generic note.\n
               - help: produce this message.\n\n
 
             Example:\n
@@ -97,6 +107,25 @@ if ($help)
       my $cmdString;
       my $outFile;
       my $ext;
+      
+      my $preface =<<EOD; # for checking abstract LaTeX
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<html>
+<head>
+<title>MathJax TeX Test Page</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['\$','\$'], ['\\\\(','\\\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<p>Below is the abstract after passing through the same formatter [MathJax] as is used on CDS. You should be able to spot those instances where comments (%) or macros have sneaked into the abstract. Unrecognized macros in math mode will be in red, but those in text mode will not stand out.</p>
+<hr>
+EOD
+
 #
 #--------------------------------------------
 #     extract Author/Title info from the TeX file
@@ -108,10 +137,10 @@ if ($help)
    $_ .= do { local( $/ ); <FILE> }; #grab entire content!
    close(FILE);
    # extract svn info: exemplars-- (note that these are the real values for this file)
-   # \RCS$Revision: 178913 $
-   # \RCS$Date: 2013-03-31 02:06:44 +0430 (Sun, 31 Mar 2013) $
+   # \RCS$Revision: 302217 $
+   # \RCS$Date: 2015-09-02 06:26:49 +0430 (Wed, 02 Sep 2015) $
    # \RCS$HeadURL: svn+ssh://svn.cern.ch/reps/tdr2/utils/branches/dev/general/makeManifest.pl $
-   # \RCS$Id: makeManifest.pl 178913 2013-03-30 21:36:44Z alverson $
+   # \RCS$Id: makeManifest.pl 302217 2015-09-02 01:56:49Z alverson $
    # -- what it looked like under cvs, with the dollar signs removed
    #\RCS Revision: 1.4 
    #\RCS Date: 2008/07/31 09:20:05 
@@ -194,6 +223,18 @@ if ($help)
        {
            print ">>> LaTeX ABSTRACT: ",$abstract,"\n";
            print ">>> ---- <<<\n";
+           # write out html for MathJax test
+           
+           my $htmlFile = File::Spec->catfile($outDir,$doc);
+           $htmlFile =~ s/\.pdf//; #remove the .pdf extension
+           $htmlFile = $htmlFile.".html";
+           open(FILE, "> $htmlFile") || die("can't open file $htmlFile $! for HTML test");
+           print FILE $preface, "\n", $abstract, "\n</body></html>";
+           close(FILE);
+           print "\n\n>>> View the file below in a web browser to check the format of the abstract on CDS. <<<\n>>> HTML Check file: ",$htmlFile,"\n\n\n";
+
+ 
+
        }
        if ($abstract =~ m/(?<!\\)\%/m) # look for % without preceeding \
        {
@@ -213,21 +254,26 @@ if ($help)
    #
    if ($checkRefs)
    {
+       if ($verbose) {print "> $0: checking references\n"};
        my $py_version = `python -V 2>&1`;
+       my $bin_dir = abs_path(dirname(__FILE__)); #look for check script in directory that contains this script
+       my $tag = basename($logFile);
+       $tag =~ s/_temp.log//;
+       my $baseArg = "--base=".abs_path(dirname($logFile));
+       #print "Python version: ", $py_version, "\n";
+       #print "logFile: ", $logFile, ", Tag: ", $tag, ", baseArg: ", $baseArg, "\n";
        if ( `python -V 2>&1` =~ m/([23])\.([0-9])\.?([0-9])?/ && ($1 > 2 || ($1 == 2 && (($2 == 6 && $3 >= 4) || $2 > 6 ))))
        { 
-#           my $bin_dir = abs_path(dirname($0)); #look for check script in directory that contains this script
-           my $bin_dir = abs_path(dirname($0)); #look for check script in directory that contains this script
-           my $tag = basename($logFile);
-           $tag =~ s/_temp.log//;
-           my $baseArg = "--base=".abs_path(dirname($logFile));
-           #print "Python version: ", $py_version, "\n";
-           #print "logFile: ", $logFile, ", Tag: ", $tag, ", baseArg: ", $baseArg, "\n";
-           my $status = system("$bin_dir/general/cleanRefs.py", $baseArg, $tag);
+            my $status = system("python", "$bin_dir/cleanRefs.py", $baseArg, $tag);
        }
        else 
        {
            print ">> tdr (makeManifest) needs Python 2.6.4 or better to analyze the references\n";
+           if (-x "/usr/bin/python2.6")
+           {
+               print ">> tdr (makeManifest): trying /usr/bin/python2.6 (default location on lxplus)\n";
+               my $status = system("/usr/bin/python26", "$bin_dir/cleanRefs.py", $baseArg, $tag);
+           }                        
        }
    }
 
@@ -248,8 +294,8 @@ if ($help)
 # Generate the XML
       my $noteCode = $baseDir; # get canonical name from directory name
       my @parts = split m+/+, $noteCode;
-      $noteCode = @parts[$#parts-1];
-      if ($noteCode =~ "tags" || $noteCode =~ "branches") {$noteCode = @parts[$#parts-2]};
+      $noteCode = $parts[$#parts-1];
+      if ($noteCode =~ "tags" || $noteCode =~ "branches") {$noteCode = $parts[$#parts-2]};
 #     don't want to include the collection parent: from J-Y LM, 2008/07/18
 #      my $collection = XML::Twig::Elt->new(collection=>{xmlns=>"http://www.loc.gov/MARC21/slim"});
       my $record = XML::Twig::Elt->new('record');
@@ -270,6 +316,8 @@ if ($help)
 
       # Title (MARC Title Statement)
       &insert_datafield("245",$record,$title);
+      
+      # Other standard MARC data as will be implemented by CDS (as per message 2013-03-05)
       my $marcCollab = XML::Twig::Elt->new(datafield=>{ tag=>"710", ind1=>" ", ind2=>" "});
       &insert_subfield("g",$marcCollab,"CMS Collaboration");
       $marcCollab->paste('last_child',$record);
@@ -281,7 +329,7 @@ if ($help)
       &insert_subfield("a",$marcAccel,"CERN LHC");
       &insert_subfield("e",$marcAccel,"CMS");
       $marcAccel->paste('last_child',$record);
-
+      
       # Year (MARC Publication)
       my $pubyear = XML::Twig::Elt->new(datafield=>{ tag=>"260", ind1=>" ", ind2=>" "});
       &insert_subfield("c",$pubyear,$svn_year);
@@ -293,6 +341,9 @@ if ($help)
       &insert_subfield("b",$pubdat,"CERN");
       # &insert_subfield("c",$pubdat,$svn_year); needs YYYYMMDD
       $pubdat->paste('last_child',$record);
+      my $cernPub = XML::Twig::Elt->new(datafield=>{ tag=>"690", ind1=>"C", ind2=>" "});
+      &insert_subfield("a",$cernPub,"CERN");
+      $cernPub->paste('last_child',$record);
 
       # Data/MC indicator: tag 653, ind1:1, subfield 9: CMS, subfield a: Data/Monte-Carlo: from J-Y LM, 2010/02/10
       my $tagDataMC = XML::Twig::Elt->new(datafield=>{tag=>"653", ind1=>"1", ind2=>" "});
@@ -327,17 +378,32 @@ if ($help)
       # 980 tag: (MARC Equivalence or Cross-Reference Series Personal Name/Title"
       if ($style eq 'pas')
       {
+          &insert_datafield("980",$record,"NOTE");
           &insert_datafield("980",$record,"CMS-PHYSICS-ANALYSIS-SUMMARIES");
       }
       elsif ($style eq 'cmspaper')
       {
           &insert_datafield("980",$record,"CMS_Papers"); # should be ?CMSPUBDRAFTFINAL? ?CMSPUBDRAFT?
       }
-
+      
       # 859:8560 tags: (email:  subfield f)
       my $tag8560 = XML::Twig::Elt->new(datafield=>{tag=>"859", ind1=>" ", ind2=>" "});
       &insert_subfield("f",$tag8560,$contactAddress);
       $tag8560->paste('last_child',$record);
+      # 65017 tag: CERN and document type. Options are "Particle Physics - Experiment", "Nuclear Physics - Experiment", and "Detectors and Experimental Techniques"
+      if ($artType == 3)
+      {
+          my $tag980 = XML::Twig::Elt->new(datafield=>{tag=>"980", ind1=>" ", ind2=>" "});
+          &insert_subfield("a",$tag980,@artTypes[$artType]);
+          $tag980->paste('last_child',$record);
+      }
+      else
+      {
+          my $tag650 = XML::Twig::Elt->new(datafield=>{tag=>"650", ind1=>"1", ind2=>"7"});
+          &insert_subfield("2",$tag650,"SzGeCERN");
+          &insert_subfield("a",$tag650,@artTypes[$artType]);
+          $tag650->paste('last_child',$record);
+      }
 
       # FFT
       my $fft_tag = XML::Twig::Elt->new(datafield=>{tag=>"FFT", ind1=>" ", ind2=>" "});
@@ -355,15 +421,20 @@ if ($help)
       {
           if ($^O eq "MSWin32")
           {
-              $ENV{'PATH'} = $ENV{'ProgramFiles'}."\\gs\\gs9.07\\bin;$ENV{'PATH'}";
-              $convertCmd = $ENV{'ProgramFiles'}."\\ImageMagick-6.8.3-Q16\\convert.exe";
+              $ENV{'PATH'} = $ENV{'ProgramFiles'}."\\gs\\gs9.10\\bin;$ENV{'PATH'}";
+              $convertCmd = $ENV{'ProgramFiles(x86)'}."\\ImageMagick-6.8.7-Q16\\convert.exe";
           }
           else
           {
               $convertCmd = "convert";
+              if (-f '/afs/cern.ch/cms/external/gs') # temporary patch on lxplus for problems with central gs. See http://bugs.ghostscript.com/show_bug.cgi?id=690676.
+              {
+                  $ENV{'PATH'} = '/afs/cern.ch/cms/external'.':'.$ENV{'PATH'};
+              }
           }
+          if ($verbose) {print "> Using convert version...\n"; system($convertCmd,"-version"); print "\n";}
       }
-      if ($verbose) {print "Opening $logFile to look for figures\n";}
+      if ($verbose) {print "> Opening $logFile to look for figures\n";}
       open (LOGFILE, $logFile) || die ("can't open the log file $logFile: $!");
       local $/ = "\012"; # necessary when called, for some unknown reason
       while (<LOGFILE> )
@@ -373,16 +444,18 @@ if ($help)
         if (/^<789FIG (.*)$/)
         {
 #---------- pull out the name/number
-            if ($verbose) {print $_ ,"\n"};
+            if ($verbose) {print "> ", $_ ,"\n"};
             $figPath = undef;
-            if (substr($_,-1,1) ne '>') # line wrapped
+            my $line = $_;
+            $line =~ s/\n+$//; # now occasionally has trailing white space
+            while (substr($line,-1,1) ne '>')
             {
-              my $line = $_;
+              # line wrapped
               $_ = <LOGFILE>;
-              $_ = $line.$_;   #concatenate both lines
-              # try again
+              $line = $line.$_;   #concatenate both lines
+              $line =~ s/\n+$//;
             }
-            if (!/^<789FIG (\S*)\s(.*)>$/) {die "Unsuccessfully tried to wrap 789 line:\n$_\n";}
+            if (not $line =~ /^<789FIG (\S*)\s(.*)>$/) {die "Unsuccessfully tried to wrap 789 line:\n$_\n";}            
             $figNam = $1;
             $figNum = $2;
             if ($figNum =~ /(\d+)([[:alpha:]])$/) # subfig pre-increments the figNum
@@ -393,26 +466,25 @@ if ($help)
 #---------- now get the path to the file
             while (!$figPath && ($_ = <LOGFILE>))
             {
-              if (/^<use (.*)/)
+              if (/^\s*<use (.*)/)
               {
-                my $tmp = $1;
-                if ($tmp =~ /(.*)>/)
+                $line = $1;
+                if (not $line =~ /(.*)>/)
                 {
-                   $figPath = $1;
+                  while (not $line =~ /(.*)>/)
+                  {
+                      $_ = <LOGFILE>; # get next line
+                      $line = $line.$_;
+                      $line =~ s/\n+$//; # now occasionally has trailing white space
+                  }
+                  $line =~ /(.*)>/;
+                  $figPath = $1;
                 }
                 else
                 {
-                   $_ = <LOGFILE>; # get next line
-                   if (/(.*)>/)
-                   {
-                     $figPath = $tmp.$1;
-                   }
-                   else
-                   {
-                     die "Was looking for second line of path and got lost!\n";
-                   }
+                  $figPath = $1;
                 }
-#                print "FIGPATH: ",$figPath,"\n";
+                if ($verbose) {print "> FIGPATH: ",$figPath,"\n";}
               }
             }
             $ext = substr($figPath,-4,4);
@@ -434,6 +506,7 @@ if ($help)
                 $outFile = &genFigName;
                 if ($outFile)
                 {
+                    if ($verbose) {print ">...Processing $outFile\n";}
                     $fft_tag = XML::Twig::Elt->new(datafield=>{tag=>"FFT", ind1=>" ", ind2=>" "});
                     $doc_tag = XML::Twig::Elt->new(subfield=>{code=>"a"},$outDir."/".$outFile); # need to put back URL if go to server from afs
                     $doc_tag->paste('last_child',$fft_tag);
@@ -444,12 +517,17 @@ if ($help)
                     $outFile =~ m/^(\S+)\.\S{3,4}$/s;
                     $doc_tag = XML::Twig::Elt->new(subfield=>{code=>"d"},$1);
                     $doc_tag->paste('last_child',$fft_tag);
-                    my @convertArgs = ("$outDir/$outFile", "-trim", "-sample", "240", "-define", "pdf:use-cropbox=true", "$outDir/$1-thumb.png");
+                    my @convertArgs = ("-trim", "-sample", "240", "-define", "pdf:use-cropbox=true", "$outDir/$outFile", "$outDir/$1-thumb.png");
                     if ($thumbnails) 
                     {
                       system($convertCmd, @convertArgs)==0 or die "system call to create thumbnails with args @convertArgs failed: $?"; 
                       $doc_tag = XML::Twig::Elt->new(subfield=>{code=>"x"},"$outDir/$1-thumb.png");
                       $doc_tag->paste('last_child',$fft_tag);
+                    }
+                    if (0)
+                    {
+                      @convertArgs = ("-trim", "-density", "600", "-quality", "100", "-define", "pdf:use-cropbox=true", "$outDir/$outFile", "$outDir/$1.png"); 
+                      system($convertCmd, @convertArgs)==0 or die "system call to create thumbnails with args @convertArgs failed: $?";
                     }
                     $fft_tag->paste('last_child',$record);
                 }
@@ -479,19 +557,23 @@ if ($help)
               $doc_tag = XML::Twig::Elt->new(subfield=>{code=>"x"},"$outDir/$1-thumb.png");
               $doc_tag->paste('last_child',$fft_tag);
           }
+          if (0)
+          {
+            @convertArgs = ("-trim", "-density", "600", "-quality", "100", "-define", "pdf:use-cropbox=true", "$outDir/$outFile", "$outDir/$1.png"); 
+            system($convertCmd, @convertArgs)==0 or die "system call to create thumbnails with args @convertArgs failed: $?";
+          }
           $fft_tag->paste('last_child',$record);                    
       }
 #      $record->paste('last_child',$collection);  #: from J-Y LM, 2008/07/18
 
       my $MANIFEST = IO::File->new("> ".$outDir."/manifest.xml") or die $!;
-      if ($verbose) {print "Going to print out XML Manifest to $outDir/manifest.xml\n";}
+      if ($verbose) {print "> Going to print out XML Manifest to $outDir/manifest.xml\n";}
 #      open ($MANIFEST, "> ".$outDir."/manifest.xml") or die "Can't open manifest file\n";
 #     print the <?xml...> line to make good xml; for xml fragment, leave it out
 #      print $MANIFEST qq|<?xml version="1.0" encoding="UTF-8"?>\n|;
       $record->print($MANIFEST);
       close $MANIFEST;
-      if ($verbose) {print "Closed manifest file: $outDir/manifest.xml\n";}
-      return;
+      if ($verbose) {print "> Closed manifest file: $outDir/manifest.xml\n";}
 
 sub genFigName
 {# Generate figure name
@@ -527,14 +609,14 @@ sub genFigName
     {
        if (!$execute)
        {
-         print "$baseDir/$lastFigPath --> $outDir/$outFile\n";
+         print ">> $baseDir/$lastFigPath --> $outDir/$outFile\n";
        }
        else
        {
-         if ($verbose) {print "$baseDir/$lastFigPath --> $outDir/$outFile\n"};
+         if ($verbose) {print ">> $baseDir/$lastFigPath --> $outDir/$outFile\n"};
          if (!copy ("$baseDir/$lastFigPath",$outDir."/".$outFile))
          {
-             print "Copy of >>>> $lastFigPath failed\n";
+             print ">> Copy of >>>> $lastFigPath failed\n";
              $outFile = undef;
          }
        }

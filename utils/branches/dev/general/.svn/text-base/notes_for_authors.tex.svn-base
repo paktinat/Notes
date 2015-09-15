@@ -123,7 +123,7 @@ For \textbf{advice on using \LaTeX}, for example to include figures, see section
 
 All files reside in a standard CMS svn repository (called \texttt{tdr2}).
 As long as you are a member of the CMS e-group, you can use a web browser to see the repository: \href{https://svnweb.cern.ch/cern/wsvn/tdr2/?}.
-On any machine with the CMS environment (e.g., \texttt{lxplus.cern.ch}) you can check out either the \emph{entire} repository or selected portions
+On any machine with the CMS environment (\eg, \texttt{lxplus.cern.ch}) you can check out either the \emph{entire} repository or selected portions
 with the \texttt{svn} repository address \texttt{svn+ssh://svn.cern.ch/reps/tdr2}
 
 
@@ -163,9 +163,9 @@ The \texttt{kserver\_init} command will initialize the KRB5CCNAME file and allow
 \subsubsection{Naming convention for Analysis Notes and Physics Analysis Summaries}
 
 A new directory is created in the \texttt{tdr2/notes} directory, named according
-to the convention chosen by the analysis group, e.g. \texttt{TOP-07-005}.
+to the convention chosen by the analysis group, \eg \texttt{TOP-07-005}.
 Once created, this directory will contain a template note named according to
-the analysis name, e.g. \texttt{TOP-07-005.tex}. The \texttt{tdr} script will automatically
+the analysis name, \eg \texttt{TOP-07-005.tex}. The \texttt{tdr} script will automatically
 generate the \texttt{cmsNoteHeader} from the directory name.
 
 \subsubsection{Special Note on Physics Analysis Summaries}
@@ -191,11 +191,11 @@ called \texttt{fig} in which figures (PDF files) may be stored.
 %............................................................................
 \subsection{Creating a new Technical Design Report (or LoI, EoI, etc.)}
 
-For major reports, a new directory is created in the reports directory, e.g., \texttt{tdr2/reports/p1utp}
+For major reports, a new directory is created in the reports directory, \eg, \texttt{tdr2/reports/p1utp}
 for the Phase 1 Upgrade Technical Proposal.
 This directory will contains the following sub-directories:
 \begin{itemize}
-  \item \texttt{tex}   - latex files and subdirectories (e.g., for different chapters);
+  \item \texttt{tex}   - latex files and subdirectories (\eg, for different chapters);
   \item \texttt{fig}   - figure files and subdirectories;
   \item \texttt{bib}   - bibtex file(s) for references.
 \end{itemize}
@@ -262,9 +262,9 @@ file \texttt{contactAuthor\_noteNo.tex}.
 \textbf{\emph{Before committing any changes always check your changes are valid \LaTeX,
 otherwise you will break the document for all other authors.}}
 
-Firstly, check the local file, e.g., \texttt{myfile.tex} by doing  \texttt{tdr build myfile}.
+Firstly, check the local file, \eg, \texttt{myfile.tex} by doing  \texttt{tdr build myfile}.
 
-If \texttt{myfile.tex} is included in a bigger document, e.g., \texttt{ctdr.tex,}
+If \texttt{myfile.tex} is included in a bigger document, \eg, \texttt{ctdr.tex,}
 then you must also check that this builds: \texttt{tdr build ctdr}.
 In both cases you should check that a valid PDF file is produced that
 looks as expected.
@@ -305,14 +305,14 @@ Try to avoid doing this (messy) step by committing frequently.
 
 
 \item [?] means you have a file locally that \texttt{svn} knows nothing about.
-        Maybe it's meant to be local (e.g., is temporary). If you want it to be in the repository then you must use
+        Maybe it's meant to be local (\eg, is temporary). If you want it to be in the repository then you must use
 	\texttt{svn add} and the \texttt{svn commit}.
 \item [*] (if run with -u or --show-updates) shows a file which has changed on the server. This is in a second column.
 \end{description}
 
 
 %---------------------------------------------------------------
-\subsection{Creating a standalone paper, e.g., for submission to a journal}
+\subsection{Creating a standalone paper, \eg, for submission to a journal}
 
 If you wish to export your paper (for publication, local work or for security),
 you can produce a tarball with all the necessary files with
@@ -422,7 +422,7 @@ to resolve cross references; citations are handled using BibTeX.
 %\end{document}
 
 Therefore, it should be stressed that the file \texttt{myPaper.tex}
-should \emph{not} contain any document definition commands (e.g.,
+should \emph{not} contain any document definition commands (\eg,
 \texttt{\textbackslash{}documentclass},
 $\backslash${\texttt{begin$\lbrace$document}}$\rbrace$
 and so on).
@@ -456,7 +456,7 @@ In general you should be in the directory in which the
 %....................................
 \subsection{Setting the default file to build}
 %
-To save specifying your preferred build target (e.g., \texttt{myPaper.tex}) each
+To save specifying your preferred build target (\eg, \texttt{myPaper.tex}) each
 time, just set the Unix environmental variable \texttt{TDR\_TARGET}
 to \texttt{myPaper}.
 Then you can just type
@@ -496,7 +496,7 @@ tdr --style paper --aps - b XXX-08-000
 Please note that the \texttt{tdr} script can automatically take the pdfkeywords and format them for the equivalent journal field.
 
 \begin{description}
-\item[APS] use the normal command for a paper, but add the appropriate APS options with, e.g., \texttt{--aps="reprint,prl,linenumbers"}. See the revtex documentation for details on APS options. Information on the revtex style for use with APS journals can be found at \url{http://authors.aps.org/revtex4/} and download sites are listed at \url{https://authors.aps.org/revtex4/revtex4_faq.html#download}. APS does not accept sub-directories nor included \TeX files, so the necessary files will either be included or moved to the top level, as appropriate, for submission.
+\item[APS] use the normal command for a paper, but add the appropriate APS options with, \eg, \texttt{--aps="reprint,prl,linenumbers"}. See the revtex documentation for details on APS options. Information on the revtex style for use with APS journals can be found at \url{http://authors.aps.org/revtex4/} and download sites are listed at \url{https://authors.aps.org/revtex4/revtex4_faq.html#download}. APS does not accept sub-directories nor included \TeX files, so the necessary files will either be included or moved to the top level, as appropriate, for submission.
 \item[PLB] use \texttt{--plb="3p,twocolumn,times"} or any other set of Elsevier options. See \url{http://www.elsevier.com/framework_authors/misc/elsdoc.pdf} for details on the Elsevier elsarticle style. As for the APS, PLB only accepts a flat file structure. The PLB default bib style will convert to lowercase all except the first word in the titles of references, so escape proper names, acronyms, \etc, with curly braces, \eg, "\verb|Search for {ADD} extra dimensional gravity|\ldots"
 \item[EPJC] Please provide (using the if-then construction described below) a \verb|\titlerunning| in the text before the \verb|\maketitle|. This is used to create a running head so it cannot be longer than roughly half a page width. When EPJC sets articles, they tend to use the \verb|\sidecaption| macro and have caption plus two small plots run across the full page. This option is not accessible in the CMS style although one can pass it to the EPJC style via an if-then.
 \item[JHEP] JHEP accepts papers in the CMS style.
@@ -519,7 +519,7 @@ Note, however, that many formatting changes that are required for the two-column
 %----------------------------------------------------------------------------
 \subsection{Supplemental Material for Journals\label{sec:journal-supplements}}
 
-Supplemental material should be placed in an independent \LaTeX\ file, e.g., supplemental\_material.tex. This file will be included via conditional code in the main document (say GEN-12-001.tex, representing a GENeric document) when it is formatted for CMS and for the arXiv, and excluded in the journal version. A third file, GEN-12-001\_supp.tex should have the supplemental material included wrapped in a standard document template, which will provide an independent file for uploading to the journal.
+Supplemental material should be placed in an independent \LaTeX\ file, \eg, supplemental\_material.tex. This file will be included via conditional code in the main document (say GEN-12-001.tex, representing a GENeric document) when it is formatted for CMS and for the arXiv, and excluded in the journal version. A third file, GEN-12-001\_supp.tex should have the supplemental material included wrapped in a standard document template, which will provide an independent file for uploading to the journal.
 
 So for GEN-12-001.tex,
 \begin{verbatim}
@@ -588,10 +588,10 @@ defined there and should be used whenever possible. They include, for
 example, $\backslash$\texttt{ET}, $\backslash$\texttt{fbinv},
 $\backslash$\texttt{sTop}, etc.
 At the top-level of each TDR
-(e.g., in \texttt{tdr2/reports/ptdr1/trunk/tex/definitions.tex}, there is another
+(\eg, in \texttt{tdr2/reports/ptdr1/trunk/tex/definitions.tex}, there is another
 file \texttt{definitions.tex} for volume-specific definitions. Macros
 should be suggested and implemented for
-frequently used constructs or common symbols or names, e.g.,
+frequently used constructs or common symbols or names, \eg,
 {$\backslash$\texttt{etc}}
 could be defined to produce ``\emph{etc.}'' and so on.
 The macros in the \texttt{definitions.tex} files are usable
@@ -694,7 +694,7 @@ a picture in a document and refer to it using a symbolic label.
 }
     \end{figure}
 
-Note that the file extension (type) for the filename (e.g., \texttt{c1{\underline{\mbox{~}}}BlackAndWhite.pdf} above)
+Note that the file extension (type) for the filename (\eg, \texttt{c1{\underline{\mbox{~}}}BlackAndWhite.pdf} above)
 is not explicitly specified.
 Also note that authors should use an alternate short caption within the
 first set of brackets when the complete caption is unduly long for
@@ -777,9 +777,9 @@ commit the original EPS version as well in case of conversion
 problems found later. The editors may re-convert if necessary.
 
 
-Also, keep in mind that some later versions of PDF (e.g., 1.5) will
+Also, keep in mind that some later versions of PDF (\eg, 1.5) will
 conflict with the Pdf\LaTeX\ machinery on many systems, including
-\texttt{lxplus} so please save figures (e.g., from Distiller) with version
+\texttt{lxplus} so please save figures (\eg, from Distiller) with version
 1.3 or 1.4, if possible.
 
 
@@ -788,7 +788,7 @@ conflict with the Pdf\LaTeX\ machinery on many systems, including
 
 In general the figures should reside in the \texttt{fig} directory or one
 of its subdirectories.
-A \texttt{fig} directory exists for each major document, e.g.,
+A \texttt{fig} directory exists for each major document, \eg,
 \texttt{tdr2/reports/ptdr1/trunk/fig/} or \linebreak[3]\texttt{tdr2/reports/ctdr/trunk/fig/}. Small papers with only a few figures do not
 require the use of a subdirectory.
 
@@ -798,7 +798,7 @@ directory and check it in.
 
 By default figures are looked for in the \texttt{fig} directory.
 
-If a figure file resides in a subdirectory, e.g., \texttt{fig/muon},
+If a figure file resides in a subdirectory, \eg, \texttt{fig/muon},
 of the \texttt{fig} directory, then simply prepend the directory
 name when referring to the figure in the
 \texttt{$\backslash${}includegraphics} command (i.e. \texttt{muon/c1} in the
@@ -877,7 +877,7 @@ is \texttt{$\backslash${}chapter} followed by all the above
 sectioning commands.
 
 The PDF bookmarks produced from Pdf\LaTeX\ will choke on \TeX symbols,
-e.g., ``2.6 This is a
+\eg, ``2.6 This is a
 ``026E30Fsection'' for ``2.6 This is a $\backslash$section'' since \TeX\ uses 026E30F to represent the backslash. Use the
 \verb+\texorpdfstring+ macro:
 \begin{verbatim}
@@ -944,9 +944,9 @@ the level of the sectioning command used (chapter, section,
 subsection, etc.).
 
 Always -- \emph{repeat always} -- use symbolic labels
-(e.g., \texttt{sec:mss-requirements})
+(\eg, \texttt{sec:mss-requirements})
 for references and not hardwired numbers
-(e.g., \texttt{9.1})
+(\eg, \texttt{9.1})
 as the latter will invariably become wrong very quickly.
 
 
@@ -998,7 +998,7 @@ of creating the entry yourself. Such an entry looks like:
 \end{verbatim}
 
 However, in the above instance and for many other \emph{commonly} cited
-references, we will use a more conventional name (e.g.,
+references, we will use a more conventional name (\eg,
 GEANT4 instead of Agostinelli:2002hh). So please check the other bibliography files to see if yours
 is already defined. The information should also be verified. In the above citation, the title was not quite right on inSPIRE.
 
@@ -1022,8 +1022,8 @@ in your text, use one of the following forms:
 
 This will result in output something like:
 \begin{quote}
-   Either: the CMS detector is described elsewhere~\cite{CMSTP};
-   or: the CMS detector is described in reference~\citenum{CMSTP}.
+   Either: the CMS detector is described elsewhere~[34];
+   or: the CMS detector is described in reference~34.
 \end{quote}
 %
 Note the omission of the square brackets in the second form,
@@ -1033,7 +1033,7 @@ referred to.
 The list of references will be placed at the end of the TDR. It is
 suggested that each group maintain a separate \texttt{.bib} file in the
 \texttt{bib} directory for the chapter specific references. Common
-references for the entire TDR will be kept in a common file (e.g., ptdr1.bib). Common software references will be kept in
+references for the entire TDR will be kept in a common file (\eg, ptdr1.bib). Common software references will be kept in
 software.bib.
 
 \subsubsection{Web References}
@@ -1051,7 +1051,7 @@ Example:\\
 Please add a short entry to \texttt{glossary.tex}
 whenever introducing any new acronym or abbreviation.
 Even plain English terms with specific technical
-meaning should be included (e.g., Python).
+meaning should be included (\eg, Python).
 \setlength{\columnseprule}{0.2mm}
 \setlength{\multicolsep}{7mm}
 \providecommand{\symexamp}[2]

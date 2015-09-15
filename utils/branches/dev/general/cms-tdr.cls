@@ -1,7 +1,7 @@
 \def\Fileversion$#1: #2 ${\gdef\fileversion{#2}}
 \def\Filedate$#1: #2 #3 ${\gdef\filedate{#2}}
-\Fileversion$Revision: 227891 $
-\Filedate$Date: 2014-02-16 16:50:39 +0330 (Sun, 16 Feb 2014) $
+\Fileversion$Revision: 302217 $
+\Filedate$Date: 2015-09-02 06:26:49 +0430 (Wed, 02 Sep 2015) $
 
 %\def\fileversion{1.0.0}\def\filedate{21 December 2006}
 
@@ -16,6 +16,9 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cms-tdr}[2006/12/21]
 \usepackage{ifthen}%           Conditionals
+%\tracingonline2
+%\showboxdepth100
+%\showboxbreadth100
 
 % switches to handle document styles: one of these must be specified.
 % pas is the same as as.
@@ -90,7 +93,6 @@
 \usepackage{longtable}% GOA: added 1 Jun 2007 for Christos
 \usepackage{array}%
 \usepackage{lineno}%           Does line numbers in margins (see \linenumbers command)
-\usepackage{listings}
 % ... other options for lineno: [pagewise]: renumbers starting each page; [modulo]: prints only every 5th line number
 
 %\usepackage{cite}%
@@ -104,16 +106,14 @@
 \usepackage{dcolumn} % for aligning columns on decimal: rather picky
 
 \usepackage[table,usenames,dvipsnames]{xcolor}% just for warnings so far; do not use for journal submission without prior approval
-\ifthenelse{\boolean{cms@external}}{} % internal commands for proofing
-{
-\usepackage[normalem]{ulem}
-\usepackage{changebar}
-}
 
 \usepackage{amsmath,amssymb}% for advanced math typesetting
 \DeclareMathOperator{\sgn}{sgn}% Declare the sgn operator
 \DeclareMathOperator{\sign}{sign}% for those who insist on sign instead
 \DeclareMathOperator{\erf}{erf}% just missing
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\Arg}{Arg}
 \ifthenelse{\boolean{cms@italic}}{
 %\usepackage{pennames-ital}% particle names: converted from pennames for mathpazo
 \usepackage[italic,italicGreek]{heppennames2}
@@ -127,7 +127,8 @@
 \usepackage{ifpdf}%
 \ifpdf\usepackage[watermark]{pdfdraftcopy}\watermarkgraphic{BigDraft}%
 \else\usepackage{draftcopy}\fi}
-
+%\usepackage{pdfpages}% not for use in journal submission!
+%\usepackage{float}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 %
 % CMS definitions
@@ -360,7 +361,7 @@
 
 % Redefine format of text in header lines (see. fancyhdr.sty)
 % ---------------------------------------
-\def\MakeUppercase{\mathversion{bold}\textbf}%     By default is:  \def\MakeUppercase{\uppercase}
+\def\MakeUppercase{\mathversion{bold}\bfseries}%     By default is:  \def\MakeUppercase{\uppercase}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -503,7 +504,11 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \providecommand{\titlerunning}[1]{\relax} % for EPJC short titles for running head
+\providecommand{\authorrunning}[1]{\relax} % for EPJC short author list for running head
 \providecommand{\doi}{\texttt{doi:}\begingroup \urlstyle{tt}\Url}
+\providecommand{\DOI}[1]{\href{http://dx.doi.org/#1}{\doi{#1}}}
+
+\newenvironment{acknowledgments}{\section*{Acknowledgments}}{\par}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %   NOTES code
@@ -531,7 +536,6 @@
 \newcounter{author}
 \newboolean{cms@primaryAuthor}
 \setboolean{cms@primaryAuthor}{false}
-
 \renewcommand\author{\@ifstar\cmsauthorP\cmsauthor}
 \newcommand{\cmsauthor}[2][]
 {
@@ -562,6 +566,10 @@
 \newcommand{\cmsPubBlock}{CMS \ifthenelse{\boolean{cms@paper}\or\boolean{cms@pas}}{\cmsSTYLE\ }{}\cmsNUMBER}
 \newcommand{\cmsNoteHeader}[1]{\edef\next{\def\noexpand\cmsSTYLE{\cms@style}}\ifx\cmsNUMBER\undefined\uppercase\expandafter{\next}\def\cmsNUMBER{#1}\else\fi}
 \newcommand{\cmsNoteContact}[1]{\def\cmsContact{#1}}
+\newcommand{\cmslogo}{\includegraphics[height=2cm]{CMS-bw-logo}}
+\newcommand{\cmsTag}{CMS-\cmsNUMBER}
+\newcommand{\cmsCopyright}{\copyright\,\the\year\ CERN for the benefit of the CMS Collaboration.}
+\newcommand{\appMsg}{See Appendix~\ref{app:collab} for the list of collaboration members}
 \def\cmsNoteRepoAddress{http://cdsweb.cern.ch/collection/CMS\%20PHYSICS\%20ANALYSIS\%20SUMMARIES} %this avoids a problem with the percent signs in commands
 \newcommand{\cmsNoteRepo}[0]
 {
@@ -570,11 +578,11 @@
         \href{http://cms.cern.ch/iCMS/jsp/iCMS.jsp?mode=single&part=publications}{Available on the CMS information server}
     }
     {
-    \ifthenelse{\boolean{cms@final}}
-    {
-        \ifthenelse{\boolean{cms@pas}}
+        \ifthenelse{\boolean{cms@final}}
         {
-            \href{\cmsNoteRepoAddress}{Available on the CERN CDS information server}}
+            \ifthenelse{\boolean{cms@pas}}
+            {
+                \href{\cmsNoteRepoAddress}{Available on the CERN CDS information server}}
             {
             }
         }
@@ -629,8 +637,9 @@
 \begin{center}\includegraphics{cms_\cms@style}\end{center}
 \vskip -0.5em
 \else
-\begin{minipage}[t]{\textwidth}\includegraphics[width=2cm]{CMS-bw-logo}
-\hrulefill\box\cms@cernbox\hspace*{55mm}\parskip=0pt\\ \large\begin{tabular}[t]{@{}r@{}l} &CMS-\cmsNUMBER\\\end{tabular}\hspace*{55mm}\end{minipage}
+\begin{minipage}[t]{\textwidth}\cmslogo\hspace*{1em}
+\hrulefill\box\cms@cernbox\hspace*{55mm}\parskip=0pt\\ \large\begin{tabular}[t]{@{}r@{}l} &
+\cmsTag\\\end{tabular}\hspace*{55mm}\end{minipage}
 \vskip 0.5em%
 \fi
 \ifthenelse{\boolean{cms@pas}}{\cmsContact}{}%
@@ -658,7 +667,7 @@ Archive Date:& \ifx\RCSId\empty\relax\else\expandafter\RCSgetDate\RCSId\RCSSVNDa
      \lineskip .75em%
      %%%%%%%%%% author block %%%%%%%%%%
 \ifthenelse{\boolean{cms@pas}\or\boolean{cms@paper}}
-{\Large{\cmsCollabName}\ifthenelse{\boolean{cms@collab}}{\renewcommand{\thefootnote}{\fnsymbol{footnote}}\footnote[1]{See Appendix~\ref{app:collab} for the list of collaboration members}\renewcommand{\thefootnote}{\arabic{footnote}}}{}}
+{\Large{\cmsCollabName}\ifthenelse{\boolean{cms@collab}}{\renewcommand{\thefootnote}{\fnsymbol{footnote}}\footnote[1]{\appMsg}\renewcommand{\thefootnote}{\arabic{footnote}}}{}}
 {
     \newcounter{c@author}
     \newcounter{c@tmp}
@@ -726,14 +735,14 @@ Archive Date:& \ifx\RCSId\empty\relax\else\expandafter\RCSgetDate\RCSId\RCSSVNDa
   \par
   \vskip 1cm plus 1cm%
   \ifthenelse{\not\boolean{cms@supplement}}{
-  \begin{CMSabstract}
-  \centering
-  \usebox{\CMSabstractbox}
-  \end{CMSabstract}
+   \begin{CMSabstract}
+    \centering
+    \usebox{\CMSabstractbox}
+    \end{CMSabstract}
   }{}
   % submit to :
   \ifx\cmsMessage\undefined\else\vskip 1cm\begin{center}\textit{\cmsMessage}\end{center}\fi
-  \ifthenelse{\boolean{cms@final}}{\null\vfill\ifthenelse{\boolean{cms@paper}}{\noindent\small{\copyright\,\the\year\ CERN for the benefit of the CMS Collaboration. \href{http://creativecommons.org/licenses/by/3.0}{CC-BY-3.0 license}}}{}}{\vfill\hfill{\textcolor{cms@grey}{\framebox{
+  \ifthenelse{\boolean{cms@final}}{\null\vfill\ifthenelse{\boolean{cms@paper}}{\noindent\small{\cmsCopyright\ \href{http://creativecommons.org/licenses/by/3.0}{CC-BY-3.0 license}}}{}}{\vfill\hfill{\textcolor{cms@grey}{\framebox{
   \begin{tabular}{lp{0.8\textwidth}}
   \multicolumn{2}{l}{This box is only visible in draft mode. Please make sure the values below make sense.}\\
   \cline{1-2}\\
@@ -770,7 +779,7 @@ Archive Date:& \ifx\RCSId\empty\relax\else\expandafter\RCSgetDate\RCSId\RCSSVNDa
 \renewenvironment{thebibliography}[1]
      {\section*{\refname}%
            \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}
-      \list{\@biblabel{\@arabic\c@enumiv}}%
+           \list{\@biblabel{\@arabic\c@enumiv}}%
            {\settowidth\labelwidth{\@biblabel{#1}}%
             \leftmargin\labelwidth
             \advance\leftmargin\labelsep

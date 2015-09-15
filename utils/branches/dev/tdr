@@ -33,20 +33,22 @@ use Cwd; # like Unix pwd but more portable
 use Cwd 'abs_path';
 use File::Glob 'bsd_glob';
 use Text::Balanced qw (extract_bracketed);
+use LWP::UserAgent; #for URL handling
 
 
 #############################################################################
 # Main:
 #############################################################################
 
-my $VERSION = sprintf "%6d", q$Revision: 199382 $ =~ /(\d+)/g;
+my $VERSION = sprintf "%6d", q$Revision: 302286 $ =~ /(\d+)/g;
 
 my $verbose = '';
 my $help = '';
 my $style = 'tdr';
-my $copyPdf = -1;
+my $copyPdf = 0;
 my $export = '';
 my $draft = 1;
+my $graphics = 1;
 my $wrap = 0;
 my $upload = '';
 my $reload = '';
@@ -65,15 +67,17 @@ my $apsStyle = '';
 my $plbStyle = '';
 my $epjcStyle = '';
 my $jhepStyle = '';
+my $npahaStyle = '';
 my $appendix = '\\appendix';
 my $hasappendix = '';
 my $issupplement = 0;
 GetOptions ('verbose!' => \$verbose, # negatable: --noverbose, turn on TeX screen output
             'help|?' => \$help, # echo basic operations and options
             'style=s' => \$style, # tdr/note/an/as/cr/in/paper
-            'copyPdf:s' => \$copyPdf, # copy the pdf output back to the directory the tex was found in
+            'copyPdf=s' => \$copyPdf, # copy the pdf output back to the directory the tex was found in
             'export!' => \$export, # generate an exportable tarball
             'draft!' => \$draft, # indicate draft status
+            'graphics!' => \$graphics, # indicates draft graphics option
             'wrap!' => \$wrap, # generate an archive of pdf+figures: currently only pas
             'arxiv!' => \$arxiv, # generate arxiv-specific tarball: currently only pas/paper
             'cernNo=s' => \$cmsCernNo, # CERN-generated preprint number (for papers only)
@@ -91,6 +95,7 @@ GetOptions ('verbose!' => \$verbose, # negatable: --noverbose, turn on TeX scree
             'plb=s' => \$plbStyle, # for Elsevier journals
             'epjc=s' => \$epjcStyle, # for Springer Verlag journals (Europhysics C)
             'jhep=s' => \$jhepStyle, # for JHEP- minimal additional processing - does not yet count as a journal style
+            'npaha=s' => \$npahaStyle, # for Nature Physics--no template available so minimal processing
             'appendix!' =>\$hasappendix, # document has an appendix - don't start authorlist with \appendix
             'supplement!' =>\$issupplement # document is a supplement - suppress abstract and full author list
             );
@@ -184,6 +189,8 @@ sub print_usage {
     print "* (default --noexport) *\n";
     print "* --draft: mark the output as a draft version *\n";
     print "* (default --draft; override with --nodraft) *\n";
+    print "* --graphics: include all graphics files as normal *\n";
+    print "* (default --graphics; override with -nographics) *\n";
     print "* --clean: clean the tmp working area before execution *\n";
     print "* (default --clean; override with --noclean) *\n";
     print "* > tdr clean // deletes temporary output files *\n";
@@ -225,6 +232,7 @@ sub print_usage {
     print "* --epjc=: options for Springer Verlag (Europhysics C) processing (= - for defaults) *\n";
     print "* twocolumn *\n";
     print "* --jhep=: options for JHEP processing (= - for defaults) [not really post-processing]*\n";
+    print "* --npaha=: options for Nature Physics processing (= - for defaults) [not really post-processing]*\n";
     print "******************************************************************************\n";
 }
 
@@ -350,17 +358,19 @@ $ENV{TEXPSHEADERS} = $ENV{TEXINPUTS}; # This is required by \includegraphics whe
     $temp_tex = "$temp_stem".'.tex';
 
     unlink($temp_tex);
+    my $stylestring = $style;
+    if (!$graphics) {$stylestring .= ",draft"}; # this adds LaTeX draft option: not same as CMS draft option
     my $svnVersion = qx{svnversion --no-newline};
     if ($style eq 'cmspaper' && !$draft)
     {
       my $meta = '';
       if ($cmsCernNo && $cmsCernDate) { $meta = qq|\\def\\cmsCernNo{$cmsCernNo}\\def\\cmsCernDate{$cmsCernDate}|; }
       if ($message) {$meta .= qq|\\def\\cmsMessage{$message}|;}
-      &myrep( "$gen_dir/skeleton_start.tex", "$temp_tex", ",tdr]{cms-tdr}", ",$style]{cms-tdr}\n\\def\\svnVersion{$svnVersion}$meta" ) ;
+      &myrep( "$gen_dir/skeleton_start.tex", "$temp_tex", ",tdr]{cms-tdr}", ",$stylestring]{cms-tdr}\n\\def\\svnVersion{$svnVersion}$meta" ) ;
     }
     else
     {
-      &myrep( "$gen_dir/skeleton_start.tex", "$temp_tex", ",tdr]{cms-tdr}", ",$style]{cms-tdr}\n\\def\\svnVersion{$svnVersion}" ) ;
+      &myrep( "$gen_dir/skeleton_start.tex", "$temp_tex", ",tdr]{cms-tdr}", ",$stylestring]{cms-tdr}\n\\def\\svnVersion{$svnVersion}" ) ;
     }
     if (!$draft)
     {
@@ -372,6 +382,7 @@ $ENV{TEXPSHEADERS} = $ENV{TEXINPUTS}; # This is required by \includegraphics whe
         #
         &myrep("$temp_tex","$temp_tex","]{cms-tdr}",",supplement]{cms-tdr}");
     }
+
     if ($style eq 'tdr')
     {
         &myrep("$temp_tex","$temp_tex","\\\\begin{document}","\\begin{document}\n");
@@ -384,22 +395,22 @@ $ENV{TEXPSHEADERS} = $ENV{TEXINPUTS}; # This is required by \includegraphics whe
         system("svn status --show-updates");
         if (!$issupplement) # could put this in outer if, but is nice to check status
         {
-        # use collab option to include footnote to collaboration listing
-        my $push_dir = getcwd();
-        chdir ($tmp_dir);
-        $authorfilename = &myCollab($temp_tex,'tex');
-        chdir ($push_dir);
-        if ($authorfilename)
-        {
-            if (!$journal)
+            # use collab option to include footnote to collaboration listing
+            my $push_dir = getcwd();
+            chdir ($tmp_dir);
+            $authorfilename = &myCollab($temp_tex,'tex');
+            chdir ($push_dir);
+            if ($authorfilename)
             {
-                &myrep("$temp_tex","$temp_tex","]{cms-tdr}",",collab]{cms-tdr}");
+                if (!$journal)
+                {
+                    &myrep("$temp_tex","$temp_tex","]{cms-tdr}",",collab]{cms-tdr}");
+                }
             }
-        }
-        else
-        {
-            $arxiv = 0;
-            print ">>> ArXiV export generation failed: no authorlist was retrieved! <<<\n";
+            else
+            {
+                $arxiv = 0;
+                print ">>> ArXiV export generation failed: no authorlist was retrieved! <<<\n";
             }
         }
     }
@@ -414,6 +425,7 @@ $ENV{TEXPSHEADERS} = $ENV{TEXINPUTS}; # This is required by \includegraphics whe
         # generate contact address from PAS type
         my $PAS_type = @tmp[0];
         my %PAS_types = (
+          PPD => "cms-PPD-conveners",
           FTR => "cms-future-conveners",
           B2G => "cms-pag-conveners-b2g",
           BPH => "cms-pag-conveners-bphysics",
@@ -510,6 +522,7 @@ $ENV{TEXPSHEADERS} = $ENV{TEXINPUTS}; # This is required by \includegraphics whe
     if ($plbStyle) {&makePLB($temp_tex, $temp_tex."-jnl", $plbStyle); &makePLB($temp_tex, $temp_tex, $plbStyle);}
     if ($epjcStyle) {&makeEPJC($temp_tex, $temp_tex."-jnl", $epjcStyle); &makeEPJC($temp_tex, $temp_tex, $epjcStyle);}
     if ($jhepStyle) {&makeJHEP($temp_tex, $temp_tex."-jnl", $jhepStyle); &makeJHEP($temp_tex, $temp_tex, $jhepStyle);}
+    if ($npahaStyle) {&makeNPAHA($temp_tex, $temp_tex."-jnl", $npahaStyle); &makeNPAHA($temp_tex, $temp_tex, $npahaStyle);}
 
 # various output log and error files; double quotes allow spaces in paths
     $temp_texq = '"'.$temp_tex.'"';
@@ -546,8 +559,12 @@ $ENV{TEXPSHEADERS} = $ENV{TEXINPUTS}; # This is required by \includegraphics whe
           system ("$texProgram -interaction=batchmode -synctex=0 -draftmode $dirstring $temp_texq 1> NUL 2> NUL");
           print ("BibTeXing file: $temp_stem\n");
           system ("bibtex $dirstring $temp_stemq 1> $temp_biboutq 2> $temp_biberrq");
-          if ($journal) {rewriteBib($tmp_dir, $target)};
-          system ("bibtex $dirstring $temp_stemq 1> $temp_biboutq 2> $temp_biberrq");
+          if ($journal) {
+              rewriteBib($tmp_dir, $target, $apsStyle);
+              system ("bibtex $dirstring $temp_stemq 1> $temp_biboutq 2> $temp_biberrq");}
+          elsif ($arxiv) {
+               rewriteBib($tmp_dir, $target, 0);
+              system ("bibtex $dirstring $temp_stemq 1> $temp_biboutq 2> $temp_biberrq");}         
           print ("2nd pass TeXing file: $temp_texq\n");
           system ("$texProgram -interaction=batchmode -synctex=0 -draftmode $dirstring $temp_texq 1> NUL 2> NUL");
           print ("final (3rd pass) TeXing file: $temp_texq\n");
@@ -570,7 +587,15 @@ $ENV{TEXPSHEADERS} = $ENV{TEXINPUTS}; # This is required by \includegraphics whe
           system ("$texProgram -interaction=batchmode -synctex=0  -draftmode $dirstring $temp_texq");
           print ("BibTeXing file: $temp_stem\n");
           system ("bibtex $dirstring $temp_stemq");
-          print ("2nd pass TeXing file: $temp_texq\n");
+          if ($journal) {
+              rewriteBib($tmp_dir, $target, $apsStyle);
+              print ("Re-BibTeXing file: $temp_stem\n");
+              system ("bibtex $dirstring $temp_stemq");}
+           elsif ($arxiv) {
+              rewriteBib($tmp_dir, $target, 0);
+              print ("Re-BibTeXing file: $temp_stem\n");
+              system ("bibtex $dirstring $temp_stemq");}
+         print ("2nd pass TeXing file: $temp_texq\n");
           system ("$texProgram -interaction=batchmode -synctex=0  -draftmode $dirstring $temp_texq");
           print ("final (3rd pass) TeXing file: $temp_texq\n");
           system ("$texProgram -interaction=batchmode -synctex=1 $dirstring $temp_texq");
@@ -602,7 +627,7 @@ $ENV{TEXPSHEADERS} = $ENV{TEXINPUTS}; # This is required by \includegraphics whe
           my $pyVer = `python -V 2>&1`;
           if ( $pyVer !~ m/([23])\.([0-9])\.?([0-9])?/ && ($1 > 2 || ($1 == 2 && (($2 == 6 && $3 >= 4) || $2 > 6 ))))
           {
-             my $pyPath = "/usr/bin/python26";
+             my $pyPath = "/usr/bin/python2.6";
              if ( -e $pyPath ) # location on lxplus
              {
                   $ENV{'PATH'} = $pyPath.':'.$ENV{'PATH'};
@@ -623,6 +648,12 @@ $ENV{TEXPSHEADERS} = $ENV{TEXINPUTS}; # This is required by \includegraphics whe
           print ("BibTeXing file: $temp_texq\n\n");
 # system ( "bibtex $temp_stem 1> $temp_biboutq 2> $temp_biberrq ");
           system ( "bibtex $temp_stem ");
+          if ($journal) {
+              rewriteBib($tmp_dir, $target, $apsStyle);
+              system ( "bibtex $temp_stem ");}
+          elsif ($journal) {
+              rewriteBib($tmp_dir, $target, 0);
+              system ( "bibtex $temp_stem ");}
           print ("\n===============================================================\n");
           print ("Second pass TeXing file: $temp_texq\n\n");
           system ( "$texProgram -interaction=batchmode $temp_tex 1> /dev/null 2> /dev/null ");
@@ -645,6 +676,14 @@ $ENV{TEXPSHEADERS} = $ENV{TEXINPUTS}; # This is required by \includegraphics whe
           print ("\n===============================================================\n");
           print ("BibTeXing file: $temp_texq\n\n");
           system ( "bibtex $temp_stem");
+          if ($journal) {
+              rewriteBib($tmp_dir, $target, $apsStyle);
+              print ("Re-BibTeXing file: $temp_texq\n\n");
+             system ( "bibtex $temp_stem");}
+          elsif ($arxiv) {
+              rewriteBib($tmp_dir, $target, 0);
+              print ("Re-BibTeXing file: $temp_texq\n\n");
+             system ( "bibtex $temp_stem");}
           print ("\n===============================================================\n");
           print ("Second pass TeXing file: $temp_texq\n\n");
           system ( "$texProgram $temp_tex");
@@ -664,12 +703,31 @@ $ENV{TEXPSHEADERS} = $ENV{TEXINPUTS}; # This is required by \includegraphics whe
       print "\n",$banner,"\n",
       "PdfLaTeX errors (filtered):\n\n";
       open (LOGFILE, $temp_pdflog) || die ("can't open the log file: $!");
-      local $/ = "\n\n"; # reset EOR... most error messages are terminated by a blank line, so let's use it... apparently new behaviour: revert to single \n?
+      #local $/ = "\n\n"; # reset EOR... most error messages are terminated by a blank line, so let's use it... apparently new behaviour: revert to single \n?
       # (This misses: "! Emergency stop" and "*** (job aborted ") and allows extra lines after "PDF inclusion: found PDF version" warnings
       while ( <LOGFILE> ) {
       	next if (/Float|float|Font Warning|weird|found\s+PDF\s+version\s+<1.6>|found\s+pdf\s+version\s+<1.5>|multiply\s|BigDraft/);
-      	print if (/! |Missing character|Warning:|Error:|Fatal|Undefined|runaway|Runaway|pdftex Warning|pdfTeX warning/);
+      	if (/! |Missing character|Warning:|Error:|Fatal|Undefined|runaway|Runaway|pdftex Warning|pdfTeX warning/)
+        {
+          print "--- from logfile ---\n";
+          print;
+          my $nline = 0;
+          while ( $nline < 10)
+          {
+            $_ = <LOGFILE>;
+            if (!defined $_) {last;} # check for EOF
+            if (m/^\s*$/) # look for empty line
+            {
+              last;
+            }
+            else
+            {
+              print;
+              $nline = $nline+1;
+            }
+          }
         }
+      }
       close (LOGFILE);
     }
 
@@ -691,7 +749,7 @@ $ENV{TEXPSHEADERS} = $ENV{TEXINPUTS}; # This is required by \includegraphics whe
         print " PS Output file: $temp_ps\n" if -e $temp_ps;
     }
     print $banner;
-    if ($copyPdf != -1 && -e $temp_pdf)
+    if ($copyPdf && -e $temp_pdf)
     {
         if ($copyPdf =~ "svn")
         {
@@ -795,20 +853,20 @@ sub wrap_files {
     my $upload = shift;
     if ($upload)
     {
-    my $base_out = "/afs/cern.ch/cms/PAS/test/";
+        my $base_out = "/afs/cern.ch/cms/PAS/test/";
         $tmp_out = $base_out.$noteCode; #means must have afs access...
-    if (! -d $tmp_out)
-    {
-       if ( ! mkdir ($tmp_out) )
-       {
-           $tmp_out = tempdir("tdr_XXXXXX", TMPDIR => 1) or die;
-           print "Made temporary directory $tmp_out for --wrap\n";
-       }
-    }
-    else
-    { #delete contents
-        unlink(bsd_glob("$tmp_out/*"));
-    }
+        if (! -d $tmp_out)
+        {
+           if ( ! mkdir ($tmp_out) )
+           {
+               $tmp_out = tempdir("tdr_XXXXXX", TMPDIR => 1) or die;
+               print "Made temporary directory $tmp_out for --wrap\n";
+           }
+        }
+        else
+        { #delete contents
+            unlink(bsd_glob("$tmp_out/*"));
+        }
         copy($pdfFile, "$base_out/$pdfOut") or warn "Can't copy $pdfFile\n"; # keep this copy for backwards compatibility
     }
     else
@@ -816,9 +874,42 @@ sub wrap_files {
         $tmp_out = tempdir("tdr_XXXXXX", TMPDIR => 1) or die;
         print "Made temporary directory $tmp_out for --wrap\n";
     }
+    # map pas/paper area to one of three CDS categories, 0:"Particle Physics - Experiment", 1:"Nuclear Physics - Experiment", 2:"Detectors and Experimental Techniques")
+    my %PAS_map = (
+    FTR => "0",
+    B2G => "0",
+    BPH => "0",
+    BTV => "0",
+    EGM => "0",
+    EWK => "0",
+    EXO => "0",
+    DIF => "0",
+    FWD => "0",
+    FSQ => "0",
+    GEN => "0",
+    HIG => "0",
+    HIN => "1",
+    JME => "0",
+    LUM => "2",
+    MUO => "2",
+    PFT => "2",
+    PRF => "0",
+    QCD => "0",
+    SBM => "0",
+    SMP => "0",
+    SUS => "0",
+    TAU => "0",
+    TOP => "0",
+    TRK => "2",
+    CFT => "0");
+    my $artType = $PAS_map{substr($noteCode,0,3)};
+
     copy($pdfFile, "$tmp_out/$pdfOut") or warn "Can't copy $pdfFile\n"; # and this one for the upload
     local @ARGV;
-    @ARGV = ("--tex", $full_target_tex, "--doc", $pdfOut, "--style", "$style", "--baseDir", $baseDir, "--outDir", $tmp_out, "--logFile", $logFile, "--contactAddress", $contactAddress);
+    @ARGV = ("--tex", $full_target_tex, "--doc", $pdfOut, "--style", "$style", "--baseDir", $baseDir, "--outDir", $tmp_out, "--logFile", $logFile, "--contactAddress", $contactAddress, "--artType", $artType);
+    if ($verbose) {
+        push(@ARGV, "--verbose");
+    }
     if (!$dataNotMC)
     {
         push(@ARGV, "--no-data");
@@ -827,6 +918,7 @@ sub wrap_files {
     {
         push(@ARGV, "--updateRecord", $reload);
     }
+    if ($verbose) {print("Making the manifest\n");}
     eval { require "$gen_dir/makeManifest.pl" };
 
     if (!$preview)
@@ -851,7 +943,7 @@ sub wrap_files {
             chdir($tmp_out);
             $archive = "$tmp_dir/submit.tgz";
             system("tar --gzip --create --file $archive *")==0 or die "Error creating tar file. Sorry";
-             chdir($orig_dir);
+            chdir($orig_dir);
         }
         if ($verbose) {print "Created archive file $archive.\n"};
         # now submit to cds
@@ -1016,6 +1108,8 @@ sub export_arxiv {
         }
         else
         {
+            if ($plbStyle) {copy("$gen_dir/elsarticle-num-names.bst", "$exp_dir/elsarticle-num-names.bst"); }
+            if ($epjcStyle) {copy("$gen_dir/svepj.clo", "$exp_dir/svepj.clo"); copy("$gen_dir/svjour.cls", "$exp_dir/svjour.cls") ;}
             my $texLocalDir = "/afs/cern.ch/cms/external/tex/texlive/texmf-local/tex/latex/local"; # assume have /afs connectivity
             if ($^O eq "MSWin32") {
             $texLocalDir = $ENV{"ProgramData"}."/Local TeX/tex/latex";} # no guarantee for this path whatsoever
@@ -1098,37 +1192,21 @@ sub export_arxiv {
             copy("$tmp_dir/auto_generated.bib", "auto_generated.bib");
             # only EPJC does not have a house bib style (AFAIK so far)
             if ($epjcStyle ) { copy("$tmp_dir/auto_generated.bst", "auto_generated.bst"); }
+
+            # pick up funding agency list
+            copy("$gen_dir/CMS Funding agencies.xlsx", "CMS Funding agencies.xlsx");
        }
     }
     else
     {
-        if (not $journal)
-        {
-            open(FILE,'>',"auto_generated.no-bib");
-            print FILE "%auto-ignore\n"; # required by ArXiV for non-processed files
-            open(FILE0,'<',"$tmp_dir/auto_generated.bib");
-            while (<FILE0>)
-            {
-                print FILE;
-            }
-            close(FILE0);
-            close(FILE);
-            copy("$tmp_dir/auto_generated.bst", "auto_generated.bst");
-            open(FILE,'>',"00README.XXX");
-            print FILE "auto_generated.no-bib ignore\n";
-            close(FILE);
-        }
-        else
-        {
-         copy("$tmp_dir/auto_generated.bib", "auto_generated.bib");
-         copy("$tmp_dir/auto_generated.bst", "auto_generated.bst");
-        }
+        copy("$tmp_dir/auto_generated.bib", "auto_generated.bib");
+        copy("$tmp_dir/auto_generated.bst", "auto_generated.bst");
     }
 
     # As of October 2010, arXiv is up-to-date and we can ignore this block (Correction: except for JHEP)
     # this is a hack to get some files from the TeX distribution area for ArXiV: these
     # are currently out of date on their site: natbib.sty, and bibentry.sty. We also use it to reset no-bib to bib.
-    if ($jhepStyle)
+    if ($jhepStyle or $npahaStyle)
     {
         my $texSrcDir = "/afs/cern.ch/cms/external/tex/texlive/2010/texmf-dist/tex/latex"; # assume have /afs connectivity
         if ($^O eq "MSWin32") {
@@ -1147,34 +1225,65 @@ sub export_arxiv {
 
     my $current_dir = getcwd();
     print "\nCreating export directory $current_dir\n";
+    my $outdir = $ENV{HOME};
+    my $outfile = my $outfile = $outdir."/CMS-".$target.".zip";
+    my $outpdf = "../../../../".$target."-arXiv.pdf";
+    # these are currently set up for production running: output goes in home directory or desktop
     if ($^O eq "MSWin32") {
-        print "Export directory ready.\n";
-        # this next works with W7 and the WinZip command line option. Nothing else has been tested.
-        # Could also try Archive::Zip (see this file)
-        my $outfile = '"'.$ENV{HOMEDRIVE}.$ENV{HOMEPATH}."\\Desktop\\CMS-".$target.'.zip"';
-        my $zipcommand = '"'.$ENV{"ProgramFiles(x86)"}.'\WinZip\WZZIP.EXE" -p -r';
-        my $syscommand = $zipcommand.' '.$outfile.' '."*.*";
-        system($syscommand);
+        $outdir = $ENV{HOMEDRIVE}.$ENV{HOMEPATH}."\\Desktop\\HIGGSP~1";
+        $outfile = $outdir."\\CMS-".$target.".zip";
+        # on windows/etc, we keep the final output in the svn tree
+        $outpdf = "../../../../".$target."-arXiv.pdf";
+        if ($journal || $jhepStyle || $npahaStyle)
+        {
+            $outfile = $outdir."\\CMS-".$target."-jnl.zip";
+            $outpdf = "../../../../".$target."-jnl.pdf";
+        }
+        copy($temp_pdf,$outpdf); #|| die "Failed to move files: $!";
     }
     else {
-        chdir ("..");
-        system("tar --gzip --create --file $exp_name.tgz $exp_dir")==0 or die "Error creating tar file. Sorry";
-        if (-e "$exp_name.tgz") {
-            unlink(bsd_glob("$exp_dir/*"));
-            rmdir($exp_dir);
-            my $exp_path = Cwd::abs_path;
-            print "Export tarball $exp_path/$exp_name.tgz is ready.\n";
-            if ($verbose) {
-                print "Contents of tar archive:\n";
-                system("tar --gzip --list --file export.tgz");
-            }
+        if ($journal || $jhepStyle || $npahaStyle)
+        {
+            $outfile = $outdir."/CMS-".$target."-jnl.zip";
+            $outpdf = "../../../../".$target."-jnl.pdf";
         }
-        else {
-          print "Sorry, something has prevented creation of the tarball.\n";
+    }
+    $outfile2 = $outfile;
+    $outfile2 =~ s|\\|/|g;
+    if (-e $outfile2) {unlink($outfile2);}
+    my $useArchive = eval {require Archive::Zip};
+    if ($useArchive)
+    {
+        my $zip = Archive::Zip->new();
+        $zip->addTree('.');
+        my $status = $zip->writeToFileNamed($outfile2);
+        if ( $status != AZ_OK )
+        {
+            print "Can't write zip to file $outfile2: $!\n";
+        }
+        if (1)
+        {
+            my @archNames = $zip->memberNames();
+            print "Contents of $outfile2:\n---------\n";
+            print join("\n",@archNames);
+        }
+    }
+    else
+    {
+        # Use command line version in preference to perl built-in (which often isn't)
+        #my $tarfile = Archive::Tar->new;
+        #$tarfile->add_files(bsd_glob('*.*'));
+        #tarfile->write($outfile);
+        $outfile  =~ s|zip|tgz|g;
+        system("tar --gzip --create --file $outfile .")==0 or die "Error creating tar file. Sorry";
+        print "Created archive file $outfile.\nContents:\n";
+        if (1)
+        {
+            system("tar --gzip --list --file  $outfile")==0 or die "Can't find output tar file $outfile!";
         }
     }
     chdir ($orig_dir);
-
+    if (-d $exp_dir) { rmtree($exp_dir) || die "Couldn\'t delete old export directory, $!\n"; }
 }
 #############################################################################
 sub export_files {
@@ -1509,12 +1618,19 @@ sub myCollab {
    {$tagfile = $tag.'-authorlistN.'.$type;}
    else
    {$tagfile = $tag.'-authorlist.'.$type;}
+   my $body;
    my $url = 'https://cms-secr.web.cern.ch/cms-secr/Documents/authorListCMS/'.$tagfile;
-   my $body = &get_url ($url);
-   if (!defined $body)
+   my $response = &get_url ($url);
+   if (!$response->is_success)
    {
-        print "::: Authorlist for $tag not found! ($tagfile) :::\n::: Bailing out :::\n";
-        return 0; #should die?
+     print "::: $url not found :::\n";
+     print("    Status: ",$response->status_line);
+     print "\n::::::\n";
+     return 0; #should die?
+   }
+   else
+   {
+       $body = $response->decoded_content;
    }
    if ($type =~ 'tex') {$body =~ s/(\w\,*)~(\w)/$1 $2/g; $body =~ s/,/, /g; } #allow normal spacing and line breaking
    # save the authorlist
@@ -1536,8 +1652,8 @@ sub get_url{
 
     use strict;
     use warnings;
-    use LWP::Simple;
-    return my $doc = get $url;
+    my $ua = LWP::UserAgent->new(ssl_opts=>{verify_hostname=>0});
+    return $ua->get($url);
     }
 ##############################################################################
 #
@@ -1556,8 +1672,8 @@ sub replacePdfAuthor{
    if ($delAuth)
    {
    # remove all author and address macros and replace with standard
-   s/\\author\[(.*)\]\{.*\}//g;
-   s/\\address\[(.*)\]\{.*\}//g;
+       s/\\author\[(.*)\]\{.*\}//g;
+       s/\\address\[(.*)\]\{.*\}//g;
    }
    open(FILE, "> $file") || die("can't open file $file: $! for write");
    print FILE $_;
@@ -1589,12 +1705,7 @@ sub makeAPS{
    my $infile = shift;
    my $outfile = shift;
    my $style = shift;
-   if ($style eq '-') {$style = "prl,reprint";} # default style; removed showpacs option
-   my $lineopts = '';
-   if ($style =~ 'linenumbers') # will cause warnings when not present in style options
-   {
-       $lineopts = "\\usepackage{lineno}";
-   }
+   if ($style eq '-') {$style = "prl,reprint,longbibliography";} # default style; removed showpacs option
 
    &replacePdfAuthor($infile, 1);
 
@@ -1610,13 +1721,23 @@ sub makeAPS{
 \\usepackage{topcapt}
 \\usepackage{lineno}
 \\usepackage{dcolumn}
-\\usepackage[table,usenames,dvipsnames]{xcolor}
-\\usepackage{colortbl}
+%\\usepackage{rotating} % only for HIG-14-042
+%\\usepackage[table,usenames,dvipsnames]{xcolor}
+%\\usepackage{colortbl}
 \\DeclareMathOperator{\\sgn}{sgn}% Declare the sgn operator
 \\DeclareMathOperator{\\sign}{sign}% for those who insist on sign instead
 \\DeclareMathOperator{\\erf}{erf} % and the erf operator
+\\DeclareMathOperator{\\Tr}{Tr}
+\\DeclareMathOperator{\\Arg}{Arg}
 \\providecommand{\\cmsNoteHeader}[1]{\\preprint{#1}}
 \\providecommand{\\cmsNoteContact}[1]{\\relax}
+\\providecommand{\\cmsCollabName}{The CMS Collaboration}
+\\providecommand{\\cmsNUMBER}{\\relax}
+\\providecommand{\\cmslogo}{\\relax}
+\\providecommand{\\cmsTag}{\\relax}
+\\providecommand{\\appMsg}{\\relax}
+\\providecommand{\\cmsCopyright}{\\relax}
+\\providecommand{\\cmsPubBlock}{\\relax}
 % authorlist formatting; cmsAuthorMark matches use in endnotes
 \\newcommand{\\cmsAuthorMark}[1]{\\hbox{\\\@textsuperscript{\\normalfont#1}}}
 \\newskip{\\cmsinstskip} \\cmsinstskip=0pt plus 4pt
@@ -1629,6 +1750,7 @@ sub makeAPS{
 \\setboolean{cms\@italic}{true}
 \\usepackage{ptdr-definitions}
 \\renewcommand{\\ETslash}{\\ensuremath{E_{\\mathrm{T}}\\hspace{-1.2em}/\\kern0.65em}\\xspace}
+\\providecommand{\\DOI}[1]{\\href{http://dx.doi.org/#1}{\\doi{#1}}}
 EOD
 
    my $preface2 = <<EOD;
@@ -1665,7 +1787,7 @@ EOD
 
    # find the abstract
    m/(.*?)\\abstract(\{.*)/s;
-   print FILE $1, "\\author{The CMS Collaboration}\n\\affiliation{CERN}\n\\begin{abstract}\n";
+   print FILE $1, "\\author{\\cmsCollabName}\n\\affiliation{CERN}\n\\begin{abstract}\n";
 
    my @substring = extract_bracketed("abstract".$2,"{}","abstract");
    #strip off enclosing {}
@@ -1709,9 +1831,11 @@ sub makePLB{
 \\usepackage{dcolumn}
 \\usepackage[caption=false]{subfig}
 \\usepackage{fixltx2e}
+%\\usepackage{placeins}
 \\DeclareMathOperator{\\sign}{sign}% for those who insist on sign instead
 \\DeclareMathOperator{\\sgn}{sgn}% Declare the sgn operator
 \\DeclareMathOperator{\\erf}{erf} % and the erf operator
+\\DeclareMathOperator{\\cov}{cov}
 \\DeclareGraphicsExtensions{.pdf,.PDF,.png,.PNG}
 \\let\\subfigure\\subfloat % subfigure subfig compatibility
 % to allow external commands, embed in an ifthen testing on cms@external
@@ -1729,6 +1853,11 @@ sub makePLB{
 \\newskip{\\cmsinstskip} \\cmsinstskip=0pt plus 4pt
 \\newskip{\\cmsauthskip} \\cmsauthskip=16pt
 \\renewcommand{\\ETslash}{\\ensuremath{E_{\\mathrm{T}}\\hspace{-0.95em}/\\kern0.5em}\\xspace}
+\\renewcommand{\\Em}{\\ensuremath{E\\hspace{-0.45em}/}\\xspace}
+\\providecommand{\\DOI}[1]{\\href{http://dx.doi.org/#1}{\\doi{#1}}}
+\\newenvironment{acknowledgments}{\\section*{Acknowledgments}}{\\par}
+\\renewcommand{\\bibname}{References}
+\\providecommand\\bibsection{\\section*{\\bibname}}
 EOD
 
    my $preface2 = <<EOD;
@@ -1789,12 +1918,27 @@ sub makeEPJC{
 
    &replacePdfAuthor($infile, 1);
 
+# older EPJC style class
+#\\documentclass[epj,nopacs,$style]{svjour}
+# newer EPJC style class
+#\\documentclass[twocolumn,epjc3]{svjour3}
    my $preface = <<EOD;
 \\documentclass[epj,nopacs,$style]{svjour}
+\\journalname{European Physical Journal C}
 \\usepackage{amsmath,amssymb}
 \\usepackage{xspace}
-\\usepackage[bookmarksnumbered,bookmarksopen,bookmarksopenlevel=1,colorlinks=false,pdfborder=0,plainpages=false,pdfpagelabels]{hyperref}
+\\usepackage[bookmarksnumbered,bookmarksopen,bookmarksopenlevel=1,colorlinks=false,plainpages=false,pdfpagelabels]{hyperref}
 \\usepackage[numbers,sort&compress,merge]{natbib}
+%\\usepackage[table,usenames,dvipsnames]{xcolor}% just for warnings so far; do not use for journal submission without prior approval
+
+ % from svepjc3.clo
+ % Still using CMS bibstyle until live DOI links
+% \\setlength{\\bibhang}{\\parindent}%
+% \\let\\bibfont=\\small%
+% \\providecommand{\\doi}{DOI \\discretionary{}{}{}\\begingroup \\urlstyle{rm}\\Url}
+% doesn't work in situ with natbib, instead producing "! Package natbib Error: Bibliography not compatible with author-year citations.", probably due to the default "a" (author) argument to \\bibpunct, here replaced with "n" (numeric)
+% \\bibpunct{(}{)}{;}{n}{}{,}
+
 \\usepackage{graphicx,graphics}
 \\usepackage{array}
 \\usepackage{ifthen}
@@ -1805,6 +1949,7 @@ sub makeEPJC{
 \\usepackage{rotating}
 \\usepackage[caption=false]{subfig}
 \\usepackage{fixltx2e}
+%\\usepackage[verbose]{placeins}
 % to allow external commands, embed in an ifthen testing on cms@external
 \\newboolean{cms\@external}
 \\setboolean{cms\@external}{true}
@@ -1816,6 +1961,8 @@ sub makeEPJC{
 \\renewcommand{\\ETslash}{\\ensuremath{E_{\\cmsSymbolFace{T}}\\hspace{-1.2em}/\\kern0.6em}\\xspace}
 \\renewcommand{\\PTm}{\\ensuremath{{p}_\\mathrm{T}\\hspace{-1.2em}/\\kern 0.7em}\\xspace}
 \\let\\subfigure\\subfloat % subfigure subfig compatibility
+\\DeclareMathOperator{\\sign}{sign}% for those who insist on sign instead
+\\DeclareMathOperator{\\cov}{cov}
 \\providecommand{\\cmsNoteHeader}[1]{\\relax}
 \\providecommand{\\cmsNoteContact}[1]{\\relax}
 % authorlist formatting; cmsAuthorMark matches use in endnotes
@@ -1825,6 +1972,8 @@ sub makeEPJC{
 \\DeclareMathOperator{\\sgn}{sgn}% Declare the sgn operator
 \\DeclareMathOperator{\\erf}{erf} % and the erf operator
 \\DeclareGraphicsExtensions{.pdf,.PDF,.png,.PNG}
+\\providecommand{\\DOI}[1]{\\href{http://dx.doi.org/#1}{\\doi{#1}}}
+\\newenvironment{acknowledgments}{\\section*{Acknowledgments}\\bgroup\\tolerance=1200}{\\par\\egroup}
 EOD
 
    my $preface2 = <<EOD;
@@ -1845,7 +1994,7 @@ EOD
 
     # remove any author/address and replace with standard paper values later
     s/\\address.*?\}//sg;
-    s/\\author.*?\}//sg;
+    s/\\author(?!running).*?\}//sg; # retaining the EPJC-only \authorrunning command
 
    #replace doc class
    s/\\documentclass\[.*?\]\{.*?\}/$preface/sg;
@@ -1861,7 +2010,9 @@ EOD
    #strip off enclosing {}
    $substring[0] =~ m/\{(.*)\}/s;
    print FILE $1;
-   $substring[1] =~ s/\\bibliography\{auto_generated\}/\\bibliographystyle\{lucas_unsrt_epjc\}\\bibliography\{auto_generated\}/s;
+   # do not use EPJC-specific bib style, as EPJC bib style does not support links for DOIs
+   #$substring[1] =~ s/\\bibliography\{auto_generated\}/\\bibliographystyle\{spphys\}\\bibliography\{auto_generated\}/s;
+   $substring[1] =~ s/\\bibliography\{auto_generated\}/\\bibliographystyle\{auto_generated\}\\bibliography\{auto_generated\}/s;
    print FILE "}\n";
    #extract keywords
    m/pdfkeywords\s*=\s*\{(.*?)\}/s;
@@ -1880,19 +2031,53 @@ sub makeJHEP{
    my $infile = shift;
    my $outfile = shift;
    my $style = shift;
+
    my $preface = <<EOD;
 \\setboolean{cms\@external}{true}
 EOD
+
    open(FILE, $infile) || die("can't open TeX file $file: $! for read");
    $_ = ''; $_ .= do { local( $/ ); <FILE> }; #grab entire content!
    close(FILE);
+
    # find the cmsNoteHeader and add our additional defs for JHEP
    my $rep = qr/\\begin\{document\}\K.*?(?=\\cmsNoteHeader)/; # zero-length look behind; anything (even nothing); zero-length look forward. /x : allow spaces
    s/$rep/$preface/x;
    # remove all the RCS information, replace with external flag
    s/^\\RCS\$.*?$//mg;
+
    # get ready to re-write
    open(FILE, "> $outfile") || die("can't open file $file: $! for write");
+
+   print FILE;
+   close FILE;
+}
+##############################################################################
+#
+# NPAHA (Nature Physics post-processor
+#
+sub makeNPAHA{
+   my $infile = shift;
+   my $outfile = shift;
+   my $style = shift;
+
+   my $preface = <<EOD;
+\\setboolean{cms\@external}{true}
+EOD
+
+   open(FILE, $infile) || die("can't open TeX file $file: $! for read");
+   $_ = ''; $_ .= do { local( $/ ); <FILE> }; #grab entire content!
+   close(FILE);
+
+   # find the cmsNoteHeader and add our additional defs for Nature
+   my $rep = qr/\\begin\{document\}\K.*?(?=\\cmsNoteHeader)/; # zero-length look behind; anything (even nothing); zero-length look forward. /x : allow spaces
+   s/$rep/$preface/x;
+   # remove all the RCS information, replace with external flag
+   s/^\\RCS\$.*?$//mg;
+
+   # get ready to re-write
+   open(FILE, "> $outfile") || die("can't open file $file: $! for write");
+
    print FILE;
    close FILE;
 }
@@ -1904,13 +2089,16 @@ sub rewriteBib
 {
        my $tmp_dir = shift;
        my $tag = shift;
+       my $noArXiv = shift;
+       my $arXivFlag = '';
+       if ($noArXiv) {$arXivFlag = "--no-arxiv"};
        my $py_version = `python -V 2>&1`;
        if ( `python -V 2>&1` =~ m/([23])\.([0-9])\.?([0-9])?/ && ($1 > 2 || ($1 == 2 && (($2 == 6 && $3 >= 4) || $2 > 6 ))))
        {
             my $baseArg = "--base=".$tmp_dir;
             my $cleanCommand =$gen_dir."/cleanRefs.py";
             $cleanCommand =~ s#/#\\#g if $^O eq "MSWin32";
-            my $status = system("python", $cleanCommand, $baseArg, "--rewrite", "--verbosity", $tag);
+            my $status = system("python", $cleanCommand, $baseArg, "--rewrite", "--verbosity", $arXivFlag, $tag);
        }
        else
        {
