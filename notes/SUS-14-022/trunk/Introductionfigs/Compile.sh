@@ -10,3 +10,4 @@ rm -rf *.mp
 rm -rf *.*1
 rm -rf *.aux
 rm -rf Diagrams.pdf
+
