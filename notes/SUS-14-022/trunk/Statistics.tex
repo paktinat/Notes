@@ -1,6 +1,23 @@
 \section{Results and interpretation}
 \label{sect:stat}
 Event data yields and background predictions for the four signal regions are summarized in Table~\ref{tbl:yieldSysSummary}.
+\input{YieldSystematic}
+Figure \ref{fig:yield_final}
+\begin{figure}[!Hhtb]
+\centering
+\includegraphics[width=0.35\textwidth,keepaspectratio=true]{StatisticsFig/QCDWestimation_plot.png}
+\includegraphics[width=0.35\textwidth,keepaspectratio=true]{StatisticsFig/QCDestimation_plot.png}
+\includegraphics[width=0.35\textwidth,keepaspectratio=true]{StatisticsFig/MT2_tauMTgt200_DDFake.png}
+\includegraphics[width=0.35\textwidth,keepaspectratio=true]{StatisticsFig/MT2_tauMTgt200_DDFake.png}
+\caption{The data yield is compared with the Monte Carlo expectation. In different signal regions, 
+when a data driven background is available, it is used instead of the pure simulation. For more details read the text.}
+\label{fig:yield_final}
+\end{figure}
+compares the data and the Monte Carlo expectation in different channels. In the top row, the \mttwo and \SumMT variables in two 
+different signal regions of \tauTau channel are shown. The QCD multijet contribution in these plots come from the data driven method described in 
+Sec.\ref{sect:bkgQCD}. The \wjets in the last bin of the top-left plot was described in Sec.\ref{sect:bkgW}. The bottom row shows the \mttwo
+distribution in the \leptonTau channels. In these plots, the QCD multijet and \wjets and fake contribution from other channels is shown 
+as ``Fake'' which was described in Sec.\ref{sect:bkgFake}.
 There is no excess of events over the SM expectation.  We interpret our results in the context
 of a simplified model of chargino pair-production and decay, which corresponds to the left
 diagram in Fig.~\ref{fig:Productions}. This is a simplified model when a pair of \chione 
@@ -9,7 +26,6 @@ The mediators in the decay of \chione can be either \sTau or $\sNu_{\tau}$. All 
 are produced  on-shell. They have equal masses which is the mean value of the masses of the \chione   and \PSGczDo.
 The two distinct decay chains in the left diagram of Fig.~\ref{fig:Productions} are assumed to have equal branching ratios, which is 50\%.
 
-\input{YieldSystematic}
 
 
 A modified frequentist approach, namely CLs method \cite{read:CLs} is used to 
@@ -19,7 +35,7 @@ the search rules out \chione  masses up to 420 \GeV  for a massless \PSGczDo and
 see Fig.~\ref{fig:limit_final}. 
 %%%%%%%%%%
 \begin{linenomath}
-\begin{figure}[h]
+\begin{figure}[!Hhtb]
 \centering
 \includegraphics[width=0.7\textwidth,keepaspectratio=true]{StatisticsFig/Exclusion4Bins.pdf}
 \caption{Expected and observed exclusion power in terms of Simplified Models
