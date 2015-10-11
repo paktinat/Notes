@@ -1,4 +1,6 @@
 {   
+  float sysMC   = 0.25;
+  float sysLRMC = 0.5;
   const int nBins = 6;
 
   Double_t xbin[7] = {0, 20, 40, 50, 70, 90, 120}; 
@@ -51,7 +53,7 @@
    h_stack_stack_1->SetDirectory(0);
    h_stack_stack_1->SetStats(0);
    h_stack_stack_1->SetLineWidth(2);
-   h_stack_stack_1->GetXaxis()->SetTitle("MT2");
+   h_stack_stack_1->GetXaxis()->SetTitle("M_{T2}");
    h_stack_stack_1->GetXaxis()->SetNdivisions(505);
    h_stack_stack_1->GetXaxis()->SetLabelFont(42);
    h_stack_stack_1->GetXaxis()->SetLabelSize(0.05);
@@ -395,6 +397,13 @@
    TH1D *hAllMC__Zjets = hAllMC1__Zjets->Rebin(nBins,"hAllMC__Zjets",xbin);   
    hAllMC__Zjets->Add(h2_DDFakeZX, -1);
 
+  for(int i = 1; i <= hAllMC__Zjets->GetNbinsX(); i++){
+     float Content = hAllMC__Zjets->GetBinContent(i);   
+     float error   = hAllMC__Zjets->GetBinError(i);
+     error = sqrt(error * error + sysMC * sysMC * Content * Content);
+     hAllMC__Zjets->SetBinError(i, error);
+   }
+
 
    ci = TColor::GetColor("#006600");
    hAllMC__Zjets->SetFillColor(ci);
@@ -482,6 +491,18 @@
 
    TH1D *hAllMC__Top = hAllMC1__Top->Rebin(nBins,"hAllMC__Top",xbin);   
    hAllMC__Top->Add(h2_DDFakeTop, -1);
+
+
+
+ for(int i = 1; i <= hAllMC__Top->GetNbinsX(); i++){
+     float Content = hAllMC__Top->GetBinContent(i);   
+     float error   = hAllMC__Top->GetBinError(i);
+     error = sqrt(error * error + sysLRMC * sysLRMC * Content * Content);
+     hAllMC__Top->SetBinError(i, error);
+   }
+
+
+
 
    ci = TColor::GetColor("#3366cc");
    hAllMC__Top->SetFillColor(ci);
@@ -621,6 +642,12 @@
 
    TH1D *hAllMC__WWjets = hAllMC1__WWjets->Rebin(nBins,"hAllMC__WWjets",xbin);   
    hAllMC__WWjets->Add(h2_DDFakeWW, -1);
+  for(int i = 1; i <= hAllMC__WWjets->GetNbinsX(); i++){
+     float Content = hAllMC__WWjets->GetBinContent(i);   
+     float error   = hAllMC__WWjets->GetBinError(i);
+     error = sqrt(error * error + sysLRMC * sysLRMC * Content * Content);
+     hAllMC__WWjets->SetBinError(i, error);
+   }
 
 
 
@@ -720,6 +747,12 @@
    TH1D *hAllMC__Higgs = hAllMC1__Higgs->Rebin(nBins,"hAllMC__Higgs",xbin);   
    hAllMC__Higgs->Add(h2_DDFakeHiggs, -1);
 
+ for(int i = 1; i <= hAllMC__Higgs->GetNbinsX(); i++){
+     float Content = hAllMC__Higgs->GetBinContent(i);   
+     float error   = hAllMC__Higgs->GetBinError(i);
+     error = sqrt(error * error + sysLRMC * sysLRMC * Content * Content);
+     hAllMC__Higgs->SetBinError(i, error);
+   }
 
 
    ci = TColor::GetColor("#ff0000");
@@ -1252,7 +1285,7 @@ tex->SetNDC();
    h1_copy->SetFillColor(1);
    h1_copy->SetFillStyle(3001);
    h1_copy->SetLineWidth(2);
-   h1_copy->GetXaxis()->SetTitle("MT2");
+   h1_copy->GetXaxis()->SetTitle("M_{T2}");
    h1_copy->GetXaxis()->SetNdivisions(505);
    h1_copy->GetXaxis()->SetLabelFont(42);
    h1_copy->GetXaxis()->SetLabelSize(0);
