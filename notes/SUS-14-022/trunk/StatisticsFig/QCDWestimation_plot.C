@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: MT2_ratioc_ratio/
-//=========  (Sat Oct 10 16:58:00 2015) by ROOT version5.34/03
-   TCanvas *MT2_ratioc_ratio = new TCanvas("MT2_ratioc_ratio", "",263,52,600,660);
+//=========  (Sun Oct 11 13:50:19 2015) by ROOT version5.34/03
+   TCanvas *MT2_ratioc_ratio = new TCanvas("MT2_ratioc_ratio", "",690,63,600,660);
    gStyle->SetOptFit(1);
    MT2_ratioc_ratio->Range(0,0,1,1);
    MT2_ratioc_ratio->SetFillColor(0);
@@ -74,9 +74,9 @@
    MT2_Higgs->SetBinContent(1,0.5091306);
    MT2_Higgs->SetBinContent(2,0.1085229);
    MT2_Higgs->SetBinContent(3,0.1651059);
-   MT2_Higgs->SetBinError(1,0.09723714);
-   MT2_Higgs->SetBinError(2,0.02814464);
-   MT2_Higgs->SetBinError(3,0.04755536);
+   MT2_Higgs->SetBinError(1,0.2725042);
+   MT2_Higgs->SetBinError(2,0.06112631);
+   MT2_Higgs->SetBinError(3,0.09527067);
    MT2_Higgs->SetBinError(4,0.03100911);
    MT2_Higgs->SetEntries(121);
    MT2_Higgs->SetStats(0);
@@ -107,9 +107,9 @@
    MT2_WW->SetBinContent(1,0.9393951);
    MT2_WW->SetBinContent(2,0.1026626);
    MT2_WW->SetBinContent(3,0.02051527);
-   MT2_WW->SetBinError(1,0.1904175);
-   MT2_WW->SetBinError(2,0.05960316);
-   MT2_WW->SetBinError(3,0.02051527);
+   MT2_WW->SetBinError(1,0.506828);
+   MT2_WW->SetBinError(2,0.07866027);
+   MT2_WW->SetBinError(3,0.02293677);
    MT2_WW->SetEntries(41);
    MT2_WW->SetStats(0);
 
@@ -145,8 +145,8 @@
    TH1D *MT2_Top = new TH1D("MT2_Top","",3, xAxis3);
    MT2_Top->SetBinContent(1,4.268732);
    MT2_Top->SetBinContent(2,0.9925378);
-   MT2_Top->SetBinError(1,1.405493);
-   MT2_Top->SetBinError(2,0.6994522);
+   MT2_Top->SetBinError(1,2.555568);
+   MT2_Top->SetBinError(2,0.8576224);
    MT2_Top->SetEntries(69);
    MT2_Top->SetStats(0);
 
@@ -182,9 +182,9 @@
    MT2_ZX->SetBinContent(1,7.424741);
    MT2_ZX->SetBinContent(2,1.201838);
    MT2_ZX->SetBinContent(3,0.5629472);
-   MT2_ZX->SetBinError(1,1.641931);
-   MT2_ZX->SetBinError(2,0.6234778);
-   MT2_ZX->SetBinError(3,0.08812875);
+   MT2_ZX->SetBinError(1,2.478177);
+   MT2_ZX->SetBinError(2,0.6920986);
+   MT2_ZX->SetBinError(3,0.1660528);
    MT2_ZX->SetBinError(4,0.05429447);
    MT2_ZX->SetEntries(320);
    MT2_ZX->SetStats(0);
@@ -356,7 +356,7 @@
    MT2_susy->GetZaxis()->SetTitleSize(0.035);
    MT2_susy->GetZaxis()->SetTitleFont(42);
    MT2_susy->Draw("samehist");
-   TLatex *   tex = new TLatex(0.01677852,0.6473161,"0 jets");
+   TLatex *   tex = new TLatex(0.02516779,0.5829901,"0 jets");
 tex->SetNDC();
    tex->SetTextSize(0.03);
    tex->SetLineWidth(2);
@@ -393,7 +393,7 @@ tex->SetNDC();
    MT2__1__1->GetZaxis()->SetTitleFont(42);
    MT2__1__1->Draw("sameaxis");
    
-   TLegend *leg = new TLegend(0.7097315,0.6916789,0.909396,0.920147,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.7097315,0.6118259,0.909396,0.920147,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(62);
    leg->SetLineColor(1);
@@ -492,7 +492,7 @@ tex->SetNDC();
    leg->Draw();
   
 // ------------>Primitives in pad: MT2_ratio_plotpad_1
-   MT2_ratio_plotpad_1 = new TPad("MT2_ratio_plotpad_1", "newpad",0.008389262,0.6311111,0.08389262,0.6733333);
+   MT2_ratio_plotpad_1 = new TPad("MT2_ratio_plotpad_1", "newpad",0.01845638,0.5688889,0.08221477,0.6111111);
    MT2_ratio_plotpad_1->Draw();
    MT2_ratio_plotpad_1->cd();
    MT2_ratio_plotpad_1->Range(0,0,1,1);
@@ -508,38 +508,15 @@ tex->SetNDC();
    MT2_ratio_plotpad_1->SetFrameBorderSize(0);
    MT2_ratio_plotpad_1->Modified();
    MT2_ratio_plotpad->cd();
-      tex = new TLatex(67.3855,18.4122,"CMS Preliminary");
-   tex->SetTextSize(0.04436275);
+      tex = new TLatex(41.20966,1425.438,"Preselection");
+   tex->SetTextSize(0.0354902);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(42.32692,495.712,"Pre-Selection");
-   tex->SetTextSize(0.03992648);
+      tex = new TLatex(52.38228,301.5517,"CMS Preliminary");
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(70.41807,1657.087,"(240,20)");
-   tex->SetTextSize(0.02107599);
-   tex->SetLineWidth(2);
-   tex->Draw();
-  
-// ------------>Primitives in pad: MT2_ratio_plotpad_2
-   MT2_ratio_plotpad_2 = new TPad("MT2_ratio_plotpad_2", "newpad",0.4379195,0.9599156,0.5201342,0.9831224);
-   MT2_ratio_plotpad_2->Draw();
-   MT2_ratio_plotpad_2->cd();
-   MT2_ratio_plotpad_2->Range(0,0,1,1);
-   MT2_ratio_plotpad_2->SetFillColor(0);
-   MT2_ratio_plotpad_2->SetBorderMode(0);
-   MT2_ratio_plotpad_2->SetBorderSize(2);
-   MT2_ratio_plotpad_2->SetLeftMargin(0.18);
-   MT2_ratio_plotpad_2->SetRightMargin(0.08);
-   MT2_ratio_plotpad_2->SetTopMargin(0.07);
-   MT2_ratio_plotpad_2->SetBottomMargin(0.17);
-   MT2_ratio_plotpad_2->SetFrameLineWidth(3);
-   MT2_ratio_plotpad_2->SetFrameBorderMode(0);
-   MT2_ratio_plotpad_2->SetFrameBorderSize(0);
-   MT2_ratio_plotpad_2->Modified();
-   MT2_ratio_plotpad->cd();
-      tex = new TLatex(103.2975,58.98673,"(240,40)");
-   tex->SetTextSize(0.02950639);
+      tex = new TLatex(105.0532,22.88483,"(240,40)");
+   tex->SetTextSize(0.03105393);
    tex->SetLineWidth(2);
    tex->Draw();
    MT2_ratio_plotpad->Modified();
