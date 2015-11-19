@@ -1,0 +1,3 @@
+gfal-copy  gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/paktinat/tChannel_2015_11_17/WZTo1L1Nu2Q_13TeV_amcatnloFXFX_madspin_pythia8.root   file:///Yourarea/
+gfal-copy  gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/paktinat/tChannel_2015_11_17/WZTo1L1Nu2Q_13TeV_amcatnloFXFX_madspin_pythia8_from8000000.root   file:///Yourarea/
+gfal-copy  gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/paktinat/tChannel_2015_11_17/WZTo1L1Nu2Q_13TeV_amcatnloFXFX_madspin_pythia8_from16000000.root   file:///Yourarea/
