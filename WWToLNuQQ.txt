@@ -1,0 +1,1 @@
+gfal-copy  gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/paktinat/tChannel_2015_11_17/WWToLNuQQ_13TeV_powheg_11_17.root   file:///Yourarea/

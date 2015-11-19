@@ -1,0 +1,1 @@
+gfal-copy  gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/paktinat/tChannel_2015_11_17/ST_tW_top_5f_inclusiveDecays_13TeV_powheg_pythia8_TuneCUETP8M1_11_17.root   file:///Yourarea/
