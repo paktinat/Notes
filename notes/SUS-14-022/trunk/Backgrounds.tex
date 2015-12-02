@@ -117,15 +117,38 @@ of the assumption that isolation and \mttwo or \SumMT are not correlated.
 \subsection{\texorpdfstring{\wjets background estimation in the $\tauTau$ channel}{Wjets background estimation in the tau-tau channel}}
 \label{sect:bkgW}
 The contribution of the \wjets background is taken from simulation where the simulation of this process is validated in a data control samples. 
-While in SR2 region the number of simulated \wjets events is large enough to provide a reliable estimate, in SR1 no such events remain after the final requirement of \mttwo $>$ 90 \GeV. Therefore, a valid estimation is necessary for the efficiency of this requirement with respect to the preselection condition of \mttwo $>$ 40 \GeV, $\epsilon_{\rm M_{T2}}=\frac{N_{\rm M_{T2}>90}}{N_{\rm M_{T2}>40}}$. 
+%While in SR2 region the number of simulated \wjets events is large enough to provide a reliable estimate, 
+In different signal rehions after the final requirement of \mttwo $>$ 90 \GeV or \SumMT $>$ 250 \GeV, the number of the Monte Carlo events for \wjets sample is very low and the 
+predicted value is not eliable. 
+Therefore, a valid estimation is necessary for the efficiency of the final requirement with respect to the preselection condition, % of \mttwo $>$ 40 \GeV, 
+$\epsilon_{\rm M_{T2}}=\frac{N_{\rm M_{T2}>90}}{N_{\rm M_{T2}>40}}$ for  \binone and $\epsilon_{\SumMT}=\frac{N_{\SumMT>250}}{N_{40<\rm M_{T2}<90}}$ for \bintwo. In continue, this efficiency of the Final Selection is shown as $\epsilon_{FS}$
 
-Since the size of the simulated \wjets sample is not large enough to adequately populate our desired phase space, $\epsilon_{\rm M_{T2}}$ is calculated in a phase space with looser selection criteria. It is first evaluated in a \wjets sample with a pair of opposite-charge \Tau's where the \Tau candidates are selected similar to those in signal region. Events in this sample are required to also meet the $\mttwo>40\,\GeV$ criterion. Additional signal selection requirements, such as $\Delta \Phi$ or lepton veto, are applied one by one such that two orthogonal subsamples (passing and failing) are obtained. The $\epsilon_{\rm M_{T2}}$ quantity is calculated in all subsamples. The values are found to be compatible within the statistical uncertainties; their weighted average is taken as the final estimate for $\epsilon_{\rm M_{T2}}$ with weights corresponding to the size of the simulated sample at each step. The uncertainty on the \Tau energy scale introduces the largest variation on $\epsilon_{\rm M_{T2}}$. This variation is considered as a systematic uncertainty on the estimated efficiency.
+Since the size of the simulated \wjets sample is not large enough to adequately populate our desired phase space, %$\epsilon_{\rm M_{T2}}$ 
+$\epsilon_{FS}$ is calculated in a phase space with looser selection criteria. It is first evaluated in a \wjets sample with a pair of opposite-charge \Tau's where the \Tau candidates are selected similar to those in signal region. 
+%Events in this sample are required to also meet the $\mttwo>40\,\GeV$ criterion. 
+Additional signal selection requirements, such as $\Delta \Phi$ or lepton veto, are applied one by one such that two orthogonal subsamples (passing and failing) are obtained. The $\epsilon_{FS}$ quantity is calculated in all subsamples. The values are found to be compatible within the statistical uncertainties; their weighted average is taken as the final estimate for $\epsilon_{FS}$ with weights corresponding to the size of the simulated sample at each step. The uncertainty on the \Tau energy scale introduces the largest variation on $\epsilon_{FS}$. This variation is considered as a systematic uncertainty on the estimated efficiency.
 
-Since the \wjets contamination is estimated from simulation, one needs to further verify the overall normalization as well as the $\epsilon_{\rm M_{T2}}$ estimation in data. The control sample used for such validation is constructed based on the \muTau signal selection requirements. The selected \muTau pair in this region is required to be same-sign with a less strict \Tau isolation condition. Moreover, jets fulfilling the loose b jet identification criteria are vetoed and the \mttwo requirement is changed to $40<\mttwo<60\,\GeV$. The \wjets events constitute more than 90\% of this control sample and the overall normalization from simulation is consistent with data, within uncertainties.
+Since the \wjets contamination is estimated from simulation, one needs to further verify the overall normalization as well as the $\epsilon_{FS}$ estimation in data. The control sample used for such validation is constructed based on the \muTau signal selection requirements. The selected \muTau pair in this region is required to be same-sign with a less strict \Tau isolation condition. Moreover, jets fulfilling the loose b jet identification criteria are vetoed and the \mttwo requirement is changed to $40<\mttwo<60\,\GeV$. The \wjets events constitute more than 90\% of this control sample and the overall normalization from simulation is consistent with data, within uncertainties.
 
-To check the data-simulation compatibility for the $\epsilon_{\rm M_{T2}}$ estimate, the \mttwo condition is modified to $\mttwo>40\,\GeV$. The contribution of \wjets events remains almost unchanged. The $\epsilon_{\rm M_{T2}}$ quantity is evaluated in data and simulation and the data-to-simulation ratio is used to correct the $\epsilon_{\rm M_{T2}}$ estimation in signal region. The difference between the predicted and measured $\epsilon_{\rm M_{T2}}$ is taken into account as an additional uncertainty. 
+To check the data-simulation compatibility for the $\epsilon_{FS}$ estimate, %the \mttwo condition is modified to $\mttwo>40\,\GeV$. The contribution of \wjets events remains almost unchanged. 
+the same control sample is used. The $\epsilon_{FS}$ quantity is evaluated in data and simulation and the data-to-simulation ratio is used to correct the $\epsilon_{FS}$ estimation in signal region. The difference between the predicted and measured $\epsilon_{FS}$ is taken into account as an additional uncertainty. 
 
-The final value for the contribution of \wjets in this signal region is $0.69\pm0.54$.
+%The final value for the contribution of \wjets in this signal region is $0.69\pm0.54$.
+Table \ref{Tab.Wbkg} summarizes the results of  the method for different signal regions of the \tauTau channel.
+\begin{table}[!Hhtb]
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline\hline
+Channel            &  \wjets Estimation\\
+\hline\hline
+\tauTau (SR1)      & 0.69  $\pm$  0.54  $\pm$ -- \\\hline
+\tauTau (SR2)      & --0.81  $\pm$  --0.56  $\pm$ --0.20 \\
+\hline\hline
+\end{tabular}
+\caption{DY background in different channels. The first uncertainty is statistical and the second is systematic. {\bf FIXME: The numbers and caption need to be updated.}xs}
+\label{Tab.Wbkg}
+\end{center}
+\end{table}
 
 %In \binone of the \tauTau channel, the number of remaining events for \wjets from MC is zero, but it has a large statistical uncertainty due to lack of the statistics in the simulated sample. To have a better estimation of the Wjets contribution in the final yields, the yield before the last cut (\mttwo $>$ 90 \GeV) is multiplied by the efficiency of the cut. To find the efficiency, several cuts like lepton veto, \Z veto and the minimum angle in the transverse plane between the \MET and the jets are relaxed to have a high statistics sample. The cut efficiency is found in the exclusive samples that either fail or pass each relaxed cut to remove any correlation between the cuts and the \mttwo cut. 
 %A horizontal line is fitted to the measured values to extract the cut efficiency. 
