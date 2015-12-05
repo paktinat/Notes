@@ -3,7 +3,6 @@
 Systematic uncertainties can affect the shape or normalization of the
 backgrounds estimated from Monte Carlo (\ttbar, $Z+$ jets, dibosons and Higgs decays and \wjets in \tauTau \bintwo), 
 as well as the signal acceptance. 
-In order to calculate systematic uncertainties for signal, we used 3 signal points which are ($m(\chione) = 180\,\GeV$, $m(\PSGczDo) = 60\,\GeV$), (240, 40) and (380, 1) representing low, moderate and high delta mass respectively. 
 \subsection{Luminosity}
 The uncertainty on the luminosity  is $2.6\%$ for $2012$ data ~\cite{LUMI}.
 
@@ -51,7 +50,7 @@ and we take:
 %The total uncertainty due to ISR systematic uncertainty is estimated as 3 \%.
 
 \subsection{\texorpdfstring{Uncertainty due to $\mindphifour$ cut}{Uncertainty due to minDeltaPhiJMET cut}}
-Another source of systematic uncertainty due to existence of ISR in signal events is the cut on $\mindphifour$ ($ > 1$) against QCD events. We use the same method as above to obtain the systematic uncertainty of applying this variable. But this time we use Higgs to $\tau \tau$ sample which mimics our signal most.
+Another source of systematic uncertainty due to existence of ISR in signal events is the cut on $\mindphifour$ ($ > 1$) against QCD events. We use the same method as mentioned above to obtain the systematic uncertainty of applying this variable. But this time we use Higgs to $\tau \tau$ sample which mimics our signal most.
 %and we chose it because Higgs sample has the most similar cumulative distribution function,i.e. the efficiency of this cut, to our signal that is shown in. %Fig.~\ref{}.     
 
 \begin{align}
@@ -75,7 +74,8 @@ The electron energy is varied by $1\%$ ($2.5\%$) for electrons reconstructed in 
 The energy of \hadtau's is scaled by $3\%$, following the recommendation of the Tau POG~\cite{TauPOG}. Variables like \MET, \mttwo, \mindphifour and invariant mass which depend on \hadtau $\pt$ are re-calculated.  Up and down uncertainties on the final yields are reported in table~\ref{Tab.tauEnergyScale}. In some cases which the statistical uncertainty had a large value comparing to systematic uncertainty, we relaxed some $\hadtau$ \pt  independent variables to obtain more statistics.
 
 The big value of the \hadtau energy scale uncertainty is dominated by the lack of the statistics. In signal samples which have enough statistics the uncertainty decreases. So the maximum uncertainty due to \hadtau energy scale in MC driven backgrounds and signal is set to $~25\%$ and $~15\%$, respectively.
-
+%In order to calculate systematic uncertainties for signal, we used 3 signal points which are ($m(\chione) = 180\,\GeV$, $m(\PSGczDo) = 60\,\GeV$), (240, 40) and (380, 1) representing low, moderate and high delta mass respectively. 
+The $15\%$ effect of this uncertainty for all signal points in different channels is a conservative value that covers the whole plain and all channels.
 
 
 %% \begin{table}[!h]
@@ -125,8 +125,8 @@ The big value of the \hadtau energy scale uncertainty is dominated by the lack o
 %\scalebox{0.8}{
 
 \begin{tabular}{|c|c|c|c|c|c|c|}
-\hline
-                              & ZX    & Higgs  & WW   & Top    & All MC & SUSY %& Data%
+\hline  
+                            & ZX    & Higgs  & WW   & Top    & All MC & SUSY (380 , 1)%& Data%
  \\\hline 
 $e\hadtau$ channel            & $0.38\pm0.06^{+0.13}_{-0.08}$ & $0.06\pm0.02^{+0.0}_{-0.02}$  & $0.05\pm0.04^{+0.0}_{-0.0} $ &$0.02\pm0.02^{+0.02} _{-0.0}$  & $0.45\pm0.07^{+0.14}_{-0.03}$ & $2.14 \pm 0.10 ^{+0.15 } _{-0.08 } $ %& $3.0\pm1.73 ^{+0.0 \%} _{-33 \%}$
     \\\hline   
@@ -151,7 +151,7 @@ $\tauTau$ \bintwo    &     $0.81 \pm 0.56 ^{+0.39} _{-0.7}$     &   $0.07 \pm0.0
 
 \subsection{b-jet ID}
 The uncertainty due to the b-tag scale factor on the signal and background events is taken into account by varying the scale factors within their 
-uncertainty. It is found that for signal there is an uncertainty of about $8\%$. For almost all of the backgrounds except for backgrounds including Top, an uncertainty around 1\% is found. For Top backgrounds, the uncertainty is about 4\%. Therefor, for background events at most a 4\% uncertainty due to the b-veto cut is assigned. 
+uncertainty. It is found that for signal, there is an uncertainty of about $8\%$. For almost all of the backgrounds except for backgrounds including Top, an uncertainty around 1\% is found. For Top backgrounds, the uncertainty is about 4\%. Therefor, for background events at most a 4\% uncertainty due to the b-veto cut is assigned. 
  
 \subsection{Lepton trigger, identification and isolation efficiency}
 The uncertainties on electron and muon triggers, identification and isolation efficiencies are $2\%$ for electrons and muons ~\cite{CMS_AN_2013-171}. The uncertainty on the $\hadtau$ identification efficiency amounts to $6\%$ ~\cite{CMS_AN_2013-171}
