@@ -73,10 +73,9 @@ The electron energy is varied by $1\%$ ($2.5\%$) for electrons reconstructed in 
 
 The energy of \hadtau's is scaled by $3\%$, following the recommendation of the Tau POG~\cite{TauPOG}. Variables like \MET, \mttwo, \mindphifour and invariant mass which depend on \hadtau $\pt$ are re-calculated.  Up and down uncertainties on the final yields are reported in table~\ref{Tab.tauEnergyScale}. In some cases which the statistical uncertainty had a large value comparing to systematic uncertainty, we relaxed some $\hadtau$ \pt  independent variables to obtain more statistics.
 
-The big value of the \hadtau energy scale uncertainty is dominated by the lack of the statistics. In signal samples which have enough statistics the uncertainty decreases. So the maximum uncertainty due to \hadtau energy scale in MC driven backgrounds and signal is set to $~25\%$ and $~15\%$, respectively.
+The big value of the \hadtau energy scale uncertainty is dominated by the lack of the statistics. In signal samples which have enough statistics the uncertainty decreases. So the maximum uncertainty due to \hadtau energy scale in MC driven backgrounds and signal is set to $~10\%$.
 %In order to calculate systematic uncertainties for signal, we used 3 signal points which are ($m(\chione) = 180\,\GeV$, $m(\PSGczDo) = 60\,\GeV$), (240, 40) and (380, 1) representing low, moderate and high delta mass respectively. 
-The $15\%$ effect of this uncertainty for all signal points in different channels is a conservative value that covers the whole plain and all channels.
-
+The $10\%$ effect of this uncertainty for all signal points in different channels is a conservative value that covers the whole plain and all channels.
 
 %% \begin{table}[!h]
 %% \tiny{
@@ -149,20 +148,9 @@ $\tauTau$ \bintwo    &     $0.81 \pm 0.56 ^{+0.39} _{-0.7}$     &   $0.07 \pm0.0
 \end{table}     
 \end{center}
 
-To consider the effect of a known trigger bug in $\tauTau$ channel~\cite{CMS_AN_2014-074}, the $\pt$ 
-distribution of the leading $\hadtau$ in \binone for the signal SMS point corresponding to (380,1) is shown (in black) in figure~\ref{fig:tauPt}.
-\begin{figure}[!Hhtb]
-\centering
-\includegraphics[angle=0,scale=0.35]{TauTauFigs/leadingTauPt.png}
-\caption{The $\pt$ distribution of the leading $\hadtau$ in \binone of the $\tauTau$ channel. Also shown is the modified $\pt$ distribution after correction for the trigger bug.}
-\label{fig:tauPt}
-\end{figure}
+\subsection{Lask of the statistics} The lask of the statistics in the simulated Monte Carlo samples, can be an impotant source of the uncertainties also in evaluating 
+the systematic uncertainties. This systematic uncertainty is amounts to 20\% for the backgrounds and 10\% for the signal.
 
- The choice of this signal point is because of the fact that this SMS point can provide the maximum efficiency of 
-having $\hadtau$ with $\pt$s above 140 \GeV.  In the same plot, the modified pt-distribution is shown in red, 
-which is obtained as follows. Based on figure~35 of the same reference, a correction factor is taken and 
-multiplied bin-by-bin to the black histogram (for the bins above 140 GeV). The difference in integral
- of the two histograms is of the order of ~1.5\% (original integral equals 4.10, while the modified integral is equal to 4.04).
 
 \subsection{b-jet ID}
 The uncertainty due to the b-tag scale factor on the signal and background events is taken into account by varying the scale factors within their 
@@ -197,18 +185,53 @@ m(\chione) = 500 GeV                &$5.53^{+0.0 \% + 8.1 \%}_{-0.9 \% - 7.0 \%}
 
 The minimum bias cross section is varied $5 \%$ up and down following the standard recipe of ~\cite{PU_SYS}. It is found to introduce $~4 \%$ systematic for all channels.    
 
-\subsection{\texorpdfstring{$\met$}{met}}
+\subsection{\texorpdfstring{\MET}{MET}}
 
 The main backgrounds come from data driven or MC validated against data. \MET uncertainties can be important for signal only. Our signal is produced through an SUSY EWK production and does not include jets directly but it is expected to feature four invisible particles as genuine missing energy. Therefore it should not be affected by jet calibrations. Apart from jets, lepton and tau energy scales and their effects on \MET have been already taken into account. There is just unclustered energy left which based on results in ~\cite{CMS_AN_2014-099} this item's effect on \MET is small enough to be ignored.
+
+
+
+\subsection{\texorpdfstring{Inefficiency due to a bug in \Tau trigger}{Inefficiency due to a bug in tau trigger}}
+To consider the effect of a known trigger bug in $\tauTau$ channel~\cite{CMS_AN_2014-074}, the $\pt$ 
+distribution of the leading $\hadtau$ in \binone for the signal SMS point corresponding to (380,1) is shown (in black) in figure~\ref{fig:tauPt}.
+\begin{figure}[!Hhtb]
+\centering
+\includegraphics[angle=0,scale=0.35]{TauTauFigs/leadingTauPt.png}
+\caption{The $\pt$ distribution of the leading $\hadtau$ in \binone of the $\tauTau$ channel. Also shown is the modified $\pt$ distribution after correction for the trigger bug.}
+\label{fig:tauPt}
+\end{figure}
+
+ The choice of this signal point is because of the fact that this SMS point can provide the maximum efficiency of 
+having $\hadtau$ with $\pt$s above 140 \GeV.  In the same plot, the modified pt-distribution is shown in red, 
+which is obtained as follows. Based on figure~35 of the same reference, a correction factor is taken and 
+multiplied bin-by-bin to the black histogram (for the bins above 140 GeV). The difference in integral
+ of the two histograms is of the order of ~1.5\% (original integral equals 4.10, while the modified integral is equal to 4.04).
+
+
+\subsection{\texorpdfstring{\Tau efficiency in fast simulation}{Tau efficiency in fast simulation}}
+The fast simulation shows some differences with the full simulation, especially in track reconstruction. It can affect the \Tau isolation.
+To evaluate the effect of this inefficiency, the \Tau isolation/identification efficiency  is compared in the fast and full simulation.
+Figure \ref{fig:TauEffFastFull} (left)
+\begin{figure}[!Hhtb]
+\centering
+\includegraphics[angle=0,scale=0.35]{SystematicsFigs/TauEff_lepTau.pdf}
+\includegraphics[angle=0,scale=0.35]{SystematicsFigs/TauEff_lepTau_ratio.pdf}
+\caption{Comparison of the \Tau efficiency in the full and fast simulation (left). The ratio of the efficiencies in the fast and full simulation. (right)}
+\label{fig:TauEffFastFull}
+\end{figure}
+compares the \Tau efficiency in WWjets and DYjets which are full simulation with signal which is fast simulation. In 
+both cases, only \Tau in $\ell\Tau$ channels are considered. In 
+\ref{fig:TauEffFastFull} (right), the ratio of the efficiency of the fast simulation to full simulation is shown. 
+The main source of the difference, is the difference between the samples, so we assign 5\% systematic uncertainty per \Tau leg.
 
 \subsection{Low rate backgrounds} For some backgrounds like \ttbar, dibosons and Higgs decays, the remaining 
 events from the simulation are very small. A 50\% uncertainty is considered for these backgrounds to account for the theoretical uncertainty of the
 cross section calculation as well as the shape mismodeling.
 
 \subsection{Summary}
-The summary of all systematic uncertainties for different channels is reported in Table.~\ref{Tab.SYS}. The main source of the systematic uncertainty in all channels and samples is the \hadtau energy scale.
+The summary of all systematic uncertainties for different channels is reported in Table.~\ref{Tab.SYS}. The main source of the systematic uncertainty in all channels and samples is the \hadtau energy scale.  We add all systematic uncertainties in quadrature and assign 
+ 20\% and 25\% relative uncertainties on the signal
+acceptance for the $\ell\Tau$ and \tauTau channels, respectively. For the Monte Carlo background predictions, the values are 
+25\% and 28\%, respectively. The relative uncertainty of the less important backgrounds is 50\% for all channels.
 
 \input{SystematicsTab}
-
-{\bf Saeid, summary of trigger bug and its effect.}
-{\bf Eskandari, Please mention which SMS point you have used for your studies.}
