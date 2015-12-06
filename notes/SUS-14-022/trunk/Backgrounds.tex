@@ -116,37 +116,40 @@ of the assumption that isolation and \mttwo or \SumMT are not correlated.
 
 \subsection{\texorpdfstring{\wjets background estimation in the $\tauTau$ channel}{Wjets background estimation in the tau-tau channel}}
 \label{sect:bkgW}
-The contribution of the \wjets background is taken from simulation where the simulation of this process is validated in a data control samples. 
+The contribution of the \wjets background is taken from simulation where the simulation of this process is validated in a data control sample. 
 %While in SR2 region the number of simulated \wjets events is large enough to provide a reliable estimate, 
-In different signal rehions after the final requirement of \mttwo $>$ 90 \GeV or \SumMT $>$ 250 \GeV, the number of the Monte Carlo events for \wjets sample is very low and the 
-predicted value is not eliable. 
+In different signal regions after the final requirement of \mttwo $>$ 90 \GeV or \SumMT $>$ 250 \GeV, the number of the Monte Carlo events for \wjets sample is very low and the 
+predicted value is not reliable. 
 Therefore, a valid estimation is necessary for the efficiency of the final requirement with respect to the preselection condition, % of \mttwo $>$ 40 \GeV, 
-$\epsilon_{\rm M_{T2}}=\frac{N_{\rm M_{T2}>90}}{N_{\rm M_{T2}>40}}$ for  \binone and $\epsilon_{\SumMT}=\frac{N_{\SumMT>250}}{N_{40<\rm M_{T2}<90}}$ for \bintwo. In continue, this efficiency of the Final Selection is shown as $\epsilon_{FS}$
+$\epsilon_{\rm M_{T2}}=\frac{N_{\rm M_{T2}>90}}{N_{\rm M_{T2}>40}}$ for  \binone and $\epsilon_{\SumMT}=\frac{N_{\SumMT>250}}{N_{40<\rm M_{T2}<90}}$ for \bintwo. In continue, this efficiency of the Final Selection is shown as $\epsilon_{FS}$.
 
 Since the size of the simulated \wjets sample is not large enough to adequately populate our desired phase space, %$\epsilon_{\rm M_{T2}}$ 
 $\epsilon_{FS}$ is calculated in a phase space with looser selection criteria. It is first evaluated in a \wjets sample with a pair of opposite-charge \Tau's where the \Tau candidates are selected similar to those in signal region. 
 %Events in this sample are required to also meet the $\mttwo>40\,\GeV$ criterion. 
 Additional signal selection requirements, such as $\Delta \Phi$ or lepton veto, are applied one by one such that two orthogonal subsamples (passing and failing) are obtained. The $\epsilon_{FS}$ quantity is calculated in all subsamples. The values are found to be compatible within the statistical uncertainties; their weighted average is taken as the final estimate for $\epsilon_{FS}$ with weights corresponding to the size of the simulated sample at each step. The uncertainty on the \Tau energy scale introduces the largest variation on $\epsilon_{FS}$. This variation is considered as a systematic uncertainty on the estimated efficiency.
 
-Since the \wjets contamination is estimated from simulation, one needs to further verify the overall normalization as well as the $\epsilon_{FS}$ estimation in data. The control sample used for such validation is constructed based on the \muTau signal selection requirements. The selected \muTau pair in this region is required to be same-sign with a less strict \Tau isolation condition. Moreover, jets fulfilling the loose b jet identification criteria are vetoed and the \mttwo requirement is changed to $40<\mttwo<60\,\GeV$. The \wjets events constitute more than 90\% of this control sample and the overall normalization from simulation is consistent with data, within uncertainties.
+Since the \wjets contamination is estimated from simulation, one needs to further verify the overall normalization as well as the $\epsilon_{FS}$ estimation in data. The control sample used for such validation is constructed based on the \muTau signal selection requirements. The selected \muTau pair in this region is required to be same-sign with a less strict \Tau isolation condition. Moreover, jets fulfilling the loose b jet identification criteria are vetoed, \tauMT requirement is removed and the \mttwo requirement is changed to $40<\mttwo<60\,\GeV$. The \wjets events constitute more than 90\% of this control sample and the overall normalization from simulation is consistent with data, within uncertainties.
 
 To check the data-simulation compatibility for the $\epsilon_{FS}$ estimate, %the \mttwo condition is modified to $\mttwo>40\,\GeV$. The contribution of \wjets events remains almost unchanged. 
 the same control sample is used. The $\epsilon_{FS}$ quantity is evaluated in data and simulation and the data-to-simulation ratio is used to correct the $\epsilon_{FS}$ estimation in signal region. The difference between the predicted and measured $\epsilon_{FS}$ is taken into account as an additional uncertainty. 
 
 %The final value for the contribution of \wjets in this signal region is $0.69\pm0.54$.
-Table \ref{Tab.Wbkg} summarizes the results of  the method for different signal regions of the \tauTau channel.
+Table \ref{tbl:Wbkg} summarizes the results of  the method for different signal regions of the \tauTau channel.
 \begin{table}[!Hhtb]
 \begin{center}
-\begin{tabular}{|l|c|}
+\begin{tabular}{lc}
 \hline\hline
-Channel            &  \wjets Estimation\\
-\hline\hline
-\tauTau (SR1)      & 0.69  $\pm$  0.54  $\pm$ -- \\\hline
-\tauTau (SR2)      & --0.81  $\pm$  --0.56  $\pm$ --0.20 \\
+Signal Region & \wjets Estimation Results\\
+\hline
+\tauTau \binone & 0.69 $\pm$ 0.13 (stat.) $\pm$ 0.14 (sys. fit) $\pm$ 0.52 (sys. shape)\\
+\tauTau \bintwo & 2.70 $\pm$ 0.22 (stat.) $\pm$ 0.71 (sys. fit) $\pm$ 0.68 (sys. shape)\\
 \hline\hline
 \end{tabular}
-\caption{DY background in different channels. The first uncertainty is statistical and the second is systematic. {\bf FIXME: The numbers and caption need to be updated.}xs}
-\label{Tab.Wbkg}
+\caption{The \wjets estimation results in both search regions. The systematics due to the fit comes from the maximum
+variation of the estimation found from up and down scaled samples with respect to the nominal one.
+ The ``sys. shape''
+takes into account the difference between the shape of the search variable distribution in data and Monte Carlo.}
+\label{tbl:Wbkg}
 \end{center}
 \end{table}
 
@@ -169,7 +172,7 @@ inverting the Z-veto
 (\mttwo $<$ 20 \GeV, 40 $<$ \tauMT $<$ 100 \GeV).  The invariant mass of 
 ($\mu, \tau$) is found consistent between data and simulation. The transverse momentum 
 of the \Z system, which is correlated with 
-\mttwo, is also well reproduced in simulation. Table \ref{Tab.DYbkg}
+\mttwo, is also well reproduced in simulation. Table \ref{tbl:DYbkg}
 \begin{table}[!Hhtb]
 \begin{center}
 \begin{tabular}{|l|c|}
@@ -183,7 +186,7 @@ Channel            &  DY Estimation\\
 \hline\hline
 \end{tabular}
 \caption{DY background in different channels. The first uncertainty is statistical and the second is systematic.}
-\label{Tab.DYbkg}
+\label{tbl:DYbkg}
 \end{center}
 \end{table}
 summarizes the DY contribution in different signal regions. The systematic uncertainties assigned to the central value 
