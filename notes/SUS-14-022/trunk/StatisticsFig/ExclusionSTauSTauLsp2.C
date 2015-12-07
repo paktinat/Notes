@@ -1,4 +1,4 @@
-void ExclusionSTauSTauLsp1()
+void ExclusionSTauSTauLsp2()
 {
 //=========Macro generated from canvas: c1/c1
 //=========  (Tue Sep 22 13:04:27 2015) by ROOT version6.02/04
@@ -148,7 +148,9 @@ void ExclusionSTauSTauLsp1()
    TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#00ff00");
    grae->SetFillColor(ci);
-   
+   grae->SetLineColor( kRed );
+   grae->SetLineWidth(4);
+
    TH1F *Graph_TwoSigmaBand3001 = new TH1F("Graph_TwoSigmaBand3001","STauSTau",100,91,319);
    Graph_TwoSigmaBand3001->SetMinimum(0);
    Graph_TwoSigmaBand3001->SetMaximum(21.40615);
@@ -222,7 +224,7 @@ void ExclusionSTauSTauLsp1()
    graph->SetName("Obs");
    graph->SetTitle("Graph");
    graph->SetFillColor(1);
-   graph->SetLineColor(2);
+   graph->SetLineColor(1);
    graph->SetLineWidth(4);
    
    TH1F *Graph_Obs1 = new TH1F("Graph_Obs1","Graph",100,91,319);
@@ -250,52 +252,53 @@ void ExclusionSTauSTauLsp1()
    graph->Draw("c");
    
    Double_t Expected_fx2[20] = {
-   109.9451,
-   119.9942,
-   129.8786,
-   139.9277,
-   149.9769,
-   159.8613,
-   169.9104,
-   179.9595,
-   189.8439,
-   199.8931,
-   209.9422,
-   219.9913,
-   229.8757,
-   239.9249,
-   249.974,
-   259.8584,
-   269.9075,
-   279.9566,
-   289.841,
-   299.8902};
+   110,
+   120,
+   130,
+   140,
+   150,
+   160,
+   170,
+   180,
+   190,
+   200,
+   210,
+   220,
+   230,
+   240,
+   250,
+   260,
+   270,
+   280,
+   290,
+   300};
    Double_t Expected_fy2[20] = {
-   3.313199,
-   2.477697,
-   2.535317,
-   3.457251,
-   2.535317,
-   3.37082,
-   3.860597,
-   3.658924,
-   5.906137,
-   4.75372,
-   4.75372,
-   5.38755,
-   5.733275,
-   6.914502,
-   7.346659,
-   8.729559,
-   8.556697,
-   8.960043,
-   10.74629,
-   12.04276};
+   3.739263,
+   2.975884,
+   2.983532,
+   4.01359,
+   2.79185,
+   3.550298,
+   4.138444,
+   3.718658,
+   6.233622,
+   4.991934,
+   4.996519,
+   5.427591,
+   5.85048,
+   6.959128,
+   7.529878,
+   8.898993,
+   8.712668,
+   9.055785,
+   10.67452,
+   12.016};
    graph = new TGraph(20,Expected_fx2,Expected_fy2);
    graph->SetName("Expected");
    graph->SetTitle("Graph");
-   graph->SetFillColor(1);
+   graph->SetFillColor(2);
    graph->SetLineWidth(4);
+   graph->SetLineColor(2);
    
    TH1F *Graph_Expected2 = new TH1F("Graph_Expected2","Graph",100,91,319);
    Graph_Expected2->SetMinimum(1.521094);
@@ -324,7 +327,79 @@ void ExclusionSTauSTauLsp1()
    line->SetLineStyle(7);
    line->Draw();
    
-   TLegend *leg = new TLegend(0.1653846,0.6543624,0.5461538,0.8590604,NULL,"brNDC");
+   Double_t Graph0_fx3[20] = {
+   110,
+   120,
+   130,
+   140,
+   150,
+   160,
+   170,
+   180,
+   190,
+   200,
+   210,
+   220,
+   230,
+   240,
+   250,
+   260,
+   270,
+   280,
+   290,
+   300};
+   Double_t Graph0_fy3[20] = {
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1};
+   graph = new TGraph(20,Graph0_fx3,Graph0_fy3);
+   graph->SetName("Graph0");
+   graph->SetTitle("Graph");
+   graph->SetFillColor(1);
+   //graph->SetMarkerStyle(3);
+   
+   TH1F *Graph_Graph3 = new TH1F("Graph_Graph3","Graph",100,91,319);
+   Graph_Graph3->SetMinimum(0.9);
+   Graph_Graph3->SetMaximum(2.1);
+   Graph_Graph3->SetDirectory(0);
+   Graph_Graph3->SetStats(0);
+
+   ci = TColor::GetColor("#000099");
+   Graph_Graph3->SetLineColor(ci);
+   Graph_Graph3->GetXaxis()->SetLabelFont(42);
+   Graph_Graph3->GetXaxis()->SetLabelSize(0.035);
+   Graph_Graph3->GetXaxis()->SetTitleSize(0.035);
+   Graph_Graph3->GetXaxis()->SetTitleFont(42);
+   Graph_Graph3->GetYaxis()->SetLabelFont(42);
+   Graph_Graph3->GetYaxis()->SetLabelSize(0.035);
+   Graph_Graph3->GetYaxis()->SetTitleSize(0.035);
+   Graph_Graph3->GetYaxis()->SetTitleFont(42);
+   Graph_Graph3->GetZaxis()->SetLabelFont(42);
+   Graph_Graph3->GetZaxis()->SetLabelSize(0.035);
+   Graph_Graph3->GetZaxis()->SetTitleSize(0.035);
+   Graph_Graph3->GetZaxis()->SetTitleFont(42);
+   graph->SetHistogram(Graph_Graph3);
+   
+   graph->Draw("cp");
+   
+   TLegend *leg = new TLegend(0.3318966,0.6898734,0.7112069,0.9008439,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(0);
    leg->SetLineStyle(1);
@@ -341,28 +416,28 @@ void ExclusionSTauSTauLsp1()
    entry->SetTextFont(42);
    entry=leg->AddEntry("TwoSigmaBand","Expected #pm 1 #sigma","fl");
 
-   ci = TColor::GetColor("#00ff00");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-   entry->SetLineColor(1);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
+   // ci = TColor::GetColor("#00ff00");
+   // entry->SetFillColor(ci);
+   // entry->SetFillStyle(1001);
+   entry->SetLineColor(kRed);
+   // entry->SetLineStyle(1);
+   // entry->SetLineWidth(4);
+   // entry->SetMarkerColor(kRed);
+   // entry->SetMarkerStyle(21);
+   // entry->SetMarkerSize(1);
+   // entry->SetTextFont(42);
    leg->Draw();
    TLatex *   tex = new TLatex(91.56716,22.34501,"");
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(91.56716,21.92252,"CMS Preliminary");
+   tex = new TLatex(91.56716,21.92252-3,"CMS Preliminary");
    tex->SetTextSize(0.04026846);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(104.6119,20.23256,"pp#rightarrow#tilde{#tau}#tilde{#tau} , #tilde{#tau}#rightarrow#tau_{h}#chi^{0}_{1}, m_{#chi^{0}_{1}}=1 GeV");
+   tex = new TLatex(104.6119,19.23256-3,"pp#rightarrow#tilde{#tau}#tilde{#tau} , #tilde{#tau}#rightarrow#tau_{h}#chi^{0}_{1}, m_{#chi^{0}_{1}}=1 GeV");
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(258.2,21.92252,"18.1 fb^{-1} (8 TeV)");
+   tex = new TLatex(258.2,21.92252-3,"18.1 fb^{-1} (8 TeV)");
    tex->SetTextSize(0.03187919);
    tex->SetLineWidth(2);
    tex->Draw();
