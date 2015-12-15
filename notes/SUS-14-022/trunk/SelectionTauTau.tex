@@ -1,10 +1,10 @@
 \section{\texorpdfstring{Event selection for the \Tau\Tau channel}{Event selection for the tau-tau channel}}
 \label{sect:tauTauCuts}
-In this channel events are first selected with a trigger \cite{CMS:2013hoa,Chatrchyan:2012xi,Chatrchyan:2011nv}
+In this channel events are first selected with a trigger \cite{Khachatryan:2015hwa,Chatrchyan:2012xi,Chatrchyan:2011nv}
 that requires the existence of
-two loosely identified, isolated \Tau candidates with \PT $>$ 35 \GeV and $|\eta|<$2.1.   Offline,
-the \Tau identification requirements are tightened, the two \Tau candidates must be of
-opposite charge, and the \PT threshold is increased to 45 \GeV.
+two loosely identified, isolated \Tau candidates with \PT $>$ 35 \GeV and $|\eta|<$2.1.   
+
+Offline , the two \Tau candidates must pass tighter identification requirements with \PT $>$ 45 \GeV and be of opposite charge.
 In events with more than one \Tau\Tau pair, we only consider the pair with the tightest isolated \Tau's. 
 %{\bf (What does this mean?  You have two isolation values, so how do you define ``tightest isolation''?)}
 %that minimizes the sum of $I_{\Tau}$ 
@@ -16,20 +16,22 @@ backgrounds from diboson decays.
 %with a gaussian distribution with a peak close to 70 \GeV and a width of about 15 \GeV, so the events with the invariant mass of  
 %the two \Tau's in this range are excluded (\Z-veto). 
 The background from \Z$\rightarrow$\Tau\Tau events is reduced by rejecting events where the visible
-di-\Tau invariant mass is between 55 and 85 \GeV.  Furthermore, events where this invariant mass is below 15 \GeV
-are also rejected to eliminate low mass QCD resonances.
-We also impose loose requirements \MET $>$ 30 \GeV and \mttwo $>$ 40 \GeV to increase the rejection power against QCD multijet events.
-The minimum angle $\Delta \Phi$ in the transverse plane between the $\VEtmiss$ and any of the jets %with \PT $>$ 40 \GeV and $|\eta| <$ 5 
-must be greater than 1.  This requirement reduces backgrounds from QCD multijet events and \wjets events.
-
+di-\Tau invariant mass is between 55 and 85 \GeV.  Furthermore, 
+low-mass Drell-Yan and QCD events are reduced by requiring the invariant mass be greater than 15 \GeV.
+%events where this invariant mass is below 15 \GeV
+%are also rejected to eliminate low mass QCD resonances.
+Loose requirements \MET $>$ 30 \GeV and \mttwo $>$ 40 \GeV increases the rejection power against QCD multijet events.
+The minimum angle $\Delta\phi$ in the transverse plane between the \ptvecmiss and any of the jets must be greater than 1. 
+It should be noted the jet objects include electrons, photons, \Tau and b-tagged jets.
+This requirement reduces backgrounds from QCD multijet events and \wjets events.
 
 After applying the pre-selection described above,
-extra requirements are introduced to define two search regions.
-The first search region is designed to be sensitive to models
-with large mass difference ($\Delta M$) between charginos and neutralinos.
+additional requirements are introduced to define two search regions.
+The first search region (\binone) is defined with the additional requirements for models with large mass difference ($\Delta m$) 
+between charginos and neutralinos.
 In this case, the \mttwo signal distribution extends beyond the 
 distribution of SM backgrounds.
-The second search region is dedicated to models with small $\Delta M$.  In this case
+The second search region (\bintwo) is dedicated to models with small $\Delta m$.  In this case
 the sum of the \mt of two \Tau, \SumMT = $\mt^{\Tau^1} + \mt^{\Tau^2}$, is a good discriminator
 between signal and SM backgrounds. 
 This variable was used previously in a similar analysis from the ATLAS experiment \cite{Aad:2014yka}.
@@ -42,14 +44,14 @@ This variable was used previously in a similar analysis from the ATLAS experimen
 
 %If the mass diffrenece is not too high, %\mttwo can not exceed 80 \GeV, but 
 %the sum of the \mt of two \Tau, \SumMT = $\mt^{\Tau^1} + \mt^{\Tau^2}$, can be a good descriminator between the signal and SM backgrounds. 
-The two signal regions (SR) are defined as:
+After the pre-selection, the two signal regions (SR) are defined as:
 \begin{itemize}
 \item {\bf SR1}: \mttwo $>$ 90 \GeV;
-\item {\bf SR2}: \mttwo $<$ 90 \GeV and \SumMT $>$ 250 \GeV; b-tagged jets are vetoed.
+\item {\bf SR2}: b-tagged jets are vetoed; \mttwo $<$ 90 \GeV; and \SumMT $>$ 250 \GeV.
 \end{itemize}
 The veto on b-tagged jets in SR2 is intended to reduce
-the background from $t\bar{t}$, which
-tends to populate the low \mttwo region.  For this purpose, jets are btagged
+the $t\bar{t}$ backgrounds, which
+tend to populate the low \mttwo region.  For this purpose, jets are b-tagged
 using the medium working point of the combined secondary vertex algorithm \cite{Chatrchyan:2012jua}. 
 
 
@@ -93,10 +95,10 @@ requirements listed above.
 %{\bf (Is the b-veto applied?  This needs to be explained.)}
 In the $\SumMT$ distribution, the b-jet veto and \mttwo $<$ 90 \GeV are also applied.
 The SM predictions in Fig.~\ref{fig:comparison} 
-are from Monte Carlo, except for the
+are from Monte Carlo events, except for the
 QCD prediction which is taken from same-sign di-tau data events,
-after subtracting a small contribution of same-sign non-QCD events estimated from Monte Carlo.
-The data and SM predictions are in good agreement within the statistical uncertainties.
+after subtracting a small contribution of same-sign non-QCD events estimated from Monte Carlo events.
+The data and SM predictions are in agreement within the statistical uncertainties.
 The expected distributions for a SUSY signal 
 corresponding to a moderate mass difference $(m_{\chione}=240\GeV,~m_{\PSGczDo}=40\GeV)$
 is also shown for illustration purposes.
@@ -106,7 +108,7 @@ is also shown for illustration purposes.
 \includegraphics[angle=0,scale=0.35]{TauTauFigs/mt2.png}
 \includegraphics[angle=0,scale=0.35]{TauTauFigs/summt.png} \\ 
 %\includegraphics[angle=0,scale=0.35]{TauTauFigs/SumMT_SSQCD_dataunblinding.png} \\
-\caption{The distributions of \mttwo (left) and \SumMT (right) after applying all requirements. 
-The last bins of the histograms correspond to the two signal regions (SR1 and SR2). }
+\caption{The distributions of \mttwo (left) and \SumMT (right) after applying all other requirements. 
+The last bins of the histograms correspond to the two signal regions (\binone and \bintwo). The signal point shown here is $(m_{\chione}=240\GeV,~m_{\PSGczDo}=40\GeV)$.}
 \label{fig:comparison}
 \end{figure}
