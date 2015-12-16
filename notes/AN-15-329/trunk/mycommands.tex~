@@ -1,0 +1,124 @@
+  \newcommand{\sigmatch}{\ensuremath{\sigma_{t-\mathrm{ch.}}}\xspace}
+  \newcommand{\mt}{\ensuremath{m_{\ell\nu \mathrm{b}}}\xspace}
+  \newcommand{\mlbnu}{\mt}
+  \newcommand{\cosThetaPol}{\ensuremath{\cos{\theta^*}}\xspace}
+  \newcommand{\etalj}{\ensuremath{|\eta_{j^\prime}|}\xspace}
+  \newcommand{\vtb}{\ensuremath{V_{\mathrm{tb}}}\xspace}
+  \newcommand{\vtbAbs}{\ensuremath{|V_{\mathrm{tb}}|}}
+  \newcommand{\met}{\ensuremath{{E\!\!\!/}_{\mathrm{T}}}\xspace}
+  \renewcommand{\MET}{\met}
+  \newcommand{\PFrelIso}{\ensuremath{I_{\mathrm{rel}}}\xspace}
+  \newcommand{\PFrelIsoRho}{\ensuremath{I_{\mathrm{rel}^{\rho corr.}}}\xspace}
+  \newcommand{\pfPhotonIso}{\ensuremath{I^{\gamma}}\xspace}
+  \newcommand{\pfChargedHadronIso}{\ensuremath{I^{\mathrm{ch.\,h}}}\xspace}
+  \newcommand{\pfNeutralHadronIso}{\ensuremath{I^{\mathrm{n.\,h}}}\xspace}
+  \newcommand{\pfPU}{\ensuremath{I^{\mathrm{PU}}\xspace}}
+  \newcommand{\sumPUPT}{\ensuremath{\sum p_T^{PU}}\xspace}
+  \newcommand{\sumPUPt}{\sumPUPT}
+  \newcommand{\rhoEnergy}{\ensuremath{\rho \times A}}
+  \newcommand{\mTW}{\ensuremath{m_{\mathrm{\rm T}}^{\rm W}}\xspace}
+  \newcommand{\mtw}{\ensuremath{m_{\mathrm{\rm T}}}\xspace}
+  \newcommand{\mW}{\ensuremath{m_{\mathrm{\rm W}}}\xspace}
+  \newcommand{\mT}{\ensuremath{m_{\mathrm{\rm T}}}\xspace}
+  \newcommand{\qcd}{\ensuremath{\rm QCD}\xspace}
+  \newcommand{\QCD}{\qcd}
+  \newcommand{\wjets}{\ensuremath{\textrm{W+jets}}\xspace}
+  \newcommand{\WJets}{\wjets}
+  \newcommand{\zjets}{\ensuremath{\textrm{Z+jets}}\xspace}
+  \newcommand{\ZJets}{\zjets}
+  \newcommand{\vjets}{\ensuremath{\textrm{V+jets}}\xspace}
+  \newcommand{\VJets}{\vjets}
+  \newcommand{\wzjets}{\ensuremath{\textrm{W/Z+jets}}\xspace}
+  \newcommand{\WZJets}{\wzjets}
+  \renewcommand{\ttbar}{\ensuremath{\mathrm{t}\bar{\mathrm{t}}\xspace}}
+  \renewcommand{\tt}{\ttbar}
+  \newcommand{\murelIso}{\ensuremath{I_{\rm rel}^{\mu}\xspace}}
+  \newcommand{\absetalj}{\ensuremath{|\eta_{j'}|}\xspace}
+  
+
+%%%% NUMERICAL VALUES:
+\newcommand{\sigmat}{\ensuremath{\sigma_{t\textrm{-ch.}}}}
+\newcommand{\sigmattop}{\ensuremath{\sigma_{t\textrm{-ch.,t}}}}
+\newcommand{\sigmatantitop}{\ensuremath{\sigma_{t\textrm{-ch.,}\bar{\textrm{t}}}}}
+
+\newcommand{\Ratio}{ XXX.XX \space}
+\newcommand{\Ratiouncertstat}{ XXX.XX \space}
+\newcommand{\Ratiouncertsyst}{ XXX.XX \space}
+
+\newcommand{\xsectheotop}{ 136.02 \xspace}
+\newcommand{\xsectheoantitop}{ 80.95 \xspace}
+\newcommand{\xsectheo}{ 216.99 \xspace}
+
+\newcommand{\xsectheotopscale}{ \ensuremath{ ^{+4.09}_{-2.92}}\xspace}
+\newcommand{\xsectheoantitopscale}{ \ensuremath{ ^{+2.53}_{-1.71}}\xspace}
+\newcommand{\xsectheoscale}{ \ensuremath{ ^{+6.62}_{-4.64}}\xspace}
+
+\newcommand{\xsectheotoppdf}{ \ensuremath{ \pm 5.32}\xspace}
+\newcommand{\xsectheoantitoppdf}{ \ensuremath{\pm 3.18}\xspace}
+\newcommand{\xsectheopdf}{ \ensuremath{ \pm 6.16}\xspace}
+
+\newcommand{\xsectheotoptot}{  \ensuremath{ ^{+5.40}_{-4.57}}\xspace}
+\newcommand{\xsectheoantitoptot}{  \ensuremath{ ^{+4.06}_{-3.51}}\xspace}
+\newcommand{\xsectheotot}{  \ensuremath{ ^{+9.40}_{-7.71}}\xspace}
+
+\newcommand{\xsecRes}{\ensuremath{\sigmat = \xsecobs \pm \xsecobsstat\,{\rm(stat.)}\pm \xsecobssyst\,{\rm(syst.)}\pm \xsecobslumi\,{\rm(lumi.)}\,{\rm pb}}\xspace}
+
+
+\newcommand{\xsecobstop}{ XX.XX \xspace}
+\newcommand{\xsecobsantitop}{ XX.XX \xspace}
+\newcommand{\xsecobs}{ 274 \xspace}
+
+\newcommand{\xsecobstopstat}{ \ensuremath{ ^{+XX}_{-XX}}\xspace}
+\newcommand{\xsecobsantitopstat}{ \ensuremath{ ^{+XX.XX}_{-XX.XX}}\xspace}
+%\newcommand{\xsecobsstat}{ \ensuremath{ ^{+94}_{-94}}\xspace}
+\newcommand{\xsecobsstat}{ \ensuremath{98}\xspace}
+
+\newcommand{\xsecobstopsyst}{ \ensuremath{ \pm XX.XX}\xspace}
+\newcommand{\xsecobsantitopsyst}{ \ensuremath{\pm XX.XX}\xspace}
+\newcommand{\xsecobssyst}{ \ensuremath{52}\xspace}
+
+\newcommand{\xsecobslumi}{ \ensuremath{33}\xspace}
+
+\newcommand{\xsecobstoptot}{  \ensuremath{ ^{+XX.XX}_{-XX.XX}}\xspace}
+\newcommand{\xsecobsantitoptot}{  \ensuremath{ ^{+XX.XX}_{-XX.XX}}\xspace}
+\newcommand{\xsecobstot}{  \ensuremath{ ^{+XX.XX}_{-XX.XX}}\xspace}
+
+\newcommand{\vtbobs}{ 1.12 \xspace}
+\newcommand{\vtbobsexp}{ 0.24 \xspace}
+\newcommand{\vtbobstheo}{ 0.02 \xspace}
+
+\newcommand{\vtbobsCLdown}{ XXX.XX \space}
+\newcommand{\vtbobsCLup}{ XXX.XX \space}
+
+\newcommand{\datamu}{4210.0\xspace}
+\newcommand{\dataele}{4210.0\xspace}
+
+\newcommand{\xsectheory}{236.4\xspace}
+\newcommand{\xsectheorytop}{136.4\xspace}
+\newcommand{\xsectheoryantitop}{80.7\xspace}
+
+\newcommand{\vtbobshighprec}{0.9582\xspace}
+\newcommand{\vtbunchighprec}{0.0780\xspace}
+
+
+\newcommand{\vtbRes}{\ensuremath{\vtbAbs = \vtbobs \pm \vtbobsexp\,{\rm(exp.)}\pm \vtbobstheo\,{\rm(theo.)}}\xspace}
+
+
+%\newcommand{\vtbobs}{XXX\xspace}
+%\newcommand{\vtbunc}{XXX\xspace}
+
+%\newcommand{\xsecobs}{XXX\xspace}
+%\newcommand{\xsecobsstat}{XXX\xspace}
+%\newcommand{\xsecobssyst}{XXX\xspace}
+
+\newcommand{\invp}{\ensuremath{{\rm pb}^{-1}}\xspace}
+\newcommand{\mylumi}{42\,\invp\xspace}
+\newcommand{\lumiFB}{5.0\xspace}
+\newcommand{\lumiunc}{12.0\,\%\xspace}
+\newcommand{\runrange}{246908--251883\,\xspace}
+%\newcommand{\runrange}{190456-207469\,\xspace}
+\newcommand{\runRangeFull}{\runrange}
+\newcommand{\invfb}{ \ensuremath{ {\rm fb}^{-1}}\xspace}
+
+
+
