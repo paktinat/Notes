@@ -59,13 +59,11 @@ the $\Delta \Phi$ requirement for QCD events.
 \caption{The estimated QCD background in the \tauTau channel. The first uncertainty is statistical and systematic of the method, the second is systematic due to correlation assumptions.}
 \begin{tabular}{|l|c|}
 \hline\hline
- Region      &  Estimation\\
+ Signal Region      &  Estimation\\
 \hline\hline
-%SR1      & 0.15 $\pm$ 0.22 $\pm$ 0.13 \\   
-SR1      & 0.13 $\pm$ 0.19 $\pm$ 0.10 \\
+\tauTau \binone      & 0.13 $\pm$ 0.19 $\pm$ 0.10 \\
 \hline
-%SR2      & 0.82 $\pm$ 0.65 $\pm$ 0.07  \\
-SR2      & 1.15 $\pm$ 0.81 $\pm$ 0.25  \\
+\tauTau \bintwo      & 1.15 $\pm$ 0.81 $\pm$ 0.25  \\
 \hline\hline
 \end{tabular}
 \label{4QCDbg}
@@ -152,10 +150,10 @@ of the \Z system, which is correlated with
 \caption{DY background yield expected in four signal regions. The first uncertainty is statistical and the second is systematic. The systematic uncertainties assigned to the central values are discussed in Section \ref{sect:sys}.}
 \begin{tabular}{|l|c|}
 \hline\hline
-Channel            &  DY Estimation\\
+Signal Region      &  DY Estimation\\
 \hline\hline
-\eTau              & 0.19  $\pm$  0.03  $\pm$ 0.05 \\\hline
-\muTau             & 0.25  $\pm$  0.06  $\pm$ 0.06 \\\hline
+\eTau              & 0.20  $\pm$  0.13  $\pm$ 0.05 \\\hline
+\muTau             & 0.26  $\pm$  0.13  $\pm$ 0.07 \\\hline
 \tauTau \binone    & 0.56  $\pm$  0.07  $\pm$ 0.16 \\\hline
 \tauTau \bintwo    & 0.81  $\pm$  0.56  $\pm$ 0.23 \\
 \hline\hline
@@ -195,7 +193,7 @@ $\hadtau$'s. If the selection is tightened, the number of tight $\hadtau$'s ($N_
 \end{equation} 
 $r_{real}$ ($r_{fake}$) is the real (fake) rate, the probability that a loosely selected real (fake) $\hadtau$ passes the  tight  selection. 
 The loose category ($N_{Loose}$) can be divided to two parts, 
-tight ($N_{Tight}$) and non-tight ($N_{NTight}$), so one can write:
+tight ($N_{Tight}$) and non-tight ($N_{NTight}$), so one can obtain the following expression by eliminating $N_{real}$:
 \begin{equation}
    N_{Fake}.(r_{fake}-r_{real}) = ((1 - r_{real}).N_{Loose}  - N_{NTight})
 \end{equation}
@@ -207,7 +205,7 @@ with the same requirements as the opposite-sign $\ell\Tau$
 selection for the signal.
 The fake rate is corrected by the difference found in MC between the 
 same-sign and opposite-sign fake rates.
-The final value of the fake rate is 0.51 $\pm$ 0.01. 
+The final value of the fake rate is $r_{fake}$ = 0.51 $\pm$ 0.01. 
 %{\bf What is this final value? 
 %The fake rate?  The predicted background?  You need to make it clear.
 %Also: you have a 2\% relative uncertainty on this quantity.  It seems
@@ -215,8 +213,8 @@ The final value of the fake rate is 0.51 $\pm$ 0.01.
 As a cross check, the fake rate was also measured in an opposite sign region with a reversed
 \MPT requirement, i.e., \MPT $<$ 30 \GeV.
 A consistent value is measured for the fake rate.  
-The real rate ($r_{real}$) is measured in Monte Carlo Drell-Yan events, and it is found to 
-be 0.7659 $\pm$ 0.0032 independent of \mttwo. 
+The real rate ($r_{real}$) is measured in Monte Carlo DY events, and it is found to 
+be $r_{real}$ = 0.766 $\pm$ 0.003 independent of \mttwo. 
 %{\bf (The number of sig. figures
 %is not consistent here.  Also, tiny uncertainty!!!!).}
 %To increase the statistics, the cut on \tauMT is relaxed and the final value is corrected by the efficiency of this 
@@ -243,7 +241,7 @@ the sidebands.
 \begin{center}
 \caption{Estimation of the fake \Tau contribution in the signal region of the $\ell\Tau$ channels. The total systematic is the
 quadrature sum of the fractional systematics. All uncertainties are relative.
-$r_{fake}$ ($r_{real}$) is shorthand for fake (prompt) rate.}
+$r_{fake}$ ($r_{real}$) is shorthand for fake (real) rate.}
 \begin{tabular}{lccccccccc}
 \hline
 \hline

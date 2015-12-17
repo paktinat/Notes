@@ -9,20 +9,21 @@ The uncertainties are listed below and summarized in Table~\ref{Tab.SYS}.
 
 \begin{itemize}
 
-\item The uncertainty on the luminosity  is $2.6\%$.  This affects the
+\item The uncertainty on the luminosity  is $2.6\%$ \cite{CMS-PAS-LUM-13-001}.  This affects the
   normalization of all Monte Carlo samples.
  
-\item  The systematic uncertainties on the muon and electron energy scales
-  are negligible.  In the case of \Tau, the visible energy in the Monte Carlo
-  is scaled up and down by $3\%$, and all \Tau-related variables are
-  recalculated.  The resulting variations in final yields are taken as
-  the systematic uncertainties.  
-  They amount to 10\% for both backgrounds and signal.
-  In the part of the signal phase space which is accessible by the analysis,
-  the value is almost constant in different points and a conservative value is selected.
+\item  The energy scales for electron, muon and \Tau objects affect the shape of various kinematical distributions.
+ The systematic uncertainties on the muon and electron energy scales are negligible.
+The visible energy of \Tau object in the Monte Carlo simulation is scaled up and down
+by 3\%, and all \Tau-related variables are recalculated. The resulting variations in
+final yields are taken as the systematic uncertainties. They amount to 10\% for both
+background and signal events. In the part of the signal phase space which is accessible by
+the analysis, the value is almost constant in different points and a conservative value
+is selected.
+
 
 \item The uncertainty on electron and muon trigger, identification, and
-  isolation efficiencies is $2\%$.
+  isolation efficiencies is 2\%.$2\%$
 
 \item The uncertainty on the $\hadtau$ identification efficiency is $6\%$. 
   The uncertainty on the efficiency of the \Tau leg of the $e\hadtau$ and
@@ -32,45 +33,48 @@ The uncertainties are listed below and summarized in Table~\ref{Tab.SYS}.
 
 \item The uncertainty due to the b-tag scale factor is evaluated by varying the 
 factors within their uncertainties. The yields of signal and background events are changed by 8\% 
-and 4\% (at most), respectively.
+and 4\%, respectively.
  
-\item To evaluate the uncertainty due to pileup, the assumed inelastic
-  pp cross-section is varied by 5\%.  This then changes the number
-  of simulated pileup interactions, and changes the relevant acceptance
-  to the processes of interest by $~4 \%$.
+\item To evaluate the uncertainty due to pile-up, the assumed inelastic pp cross-section is
+  varied by 5\%, resulted in the change in the number of simulated pile-up interactions.
+ The relevant acceptances for signal and background events are changed by 4\%.
 
-\item The uncertainty on the signal acceptance due to parton-distribution
-  function uncertainties is expected to be small.
-  It is about $2\%$ in the similar analysis \cite{Khachatryan:2014qwa}.
 
-\item The uncertainty on the signal acceptance associated with initial state
-  radiation (ISR) is evaluated by comparing the efficiency of jet-related
-  requirements between \PYTHIA and \MADGRAPH which is a matrix element generator 
-  for the $WW$ SM process which
-  is similar to chargino pair-production.  From these studies we estimate
-  a 3\% uncertainty on the bveto efficiency and a 6\% uncertainty on the
-  $\Delta \Phi$ requirement.
-  The ISR uncertainty is not considered for the background samples, due to the
-  usage of  matrix element  generators.
+\item The uncertainty on the signal acceptance due to parton-distribution function uncertainties 
+  is taken to be 2\% from a similar analysis \cite{Khachatryan:2014qwa}.
 
-\item The \MPT uncertainty receives contribution from different sources. The lepton, \Tau, jet energy scale 
-(2-10\% depending on $\eta$ and \PT) and unclustered energy scale (10\%). The ``unclustered energy'' stands for the energy of the 
-reconstructed objects which do not belong to a jet or lepton with \PT $>$ 10 \GeV.
-The effect of lepton and \Tau energy scale are already discussed. The contribution of the jet energy scale and unclustered energy is 
-found to be negligible. A conservative relative uncertainty of 5\% is assigned to the signal and background events which are read from the 
-Monte Carlo simulation.
-\item The lack of the statistics in the simulated Monte Carlo samples, can be an important source of the uncertainties also in evaluating 
-the systematic uncertainties. This systematic uncertainty amounts to 20\% for the backgrounds and 10\% for the signal.
-\item The fast simulation shows some differences with the full simulation, especially in track reconstruction. It can affect the \Tau isolation.
-5\% systematic uncertainty per \Tau leg is found by comparing the \Tau isolation/identification efficiency in the fast and full simulation.
+\item The uncertainty on the signal acceptance associated with initial state radiation (ISR)
+is evaluated by comparing the efficiencies of jet-related requirements between \PYTHIA
+ and \MADGRAPH which is a matrix-element event generator. Using the SM WW process which
+ is expected to be similar to chargino pair-production, we assign a 3\% uncertainty on 
+the b-jet veto efficiency and a 6\% uncertainty on the $\Delta \Phi$ requirement. The ISR
+ uncertainty is not considered for the background samples, due to the usage of matrix-
+ element event generators.
+
+\item The sources of \MPT uncertainty are the energy scales of lepton, \Tau, and jet
+objects and unclustered energy.  The “unclustered energy” is for the energy of the reconstructed objects which
+ do not belong to any jet or lepton with pT > 10 GeV. The effect of lepton and \tau_had
+ energy scales is discussed above. The contribution from the uncertainty of the jet energy scale (2-10\% depending on$\eta$  and \PT) and
+ unclustered energy (10\%) is found to be negligible. A conservative value of 5\% uncertainty
+ is assigned to both signal and background processes using the Monte
+ Carlo simulation studies.
+
+\item The statistics in the simulated Monte Carlo samples are also a
+ source of the systematics uncertainties which are taken to be 20\% for the background processes and 10\% for the signal events.
+
+\item The performance of the fast detector simulation is insufficient, compared to the full detector simulation, especially in
+ track reconstruction. It can affect the \Tau isolation. A 5\% systematic uncertainty per
+ \Tau leg is assigned by comparing the \Tau isolation/identification efficiency in the fast
+ and full simulations.
+
 \item For some backgrounds like \ttbar,  dibosons and Higgs decays, the remaining 
 events from the simulation are very small. A 50\% uncertainty is considered for these backgrounds to account for the theoretical uncertainty of the
 cross section calculation as well as the shape mismodeling.
 \end{itemize}
 
 
-\noindent We add all systematic uncertainties in quadrature and assign 
- 20\% and 25\% relative uncertainties on the signal
-acceptance for the $\ell\Tau$ and \tauTau channels, respectively. For the Monte Carlo background predictions, the values are 
-25\% and 28\%, respectively. The relative uncertainty of the less important backgrounds is 50\% for all channels.
+\noindent All systematic uncertainties are added in quadrature. The total uncertainties on the signal acceptance in the \leptonTau and \tauTau 
+channels are 20\% and 25\%, respectively; 25\% and 28\% on Monte Carlo predictions for QCD, W+jets and DY events in the \leptonTau and \tauTau  channels, respectively.
+The uncertainty of the other small backgrounds (Higgs boson, diboson, ttbar production) is 50\% for all channels.
+
 
