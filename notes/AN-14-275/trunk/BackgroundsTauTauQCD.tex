@@ -12,6 +12,7 @@ variable and a kinematic variable chosen as \mttwo in \binone or \SumMT in \bint
 The definitions of the control regions are summarized in table~\ref{2QCDbg}. \\
 \begin{table}
 \begin{center}
+\caption{The control regions used for ABCD method are defined. The $\mindphifour>1$ cut is removed to increase the statistics.}
 \begin{tabular}{|c|c|c|c|}
 \hline\hline
 Region&A& B & C
@@ -30,7 +31,6 @@ Region&A& B & C
 % &misc.MinMetJetDphiPt40$>$1 is relaxed\\
 \hline\hline
 \end{tabular}
-\caption{The control regions used for ABCD method are defined. The $\mindphifour>1$ cut is removed to increase the statistics.}
 \label{2QCDbg}
 \end{center}
 \end{table}
@@ -67,8 +67,14 @@ QCD background events in both signal regions. %While for the right plot, the dis
 %$pol1$% fit function on the left plot would yield to a negative value for the cut efficiency and then it was decided to  
 %take the value in the last bin as a conservative estimate of the cut efficiency which is used in the final QCD background estimation results. 
 The results of the ABCD method are summarized in table~\ref{4QCDbg}.\\
-\begin{table}
+
+\begin{table}[!Hhtb]
 \begin{center}
+\caption{The ingredients needed for the ABCD method are summarized. The quoted 
+uncertainties on data are statistical. For the nonQCD(MC) events, the systematical uncertainty  
+ is also considered as 28\% of the central value and added in quadrature to the 
+statistical uncertainties. This systematical uncertainty is also propagated to the data subtraction. 
+The final QCD background estimation results is shown in the last column.}
 \scalebox{0.7}{
 \begin{tabular}{|l|c|c|c|c|c|c|c|}
 \hline\hline
@@ -85,11 +91,6 @@ The results of the ABCD method are summarized in table~\ref{4QCDbg}.\\
              &Data-NonQCD(MC)& 8.62 $\pm$3.55&  216.5$\pm$15.74    &  191.9$\pm$20.98     &     & &     \\ 
 \hline\hline
 \end{tabular}}
-\caption{The ingredients needed for the ABCD method are summarized. The quoted 
-uncertainties on data are statistical. For the nonQCD(MC) events, the systematical uncertainty  
- is also considered as 28\% of the central value and added in quadrature to the 
-statistical uncertainties. This systematical uncertainty is also propagated to the data subtraction. 
-The final QCD background estimation results is shown in the last column.}
 \label{4QCDbg}
 \end{center}
 \end{table}

@@ -18,6 +18,9 @@ The criteria in different bins of $\pt$ and $\eta$ are given in Table ~\ref{Tab.
 
 \begin{table}[!h]
 \begin{center}
+\caption{
+  Discriminator thresholds for the Loose and Tight MVA electron identification working--points respectively.
+}
 \begin{tabular}{|l|l|c|c|}
 \hline\hline
 \multicolumn{2}{|c|}{Kinematic range}                & Loose & Tight \\
@@ -30,11 +33,8 @@ The criteria in different bins of $\pt$ and $\eta$ are given in Table ~\ref{Tab.
                   & $\vert \eta \vert > 1.479$       & 0.975 & 0.985 \\
 \hline\hline
 \end{tabular}
-\end{center}
-\caption{
-  Discriminator thresholds for the Loose and Tight MVA electron identification working--points respectively.
-}
 \label{Tab.electronMVAIDwp}
+\end{center}
 \end{table}     
 
 To reject those electrons which is coming from photon conversions, it is required that electrons have no missing inner hits. Furthermore if there is an oppositely charged track near electron which is fitted to a common vertex inside of tracker volume that electron is rejected.  
@@ -93,21 +93,6 @@ Based on the expected particles in the final state of the hadronic $\tau$ decay,
 The isolation variable is defined as the sum of the $\pt$ of charged hadrons and the $\et$ of photons within a cone of $\Delta R = 0.5$ around the $\hadtau$ axis. Particles used to reconstruct the $\hadtau$ candidate are excluded. The contribution of pile-up to the $\Tau$ isolation is accounted for by applying the so-called $\Delta\beta$ corrections. The selection criteria for charged hadrons in the isolation sum together with the pile-up subtraction procedure can be found in Ref.~\cite{CMS_AN_2013-171}. The Loose, Medium and Tight working points of {\it CombinedIsoDBSumPtCorr3Hits} algorithm correspond to isolation variables less than 2, 1 and 0.8\,$\GeV$, respectively.
 
 The $\hadtau$ candidates are vetoed if signals exist in the muon system close to the $\hadtau$ direction. Loose, Medium and Tight working points are provided, corresponding to different $\hadtau$ identification efficiencies and $\mu\to\hadtau$ fake rates~\cite{CMS_AN_2013-171}. To discriminate against electrons i.e., rejecting $e\to\hadtau$ fakes, a multivariate discriminator is trained for which the Loose, Medium, Tight and very-Tight working points are defined based on the outputs of 16 different BDT's. Each BDT is associated to a category of $\hadtau$ candidates where the classification of $\hadtau$'s is performed according to their kinematics and decay mode as well as their closeness to a GSF electron. The working points are optimized to achieve the lowest $e\to\Tau$ rate possible with a given $\hadtau$ identification efficiency~\cite{CMS_AN_2012-417}.
-
-%Tau leptons from Higgs boson decays are expected to be isolated in the detector, while leptons from heavy-flavor (c and b) decays and decays in flight are expected to be found inside jets. A measure of isolation is used to discriminate the signal from the QCD multijet background, based on the charged hadrons, photons, and neutral hadrons falling within a cone around the lepton momentum direction.
-%Electron, muon, and tau lepton isolation are estimated as
-%\begin{equation}\begin{aligned}
-%I_{\Pe,\Pgm} &=  \sum_{\rm charged}  \pt + \text{max}\left( 0, \sum_{\rm neutral}  \pt
-%                                        +  \sum_{\gamma} {\pt} - 0.5 \sum_{\rm charged, pileup} \pt  \right ), \\
-%I_{\Tau} &=  \sum_{\rm charged}  \pt + \text{max}\left( 0, \sum_{\gamma} {\pt} - 0.46 \sum_{\rm charged, pileup} \pt  \right ),
-%\label{eq:reconstruction_isolation}
-%\end{aligned}\end{equation}
-%where $\sum_\text{charged}\pt$ is the scalar sum of the transverse momenta of the charged hadrons, electrons, and muons from the primary vertex located in a cone centered around the lepton direction of size $\Delta R = \sqrt{(\Delta\eta)^2+(\Delta\phi)^2}$ of 0.4 for electrons and muons and 0.5 for tau leptons.
-%The sums $\sum_\text{neutral}\pt$ and $\sum_{\gamma} \pt$ represent the same quantities for neutral hadrons and photons, respectively. In the case of electrons and muons the innermost region is excluded
-%to avoid the footprint in the calorimeter of the lepton itself from entering the sum.
-%Charged particles close to the direction of the electrons are excluded as well, to prevent tracks originating from the conversion of photons emitted by the bremsstrahlung process from spoiling the isolation. In the case of \Tau, the particles used in the reconstruction of the lepton are excluded. The contribution of pileup photons and neutral hadrons
-%is estimated from the scalar sum of the transverse momenta of charged hadrons from pileup vertices in the isolation cone $\sum_\text{charged, pileup}$. This sum is multiplied by a factor of 0.5 that approximately corresponds to the ratio of neutral-to-charged hadron production in the hadronization process of inelastic $\Pp\Pp$ collisions. In the case of \Tau, a value of 0.46 is used, as the neutral hadron contribution is not used in the computation of $I_{\tauh}$. An $\eta$, \pt, and lepton-flavor dependent threshold on the isolation variable is applied.
-
 
 \subsection{\texorpdfstring{Jet and \MPT reconstruction}{{Jet and MET reconstruction}}
 \label{sec:jetmet}

@@ -13,11 +13,6 @@ The most similar MC sample to our signal from the production point of view is WW
 We obtain the efficiency of b-veto for signal sample denoted as $E^{SUSY}_{b-veto}$ and also for WW sample denoted as $E^{WW}_{b-veto}$.
 Comparing these 2 efficiencies this uncertainty can be estimated.
 
-%\begin{linenomath}
-%\begin{equation}
-%\label{eq:suWW}
-%I_{e/ \mu}=\Sigma P_{T}^{charged }(\Delta z <2mm)+max(P_{T}^{photon}+P_{T}^{h0 }-\Delta \beta,0),
-
 \begin{align}
 E^{WW}_{b-veto} &= \frac{WW_{0b}}{WW_{all}} = \frac{88968.51}{93058.33} = 0.95\\ \nonumber
 \end{align}
@@ -30,28 +25,8 @@ and we take:
 |\frac{E^{SUSY}_{b-veto}-E^{WW}_{b-veto}}{E^{WW}_{b-veto}}| &= 3 \% \\ \nonumber
 \end{align}
 
-%\end{equation}
-%\end{linenomath}
-
-%The differences between MC and data should be considered as another source of systematics too. As the efficiency of selecting WW events in data is too low, the effect of b-veto scale factors is measured as an upper limit.
-
-%\begin{linenomath}
-%\begin{align}
-%\label{eq:suWW}
-%I\_{e/ \mu}=\Sigma P\_{T}^{charged }(\Delta z <2mm)+max(P\_{T}^{photon}+P\_{T}^{h0 }\_\Delta \beta,0),
-%E^{data}_{b-veto} &= \frac{data\_b-veto applied}{data\_b-veto relaxed} = \frac{80282.30}{84226.93} = 0.956 \\ \nonumber
-%\end{align}
-%and we have:
-
-% &= \frac{data\_ratio - WW\_ratio}{WW\_ratio} = 0.003 \% \nonumber
-
-%\end{linenomath}
-
-%The total uncertainty due to ISR systematic uncertainty is estimated as 3 \%.
-
 \subsection{\texorpdfstring{Uncertainty due to $\mindphifour$ cut}{Uncertainty due to minDeltaPhiJMET cut}}
 Another source of systematic uncertainty due to existence of ISR in signal events is the cut on $\mindphifour$ ($ > 1$) against QCD events. We use the same method as mentioned above to obtain the systematic uncertainty of applying this variable. But this time we use Higgs to $\tau \tau$ sample which mimics our signal most.
-%and we chose it because Higgs sample has the most similar cumulative distribution function,i.e. the efficiency of this cut, to our signal that is shown in. %Fig.~\ref{}.     
 
 \begin{align}
 E^{Higgs}_{\mindphifour} &= \frac{Higgs_{\mindphifour>1.0}}{Higgs_{all}} = \frac{89288.14}{180562.56} = 0.49 \\ \nonumber
@@ -66,63 +41,15 @@ and we take:
 \end{align}
 
 \subsection{\texorpdfstring{$\ell$ and $\hadtau$ energy scale}{Energy scale}}
-
 The systematic uncertainty due to muon energy scale is small enough to be ignored.
 
 The electron energy is varied by $1\%$ ($2.5\%$) for electrons reconstructed in the barrel (endcap) region as recommended by EGAMMA POG\cite{eEnergyScale}. As this variation has small effects on electron $\pt$ related variables, its effect on final yields in \eTau channel has been found negligible.
 
-The energy of \hadtau's is scaled by $3\%$, following the recommendation of the Tau POG~\cite{TauPOG}. Variables like \MPT, \mttwo, \mindphifour and invariant mass which depend on \hadtau $\pt$ are re-calculated.  Up and down uncertainties on the final yields are reported in table~\ref{Tab.tauEnergyScale}. In some cases which the statistical uncertainty had a large value comparing to systematic uncertainty, we relaxed some $\hadtau$ \pt  independent variables to obtain more statistics.
-
-The big value of the \hadtau energy scale uncertainty is dominated by the lack of the statistics. In signal samples which have enough statistics the uncertainty decreases. So the maximum uncertainty due to \hadtau energy scale in MC driven backgrounds and signal is set to $~10\%$.
-%In order to calculate systematic uncertainties for signal, we used 3 signal points which are ($m(\chione) = 180\,\GeV$, $m(\PSGczDo) = 60\,\GeV$), (240, 40) and (380, 1) representing low, moderate and high delta mass respectively. 
-The $10\%$ effect of this uncertainty for all signal points in different channels is a conservative value that covers the whole plain and all channels.
-
-%% \begin{table}[!h]
-%% \tiny{
-%% \begin{center}
-%% \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-%% \hline
-%%                              & QCD & ZX    & W  & WW   & Top    & All MC & Susy & Data \\\hline 
-%% $e\hadtau$ channel           & $0.0 ^{+0.0} _{-0.0} $ & $0.38 ^{+0.05} _{-0.03}  $    &  $1.2 ^{+0.0} _{-0.0} $      &  $0.05 ^{+0.0} _{-0.0} $   &$0.02 ^{+0.12} _{-0.0} $           & $1.74 ^{+0.13} _{-0.03} $       & $3.47 ^{+0.33} _{-0.0} $ & $3.0 ^{+0.0} _{-1.0}$    \\\hline   
-
-%% $\mu\hadtau$ channel &  $0.0 ^{+0.0} _{-0.0} $     &  $0.28 ^{+0.11} _{-0.0} $      &  $0.79 ^{+0.0} _{-0.32} $  & $0.34 ^{+0.07} _{-0.05} $        &  $0.0 ^{+0.04} _{-0.06} $   &    $1.4 ^{+0.22} _{-0.34} $      &  $2.41 ^{+0.17} _{-0.02} $      & $5.0 ^{+1.0} _{-2.0} $     \\\hline  
-
-%% $\tauTau$ channel bin1 &  $0.0 ^{+0.0} _{-0.0}$   &    $0.56 ^{+0.7} _{-0.09}$    &  $0.0 ^{+0.0} _{-0.0}$      &  $0.02 ^{+0.0} _{-0.02}$        &   $0.0 ^{+0.0} _{-0.0}$        &    $0.58 ^{+0.7} _{-0.11}$     & $4.1^{+0.24} _{-0.26} $    & $0.0 ^{+0.0} _{-0.0}$\\\hline
-
-%% $\tauTau$ channel bin2 &  $0.0 ^{+0.0} _{-0.0}$   &     $0.81 ^{+0.39} _{-0.7}$     &    $0.43 ^{+0.0} _{-0.0}$     &     $0.15 ^{+0.1} _{-0.02}$     &   $0.53 ^{+0.0} _{-0.23}$   &      $1.91 ^{+0.28} _{-1.94}$     &     $3.13 ^{+0.12} _{-0.27}$   &  $0.0 ^{+0.0} _{-0.0}$    \\\hline
-%% \end{tabular} 
-%% \end{center}
-%% \caption{Tau energy scale systematic effect on MC in different channels}
-%% \label{Tab.susyHiggs}
-
-%% }
-%% \end{table}     
-
-%% \begin{table}[!h]
-%% \tiny{
-%% \begin{center}
-%% \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-%% \hline
-%%                              & QCD & ZX    & W  & WW   & Top    & All MC & Susy & Data \\\hline 
-%% $e\hadtau$ channel           & $0.0 ^{+0.0 \%} _{-0.0 \%} $ & $0.38 ^{+13 \%} _{-5 \%}  $    &  $1.2 ^{+0.0 \%} _{-0.0 \%} $      &  $0.05 ^{+0.0 \%} _{-0.0 \%} $   &$0.02 ^{+600.0 \%} _{-0.0 \%} $           & $1.74 ^{+8 \%} _{-2 \%} $       & $3.47 ^{+9 \%} _{-0.0 \%} $ & $3.0 ^{+0.0 \%} _{-33 \%}$    \\\hline   
-
-%% $\mu\hadtau$ channel &  $0.0 ^{+0.0 \%} _{-0.0 \%} $     &  $0.28 ^{+40 \%} _{-0.0 \%} $      &  $0.79 ^{+0.0 \%} _{-40 \%} $  & $0.34 ^{+20 \%} _{-15 \%} $        &  $0.0 ^{+0.0 \%} _{-0.0 \%} $   &    $1.4 ^{+ 16 \%} _{- 24 \%} $      &  $2.41 ^{+7 \%} _{-0.0 \%} $      & $5.0 ^{+20 \%} _{-40 \%} $     \\\hline  
-
-%% $\tauTau$ channel bin1 &  $0.0 ^{+0.0 \%} _{-0.0 \%}$   &    $0.56 ^{+12 \%} _{-16 \%}$    &  $0.0 ^{+0.0 \%} _{-0.0 \%}$      &  $0.02 ^{+0.0 \%} _{-100 \%}$        &   $0.0 ^{+0.0 \%} _{-0.0 \%}$        &    $0.58 ^{+12 \%} _{-19 \%}$     & $4.1^{+5 \%} _{-5 \%} $    & $0.0 ^{+0.0 \%} _{-0.0 \%}$\\\hline
-
-%% $\tauTau$ channel bin2 &  $0.0 ^{+0.0 \%} _{-0.0 \%}$   &     $0.81 ^{+48 \%} _{-9 \%}$     &    $0.43 ^{+0.0 \%} _{-0.0 \%}$     &     $0.15 ^{+66 \%} _{-13 \%}$     &   $0.53 ^{+0.0 \%} _{-43 \%}$   &      $1.91 ^{+15 \%} _{-100 \%}$     &     $3.13 ^{+4 \%} _{-8 \%}$   &  $0.0 ^{+0.0 \%} _{-0.0 \%}$    \\\hline
-%% \end{tabular} 
-%% \end{center}
-%% \caption{Tau energy scale systematic effect on MC in different channels}
-%% \label{Tab.susyHiggs}
-%% }
-%% \end{table}     
-
+The energy of \hadtau's is scaled by $3\%$, following the recommendation of the Tau POG~\cite{TauPOG}. Variables like \MPT, \mttwo, \mindphifour and invariant mass which depend on \hadtau $\pt$ are re-calculated.  Up and down uncertainties on the final yields are reported in table~\ref{Tab.tauEnergyScale}. 
 \begin{center}
-\begin{table}[!h]
+\begin{table}[!Hhtb]
 \scriptsize{
-%\scalebox{0.8}{
-
+\caption{Tau energy scale systematic effect on MC in different channels. The statistical uncertainty is also quoted to be able to guess the statistical contamination in the systematics values.}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline  
                             & ZX    & Higgs  & WW   & Top    & All MC & SUSY (380 , 1)%& Data%
@@ -141,12 +68,15 @@ $\tauTau$ \bintwo    &     $0.81 \pm 0.56 ^{+0.39} _{-0.7}$     &   $0.07 \pm0.0
  \\\hline
 %$0.43 \pm 0.4 ^{+0.0} _{-0.0 }$
 \end{tabular} 
-
-\caption{Tau energy scale systematic effect on MC in different channels. The statistical uncertainty is also quoted to be able to guess the statistical contamination in the systematics values.}
 \label{Tab.tauEnergyScale}
 }
 \end{table}     
 \end{center}
+In some cases which the statistical uncertainty had a large value comparing to systematic uncertainty, we relaxed some $\hadtau$ \pt  independent variables to obtain more statistics.
+
+The big value of the \hadtau energy scale uncertainty is dominated by the lack of the statistics. In signal samples which have enough statistics the uncertainty decreases. So the maximum uncertainty due to \hadtau energy scale in MC driven backgrounds and signal is set to $~10\%$.
+%In order to calculate systematic uncertainties for signal, we used 3 signal points which are ($m(\chione) = 180\,\GeV$, $m(\PSGczDo) = 60\,\GeV$), (240, 40) and (380, 1) representing low, moderate and high delta mass respectively. 
+The $10\%$ effect of this uncertainty for all signal points in different channels is a conservative value that covers the whole plain and all channels.
 
 \subsection{Lack of the statistics} The lack of the statistics in the simulated Monte Carlo samples, can be an important source of the uncertainties also in evaluating 
 the systematic uncertainties. This systematic uncertainty amounts to 20\% for the backgrounds and 10\% for the signal.
@@ -163,11 +93,9 @@ The uncertainty on the efficiency of the hadronic tau leg of the $e\hadtau$ and 
 \subsection{PDF}
 The signal acceptance changes due to PDF uncertainties is expected to be small. We take this uncertainty from ~\cite{CMS_AN_2012-248}, where the signal has been produced through electroweak process like our signal. The amount of this uncertainty is around $2\%$.
 The effect of PDF on cross section is considered using $CTEQ66$ and $MSTW2008nlo90cl$ for PDF and it is shown for some generic SUSY points in Table.~\ref{Tab.PDF}.
-% We also looked at the other searches like ``CMS AN-14-120'', edge analysis, where the PDF uncertainties on the signal acceptance are evaluated to vary between 1% and 5%.
-
-
-\begin{table}[!h]
+\begin{table}[!Hhtb]
 \begin{center}
+\caption{Cross section systematic uncertainty due to different PDF.}
 \begin{tabular}{|c|c|c|}
 \hline
                                     &$\sigma (fb) \_ CTEQ66$          & $\frac{\sigma \_ CTEQ66 - \sigma \_ MSTW2008}{\sigma \_ CTEQ66}$  \\\hline 
@@ -177,16 +105,14 @@ m(\chione) = 300 GeV                &$67.51^{+0.2 \% + 5.9 \%}_{-0.2 \% - 5.1 \%
 m(\chione) = 400 GeV                &$17.51.40^{+0.0 \% + 6.8 \%}_{-0.3 \% - 6.3 \%}$        & 8 \%        \\\hline
 m(\chione) = 500 GeV                &$5.53^{+0.0 \% + 8.1 \%}_{-0.9 \% - 7.0 \%}$            & 12 \%        \\\hline
 \end{tabular} 
-\end{center}
-\caption{Cross section systematic uncertainty due to different PDF.}
 \label{Tab.PDF}
+\end{center}
 \end{table}     
-\subsection{Pile-up}
 
+\subsection{Pile-up}
 The minimum bias cross section is varied $5 \%$ up and down following the standard recipe of ~\cite{PU_SYS}. It is found to introduce $~4 \%$ systematic for all channels.    
 
 \subsection{\texorpdfstring{\MPT}{MET}}
-
 The main backgrounds come from data driven or MC validated against data. \MPT uncertainties can be important for signal only. Our signal is produced through an SUSY EWK production and does not include jets directly but it is expected to feature four invisible particles as genuine missing energy. Therefore it should not be affected by jet calibrations. Apart from jets, lepton and tau energy scales and their effects on \MPT have been already taken into account. There is just unclustered energy left which based on results in ~\cite{CMS_AN_2014-099} this item's effect on \MPT is small enough to be ignored.
 
 

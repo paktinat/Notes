@@ -42,7 +42,7 @@ the $\Delta \Phi$ requirement for QCD events.
 Table \ref{4QCDbg} 
 \begin{table}[!Hhtb]
 \begin{center}
-\caption{The estimated QCD background in the \tauTau channel. The first uncertainty is statistical and systematic of the method, the second is systematic due to correlation assumptions.}
+\caption{The estimated QCD background in the \tauTau channel. The first uncertainty is statistical and systematic of the method, the second is the extra systematic due to correlation assumptions.}
 \begin{tabular}{|l|c|}
 \hline\hline
  Signal Region      &  Estimation\\
@@ -77,7 +77,8 @@ where, $N_{\rm Before~Final~Selection}$ is the number of \wjets events just befo
 
 Since the size of the simulated \wjets sample is not large enough to adequately populate our desired phase space, %$\epsilon_{\rm M_{T2}}$ 
 $\epsilon_{FS}$ is calculated in a phase space with looser selection criteria. It is first evaluated in a \wjets sample with a pair of opposite-charge \Tau's where the \Tau candidates are selected similar to those in signal region. 
-Additional signal selection requirements, such as $\Delta \Phi$ or lepton veto, are applied one by one such that two orthogonal subsamples (passing and failing) are obtained. The $\epsilon_{FS}$ quantity is calculated in all subsamples. The values are found to be compatible within the statistical uncertainties; their weighted average is taken as the final estimate for $\epsilon_{FS}$ with weights corresponding to the size of the simulated sample at each step. The uncertainty on the \Tau energy scale introduces the largest variation on $\epsilon_{FS}$. This variation is considered as a systematic uncertainty on the estimated efficiency.
+Additional signal selection requirements, such as $\Delta \Phi$ or lepton veto, are applied one by one such that two orthogonal subsamples (passing and failing) are obtained. The $\epsilon_{FS}$ quantity is calculated in all subsamples. The values are found to be compatible within the statistical uncertainties; their weighted average is taken as the final estimate for $\epsilon_{FS}$ with weights corresponding to the size of the simulated sample at each step. %The uncertainty on the \Tau energy scale introduces the largest variation on $\epsilon_{FS}$. This variation is considered as a systematic uncertainty on the estimated efficiency.
+The uncertainty on $\epsilon_{FS}$  also takes into account the effect of the \Tau energy scale.
 
 The \wjets MC is validated in data using a same-sign \muTau control sample, where both the normalization and $\epsilon_{FS}$ are checked. 
 The normalization is found to be compatible between data and simulation, within uncertainties. For $\epsilon_{FS}$, the value measured in 
@@ -93,7 +94,7 @@ Table \ref{tbl:Wbkg} summarizes the results of  the method for different signal 
 \begin{table}[!Hhtb]
 \begin{center}
 \caption{The \wjets estimation results in both search regions. The systematics (sys.) comes from the maximum
-variation of the estimation found  from varying the \Tad energy scale within its uncertainty.
+variation of the estimation found  from varying the \Tau energy scale within its uncertainty.
  The ``sys. shape'' takes into account the difference between the shape of the search variable distribution in data and Monte Carlo.}
 \begin{tabular}{lc}
 \hline\hline
@@ -186,7 +187,8 @@ fake rate and the real rate %and their statistical uncertainties
 are negligible compared to the statistical uncertainties associated with 
 the sidebands. 
 
-
+The estimates of the fake \Tau contamination in the two $\ell\Tau$ 
+channels are summarized in Table~\ref{Tab.FakeEstimation}. 
 \begin{table}[!Hhtb]
 \begin{center}
 \caption{Estimation of the fake \Tau contribution in the signal region of the $\ell\Tau$ channels. The total systematic is the
@@ -204,9 +206,6 @@ Channel    & Total Fake & rel. Stat &  $r_{fake}$ Sys & $r_{real}$  Sys & Total 
 \label{Tab.FakeEstimation}
 \end{center}
 \end{table}
-
-The estimates of the fake \Tau contamination in the two $\ell\Tau$ 
-channels are summarized in Table~\ref{Tab.FakeEstimation}. 
 The relative statistic and systematic uncertainties are reported separately. 
 Since the fake rate and real rate are in common between the two 
 $\ell\Tau$ channels, the total systematic uncertainties are considered 
