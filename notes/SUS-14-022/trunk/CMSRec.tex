@@ -1,7 +1,5 @@
 \section{Experimental setup, event reconstruction and data sets}
 \label{sect:CMSRec}
-
-
 The central feature of the CMS apparatus is a superconducting solenoid of 6\unit{m} internal diameter, providing a magnetic field of 3.8\unit{T}. Within the superconducting solenoid volume are a silicon pixel and strip tracker, a lead tungstate crystal electromagnetic calorimeter (ECAL), and a brass and scintillator hadron calorimeter (HCAL), each composed of a barrel and two endcap sections. Muons are measured in gas-ionization detectors embedded in the steel flux-return yoke outside the solenoid. Extensive forward calorimetry complements the coverage provided by the barrel and endcap detectors. 
 A more detailed description of the CMS detector, together with a definition of the coordinate system used and the relevant kinematic variables, can be found in reference \cite{Chatrchyan:2008zzk}.
 %The object definition of this analysis is very close to the object reconstruction and identification in $H\to\tau\tau$ analysis previously published \cite{Khachatryan:2014wca}.
@@ -21,12 +19,12 @@ algorithm~\cite{Cacciari:2008gp} with a distance parameter of 0.5. We apply
 effects of non-uniform detector response~\cite{Chatrchyan:2011ds}.
 A correction to account for multiple pp collisions within the same or a nearby
 bunch crossing (pileup interactions) is estimated on an event-by-event basis using the
-jet-area method described in Ref.~\cite{cacciari-2008-659}, and is
+jet-area method described in Ref.~\cite{Cacciari:2007fd}, and is
 subtracted from the reconstructed jet \pt.
-The combined secondary vertex algorithm is used to identify (``btag'') jets 
+The combined secondary vertex algorithm is used to identify (``b-tagged'') jets 
 originating from b-quarks.  This algorithm 
  is based on the reconstruction of secondary vertices, together with track-based lifetime information~\cite{Chatrchyan:2012jua}. 
-In this analysis the "medium" working point is used. The working point corresponds to an average btagging efficiency of 70\%, 
+In this analysis the "medium" working point is used. The working point corresponds to an average b-tagged jets efficiency of 70\%, 
 light-quark jet misidentification rate of 1.5\%, and $\cPqc$-quark jet misidentification rate of 20\% 
 for jets with a \pt\ value greater than 60\GeV.
 Jets with  \PT $>$ 40 \GeV and $\abs{\eta} < 5.0$ and b-tagged jets with \PT $>$ 20 \GeV and $\abs{\eta} < 2.4$ are considered in this analysis.
@@ -34,10 +32,10 @@ Jets with  \PT $>$ 40 \GeV and $\abs{\eta} < 5.0$ and b-tagged jets with \PT $>$
 
 
 The particles from the particle-flow algorithm are used to reconstruct the missing transverse energy vector $\VEtmiss$, defined as the negative of the vector sum of the transverse momenta of all reconstructed particles.  Corrections are applied to insure consistency between
-$\VEtmiss$ and the corrections to jet energies described above.  The missing transverse energy in the event (\MET) is defined as the magnitude of $\VEtmiss$.
+$\VEtmiss$ and the corrections to jet energies described above.  The missing transverse energy in the event (\MPT) is defined as the magnitude of $\VEtmiss$.
 
 %The ECAL energy resolution for electrons with $\ET {\approx} 45$\GeV from $\Z \rightarrow \Pe \Pe$ decays is better than 2\% in the central region of the ECAL barrel $(\abs{\eta} < 0.8)$ where pseudorapidity $\eta$ is defined as $\eta = -ln [tan(\theta/2)]$,  $\theta$ being 
-%the polar angle of the particle's track with respect to the counterclockwise beam direction. The resulotion is between 2\% and 5\% elsewhere. For low-bremsstrahlung electrons, where 94\% or more of their energy is contained within a $3 \times 3$ array of crystals, the energy resolution improves to 1.5\% for $\abs{\eta} < 0.8$~\cite{CMS:2013hoa}. 
+%the polar angle of the particle's track with respect to the counterclockwise beam direction. The resulotion is between 2\% and 5\% elsewhere. For low-bremsstrahlung electrons, where 94\% or more of their energy is contained within a $3 \times 3$ array of crystals, the energy resolution improves to 1.5\% for $\abs{\eta} < 0.8$~\cite{Khachatryan:2015hwa}. 
 %Muons are measured in the pseudorapidity range $\abs{\eta}< 2.4$, with detection planes made using three technologies: drift tubes, cathode strip chambers, and resistive plate chambers. Matching muons to tracks measured in the silicon tracker results in a relative transverse momentum resolution for muons with $20 <\pt < 100\GeV$ of 1.3--2.0\% in the barrel and better than 6\% in the endcaps, The \pt resolution in the barrel is better than 10\% for muons with \pt up to 1\TeV~\cite{Chatrchyan:2012xi}. 
 
 
@@ -65,8 +63,8 @@ those arising in QCD processes.
 %to avoid the footprint in the calorimeter of the lepton itself from entering the sum. Charged particles close to the direction of the electrons are excluded as well, to prevent tracks originating from the conversion of photons emitted by the bremsstrahlung process from spoiling the isolation. In the case of \Tau, the particles used in the reconstruction of the lepton are excluded. The contribution of pileup photons and neutral hadrons
 %is estimated from the scalar sum of the transverse momenta of charged hadrons from pileup vertices in the isolation cone $\sum_\text{charged, pileup}$. This sum is multiplied by a factor of 0.5 that approximately corresponds to the ratio of neutral-to-charged hadron production in the hadronization process of inelastic $\Pp\Pp$ collisions. In the case of \Tau, a value of 0.46 is used, as the neutral hadron contribution is not used in the computation of $I_{\Tau}$. An $\eta$, \pt, and lepton-flavor dependent threshold on the isolation variable is applied.
 
-%In order to mitigate the effects of pileup on the reconstruction of \MET, a multivariate regression correction is used where the inputs are separated in those components coming from the primary vertex and those which are not~\cite{CMS-JME-12-002}.
-%The correction improves the \MET resolution in $\cPZ\to\Pgm\Pgm$ events by roughly a factor of two in the case where 25 additional pileup events are present.
+%In order to mitigate the effects of pileup on the reconstruction of \MPT, a multivariate regression correction is used where the inputs are separated in those components coming from the primary vertex and those which are not~\cite{CMS-JME-12-002}.
+%The correction improves the \MPT resolution in $\cPZ\to\Pgm\Pgm$ events by roughly a factor of two in the case where 25 additional pileup events are present.
 
 The $\cPZ$+jets, \wjets, $\cPqt\cPaqt$, and di-boson backgrounds to this search  are generated using the \MADGRAPH 5.1~\cite{Alwall:2011uj} generator.
 Single-top-quark and Higgs background events are generated by {\POWHEG} 1.0~\cite{Nason:2004rx,Frixione:2007vw,Alioli:2009je,Alioli:2010xd}.

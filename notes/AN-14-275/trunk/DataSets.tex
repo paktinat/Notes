@@ -4,9 +4,9 @@ To reconstruct the objects, the CMSSW\_5\_3\_7\_patch5 is used for both data and
 The data used in this analysis corresponds to 18.1 \fbinv in \hadtau\hadtau channel and 19.6 \fbinv in $l\hadtau$ channel of proton-proton collisions in the center of mass energy of $\sqrt{s}$ = 8 TeV 
 which was taken in 2012. The datasets used for $e\tau_{had}$, $\mu\tau_{had}$ and $\tau_{had}\tau_{had}$ channels, the run range and the corresponding integrated luminosities are mentioned Table ~\ref{Tab.DataSamples}.
 \begin{table}[!Hhtb]
-
 \begin{center}
 \small{
+\caption{ List of datasets analyzed by different channels.}
 \begin{tabular}{|l|c|c|}
 \hline\hline
 Dataset Name & Run--range & Luminosity(\fbinv) \\
@@ -25,20 +25,20 @@ Dataset Name & Run--range & Luminosity(\fbinv) \\
 /TauParked/Run2012C-22Jan2013-v1/AOD & 198022--203742 & 7.153 \\
 /TauParked/Run2012D-22Jan2013-v1/AOD & 203777--208686 & 7.318 \\
 \hline\hline
-
 \end{tabular}
+\label{Tab.DataSamples}
 }
 \end{center}
-\caption{
-  List of datasets analyzed by different channels.
-}
-\label{Tab.DataSamples}
 \end{table}
 
-For data the golden JSON file,{\small Cert\_190456-208686\_8TeV\_22Jan2013ReReco\_Collisions12\_JSON.txt} is used. In Table.~\ref{Tab.Triggers} shows the list of trigger paths which are used for this analysis. 
+For data the golden JSON file, {\small Cert\_190456-208686\_8TeV\_22Jan2013ReReco\_Collisions12\_JSON.txt} is used. In Table.~\ref{Tab.Triggers} shows the list of trigger paths which are used for this analysis. 
 \begin{table}[!Hhtb]
-\small{
 \begin{center}
+\small{
+\caption{
+  Trigger paths used by $e\tau_{had}$, $\mu\tau_{had}$ and $\tau_{had}\tau_{had}$ channels
+  for $2012$ data. All the paths given in the table remained unprescaled during the whole and $2012$ data--taking period.
+}
 \begin{tabular}{|l|c|c|}
 \hline\hline
 HLT Path   & L1 Seed  & Luminosity(\fbinv) \\
@@ -59,21 +59,18 @@ DoubleMediumIsoPFTau35\_Trk5\_eta2p1                          &  $^{3}$         
 DoubleMediumIsoPFTau35\_Trk1\_eta2p1                          &  $^{3}$                       & $14.2$ \\
 \hline\hline
 \end{tabular}
-\end{center}
+\label{Tab.Triggers}
 $^{1}$ SingleIsoEG18er or SingleEG20 \\
 $^{2}$ SingleIsoEG18er or SingleIsoEG20er or SingleEG22 \\
 $^{3}$ L1\_DoubleTauJet44er or L1\_DoubleJetC64 \\
 }
-\caption{
-  Trigger paths used by $e\tau_{had}$, $\mu\tau_{had}$ and $\tau_{had}\tau_{had}$ channels
-  for $2012$ data. All the paths given in the table remained unprescaled during the whole and $2012$ data--taking period.
-}
-\label{Tab.Triggers}
+\end{center}
 \end{table}
 MC samples are used for different standard model backgrounds and signals. These samples are officially generated and reconstructed by the CMS collaboration. The full list of the MC samples and their cross sections are given in Table ~\ref{Tab.MCSamples}. For most of the samples the most accurate calculation of the cross sections available in the literature (usually NLO and NNLO) are used. For Wjets and Zjets samples, the stitching method is used. In this method, events in Wjets(Zjets) tarball samples with n-jets are merged with the events in W+njets(Z+njets) samples to obtain higher statistics. The number of generated events for each W+njets samples and the corresponding luminosity is shown in Table ~\ref{Tab.Stitching}, taken from ~\cite{HiggsTauTautwiki}.
 \begin{table}[!Hhtb]
 \begin{center}
 \small{
+\caption{List of MC samples used as backgrounds produced in /Summer12-DR53X-PU\_S10\_START53\_*/AODSIM scenario.}
 \begin{tabular}{|l|c|}
 \hline\hline
 \multicolumn{2}{|c|}{MC samples } \\
@@ -179,21 +176,17 @@ WWJetsTo2L2Nu\_TuneZ2star\_8TeV-madgraph-tauola        &  $5.8$                \
 GluGluToHToTauTau\_M-125\_8TeV-powheg-pythia6          &  $1.2$                \\
 VBF\_HToTauTau\_M-125\_8TeV-powheg-pythia6             &  $0.1$                \\
 WH\_ZH\_TTH\_HToTauTau\_M-125\_8TeV-pythia6-tauola     &  $0.8\times10^{-1}$                \\
-
 \hline
 \hline
-
 \end{tabular}
-
+\label{Tab.MCSamples}
 }
 \end{center}
-
-\caption{List of MC samples used as backgrounds produced in /Summer12-DR53X-PU\_S10\_START53\_*/AODSIM scenario.}
-\label{Tab.MCSamples}
 \end{table}
 
 \begin{table}[!h]
 \begin{center}
+\caption{W+njets and Z+njets Stitched samples}
 \begin{tabular}{|c|c|c|}
 \hline\hline
 Sample    & Nevents  & IL ($pb^{-1}$) \\ \hline
@@ -211,13 +204,12 @@ DY3JetsToLL\_M-50\_TuneZ2Star\_8TeV-madgraph        & $1.1\times 10^{7}$ & $1814
 DY4JetsToLL\_M-50\_TuneZ2Star\_8TeV-madgraph        & $6.4\times 10^{7}$ & $234390.0$\\ \hline
 \hline
 \end{tabular}
-\end{center}
-\caption{W+njets and Z+njets Stitched samples}
 \label{Tab.Stitching}
+\end{center}
 \end{table}
 
 
-The investigated SUSY signal in this analysis is {\small $pp \rightarrow \chip \chim \rightarrow \tau^+ \tau^- \MET$} called {\small "TChipChimSlepSnu"} produced with \PYTHIA $6.4$ ~\cite{PYTHIA} at the level of LHE. \TAUOLA ~\cite{TAUOLA} is used to decay precisely the produced $\tau$'s, then the generated events are passed through the CMS official Fast-Sim process.
+The investigated SUSY signal in this analysis is {\small $pp \rightarrow \chip \chim \rightarrow \tau^+ \tau^- \MPT$} called {\small "TChipChimSlepSnu"} produced with \PYTHIA $6.4$ ~\cite{PYTHIA} at the level of LHE. \TAUOLA ~\cite{TAUOLA} is used to decay precisely the produced $\tau$'s, then the generated events are passed through the CMS official Fast-Sim process.
 The \textsc{Resummino}~\cite{Fuks:2012qx,Fuks:2013vua,Fuks:2013lya} results at NLO+NLL are used to calculate the signal cross sections, where 
 NLL refers to the next-to-leading-logarithmic precision.
 

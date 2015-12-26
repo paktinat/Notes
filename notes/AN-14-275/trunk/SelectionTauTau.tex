@@ -8,9 +8,9 @@ $\pt>35\GeV$, there is an offline cut on $\pt>45\GeV$ to get closer to the plate
 Both taus not only are required to pass \emph{MediumCombinedIsoDBSumPtCorr3Hits} isolation requirement, 
 but also should pass the Loose working point of the MVA3 anti-e discriminator, being \emph{LooseElectronMVA3Rejection}, 
 as well as the Loose working point of the Muon2 anti-$\mu$ discriminator, being \emph{LooseMuon2Rejection}. 
-In order to reject low mass QCD resonances, the invariant mass of two taus is required to be above 15 \GeV. Also a loose cut on \MET $>$ 30 \GeV is applied to suppress QCD events.
-\item \textbf{\MET $>$ 30 \GeV} A soft cut is applied on the missing transverse momentum to suppress the QCD multijet events. 
-The \MET related variables which are introduced later, need a minimum value for \MET to be meaningful. 
+In order to reject low mass QCD resonances, the invariant mass of two taus is required to be above 15 \GeV. Also a loose cut on \MPT $>$ 30 \GeV is applied to suppress QCD events.
+\item \textbf{\MPT $>$ 30 \GeV} A soft cut is applied on the missing transverse momentum to suppress the QCD multijet events. 
+The \MPT related variables which are introduced later, need a minimum value for \MPT to be meaningful. 
 \item \textbf{$\boldsymbol e$ and $\boldsymbol\mu$ Veto} Extra electrons and muons are vetoed. This 
 cut would help to reject backgrounds from di-boson events. Electron and muon rejection 
 are exactly the same as in $\mu\Tau$ channel which is described in Sec.~\ref{sect:leptonTauCuts}.
@@ -18,8 +18,8 @@ are exactly the same as in $\mu\Tau$ channel which is described in Sec.~\ref{sec
 In the reconstructed $\Z\rightarrow \Tau\Tau$ events passing above-mentioned set of cuts, events under the Z mass peak are fitted 
 with a Gaussian function. The mean value of the fit is found to be about 70 \GeV. Hence the invariant mass of two taus, $m_{\tau\tau}$, should be 
 either below 55 \GeV or above 85 \GeV.  
-\item \textbf{$\boldsymbol\mindphifour > $ 1} The minimum angle in the transverse plane between the \MET and the jets with \PT $>$ 40 \GeV and $|\eta| <$ 5 is asked to be greater than 1. This cut is introduced against multi-jet events.
-\item \textbf{$\boldsymbol\mttwo>40\GeV$} Since SM background events with low \MET or fake \MET arising from miss-measured reconstructed object
+\item \textbf{$\boldsymbol\mindphifour > $ 1} The minimum angle in the transverse plane between the \MPT and the jets with \PT $>$ 40 \GeV and $|\eta| <$ 5 is asked to be greater than 1. This cut is introduced against multi-jet events.
+\item \textbf{$\boldsymbol\mttwo>40\GeV$} Since SM background events with low \MPT or fake \MPT arising from miss-measured reconstructed object
  contribute to the lower values of $\mttwo$, then a moderate cut on this variable would improve data over MC ratio.  
 \end{itemize}
 After applying preselection cuts, two extra set of cuts are introduced, where each of them is sensitive to some regions of $\chione\PSGczDo$ mass plane: one aims the regions with large mass difference between charginos and neutralinos, the other one is dedicated for low mass-difference regions. It should be noted that the two signal regions ({\bf SR}) are chosen to be exclusive in order to be able to combine the statistics at the end.
@@ -46,6 +46,7 @@ The cut-flow-table can be found in table~\ref{tbl:cutflowtable}. The yields for 
 %\begin{table}
 \begin{center}
 \begin{small}
+\caption{Cut-flow-table for $\tauTau$ channel. The quoted uncertainties are only statistical. When the remaining events from MC are zero, the weight of the events is reported as the upper bound.}
 \begin{tabular}{llccccccccccc}
 \hline\hline
 &  &SUSY(180,60)&(240,40)&(380,1)&Higgs&QCD&WW&W&DY&Top&Total Bkg&Data\\
@@ -55,7 +56,7 @@ The cut-flow-table can be found in table~\ref{tbl:cutflowtable}. The yields for 
 %&Z Veo&37.80&26.28&9.21&70.50&18825.02&10.86&527.83&1333.37&88.53&20856.11$\pm$6383.93&17554\\
 %&$\mindphifour > $ 1&17.95&15.16&6.13&13.91&8426.98&3.66&192.11&276.27&13.67&8926.59$\pm$4404.31&5105\\
 %&$M_{T2} > $ 40&9.50&11.66&5.60&0.89&135.29&1.11&31.93&13.17&5.26&187.65$\pm$135.47&131\\
-\multirow{5}{*}{Pre-Selection}&\MET, 2 $\tau_h$ Selection& 36.09 &30.92& 11.68 &45.55&5671.12&10.54&375.40&994.02&96.36&7192.98$\pm$3411.96&6991.00\\
+\multirow{5}{*}{Pre-Selection}&\MPT, 2 $\tau_h$ Selection& 36.09 &30.92& 11.68 &45.55&5671.12&10.54&375.40&994.02&96.36&7192.98$\pm$3411.96&6991.00\\
 &$e$ and $\mu$ Veto& 33.05 &27.97& 10.19 &41.37&2861.59&8.57&341.25&908.39&79.38&4240.56$\pm$1962.04&6612.00\\
 &Z Veo& 32.27 &26.31& 9.50 &31.30&2734.04&8.26&328.54&573.64&73.58&3749.36$\pm$1957.86&6109.00\\
 &$\mindphifour > $ 1& 15.50 &15.75& 6.38 &4.50&277.39&2.62&118.09&68.51&11.99&483.10$\pm$197.08&1544.00\\
@@ -72,7 +73,6 @@ The cut-flow-table can be found in table~\ref{tbl:cutflowtable}. The yields for 
 &$\Sigma M_T^{\tau_i} > $ 250& 2.36 &3.60& 1.10 &0.07&0.00&0.15&0.43&0.81&0.53&1.99$\pm$0.87&2.00\\
 \hline\hline
 \end{tabular}
-\caption{Cut-flow-table for $\tauTau$ channel. The quoted uncertainties are only statistical. When the remaining events from MC are zero, the weight of the events is reported as the upper bound.}
 \label{tbl:cutflowtable}
 \end{small}
 \end{center}

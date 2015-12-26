@@ -1,0 +1,177 @@
+% Customizable fields and text areas start with % >> below.
+% Lines starting with the comment character (%) are normally removed before release outside the collaboration, but not those comments ending lines
+
+% svn info. These are modified by svn at checkout time.
+% The last version of these macros found before the maketitle will be the one on the front page,
+% so only the main file is tracked.
+% Do not edit by hand!
+\RCS$Revision: 303178 $
+\RCS$HeadURL: svn+ssh://svn.cern.ch/reps/tdr2/notes/AN-15-114/trunk/AN-15-114.tex $
+\RCS$Id: AN-15-114.tex 303178 2015-09-09 07:46:54Z chwalek $
+%%%%%%%%%%%%% local definitions %%%%%%%%%%%%%%%%%%%%%
+% This allows for switching between one column and two column (cms@external) layouts
+% The widths should  be modified for your particular figures. You'll need additional copies if you have more than one standard figure size.
+\input{ptdr-definitions}
+
+
+
+  \newcommand{\costhetalj}{\cosThetaPol}
+  %\renewcommand{\mu}{\ensuremath{\mu}\xspace}
+  \newcommand{\e}{\ensuremath{\mathrm{e}}\xspace}
+  \newcommand{\topMass}{\mt}
+%  \newcommand{\mtw}{\ensuremath{m_{Tw}}\xspace}
+  \newcommand{\invpb}{\ensuremath{pb^{-1}}\xspace}
+
+
+  \input{mycommands.tex}
+%  \input{allCommands.tex}
+
+
+
+\newlength\cmsFigWidth
+\ifthenelse{\boolean{cms@external}}{\setlength\cmsFigWidth{0.85\columnwidth}}{\setlength\cmsFigWidth{0.4\textwidth}}
+\ifthenelse{\boolean{cms@external}}{\providecommand{\cmsLeft}{top}}{\providecommand{\cmsLeft}{left}}
+\ifthenelse{\boolean{cms@external}}{\providecommand{\cmsRight}{bottom}}{\providecommand{\cmsRight}{right}}
+%%%%%%%%%%%%%%%  Title page %%%%%%%%%%%%%%%%%%%%%%%%
+\cmsNoteHeader{AN-15-114} % This is over-written in the CMS environment: useful as preprint no. for export versions
+% >> Title: please make sure that the non-TeX equivalent is in PDFTitle below
+\title{Measurement of the single top t-channel inclusive cross section at 13 TeV}
+
+
+% >> Authors
+%Author is always "The CMS Collaboration" for PAS and papers, so author, etc, below will be ignored in those cases
+%For multiple affiliations, create an address entry for the combination
+%To mark authors as primary, use the \author* form
+\address[louvain]{Universit\'e Catholique de Louvain, Center for Particle Physics and Phenomenology, Louvain-la-Neuve, Belgium \\ Fonds National de Recherche Scientifique, Belgium}
+\address[naples]{Istituto Nazionale di Fisica Nucleare sez. Napoli, Italy}
+\address[ipm]{School of Particles and Accelerator Institute for Research in Fundamental Sciences, Teheran, Iran}
+\address[kit]{Institut f\"ur Experimentelle Kernphysik, Karlsruher Institut f\"ur Technologie, Germany}
+\address[tata]{Tata Institute of Fundamental Research, Mumbai, India}
+
+\author[louvain]{A.~Jafari}
+\author[naples]{A.~O.~M.~Iorio}
+\author[louvain]{A.~Giammanco}
+\author[louvain]{A.~Popov}
+\author[louvain]{G.~Krintiras}
+\author[ipm]{H.~Bakhshiansohi}
+\author[ipm]{M.~Zeinali}
+\author[louvain]{M.~Komm}
+\author[kit]{N.~Faltermann}
+\author[ipm]{S.~Paktinat Mehdiabadi}
+\author[tata]{S.~Mitra}
+\author[tata]{T.~Aziz}
+\author[kit]{T.~Chwalek}
+\author[kit]{Th.~M\"uller}
+
+
+% >> Date
+% The date is in yyyy/mm/dd format. Today has been
+% redefined to match, but if the date needs to be fixed, please write it in this fashion.
+\date{\today}
+
+\abstract{
+We present the results of the search for $t$-channel single top quark signals in the very first LHC proton proton collisions at 13\,\TeV with the CMS detector. The leptonic decay channel with a muon in the final state is considered. After a selection optimized for the $t$-channel single top quark production, the pseudorapidity distribution of the recoil jet is exploited for discrimination between signal and background processes. The background from $\qcd$ multijet production is modeled using data driven techniques. The significance of the signal contribution in the dataset corresponding to an integrated luminosity of $\mylumi$ is about 3 standard deviations. A measurement of the inclusive cross section of $t$-channel single top quark production based on a template fit to the reconstructed pseudorapidity distribution of the  recoil jet yields $\xsecRes$. The magnitude of the CKM matrix element $\vtb$ is also calculated, yielding $\vtbRes$.
+}
+
+\hypersetup{%
+pdfauthor={Alberto Orso Maria Iorio },%
+pdftitle={Measurement of the single top quark t-channel cross section at 13 TeV.},%
+pdfsubject={CMS},%
+pdfkeywords={CMS, physics, software, computing}}
+
+\maketitle %maketitle comes after all the front information has been supplied
+
+
+\section{Introduction}
+\label{sec:introduction}
+\input{introduction}
+
+\section{Samples}
+\label{sec:samples}
+\input{samples}
+
+\section{Selection and reconstruction}
+\label{sec:selection}
+\input{selection}
+%\clearpage
+
+\section{Trigger and muon efficiencies}
+\input{muonEff}
+\clearpage
+
+
+\section{Control plots}
+\label{sec:controlplots}
+\input{controlplots}
+\clearpage
+
+%\section{W+light flavour jets control sample}
+%\label{sec:2J0T}
+%\label{sec:WJets}
+%\label{sec:wjets}
+%\input{wjets}
+%
+%\section{\ttbar\ control samples}
+%\label{sec:3JNT}
+%\label{sec:TTBar}
+%\label{sec:ttbar}
+%\input{ttbar}
+
+\section{Modelling and estimation of the QCD background}
+\label{sec:QCD}
+\label{sec:qcd}
+\input{qcd}
+
+%\section{2 Jets 1 Tag sample}
+%\label{sec:2J1T}
+%\label{sec:2j1t}
+%input{2J1T}
+
+\section{Modelling of the W+heavy flavor background}
+\label{sec:WHFExtraction}
+\label{sec:WHF}
+\input{whfextraction}
+
+\section{Cross section extraction}
+\label{sec:xsection}
+\input{xsection}
+
+\section{Systematic uncertainties}
+\label{sec:syst}
+\label{sec:systs}
+\label{sec:systematics}
+\input{systematics}
+
+\section{Results}
+\label{sec:results}
+\input{results}
+
+\section*{Conclusions}
+\label{sec:conclusions}
+\input{conclusion}
+
+%\input{TTbar}
+
+% >> acknowledgements (for journal papers)
+% Please include the latest version from https://twiki.cern.ch/twiki/bin/viewauth/CMS/Internal/PubAcknow.
+%\section*{Acknowledgements}
+% ack-text
+
+%% **DO NOT REMOVE BIBLIOGRAPHY**
+\bibliography{auto_generated}   % will be created by the tdr script.
+
+% examples of appendices. **DO NOT PUT \end{document} at the end
+}
+\clearpage
+\appendix
+\input{forwardregion}
+\input{scale_unc}
+\clearpage
+\input{METFit_2J0T}
+\clearpage
+\input{qcd_yield_xchecks}
+\clearpage
+
+%If absolutely necessary, symbol definitions may
+%be over-ridden using the \verb|\renewcommand| command. If you don't want to over-ride the default version of a command but provide it for use outside the normal tdr system, please use the \verb|\providecommand| command.
+

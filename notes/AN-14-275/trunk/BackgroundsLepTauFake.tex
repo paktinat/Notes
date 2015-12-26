@@ -15,6 +15,7 @@ $p$ ($f$) is the prompt (fake) rate, the probability that a loosely selected pro
 tight ($T$) and non-tight ($NT$), so one can write:
 \begin{equation}
    F * (f - p) = ((1 - p) * L - NT)
+\label{eq:F}
 \end{equation}
 $f$ * $F$ is the contamination of the fake $\hadtau$'s in the signal region. 
 
@@ -43,7 +44,7 @@ similar as possible to the signal region.
 %leading lepton is forced to 
 %be 3 \GeV higher than the online cut resulting to \pt $>$ 27 \GeV for muon.% and \pt $>$ 30 \GeV for electron.
 %The rejections can reduce the contribution of the VV, DY and $\ttbar$ events. To further suppress the $\ttbar$ contamination, the b-veto 
-%similar to the signal selection is applied. The \MET is asked to be greater than 30 GeV, similar to the preselections. 
+%similar to the signal selection is applied. The \MPT is asked to be greater than 30 GeV, similar to the preselections. 
 All preselection cuts are applied exactly same as the signal selection,  except the lepton and \Tau are forced to be same sign. 
 The $\hadtau$ isolation is {\it Loose} for the loosely selected $\hadtau$'s and {\it Tight} for the tightly selected $\hadtau$'s.
 The ratio of the  categories determines the fake rate. 
@@ -54,16 +55,17 @@ The fake rate can be measured in the bins of $\hadtau$ \pt and $\eta$, but it is
 so we use a single value for the fake rate which is 0.4464 $\pm$ 0.0062. The composition of the loosely selected events is shown in table \ref{tbl:Composition}. 
 \begin{table}[!Hhtb]
 \begin{center}
-\begin{tabular}{ccccccccc}
+\caption{The composition of the selected events in the \muTau channel to find the fake rate.}
+\begin{tabular}{lccccccccc}
 \hline
 \hline
-  SUSY(380,1) & QCD &    W    & ZX     &    Top    &  WW  & Higgs &                MC & Data \\
+\Tau Selection & SUSY(380,1) & QCD &    W    & ZX     &    Top    &  WW  & Higgs &                MC & Data \\
 \hline
- 0.08         & 0.0 & 5601.78 & 329.69 &   119.81  & 9.86 & 1.24  & 6062.37 $\pm$ 106.09 & 7035\\
+Loose          & 0.08        & 0.0 & 5601.78 & 329.69 &   119.81  & 9.86 & 1.24  & 6062.37 $\pm$ 106.09 & 7035\\
+Tight          & 0.0         & 0.0 & 2258.87 & 165.50 &   51.36   & 5.57 & 1.00  & 2482.30 $\pm$ 67.61  & 3105\\
 \hline
 \hline
 \end{tabular}
-\caption{The composition of the loosely selected events in the $\mu\hadtau$ channel to find the fake rate.}
 \label{tbl:Composition}
 \end{center}
 \end{table}
@@ -77,92 +79,73 @@ is relaxed from {\it Tight} to {\it Loose}. Only the events in which a generated
 closer than $\Delta R = 0.1$ to the generated $\tau$, it is selected. Among these $\Tau$'s, the prompt rate is defined as the fraction of the loose $\hadtau$'s 
 which are tight. The prompt rate can be measured in the bins of \mttwo, but the statistics in the high \mttwo region which is our favorite 
 region is so low that we can not conclude anything about the shape of the prompt rate in this region, so we choose it as a constant value
-0.77 $\pm$ 0.0032 in the whole \mttwo range.
+0.7659 $\pm$ 0.0032 in the whole \mttwo range.
 
 \begin{figure}[!Hhtb]
 \centering
 \includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateMuTau/Estimation_pfWJets_ExtraLepExcl_SameSignWeightedHiggs_tauMTApplied.png}
 \includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateEleTau/closure_eletau_taumt200.png}
-%\includegraphics[width=0.45\textwidth,keepaspectratio=true]{FakeRateMuTau/Estimation_pfWJets_ExtraLepExcl_SameSignWeightedHiggs.png}
 \caption{MC truth (green) compared to the result of the method in \muTau (left) and \eTau (right) channels. \wjets events with a fake \Tau are used for the closure.}
 \label{fig:LepTauClusure}
 \end{figure}
-Figure \ref{fig:LepTauClusure} shows the results when the method is used to estimate the fake contamination of the \wjets events that pass the selection. 
-The fake rate is evaluated in the same sample with similar procedure as the data. The measured fake rate is very close to
-the value obtained in data and is 0.4109 $\pm$  0.0091. 
-To calculate the fake rate, the MC truth are used to select the events with a fake \Tau 
-and a prompt muon. The method is applied on the same events with a loose \Tau selection and compared to the \wjets events with at least 
+Figure \ref{fig:LepTauClusure} shows the results when the method is used to estimate the fake contamination of the \wjets events 
+that pass the selection. 
+The fake rate is evaluated in the same sample with similar procedure as the data, but  
+also the MC truth are used to select the events with a fake \Tau and a prompt muon. 
+The measured fake rate is very close to the value obtained in data and is 0.4109 $\pm$  0.0091. 
+The method is applied on the same events with a loose \Tau selection and compared to the \wjets events with at least 
 a fake \Tau. The requirement of prompt muon is removed here.
-The fake rate measured in the same sign pairs is systematically less than value 
+The fake rate measured in the same sign pairs is systematically less than the value 
 measured in the opposite sign pairs. The ratio is found to be 1.144 $\pm$ 0.019. The fake rate from data and \wjets are corrected by this ratio.
 As a cross check, the fake rate was measured in a different region when all cuts are same as signal selection, 
-except the cut on \MET which is reversed to \MET $<$ 30 \GeV. A similar value is measured for the fake rate. 
+except the cut on \MPT which is reversed to \MPT $<$ 30 \GeV. A similar value is measured for the fake rate. 
 For both fake rate and prompt rate, 5\% relative systematic uncertainty is assigned to the central values, although 
 by varying the selections, no significance change in the values is seen.
-%To have a handle against the signal contamination when later the method is applied 
-%on data, in the loosely selected events, the cut on \tauMT is also removed. The final estimation from the method is corrected by the efficiency 
-%of \tauMT $>$ 200 GeV cut which is read from \wjets MC (0.061 $\pm$ 0.026). 
 It can be seen that the estimation is close to the MC truth within the uncertainties.
 The reported uncertainties for MC only contain the statistical uncertainties on the used numbers, but the estimations include 
 the systematic uncertainties due to prompt and fake rate also. 
 \begin{table}[!Hhtb]
 \begin{center}
+\caption{MC truth and estimation from the fake rate method in \muTau channel. \wjets events with a fake \Tau are used for the closure.}
 \begin{tabular}{lccc}
 \hline
 \hline
    \mttwo range    &  \wjets& Estimation & ratio\\
 \hline
 \hline
-%full selection &   135.56 $\pm$ 13.81 & 9.66  $\pm$ 3.98  & 0.07 $\pm$ 0.03\\
-%$20-40$        &   27.04 $\pm$ 6.43   & 16.14 $\pm$ 6.64  & 0.60 $\pm$ 0.28\\
-%$40-50$        &   9.91 $\pm$ 2.26    & 10.46 $\pm$ 2.35  & 1.06 $\pm$ 0.34\\
-%$50-70$        &   32.53 $\pm$ 7.33   & 37.48 $\pm$ 6.87  & 1.15 $\pm$ 0.33\\
-%$70-90$        &   20.45 $\pm$ 5.33   & 21.69 $\pm$ 5.01  & 1.06 $\pm$ 0.37\\
-%$90-300$       &   0.79 $\pm$ 0.47    & 1.71  $\pm$ 1.03  & 2.16 $\pm$ 1.83\\
-
 $40.00-50.00$  & 9.91  $\pm$ 2.26 & 32.87 $\pm$ 8.45  & 3.32 $\pm$ 1.14 \\ 
 $50.00-70.00$  & 32.53 $\pm$ 7.33 & 55.45 $\pm$ 11.72 & 1.70 $\pm$ 0.53 \\ 
 $70.00-90.00$  & 20.45 $\pm$ 5.33 & 10.14 $\pm$ 5.17  & 0.49 $\pm$ 0.28\\
 $90.00-300.00$ & 0.79  $\pm$ 0.47 &  0.99 $\pm$ 1.06  & 1.25 $\pm$ 1.53\\
-
 \hline
 \hline
 \end{tabular}
-\caption{MC truth and estimation from the fake rate method in \muTau channel. \wjets events with a fake \Tau are used for the closure.}
 \label{tbl:LepTauEstimationClosure}
 \end{center}
 \end{table}
 
 \begin{table}[!Hhtb]
 \begin{center}
+\caption{MC truth and estimation from the fake rate method in \eTau channel. \wjets events with a fake \Tau are used for the closure.}
 \begin{tabular}{lccc}
 \hline
 \hline
    \mttwo range    &  \wjets& Estimation & ratio\\
 \hline
 \hline
-%full selection &   135.56 $\pm$ 13.81 & 9.66  $\pm$ 3.98  & 0.07 $\pm$ 0.03\\
-%$20-40$        &   27.04 $\pm$ 6.43   & 16.14 $\pm$ 6.64  & 0.60 $\pm$ 0.28\\
-%$40-50$        &  6.34  $\pm$ 2.53 &   6.26 $\pm$ 1.33 &  0.99 $\pm$ 0.45 \\
-%$50-70$        &  22.59 $\pm$ 5.43 &  19.62 $\pm$ 3.31 &  0.87 $\pm$ 0.26 \\
-%$70-90$        &  10.91 $\pm$ 3.00 &   8.65 $\pm$ 2.01 &  0.79 $\pm$ 0.29 \\
-%$90-300$       &  1.29  $\pm$ 0.62 &   1.57 $\pm$ 0.82 &  1.22 $\pm$ 0.87 \\
-
-% 30-40 & 23.88 $\pm$ 5.05 & 40.56 $\pm$ 11.81 & 1.70 $\pm$ 0.61 \\
   40-50 &  6.34 $\pm$ 2.53 & 42.60 $\pm$ 10.80 & 6.72 $\pm$ 3.18 \\
   50-70 & 22.59 $\pm$ 5.43 & 35.43 $\pm$ 10.23 & 1.57 $\pm$ 0.59 \\
   70-90 & 10.91 $\pm$ 3.00 &  17.17 $\pm$ 7.45 & 1.57 $\pm$ 0.81 \\
  90-400 &  1.29 $\pm$ 0.62 &   0.54 $\pm$ 0.73 & 0.42 $\pm$ 0.60 \\
-
-
 \hline
 \hline
 \end{tabular}
-\caption{MC truth and estimation from the fake rate method in \eTau channel. \wjets events with a fake \Tau are used for the closure.}
 \label{tbl:EleTauEstimationClosure}
 \end{center}
 \end{table}
-Table \ref{tbl:LepTauEstimationClosure} compares the MC truth and the estimation from the method in different bins of \mttwo. Applying the method on data and comparing with MC truth is 
+Table \ref{tbl:LepTauEstimationClosure} and \ref{tbl:EleTauEstimationClosure} compare the MC truth and the estimation of \wjets events 
+from the method in different bins of \mttwo for \muTau and \eTau chhanels, respectively. 
+Applying the method on data and comparing with MC truth is 
 shown in figure \ref{fig:LepTauEstimationData}.
 \begin{figure}[!Hhtb]
 \centering
@@ -175,20 +158,12 @@ To select the MC events, all the selection cuts, except the \mttwo cut are appli
 The MC truth are used to find the events with at least a fake \Tau. 
 \begin{table}[!Hhtb]
 \begin{center}
+\caption{Numbers for figure \ref{fig:LepTauEstimationData} in \muTau channel.}
 \begin{tabular}{lcccccccccc}
 \hline
 \hline
    \mttwo range &  QCD     &  ZX     &  W     & Top      & WW      & Higgs     & MC                 &  Estimation &ratio        &      \\   \hline
 \hline
-% full selection &    0.53  & 1.10 & 135.56 & 20.50 & 2.70 & 0.35 & 160.74 $\pm$ 18.19 & 124.04 & 0.77\\
-%$20-40$ &      0.00  & 0.03 & 27.04  & 1.86  & 0.21 & 0.08 & 29.23 $\pm$ 0.02 & 20.57 & 0.70\\
-%$40-50$ &      0.00  & 0.02 & 9.91   & 0.57  & 0.28 & 0.02 & 10.79 $\pm$ 2.30 & 12.90 $\pm$  2.86 & 1.20$\pm$ 0.37\\
-%$50-70$ &      0.00  & 0.05 & 32.53  & 15.35 & 0.55 & 0.07 & 48.56 $\pm$ 13.77 & 44.08  $\pm$ 7.93 & 0.91$\pm$ 0.30\\
-%$70-90$ &      0.00  & 0.00 & 20.45  & 0.63  & 0.35 & 0.03 & 21.46 $\pm$ 5.37 & 28.31  $\pm$ 6.24 & 1.32$\pm$ 0.44\\
-%$90-300$ &      0.00 & 0.03 & 0.79   & 0.00  & 0.15 & 0.05 &  1.02 $\pm$ 0.48 & 1.03  $\pm$  0.62 & 1.01$\pm$ 0.77\\
-
-
-
 $40-50$  & 0 & 0.02 & 9.91  & 0.57  & 0.28 & 0.02  & 10.79 $\pm$ 2.30  & 18.06 $\pm$ 6.62 & 1.67 $\pm$ 0.71 \\
 $50-70$  & 0 & 0.05 & 32.53 & 15.35 & 0.55 & 0.07  & 48.56 $\pm$ 13.77 & 26.12 $\pm$ 8.63 & 0.54 $\pm$ 0.23 \\ 
 $70-90$  & 0 & 0    & 20.45 & 0.63  & 0.35 & 0.03  & 21.46 $\pm$ 5.37  & 14.58 $\pm$ 6.24 & 0.68 $\pm$ 0.34 \\
@@ -197,24 +172,18 @@ $90-300$ & 0 & 0.03 & 0.79  & 0     & 0.15 & 0.05  & 1.02  $\pm$ 0.48  & 6.83  $
 \hline
 \hline
 \end{tabular}
-\caption{Numbers for figure \ref{fig:LepTauEstimationData} in \muTau channel.}
 \label{tbl:LepTauEstimationData}
 \end{center}
 \end{table}
 
 \begin{table}[!Hhtb]
 \begin{center}
+\caption{Numbers for figure \ref{fig:LepTauEstimationData} in \eTau channel.}
 \begin{tabular}{lcccccccccc}
 \hline
 \hline
    \mttwo range &  QCD     &  ZX     &  W     & Top      & WW      & Higgs     & MC                 &  Estimation &ratio        \\   \hline
 \hline
-%$40-50$ & 0.00 & 0.00 & 6.34  & 0.00 & 0.11 & 0.02 & 6.48 $\pm$ 2.54 & 7.78$\pm$1.64&1.20 $\pm$ 0.53 \\
-%$50-70$ & 0.00 & 0.01 & 22.59 & 1.84 & 0.00 & 0.04 & 24.48 $\pm$ 5.56 & 23.73$\pm$3.97&0.97 $\pm$ 0.27 \\
-%$70-90$ & 0.00 & 0.01 & 10.91 & 0.00 & 0.06 & 0.02 & 11.00 $\pm$ 3.00 & 15.02$\pm$3.18&1.37 $\pm$ 0.47 \\ 
-%$90-400$ & 0.0 & 0.19 & 1.29  & 0.00 & 0.02 & 0.07 & 1.57 $\pm$ 0.62 & 2.32$\pm$1.08&1.48 $\pm$ 0.91 \\ 
-
-%  30-40 & 0.00 & 0.00 & 23.88 & 0.22 & 0.25 & 0.08 & 24.42 $\pm$ 5.06 & 40.97 $\pm$ 9.88 & 1.68 $\pm$ 0.53 \\
  $40-50$ & 0.00 & 0.00 &  6.34 & 0.00 & 0.11 & 0.02 &  6.48 $\pm$ 2.54 &  2.60 $\pm$ 3.70 & 0.40 $\pm$ 0.59 \\
  $50-70$ & 0.00 & 0.01 & 22.59 & 1.84 & 0.00 & 0.04 & 24.48 $\pm$ 5.56 & 28.54 $\pm$ 8.57 & 1.17 $\pm$ 0.44 \\
  $70-90$ & 0.00 & 0.01 & 10.91 & 0.00 & 0.06 & 0.02 & 11.00 $\pm$ 3.00 &  8.36 $\pm$ 5.10 & 0.76 $\pm$ 0.51 \\
@@ -223,11 +192,12 @@ $90-300$ & 0.00 & 0.19 &  1.29 & 0.00 & 0.02 & 0.07 &  1.57 $\pm$ 0.62 &  2.73 $
 \hline
 \hline
 \end{tabular}
-\caption{Numbers for figure \ref{fig:LepTauEstimationData} in \eTau channel.}
 \label{tbl:EleTauEstimationData}
 \end{center}
 \end{table}
-Table \ref{tbl:LepTauEstimationData} compares the MC truth and the estimation from the method in different bins of \mttwo.
+Table \ref{tbl:LepTauEstimationData} and \ref{tbl:EleTauEstimationData} compare the MC truth and the estimation from the 
+method in different bins of \mttwo for \muTau and \eTau chhanels, respectively. The numbers of the tighly selected events $T$ and 
+non-tight events $NT$, used in equation \ref{eq:F} are 5(4) and 6(3) for \muTau(\eTau) in data.
 
 The effect of varying the fake rate and prompt rate values within their statistical uncertainties has also been studied. 
 It has been found in the order of a few percents which is negligible comparing to the statistical uncertainties due to lack of the statistics in the side bands.% and the systematic uncertainty due to \tauMT efficiency.
@@ -236,6 +206,8 @@ and systematical uncertainties are reported separately. Since the fake rate and 
 $\ell\Tau$ channels, the total systematic uncertainties are considered fully correlated between the two channels.
 \begin{table}[!Hhtb]
 \begin{center}
+\caption{The final estimation of the fake \Tau contribution in the signal region of the $\ell\Tau$ channels. The total systematic is the
+quadratic sum of the fractional systematics. All uncertainties are relative.}
 \begin{tabular}{lccccccccc}
 \hline
 \hline
@@ -245,8 +217,6 @@ Channel    & Total Fake & rel. Stat &  $f$ Sys & $p$ Sys & Total Sys \\\hline\hl
 \hline
 \hline
 \end{tabular}
-\caption{The final estimation of the fake \Tau contribution in the signal region of the $\ell\Tau$ channels. The total systematic is the
-quadratic sum of the fractional systematics. All uncertainties are relative.}
 \label{Tab.FakeEstimation}
 \end{center}
 \end{table}

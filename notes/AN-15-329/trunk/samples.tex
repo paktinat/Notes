@@ -1,0 +1,99 @@
+This study is based on an integrated luminosity of \mylumi, known within \lumiunc %~\cite{lumi}. 
+The list of data samples used in this study is summarized in Table~\ref{tab:data}. We make use of the Single Muon (SingleMu) Primary Dataset ~\cite{sd}. In each run we excluded the luminosity sections flagged as bad according to the validations performed by each Detector Performance Group (DPG) and Physics Object Group (POG). Technically, we implement this by the use of a so called JSON file~\cite{json}; for the present note the full run range considered in this analysis (runs \runrange) was covered with the files in Ref.~\cite{json2}.
+
+Two different setups are used to generate simulated single top $t$-channel events: a\MCATNLO ~\cite{amcatnlo}, used as default generator, and \POWHEG~1.0~\cite{Re:2010bp,Alioli:2010xd,Alioli:2009je,Frixione:2007vw}, interfaced in either case to {\PYTHIA~8.180} ~\cite{Sjostrand:2006za} for parton showering. 
+A similar setup with {\MADGRAPH} interfaced to \PYTHIA is used for the simulation of top-antitop pair production.
+The single top quark production in association with a W boson is simulated with \POWHEG, while vector bosons produced in association with jets (\vjets), and double vector boson (diboson) production are amongst the backgrounds taken into consideration and have been
+simulated with {\MADGRAPH}~\cite{madgraph} interfaced to \PYTHIA~8.180 for parton showering.
+The \PYTHIA generator is used to simulate \QCD samples enriched with isolated muons or electrons.
+The value of the top quark mass used in all simulated samples is $m_{\cPqt}=$172.5\GeV.
+
+
+
+\begin{sidewaystable}[h!]
+\caption{Data samples.~\cite{sd}.}
+\label{tab:data}
+\centering
+\begin{tabular}{ |l|c|c|c| }
+  \hline
+  Dataset & Run range &  Integrated luminosity & tag used \\
+  \hline
+  \hline
+\small{/SingleMuon/Run2015B-17Jul2015-v1/MINIAOD} & 251162-251562 & \multirow{ 2}{*}{$\mylumi$} & GT \\
+\small{/SingleMuon/Run2015B-PromptReco-v1/MINIAOD} & 251585-251883 &  & GT \\
+%\small{/SingleMuon/Run2015C-PromptReco-v1/MINIAOD} & 254833 & $\mylumi\,\invfb$ & GT \\
+  \hline
+\end{tabular}
+\vspace{1cm}
+\caption{Monte Carlo datasets used in this analysis. 
+The samples are generated either inclusively or with a final state restricted to the leptonic mode,
+including electrons, muons, and taus. Where no references are given, the cross sections come from 
+the generator itself. For the samples restricted to specific decay channels the branching ratio (BR) is included in the cross section value quoted. The "RunIISpring15DR74-Asympt50ns\_MCRUN2\_74\_V9A" part in the name is the same for all samples and has been replaced by "...".} 
+\label{tab:samples}
+\centering
+\begin{tabular}{|c||c|c|}
+                        \hline
+    			Process        & $\sigma(\cdot BR)[{\rm pb}]$  & Dataset name \\
+    			\hline \hline
+    			single top and antitop $(t)$ & 70.3 (leptons only) (NLO)~\cite{tchanxsec}  & \small{/ST\_t-channel\_4f\_leptonDecays\_13TeV-amcatnlo-pythia8\_TuneCUETP8M1/...-v1/}\\
+    			single top $(\rm tW)$ &35.6 (NNLL)~\cite{Kidonakis:2012db} & \small{/ST\_tW\_top\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1/...-v1}\\
+    			single anti-top $(\rm tW)$ &35.6 (NNLL)~\cite{Kidonakis:2012db} & \small{/ST\_tW\_antitop\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1/...-v2}\\
+			\hline
+    			$\ttbar$       & 831.76 (NLO)~\cite{tchanxsec} & \small{/TT\_TuneCUETP8M1\_13TeV-powheg-pythia8/...-v4/} \\ 
+                ${\rm W}(\to \ell\nu)+$\,jets      &     61,526.7 (leptons only) (NLO) & \small{/WJetsToLNu\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8/...-v1/}\\
+                ${\rm Z}/\gamma(\to \ell\ell)+$\,jets  (*)    &     6025.2 (NLO) & \small{/DYJetsToLL\_M-50\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8/...-v2}\\
+			$\mu$-enriched QCD (**)                &240,680  (LO) & \small{/QCD\_Pt-20toInf\_MuEnrichedPt15\_TuneCUETP8M1\_13TeV\_pythia8/...-v2/}\\
+			\hline
+    		  	\end{tabular}
+
+			\vskip 2ex
+
+			\begin{tabular}{ll}
+%			(*)  & NLO cross section for $W+Jets$ = 36257.2   & \\		
+			(*)   & $m_{ll} > 50$ GeV \\
+			(**) & $\hat{p}_T > 20$ GeV, $p^{\mu}_T > 15$ GeV \\
+			\end{tabular}
+			%\vskip 2ex
+			%\begin{tabular}{ |c||c| }
+    			%\hline
+    			%Process        & $\sigma[pb]$ \\
+    			%\hline \hline
+			%$W$ total      & 31,314 (NNLO) \\
+			%$Wb\bar b$     & 35.3 (LO) \\
+			%$Wc\bar c$     & FIXME (LO) \\
+			%$Z$ total      & 3,048 (NNLO) \\
+			%$Zb\bar b$     & 67.3 (LO) \\
+			%$Zc\bar c$     & FIXME (LO) \\
+			%$Wc$           & 3,628 (NLO) \\
+			%\hline
+    		  	%\end{tabular}
+		%\end{center}
+			\end{sidewaystable}
+
+  
+   
+\clearpage
+
+Signal simulated datasets are normalized to the NLO cross section of:
+
+\begin{eqnarray}
+\label{eq:sigmatot}
+ \sigmattop &=&  \xsectheotop \xsectheotopscale\,\textrm{(scale)} \xsectheotoppdf \,\textrm{(PDF)}\nonumber\\
+ \sigmatantitop &=&  \xsectheoantitop \xsectheoantitopscale\, \textrm{(scale)} \xsectheoantitoppdf\,\textrm{(PDF)}\nonumber\\
+ \sigmat &=&  \xsectheo \xsectheoscale\, \textrm{(scale)} \xsectheopdf \,\textrm{(PDF)}
+\end{eqnarray}
+
+evaluated in the five-flavor scheme within {\sc Hathor}\,v2.1~\cite{HATOR,tchanxsec}. 
+
+
+Table~\ref{tab:samples} summarizes the Monte-Carlo samples for signal and backgrounds, and provides the number of events and cross section for each sample. 
+All the cross sections have been taken from the references listed in Table~\ref{tab:samples} or, when no reference is given, from the generator itself.
+The simulation of the full detector response is based on GEANT~4~\cite{geant}, and assumes realistic alignment and calibration, tuned on data.
+
+
+
+
+%{\bf FIXME: INSERT PILEUP TREATMENT}
+        
+
+%This analysis is performed within the software releases \verb+CMSSW_7_2_X+, \verb+CMSSW_7_3_X+ and \verb+CMSSW_7_4_X+, while it uses the Physics Analysis Toolkit (PAT)~\cite{pat} as a starting point and Particle Flow algorithms for reconstruction of physics objects. The recommended sequence \verb+PF2PAT+ is run in order to obtain the standard objects in the selection. When running on data, Global Tag \verb+74X_dataRun2_Prompt_v0+ is used, when running on simulation, \verb+MCRUN2_74_V9A+ is used.
