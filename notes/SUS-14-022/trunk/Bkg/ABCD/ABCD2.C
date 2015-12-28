@@ -29,11 +29,11 @@ void ABCD2()
    arrow->SetLineWidth(3);
    arrow->SetAngle(54);
    arrow->Draw();
-   TLatex *   tex = new TLatex(0.8306358,0.1412826,"M_{T2}\\;or\\;\\Sigma M_T^{\\tau_i}");
+   TLatex *   tex = new TLatex(0.8306358,0.1412826,"M_{T2}\\;or\\;\\Sigma m_T^{\\tau_i}");
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-   tex = new TLatex(0.05317919,0.7715431,"Charge\\;and \\; \\tau Isolation");
+   tex = new TLatex(0.05317919,0.7715431,"Charge\\;and \\; \\tau\\; Isolation");
    tex->SetTextAlign(22);
    tex->SetTextSize(0.04);
    tex->SetTextAngle(90);
