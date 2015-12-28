@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: MT2_ratioc_ratio/
 //=========  (Sat Dec  5 11:26:55 2015) by ROOT version5.34/03
-   TCanvas *MT2_ratioc_ratio = new TCanvas("MT2_ratioc_ratio", "",161,52,600,715);
+   TCanvas *MT2_ratioc_ratio = new TCanvas("MT2_ratioc_ratio", "",1,52,600,600);
    gStyle->SetOptFit(1);
    MT2_ratioc_ratio->Range(0,0,1,1);
    MT2_ratioc_ratio->SetFillColor(0);
@@ -39,12 +39,12 @@
    THStack *MT2 = new THStack();
    MT2->SetName("MT2");
    MT2->SetTitle("");
-   MT2->SetMinimum(0.02);
-   MT2->SetMaximum(320);
+   MT2->SetMinimum(0.1);
+   MT2->SetMaximum(1000);
    
    TH1F *MT2_stack_1_stack_1_stack_1_stack_1 = new TH1F("MT2_stack_1_stack_1_stack_1_stack_1","",4,100,300);
-   MT2_stack_1_stack_1_stack_1_stack_1->SetMinimum(0.006447329);
-   MT2_stack_1_stack_1_stack_1_stack_1->SetMaximum(589.0637);
+   MT2_stack_1_stack_1_stack_1_stack_1->SetMinimum(0.1);
+   MT2_stack_1_stack_1_stack_1_stack_1->SetMaximum(1000);
    MT2_stack_1_stack_1_stack_1_stack_1->SetDirectory(0);
    MT2_stack_1_stack_1_stack_1_stack_1->SetStats(0);
    MT2_stack_1_stack_1_stack_1_stack_1->SetLineWidth(2);
@@ -314,8 +314,8 @@
    h2_copy->SetBinError(2,8);
    h2_copy->SetBinError(3,3.605551);
    h2_copy->SetBinError(4,1.414214);
-   h2_copy->SetMinimum(0.05);
-   h2_copy->SetMaximum(320);
+   h2_copy->SetMinimum(0.1);
+   h2_copy->SetMaximum(1000);
    h2_copy->SetEntries(114);
    h2_copy->SetStats(0);
    h2_copy->SetFillColor(2);
@@ -383,20 +383,15 @@
    cout<<"h__MC2"<< h__MC2->GetBinContent(4)<<endl;
 
 
-   TLatex *   tex = new TLatex(0.03020134,0.531973,"0 jets");
-tex->SetNDC();
-   tex->SetTextSize(0.03);
-   tex->SetLineWidth(2);
-   tex->Draw();
-      tex = new TLatex(0.68,0.943,"#sqrt{s} = 8 TeV, L = 18.10 fb^{-1}");
+       tex = new TLatex(0.68,0.943,"#sqrt{s} = 8 TeV, L = 18.10 fb^{-1}");
 tex->SetNDC();
    tex->SetTextSize(0.0305);
    tex->SetLineWidth(2);
    tex->Draw();
    
    TH1F *MT2__1__1__1__1 = new TH1F("MT2__1__1__1__1","",4,100,300);
-   MT2__1__1__1__1->SetMinimum(0.006447329);
-   MT2__1__1__1__1->SetMaximum(589.0637);
+   MT2__1__1__1__1->SetMinimum(0.1);
+   MT2__1__1__1__1->SetMaximum(1000);
    MT2__1__1__1__1->SetDirectory(0);
    MT2__1__1__1__1->SetStats(0);
    MT2__1__1__1__1->SetLineWidth(2);
@@ -420,7 +415,7 @@ tex->SetNDC();
    MT2__1__1__1__1->GetZaxis()->SetTitleFont(42);
    MT2__1__1__1__1->Draw("sameaxis");
    
-   TLegend *leg = new TLegend(0.7097315,0.7005514,0.909396,0.920147,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.66,0.60,0.91,0.92,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(62);
    leg->SetLineColor(1);
@@ -502,13 +497,25 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2_susy","SMS","l");
-   entry->SetLineColor(1);
-   entry->SetLineStyle(3);
+   entry=leg->AddEntry("NULL","SUSY(240,40)","f");
+//    entry=leg->AddEntry("MT2_susy","SMS","l");
+//    entry->SetLineColor(1);
+//    entry->SetLineStyle(3);
+//    entry->SetLineWidth(3);
+//    entry->SetMarkerColor(1);
+//    entry->SetMarkerStyle(21);
+//    entry->SetMarkerSize(1);
+   entry->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#660000");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(2);
    entry->SetLineWidth(3);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
+   entry->SetTextFont(62);
+
    entry=leg->AddEntry("NULL","data","l");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
@@ -518,54 +525,15 @@ tex->SetNDC();
    entry->SetMarkerSize(1);
    leg->Draw();
  
-// ------------>Primitives in pad: MT2_ratio_plotpad_1
-   MT2_ratio_plotpad_1 = new TPad("MT2_ratio_plotpad_1", "newpad",0.02516779,0.5111111,0.09731544,0.5688889);
-   MT2_ratio_plotpad_1->Draw();
-   MT2_ratio_plotpad_1->cd();
-   MT2_ratio_plotpad_1->Range(0,0,1,1);
-   MT2_ratio_plotpad_1->SetFillColor(0);
-   MT2_ratio_plotpad_1->SetBorderMode(0);
-   MT2_ratio_plotpad_1->SetBorderSize(2);
-   MT2_ratio_plotpad_1->SetLeftMargin(0.18);
-   MT2_ratio_plotpad_1->SetRightMargin(0.08);
-   MT2_ratio_plotpad_1->SetTopMargin(0.07);
-   MT2_ratio_plotpad_1->SetBottomMargin(0.17);
-   MT2_ratio_plotpad_1->SetFrameLineWidth(3);
-   MT2_ratio_plotpad_1->SetFrameBorderMode(0);
-   MT2_ratio_plotpad_1->SetFrameBorderSize(0);
-   MT2_ratio_plotpad_1->Modified();
-   MT2_ratio_plotpad->cd();
-      tex = new TLatex(115.5688,186.9309,"CMS Preliminary");
+        tex = new TLatex(0.25,0.85,"CMS Preliminary     #tau#tau");
+tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(121.9532,89.3748,"Preselection, MT2<90, bjetveto");
-   tex->SetTextSize(0.03105393);
-   tex->SetLineWidth(2);
-   tex->Draw();
-      tex = new TLatex(269.2189,41.53025,"(240,40)");
-   tex->SetTextSize(0.02661765);
-   tex->SetLineWidth(2);
-   tex->Draw();
-  
-// ------------>Primitives in pad: MT2_ratio_plotpad_2
-   MT2_ratio_plotpad_2 = new TPad("MT2_ratio_plotpad_2", "newpad",0.2097315,0.7827004,0.5687919,0.814346);
-   MT2_ratio_plotpad_2->Draw();
-   MT2_ratio_plotpad_2->cd();
-   MT2_ratio_plotpad_2->Range(0,0,1,1);
-   MT2_ratio_plotpad_2->SetFillColor(0);
-   MT2_ratio_plotpad_2->SetBorderMode(0);
-   MT2_ratio_plotpad_2->SetBorderSize(2);
-   MT2_ratio_plotpad_2->SetLeftMargin(0.18);
-   MT2_ratio_plotpad_2->SetRightMargin(0.08);
-   MT2_ratio_plotpad_2->SetTopMargin(0.07);
-   MT2_ratio_plotpad_2->SetBottomMargin(0.17);
-   MT2_ratio_plotpad_2->SetFrameLineWidth(3);
-   MT2_ratio_plotpad_2->SetFrameBorderMode(0);
-   MT2_ratio_plotpad_2->SetFrameBorderSize(0);
-   MT2_ratio_plotpad_2->Modified();
-   MT2_ratio_plotpad->cd();
-      tex = new TLatex(99.82078,818.0568,"Preselection, MT2<90, bjet veto");
-   tex->SetTextSize(0.03372158);
+
+
+      tex = new TLatex(0.13,0.943,"Preselection, MT2<90, b-tagged jets vetoed");
+tex->SetNDC();
+   tex->SetTextSize(0.03);
    tex->SetLineWidth(2);
    tex->Draw();
   
@@ -586,9 +554,7 @@ tex->SetNDC();
    MT2_ratio_plotpad_3->SetFrameBorderSize(0);
    MT2_ratio_plotpad_3->Modified();
    MT2_ratio_plotpad->cd();
-      tex = new TLatex(211.3341,193.7842,"#tau#tau");
-   tex->SetLineWidth(2);
-   tex->Draw();
+
    MT2_ratio_plotpad->Modified();
    MT2_ratioc_ratio->cd();
   
@@ -687,7 +653,7 @@ tex->SetNDC();
    h2_copy__2->GetZaxis()->SetTitleSize(0.035);
    h2_copy__2->GetZaxis()->SetTitleFont(42);
    h2_copy__2->Draw("Esame");
-   TLine *line = new TLine(0,1,300,1);
+   TLine *line = new TLine(100,1,300,1);
    line->SetLineStyle(7);
    line->SetLineWidth(2);
    line->Draw();

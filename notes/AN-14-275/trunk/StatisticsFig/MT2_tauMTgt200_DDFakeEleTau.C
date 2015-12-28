@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: muTau_log_comp_overlayc_ratio/
 //=========  (Sun Oct 11 19:26:45 2015) by ROOT version5.34/19
-   TCanvas *muTau_log_comp_overlayc_ratio = new TCanvas("muTau_log_comp_overlayc_ratio", "",262,128,600,630);
+   TCanvas *muTau_log_comp_overlayc_ratio = new TCanvas("muTau_log_comp_overlayc_ratio", "",1,52,600,600);
    gStyle->SetOptFit(1);
    muTau_log_comp_overlayc_ratio->Range(0,0,1,1);
    muTau_log_comp_overlayc_ratio->SetFillColor(0);
@@ -38,12 +38,12 @@
    THStack *h_stack = new THStack();
    h_stack->SetName("h_stack");
    h_stack->SetTitle("");
-   h_stack->SetMinimum(0.02);
-   h_stack->SetMaximum(63.00391);
+   h_stack->SetMinimum(0.07);
+   h_stack->SetMaximum(100.0);
    
    TH1F *h_stack_stack_1_stack_1 = new TH1F("h_stack_stack_1_stack_1","",120,0,120);
-   h_stack_stack_1_stack_1->SetMinimum(0.007274926);
-   h_stack_stack_1_stack_1->SetMaximum(107.0857);
+   h_stack_stack_1_stack_1->SetMinimum(0.07);
+   h_stack_stack_1_stack_1->SetMaximum(100.0);
    h_stack_stack_1_stack_1->SetDirectory(0);
    h_stack_stack_1_stack_1->SetStats(0);
 
@@ -249,49 +249,49 @@
    h_stack->Add(TauMTCut_MT2_Higgs_Rebinned,"");
    Double_t xAxis5[5] = {40, 50, 70, 90, 120}; 
    
-   TH1D *Total200.000000_fromMuTau_MT2_data_Rebinned = new TH1D("Total200.000000_fromMuTau_MT2_data_Rebinned","",4, xAxis5);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetBinContent(0,40.97312);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetBinContent(1,2.596472);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetBinContent(2,28.54152);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetBinContent(3,8.359853);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetBinContent(4,2.734164);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetBinContent(5,2.734164);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetBinError(0,13.16947);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetBinError(1,3.704278);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetBinError(2,8.572413);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetBinError(3,5.100058);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetBinError(4,2.775038);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetBinError(5,2.775038);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetEntries(195);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetStats(0);
+   TH1D *Total200_fromMuTau_MT2_data_Rebinned = new TH1D("Total200_fromMuTau_MT2_data_Rebinned","",4, xAxis5);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(0,40.97312);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(1,2.596472);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(2,28.54152);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(3,8.359853);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(4,2.734164);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(5,2.734164);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinError(0,13.16947);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinError(1,3.704278);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinError(2,8.572413);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinError(3,5.100058);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinError(4,2.775038);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinError(5,2.775038);
+   Total200_fromMuTau_MT2_data_Rebinned->SetEntries(195);
+   Total200_fromMuTau_MT2_data_Rebinned->SetStats(0);
 
    ci = TColor::GetColor("#cccc00");
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetFillColor(ci);
+   Total200_fromMuTau_MT2_data_Rebinned->SetFillColor(ci);
 
    ci = TColor::GetColor("#cccc00");
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetLineColor(ci);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetLineWidth(2);
+   Total200_fromMuTau_MT2_data_Rebinned->SetLineColor(ci);
+   Total200_fromMuTau_MT2_data_Rebinned->SetLineWidth(2);
 
    ci = TColor::GetColor("#cccc00");
-   Total200.000000_fromMuTau_MT2_data_Rebinned->SetMarkerColor(ci);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetXaxis()->SetRange(1,5);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetXaxis()->SetNdivisions(505);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetXaxis()->SetLabelFont(42);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetXaxis()->SetLabelSize(0.07);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetXaxis()->SetTitleSize(0.07);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetXaxis()->SetTitleOffset(1.1);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetXaxis()->SetTitleFont(42);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetYaxis()->SetNdivisions(505);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetYaxis()->SetLabelFont(42);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetYaxis()->SetLabelSize(0.07);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetYaxis()->SetTitleSize(0.07);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetYaxis()->SetTitleOffset(1.3);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetYaxis()->SetTitleFont(42);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetZaxis()->SetLabelFont(42);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetZaxis()->SetLabelSize(0.035);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetZaxis()->SetTitleSize(0.035);
-   Total200.000000_fromMuTau_MT2_data_Rebinned->GetZaxis()->SetTitleFont(42);
-   h_stack->Add(Total200.000000_fromMuTau_MT2_data_Rebinned,"");
+   Total200_fromMuTau_MT2_data_Rebinned->SetMarkerColor(ci);
+   Total200_fromMuTau_MT2_data_Rebinned->GetXaxis()->SetRange(1,5);
+   Total200_fromMuTau_MT2_data_Rebinned->GetXaxis()->SetNdivisions(505);
+   Total200_fromMuTau_MT2_data_Rebinned->GetXaxis()->SetLabelFont(42);
+   Total200_fromMuTau_MT2_data_Rebinned->GetXaxis()->SetLabelSize(0.07);
+   Total200_fromMuTau_MT2_data_Rebinned->GetXaxis()->SetTitleSize(0.07);
+   Total200_fromMuTau_MT2_data_Rebinned->GetXaxis()->SetTitleOffset(1.1);
+   Total200_fromMuTau_MT2_data_Rebinned->GetXaxis()->SetTitleFont(42);
+   Total200_fromMuTau_MT2_data_Rebinned->GetYaxis()->SetNdivisions(505);
+   Total200_fromMuTau_MT2_data_Rebinned->GetYaxis()->SetLabelFont(42);
+   Total200_fromMuTau_MT2_data_Rebinned->GetYaxis()->SetLabelSize(0.07);
+   Total200_fromMuTau_MT2_data_Rebinned->GetYaxis()->SetTitleSize(0.07);
+   Total200_fromMuTau_MT2_data_Rebinned->GetYaxis()->SetTitleOffset(1.3);
+   Total200_fromMuTau_MT2_data_Rebinned->GetYaxis()->SetTitleFont(42);
+   Total200_fromMuTau_MT2_data_Rebinned->GetZaxis()->SetLabelFont(42);
+   Total200_fromMuTau_MT2_data_Rebinned->GetZaxis()->SetLabelSize(0.035);
+   Total200_fromMuTau_MT2_data_Rebinned->GetZaxis()->SetTitleSize(0.035);
+   Total200_fromMuTau_MT2_data_Rebinned->GetZaxis()->SetTitleFont(42);
+   h_stack->Add(Total200_fromMuTau_MT2_data_Rebinned,"");
    h_stack->Draw("hist");
    Double_t xAxis6[5] = {40, 50, 70, 90, 120}; 
    
@@ -377,12 +377,12 @@ tex->SetNDC();
    tex->SetTextSize(0.0305);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.25,0.85,"CMS Preliminary");
+      tex = new TLatex(0.25,0.85,"CMS Preliminary     e#tau");
 tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
    
-   TLegend *leg = new TLegend(0.71,0.68,0.91,0.92,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.66,0.60,0.91,0.92,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(62);
    leg->SetLineColor(1);
@@ -478,7 +478,7 @@ tex->SetNDC();
    leg->Draw();
       tex = new TLatex(85.55515,44.23062,"e#tau");
    tex->SetLineWidth(2);
-   tex->Draw();
+   //   tex->Draw();
    muTau_log_comp_overlay_plotpad->Modified();
    muTau_log_comp_overlayc_ratio->cd();
   

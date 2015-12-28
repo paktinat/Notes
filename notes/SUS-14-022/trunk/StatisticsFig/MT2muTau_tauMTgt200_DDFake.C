@@ -44,11 +44,11 @@
    THStack *h_stack = new THStack();
    h_stack->SetName("h_stack");
    h_stack->SetTitle("");
-   h_stack->SetMinimum(0.02);
-   h_stack->SetMaximum(63.00391);
+   h_stack->SetMinimum(0.1);
+   h_stack->SetMaximum(200.00391);
    
    TH1F *h_stack_stack_1 = new TH1F("h_stack_stack_1","",120,0,120);
-   h_stack_stack_1->SetMinimum(0.02);
+   h_stack_stack_1->SetMinimum(0.1);
    h_stack_stack_1->SetMaximum(200.0);
    h_stack_stack_1->SetDirectory(0);
    h_stack_stack_1->SetStats(0);
@@ -798,7 +798,7 @@
    h2_DDFake->SetBinError(4,8.631712);
    h2_DDFake->SetBinError(5,6.244837);
    h2_DDFake->SetBinError(6,3.871143);
-   h2_DDFake->SetMinimum(0.02);
+   h2_DDFake->SetMinimum(0.1);
    h2_DDFake->SetMaximum(200.0);
    h2_DDFake->SetEntries(320);
    h2_DDFake->SetStats(0);
@@ -920,7 +920,7 @@
    h21_copyAll->SetBinError(98,1);
    h21_copyAll->SetBinError(120,1);
    h21_copyAll->SetBinError(121,1);
-   h21_copyAll->SetMinimum(0.02);
+   h21_copyAll->SetMinimum(0.1);
    h21_copyAll->SetMaximum(200.0);
    h21_copyAll->SetEntries(92);
    h21_copyAll->SetStats(0);
@@ -1150,7 +1150,7 @@ tex->SetNDC();
    tex->Draw();
  
    
-   TLegend *leg = new TLegend(0.71,0.68,0.91,0.92,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.66,0.60,0.91,0.92,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(62);
    leg->SetLineColor(1);
