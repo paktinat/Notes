@@ -229,10 +229,10 @@
    TH1D *MT2_W = new TH1D("MT2_W","",4, xAxis5);
    MT2_W->SetBinContent(2,15.56548);
    MT2_W->SetBinContent(3,13.13984);
-   MT2_W->SetBinContent(4,2.7);
+   MT2_W->SetBinContent(4,2.58335);
    MT2_W->SetBinError(2,5.872039);
    MT2_W->SetBinError(3,5.474625);
-   MT2_W->SetBinError(4,1.0071);
+   MT2_W->SetBinError(4,1.29);
    MT2_W->SetEntries(64);
    MT2_W->SetStats(0);
 

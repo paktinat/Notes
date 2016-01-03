@@ -41,7 +41,10 @@
    MT2->SetTitle("");
    MT2->SetMinimum(0.02);
    MT2->SetMaximum(551.8481);
-   
+
+
+   TH1D *h__MC = new TH1D("h__MC","",3,40,115);
+
    TH1F *MT2_stack_1_stack_1_stack_1 = new TH1F("MT2_stack_1_stack_1_stack_1","",3,40,115);
    MT2_stack_1_stack_1_stack_1->SetMinimum(0.006210419);
    MT2_stack_1_stack_1_stack_1->SetMaximum(1041.976);
@@ -220,10 +223,10 @@
    TH1D *MT2_W = new TH1D("MT2_W","",3, xAxis5);
    MT2_W->SetBinContent(1,29.77);
    MT2_W->SetBinContent(2,2.16);
-   MT2_W->SetBinContent(3,0.69);
+   MT2_W->SetBinContent(3,0.721364);
    MT2_W->SetBinError(1,6.3);
    MT2_W->SetBinError(2,1.11);
-   MT2_W->SetBinError(3,0.55);
+   MT2_W->SetBinError(3,0.58);
    MT2_W->SetEntries(64);
    MT2_W->SetStats(0);
 
@@ -292,8 +295,17 @@
    MT2_QCD->GetZaxis()->SetTitleFont(42);
    MT2->Add(MT2_QCD,"");
    MT2->Draw("hist");
+
+
+   h__MC->Add(MT2_QCD);
+   h__MC->Add(MT2_W);
+   h__MC->Add(MT2_ZX);
+   h__MC->Add(MT2_Top);
+   h__MC->Add(MT2_WW);
+   h__MC->Add(MT2_Higgs);
+
    Double_t xAxis7[4] = {40, 65, 90, 115}; 
-   
+
    TH1D *h2_copy = new TH1D("h2_copy","",3, xAxis7);
    h2_copy->SetBinContent(1,106);
    h2_copy->SetBinContent(2,4);
@@ -556,29 +568,17 @@ tex->SetNDC();
    MT2_ratio_ratiopad->SetFrameLineWidth(3);
    MT2_ratio_ratiopad->SetFrameBorderMode(0);
    MT2_ratio_ratiopad->SetFrameBorderSize(0);
-   Double_t xAxis9[4] = {40, 65, 90, 115}; 
-   
-   TH1D *h1_copy = new TH1D("h1_copy","",3, xAxis9);
-   h1_copy->SetBinContent(1,1);
-   h1_copy->SetBinContent(2,1);
-   h1_copy->SetBinContent(3,1);
-   h1_copy->SetBinError(1,0.1958474);
-   h1_copy->SetBinError(2,0.532948);
-   h1_copy->SetBinError(3,0.5387354);
+
+      TH1F *h1_copy  = (TH1F*)h__MC->Clone();
+   h1_copy->Divide(h1_copy);
+
    h1_copy->SetMinimum(0);
    h1_copy->SetMaximum(2);
-   h1_copy->SetEntries(14.69086);
    h1_copy->SetStats(0);
    h1_copy->SetFillColor(1);
    h1_copy->SetFillStyle(3001);
-
-   ci = TColor::GetColor("#cccc00");
-   h1_copy->SetLineColor(ci);
    h1_copy->SetLineWidth(2);
-
-   ci = TColor::GetColor("#cccc00");
-   h1_copy->SetMarkerColor(ci);
-   h1_copy->GetXaxis()->SetTitle("M_{T2}");
+   h1_copy->GetXaxis()->SetTitle("Z Pt");
    h1_copy->GetXaxis()->SetNdivisions(505);
    h1_copy->GetXaxis()->SetLabelFont(42);
    h1_copy->GetXaxis()->SetLabelSize(0);
@@ -598,83 +598,38 @@ tex->SetNDC();
    h1_copy->GetZaxis()->SetTitleSize(0.035);
    h1_copy->GetZaxis()->SetTitleFont(42);
    h1_copy->Draw("E2");
-   Double_t xAxis10[4] = {40, 65, 90, 115}; 
-   
-   TH1D *h2_copy__2__2__2 = new TH1D("h2_copy__2__2__2","",3, xAxis10);
-   h2_copy__2__2__2->SetBinContent(1,0.9604092);
-   h2_copy__2__2__2->SetBinContent(2,0.701549);
-   h2_copy__2__2__2->SetBinContent(3,0.637524);
-   h2_copy__2__2__2->SetBinError(1,0.1624542);
-   h2_copy__2__2__2->SetBinError(2,0.4392486);
-   h2_copy__2__2__2->SetBinError(3,0.6822156);
-   h2_copy__2__2__2->SetMinimum(0.4);
-   h2_copy__2__2__2->SetMaximum(3);
-   h2_copy__2__2__2->SetEntries(7.721983);
-   h2_copy__2__2__2->SetDirectory(0);
-   h2_copy__2__2__2->SetStats(0);
-   h2_copy__2__2__2->SetFillColor(2);
-   h2_copy__2__2__2->SetLineWidth(2);
-   h2_copy__2__2__2->SetMarkerStyle(20);
-   h2_copy__2__2__2->GetXaxis()->SetNdivisions(505);
-   h2_copy__2__2__2->GetXaxis()->SetLabelFont(42);
-   h2_copy__2__2__2->GetXaxis()->SetLabelSize(0.07);
-   h2_copy__2__2__2->GetXaxis()->SetTitleSize(0.07);
-   h2_copy__2__2__2->GetXaxis()->SetTitleOffset(1.1);
-   h2_copy__2__2__2->GetXaxis()->SetTitleFont(42);
-   h2_copy__2__2__2->GetYaxis()->SetNdivisions(505);
-   h2_copy__2__2__2->GetYaxis()->SetLabelFont(42);
-   h2_copy__2__2__2->GetYaxis()->SetLabelSize(0.07);
-   h2_copy__2__2__2->GetYaxis()->SetTitleSize(0.07);
-   h2_copy__2__2__2->GetYaxis()->SetTitleOffset(1.3);
-   h2_copy__2__2__2->GetYaxis()->SetTitleFont(42);
-   h2_copy__2__2__2->GetZaxis()->SetLabelFont(42);
-   h2_copy__2__2__2->GetZaxis()->SetLabelSize(0.035);
-   h2_copy__2__2__2->GetZaxis()->SetTitleSize(0.035);
-   h2_copy__2__2__2->GetZaxis()->SetTitleFont(42);
-   h2_copy__2__2__2->Draw("Esame");
+
+   TH1F *h2_copy__2  = (TH1F*)h2_copy->Clone();
+   h2_copy__2->Divide(h__MC);
+   h2_copy__2->SetMinimum(0.4);
+   h2_copy__2->SetMaximum(3);
+   h2_copy__2->SetEntries(2.397098);
+   h2_copy__2->SetDirectory(0);
+   h2_copy__2->SetStats(0);
+   h2_copy__2->SetLineWidth(2);
+   h2_copy__2->SetMarkerStyle(20);
+   h2_copy__2->GetXaxis()->SetNdivisions(505);
+   h2_copy__2->GetXaxis()->SetLabelFont(42);
+   h2_copy__2->GetXaxis()->SetLabelSize(0.07);
+   h2_copy__2->GetXaxis()->SetTitleSize(0.07);
+   h2_copy__2->GetXaxis()->SetTitleOffset(1.1);
+   h2_copy__2->GetXaxis()->SetTitleFont(42);
+   h2_copy__2->GetYaxis()->SetNdivisions(505);
+   h2_copy__2->GetYaxis()->SetLabelFont(42);
+   h2_copy__2->GetYaxis()->SetLabelSize(0.07);
+   h2_copy__2->GetYaxis()->SetTitleSize(0.07);
+   h2_copy__2->GetYaxis()->SetTitleOffset(1.3);
+   h2_copy__2->GetYaxis()->SetTitleFont(42);
+   h2_copy__2->GetZaxis()->SetLabelFont(42);
+   h2_copy__2->GetZaxis()->SetLabelSize(0.035);
+   h2_copy__2->GetZaxis()->SetTitleSize(0.035);
+   h2_copy__2->GetZaxis()->SetTitleFont(42);
+   h2_copy__2->Draw("Esame");
    TLine *line = new TLine(40,1,115,1);
    line->SetLineStyle(7);
    line->SetLineWidth(2);
    line->Draw();
-   Double_t xAxis11[4] = {40, 65, 90, 115}; 
-   
-   TH1D *h1_copy__3__3__3 = new TH1D("h1_copy__3__3__3","",3, xAxis11);
-   h1_copy__3__3__3->SetBinContent(1,1);
-   h1_copy__3__3__3->SetBinContent(2,1);
-   h1_copy__3__3__3->SetBinContent(3,1);
-   h1_copy__3__3__3->SetBinError(1,0.1958474);
-   h1_copy__3__3__3->SetBinError(2,0.532948);
-   h1_copy__3__3__3->SetBinError(3,0.5387354);
-   h1_copy__3__3__3->SetMinimum(0);
-   h1_copy__3__3__3->SetMaximum(2);
-   h1_copy__3__3__3->SetEntries(14.69086);
-   h1_copy__3__3__3->SetDirectory(0);
-   h1_copy__3__3__3->SetStats(0);
-   h1_copy__3__3__3->SetFillColor(1);
-   h1_copy__3__3__3->SetFillStyle(3001);
-   h1_copy__3__3__3->SetLineColor(2);
-   h1_copy__3__3__3->SetLineWidth(2);
-   h1_copy__3__3__3->SetMarkerColor(2);
-   h1_copy__3__3__3->GetXaxis()->SetTitle("M_{T2}");
-   h1_copy__3__3__3->GetXaxis()->SetNdivisions(505);
-   h1_copy__3__3__3->GetXaxis()->SetLabelFont(42);
-   h1_copy__3__3__3->GetXaxis()->SetLabelSize(0);
-   h1_copy__3__3__3->GetXaxis()->SetTitleSize(0.2);
-   h1_copy__3__3__3->GetXaxis()->SetTickLength(0.09);
-   h1_copy__3__3__3->GetXaxis()->SetTitleOffset(0.5);
-   h1_copy__3__3__3->GetXaxis()->SetTitleFont(42);
-   h1_copy__3__3__3->GetYaxis()->SetTitle("Data / MC");
-   h1_copy__3__3__3->GetYaxis()->SetNdivisions(509);
-   h1_copy__3__3__3->GetYaxis()->SetLabelFont(42);
-   h1_copy__3__3__3->GetYaxis()->SetLabelSize(0.19);
-   h1_copy__3__3__3->GetYaxis()->SetTitleSize(0.18);
-   h1_copy__3__3__3->GetYaxis()->SetTitleOffset(0.36);
-   h1_copy__3__3__3->GetYaxis()->SetTitleFont(42);
-   h1_copy__3__3__3->GetZaxis()->SetLabelFont(42);
-   h1_copy__3__3__3->GetZaxis()->SetLabelSize(0.035);
-   h1_copy__3__3__3->GetZaxis()->SetTitleSize(0.035);
-   h1_copy__3__3__3->GetZaxis()->SetTitleFont(42);
-   h1_copy__3__3__3->Draw("sameaxis");
+
    MT2_ratio_ratiopad->Modified();
    MT2_ratioc_ratio->cd();
    MT2_ratioc_ratio->Modified();
