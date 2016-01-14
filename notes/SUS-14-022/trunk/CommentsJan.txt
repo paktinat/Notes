@@ -1,0 +1,195 @@
+SUS-14-022 PAS v17
+
+Questions coming up while reading:
+
+Tau ID in fastsim: Do you apply any additional uncertainties w.r.t. the POG recommendation for fullsim?
+
+130: Can you motivate why you set m^vis = 0? This doesn't strike me as necessary since it's by definition the visible mass, but maybe I'm simply missing the point.
+Or doesn't this simply mean that you set the lepton mass to zero, which is just a fair approximation? In this case, it might be less confusing to simply call it m^\ell.
+
+Detailed textual comments:
+
+10: Clean up references 6-15: a) add relevant ATLAS references (!), b) use latest available searches, c) get rid of outdated/unnecessary results
+13: [16-18] Again should add relevant ATLAS references (still make the point that this search is missing in CMS)
+17: You haven't introduced the symbols for taus and charginos
+
+I would actually remove the last sentence of the 3rd paragraph and merge it with the sentences starting in line 19 to avoid duplication and improve the flow of the text. There is also some more overlap between the 3rd and 4th paragraphs, so consider to tighten the text a bit.
+
+
+Section 2
+
+95: Neutral hadrons are NOT used in the tau ID 
+
+Answer: The sentence comes from page6 of 1408.3316 (HtoTauTau paper).
+
+111: You write you normalise most processes to NLO cross sections and provide according references while, for many processes, in particular ttbar, a full NNLO calculation is available. Please update the sentence, the references, and the used cross sections.
+
+Section 3:
+
+116: "originally" sounds as if it's now used for something else, which I can't really understand from the rest of the text. Maybe just remove "originally".
+
+Answer: We think the previous sentence clarifies this. "MT2 is used in this analysis to discriminate between the SUSY signal and the SM backgrounds"
+
+Section 4:
+
+In addition, you may want to explain why you only apply loose criteria here, e.g. by introducing before that you will first describe a pre-selection and then signal regions
+
+Answer: we think it is clear from the first sentence of the next paragraph "After applying the pre-selection described above,"
+
+152-154: Complicated description. Why not circumvent the irritation that electrons, photons, tau_had are jets (i think you can safely ignore the former two given the electron veto and the rare occurrence of hard prompt isolated photons) and simply talk about the angle between vec(pTmiss) and the taus + jets, including b-tagged jets.
+
+Answer: It was a comment from Claudio to describe the components here.
+
+156-: The text would profit from first explaining why you need to search regions and then laying out these search regions
+172-173: Please list the MC samples and cross sections used for this plot somewhere, e.g. in a table. If you don't like this since you estimate several backgrounds from data later, please show the plots with these methods applied (as discussed in the review)
+
+Figure 2:
+H- Please put the plots in as vector graphics (!!)
+H- Change the order in the legend such that it corresponds to the order in the plot, or vice versa
+H- QCD -> QCD multijet
+H- Try to increase all font sizes
+- Define and explain the error band in the ratio
+- Consider to add the error band also to the main figures to substantiate your statement that observation and prediction agree within statistical uncertainties
+
+
+
+
+Meantime, below are a few comments on PAS (v17):
+
+ 
+
+[1] Let's break Section 2 into TWO.
+
+And: add the texts on the signal MC samples where you clarified the condition of stau and sneutrino masses in chargino production and its branching fraction.
+
+ 
+
+[2] Tables – please see the link below.
+
+http://people.physics.tamu.edu/kamon/TEMP/160113_SUS-14-022-PAS(v17)_Table.pdf
+
+ 
+
+On Table 5: Why the luminosity uncertainty is missing?
+
+ 
+
+[3] Randomly spotted textual comments.
+
+L.27 .. di-t final state --> di-tau final state
+
+Fig.4 ... please adjust the size, so that the figure is within its margin.
+
+ 
+
+L.258 .. where r_{Real} is the number of ...
+
+                --> where N_{Real} is the number of ...
+
+ 
+
+                r_{real} (r_{fake})  is ...
+
+                --> where r_{real} (r_{fake})  is ...
+
+ 
+
+                Also use {\rm } in the subscript.
+
+                And make sure the uniform style like "Real" vs. "real".
+
+ 
+
+                The same comment on L.259.
+
+ 
+
+L. 380 --- 228 (328) fb .. --> fb in roman.
+
+
+
+
+
+SUS-14-022 PAS v17 sections 5-6
+
+Section 5:
+
+180/182: Too wide widespaces before GeV (e.g. use \unit{} to fix it, applies to whole draft)
+183: comma after analysis
+183: were -> are
+189: Just as -> Just like
+189: comma after channel
+189/190: make the list of backgrounds uniform - all are events
+
+I think it would be a good idea to add tables with the exact selection requirements (of course also in section 4)
+
+Figure 3: Please apply all recommendations I sent for figure 2 as well here. Also for both figures, remove one significant digit from the luminosity number
+
+Section 6:
+
+200: Consider not defining "fake" and using misidentified everywhere
+203: Again non-uniform list of samples. Please make it uniform (and remove "the" before Higgs)
+206: "dropped from the discussion" sounds bad. You may want to state instead that you take these from simulated events.
+206: Like before, I suggest to give a list/table of all considered samples with cross sections.
+
+Section 6.1: QCD estimation in tau_h tau_h channel
+
+The overall description is quite confusing. I suggest to try to make the structure more logical and do some significant rewriting.
+A few ideas for improvement
+- First outline the strategy (e.g. measure mis-ID rate using two control regions with low MT/MT2, apply at high MT/MT2
+- It's not well explained why you go to same-sign events with loose isolation, and use them directly to estimate OS events with medium isolation. In lines 213/214, it sounds like you'd go from OS loose-but-not-medium to medium, and then you start writing about SS only in line 218
+- You need to define loose and medium tau_h isolation. Actually, I know realise that this is also not explained in sections 4 and 5, so please give the exact numbers somewhere above.
+- You nicely give numbers to the control regions - use them in the text when you refer to the regions
+
+More details on the text:
+
+208: QCD jet -> QCD multijet
+208: Not sure if it's only me but I found "two quark or gluon jets" slightly confusing as it's not clear if two belongs to quark and gluon or to jets so I thought "can't it also be one gluon and one quark jet?" You can fix it by sth along the lines of ".. if both tau_h arise from misidentified quark or gluon jets"
+
+Figure 4:
+- Reference to figure 4 and the figure itself come before SS is defined, and OS is nowhere defined
+- Please turn this into a vector graphic
+
+212: In QCD dominated sample -> in the sample dominated by QCD multijet events; apart from language: it's not clear which region is meant here
+
+Table 1:
+- background -> background event yields
+- systematic -> systematic uncertainty
+- If you have one source of statistical uncertainty and two sources of systematic uncertainty, I don't understand why you put one source of systematic uncertainty together with the statistical uncertainty. I'd rather give all numbers separately
+- As discussed previously, this immediately warrants the question why you don't go to even looser definitions of your control regions if you're clearly dominated by statistical uncertainties (if it's true, not clear from lumping everything together). I would appreciate a statement on this in the text
+
+227: Systematic uncertainties from background subtraction: Please give more details - what does this include? Statistical uncertainties or also systematic uncertainties on background yields - if the latter, what exactly do you do?
+
+Do you want to mention MC or control region closure tests somewhere?
+
+6.2: The first paragraph is written a bit sloppily "(DPhi, lep veto, )".
+First paragraph + 232-240: I'm confused by the description. The second paragraph seems to repeat what is written in the paragraph. I suggest you try to rewrite this more clearly before we give more detailed comments.
+
+240: If you introduce experimental uncertainties here: Shouldn't it then also include uncertainties related to the MET, e.g. jet energy scale and residual MET uncertainty?
+
+243: Can you give the values and uncertainties of the efficiencies obtained in data and simulation? Unlike for the normalisation, you don't write that these are compatible, so it's not clear why you'd choose the value obtained in data in something you call a "validation region" - it rather seems to be part of your data-driven method.
+
+Table 2: Suddenly an uncertainty appears that doesn't seem to be described in the text, "sys. shape", which according to the caption "  .       e estimation found from varying the Ď"had energy scale within its uncertainty. The â?osys. shapeâ?ť takes into account the difference between the shape of the search variable distribution in data and Monte Carlo." How is this derived? Where is it discussed? If it's the result of the mu-tau_h validation, this isn't really a shape uncertainty (except if you call two bins a shape) but the very same efficiency that you're discussing all the time (?)
+
+6.3 general:
+- You don't mention background from e.g. direct Z->mu mu/ee decays. Can you elaborate a bit on this? Strictly speaking, the text now says that you don't consider these backgrounds, so please make sure that you mention that you take them from simulation (I hope!), and maybe also mention whether the yields are such small that you can ignore the actually very sizeable uncertainties in the e->tau_h / mu->tau_h fake rates
+
+248: by -> from
+250: Is the selection requirement in brackets really the inverted Z veto? also: Z -> Z boson
+251: what does "is reproduced" mean?
+252: Z -> Z boson
+Table 3: In the two sections before, you discuss systematic uncertainties; here you make a forward reference to section 7, which should be avoided
+253/4: where -> with; Sentence starting with "The sys.." is the same as before and can be removed
+255: Move this to the beginning of 6.3 and introduce this section better (say for which channels this estimation applies; say that it applies only to events with real lepton plus tau_h, if it's the case)
+
+6.4 general:
+- As mentioned before, make sure loose and tight are properly defined (!)
+- You can avoid missing line numbers by properly setting off equations with empty lines in latex
+
+258-259: Mention
+263: What's the size of this correction? I would give the number.
+268/269: This reads like a completely arbitrary uncertainty. Please motivate this better (there will certainly be statistical uncertainties, uncertainties in the MC estimation of the OS-SS correction, dependence on tau pT, which has an effect on your final cut variables, etc)
+271: Also here, I would prefer to give the numbers so we can see to what extent it closes (1%? 10%? 50%?)
+278: One small difference are the different anti-muon/anti-electron discriminators, or aren't they? From lines 92-93 and section 5, it's not clear what exactly you do. I suggest to write exactly what you do there.
+
+
