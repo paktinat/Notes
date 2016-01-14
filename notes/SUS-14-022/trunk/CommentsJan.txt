@@ -57,69 +57,23 @@ H- Try to increase all font sizes
 Meantime, below are a few comments on PAS (v17):
 
  
-
 [1] Let's break Section 2 into TWO.
 
 And: add the texts on the signal MC samples where you clarified the condition of stau and sneutrino masses in chargino production and its branching fraction.
 
- 
 
-[2] Tables – please see the link below.
-
-http://people.physics.tamu.edu/kamon/TEMP/160113_SUS-14-022-PAS(v17)_Table.pdf
-
- 
+ [2] Tables – please see the link below.
 
 On Table 5: Why the luminosity uncertainty is missing?
 
  
 
-[3] Randomly spotted textual comments.
-
-L.27 .. di-t final state --> di-tau final state
-
-Fig.4 ... please adjust the size, so that the figure is within its margin.
-
- 
-
-L.258 .. where r_{Real} is the number of ...
-
-                --> where N_{Real} is the number of ...
-
- 
-
-                r_{real} (r_{fake})  is ...
-
-                --> where r_{real} (r_{fake})  is ...
-
- 
-
-                Also use {\rm } in the subscript.
-
-                And make sure the uniform style like "Real" vs. "real".
-
- 
-
-                The same comment on L.259.
-
- 
-
-L. 380 --- 228 (328) fb .. --> fb in roman.
-
-
-
+  
 
 
 SUS-14-022 PAS v17 sections 5-6
 
 Section 5:
-
-180/182: Too wide widespaces before GeV (e.g. use \unit{} to fix it, applies to whole draft)
-183: comma after analysis
-183: were -> are
-189: Just as -> Just like
-189: comma after channel
-189/190: make the list of backgrounds uniform - all are events
 
 I think it would be a good idea to add tables with the exact selection requirements (of course also in section 4)
 
