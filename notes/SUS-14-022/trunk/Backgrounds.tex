@@ -1,22 +1,21 @@
 \section{Backgrounds}
 \label{sect:bkg}
 We separate the backgrounds into two categories.  Those with 
-``fake'' \Tau, i.e., events where a quark or gluon jet has been misidentified
+``misidentified'' \Tau, i.e., events where a quark or gluon jet has been misidentified
 as a \Tau, and those without \Tau misidentifications.  
-The fake \Tau backgrounds arise mostly from QCD and \wjets events.  The 
-other backgrounds are from \ttbar, $Z+$ jets, diboson events as well as the Higgs boson decays.
-Backgrounds with fake \Tau are mainly estimated with data-driven methods; the 
+The misidentified \Tau backgrounds arise mostly from QCD and \wjets events.  The 
+other background events are from \ttbar, $Z+$ jets, Higgs boson and diboson events.
+Backgrounds with misidentified \Tau are mainly estimated with data-driven methods; the 
 remaining backgrounds are taken from Monte Carlo events. The main backgrounds
-are discussed here, but the others are very small, so they are dropped from the 
-discussion.
+are discussed here, but the others are very small, so they are  taken from the simulated events.
 
 \subsection{\texorpdfstring{QCD background estimation in the $\tauTau$ channel}{QCD background estimation in the tau-tau channel}}
 \label{sect:bkgQCD}
-Events from QCD jet production can enter the signal regions if two quark or gluon jets are 
-misidentified as \Tau, and the rest of the kinematical selections are also 
-satisfied.  
+Events from QCD multijet production can enter the signal regions 
+if both \Tau arise from misidentified quark or gluon jets
+and the rest of the kinematical selections are also satisfied.  
 Isolation is an important 
-discriminant between fake and real \Tau objects. For this purpose, the control regions are defined using the isolation variables for the \Tau 
+discriminant between misidentified and real \Tau objects. For this purpose, the control regions (CR) are defined using the isolation variables for the \Tau 
 pair and \mttwo or \SumMT, as illustrated in Fig.~\ref{fig:ABCDQCD}. 
 \begin{figure}[!Hhtb]
 \centering
@@ -24,7 +23,7 @@ pair and \mttwo or \SumMT, as illustrated in Fig.~\ref{fig:ABCDQCD}.
 \caption{Schematic illustration of four control regions used to estimate the QCD backgrounds.}
 \label{fig:ABCDQCD}
 \end{figure}
-In QCD dominated sample, isolations of fake \Tau objects verified 
+In the sample dominated by QCD multijet events (CR1 and CR2), isolations of misidentified \Tau objects verified 
 to be uncorrelated with \mttwo or \SumMT.
 QCD background in the signal regions are estimated by counting events in the control regions with high \mttwo or \SumMT and loosely isolated \Tau
 and scaling by the transition factor to go from loosely isolated to tightly isolated \Tau which is evaluated in the low \mttwo or \SumMT.
@@ -42,7 +41,7 @@ the $\Delta \Phi$ requirement for QCD events.
 Table \ref{4QCDbg} 
 \begin{table}[!Hhtb]
 \begin{center}
-\caption{The estimated QCD background in the \tauTau channel. The first uncertainty is statistical and systematic of the method, the second is the extra systematic due to correlation assumptions.}
+\caption{The estimated QCD multijet background event yields in the \tauTau channel. The first uncertainty is statistical and systematic uncertainty of the method, the second is the extra systematic uncertainty due to correlation assumptions.}
 \begin{tabular}{|l|c|}
 \hline\hline
  Signal Region      &  Estimation\\
@@ -76,7 +75,7 @@ where, $N_{\rm Before~Final~Selection}$ is the number of \wjets events just befo
 (\mttwo $>$ 90 \GeV for \binone and \SumMT $>$ 250 \GeV for \bintwo) and $N_{\rm SR}$ is the final estimation of \wjets events in the signal region.
 
 Since the size of the simulated \wjets sample is not large enough to adequately populate our desired phase space, %$\epsilon_{\rm M_{T2}}$ 
-$\epsilon_{FS}$ is calculated in a phase space with looser selection criteria. It is first evaluated in a \wjets sample with a pair of opposite-charge \Tau's where the \Tau candidates are selected similar to those in signal region. 
+$\epsilon_{FS}$ is calculated in a phase space with looser selection criteria. It is first evaluated in a \wjets sample with a pair of opposite-charge \Tau where the \Tau candidates are selected similar to those in signal region. 
 Additional signal selection requirements, such as $\Delta \Phi$ or lepton veto, are applied one by one such that two orthogonal subsamples (passing and failing) are obtained. The $\epsilon_{FS}$ quantity is calculated in all subsamples. The values are found to be compatible within the statistical uncertainties; their weighted average is taken as the final estimate for $\epsilon_{FS}$ with weights corresponding to the size of the simulated sample at each step. %The uncertainty on the \Tau energy scale introduces the largest variation on $\epsilon_{FS}$. This variation is considered as a systematic uncertainty on the estimated efficiency.
 The uncertainty on $\epsilon_{FS}$  also takes into account the effect of the \Tau energy scale.
 
@@ -102,8 +101,6 @@ Signal Region & \wjets Estimation Results\\
 \hline
 \tauTau \binone & 0.72 $\pm$ 0.11 (stat.) $\pm$ 0.11 (sys.) $\pm$ 0.56 (sys. shape)\\
 \tauTau \bintwo & 2.58 $\pm$ 0.35 (stat.) $\pm$ 1.04 (sys.) $\pm$ 0.69 (sys. shape)\\
-%\tauTau \binone & 0.69 $\pm$ 0.13 (stat.) $\pm$ 0.14 (sys.) $\pm$ 0.52 (sys. shape)\\
-%\tauTau \bintwo & 2.70 $\pm$ 0.22 (stat.) $\pm$ 0.71 (sys.) $\pm$ 0.68 (sys. shape)\\
 \hline\hline
 \end{tabular}
 \label{tbl:Wbkg}
@@ -111,14 +108,11 @@ Signal Region & \wjets Estimation Results\\
 \end{table}
 
 \subsection{Drell-Yan background estimation}
-The Drell-Yan (DY) background yield is obtained by Monte Carlo simulation.  The simulation is 
+The Drell-Yan (DY) background yield is obtained from Monte Carlo simulation.  The simulation is 
 validated in a \muTau control region obtained by removing the $\Delta \Phi$
-requirement and by
-inverting the Z-veto
-(\mttwo $<$ 20 \GeV, 40 $<$ \tauMT $<$ 100 \GeV).  
-The distribution of invariant mass of ($\mu, \Tau$) system in the data is reproduced by Monte Carlo simulation.
-The transverse momentum 
-of the \Z system, which is correlated with 
+requirement and by inverting the \Z boson veto and also (\mttwo $<$ 20 \GeV,  40 $<$ \tauMT $<$ 100 \GeV).  
+The distribution of invariant mass of ($\mu, \Tau$) system for data and Monte Carlo events have a good agreement.
+The transverse momentum of the \Z boson system, which is correlated with 
 \mttwo, is also well reproduced in simulation. Table \ref{tbl:DYbkg}
 \begin{table}[!Hhtb]
 \begin{center}
@@ -139,31 +133,34 @@ Signal Region      &  DY Estimation\\
 summarizes the DY contribution in different signal regions, where the systematic uncertainties assigned as described in Section \ref{sect:sys}. 
 The systematic uncertainties assigned to the central value 
 are discussed later. For $\ell\Tau$ channels, only the contributions from the real lepton + \Tau are reported. 
-A separate method is developed to estimate the fake contamination in these channels.
+A separate method is developed to estimate the misidentified contamination in these channels.
 
 
-\subsection{\texorpdfstring{Fake \Tau in the $\ell\Tau$ channels}{Fake tau the in lepton-tau channels}}
+\subsection{\texorpdfstring{Misidentified \Tau in the $\ell\Tau$ channels}{Misidentified tau in the lepton-tau channels}}
 \label{sect:bkgFake}
 This contribution is estimated using a fake rate method.
-When the loose signal selection is applied, the number of loose $\hadtau$'s ($N_{\rm Loose}$) is:
+When the loose signal selection is applied, the number of loose $\hadtau$ ($N_{\rm Loose}$) is:
+
 \begin{equation}
 N_{\rm Loose} = N_{\rm Real} + N_{\rm Fake}
 \end{equation}
-where $N_{\rm Real}$ is the number of real $\hadtau$'s and $N_{\rm Fake}$ is the number of fake 
-$\hadtau$'s. If the selection is tightened, the number of tight $\hadtau$'s ($N_{\rm Tight}$) is
+where $N_{\rm Real}$ is the number of real $\hadtau$ and $N_{\rm Fake}$ is the number of misidentified 
+$\hadtau$. If the selection is tightened, the number of tight $\hadtau$ ($N_{\rm Tight}$) is
+
 \begin{equation}
  N_{\rm Tight} = r_{\rm Real}.N_{\rm Real} + r_{\rm Fake}.N_{\rm Fake}
 \end{equation} 
-where $r_{\rm Real}$ ($r_{\rm Fake}$) is the real (fake) rate, the probability that a loosely selected real (fake) $\hadtau$ passes the  tight  selection. 
+where $r_{\rm Real}$ ($r_{\rm Fake}$) is the real (fake) rate, the probability that a loosely selected real (misidentified) $\hadtau$ passes the  tight  selection. 
 The loose category ($N_{\rm Loose}$) can be divided to two parts, 
 tight ($N_{\rm Tight}$) and non-tight ($N_{\rm NTight}$), so one can obtain the following expression by eliminating $N_{\rm Real}$:
+
 \begin{equation}
    N_{\rm Fake}.(r_{\rm Fake}-r_{\rm Real}) = ((1 - r_{\rm Real}).N_{\rm Loose}  - N_{\rm NTight})
 \end{equation}
-$r_{\rm Fake}$.$N_{\rm Fake}$ is the contamination of fake $\hadtau$'s to the signal region. 
+$r_{\rm Fake}$.$N_{\rm Fake}$ is the contamination of misidentified $\hadtau$ to the signal region. 
 
-The fake rate ($r_{\rm Fake}$) is measured as the ratio of tightly selected $\hadtau$'s to loosely 
-selected $\hadtau$'s in a sample which is dominated by fake $\hadtau$'s. This is done in a sample of same-sign $\ell\Tau$ selected 
+The fake rate ($r_{\rm Fake}$) is measured as the ratio of tightly selected $\hadtau$ to loosely 
+selected $\hadtau$ in a sample which is dominated by misidentified $\hadtau$. This is done in a sample of same-sign $\ell\Tau$ selected 
 with the same requirements as the opposite-sign $\ell\Tau$
 selection for the signal.
 The fake rate is corrected by the difference found in MC between the 
@@ -175,7 +172,7 @@ A consistent value is measured for the fake rate.
 The real rate ($r_{\rm Real}$) is measured in Monte Carlo DY events, and it is found to 
 be $r_{\rm Real}$ = 0.766 $\pm$ 0.003 independent of \mttwo. 
 For both fake rate and real rate, 5\% relative systematic uncertainty is assigned to the central values, although 
-by varying the selections, no significance change in the values is seen.
+by varying the selections, no significant change in the values is seen.
 
 To validate the fake rate method, it is applied to a \wjets Monte Carlo event sample. 
 It correctly
@@ -189,11 +186,11 @@ fake rate and the real rate %and their statistical uncertainties
 are negligible compared to the statistical uncertainties associated with 
 the sidebands. 
 
-The estimates of the fake \Tau contamination in the two $\ell\Tau$ 
+The estimates of the misidentified \Tau contamination in the two $\ell\Tau$ 
 channels are summarized in Table~\ref{Tab.FakeEstimation}. 
 \begin{table}[!Hhtb]
 \begin{center}
-\caption{Estimation of the fake \Tau contribution in the signal region of the $\ell\Tau$ channels. The total systematic is the
+\caption{Estimation of the misidentified \Tau contribution in the signal region of the $\ell\Tau$ channels. The total systematic is the
 quadrature sum of the fractional systematics. All uncertainties are relative.
 $r_{\rm Fake}$ ($r_{\rm Real}$) is shorthand for fake (real) rate.}
 \begin{tabular}{|l|c|c|c|c|c|}

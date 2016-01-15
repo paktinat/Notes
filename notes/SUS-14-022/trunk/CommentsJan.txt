@@ -4,10 +4,12 @@ Questions coming up while reading:
 
 Tau ID in fastsim: Do you apply any additional uncertainties w.r.t. the POG recommendation for fullsim?
 
+Answer: It was discussed previously. Needs link to discussion.
+
 130: Can you motivate why you set m^vis = 0? This doesn't strike me as necessary since it's by definition the visible mass, but maybe I'm simply missing the point.
 Or doesn't this simply mean that you set the lepton mass to zero, which is just a fair approximation? In this case, it might be less confusing to simply call it m^\ell.
 
-Detailed textual comments:
+
 
 10: Clean up references 6-15: a) add relevant ATLAS references (!), b) use latest available searches, c) get rid of outdated/unnecessary results
 13: [16-18] Again should add relevant ATLAS references (still make the point that this search is missing in CMS)
@@ -24,7 +26,7 @@ Answer: The sentence comes from page6 of 1408.3316 (HtoTauTau paper).
 
 111: You write you normalise most processes to NLO cross sections and provide according references while, for many processes, in particular ttbar, a full NNLO calculation is available. Please update the sentence, the references, and the used cross sections.
 
-Section 3:
+
 
 116: "originally" sounds as if it's now used for something else, which I can't really understand from the rest of the text. Maybe just remove "originally".
 
@@ -51,40 +53,20 @@ H- Try to increase all font sizes
 - Define and explain the error band in the ratio
 - Consider to add the error band also to the main figures to substantiate your statement that observation and prediction agree within statistical uncertainties
 
-
-
-
-Meantime, below are a few comments on PAS (v17):
-
- 
-[1] Let's break Section 2 into TWO.
-
 And: add the texts on the signal MC samples where you clarified the condition of stau and sneutrino masses in chargino production and its branching fraction.
-
-
- [2] Tables – please see the link below.
-
-On Table 5: Why the luminosity uncertainty is missing?
-
- 
-
-  
-
-
-SUS-14-022 PAS v17 sections 5-6
-
-Section 5:
 
 I think it would be a good idea to add tables with the exact selection requirements (of course also in section 4)
 
-Figure 3: Please apply all recommendations I sent for figure 2 as well here. Also for both figures, remove one significant digit from the luminosity number
-
-Section 6:
+H-Figure 3: Please apply all recommendations I sent for figure 2 as well here. Also for both figures, remove one significant digit from the luminosity number
 
 200: Consider not defining "fake" and using misidentified everywhere
-203: Again non-uniform list of samples. Please make it uniform (and remove "the" before Higgs)
-206: "dropped from the discussion" sounds bad. You may want to state instead that you take these from simulated events.
+
+Answer: It is corrected in the text, but for fake rate, fake method and r_{Fake}, we prefer to keep "fake" unchanged.
+
+
 206: Like before, I suggest to give a list/table of all considered samples with cross sections.
+
+Answer: we think it is not common in CMS papers to give the cross sections. 
 
 Section 6.1: QCD estimation in tau_h tau_h channel
 
@@ -97,18 +79,10 @@ A few ideas for improvement
 
 More details on the text:
 
-208: QCD jet -> QCD multijet
-208: Not sure if it's only me but I found "two quark or gluon jets" slightly confusing as it's not clear if two belongs to quark and gluon or to jets so I thought "can't it also be one gluon and one quark jet?" You can fix it by sth along the lines of ".. if both tau_h arise from misidentified quark or gluon jets"
-
 Figure 4:
 - Reference to figure 4 and the figure itself come before SS is defined, and OS is nowhere defined
-- Please turn this into a vector graphic
-
-212: In QCD dominated sample -> in the sample dominated by QCD multijet events; apart from language: it's not clear which region is meant here
 
 Table 1:
-- background -> background event yields
-- systematic -> systematic uncertainty
 - If you have one source of statistical uncertainty and two sources of systematic uncertainty, I don't understand why you put one source of systematic uncertainty together with the statistical uncertainty. I'd rather give all numbers separately
 - As discussed previously, this immediately warrants the question why you don't go to even looser definitions of your control regions if you're clearly dominated by statistical uncertainties (if it's true, not clear from lumping everything together). I would appreciate a statement on this in the text
 
@@ -128,22 +102,135 @@ Table 2: Suddenly an uncertainty appears that doesn't seem to be described in th
 6.3 general:
 - You don't mention background from e.g. direct Z->mu mu/ee decays. Can you elaborate a bit on this? Strictly speaking, the text now says that you don't consider these backgrounds, so please make sure that you mention that you take them from simulation (I hope!), and maybe also mention whether the yields are such small that you can ignore the actually very sizeable uncertainties in the e->tau_h / mu->tau_h fake rates
 
-248: by -> from
-250: Is the selection requirement in brackets really the inverted Z veto? also: Z -> Z boson
-251: what does "is reproduced" mean?
-252: Z -> Z boson
 Table 3: In the two sections before, you discuss systematic uncertainties; here you make a forward reference to section 7, which should be avoided
 253/4: where -> with; Sentence starting with "The sys.." is the same as before and can be removed
 255: Move this to the beginning of 6.3 and introduce this section better (say for which channels this estimation applies; say that it applies only to events with real lepton plus tau_h, if it's the case)
 
 6.4 general:
 - As mentioned before, make sure loose and tight are properly defined (!)
-- You can avoid missing line numbers by properly setting off equations with empty lines in latex
 
-258-259: Mention
 263: What's the size of this correction? I would give the number.
 268/269: This reads like a completely arbitrary uncertainty. Please motivate this better (there will certainly be statistical uncertainties, uncertainties in the MC estimation of the OS-SS correction, dependence on tau pT, which has an effect on your final cut variables, etc)
 271: Also here, I would prefer to give the numbers so we can see to what extent it closes (1%? 10%? 50%?)
 278: One small difference are the different anti-muon/anti-electron discriminators, or aren't they? From lines 92-93 and section 5, it's not clear what exactly you do. I suggest to write exactly what you do there.
+
+
+SUS-14-022 PAS v17 sections 7-10
+
+Section 7:
+Table 5:
+- tau energy scale: It's not clear to me why the tau energy scale uncertainty of 3% per tau happens to have the exact same effect for signal and all simulated backgrounds, and also the same effect for events with one and two hadronic taus. Can you elaborate on this? Is this what you put into the datacards? Otherwise I would have thought that a range of values would be more reasonable.
+- I would also find it useful if you could indicate in the table which uncertainties are shape-altering
+- For pileup, ptmiss and MC statistics I would also rather expect a range of values, or do you really put these values in? If the latter, how can the MC statistics uncertainty be the exact same number in all signal regions for all backgrounds?
+- I would find it more useful to at least separate by simulated backgrounds and backgrounds estimated from data
+- Total: Is this simply the quadratic sum?
+
+288-289: What exactly do you mean by "accessible"? I think that also the model-independent cross section limits have some value regardless of the exact parameters, so it's maybe a too drastic shortcut to use just one value, even if conservative
+291: You *may* want to always write "uncertainty in" instead of "on" to comply with the PubCom guidelines
+291-292: Add a reference if you haven't measured these yourselves; otherwise add a brief statement how you did it and add a reference for tag and probe in case
+293-296: I think you should use the H->tau tau reference, or the TAU-14-001 paper, to justify these uncertainties since you haven't measured them yourself
+297-299: Add reference for b-tag uncertainties
+300-302: Add proper reference to inelastic xsec + uncertainties
+307: remove "which is a matrix-element generator" - this is trivial and doesn't help to make your point (both are actually)
+310-311: I guess what you want to say is that these are multi-leg generators (?) and that the uncertainties are covered by scale variations (??). Like currently written, it doesn't make much sense.
+312-319: Is there a citable reference for this procedure? please add if yes
+312: Technically, you should rather group uncertainties by sources since these should be correlated in the final model. Just consider the case of the hadronic tau scale uncertainty: When varying it, you should calculate the effect on ptmiss at the same time and use this as one nuisance parameter. If the other parameters do not appear as additional single uncertainties, it's of course ok to add them in quadrature to make the total list of uncertainties shorter. From the text, it's not perfectly clear what you actually do - I guess you're even doing the right thing. So maybe you want to improve the description such that it's clear that ptmiss-related uncertainties can arise from a number of sources, some of which are already described above (tau and lepton energy scales), some of which are negligible, and some of which lead to the 5% uncertainty (which one is it actually?)
+320-322: "are taken to be" sounds weird - you can strictly calculate these numbers. Why do you make the shortcut to put these to 10% and 20% even though you have completely different samples, and what are the actual underlying numbers?
+323: Give a reference to these differences.
+323-324: You clearly cannot say that the fast simulation is "insufficient". I would just say that there are differences between the fast and full simulation, and that these give rise to the uncertainties you mention.
+328: The connection is not logical: If you have very few remaining events, this should rather give rise to a properly calculated large uncertainty of statistical origin, and not to an increased theory uncertainty. The latter may well be required in addition to the statistical uncertainty because of the larger effect of scale variations in the considered phase space. 50% may be an adequate choice given that these are very small backgrounds.
+331: Do you really add all uncertainties in quadrature for the final fit? This would be wrong since you have different signal categories that you fit at the same time. Can you elaborate a bit on this and let us know whether you correlate the uncertainties across signal regions?
+
+Section 8:
+
+338: I would move this to the beginning of the next paragraph, where you actually describe the content of the figure, and add here a quick conclusion concerning the final event yields
+
+Table 6:
+- VV is undefeind
+- "Fake" is not a good name for a sample, in particular if it doesn't include multijet production! (a comment that applies also in other parts of the paper draft)
+- Caption: - mention which uncertainties are shown for the predictions, i.e. what are the first and second uncertainty numbers (ideally in the table itself as well) - I would refrain from repeating here to which degree the different backgrounds are estimated from simulation/data/mixture/... - in particular, remove "but the 'Fake' for the tt channel is not completely data driven" which sounds awkward. You could e.g. write that the largest backgrounds (the "Fake" and QCD contributions) are derived from data as described above.
+
+344-345: "are considered" is too vague. Rather explain that the uncertainty band contains the contributions you mention
+348: a pair are -> is; this also requires changing the text after "and", so you may rather change "a pair of" to "two" (or something completely different)
+353: add comma after [56] (and consider improving the "namely" construction)
+353: "exclude signal points": this is very indirect, you rather set limits on cross sections (maybe relative to predicted ones)
+354: Confidence Level -> confidence level
+355: Please mention both expected and observed exclusions
+356-359: Do we really need this explicit statement about ATLAS here? This sounds too competitive to me, so I'd rather remove this sentence (fine and important for internal consumption of course)
+366/367: Do you mention the signal cross sections somewhere? You should ideally have a reference from which these numbers clearly evolve, or you give these numbers in an additional table, e.g. in an appendix. In addition, I think it would be good to also put a table of the limits on cross sections somewhere into the paper or public page.
+369: I would again remove the comparison with ATLAS. I also find it inconsistent to only show the tau_h tau_h results separately; so please either add the l + tau_h limit plot as well, or remove the di-tau_h plot to an appendix. Or is the reason that this is the basis for the direct stau limits that are following? In this case, please explain it here.
+371-372: Can you remind me whether you have separate signal MC samples for this interpretation - I suppose so? Or is it only a re-interpretation as you write here? If the latter, please explain why it's applicable.
+374: and 95% -> and a 95%
+375: section. -> section as a function of stau mass
+375: If you don't want to add the l+tau_h channels from the beginning, just say in the beginning that you don't consider them here as they won't improve the results. Here it comes a bit out of nothing.
+375: Use proper whitespace between figure and 8
+376-377: Please again add a reference that has an explicit list of these cross sections or better add a table of these cross sections - this is important! Otherwise it would be better to make the plot in terms of absolute cross section and to draw a separate line for the SUSY predictions
+377: ATLAS sets explicit limits on pairs of left- and right-handed staus. Can you comment on why you don't do it here? This should certainly be mentioned in the text.
+
+Section 9:
+
+I will not comment on the sentences and language in section 9 since I don't fully understand to which extent the approach chosen here makes sense. My most important questions is whether the implicit assumption is justified that the signal and background uncertainties in the 4 signal regions are completely uncorrelated... I am rather used to giving out 2D excluded cross sections for different model parameters, which have very similar information. You could still give out section 9 but may move it to an appendix.
+
+Section 10:
+
+At the beginning of the section, a quick recapitulation of the search strategy similar to the abstract would be good.
+
+
+Please add a statement also on the direct stau production - may be as simple as stating that you do set limits as a function of stau mass. Also add that you provide the limits in a model-independent way, if you choose to do so.
+
+ Commnets from Arun:
+
+
+1. QCD bkg estimation in sec 6.1: First of all the control regions in Fig.4
+is really confusing. From the definition of the control regions (II and
+III) it seems like at least one tau_h pass the loose tau isolation while
+the other may or may not pass the loose isolation. Actually both tau_h pass
+loose isolation. I would suggest it to redefine or, at least add,
+loose-loose, loose-medium, medium-medium as you have in AN.
+
+ Given that the control regions have both tau_h candidates passing loose
+isolation (medium iso for CR-I), it may have significant contribution from
+W+jets events. What is the level of W+jets contamination in these control
+regions? If it is significant, how do you trust MC to subtract W+jets
+contribution? How many MC W+jets events (entries) survive in the control
+regions?
+
+How is the QCD events obtained from data to measure the efficiency of the
+deltaphi cut? Could you add a few line of text in AN and PAS?
+Is it SS events with all signal like selections and with/without DeltaPhi
+cut?
+What is the statistics of events with these selections and what is fraction
+of other background contamination?
+
+2. Table.3 in PAS: Starting from the same DY MC sample for all signal
+region in this table, how do you get significantly smaller statistical
+uncertainty for SR1 relative to other 3 regions? How many MC events
+(entries) do you have in this bin? Given that the yield in SR1 and SR2 are
+not significantly different, I would have expected their relative
+statistical uncertainty to be similar.
+
+Again the validation of MC is performed in a control region which is far
+away from the signal selection. Is it possible to find some control region
+closer to the signal selection?
+I think, one needs to validate the MT2 and SumMT(tau) distributions in a
+control region where other cuts could be reversed.
+
+3. sec. 6.1.2 in AN: you mention that events in all bins (except bin-1) in
+Fig.8 are independent. Does it mean that no events which pass (fail) lepton
+veto (in bin 2,3) will pass (fail) DeltaPhi cut (bin 4,5)?
+Do you understand why the estimation in inverse Z veto and lepton veto are
+quite off from the rest of the bins? In SR2 region, the fit value seems to
+be strongly biased by these two bins as it has smaller uncertainty than the
+others. I would have expected to exclude the last bin from the fit.
+
+4. sec.6.4: What is the number of initial events ( N_loose and N_NTight in
+eq.6 ) before applying the fake rate method? Given the fake probability and
+the final fake estimation, I guess, the N_loose is of the order of 10
+events.
+I am wondering whether it is ok to apply a probabilistic method starting
+with a small number of events. Should not the statistics in the loose
+category be increased significantly by loosening further the isolation cut
+on tau candidates?
+
 
 
