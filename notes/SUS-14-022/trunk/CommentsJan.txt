@@ -13,12 +13,6 @@ Or doesn't this simply mean that you set the lepton mass to zero, which is just 
 
 10: Clean up references 6-15: a) add relevant ATLAS references (!), b) use latest available searches, c) get rid of outdated/unnecessary results
 13: [16-18] Again should add relevant ATLAS references (still make the point that this search is missing in CMS)
-17: You haven't introduced the symbols for taus and charginos
-
-I would actually remove the last sentence of the 3rd paragraph and merge it with the sentences starting in line 19 to avoid duplication and improve the flow of the text. There is also some more overlap between the 3rd and 4th paragraphs, so consider to tighten the text a bit.
-
-
-Section 2
 
 95: Neutral hadrons are NOT used in the tau ID 
 
@@ -53,7 +47,7 @@ H- Try to increase all font sizes
 - Define and explain the error band in the ratio
 - Consider to add the error band also to the main figures to substantiate your statement that observation and prediction agree within statistical uncertainties
 
-And: add the texts on the signal MC samples where you clarified the condition of stau and sneutrino masses in chargino production and its branching fraction.
+And: add the texts on the signal MC samples where you clarified the condition of stau and sneutrino masses in chargino production and its branching fraction.DONE
 
 I think it would be a good idea to add tables with the exact selection requirements (of course also in section 4)
 

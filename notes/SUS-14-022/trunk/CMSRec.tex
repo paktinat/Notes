@@ -24,7 +24,7 @@ originating from b-quarks.  This algorithm
 In this analysis the "medium" working point is used. The working point corresponds to an average b-tagged jets efficiency of 70\%, 
 light-quark jet misidentification rate of 1.5\%, and $\cPqc$-quark jet misidentification rate of 20\% 
 for jets with a \pt\ value greater than 60\GeV.
-Jets with  \PT $>$ 40 \GeV and $\abs{\eta} < 5.0$ and b-tagged jets with \PT $>$ 20 \GeV and $\abs{\eta} < 2.4$ are considered in this analysis.
+Jets with  \PT $>$ 40\GeV and $\abs{\eta} < 5.0$ and b-tagged jets with \PT $>$ 20\GeV and $\abs{\eta} < 2.4$ are considered in this analysis.
 % {\bf (Do you really use jets up to 5.0 in eta?)} 
 
 
@@ -51,7 +51,14 @@ In the following figures and tables, the events containing at least a top quark 
 Different Higgs boson productions, gluon fusion, vector boson fusion and associated production of Higgs with $\cPZ$ or $\PW$ or $\cPqt\cPaqt$ are considered and referred to as ``Higgs''. To generate the Monte Carlo events the masses of the top quark and Higgs boson are 172.5\GeV and 125\GeV, respectively.
 
 For parton shower and fragmentation, all generators are interfaced with \PYTHIA 6.4~\cite{Sjostrand:2006za}.
-\PYTHIA is also used to generate signal events (chargino pair-production). To improve the modeling of $\Pgt$ decays, we use the  \TAUOLA~\cite{Davidson:2010rw} package.
+\PYTHIA is also used to generate signal events (chargino pair-production). To improve the modeling of $\Pgt$ decays, 
+we use the \TAUOLA~\cite{Davidson:2010rw} package. The simplified model which is used to describe the signal events is shown 
+in Fig.~\ref{fig:Productions} (left). In every event a pair of \chione 
+are produced and decay exclusively to the shown final states which contain two $\tau$, two $\nu_{\tau}$ and two neutralino (\PSGczDo).
+The mediators in the decay of \chione can be either \sTau or $\sNu_{\tau}$. All  \sTau and $\sNu_{\tau}$ 
+are produced  on-shell. They have equal masses which is the mean value of the masses of the \chione   and \PSGczDo.
+The two distinct decay chains in the left diagram of Fig.~\ref{fig:Productions} are assumed to have equal branching ratios, which is 50\%.
+
 
 In the dataset considered in this paper,
 there were on average 21 proton-proton interactions (``pileup'') in each bunch-crossing.
