@@ -15,24 +15,27 @@ Events from QCD multijet production can enter the signal regions
 if both \Tau arise from misidentified quark or gluon jets
 and the rest of the kinematical selections are also satisfied.  
 Isolation is an important 
-discriminant between misidentified and real \Tau objects. For this purpose, the control regions (CR) are defined using the isolation variables for the \Tau 
-pair and \mttwo or \SumMT, as illustrated in Fig.~\ref{fig:ABCDQCD}. 
+discriminant between misidentified and real \Tau objects. For this purpose, the control regions (CR) are defined using the isolation variables 
+for the \Tau pair and \mttwo or \SumMT. To reduce contamination from real \tauTau events, 
+in the control regions with at least one loose \Tau object, 
+the same-sign (SS) pairs are selected. Residual contributions from real 
+\tauTau and \wjets events are subtracted based on Monte Carlo expectations. The control regions and signal region are 
+illustrated in Fig.~\ref{fig:ABCDQCD}. 
 \begin{figure}[!Hhtb]
 \centering
 \includegraphics[angle=0,scale=0.28]{Bkg/ABCD.png}
-\caption{Schematic illustration of four control regions used to estimate the QCD backgrounds.}
+\caption{Schematic illustration of four control regions used to estimate the QCD backgrounds. SS and OS stand for same-sign and opposite-sign pairs.}
 \label{fig:ABCDQCD}
 \end{figure}
 In the sample dominated by QCD multijet events (CR1 and CR2), isolations of misidentified \Tau objects verified 
 to be uncorrelated with \mttwo or \SumMT.
-QCD background in the signal regions are estimated by counting events in the control regions with high \mttwo or \SumMT and loosely isolated \Tau
-and scaling by the transition factor to go from loosely isolated to tightly isolated \Tau which is evaluated in the low \mttwo or \SumMT.
+QCD background in the signal regions are estimated by counting events in the control regions with high \mttwo or \SumMT  
+and loosely isolated SS \tauTau (CR3)
+and scaling by the transition factor to go from loosely isolated SS to tightly isolated oppsite-sign (OS) 
+\tauTau which is evaluated in the low \mttwo or \SumMT (CR1 divided by CR2).
 
-To reduce contamination from real \tauTau events, in the control regions with at least one loose \Tau object, 
-the same-sign (SS) pairs are selected. Residual contributions from real 
-\tauTau and \wjets events are subtracted based on Monte Carlo expectations.
 In addition, the requirement on $\Delta \Phi$
-is removed to improve the statistics of this control regions. 
+is removed to improve the statistics of the control regions. 
 The final estimate of the background
 is taken from the control regions extrapolation with corrections
 associated with the same-sign requirement and the efficiency of 
@@ -41,14 +44,14 @@ the $\Delta \Phi$ requirement for QCD events.
 Table \ref{4QCDbg} 
 \begin{table}[!Hhtb]
 \begin{center}
-\caption{The estimated QCD multijet background event yields in the \tauTau channel. The first uncertainty is statistical and systematic uncertainty of the method, the second is the extra systematic uncertainty due to correlation assumptions.}
+\caption{The estimated QCD multijet background event yields in the \tauTau channel. The first two uncertainties are statistical and systematic uncertainties of the method, the last uncertainty is the extra systematic uncertainty due to correlation assumptions.}
 \begin{tabular}{|l|c|}
 \hline\hline
  Signal Region      &  Estimation\\
 \hline\hline
-\tauTau \binone      & 0.13 $\pm$ 0.19 $\pm$ 0.10 \\
+\tauTau \binone      & 0.13 $\pm$ 0.06(Stat) $\pm$ 0.19(Sys) $\pm$ 0.10 (Fit Unc.) \\
 \hline
-\tauTau \bintwo      & 1.15 $\pm$ 0.81 $\pm$ 0.25  \\
+\tauTau \bintwo      & 1.15 $\pm$ 0.39(Stat) $\pm$ 0.70(Sys) $\pm$ 0.25 (Fit Unc.) \\
 \hline\hline
 \end{tabular}
 \label{4QCDbg}
@@ -58,13 +61,14 @@ summarizes the estimation of the QCD background contribution in the two signal r
 correcting for the $\Delta \Phi$ efficiency.  
 The systematic uncertainties are associated with the uncertainty on the validity 
 of the assumption that isolation and \mttwo or \SumMT are not correlated and the systematic uncertainties on the residual 
-SM backgrounds which  are subtracted based on Monte Carlo expectations.
+SM backgrounds which  are subtracted based on Monte Carlo expectations. The latter includes both statistical uncertainty of the Monte Carlo 
+events and also 28\% systematic uncertainty assigned uniformly to all simulated events.
 
 
 \subsection{\texorpdfstring{\wjets background estimation in the $\tauTau$ channel}{W+jets background estimation in the tau-tau channel}}
 \label{sect:bkgW}
 The contribution of the \wjets background in \tauTau channels is taken from simulation where the simulation of this process is validated in a data control sample. 
-In different signal regions after the final requirement of \mttwo $>$ 90 \GeV or \SumMT $>$ 250 \GeV, 
+In different signal regions after the final requirement of \mttwo $>$ 90\GeV or \SumMT $>$ 250\GeV, 
 the \wjets Monte Carlo has large statistical uncertainties and the predicted value is not reliable. 
 The efficiencies of the final selection requirements, $\epsilon_{\rm M_{T2}}=\frac{N_{\rm M_{T2}>90}}{N_{\rm M_{T2}>40}}$ for  \binone and $\epsilon_{\SumMT}=\frac{N_{\SumMT>250}}{N_{40<\rm M_{T2}<90}}$ for \bintwo, generally referred to as $\epsilon_{FS}$, are evaluated in MC after relaxing one by one the other kinematic selections (DPhi, lep veto, …). The resulting efficiency values are found to be compatible within statistical uncertainties, and their weighted average is used to rescale the MC yields before the final selection.
 The final estimations can be read as:
@@ -72,7 +76,7 @@ The final estimations can be read as:
 N_{\rm SR} = N_{\rm Before~Final~Selection} \times \epsilon_{FS}.
 \end{equation}
 where, $N_{\rm Before~Final~Selection}$ is the number of \wjets events just before applying the final selection 
-(\mttwo $>$ 90 \GeV for \binone and \SumMT $>$ 250 \GeV for \bintwo) and $N_{\rm SR}$ is the final estimation of \wjets events in the signal region.
+(\mttwo $>$ 90\GeV for \binone and \SumMT $>$ 250\GeV for \bintwo) and $N_{\rm SR}$ is the final estimation of \wjets events in the signal region.
 
 Since the size of the simulated \wjets sample is not large enough to adequately populate our desired phase space, %$\epsilon_{\rm M_{T2}}$ 
 $\epsilon_{FS}$ is calculated in a phase space with looser selection criteria. It is first evaluated in a \wjets sample with a pair of opposite-charge \Tau where the \Tau candidates are selected similar to those in signal region. 
@@ -80,15 +84,11 @@ Additional signal selection requirements, such as $\Delta \Phi$ or lepton veto, 
 The uncertainty on $\epsilon_{FS}$  also takes into account the effect of the \Tau energy scale.
 
 The \wjets MC is validated in data using a same-sign \muTau control sample, where both the normalization and $\epsilon_{FS}$ are checked. 
-The normalization is found to be compatible between data and simulation, within uncertainties. For $\epsilon_{FS}$, the value measured in 
-data is used and the difference from the MC value is taken as an additional uncertainty.
+The normalization is found to be compatible between data and simulation, within uncertainties. For $\epsilon_{FS}$, 
+to take into account the difference between the data and MC values, the MC prediction in each
+of the two search regions is corrected by the ratio of the two values and its uncertainty is also
+taken into account. This part of the systematic uncertainty is referred to as ``sys. shape''"
 
-%Since the \wjets contamination is estimated from simulation, one needs to further verify the overall normalization as well as the $\epsilon_{FS}$ estimation in data. The control sample used for such validation is constructed based on the \muTau signal selection requirements. The selected \muTau pair in this region is required to be same-sign with a less strict \Tau isolation condition. Moreover, b-tagged jets are vetoed, \tauMT requirement is removed and the \mttwo (\SumMT) requirement is changed to $40<\mttwo<60\,\GeV$ ($120<\SumMT<220\,\GeV$). The \wjets events constitute more than 90\% of this control sample and the overall normalization from simulation is consistent with data, within uncertainties.
-
-%To check the data-simulation compatibility for the $\epsilon_{FS}$ estimate, %the \mttwo condition is modified to $\mttwo>40\,\GeV$. The contribution of \wjets events remains almost unchanged. 
-%the same control sample is used. The $\epsilon_{FS}$ quantity is evaluated in data and simulation and the data-to-simulation ratio is used to correct the $\epsilon_{FS}$ estimation in signal region. The difference between the predicted and measured $\epsilon_{FS}$ is taken into account as an additional uncertainty. 
-
-%The final value for the contribution of \wjets in this signal region is $0.69\pm0.54$.
 Table \ref{tbl:Wbkg} summarizes the results of  the method for different signal regions of the \tauTau channel.
 \begin{table}[!Hhtb]
 \begin{center}
@@ -108,31 +108,35 @@ Signal Region & \wjets Estimation Results\\
 \end{table}
 
 \subsection{Drell-Yan background estimation}
-The Drell-Yan (DY) background yield is obtained from Monte Carlo simulation.  The simulation is 
-validated in a \muTau control region obtained by removing the $\Delta \Phi$
-requirement and by inverting the \Z boson veto and also (\mttwo $<$ 20 \GeV,  40 $<$ \tauMT $<$ 100 \GeV).  
+The Drell-Yan (DY) background yield is obtained from Monte Carlo simulation. The Monte Carlo sample is inclusive for leptons and 
+includes decay to different lepton pairs ($ee$, $\mu\mu$ and $\tau\tau$). It is validated that the contribution from $ee$ and $\mu\mu$
+is very small, but for the \leptonTau channels the contribution from these events which have a real lepton and a misidentified \Tau 
+is evaluated in the next section, when \wjets contribution is estimated.
+The simulation is validated in a \muTau control region obtained by removing the $\Delta \Phi$
+requirement and by inverting the \Z boson veto and also (\mttwo $<$ 20\GeV,  40 $<$ \tauMT $<$ 100\GeV).  
 The distribution of invariant mass of ($\mu, \Tau$) system for data and Monte Carlo events have a good agreement.
 The transverse momentum of the \Z boson system, which is correlated with 
 \mttwo, is also well reproduced in simulation. Table \ref{tbl:DYbkg}
 \begin{table}[!Hhtb]
 \begin{center}
-\caption{DY background yield expected in four signal regions. The first uncertainty is statistical and the second is systematic. The systematic uncertainties assigned to the central values are discussed in Section \ref{sect:sys}.}
+\caption{DY background yield expected in four signal regions. 
+%The first uncertainty is statistical and the second is systematic. The systematic uncertainties assigned to the central values are discussed in Section \ref{sect:sys}.}
+Only the statistical uncertainties are reported.}
 \begin{tabular}{|l|c|}
 \hline\hline
 Signal Region      &  DY Estimation\\
 \hline\hline
-\eTau              & 0.20  $\pm$  0.13  $\pm$ 0.05 \\\hline
-\muTau             & 0.26  $\pm$  0.13  $\pm$ 0.07 \\\hline
-\tauTau \binone    & 0.56  $\pm$  0.07  $\pm$ 0.16 \\\hline
-\tauTau \bintwo    & 0.81  $\pm$  0.56  $\pm$ 0.23 \\
+\eTau              & 0.20  $\pm$  0.13\\\hline%  $\pm$ 0.05 \\\hline
+\muTau             & 0.26  $\pm$  0.13\\\hline%  $\pm$ 0.07 \\\hline
+\tauTau \binone    & 0.56  $\pm$  0.07\\\hline%  $\pm$ 0.16 \\\hline
+\tauTau \bintwo    & 0.81  $\pm$  0.56\\\hline%  $\pm$ 0.23 \\
 \hline\hline
 \end{tabular}
 \label{tbl:DYbkg}
 \end{center}
 \end{table}
-summarizes the DY contribution in different signal regions, where the systematic uncertainties assigned as described in Section \ref{sect:sys}. 
-The systematic uncertainties assigned to the central value 
-are discussed later. For $\ell\Tau$ channels, only the contributions from the real lepton + \Tau are reported. 
+summarizes the DY contribution in different signal regions. 
+For $\ell\Tau$ channels, only the contributions from the real lepton + \Tau are reported. 
 A separate method is developed to estimate the misidentified contamination in these channels.
 
 
@@ -164,10 +168,10 @@ selected $\hadtau$ in a sample which is dominated by misidentified $\hadtau$. Th
 with the same requirements as the opposite-sign $\ell\Tau$
 selection for the signal.
 The fake rate is corrected by the difference found in MC between the 
-same-sign and opposite-sign fake rates.
+same-sign and opposite-sign fake rates which is 1.144 $\pm$ 0.019.
 The final value of the fake rate is $r_{\rm Fake}$ = 0.51 $\pm$ 0.01. 
 As a cross check, the fake rate was also measured in an opposite sign region with a reversed
-\MPT requirement, i.e., \MPT $<$ 30 \GeV.
+\MPT requirement, i.e., \MPT $<$ 30\GeV.
 A consistent value is measured for the fake rate.  
 The real rate ($r_{\rm Real}$) is measured in Monte Carlo DY events, and it is found to 
 be $r_{\rm Real}$ = 0.766 $\pm$ 0.003 independent of \mttwo. 
