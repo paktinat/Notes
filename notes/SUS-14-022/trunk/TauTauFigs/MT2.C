@@ -1,7 +1,7 @@
-{
+void MT2(){
 //=========Macro generated from canvas: TBD_flipped_log_comp_overlayc_ratio/
 //=========  (Wed Aug 12 16:31:41 2015) by ROOT version5.34/03
-   TCanvas *TBD_flipped_log_comp_overlayc_ratio = new TCanvas("TBD_flipped_log_comp_overlayc_ratio", "",3,26,600,600);
+   TCanvas *TBD_flipped_log_comp_overlayc_ratio = new TCanvas("MT2_SSQCD", "",3,26,600,600);
    gStyle->SetOptFit(1);
    TBD_flipped_log_comp_overlayc_ratio->Range(0,0,1,1);
    TBD_flipped_log_comp_overlayc_ratio->SetFillColor(0);
@@ -13,27 +13,29 @@
    TBD_flipped_log_comp_overlayc_ratio->SetBottomMargin(0.17);
    TBD_flipped_log_comp_overlayc_ratio->SetFrameBorderMode(0);
    TBD_flipped_log_comp_overlayc_ratio->SetFrameBorderSize(0);
+
+   TBD_flipped_log_comp_overlayc_ratio->SetLogy();
   
-// ------------>Primitives in pad: TBD_flipped_log_comp_overlay_plotpad
-   TPad *TBD_flipped_log_comp_overlay_plotpad = new TPad("TBD_flipped_log_comp_overlay_plotpad", "Pad containing the overlay plot",0,0.211838,1,1);
-   TBD_flipped_log_comp_overlay_plotpad->Draw();
-   TBD_flipped_log_comp_overlay_plotpad->cd();
-   TBD_flipped_log_comp_overlay_plotpad->Range(27.48331,-2.642362,122.6101,3.417355);
-   TBD_flipped_log_comp_overlay_plotpad->SetFillColor(0);
-   TBD_flipped_log_comp_overlay_plotpad->SetFillStyle(4000);
-   TBD_flipped_log_comp_overlay_plotpad->SetBorderMode(0);
-   TBD_flipped_log_comp_overlay_plotpad->SetBorderSize(2);
-   TBD_flipped_log_comp_overlay_plotpad->SetLogy();
-   TBD_flipped_log_comp_overlay_plotpad->SetLeftMargin(0.131579);
-   TBD_flipped_log_comp_overlay_plotpad->SetRightMargin(0.08);
-   TBD_flipped_log_comp_overlay_plotpad->SetTopMargin(0.06895515);
-   TBD_flipped_log_comp_overlay_plotpad->SetBottomMargin(0.07206074);
-   TBD_flipped_log_comp_overlay_plotpad->SetFrameLineWidth(3);
-   TBD_flipped_log_comp_overlay_plotpad->SetFrameBorderMode(0);
-   TBD_flipped_log_comp_overlay_plotpad->SetFrameBorderSize(0);
-   TBD_flipped_log_comp_overlay_plotpad->SetFrameLineWidth(3);
-   TBD_flipped_log_comp_overlay_plotpad->SetFrameBorderMode(0);
-   TBD_flipped_log_comp_overlay_plotpad->SetFrameBorderSize(0);
+// // ------------>Primitives in pad: TBD_flipped_log_comp_overlay_plotpad
+//    TPad *TBD_flipped_log_comp_overlay_plotpad = new TPad("TBD_flipped_log_comp_overlay_plotpad", "Pad containing the overlay plot",0,0.211838,1,1);
+//    TBD_flipped_log_comp_overlay_plotpad->Draw();
+//    TBD_flipped_log_comp_overlay_plotpad->cd();
+//    TBD_flipped_log_comp_overlay_plotpad->Range(27.48331,-2.642362,122.6101,3.417355);
+//    TBD_flipped_log_comp_overlay_plotpad->SetFillColor(0);
+//    TBD_flipped_log_comp_overlay_plotpad->SetFillStyle(4000);
+//    TBD_flipped_log_comp_overlay_plotpad->SetBorderMode(0);
+//    TBD_flipped_log_comp_overlay_plotpad->SetBorderSize(2);
+//    TBD_flipped_log_comp_overlay_plotpad->SetLogy();
+//    TBD_flipped_log_comp_overlay_plotpad->SetLeftMargin(0.131579);
+//    TBD_flipped_log_comp_overlay_plotpad->SetRightMargin(0.08);
+//    TBD_flipped_log_comp_overlay_plotpad->SetTopMargin(0.06895515);
+//    TBD_flipped_log_comp_overlay_plotpad->SetBottomMargin(0.07206074);
+//    TBD_flipped_log_comp_overlay_plotpad->SetFrameLineWidth(3);
+//    TBD_flipped_log_comp_overlay_plotpad->SetFrameBorderMode(0);
+//    TBD_flipped_log_comp_overlay_plotpad->SetFrameBorderSize(0);
+//    TBD_flipped_log_comp_overlay_plotpad->SetFrameLineWidth(3);
+//    TBD_flipped_log_comp_overlay_plotpad->SetFrameBorderMode(0);
+//    TBD_flipped_log_comp_overlay_plotpad->SetFrameBorderSize(0);
    
    THStack *h_stack = new THStack();
    h_stack->SetName("h_stack");
@@ -107,8 +109,6 @@
    h__Higgs->GetZaxis()->SetLabelSize(0.035);
    h__Higgs->GetZaxis()->SetTitleSize(0.035);
    h__Higgs->GetZaxis()->SetTitleFont(42);
-   h_stack->Add(h__Higgs,"");
-   h__MC->Add(h__Higgs);
    Double_t xAxis2[4] = {40, 65, 90, 115}; 
    
    TH1D *h__WWjets = new TH1D("h__WWjets","",3, xAxis2);
@@ -146,8 +146,6 @@
    h__WWjets->GetZaxis()->SetLabelSize(0.035);
    h__WWjets->GetZaxis()->SetTitleSize(0.035);
    h__WWjets->GetZaxis()->SetTitleFont(42);
-   h_stack->Add(h__WWjets,"");
-   h__MC->Add(h__WWjets);
    Double_t xAxis3[4] = {40, 65, 90, 115}; 
    
    TH1D *h__Top = new TH1D("h__Top","",3, xAxis3);
@@ -183,8 +181,6 @@
    h__Top->GetZaxis()->SetLabelSize(0.035);
    h__Top->GetZaxis()->SetTitleSize(0.035);
    h__Top->GetZaxis()->SetTitleFont(42);
-   h_stack->Add(h__Top,"");
-   h__MC->Add(h__Top);
    Double_t xAxis4[4] = {40, 65, 90, 115}; 
    
    TH1D *h__Zjets = new TH1D("h__Zjets","",3, xAxis4);
@@ -223,8 +219,6 @@
    h__Zjets->GetZaxis()->SetLabelSize(0.035);
    h__Zjets->GetZaxis()->SetTitleSize(0.035);
    h__Zjets->GetZaxis()->SetTitleFont(42);
-   h_stack->Add(h__Zjets,"");
-   h__MC->Add(h__Zjets);
    Double_t xAxis5[4] = {40, 65, 90, 115}; 
    
    TH1D *h__Wjets = new TH1D("h__Wjets","",3, xAxis5);
@@ -260,8 +254,6 @@
    h__Wjets->GetZaxis()->SetLabelSize(0.035);
    h__Wjets->GetZaxis()->SetTitleSize(0.035);
    h__Wjets->GetZaxis()->SetTitleFont(42);
-   h_stack->Add(h__Wjets,"");
-   h__MC->Add(h__Wjets);
    Double_t xAxis6[4] = {40, 65, 90, 115}; 
    
    TH1D *h__QCD = new TH1D("h__QCD","",3, xAxis6);
@@ -300,9 +292,27 @@
    h__QCD->GetZaxis()->SetLabelSize(0.035);
    h__QCD->GetZaxis()->SetTitleSize(0.035);
    h__QCD->GetZaxis()->SetTitleFont(42);
+
+   h_stack->Add(h__Higgs,"");
+   h_stack->Add(h__WWjets,"");
+   h_stack->Add(h__Top,"");
+   h_stack->Add(h__Zjets,"");
+   h_stack->Add(h__Wjets,"");
    h_stack->Add(h__QCD,"");
+
+   h__MC->Add(h__WWjets);
+   h__MC->Add(h__Higgs);
+   h__MC->Add(h__Top);
+   h__MC->Add(h__Zjets);
+   h__MC->Add(h__Wjets);
    h__MC->Add(h__QCD);
    h_stack->Draw("hist");
+
+   h__MC->SetLineColor(kWhite);
+   h__MC->SetFillColor(kBlack);
+   h__MC->SetFillStyle(3004);
+   h__MC->Draw("E2 SAME");
+
    Double_t xAxis7[4] = {40, 65, 90, 115}; 
    
    TH1D *h2_copy = new TH1D("h2_copy","",3, xAxis7);
@@ -365,47 +375,19 @@
    h_susy->GetZaxis()->SetTitleSize(0.035);
    h_susy->GetZaxis()->SetTitleFont(42);
    h_susy->Draw("samehist");
-   TLatex *   tex = new TLatex(0.13,0.943,"#geq 10 jets");
-tex->SetNDC();
-   tex->SetTextSize(0.03);
-   tex->SetLineWidth(2);
-   //tex->Draw();
-      tex = new TLatex(0.68,0.943,"#sqrt{s} = 8 TeV, L = 18.1 fb^{-1}");
-tex->SetNDC();
+
+   TLatex *   tex ;
+   tex = new TLatex(0.68,0.943,"#sqrt{s} = 8 TeV, L = 18.1 fb^{-1}");
+   tex->SetNDC();
    tex->SetTextSize(0.0305);
    tex->SetLineWidth(2);
    tex->Draw();
-   tex = new TLatex(50,240,"CMS Preliminary");
+   tex = new TLatex(0.22,0.85,"CMS Preliminary");
+   tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
-   
-   TH1F *h_stack__1 = new TH1F("h_stack__1","",3,40,115);
-   h_stack__1->SetMinimum(0.006227381);
-   h_stack__1->SetMaximum(998.8641);
-   h_stack__1->SetDirectory(0);
-   h_stack__1->SetStats(0);
-   h_stack__1->SetLineWidth(2);
-   h_stack__1->GetXaxis()->SetTitle("M_{T2}");
-   h_stack__1->GetXaxis()->SetNdivisions(505);
-   h_stack__1->GetXaxis()->SetLabelFont(42);
-   h_stack__1->GetXaxis()->SetLabelSize(0.05);
-   h_stack__1->GetXaxis()->SetTitleSize(0.05);
-   h_stack__1->GetXaxis()->SetTitleOffset(1.1);
-   h_stack__1->GetXaxis()->SetTitleFont(42);
-   h_stack__1->GetYaxis()->SetTitle("Events");
-   h_stack__1->GetYaxis()->SetNdivisions(505);
-   h_stack__1->GetYaxis()->SetLabelFont(42);
-   h_stack__1->GetYaxis()->SetLabelSize(0.05);
-   h_stack__1->GetYaxis()->SetTitleSize(0.05);
-   h_stack__1->GetYaxis()->SetTitleOffset(1.3);
-   h_stack__1->GetYaxis()->SetTitleFont(42);
-   h_stack__1->GetZaxis()->SetLabelFont(42);
-   h_stack__1->GetZaxis()->SetLabelSize(0.035);
-   h_stack__1->GetZaxis()->SetTitleSize(0.035);
-   h_stack__1->GetZaxis()->SetTitleFont(42);
-   h_stack__1->Draw("sameaxis");
-   
-   TLegend *leg = new TLegend(0.71,0.68,0.91,0.92,NULL,"brNDC");
+
+   TLegend *leg = new TLegend(0.65,0.65,0.91,0.92,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(62);
    leg->SetLineColor(1);
@@ -413,244 +395,162 @@ tex->SetNDC();
    leg->SetLineWidth(2);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("h__SUSY_no0","SUSY","f");
-   entry->SetFillStyle(1001);
 
-   ci = TColor::GetColor("#660000");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(2);
-   entry->SetLineWidth(3);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__Higgs","Higgs","f");
 
-   ci = TColor::GetColor("#ff0000");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#ff0000");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__WWjets","WW","f");
-
-   ci = TColor::GetColor("#000066");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#000066");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__Top","Top","f");
-
-   ci = TColor::GetColor("#3366cc");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#3366cc");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__Zjets","ZX","f");
-
-   ci = TColor::GetColor("#006600");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#006600");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__Wjets","W","f");
-
-   ci = TColor::GetColor("#00cc00");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#00cc00");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__QCD","QCD multijet","f");
-
-   ci = TColor::GetColor("#cccc00");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#cccc00");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h_data","data","p");
-   entry->SetLineColor(1);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(20);
-   entry->SetMarkerSize(1);
+   TLegendEntry *entry;
+   entry=leg->AddEntry(h2_copy,"data","pl");
+   entry=leg->AddEntry(h__QCD,"QCD multijet","f");
+   entry=leg->AddEntry(h__Wjets,"W","f");
+   entry=leg->AddEntry(h__Zjets,"ZX","f");
+   entry=leg->AddEntry(h__Top,"Top","f");
+   entry=leg->AddEntry(h__WWjets,"WW","f");
+   entry=leg->AddEntry(h__Higgs,"Higgs","f");
+   entry=leg->AddEntry(h__MC,"Uncertainties","f");
+   entry=leg->AddEntry(h_susy,"SUSY","f");
    leg->Draw();
-   TBD_flipped_log_comp_overlay_plotpad->Modified();
-   TBD_flipped_log_comp_overlayc_ratio->cd();
   
-// ------------>Primitives in pad: TBD_flipped_log_comp_overlay_ratiopad
-   TBD_flipped_log_comp_overlay_ratiopad = new TPad("TBD_flipped_log_comp_overlay_ratiopad", "Pad containing the ratio",0,0.01863354,0.9967105,0.2189441);
-   TBD_flipped_log_comp_overlay_ratiopad->Draw();
-   TBD_flipped_log_comp_overlay_ratiopad->cd();
-   TBD_flipped_log_comp_overlay_ratiopad->Range(27.33187,-0.8571431,122.1082,2.214286);
-   TBD_flipped_log_comp_overlay_ratiopad->SetFillColor(0);
-   TBD_flipped_log_comp_overlay_ratiopad->SetBorderMode(0);
-   TBD_flipped_log_comp_overlay_ratiopad->SetBorderSize(2);
-   TBD_flipped_log_comp_overlay_ratiopad->SetLeftMargin(0.1336634);
-   TBD_flipped_log_comp_overlay_ratiopad->SetRightMargin(0.075);
-   TBD_flipped_log_comp_overlay_ratiopad->SetTopMargin(0.06976745);
-   TBD_flipped_log_comp_overlay_ratiopad->SetBottomMargin(0.2790698);
-   TBD_flipped_log_comp_overlay_ratiopad->SetFrameLineWidth(3);
-   TBD_flipped_log_comp_overlay_ratiopad->SetFrameBorderMode(0);
-   TBD_flipped_log_comp_overlay_ratiopad->SetFrameBorderSize(0);
-   TBD_flipped_log_comp_overlay_ratiopad->SetFrameLineWidth(3);
-   TBD_flipped_log_comp_overlay_ratiopad->SetFrameBorderMode(0);
-   TBD_flipped_log_comp_overlay_ratiopad->SetFrameBorderSize(0);
-   Double_t xAxis9[4] = {40, 65, 90, 115}; 
-/*   
-   TH1D *h1_copy = new TH1D("h1_copy","",3, xAxis9);
-   h1_copy->SetBinContent(1,1);
-   h1_copy->SetBinContent(2,1);
-   h1_copy->SetBinContent(3,1);
-   h1_copy->SetBinError(1,0.2197264);
-   h1_copy->SetBinError(2,0.4501487);
-   h1_copy->SetBinError(3,0.1527775);
-*/
-   TH1F *h1_copy  = (TH1F*)h__MC->Clone();
-   h1_copy->Divide(h1_copy);
-
-   h1_copy->SetMinimum(0);
-   h1_copy->SetMaximum(2);
-   h1_copy->SetEntries(32.81623);
-   h1_copy->SetStats(0);
-   h1_copy->SetFillColor(1);
-   h1_copy->SetFillStyle(3004);
-   h1_copy->SetLineWidth(2);
-   h1_copy->GetXaxis()->SetTitle("M_{T2}");
-   h1_copy->GetXaxis()->SetNdivisions(505);
-   h1_copy->GetXaxis()->SetLabelFont(42);
-   h1_copy->GetXaxis()->SetLabelSize(0);
-   h1_copy->GetXaxis()->SetTitleSize(0.2);
-   h1_copy->GetXaxis()->SetTickLength(0.09);
-   h1_copy->GetXaxis()->SetTitleOffset(0.5);
-   h1_copy->GetXaxis()->SetTitleFont(42);
-   h1_copy->GetYaxis()->SetTitle("Data / MC");
-   h1_copy->GetYaxis()->SetNdivisions(509);
-   h1_copy->GetYaxis()->SetLabelFont(42);
-   h1_copy->GetYaxis()->SetLabelSize(0.19);
-   h1_copy->GetYaxis()->SetTitleSize(0.18);
-   h1_copy->GetYaxis()->SetTitleOffset(0.36);
-   h1_copy->GetYaxis()->SetTitleFont(42);
-   h1_copy->GetZaxis()->SetLabelFont(42);
-   h1_copy->GetZaxis()->SetLabelSize(0.035);
-   h1_copy->GetZaxis()->SetTitleSize(0.035);
-   h1_copy->GetZaxis()->SetTitleFont(42);
-   h1_copy->Draw("E2");
-   Double_t xAxis10[4] = {40, 65, 90, 115}; 
-/*   
-   TH1D *h2_copy__2 = new TH1D("h2_copy__2","",3, xAxis10);
-   h2_copy__2->SetBinContent(1,2.470396);
-   h2_copy__2->SetBinContent(2,0.8752435);
-   h2_copy__2->SetBinContent(3,1.335883);
-   h2_copy__2->SetBinError(1,0.4526546);
-   h2_copy__2->SetBinError(2,0.5187743);
-   h2_copy__2->SetBinError(3,1.343656);
-*/
-   TH1F *h2_copy__2  = (TH1F*)h2_copy->Clone();
-   h2_copy__2->Divide(h__MC);
-
-   h2_copy__2->SetMinimum(0.4);
-   h2_copy__2->SetMaximum(3);
-   h2_copy__2->SetEntries(9.614955);
-   h2_copy__2->SetDirectory(0);
-   h2_copy__2->SetStats(0);
-   h2_copy__2->SetLineWidth(2);
-   h2_copy__2->SetMarkerStyle(20);
-   h2_copy__2->GetXaxis()->SetNdivisions(505);
-   h2_copy__2->GetXaxis()->SetLabelFont(42);
-   h2_copy__2->GetXaxis()->SetLabelSize(0.07);
-   h2_copy__2->GetXaxis()->SetTitleSize(0.07);
-   h2_copy__2->GetXaxis()->SetTitleOffset(1.1);
-   h2_copy__2->GetXaxis()->SetTitleFont(42);
-   h2_copy__2->GetYaxis()->SetNdivisions(505);
-   h2_copy__2->GetYaxis()->SetLabelFont(42);
-   h2_copy__2->GetYaxis()->SetLabelSize(0.07);
-   h2_copy__2->GetYaxis()->SetTitleSize(0.07);
-   h2_copy__2->GetYaxis()->SetTitleOffset(1.3);
-   h2_copy__2->GetYaxis()->SetTitleFont(42);
-   h2_copy__2->GetZaxis()->SetLabelFont(42);
-   h2_copy__2->GetZaxis()->SetLabelSize(0.035);
-   h2_copy__2->GetZaxis()->SetTitleSize(0.035);
-   h2_copy__2->GetZaxis()->SetTitleFont(42);
-   h2_copy__2->Draw("Esame");
-   TLine *line = new TLine(40,1,115,1);
-   line->SetLineStyle(7);
-   line->SetLineWidth(2);
-   line->Draw();
-   Double_t xAxis11[4] = {40, 65, 90, 115}; 
-   
-   TH1D *h1_copy__3 = new TH1D("h1_copy__3","",3, xAxis11);
-   h1_copy__3->SetBinContent(1,1);
-   h1_copy__3->SetBinContent(2,1);
-   h1_copy__3->SetBinContent(3,1);
-   h1_copy__3->SetBinError(1,0.2197264);
-   h1_copy__3->SetBinError(2,0.4501487);
-   h1_copy__3->SetBinError(3,0.1527775);
-   h1_copy__3->SetMinimum(0);
-   h1_copy__3->SetMaximum(2);
-   h1_copy__3->SetEntries(32.81623);
-   h1_copy__3->SetDirectory(0);
-   h1_copy__3->SetStats(0);
-   h1_copy__3->SetFillColor(1);
-   h1_copy__3->SetFillStyle(3004);
-   h1_copy__3->SetLineWidth(2);
-   h1_copy__3->GetXaxis()->SetTitle("M_{T2}");
-   h1_copy__3->GetXaxis()->SetNdivisions(505);
-   h1_copy__3->GetXaxis()->SetLabelFont(42);
-   h1_copy__3->GetXaxis()->SetLabelSize(0);
-   h1_copy__3->GetXaxis()->SetTitleSize(0.2);
-   h1_copy__3->GetXaxis()->SetTickLength(0.09);
-   h1_copy__3->GetXaxis()->SetTitleOffset(0.5);
-   h1_copy__3->GetXaxis()->SetTitleFont(42);
-   h1_copy__3->GetYaxis()->SetTitle("Data / MC");
-   h1_copy__3->GetYaxis()->SetNdivisions(509);
-   h1_copy__3->GetYaxis()->SetLabelFont(42);
-   h1_copy__3->GetYaxis()->SetLabelSize(0.19);
-   h1_copy__3->GetYaxis()->SetTitleSize(0.18);
-   h1_copy__3->GetYaxis()->SetTitleOffset(0.36);
-   h1_copy__3->GetYaxis()->SetTitleFont(42);
-   h1_copy__3->GetZaxis()->SetLabelFont(42);
-   h1_copy__3->GetZaxis()->SetLabelSize(0.035);
-   h1_copy__3->GetZaxis()->SetTitleSize(0.035);
-   h1_copy__3->GetZaxis()->SetTitleFont(42);
-   h1_copy__3->Draw("sameaxis");
-   TBD_flipped_log_comp_overlay_ratiopad->Modified();
-   TBD_flipped_log_comp_overlayc_ratio->cd();
-   TBD_flipped_log_comp_overlayc_ratio->Modified();
-   TBD_flipped_log_comp_overlayc_ratio->cd();
-   TBD_flipped_log_comp_overlayc_ratio->SetSelected(TBD_flipped_log_comp_overlayc_ratio);
 }
+
+// void Plot2(){
+// // ------------>Primitives in pad: TBD_flipped_log_comp_overlay_ratiopad
+//    TBD_flipped_log_comp_overlay_ratiopad = new TPad("TBD_flipped_log_comp_overlay_ratiopad", "Pad containing the ratio",0,0.01863354,0.9967105,0.2189441);
+//    TBD_flipped_log_comp_overlay_ratiopad->Draw();
+//    TBD_flipped_log_comp_overlay_ratiopad->cd();
+//    TBD_flipped_log_comp_overlay_ratiopad->Range(27.33187,-0.8571431,122.1082,2.214286);
+//    TBD_flipped_log_comp_overlay_ratiopad->SetFillColor(0);
+//    TBD_flipped_log_comp_overlay_ratiopad->SetBorderMode(0);
+//    TBD_flipped_log_comp_overlay_ratiopad->SetBorderSize(2);
+//    TBD_flipped_log_comp_overlay_ratiopad->SetLeftMargin(0.1336634);
+//    TBD_flipped_log_comp_overlay_ratiopad->SetRightMargin(0.075);
+//    TBD_flipped_log_comp_overlay_ratiopad->SetTopMargin(0.06976745);
+//    TBD_flipped_log_comp_overlay_ratiopad->SetBottomMargin(0.2790698);
+//    TBD_flipped_log_comp_overlay_ratiopad->SetFrameLineWidth(3);
+//    TBD_flipped_log_comp_overlay_ratiopad->SetFrameBorderMode(0);
+//    TBD_flipped_log_comp_overlay_ratiopad->SetFrameBorderSize(0);
+//    TBD_flipped_log_comp_overlay_ratiopad->SetFrameLineWidth(3);
+//    TBD_flipped_log_comp_overlay_ratiopad->SetFrameBorderMode(0);
+//    TBD_flipped_log_comp_overlay_ratiopad->SetFrameBorderSize(0);
+//    Double_t xAxis9[4] = {40, 65, 90, 115}; 
+// /*   
+//    TH1D *h1_copy = new TH1D("h1_copy","",3, xAxis9);
+//    h1_copy->SetBinContent(1,1);
+//    h1_copy->SetBinContent(2,1);
+//    h1_copy->SetBinContent(3,1);
+//    h1_copy->SetBinError(1,0.2197264);
+//    h1_copy->SetBinError(2,0.4501487);
+//    h1_copy->SetBinError(3,0.1527775);
+// */
+//    TH1F *h1_copy  = (TH1F*)h__MC->Clone();
+//    h1_copy->Divide(h1_copy);
+
+//    h1_copy->SetMinimum(0);
+//    h1_copy->SetMaximum(2);
+//    h1_copy->SetEntries(32.81623);
+//    h1_copy->SetStats(0);
+//    h1_copy->SetFillColor(1);
+//    h1_copy->SetFillStyle(3004);
+//    h1_copy->SetLineWidth(2);
+//    h1_copy->GetXaxis()->SetTitle("M_{T2}");
+//    h1_copy->GetXaxis()->SetNdivisions(505);
+//    h1_copy->GetXaxis()->SetLabelFont(42);
+//    h1_copy->GetXaxis()->SetLabelSize(0);
+//    h1_copy->GetXaxis()->SetTitleSize(0.2);
+//    h1_copy->GetXaxis()->SetTickLength(0.09);
+//    h1_copy->GetXaxis()->SetTitleOffset(0.5);
+//    h1_copy->GetXaxis()->SetTitleFont(42);
+//    h1_copy->GetYaxis()->SetTitle("Data / MC");
+//    h1_copy->GetYaxis()->SetNdivisions(509);
+//    h1_copy->GetYaxis()->SetLabelFont(42);
+//    h1_copy->GetYaxis()->SetLabelSize(0.19);
+//    h1_copy->GetYaxis()->SetTitleSize(0.18);
+//    h1_copy->GetYaxis()->SetTitleOffset(0.36);
+//    h1_copy->GetYaxis()->SetTitleFont(42);
+//    h1_copy->GetZaxis()->SetLabelFont(42);
+//    h1_copy->GetZaxis()->SetLabelSize(0.035);
+//    h1_copy->GetZaxis()->SetTitleSize(0.035);
+//    h1_copy->GetZaxis()->SetTitleFont(42);
+//    h1_copy->Draw("E2");
+//    Double_t xAxis10[4] = {40, 65, 90, 115}; 
+// /*   
+//    TH1D *h2_copy__2 = new TH1D("h2_copy__2","",3, xAxis10);
+//    h2_copy__2->SetBinContent(1,2.470396);
+//    h2_copy__2->SetBinContent(2,0.8752435);
+//    h2_copy__2->SetBinContent(3,1.335883);
+//    h2_copy__2->SetBinError(1,0.4526546);
+//    h2_copy__2->SetBinError(2,0.5187743);
+//    h2_copy__2->SetBinError(3,1.343656);
+// */
+//    TH1F *h2_copy__2  = (TH1F*)h2_copy->Clone();
+//    h2_copy__2->Divide(h__MC);
+
+//    h2_copy__2->SetMinimum(0.4);
+//    h2_copy__2->SetMaximum(3);
+//    h2_copy__2->SetEntries(9.614955);
+//    h2_copy__2->SetDirectory(0);
+//    h2_copy__2->SetStats(0);
+//    h2_copy__2->SetLineWidth(2);
+//    h2_copy__2->SetMarkerStyle(20);
+//    h2_copy__2->GetXaxis()->SetNdivisions(505);
+//    h2_copy__2->GetXaxis()->SetLabelFont(42);
+//    h2_copy__2->GetXaxis()->SetLabelSize(0.07);
+//    h2_copy__2->GetXaxis()->SetTitleSize(0.07);
+//    h2_copy__2->GetXaxis()->SetTitleOffset(1.1);
+//    h2_copy__2->GetXaxis()->SetTitleFont(42);
+//    h2_copy__2->GetYaxis()->SetNdivisions(505);
+//    h2_copy__2->GetYaxis()->SetLabelFont(42);
+//    h2_copy__2->GetYaxis()->SetLabelSize(0.07);
+//    h2_copy__2->GetYaxis()->SetTitleSize(0.07);
+//    h2_copy__2->GetYaxis()->SetTitleOffset(1.3);
+//    h2_copy__2->GetYaxis()->SetTitleFont(42);
+//    h2_copy__2->GetZaxis()->SetLabelFont(42);
+//    h2_copy__2->GetZaxis()->SetLabelSize(0.035);
+//    h2_copy__2->GetZaxis()->SetTitleSize(0.035);
+//    h2_copy__2->GetZaxis()->SetTitleFont(42);
+//    h2_copy__2->Draw("Esame");
+//    TLine *line = new TLine(40,1,115,1);
+//    line->SetLineStyle(7);
+//    line->SetLineWidth(2);
+//    line->Draw();
+//    Double_t xAxis11[4] = {40, 65, 90, 115}; 
+   
+//    TH1D *h1_copy__3 = new TH1D("h1_copy__3","",3, xAxis11);
+//    h1_copy__3->SetBinContent(1,1);
+//    h1_copy__3->SetBinContent(2,1);
+//    h1_copy__3->SetBinContent(3,1);
+//    h1_copy__3->SetBinError(1,0.2197264);
+//    h1_copy__3->SetBinError(2,0.4501487);
+//    h1_copy__3->SetBinError(3,0.1527775);
+//    h1_copy__3->SetMinimum(0);
+//    h1_copy__3->SetMaximum(2);
+//    h1_copy__3->SetEntries(32.81623);
+//    h1_copy__3->SetDirectory(0);
+//    h1_copy__3->SetStats(0);
+//    h1_copy__3->SetFillColor(1);
+//    h1_copy__3->SetFillStyle(3004);
+//    h1_copy__3->SetLineWidth(2);
+//    h1_copy__3->GetXaxis()->SetTitle("M_{T2}");
+//    h1_copy__3->GetXaxis()->SetNdivisions(505);
+//    h1_copy__3->GetXaxis()->SetLabelFont(42);
+//    h1_copy__3->GetXaxis()->SetLabelSize(0);
+//    h1_copy__3->GetXaxis()->SetTitleSize(0.2);
+//    h1_copy__3->GetXaxis()->SetTickLength(0.09);
+//    h1_copy__3->GetXaxis()->SetTitleOffset(0.5);
+//    h1_copy__3->GetXaxis()->SetTitleFont(42);
+//    h1_copy__3->GetYaxis()->SetTitle("Data / MC");
+//    h1_copy__3->GetYaxis()->SetNdivisions(509);
+//    h1_copy__3->GetYaxis()->SetLabelFont(42);
+//    h1_copy__3->GetYaxis()->SetLabelSize(0.19);
+//    h1_copy__3->GetYaxis()->SetTitleSize(0.18);
+//    h1_copy__3->GetYaxis()->SetTitleOffset(0.36);
+//    h1_copy__3->GetYaxis()->SetTitleFont(42);
+//    h1_copy__3->GetZaxis()->SetLabelFont(42);
+//    h1_copy__3->GetZaxis()->SetLabelSize(0.035);
+//    h1_copy__3->GetZaxis()->SetTitleSize(0.035);
+//    h1_copy__3->GetZaxis()->SetTitleFont(42);
+//    h1_copy__3->Draw("sameaxis");
+//    TBD_flipped_log_comp_overlay_ratiopad->Modified();
+//    TBD_flipped_log_comp_overlayc_ratio->cd();
+//    TBD_flipped_log_comp_overlayc_ratio->Modified();
+//    TBD_flipped_log_comp_overlayc_ratio->cd();
+//    TBD_flipped_log_comp_overlayc_ratio->SetSelected(TBD_flipped_log_comp_overlayc_ratio);
+// }
