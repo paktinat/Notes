@@ -7,10 +7,10 @@ void MT2_tauMTgt200_DDFakeEleTau(){
    muTau_log_comp_overlayc_ratio->SetFillColor(0);
    muTau_log_comp_overlayc_ratio->SetBorderMode(0);
    muTau_log_comp_overlayc_ratio->SetBorderSize(2);
-   muTau_log_comp_overlayc_ratio->SetLeftMargin(0.18);
+   muTau_log_comp_overlayc_ratio->SetLeftMargin(0.13);
    muTau_log_comp_overlayc_ratio->SetRightMargin(0.08);
    muTau_log_comp_overlayc_ratio->SetTopMargin(0.07);
-   muTau_log_comp_overlayc_ratio->SetBottomMargin(0.17);
+   muTau_log_comp_overlayc_ratio->SetBottomMargin(0.13);
    muTau_log_comp_overlayc_ratio->SetFrameBorderMode(0);
    muTau_log_comp_overlayc_ratio->SetFrameBorderSize(0);
 
