@@ -954,7 +954,7 @@ void MT2muTau_tauMTgt200_DDFake(){
   TH1 *h1_susy = h_susy->Rebin(nBins,"h1_susy",xbin);   
 
   h1_susy->Draw("samehist");
-  TLatex *   tex = new TLatex(0.13,0.943,"Preselection, m_{T}^{#tau} > 200 GeV");
+  TLatex *   tex = new TLatex(0.1,0.943,"Preselection, m_{T}^{#tau} > 200 GeV");
   tex->SetNDC();
   tex->SetTextSize(0.03);
   tex->SetLineWidth(2);
@@ -980,7 +980,7 @@ void MT2muTau_tauMTgt200_DDFake(){
      
 
    
-  TLegend *leg = new TLegend(0.66,0.68,0.91,0.92,NULL,"brNDC");
+  TLegend *leg = new TLegend(0.66,0.66,0.91,0.92,NULL,"brNDC");
   leg->SetBorderSize(0);
   leg->SetTextFont(62);
   leg->SetLineColor(1);
@@ -996,7 +996,7 @@ void MT2muTau_tauMTgt200_DDFake(){
   entry=leg->AddEntry(hAllMC__WWjets,"WW","f");
   entry=leg->AddEntry(hAllMC__Higgs,"Higgs","f");
   entry=leg->AddEntry(h__MC,"Uncertainties","f");
-  entry=leg->AddEntry(h1_susy,"SMS(380,1)","f");
+  entry=leg->AddEntry(h1_susy,"SUSY(380,1)","f");
 
   leg->Draw();
 

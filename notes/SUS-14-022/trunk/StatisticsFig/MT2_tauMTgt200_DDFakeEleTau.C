@@ -40,12 +40,12 @@ void MT2_tauMTgt200_DDFakeEleTau(){
    THStack *h_stack = new THStack();
    h_stack->SetName("h_stack");
    h_stack->SetTitle("");
-   h_stack->SetMinimum(0.07);
-   h_stack->SetMaximum(100.0);
+   h_stack->SetMinimum(0.1);
+   h_stack->SetMaximum(200.00391);
    
    TH1F *h_stack_stack_1_stack_1 = new TH1F("h_stack_stack_1_stack_1","",120,0,120);
-   h_stack_stack_1_stack_1->SetMinimum(0.07);
-   h_stack_stack_1_stack_1->SetMaximum(100.0);
+   h_stack_stack_1_stack_1->SetMinimum(0.1);
+   h_stack_stack_1_stack_1->SetMaximum(200.0);
    h_stack_stack_1_stack_1->SetDirectory(0);
    h_stack_stack_1_stack_1->SetStats(0);
 
@@ -386,7 +386,7 @@ void MT2_tauMTgt200_DDFakeEleTau(){
    TauMTCut_MT2_SUSY_380_0_Rebinned->GetZaxis()->SetTitleFont(42);
    TauMTCut_MT2_SUSY_380_0_Rebinned->Draw("samehist");
 
-   TLatex *   tex = new TLatex(0.13,0.943,"Preselection, m_{T}^{#tau} > 200 GeV");
+   TLatex *   tex = new TLatex(0.10,0.943,"Preselection, m_{T}^{#tau} > 200 GeV");
    tex->SetNDC();
    tex->SetTextSize(0.03);
    tex->SetLineWidth(2);
@@ -396,12 +396,12 @@ void MT2_tauMTgt200_DDFakeEleTau(){
    tex->SetTextSize(0.0305);
    tex->SetLineWidth(2);
    tex->Draw();
-   tex = new TLatex(0.24,0.88,"CMS Preliminary");
+   tex = new TLatex(0.24,0.85,"CMS Preliminary");
    tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
 
-   tex = new TLatex(0.26,0.83,"e#tau");
+   tex = new TLatex(0.26,0.80,"e#tau");
    tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
@@ -423,7 +423,7 @@ void MT2_tauMTgt200_DDFakeEleTau(){
    entry=leg->AddEntry(TauMTCut_MT2_WW_Rebinned,"WW","f");
    entry=leg->AddEntry(TauMTCut_MT2_Higgs_Rebinned,"Higgs","f");
    entry=leg->AddEntry(h__MC,"Uncertainties","f");
-   entry=leg->AddEntry(TauMTCut_MT2_SUSY_380_0_Rebinned,"SMS(380,1)","f");
+   entry=leg->AddEntry(TauMTCut_MT2_SUSY_380_0_Rebinned,"SUSY(380,1)","f");
    leg->Draw();
 }
 

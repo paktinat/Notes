@@ -391,7 +391,7 @@
    h__MC2->Draw("SAME E2");
 
 
-   TLegend *leg = new TLegend(0.66,0.65,0.91,0.92,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.66,0.60,0.91,0.92,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(62);
    leg->SetLineColor(1);

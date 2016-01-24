@@ -41,15 +41,15 @@
    THStack *MT2 = new THStack();
    MT2->SetName("MT2");
    MT2->SetTitle("");
-   MT2->SetMinimum(0.02);
-   MT2->SetMaximum(551.8481);
+   MT2->SetMinimum(0.1);
+   MT2->SetMaximum(1000);
 
 
    TH1D *h__MC = new TH1D("h__MC","",3,40,115);
 
    TH1F *MT2_stack_1_stack_1_stack_1 = new TH1F("MT2_stack_1_stack_1_stack_1","",3,40,115);
-   MT2_stack_1_stack_1_stack_1->SetMinimum(0.006210419);
-   MT2_stack_1_stack_1_stack_1->SetMaximum(1041.976);
+   MT2_stack_1_stack_1_stack_1->SetMinimum(0.1);
+   MT2_stack_1_stack_1_stack_1->SetMaximum(1000);
    MT2_stack_1_stack_1_stack_1->SetDirectory(0);
    MT2_stack_1_stack_1_stack_1->SetStats(0);
    MT2_stack_1_stack_1_stack_1->SetLineWidth(2);
@@ -320,8 +320,8 @@
    h2_copy->SetBinError(1,10.29563);
    h2_copy->SetBinError(2,2);
    h2_copy->SetBinError(3,1);
-   h2_copy->SetMinimum(0.05);
-   h2_copy->SetMaximum(551.8481);
+   h2_copy->SetMinimum(0.1);
+   h2_copy->SetMaximum(1000);
    h2_copy->SetEntries(131);
    h2_copy->SetStats(0);
    h2_copy->SetFillColor(2);
@@ -389,18 +389,18 @@
    tex->SetLineWidth(2);
    tex->Draw();
 
-   tex = new TLatex(0.13,0.943,"Preselection");
+   tex = new TLatex(0.10,0.943,"Preselection");
    tex->SetNDC();
    tex->SetTextSize(0.03);
    tex->SetLineWidth(2);
    tex->Draw();
 
-   tex = new TLatex(0.2,0.88,"CMS Preliminary");
+   tex = new TLatex(0.2,0.85,"CMS Preliminary");
    tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
  
-   tex = new TLatex(0.22,0.83,"#tau_{h}#tau_{h}");
+   tex = new TLatex(0.22,0.80,"#tau_{h}#tau_{h}");
    tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
