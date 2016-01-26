@@ -265,10 +265,10 @@ void MT2_tauMTgt200_DDFakeEleTau(){
    Total200_fromMuTau_MT2_data_Rebinned->SetStats(0);
 
    ci = TColor::GetColor("#cccc00");
-   Total200_fromMuTau_MT2_data_Rebinned->SetFillColor(ci);
+   Total200_fromMuTau_MT2_data_Rebinned->SetFillColor(417);
 
    ci = TColor::GetColor("#cccc00");
-   Total200_fromMuTau_MT2_data_Rebinned->SetLineColor(ci);
+   Total200_fromMuTau_MT2_data_Rebinned->SetLineColor(417);
    Total200_fromMuTau_MT2_data_Rebinned->SetLineWidth(2);
 
    ci = TColor::GetColor("#cccc00");
@@ -417,7 +417,7 @@ void MT2_tauMTgt200_DDFakeEleTau(){
 
    TLegendEntry *entry;
    entry=leg->AddEntry(TauMTCut_MT2_data_Rebinned,"data","lp");
-   entry=leg->AddEntry(Total200_fromMuTau_MT2_data_Rebinned,"Fake","f");
+   entry=leg->AddEntry(Total200_fromMuTau_MT2_data_Rebinned,"W","f");
    entry=leg->AddEntry(TauMTCut_MT2_ZX_Rebinned,"ZX","f");
    entry=leg->AddEntry(TauMTCut_MT2_Top_Rebinned,"Top","f");
    entry=leg->AddEntry(TauMTCut_MT2_WW_Rebinned,"WW","f");

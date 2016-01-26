@@ -607,10 +607,10 @@ void MT2muTau_tauMTgt200_DDFake(){
   h2_DDFake->SetStats(0);
   //Int_t ci;   // for color index setting
   ci = TColor::GetColor("#cccc00");
-  h2_DDFake->SetFillColor(ci);
+  h2_DDFake->SetFillColor(417);
 
   ci = TColor::GetColor("#cccc00");
-  h2_DDFake->SetLineColor(ci);
+  h2_DDFake->SetLineColor(417);
   h2_DDFake->SetLineWidth(2);
 
   ci = TColor::GetColor("#cccc00");
@@ -990,7 +990,7 @@ void MT2muTau_tauMTgt200_DDFake(){
   leg->SetFillStyle(1001);
   TLegendEntry *entry;
   entry=leg->AddEntry(h2_copyAll,"data","pl");
-  entry=leg->AddEntry(h2_DDFake,"Fake","f");
+  entry=leg->AddEntry(h2_DDFake,"W","f");
   entry=leg->AddEntry(hAllMC__Zjets,"ZX","f");
   entry=leg->AddEntry(hAllMC__Top,"Top","f");
   entry=leg->AddEntry(hAllMC__WWjets,"WW","f");
