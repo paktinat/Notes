@@ -1,53 +1,55 @@
 {
 //=========Macro generated from canvas: MT2_ratioc_ratio/
 //=========  (Sat Dec  5 11:53:20 2015) by ROOT version5.34/03
-   TCanvas *MT2_ratioc_ratio = new TCanvas("MT2_ratioc_ratio", "",1,52,600,600);
+   TCanvas *MT2_ratioc_ratio = new TCanvas("QCDWestimation_bin1", "",1,52,600,600);
    gStyle->SetOptFit(1);
    MT2_ratioc_ratio->Range(0,0,1,1);
    MT2_ratioc_ratio->SetFillColor(0);
    MT2_ratioc_ratio->SetBorderMode(0);
    MT2_ratioc_ratio->SetBorderSize(2);
-   MT2_ratioc_ratio->SetLeftMargin(0.18);
+   MT2_ratioc_ratio->SetLeftMargin(0.13);
    MT2_ratioc_ratio->SetRightMargin(0.08);
    MT2_ratioc_ratio->SetTopMargin(0.07);
-   MT2_ratioc_ratio->SetBottomMargin(0.17);
+   MT2_ratioc_ratio->SetBottomMargin(0.13);
    MT2_ratioc_ratio->SetFrameLineWidth(3);
    MT2_ratioc_ratio->SetFrameBorderMode(0);
    MT2_ratioc_ratio->SetFrameBorderSize(0);
-  
+
+   MT2_ratioc_ratio->SetLogy();  
+
 // ------------>Primitives in pad: MT2_ratio_plotpad
-   TPad *MT2_ratio_plotpad = new TPad("MT2_ratio_plotpad", "Pad containing the overlay plot",0,0.211838,1,1);
-   MT2_ratio_plotpad->Draw();
-   MT2_ratio_plotpad->cd();
-   MT2_ratio_plotpad->Range(27.48331,-2.645186,122.6101,3.437275);
-   MT2_ratio_plotpad->SetFillColor(0);
-   MT2_ratio_plotpad->SetFillStyle(4000);
-   MT2_ratio_plotpad->SetBorderMode(0);
-   MT2_ratio_plotpad->SetBorderSize(2);
-   MT2_ratio_plotpad->SetLogy();
-   MT2_ratio_plotpad->SetLeftMargin(0.131579);
-   MT2_ratio_plotpad->SetRightMargin(0.08);
-   MT2_ratio_plotpad->SetTopMargin(0.06895515);
-   MT2_ratio_plotpad->SetBottomMargin(0.07206074);
-   MT2_ratio_plotpad->SetFrameLineWidth(3);
-   MT2_ratio_plotpad->SetFrameBorderMode(0);
-   MT2_ratio_plotpad->SetFrameBorderSize(0);
-   MT2_ratio_plotpad->SetFrameLineWidth(3);
-   MT2_ratio_plotpad->SetFrameBorderMode(0);
-   MT2_ratio_plotpad->SetFrameBorderSize(0);
+   // TPad *MT2_ratio_plotpad = new TPad("MT2_ratio_plotpad", "Pad containing the overlay plot",0,0.211838,1,1);
+   // MT2_ratio_plotpad->Draw();
+   // MT2_ratio_plotpad->cd();
+   // MT2_ratio_plotpad->Range(27.48331,-2.645186,122.6101,3.437275);
+   // MT2_ratio_plotpad->SetFillColor(0);
+   // MT2_ratio_plotpad->SetFillStyle(4000);
+   // MT2_ratio_plotpad->SetBorderMode(0);
+   // MT2_ratio_plotpad->SetBorderSize(2);
+   // MT2_ratio_plotpad->SetLogy();
+   // MT2_ratio_plotpad->SetLeftMargin(0.131579);
+   // MT2_ratio_plotpad->SetRightMargin(0.08);
+   // MT2_ratio_plotpad->SetTopMargin(0.06895515);
+   // MT2_ratio_plotpad->SetBottomMargin(0.07206074);
+   // MT2_ratio_plotpad->SetFrameLineWidth(3);
+   // MT2_ratio_plotpad->SetFrameBorderMode(0);
+   // MT2_ratio_plotpad->SetFrameBorderSize(0);
+   // MT2_ratio_plotpad->SetFrameLineWidth(3);
+   // MT2_ratio_plotpad->SetFrameBorderMode(0);
+   // MT2_ratio_plotpad->SetFrameBorderSize(0);
    
    THStack *MT2 = new THStack();
    MT2->SetName("MT2");
    MT2->SetTitle("");
-   MT2->SetMinimum(0.02);
-   MT2->SetMaximum(551.8481);
+   MT2->SetMinimum(0.1);
+   MT2->SetMaximum(1000);
 
 
    TH1D *h__MC = new TH1D("h__MC","",3,40,115);
 
    TH1F *MT2_stack_1_stack_1_stack_1 = new TH1F("MT2_stack_1_stack_1_stack_1","",3,40,115);
-   MT2_stack_1_stack_1_stack_1->SetMinimum(0.006210419);
-   MT2_stack_1_stack_1_stack_1->SetMaximum(1041.976);
+   MT2_stack_1_stack_1_stack_1->SetMinimum(0.1);
+   MT2_stack_1_stack_1_stack_1->SetMaximum(1000);
    MT2_stack_1_stack_1_stack_1->SetDirectory(0);
    MT2_stack_1_stack_1_stack_1->SetStats(0);
    MT2_stack_1_stack_1_stack_1->SetLineWidth(2);
@@ -304,6 +306,11 @@
    h__MC->Add(MT2_WW);
    h__MC->Add(MT2_Higgs);
 
+   h__MC->SetLineColor(kWhite);
+   h__MC->SetFillColor(kBlack);
+   h__MC->SetFillStyle(3004);
+   h__MC->Draw("SAME E2");
+   
    Double_t xAxis7[4] = {40, 65, 90, 115}; 
 
    TH1D *h2_copy = new TH1D("h2_copy","",3, xAxis7);
@@ -313,8 +320,8 @@
    h2_copy->SetBinError(1,10.29563);
    h2_copy->SetBinError(2,2);
    h2_copy->SetBinError(3,1);
-   h2_copy->SetMinimum(0.05);
-   h2_copy->SetMaximum(551.8481);
+   h2_copy->SetMinimum(0.1);
+   h2_copy->SetMaximum(1000);
    h2_copy->SetEntries(131);
    h2_copy->SetStats(0);
    h2_copy->SetFillColor(2);
@@ -369,43 +376,35 @@
    MT2_susy->GetZaxis()->SetTitleSize(0.035);
    MT2_susy->GetZaxis()->SetTitleFont(42);
    MT2_susy->Draw("samehist");
-   TLatex *   tex = new TLatex(0.02516779,0.5829901,"0 jets");
-tex->SetNDC();
-   tex->SetTextSize(0.03);
-   tex->SetLineWidth(2);
-   tex->Draw();
-      tex = new TLatex(0.68,0.943,"#sqrt{s} = 8 TeV, L = 18.10 fb^{-1}");
-tex->SetNDC();
+
+   // TLatex *   tex = new TLatex(0.02516779,0.5829901,"0 jets");
+   // tex->SetNDC();
+   // tex->SetTextSize(0.03);
+   // tex->SetLineWidth(2);
+   // tex->Draw();
+
+   tex = new TLatex(0.68,0.943,"#sqrt{s} = 8 TeV, L = 18.1 fb^{-1}");
+   tex->SetNDC();
    tex->SetTextSize(0.0305);
    tex->SetLineWidth(2);
    tex->Draw();
-   
-   TH1F *MT2__1__1__1 = new TH1F("MT2__1__1__1","",3,40,115);
-   MT2__1__1__1->SetMinimum(0.006210419);
-   MT2__1__1__1->SetMaximum(1041.976);
-   MT2__1__1__1->SetDirectory(0);
-   MT2__1__1__1->SetStats(0);
-   MT2__1__1__1->SetLineWidth(2);
-   MT2__1__1__1->GetXaxis()->SetTitle("M_{T2}");
-   MT2__1__1__1->GetXaxis()->SetNdivisions(505);
-   MT2__1__1__1->GetXaxis()->SetLabelFont(42);
-   MT2__1__1__1->GetXaxis()->SetLabelSize(0.05);
-   MT2__1__1__1->GetXaxis()->SetTitleSize(0.05);
-   MT2__1__1__1->GetXaxis()->SetTitleOffset(1.1);
-   MT2__1__1__1->GetXaxis()->SetTitleFont(42);
-   MT2__1__1__1->GetYaxis()->SetTitle("Events");
-   MT2__1__1__1->GetYaxis()->SetNdivisions(505);
-   MT2__1__1__1->GetYaxis()->SetLabelFont(42);
-   MT2__1__1__1->GetYaxis()->SetLabelSize(0.05);
-   MT2__1__1__1->GetYaxis()->SetTitleSize(0.05);
-   MT2__1__1__1->GetYaxis()->SetTitleOffset(1.3);
-   MT2__1__1__1->GetYaxis()->SetTitleFont(42);
-   MT2__1__1__1->GetZaxis()->SetLabelFont(42);
-   MT2__1__1__1->GetZaxis()->SetLabelSize(0.035);
-   MT2__1__1__1->GetZaxis()->SetTitleSize(0.035);
-   MT2__1__1__1->GetZaxis()->SetTitleFont(42);
-   MT2__1__1__1->Draw("sameaxis");
-   
+
+   tex = new TLatex(0.10,0.943,"Preselection");
+   tex->SetNDC();
+   tex->SetTextSize(0.03);
+   tex->SetLineWidth(2);
+   tex->Draw();
+
+   tex = new TLatex(0.2,0.85,"CMS Preliminary");
+   tex->SetNDC();
+   tex->SetLineWidth(2);
+   tex->Draw();
+ 
+   tex = new TLatex(0.22,0.80,"#tau_{h}#tau_{h}");
+   tex->SetNDC();
+   tex->SetLineWidth(2);
+   tex->Draw();
+
    TLegend *leg = new TLegend(0.66,0.60,0.91,0.92,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(62);
@@ -414,107 +413,23 @@ tex->SetNDC();
    leg->SetLineWidth(2);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("MT2_Higgs","Higgs","f");
-   entry->SetFillColor(2);
-   entry->SetFillStyle(1001);
-   entry->SetLineColor(2);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2_WW","WW","f");
+   TLegendEntry *entry;
 
-   ci = TColor::GetColor("#000066");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
+   entry=leg->AddEntry(h2_copy,"data","lp");
+   entry=leg->AddEntry(MT2_QCD,"QCD multijet","f");
+   entry=leg->AddEntry(MT2_W,"W","f");
+   entry=leg->AddEntry(MT2_ZX,"ZX","f");
+   entry=leg->AddEntry(MT2_Top,"Top","f");
+   entry=leg->AddEntry(MT2_WW,"WW","f");
+   entry=leg->AddEntry(MT2_Higgs,"Higgs","f");
+   entry=leg->AddEntry(h__MC , "Uncertainties" , "f" );
+   entry=leg->AddEntry(MT2_susy,"SUSY(240,40)","f");
 
-   ci = TColor::GetColor("#000066");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2_Top","Top","f");
 
-   ci = TColor::GetColor("#3366cc");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#3366cc");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2_ZX","ZX","f");
-
-   ci = TColor::GetColor("#006600");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#006600");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2_W","W","f");
-
-   ci = TColor::GetColor("#00cc00");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#00cc00");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2_QCD","QCD","f");
-
-   ci = TColor::GetColor("#cccc00");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#cccc00");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry=leg->AddEntry("NULL","SUSY(240,40)","f");
-//    entry->SetLineColor(1);
-//    entry->SetLineStyle(3);
-//    entry->SetLineWidth(3);
-//    entry->SetMarkerColor(1);
-//    entry->SetMarkerStyle(21);
-//    entry->SetMarkerSize(1);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#660000");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(2);
-   entry->SetLineWidth(3);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(62);
-
-   entry=leg->AddEntry("NULL","data","l");
-   entry->SetLineColor(1);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
    leg->Draw();
-  
+}
+
+void Plot2(){  
 // ------------>Primitives in pad: MT2_ratio_plotpad_1
    MT2_ratio_plotpad_1 = new TPad("MT2_ratio_plotpad_1", "newpad",0.01845638,0.5688889,0.08221477,0.6111111);
    MT2_ratio_plotpad_1->Draw();
@@ -532,20 +447,6 @@ tex->SetNDC();
    MT2_ratio_plotpad_1->SetFrameBorderSize(0);
    MT2_ratio_plotpad_1->Modified();
    MT2_ratio_plotpad->cd();
-   TLatex *   tex = new TLatex(0.13,0.943,"Preselection");
-tex->SetNDC();
-   tex->SetTextSize(0.03);
-   tex->SetLineWidth(2);
-   tex->Draw();
-
-
-//       tex = new TLatex(52.38228,301.5517,"CMS Preliminary");
-//    tex->SetLineWidth(2);
-//    tex->Draw();
-      tex = new TLatex(0.25,0.85,"CMS Preliminary     #tau#tau");
-tex->SetNDC();
-   tex->SetLineWidth(2);
-   tex->Draw();
 
    MT2_ratio_plotpad->Modified();
    MT2_ratioc_ratio->cd();
@@ -576,7 +477,7 @@ tex->SetNDC();
    h1_copy->SetMaximum(2);
    h1_copy->SetStats(0);
    h1_copy->SetFillColor(1);
-   h1_copy->SetFillStyle(3001);
+   h1_copy->SetFillStyle(3004);
    h1_copy->SetLineWidth(2);
    h1_copy->GetXaxis()->SetTitle("Z Pt");
    h1_copy->GetXaxis()->SetNdivisions(505);

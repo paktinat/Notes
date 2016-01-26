@@ -1,49 +1,51 @@
-{
+void MT2_tauMTgt200_DDFakeEleTau(){
 //=========Macro generated from canvas: muTau_log_comp_overlayc_ratio/
 //=========  (Sun Oct 11 19:26:45 2015) by ROOT version5.34/19
-   TCanvas *muTau_log_comp_overlayc_ratio = new TCanvas("muTau_log_comp_overlayc_ratio", "",1,52,600,600);
+   TCanvas *muTau_log_comp_overlayc_ratio = new TCanvas("MT2_tauMTgt200_DDFakeEleTau", "",1,52,600,600);
    gStyle->SetOptFit(1);
    muTau_log_comp_overlayc_ratio->Range(0,0,1,1);
    muTau_log_comp_overlayc_ratio->SetFillColor(0);
    muTau_log_comp_overlayc_ratio->SetBorderMode(0);
    muTau_log_comp_overlayc_ratio->SetBorderSize(2);
-   muTau_log_comp_overlayc_ratio->SetLeftMargin(0.18);
+   muTau_log_comp_overlayc_ratio->SetLeftMargin(0.13);
    muTau_log_comp_overlayc_ratio->SetRightMargin(0.08);
    muTau_log_comp_overlayc_ratio->SetTopMargin(0.07);
-   muTau_log_comp_overlayc_ratio->SetBottomMargin(0.17);
+   muTau_log_comp_overlayc_ratio->SetBottomMargin(0.13);
    muTau_log_comp_overlayc_ratio->SetFrameBorderMode(0);
    muTau_log_comp_overlayc_ratio->SetFrameBorderSize(0);
+
+   muTau_log_comp_overlayc_ratio->SetLogy();
   
 // ------------>Primitives in pad: muTau_log_comp_overlay_plotpad
-   TPad *muTau_log_comp_overlay_plotpad = new TPad("muTau_log_comp_overlay_plotpad", "Pad containing the overlay plot",0,0.211838,1,1);
-   muTau_log_comp_overlay_plotpad->Draw();
-   muTau_log_comp_overlay_plotpad->cd();
-   muTau_log_comp_overlay_plotpad->Range(26.64886,-2.48782,128.1175,2.364311);
-   muTau_log_comp_overlay_plotpad->SetFillColor(0);
-   muTau_log_comp_overlay_plotpad->SetFillStyle(4000);
-   muTau_log_comp_overlay_plotpad->SetBorderMode(0);
-   muTau_log_comp_overlay_plotpad->SetBorderSize(2);
-   muTau_log_comp_overlay_plotpad->SetLogy();
-   muTau_log_comp_overlay_plotpad->SetLeftMargin(0.131579);
-   muTau_log_comp_overlay_plotpad->SetRightMargin(0.08);
-   muTau_log_comp_overlay_plotpad->SetTopMargin(0.06895515);
-   muTau_log_comp_overlay_plotpad->SetBottomMargin(0.07206074);
-   muTau_log_comp_overlay_plotpad->SetFrameLineWidth(3);
-   muTau_log_comp_overlay_plotpad->SetFrameBorderMode(0);
-   muTau_log_comp_overlay_plotpad->SetFrameBorderSize(0);
-   muTau_log_comp_overlay_plotpad->SetFrameLineWidth(3);
-   muTau_log_comp_overlay_plotpad->SetFrameBorderMode(0);
-   muTau_log_comp_overlay_plotpad->SetFrameBorderSize(0);
+   // TPad *muTau_log_comp_overlay_plotpad = new TPad("muTau_log_comp_overlay_plotpad", "Pad containing the overlay plot",0,0.211838,1,1);
+   // muTau_log_comp_overlay_plotpad->Draw();
+   // muTau_log_comp_overlay_plotpad->cd();
+   // muTau_log_comp_overlay_plotpad->Range(26.64886,-2.48782,128.1175,2.364311);
+   // muTau_log_comp_overlay_plotpad->SetFillColor(0);
+   // muTau_log_comp_overlay_plotpad->SetFillStyle(4000);
+   // muTau_log_comp_overlay_plotpad->SetBorderMode(0);
+   // muTau_log_comp_overlay_plotpad->SetBorderSize(2);
+   // muTau_log_comp_overlay_plotpad->SetLogy();
+   // muTau_log_comp_overlay_plotpad->SetLeftMargin(0.131579);
+   // muTau_log_comp_overlay_plotpad->SetRightMargin(0.08);
+   // muTau_log_comp_overlay_plotpad->SetTopMargin(0.06895515);
+   // muTau_log_comp_overlay_plotpad->SetBottomMargin(0.07206074);
+   // muTau_log_comp_overlay_plotpad->SetFrameLineWidth(3);
+   // muTau_log_comp_overlay_plotpad->SetFrameBorderMode(0);
+   // muTau_log_comp_overlay_plotpad->SetFrameBorderSize(0);
+   // muTau_log_comp_overlay_plotpad->SetFrameLineWidth(3);
+   // muTau_log_comp_overlay_plotpad->SetFrameBorderMode(0);
+   // muTau_log_comp_overlay_plotpad->SetFrameBorderSize(0);
    
    THStack *h_stack = new THStack();
    h_stack->SetName("h_stack");
    h_stack->SetTitle("");
-   h_stack->SetMinimum(0.07);
-   h_stack->SetMaximum(100.0);
+   h_stack->SetMinimum(0.1);
+   h_stack->SetMaximum(200.00391);
    
    TH1F *h_stack_stack_1_stack_1 = new TH1F("h_stack_stack_1_stack_1","",120,0,120);
-   h_stack_stack_1_stack_1->SetMinimum(0.07);
-   h_stack_stack_1_stack_1->SetMaximum(100.0);
+   h_stack_stack_1_stack_1->SetMinimum(0.1);
+   h_stack_stack_1_stack_1->SetMaximum(200.0);
    h_stack_stack_1_stack_1->SetDirectory(0);
    h_stack_stack_1_stack_1->SetStats(0);
 
@@ -117,7 +119,7 @@
    TauMTCut_MT2_ZX_Rebinned->GetZaxis()->SetLabelSize(0.035);
    TauMTCut_MT2_ZX_Rebinned->GetZaxis()->SetTitleSize(0.035);
    TauMTCut_MT2_ZX_Rebinned->GetZaxis()->SetTitleFont(42);
-   h_stack->Add(TauMTCut_MT2_ZX_Rebinned,"");
+
    Double_t xAxis2[5] = {40, 50, 70, 90, 120}; 
    
    TH1D *TauMTCut_MT2_Top_Rebinned = new TH1D("TauMTCut_MT2_Top_Rebinned","",4, xAxis2);
@@ -162,7 +164,6 @@
    TauMTCut_MT2_Top_Rebinned->GetZaxis()->SetLabelSize(0.035);
    TauMTCut_MT2_Top_Rebinned->GetZaxis()->SetTitleSize(0.035);
    TauMTCut_MT2_Top_Rebinned->GetZaxis()->SetTitleFont(42);
-   h_stack->Add(TauMTCut_MT2_Top_Rebinned,"");
    Double_t xAxis3[5] = {40, 50, 70, 90, 120}; 
    
    TH1D *TauMTCut_MT2_WW_Rebinned = new TH1D("TauMTCut_MT2_WW_Rebinned","",4, xAxis3);
@@ -207,7 +208,6 @@
    TauMTCut_MT2_WW_Rebinned->GetZaxis()->SetLabelSize(0.035);
    TauMTCut_MT2_WW_Rebinned->GetZaxis()->SetTitleSize(0.035);
    TauMTCut_MT2_WW_Rebinned->GetZaxis()->SetTitleFont(42);
-   h_stack->Add(TauMTCut_MT2_WW_Rebinned,"");
    Double_t xAxis4[5] = {40, 50, 70, 90, 120}; 
    
    TH1D *TauMTCut_MT2_Higgs_Rebinned = new TH1D("TauMTCut_MT2_Higgs_Rebinned","",4, xAxis4);
@@ -246,7 +246,6 @@
    TauMTCut_MT2_Higgs_Rebinned->GetZaxis()->SetLabelSize(0.035);
    TauMTCut_MT2_Higgs_Rebinned->GetZaxis()->SetTitleSize(0.035);
    TauMTCut_MT2_Higgs_Rebinned->GetZaxis()->SetTitleFont(42);
-   h_stack->Add(TauMTCut_MT2_Higgs_Rebinned,"");
    Double_t xAxis5[5] = {40, 50, 70, 90, 120}; 
    
    TH1D *Total200_fromMuTau_MT2_data_Rebinned = new TH1D("Total200_fromMuTau_MT2_data_Rebinned","",4, xAxis5);
@@ -266,10 +265,10 @@
    Total200_fromMuTau_MT2_data_Rebinned->SetStats(0);
 
    ci = TColor::GetColor("#cccc00");
-   Total200_fromMuTau_MT2_data_Rebinned->SetFillColor(ci);
+   Total200_fromMuTau_MT2_data_Rebinned->SetFillColor(417);
 
    ci = TColor::GetColor("#cccc00");
-   Total200_fromMuTau_MT2_data_Rebinned->SetLineColor(ci);
+   Total200_fromMuTau_MT2_data_Rebinned->SetLineColor(417);
    Total200_fromMuTau_MT2_data_Rebinned->SetLineWidth(2);
 
    ci = TColor::GetColor("#cccc00");
@@ -291,8 +290,29 @@
    Total200_fromMuTau_MT2_data_Rebinned->GetZaxis()->SetLabelSize(0.035);
    Total200_fromMuTau_MT2_data_Rebinned->GetZaxis()->SetTitleSize(0.035);
    Total200_fromMuTau_MT2_data_Rebinned->GetZaxis()->SetTitleFont(42);
+
+
+   h_stack->Add(TauMTCut_MT2_Higgs_Rebinned,"");
+   h_stack->Add(TauMTCut_MT2_WW_Rebinned,"");
+   h_stack->Add(TauMTCut_MT2_Top_Rebinned,"");
+   h_stack->Add(TauMTCut_MT2_ZX_Rebinned,"");
    h_stack->Add(Total200_fromMuTau_MT2_data_Rebinned,"");
    h_stack->Draw("hist");
+
+   Double_t xAxis8[5] = {40, 50, 70, 90, 120}; 
+   TH1D *h__MC = new TH1D("h__MC","",4, xAxis8);
+   h__MC->Add(TauMTCut_MT2_ZX_Rebinned);		 
+   h__MC->Add(TauMTCut_MT2_Top_Rebinned);		 
+   h__MC->Add(TauMTCut_MT2_WW_Rebinned);		 
+   h__MC->Add(TauMTCut_MT2_Higgs_Rebinned);	 
+   h__MC->Add(Total200_fromMuTau_MT2_data_Rebinned);
+
+   h__MC->SetLineColor(kWhite);
+   h__MC->SetFillColor(kBlack);
+   h__MC->SetFillStyle(3004);
+   h__MC->Draw("E2 SAME");
+
+
    Double_t xAxis6[5] = {40, 50, 70, 90, 120}; 
    
    TH1D *TauMTCut_MT2_data_Rebinned = new TH1D("TauMTCut_MT2_data_Rebinned","",4, xAxis6);
@@ -308,9 +328,7 @@
    TauMTCut_MT2_data_Rebinned->SetBinError(5,2);
    TauMTCut_MT2_data_Rebinned->SetEntries(68);
    TauMTCut_MT2_data_Rebinned->SetStats(0);
-
-   ci = TColor::GetColor("#ff0000");
-   TauMTCut_MT2_data_Rebinned->SetFillColor(ci);
+   TauMTCut_MT2_data_Rebinned->SetFillColor(kWhite);
    TauMTCut_MT2_data_Rebinned->SetLineWidth(2);
    TauMTCut_MT2_data_Rebinned->SetMarkerStyle(20);
    TauMTCut_MT2_data_Rebinned->GetXaxis()->SetRange(1,11);
@@ -367,22 +385,28 @@
    TauMTCut_MT2_SUSY_380_0_Rebinned->GetZaxis()->SetTitleSize(0.035);
    TauMTCut_MT2_SUSY_380_0_Rebinned->GetZaxis()->SetTitleFont(42);
    TauMTCut_MT2_SUSY_380_0_Rebinned->Draw("samehist");
-   TLatex *   tex = new TLatex(0.13,0.943,"Preselection, m_{T}^{#tau} > 200 GeV");
-tex->SetNDC();
+
+   TLatex *   tex = new TLatex(0.10,0.943,"Preselection, m_{T}^{#tau} > 200 GeV");
+   tex->SetNDC();
    tex->SetTextSize(0.03);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.68,0.943,"#sqrt{s} = 8 TeV, L = 19.60 fb^{-1}");
-tex->SetNDC();
+   tex = new TLatex(0.68,0.943,"#sqrt{s} = 8 TeV, L = 19.6 fb^{-1}");
+   tex->SetNDC();
    tex->SetTextSize(0.0305);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.25,0.85,"CMS Preliminary     e#tau");
-tex->SetNDC();
+   tex = new TLatex(0.24,0.85,"CMS Preliminary");
+   tex->SetNDC();
+   tex->SetLineWidth(2);
+   tex->Draw();
+
+   tex = new TLatex(0.26,0.80,"e#tau");
+   tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
    
-   TLegend *leg = new TLegend(0.66,0.60,0.91,0.92,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.66,0.66,0.91,0.92,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(62);
    leg->SetLineColor(1);
@@ -390,211 +414,134 @@ tex->SetNDC();
    leg->SetLineWidth(2);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("NULL","Fake","f");
 
-   ci = TColor::GetColor("#cccc00");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#cccc00");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(62);
-   entry=leg->AddEntry("NULL","ZX","f");
-
-   ci = TColor::GetColor("#006600");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#006600");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(62);
-   entry=leg->AddEntry("NULL","Top","f");
-
-   ci = TColor::GetColor("#3366cc");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#3366cc");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(62);
-   entry=leg->AddEntry("NULL","WW","f");
-
-   ci = TColor::GetColor("#000066");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#000066");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(62);
-   entry=leg->AddEntry("NULL","Higgs","f");
-   entry->SetFillColor(2);
-   entry->SetFillStyle(1001);
-   entry->SetLineColor(2);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(62);
-   entry=leg->AddEntry("NULL","SMS(380,1)","f");
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#660000");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(2);
-   entry->SetLineWidth(3);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(62);
-   entry=leg->AddEntry("NULL","data","p");
-   entry->SetLineColor(1);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(20);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(62);
+   TLegendEntry *entry;
+   entry=leg->AddEntry(TauMTCut_MT2_data_Rebinned,"data","lp");
+   entry=leg->AddEntry(Total200_fromMuTau_MT2_data_Rebinned,"W","f");
+   entry=leg->AddEntry(TauMTCut_MT2_ZX_Rebinned,"ZX","f");
+   entry=leg->AddEntry(TauMTCut_MT2_Top_Rebinned,"Top","f");
+   entry=leg->AddEntry(TauMTCut_MT2_WW_Rebinned,"WW","f");
+   entry=leg->AddEntry(TauMTCut_MT2_Higgs_Rebinned,"Higgs","f");
+   entry=leg->AddEntry(h__MC,"Uncertainties","f");
+   entry=leg->AddEntry(TauMTCut_MT2_SUSY_380_0_Rebinned,"SUSY(380,1)","f");
    leg->Draw();
-      tex = new TLatex(85.55515,44.23062,"e#tau");
-   tex->SetLineWidth(2);
-   //   tex->Draw();
-   muTau_log_comp_overlay_plotpad->Modified();
-   muTau_log_comp_overlayc_ratio->cd();
-  
-// ------------>Primitives in pad: muTau_log_comp_overlay_ratiopad
-   muTau_log_comp_overlay_ratiopad = new TPad("muTau_log_comp_overlay_ratiopad", "Pad containing the ratio",0,0.01863354,0.9967105,0.2189441);
-   muTau_log_comp_overlay_ratiopad->Draw();
-   muTau_log_comp_overlay_ratiopad->cd();
-   muTau_log_comp_overlay_ratiopad->Range(26.48733,-0.8571431,127.5821,2.214286);
-   muTau_log_comp_overlay_ratiopad->SetFillColor(0);
-   muTau_log_comp_overlay_ratiopad->SetBorderMode(0);
-   muTau_log_comp_overlay_ratiopad->SetBorderSize(2);
-   muTau_log_comp_overlay_ratiopad->SetLeftMargin(0.1336634);
-   muTau_log_comp_overlay_ratiopad->SetRightMargin(0.075);
-   muTau_log_comp_overlay_ratiopad->SetTopMargin(0.06976745);
-   muTau_log_comp_overlay_ratiopad->SetBottomMargin(0.2790698);
-   muTau_log_comp_overlay_ratiopad->SetFrameLineWidth(3);
-   muTau_log_comp_overlay_ratiopad->SetFrameBorderMode(0);
-   muTau_log_comp_overlay_ratiopad->SetFrameBorderSize(0);
-   muTau_log_comp_overlay_ratiopad->SetFrameLineWidth(3);
-   muTau_log_comp_overlay_ratiopad->SetFrameBorderMode(0);
-   muTau_log_comp_overlay_ratiopad->SetFrameBorderSize(0);
-   Double_t xAxis8[5] = {40, 50, 70, 90, 120}; 
-   
-   TH1D *h__MC = new TH1D("h__MC","",4, xAxis8);
-   h__MC->SetBinContent(0,1);
-   h__MC->SetBinContent(1,1);
-   h__MC->SetBinContent(2,1);
-   h__MC->SetBinContent(3,1);
-   h__MC->SetBinContent(4,1);
-   h__MC->SetBinContent(5,1);
-   h__MC->SetBinError(0,0.460838);
-   h__MC->SetBinError(1,1.440343);
-   h__MC->SetBinError(2,0.3969686);
-   h__MC->SetBinError(3,0.7437075);
-   h__MC->SetBinError(4,1.327108);
-   h__MC->SetBinError(5,1.429058);
-   h__MC->SetMinimum(0);
-   h__MC->SetMaximum(2);
-   h__MC->SetEntries(3.519199);
-   h__MC->SetStats(0);
-   h__MC->SetFillColor(1);
-   h__MC->SetFillStyle(3001);
-
-   ci = TColor::GetColor("#000099");
-   h__MC->SetLineColor(ci);
-   h__MC->SetLineWidth(2);
-   h__MC->GetXaxis()->SetTitle("M_{T2}");
-   h__MC->GetXaxis()->SetRange(1,4);
-   h__MC->GetXaxis()->SetNdivisions(505);
-   h__MC->GetXaxis()->SetLabelFont(42);
-   h__MC->GetXaxis()->SetLabelSize(0);
-   h__MC->GetXaxis()->SetTitleSize(0.2);
-   h__MC->GetXaxis()->SetTickLength(0.09);
-   h__MC->GetXaxis()->SetTitleOffset(0.5);
-   h__MC->GetXaxis()->SetTitleFont(42);
-   h__MC->GetYaxis()->SetTitle("Data / MC");
-   h__MC->GetYaxis()->SetNdivisions(509);
-   h__MC->GetYaxis()->SetLabelFont(42);
-   h__MC->GetYaxis()->SetLabelSize(0.19);
-   h__MC->GetYaxis()->SetTitleSize(0.18);
-   h__MC->GetYaxis()->SetTitleOffset(0.36);
-   h__MC->GetYaxis()->SetTitleFont(42);
-   h__MC->GetZaxis()->SetLabelFont(42);
-   h__MC->GetZaxis()->SetLabelSize(0.035);
-   h__MC->GetZaxis()->SetTitleSize(0.035);
-   h__MC->GetZaxis()->SetTitleFont(42);
-   h__MC->Draw("E2");
-   Double_t xAxis9[5] = {40, 50, 70, 90, 120}; 
-   
-   TH1D *TauMTCut_MT2_data_Rebinned__1 = new TH1D("TauMTCut_MT2_data_Rebinned__1","",4, xAxis9);
-   TauMTCut_MT2_data_Rebinned__1->SetBinContent(1,2.931791);
-   TauMTCut_MT2_data_Rebinned__1->SetBinContent(2,1.07983);
-   TauMTCut_MT2_data_Rebinned__1->SetBinContent(3,1.511532);
-   TauMTCut_MT2_data_Rebinned__1->SetBinContent(4,1.013628);
-   TauMTCut_MT2_data_Rebinned__1->SetBinContent(5,1.09187);
-   TauMTCut_MT2_data_Rebinned__1->SetBinError(1,3.114058);
-   TauMTCut_MT2_data_Rebinned__1->SetBinError(2,0.355203);
-   TauMTCut_MT2_data_Rebinned__1->SetBinError(3,0.8855267);
-   TauMTCut_MT2_data_Rebinned__1->SetBinError(4,1.166797);
-   TauMTCut_MT2_data_Rebinned__1->SetBinError(5,1.321816);
-   TauMTCut_MT2_data_Rebinned__1->SetMinimum(0.4);
-   TauMTCut_MT2_data_Rebinned__1->SetMaximum(3);
-   TauMTCut_MT2_data_Rebinned__1->SetEntries(2.397098);
-   TauMTCut_MT2_data_Rebinned__1->SetDirectory(0);
-   TauMTCut_MT2_data_Rebinned__1->SetStats(0);
-
-   ci = TColor::GetColor("#ff0000");
-   TauMTCut_MT2_data_Rebinned__1->SetFillColor(ci);
-   TauMTCut_MT2_data_Rebinned__1->SetLineWidth(2);
-   TauMTCut_MT2_data_Rebinned__1->SetMarkerStyle(20);
-   TauMTCut_MT2_data_Rebinned__1->GetXaxis()->SetRange(1,11);
-   TauMTCut_MT2_data_Rebinned__1->GetXaxis()->SetNdivisions(505);
-   TauMTCut_MT2_data_Rebinned__1->GetXaxis()->SetLabelFont(42);
-   TauMTCut_MT2_data_Rebinned__1->GetXaxis()->SetLabelSize(0.07);
-   TauMTCut_MT2_data_Rebinned__1->GetXaxis()->SetTitleSize(0.07);
-   TauMTCut_MT2_data_Rebinned__1->GetXaxis()->SetTitleOffset(1.1);
-   TauMTCut_MT2_data_Rebinned__1->GetXaxis()->SetTitleFont(42);
-   TauMTCut_MT2_data_Rebinned__1->GetYaxis()->SetNdivisions(505);
-   TauMTCut_MT2_data_Rebinned__1->GetYaxis()->SetLabelFont(42);
-   TauMTCut_MT2_data_Rebinned__1->GetYaxis()->SetLabelSize(0.07);
-   TauMTCut_MT2_data_Rebinned__1->GetYaxis()->SetTitleSize(0.07);
-   TauMTCut_MT2_data_Rebinned__1->GetYaxis()->SetTitleOffset(1.3);
-   TauMTCut_MT2_data_Rebinned__1->GetYaxis()->SetTitleFont(42);
-   TauMTCut_MT2_data_Rebinned__1->GetZaxis()->SetLabelFont(42);
-   TauMTCut_MT2_data_Rebinned__1->GetZaxis()->SetLabelSize(0.035);
-   TauMTCut_MT2_data_Rebinned__1->GetZaxis()->SetTitleSize(0.035);
-   TauMTCut_MT2_data_Rebinned__1->GetZaxis()->SetTitleFont(42);
-   TauMTCut_MT2_data_Rebinned__1->Draw("Esame");
-   TLine *line = new TLine(40,1,120,1);
-   line->SetLineStyle(7);
-   line->SetLineWidth(2);
-   line->Draw();
-   muTau_log_comp_overlay_ratiopad->Modified();
-   muTau_log_comp_overlayc_ratio->cd();
-   muTau_log_comp_overlayc_ratio->Modified();
-   muTau_log_comp_overlayc_ratio->cd();
-   muTau_log_comp_overlayc_ratio->SetSelected(muTau_log_comp_overlayc_ratio);
-   muTau_log_comp_overlayc_ratio->ToggleToolBar();
 }
+
+// void Plot2(){
+  
+// // ------------>Primitives in pad: muTau_log_comp_overlay_ratiopad
+//    muTau_log_comp_overlay_ratiopad = new TPad("muTau_log_comp_overlay_ratiopad", "Pad containing the ratio",0,0.01863354,0.9967105,0.2189441);
+//    muTau_log_comp_overlay_ratiopad->Draw();
+//    muTau_log_comp_overlay_ratiopad->cd();
+//    muTau_log_comp_overlay_ratiopad->Range(26.48733,-0.8571431,127.5821,2.214286);
+//    muTau_log_comp_overlay_ratiopad->SetFillColor(0);
+//    muTau_log_comp_overlay_ratiopad->SetBorderMode(0);
+//    muTau_log_comp_overlay_ratiopad->SetBorderSize(2);
+//    muTau_log_comp_overlay_ratiopad->SetLeftMargin(0.1336634);
+//    muTau_log_comp_overlay_ratiopad->SetRightMargin(0.075);
+//    muTau_log_comp_overlay_ratiopad->SetTopMargin(0.06976745);
+//    muTau_log_comp_overlay_ratiopad->SetBottomMargin(0.2790698);
+//    muTau_log_comp_overlay_ratiopad->SetFrameLineWidth(3);
+//    muTau_log_comp_overlay_ratiopad->SetFrameBorderMode(0);
+//    muTau_log_comp_overlay_ratiopad->SetFrameBorderSize(0);
+//    muTau_log_comp_overlay_ratiopad->SetFrameLineWidth(3);
+//    muTau_log_comp_overlay_ratiopad->SetFrameBorderMode(0);
+//    muTau_log_comp_overlay_ratiopad->SetFrameBorderSize(0);
+//    Double_t xAxis8[5] = {40, 50, 70, 90, 120}; 
+   
+//    TH1D *h__MC = new TH1D("h__MC","",4, xAxis8);
+//    h__MC->SetBinContent(0,1);
+//    h__MC->SetBinContent(1,1);
+//    h__MC->SetBinContent(2,1);
+//    h__MC->SetBinContent(3,1);
+//    h__MC->SetBinContent(4,1);
+//    h__MC->SetBinContent(5,1);
+//    h__MC->SetBinError(0,0.460838);
+//    h__MC->SetBinError(1,1.440343);
+//    h__MC->SetBinError(2,0.3969686);
+//    h__MC->SetBinError(3,0.7437075);
+//    h__MC->SetBinError(4,1.327108);
+//    h__MC->SetBinError(5,1.429058);
+//    h__MC->SetMinimum(0);
+//    h__MC->SetMaximum(2);
+//    h__MC->SetEntries(3.519199);
+//    h__MC->SetStats(0);
+//    h__MC->SetFillColor(1);
+//    h__MC->SetFillStyle(3004);
+
+//    ci = TColor::GetColor("#000099");
+//    h__MC->SetLineColor(ci);
+//    h__MC->SetLineWidth(2);
+//    h__MC->GetXaxis()->SetTitle("M_{T2}");
+//    h__MC->GetXaxis()->SetRange(1,4);
+//    h__MC->GetXaxis()->SetNdivisions(505);
+//    h__MC->GetXaxis()->SetLabelFont(42);
+//    h__MC->GetXaxis()->SetLabelSize(0);
+//    h__MC->GetXaxis()->SetTitleSize(0.2);
+//    h__MC->GetXaxis()->SetTickLength(0.09);
+//    h__MC->GetXaxis()->SetTitleOffset(0.5);
+//    h__MC->GetXaxis()->SetTitleFont(42);
+//    h__MC->GetYaxis()->SetTitle("Data / MC");
+//    h__MC->GetYaxis()->SetNdivisions(509);
+//    h__MC->GetYaxis()->SetLabelFont(42);
+//    h__MC->GetYaxis()->SetLabelSize(0.19);
+//    h__MC->GetYaxis()->SetTitleSize(0.18);
+//    h__MC->GetYaxis()->SetTitleOffset(0.36);
+//    h__MC->GetYaxis()->SetTitleFont(42);
+//    h__MC->GetZaxis()->SetLabelFont(42);
+//    h__MC->GetZaxis()->SetLabelSize(0.035);
+//    h__MC->GetZaxis()->SetTitleSize(0.035);
+//    h__MC->GetZaxis()->SetTitleFont(42);
+//    h__MC->Draw("E2");
+//    Double_t xAxis9[5] = {40, 50, 70, 90, 120}; 
+   
+//    TH1D *TauMTCut_MT2_data_Rebinned__1 = new TH1D("TauMTCut_MT2_data_Rebinned__1","",4, xAxis9);
+//    TauMTCut_MT2_data_Rebinned__1->SetBinContent(1,2.931791);
+//    TauMTCut_MT2_data_Rebinned__1->SetBinContent(2,1.07983);
+//    TauMTCut_MT2_data_Rebinned__1->SetBinContent(3,1.511532);
+//    TauMTCut_MT2_data_Rebinned__1->SetBinContent(4,1.013628);
+//    TauMTCut_MT2_data_Rebinned__1->SetBinContent(5,1.09187);
+//    TauMTCut_MT2_data_Rebinned__1->SetBinError(1,3.114058);
+//    TauMTCut_MT2_data_Rebinned__1->SetBinError(2,0.355203);
+//    TauMTCut_MT2_data_Rebinned__1->SetBinError(3,0.8855267);
+//    TauMTCut_MT2_data_Rebinned__1->SetBinError(4,1.166797);
+//    TauMTCut_MT2_data_Rebinned__1->SetBinError(5,1.321816);
+//    TauMTCut_MT2_data_Rebinned__1->SetMinimum(0.4);
+//    TauMTCut_MT2_data_Rebinned__1->SetMaximum(3);
+//    TauMTCut_MT2_data_Rebinned__1->SetEntries(2.397098);
+//    TauMTCut_MT2_data_Rebinned__1->SetDirectory(0);
+//    TauMTCut_MT2_data_Rebinned__1->SetStats(0);
+
+//    ci = TColor::GetColor("#ff0000");
+//    TauMTCut_MT2_data_Rebinned__1->SetFillColor(ci);
+//    TauMTCut_MT2_data_Rebinned__1->SetLineWidth(2);
+//    TauMTCut_MT2_data_Rebinned__1->SetMarkerStyle(20);
+//    TauMTCut_MT2_data_Rebinned__1->GetXaxis()->SetRange(1,11);
+//    TauMTCut_MT2_data_Rebinned__1->GetXaxis()->SetNdivisions(505);
+//    TauMTCut_MT2_data_Rebinned__1->GetXaxis()->SetLabelFont(42);
+//    TauMTCut_MT2_data_Rebinned__1->GetXaxis()->SetLabelSize(0.07);
+//    TauMTCut_MT2_data_Rebinned__1->GetXaxis()->SetTitleSize(0.07);
+//    TauMTCut_MT2_data_Rebinned__1->GetXaxis()->SetTitleOffset(1.1);
+//    TauMTCut_MT2_data_Rebinned__1->GetXaxis()->SetTitleFont(42);
+//    TauMTCut_MT2_data_Rebinned__1->GetYaxis()->SetNdivisions(505);
+//    TauMTCut_MT2_data_Rebinned__1->GetYaxis()->SetLabelFont(42);
+//    TauMTCut_MT2_data_Rebinned__1->GetYaxis()->SetLabelSize(0.07);
+//    TauMTCut_MT2_data_Rebinned__1->GetYaxis()->SetTitleSize(0.07);
+//    TauMTCut_MT2_data_Rebinned__1->GetYaxis()->SetTitleOffset(1.3);
+//    TauMTCut_MT2_data_Rebinned__1->GetYaxis()->SetTitleFont(42);
+//    TauMTCut_MT2_data_Rebinned__1->GetZaxis()->SetLabelFont(42);
+//    TauMTCut_MT2_data_Rebinned__1->GetZaxis()->SetLabelSize(0.035);
+//    TauMTCut_MT2_data_Rebinned__1->GetZaxis()->SetTitleSize(0.035);
+//    TauMTCut_MT2_data_Rebinned__1->GetZaxis()->SetTitleFont(42);
+//    TauMTCut_MT2_data_Rebinned__1->Draw("Esame");
+//    TLine *line = new TLine(40,1,120,1);
+//    line->SetLineStyle(7);
+//    line->SetLineWidth(2);
+//    line->Draw();
+//    muTau_log_comp_overlay_ratiopad->Modified();
+//    muTau_log_comp_overlayc_ratio->cd();
+//    muTau_log_comp_overlayc_ratio->Modified();
+//    muTau_log_comp_overlayc_ratio->cd();
+//    muTau_log_comp_overlayc_ratio->SetSelected(muTau_log_comp_overlayc_ratio);
+//    muTau_log_comp_overlayc_ratio->ToggleToolBar();
+// }
