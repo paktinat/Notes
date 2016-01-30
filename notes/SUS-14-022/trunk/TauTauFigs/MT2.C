@@ -1,41 +1,23 @@
-void MT2(){
-//=========Macro generated from canvas: TBD_flipped_log_comp_overlayc_ratio/
-//=========  (Wed Aug 12 16:31:41 2015) by ROOT version5.34/03
-   TCanvas *TBD_flipped_log_comp_overlayc_ratio = new TCanvas("MT2_SSQCD", "",3,26,600,600);
+{
+//=========Macro generated from canvas: MT2_SSQCD/
+//=========  (Sat Jan 30 16:39:58 2016) by ROOT version5.34/03
+   TCanvas *MT2_SSQCD = new TCanvas("MT2_SSQCD", "",58,26,600,630);
    gStyle->SetOptFit(1);
-   TBD_flipped_log_comp_overlayc_ratio->Range(0,0,1,1);
-   TBD_flipped_log_comp_overlayc_ratio->SetFillColor(0);
-   TBD_flipped_log_comp_overlayc_ratio->SetBorderMode(0);
-   TBD_flipped_log_comp_overlayc_ratio->SetBorderSize(2);
-   TBD_flipped_log_comp_overlayc_ratio->SetLeftMargin(0.18);
-   TBD_flipped_log_comp_overlayc_ratio->SetRightMargin(0.08);
-   TBD_flipped_log_comp_overlayc_ratio->SetTopMargin(0.07);
-   TBD_flipped_log_comp_overlayc_ratio->SetBottomMargin(0.17);
-   TBD_flipped_log_comp_overlayc_ratio->SetFrameBorderMode(0);
-   TBD_flipped_log_comp_overlayc_ratio->SetFrameBorderSize(0);
-
-   TBD_flipped_log_comp_overlayc_ratio->SetLogy();
-  
-// // ------------>Primitives in pad: TBD_flipped_log_comp_overlay_plotpad
-//    TPad *TBD_flipped_log_comp_overlay_plotpad = new TPad("TBD_flipped_log_comp_overlay_plotpad", "Pad containing the overlay plot",0,0.211838,1,1);
-//    TBD_flipped_log_comp_overlay_plotpad->Draw();
-//    TBD_flipped_log_comp_overlay_plotpad->cd();
-//    TBD_flipped_log_comp_overlay_plotpad->Range(27.48331,-2.642362,122.6101,3.417355);
-//    TBD_flipped_log_comp_overlay_plotpad->SetFillColor(0);
-//    TBD_flipped_log_comp_overlay_plotpad->SetFillStyle(4000);
-//    TBD_flipped_log_comp_overlay_plotpad->SetBorderMode(0);
-//    TBD_flipped_log_comp_overlay_plotpad->SetBorderSize(2);
-//    TBD_flipped_log_comp_overlay_plotpad->SetLogy();
-//    TBD_flipped_log_comp_overlay_plotpad->SetLeftMargin(0.131579);
-//    TBD_flipped_log_comp_overlay_plotpad->SetRightMargin(0.08);
-//    TBD_flipped_log_comp_overlay_plotpad->SetTopMargin(0.06895515);
-//    TBD_flipped_log_comp_overlay_plotpad->SetBottomMargin(0.07206074);
-//    TBD_flipped_log_comp_overlay_plotpad->SetFrameLineWidth(3);
-//    TBD_flipped_log_comp_overlay_plotpad->SetFrameBorderMode(0);
-//    TBD_flipped_log_comp_overlay_plotpad->SetFrameBorderSize(0);
-//    TBD_flipped_log_comp_overlay_plotpad->SetFrameLineWidth(3);
-//    TBD_flipped_log_comp_overlay_plotpad->SetFrameBorderMode(0);
-//    TBD_flipped_log_comp_overlay_plotpad->SetFrameBorderSize(0);
+   MT2_SSQCD->Range(21.75676,-3.370016,123.1081,3.478933);
+   MT2_SSQCD->SetFillColor(0);
+   MT2_SSQCD->SetBorderMode(0);
+   MT2_SSQCD->SetBorderSize(2);
+   MT2_SSQCD->SetLogy();
+   MT2_SSQCD->SetLeftMargin(0.18);
+   MT2_SSQCD->SetRightMargin(0.08);
+   MT2_SSQCD->SetTopMargin(0.07);
+   MT2_SSQCD->SetBottomMargin(0.17);
+   MT2_SSQCD->SetFrameLineWidth(3);
+   MT2_SSQCD->SetFrameBorderMode(0);
+   MT2_SSQCD->SetFrameBorderSize(0);
+   MT2_SSQCD->SetFrameLineWidth(3);
+   MT2_SSQCD->SetFrameBorderMode(0);
+   MT2_SSQCD->SetFrameBorderSize(0);
    
    THStack *h_stack = new THStack();
    h_stack->SetName("h_stack");
@@ -43,34 +25,33 @@ void MT2(){
    h_stack->SetMinimum(0.02);
    h_stack->SetMaximum(530);
    
-   TH1F *h_stack_stack_1 = new TH1F("h_stack_stack_1","",3,40,115);
-   h_stack_stack_1->SetMinimum(0.006227381);
-   h_stack_stack_1->SetMaximum(998.8641);
-   h_stack_stack_1->SetDirectory(0);
-   h_stack_stack_1->SetStats(0);
-   h_stack_stack_1->SetLineWidth(2);
-   h_stack_stack_1->GetXaxis()->SetTitle("M_{T2}");
-   h_stack_stack_1->GetXaxis()->SetNdivisions(505);
-   h_stack_stack_1->GetXaxis()->SetLabelFont(42);
-   h_stack_stack_1->GetXaxis()->SetLabelSize(0.05);
-   h_stack_stack_1->GetXaxis()->SetTitleSize(0.05);
-   h_stack_stack_1->GetXaxis()->SetTitleOffset(1.1);
-   h_stack_stack_1->GetXaxis()->SetTitleFont(42);
-   h_stack_stack_1->GetYaxis()->SetTitle("Events");
-   h_stack_stack_1->GetYaxis()->SetNdivisions(505);
-   h_stack_stack_1->GetYaxis()->SetLabelFont(42);
-   h_stack_stack_1->GetYaxis()->SetLabelSize(0.05);
-   h_stack_stack_1->GetYaxis()->SetTitleSize(0.05);
-   h_stack_stack_1->GetYaxis()->SetTitleOffset(1.3);
-   h_stack_stack_1->GetYaxis()->SetTitleFont(42);
-   h_stack_stack_1->GetZaxis()->SetLabelFont(42);
-   h_stack_stack_1->GetZaxis()->SetLabelSize(0.035);
-   h_stack_stack_1->GetZaxis()->SetTitleSize(0.035);
-   h_stack_stack_1->GetZaxis()->SetTitleFont(42);
-   h_stack->SetHistogram(h_stack_stack_1);
+   TH1F *h_stack_stack_1_stack_1_stack_1 = new TH1F("h_stack_stack_1_stack_1_stack_1","",3,40,115);
+   h_stack_stack_1_stack_1_stack_1->SetMinimum(0.006227381);
+   h_stack_stack_1_stack_1_stack_1->SetMaximum(998.8641);
+   h_stack_stack_1_stack_1_stack_1->SetDirectory(0);
+   h_stack_stack_1_stack_1_stack_1->SetStats(0);
+   h_stack_stack_1_stack_1_stack_1->SetLineWidth(2);
+   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("M_{T2}");
+   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
+   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
+   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
+   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
+   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
+   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
+   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events");
+   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
+   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
+   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
+   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetTitleSize(0.05);
+   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetTitleOffset(1.3);
+   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetTitleFont(42);
+   h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetLabelFont(42);
+   h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetLabelSize(0.035);
+   h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
+   h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
+   h_stack->SetHistogram(h_stack_stack_1_stack_1_stack_1);
    
    Double_t xAxis1[4] = {40, 65, 90, 115}; 
-   TH1D *h__MC = new TH1D("h__MC","",3, xAxis1);
    
    TH1D *h__Higgs = new TH1D("h__Higgs","",3, xAxis1);
    h__Higgs->SetBinContent(1,0.5091306);
@@ -82,17 +63,10 @@ void MT2(){
    h__Higgs->SetBinError(4,0.03100911);
    h__Higgs->SetEntries(117);
    h__Higgs->SetStats(0);
-
-   Int_t ci;   // for color index setting
-   ci = TColor::GetColor("#ff0000");
-   h__Higgs->SetFillColor(ci);
-
-   ci = TColor::GetColor("#ff0000");
-   h__Higgs->SetLineColor(ci);
+   h__Higgs->SetFillColor(2);
+   h__Higgs->SetLineColor(2);
    h__Higgs->SetLineWidth(2);
-
-   ci = TColor::GetColor("#ff0000");
-   h__Higgs->SetMarkerColor(ci);
+   h__Higgs->SetMarkerColor(2);
    h__Higgs->GetXaxis()->SetNdivisions(505);
    h__Higgs->GetXaxis()->SetLabelFont(42);
    h__Higgs->GetXaxis()->SetLabelSize(0.07);
@@ -109,6 +83,7 @@ void MT2(){
    h__Higgs->GetZaxis()->SetLabelSize(0.035);
    h__Higgs->GetZaxis()->SetTitleSize(0.035);
    h__Higgs->GetZaxis()->SetTitleFont(42);
+   h_stack->Add(h__Higgs,"");
    Double_t xAxis2[4] = {40, 65, 90, 115}; 
    
    TH1D *h__WWjets = new TH1D("h__WWjets","",3, xAxis2);
@@ -121,6 +96,7 @@ void MT2(){
    h__WWjets->SetEntries(37);
    h__WWjets->SetStats(0);
 
+   Int_t ci;   // for color index setting
    ci = TColor::GetColor("#000066");
    h__WWjets->SetFillColor(ci);
 
@@ -146,6 +122,7 @@ void MT2(){
    h__WWjets->GetZaxis()->SetLabelSize(0.035);
    h__WWjets->GetZaxis()->SetTitleSize(0.035);
    h__WWjets->GetZaxis()->SetTitleFont(42);
+   h_stack->Add(h__WWjets,"");
    Double_t xAxis3[4] = {40, 65, 90, 115}; 
    
    TH1D *h__Top = new TH1D("h__Top","",3, xAxis3);
@@ -181,6 +158,7 @@ void MT2(){
    h__Top->GetZaxis()->SetLabelSize(0.035);
    h__Top->GetZaxis()->SetTitleSize(0.035);
    h__Top->GetZaxis()->SetTitleFont(42);
+   h_stack->Add(h__Top,"");
    Double_t xAxis4[4] = {40, 65, 90, 115}; 
    
    TH1D *h__Zjets = new TH1D("h__Zjets","",3, xAxis4);
@@ -219,6 +197,7 @@ void MT2(){
    h__Zjets->GetZaxis()->SetLabelSize(0.035);
    h__Zjets->GetZaxis()->SetTitleSize(0.035);
    h__Zjets->GetZaxis()->SetTitleFont(42);
+   h_stack->Add(h__Zjets,"");
    Double_t xAxis5[4] = {40, 65, 90, 115}; 
    
    TH1D *h__Wjets = new TH1D("h__Wjets","",3, xAxis5);
@@ -254,6 +233,7 @@ void MT2(){
    h__Wjets->GetZaxis()->SetLabelSize(0.035);
    h__Wjets->GetZaxis()->SetTitleSize(0.035);
    h__Wjets->GetZaxis()->SetTitleFont(42);
+   h_stack->Add(h__Wjets,"");
    Double_t xAxis6[4] = {40, 65, 90, 115}; 
    
    TH1D *h__QCD = new TH1D("h__QCD","",3, xAxis6);
@@ -264,7 +244,6 @@ void MT2(){
    h__QCD->SetBinError(2,1.000329);
    h__QCD->SetBinError(3,0.00706805);
    h__QCD->SetEntries(40.48913);
-   //h__QCD->SetEntries(16);
    h__QCD->SetStats(0);
 
    ci = TColor::GetColor("#cccc00");
@@ -292,30 +271,43 @@ void MT2(){
    h__QCD->GetZaxis()->SetLabelSize(0.035);
    h__QCD->GetZaxis()->SetTitleSize(0.035);
    h__QCD->GetZaxis()->SetTitleFont(42);
-
-   h_stack->Add(h__Higgs,"");
-   h_stack->Add(h__WWjets,"");
-   h_stack->Add(h__Top,"");
-   h_stack->Add(h__Zjets,"");
-   h_stack->Add(h__Wjets,"");
    h_stack->Add(h__QCD,"");
-
-   h__MC->Add(h__WWjets);
-   h__MC->Add(h__Higgs);
-   h__MC->Add(h__Top);
-   h__MC->Add(h__Zjets);
-   h__MC->Add(h__Wjets);
-   h__MC->Add(h__QCD);
    h_stack->Draw("hist");
-
-   h__MC->SetLineColor(kWhite);
-   h__MC->SetFillColor(kBlack);
-   h__MC->SetFillStyle(3004);
-   h__MC->Draw("E2 SAME");
-
    Double_t xAxis7[4] = {40, 65, 90, 115}; 
    
-   TH1D *h2_copy = new TH1D("h2_copy","",3, xAxis7);
+   TH1D *h__MC = new TH1D("h__MC","",3, xAxis7);
+   h__MC->SetBinContent(1,95.85064);
+   h__MC->SetBinContent(2,5.508291);
+   h__MC->SetBinContent(3,0.7376215);
+   h__MC->SetBinError(1,10.72919);
+   h__MC->SetBinError(2,1.765445);
+   h__MC->SetBinError(3,0.08117615);
+   h__MC->SetBinError(4,0.06252563);
+   h__MC->SetEntries(639.4891);
+   h__MC->SetFillColor(1);
+   h__MC->SetFillStyle(3004);
+   h__MC->SetLineColor(0);
+   h__MC->SetLineWidth(2);
+   h__MC->GetXaxis()->SetNdivisions(505);
+   h__MC->GetXaxis()->SetLabelFont(42);
+   h__MC->GetXaxis()->SetLabelSize(0.07);
+   h__MC->GetXaxis()->SetTitleSize(0.07);
+   h__MC->GetXaxis()->SetTitleOffset(1.1);
+   h__MC->GetXaxis()->SetTitleFont(42);
+   h__MC->GetYaxis()->SetNdivisions(505);
+   h__MC->GetYaxis()->SetLabelFont(42);
+   h__MC->GetYaxis()->SetLabelSize(0.07);
+   h__MC->GetYaxis()->SetTitleSize(0.07);
+   h__MC->GetYaxis()->SetTitleOffset(1.3);
+   h__MC->GetYaxis()->SetTitleFont(42);
+   h__MC->GetZaxis()->SetLabelFont(42);
+   h__MC->GetZaxis()->SetLabelSize(0.035);
+   h__MC->GetZaxis()->SetTitleSize(0.035);
+   h__MC->GetZaxis()->SetTitleFont(42);
+   h__MC->Draw("E2 SAME");
+   Double_t xAxis8[4] = {40, 65, 90, 115}; 
+   
+   TH1D *h2_copy = new TH1D("h2_copy","",3, xAxis8);
    h2_copy->SetBinContent(1,106);
    h2_copy->SetBinContent(2,4);
    h2_copy->SetBinContent(3,1);
@@ -345,9 +337,9 @@ void MT2(){
    h2_copy->GetZaxis()->SetTitleSize(0.035);
    h2_copy->GetZaxis()->SetTitleFont(42);
    h2_copy->Draw("sameE");
-   Double_t xAxis8[4] = {40, 65, 90, 115}; 
+   Double_t xAxis9[4] = {40, 65, 90, 115}; 
    
-   TH1D *h_susy = new TH1D("h_susy","",3, xAxis8);
+   TH1D *h_susy = new TH1D("h_susy","",3, xAxis9);
    h_susy->SetBinContent(1,4.520877);
    h_susy->SetBinContent(2,4.255282);
    h_susy->SetBinContent(3,4.350677);
@@ -375,18 +367,16 @@ void MT2(){
    h_susy->GetZaxis()->SetTitleSize(0.035);
    h_susy->GetZaxis()->SetTitleFont(42);
    h_susy->Draw("samehist");
-
-   TLatex *   tex ;
-   tex = new TLatex(0.68,0.943,"#sqrt{s} = 8 TeV, L = 18.1 fb^{-1}");
-   tex->SetNDC();
+   TLatex *   tex = new TLatex(0.68,0.943,"18.1 fb^{-1} (8 TeV)");
+tex->SetNDC();
    tex->SetTextSize(0.0305);
    tex->SetLineWidth(2);
    tex->Draw();
-   tex = new TLatex(0.22,0.85,"CMS Preliminary");
-   tex->SetNDC();
+      tex = new TLatex(0.1963087,0.8780488,"CMS Preliminary");
+tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
-
+   
    TLegend *leg = new TLegend(0.65,0.65,0.91,0.92,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(62);
@@ -395,162 +385,109 @@ void MT2(){
    leg->SetLineWidth(2);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
+   TLegendEntry *entry=leg->AddEntry("h2_copy","data","pl");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(20);
+   entry->SetMarkerSize(1);
+   entry=leg->AddEntry("h__QCD","QCD multijet","f");
 
+   ci = TColor::GetColor("#cccc00");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(1001);
 
-   TLegendEntry *entry;
-   entry=leg->AddEntry(h2_copy,"data","pl");
-   entry=leg->AddEntry(h__QCD,"QCD multijet","f");
-   entry=leg->AddEntry(h__Wjets,"W","f");
-   entry=leg->AddEntry(h__Zjets,"ZX","f");
-   entry=leg->AddEntry(h__Top,"Top","f");
-   entry=leg->AddEntry(h__WWjets,"WW","f");
-   entry=leg->AddEntry(h__Higgs,"Higgs","f");
-   entry=leg->AddEntry(h__MC,"Uncertainties","f");
-   entry=leg->AddEntry(h_susy,"SUSY","f");
+   ci = TColor::GetColor("#cccc00");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry=leg->AddEntry("h__Wjets","W","f");
+
+   ci = TColor::GetColor("#00cc00");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#00cc00");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry=leg->AddEntry("h__Zjets","ZX","f");
+
+   ci = TColor::GetColor("#006600");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#006600");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry=leg->AddEntry("h__Top","Top","f");
+
+   ci = TColor::GetColor("#3366cc");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#3366cc");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry=leg->AddEntry("h__WWjets","WW","f");
+
+   ci = TColor::GetColor("#000066");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#000066");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry=leg->AddEntry("h__Higgs","Higgs","f");
+   entry->SetFillColor(2);
+   entry->SetFillStyle(1001);
+   entry->SetLineColor(2);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry=leg->AddEntry("h__MC","Uncertainties","f");
+   entry->SetFillColor(1);
+   entry->SetFillStyle(3004);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry=leg->AddEntry("h_susy","SUSY","f");
+   entry->SetFillStyle(1001);
+   entry->SetLineColor(1);
+   entry->SetLineStyle(3);
+   entry->SetLineWidth(4);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
    leg->Draw();
-  
+      tex = new TLatex(42.33312,193.0795,"OS #tau_{h}#tau_{h} SR1");
+   tex->SetLineWidth(2);
+   tex->Draw();
+   MT2_SSQCD->Modified();
+   MT2_SSQCD->cd();
+   MT2_SSQCD->SetSelected(MT2_SSQCD);
+   MT2_SSQCD->ToggleToolBar();
 }
-
-// void Plot2(){
-// // ------------>Primitives in pad: TBD_flipped_log_comp_overlay_ratiopad
-//    TBD_flipped_log_comp_overlay_ratiopad = new TPad("TBD_flipped_log_comp_overlay_ratiopad", "Pad containing the ratio",0,0.01863354,0.9967105,0.2189441);
-//    TBD_flipped_log_comp_overlay_ratiopad->Draw();
-//    TBD_flipped_log_comp_overlay_ratiopad->cd();
-//    TBD_flipped_log_comp_overlay_ratiopad->Range(27.33187,-0.8571431,122.1082,2.214286);
-//    TBD_flipped_log_comp_overlay_ratiopad->SetFillColor(0);
-//    TBD_flipped_log_comp_overlay_ratiopad->SetBorderMode(0);
-//    TBD_flipped_log_comp_overlay_ratiopad->SetBorderSize(2);
-//    TBD_flipped_log_comp_overlay_ratiopad->SetLeftMargin(0.1336634);
-//    TBD_flipped_log_comp_overlay_ratiopad->SetRightMargin(0.075);
-//    TBD_flipped_log_comp_overlay_ratiopad->SetTopMargin(0.06976745);
-//    TBD_flipped_log_comp_overlay_ratiopad->SetBottomMargin(0.2790698);
-//    TBD_flipped_log_comp_overlay_ratiopad->SetFrameLineWidth(3);
-//    TBD_flipped_log_comp_overlay_ratiopad->SetFrameBorderMode(0);
-//    TBD_flipped_log_comp_overlay_ratiopad->SetFrameBorderSize(0);
-//    TBD_flipped_log_comp_overlay_ratiopad->SetFrameLineWidth(3);
-//    TBD_flipped_log_comp_overlay_ratiopad->SetFrameBorderMode(0);
-//    TBD_flipped_log_comp_overlay_ratiopad->SetFrameBorderSize(0);
-//    Double_t xAxis9[4] = {40, 65, 90, 115}; 
-// /*   
-//    TH1D *h1_copy = new TH1D("h1_copy","",3, xAxis9);
-//    h1_copy->SetBinContent(1,1);
-//    h1_copy->SetBinContent(2,1);
-//    h1_copy->SetBinContent(3,1);
-//    h1_copy->SetBinError(1,0.2197264);
-//    h1_copy->SetBinError(2,0.4501487);
-//    h1_copy->SetBinError(3,0.1527775);
-// */
-//    TH1F *h1_copy  = (TH1F*)h__MC->Clone();
-//    h1_copy->Divide(h1_copy);
-
-//    h1_copy->SetMinimum(0);
-//    h1_copy->SetMaximum(2);
-//    h1_copy->SetEntries(32.81623);
-//    h1_copy->SetStats(0);
-//    h1_copy->SetFillColor(1);
-//    h1_copy->SetFillStyle(3004);
-//    h1_copy->SetLineWidth(2);
-//    h1_copy->GetXaxis()->SetTitle("M_{T2}");
-//    h1_copy->GetXaxis()->SetNdivisions(505);
-//    h1_copy->GetXaxis()->SetLabelFont(42);
-//    h1_copy->GetXaxis()->SetLabelSize(0);
-//    h1_copy->GetXaxis()->SetTitleSize(0.2);
-//    h1_copy->GetXaxis()->SetTickLength(0.09);
-//    h1_copy->GetXaxis()->SetTitleOffset(0.5);
-//    h1_copy->GetXaxis()->SetTitleFont(42);
-//    h1_copy->GetYaxis()->SetTitle("Data / MC");
-//    h1_copy->GetYaxis()->SetNdivisions(509);
-//    h1_copy->GetYaxis()->SetLabelFont(42);
-//    h1_copy->GetYaxis()->SetLabelSize(0.19);
-//    h1_copy->GetYaxis()->SetTitleSize(0.18);
-//    h1_copy->GetYaxis()->SetTitleOffset(0.36);
-//    h1_copy->GetYaxis()->SetTitleFont(42);
-//    h1_copy->GetZaxis()->SetLabelFont(42);
-//    h1_copy->GetZaxis()->SetLabelSize(0.035);
-//    h1_copy->GetZaxis()->SetTitleSize(0.035);
-//    h1_copy->GetZaxis()->SetTitleFont(42);
-//    h1_copy->Draw("E2");
-//    Double_t xAxis10[4] = {40, 65, 90, 115}; 
-// /*   
-//    TH1D *h2_copy__2 = new TH1D("h2_copy__2","",3, xAxis10);
-//    h2_copy__2->SetBinContent(1,2.470396);
-//    h2_copy__2->SetBinContent(2,0.8752435);
-//    h2_copy__2->SetBinContent(3,1.335883);
-//    h2_copy__2->SetBinError(1,0.4526546);
-//    h2_copy__2->SetBinError(2,0.5187743);
-//    h2_copy__2->SetBinError(3,1.343656);
-// */
-//    TH1F *h2_copy__2  = (TH1F*)h2_copy->Clone();
-//    h2_copy__2->Divide(h__MC);
-
-//    h2_copy__2->SetMinimum(0.4);
-//    h2_copy__2->SetMaximum(3);
-//    h2_copy__2->SetEntries(9.614955);
-//    h2_copy__2->SetDirectory(0);
-//    h2_copy__2->SetStats(0);
-//    h2_copy__2->SetLineWidth(2);
-//    h2_copy__2->SetMarkerStyle(20);
-//    h2_copy__2->GetXaxis()->SetNdivisions(505);
-//    h2_copy__2->GetXaxis()->SetLabelFont(42);
-//    h2_copy__2->GetXaxis()->SetLabelSize(0.07);
-//    h2_copy__2->GetXaxis()->SetTitleSize(0.07);
-//    h2_copy__2->GetXaxis()->SetTitleOffset(1.1);
-//    h2_copy__2->GetXaxis()->SetTitleFont(42);
-//    h2_copy__2->GetYaxis()->SetNdivisions(505);
-//    h2_copy__2->GetYaxis()->SetLabelFont(42);
-//    h2_copy__2->GetYaxis()->SetLabelSize(0.07);
-//    h2_copy__2->GetYaxis()->SetTitleSize(0.07);
-//    h2_copy__2->GetYaxis()->SetTitleOffset(1.3);
-//    h2_copy__2->GetYaxis()->SetTitleFont(42);
-//    h2_copy__2->GetZaxis()->SetLabelFont(42);
-//    h2_copy__2->GetZaxis()->SetLabelSize(0.035);
-//    h2_copy__2->GetZaxis()->SetTitleSize(0.035);
-//    h2_copy__2->GetZaxis()->SetTitleFont(42);
-//    h2_copy__2->Draw("Esame");
-//    TLine *line = new TLine(40,1,115,1);
-//    line->SetLineStyle(7);
-//    line->SetLineWidth(2);
-//    line->Draw();
-//    Double_t xAxis11[4] = {40, 65, 90, 115}; 
-   
-//    TH1D *h1_copy__3 = new TH1D("h1_copy__3","",3, xAxis11);
-//    h1_copy__3->SetBinContent(1,1);
-//    h1_copy__3->SetBinContent(2,1);
-//    h1_copy__3->SetBinContent(3,1);
-//    h1_copy__3->SetBinError(1,0.2197264);
-//    h1_copy__3->SetBinError(2,0.4501487);
-//    h1_copy__3->SetBinError(3,0.1527775);
-//    h1_copy__3->SetMinimum(0);
-//    h1_copy__3->SetMaximum(2);
-//    h1_copy__3->SetEntries(32.81623);
-//    h1_copy__3->SetDirectory(0);
-//    h1_copy__3->SetStats(0);
-//    h1_copy__3->SetFillColor(1);
-//    h1_copy__3->SetFillStyle(3004);
-//    h1_copy__3->SetLineWidth(2);
-//    h1_copy__3->GetXaxis()->SetTitle("M_{T2}");
-//    h1_copy__3->GetXaxis()->SetNdivisions(505);
-//    h1_copy__3->GetXaxis()->SetLabelFont(42);
-//    h1_copy__3->GetXaxis()->SetLabelSize(0);
-//    h1_copy__3->GetXaxis()->SetTitleSize(0.2);
-//    h1_copy__3->GetXaxis()->SetTickLength(0.09);
-//    h1_copy__3->GetXaxis()->SetTitleOffset(0.5);
-//    h1_copy__3->GetXaxis()->SetTitleFont(42);
-//    h1_copy__3->GetYaxis()->SetTitle("Data / MC");
-//    h1_copy__3->GetYaxis()->SetNdivisions(509);
-//    h1_copy__3->GetYaxis()->SetLabelFont(42);
-//    h1_copy__3->GetYaxis()->SetLabelSize(0.19);
-//    h1_copy__3->GetYaxis()->SetTitleSize(0.18);
-//    h1_copy__3->GetYaxis()->SetTitleOffset(0.36);
-//    h1_copy__3->GetYaxis()->SetTitleFont(42);
-//    h1_copy__3->GetZaxis()->SetLabelFont(42);
-//    h1_copy__3->GetZaxis()->SetLabelSize(0.035);
-//    h1_copy__3->GetZaxis()->SetTitleSize(0.035);
-//    h1_copy__3->GetZaxis()->SetTitleFont(42);
-//    h1_copy__3->Draw("sameaxis");
-//    TBD_flipped_log_comp_overlay_ratiopad->Modified();
-//    TBD_flipped_log_comp_overlayc_ratio->cd();
-//    TBD_flipped_log_comp_overlayc_ratio->Modified();
-//    TBD_flipped_log_comp_overlayc_ratio->cd();
-//    TBD_flipped_log_comp_overlayc_ratio->SetSelected(TBD_flipped_log_comp_overlayc_ratio);
-// }
