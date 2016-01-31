@@ -1,9 +1,9 @@
 {
 //=========Macro generated from canvas: SumMT_SSQCD/
-//=========  (Sat Jan 30 16:40:24 2016) by ROOT version5.34/03
-   TCanvas *SumMT_SSQCD = new TCanvas("SumMT_SSQCD", "",664,26,600,630);
+//=========  (Sun Jan 31 12:53:08 2016) by ROOT version5.34/03
+   TCanvas *SumMT_SSQCD = new TCanvas("SumMT_SSQCD", "",667,52,600,660);
    gStyle->SetOptFit(1);
-   SumMT_SSQCD->Range(51.35135,-3.300269,321.6216,3.227076);
+   SumMT_SSQCD->Range(51.35135,-2.535683,321.6216,3.691151);
    SumMT_SSQCD->SetFillColor(0);
    SumMT_SSQCD->SetBorderMode(0);
    SumMT_SSQCD->SetBorderSize(2);
@@ -22,34 +22,34 @@
    THStack *h_stack = new THStack();
    h_stack->SetName("h_stack");
    h_stack->SetTitle("");
-   h_stack->SetMinimum(0.02);
-   h_stack->SetMaximum(320);
+   h_stack->SetMinimum(0.1);
+   h_stack->SetMaximum(1000);
    
-   TH1F *h_stack_stack_1_stack_1_stack_1 = new TH1F("h_stack_stack_1_stack_1_stack_1","",4,100,300);
-   h_stack_stack_1_stack_1_stack_1->SetMinimum(0.006447329);
-   h_stack_stack_1_stack_1_stack_1->SetMaximum(589.0637);
-   h_stack_stack_1_stack_1_stack_1->SetDirectory(0);
-   h_stack_stack_1_stack_1_stack_1->SetStats(0);
-   h_stack_stack_1_stack_1_stack_1->SetLineWidth(2);
-   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("#Sigma m_{T}^{#tau_{i}}");
-   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
-   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
-   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
-   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
-   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
-   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
-   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events");
-   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
-   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
-   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
-   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetTitleSize(0.05);
-   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetTitleOffset(1.3);
-   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetTitleFont(42);
-   h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetLabelFont(42);
-   h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetLabelSize(0.035);
-   h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
-   h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
-   h_stack->SetHistogram(h_stack_stack_1_stack_1_stack_1);
+   TH1F *h_stack_stack_1_stack_1_stack_1_stack_1 = new TH1F("h_stack_stack_1_stack_1_stack_1_stack_1","",4,100,300);
+   h_stack_stack_1_stack_1_stack_1_stack_1->SetMinimum(0.03333333);
+   h_stack_stack_1_stack_1_stack_1_stack_1->SetMaximum(1800);
+   h_stack_stack_1_stack_1_stack_1_stack_1->SetDirectory(0);
+   h_stack_stack_1_stack_1_stack_1_stack_1->SetStats(0);
+   h_stack_stack_1_stack_1_stack_1_stack_1->SetLineWidth(2);
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("#Sigma m_{T}^{#tau_{i}}");
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events");
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleSize(0.05);
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleOffset(1.3);
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleFont(42);
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetLabelFont(42);
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetLabelSize(0.035);
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
+   h_stack_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
+   h_stack->SetHistogram(h_stack_stack_1_stack_1_stack_1_stack_1);
    
    Double_t xAxis1[5] = {100, 150, 200, 250, 300}; 
    
@@ -329,8 +329,8 @@
    h2_copy->SetBinError(2,8);
    h2_copy->SetBinError(3,3.605551);
    h2_copy->SetBinError(4,1.414214);
-   h2_copy->SetMinimum(0.05);
-   h2_copy->SetMaximum(320);
+   h2_copy->SetMinimum(0.1);
+   h2_copy->SetMaximum(1000);
    h2_copy->SetEntries(110);
    h2_copy->SetStats(0);
    h2_copy->SetLineWidth(2);
@@ -392,7 +392,7 @@ tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
    
-   TLegend *leg = new TLegend(0.6493289,0.7543554,0.909396,0.9216028,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.65,0.65,0.91,0.92,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(62);
    leg->SetLineColor(1);
@@ -498,7 +498,7 @@ tex->SetNDC();
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    leg->Draw();
-      tex = new TLatex(108.9425,119.822,"OS #tau_{h}#tau_{h} SR2");
+      tex = new TLatex(109.396,369.3467,"OS #tau_{h}#tau_{h} SR2");
    tex->SetLineWidth(2);
    tex->Draw();
    SumMT_SSQCD->Modified();

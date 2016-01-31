@@ -959,7 +959,7 @@ void MT2muTau_tauMTgt200_DDFake(){
   tex->SetTextSize(0.03);
   tex->SetLineWidth(2);
   tex->Draw();
-  tex = new TLatex(0.68,0.943,"#sqrt{s} = 8 TeV, L = 19.6 fb^{-1}");
+  TLatex *   tex = new TLatex(0.68,0.943,"19.6 fb^{-1} (8 TeV)");
   tex->SetNDC();
   tex->SetTextSize(0.0305);
   tex->SetLineWidth(2);
