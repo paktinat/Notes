@@ -1,6 +1,6 @@
 \section{Backgrounds}
 \label{sect:bkg}
-We separate the backgrounds into two categories.  Those with 
+The backgrounds are studied in two categories. Those with 
 ``misidentified'' \Tau, i.e., events where a quark or gluon jet has been misidentified
 as a \Tau, and those without \Tau misidentifications.  
 The misidentified \Tau backgrounds arise mostly from QCD and \wjets events.  The 
@@ -67,25 +67,30 @@ events and also 28\% systematic uncertainty assigned uniformly to all simulated 
 
 \subsection{\texorpdfstring{\wjets background estimation in the $\tauTau$ channel}{W+jets background estimation in the tau-tau channel}}
 \label{sect:bkgW}
-The contribution of the \wjets background in \tauTau channels is taken from simulation where the simulation of this process is validated in a data control sample. 
-In different signal regions after the final requirement of \mttwo $>$ 90\GeV or \SumMT $>$ 250\GeV, 
-the \wjets Monte Carlo has large statistical uncertainties and the predicted value is not reliable. 
-The efficiencies of the final selection requirements, $\epsilon_{\rm M_{T2}}=\frac{N_{\rm M_{T2}>90}}{N_{\rm M_{T2}>40}}$ for  \binone and $\epsilon_{\SumMT}=\frac{N_{\SumMT>250}}{N_{40<\rm M_{T2}<90}}$ for \bintwo, generally referred to as $\epsilon_{FS}$, are evaluated in MC after relaxing some kinematic selections. 
-The final estimations can be read as:
+The contribution of the \wjets background in \tauTau channels is taken from simulation where the simulation of this process is validated using a data control sample: 
+%In different signal regions after the final requirement of \mttwo $>$ 90\GeV or \SumMT $>$ 250\GeV, 
+%the \wjets Monte Carlo has large statistical uncertainties and the predicted value is not reliable. 
+%The efficiencies of the final selection requirements, $\epsilon_{\rm M_{T2}}=\frac{N_{\rm M_{T2}>90}}{N_{\rm M_{T2}>40}}$ for  \binone and $\epsilon_{\SumMT}=\frac{N_{\SumMT>250}}{N_{40<\rm M_{T2}<90}}$ for \bintwo, generally referred to as $\epsilon_{FS}$, are evaluated in MC after relaxing some kinematic selections. 
+%The final estimations can be read as:
+%\begin{equation}
+%N_{\rm SR} = N_{\rm Before~Final~Selection} \times \epsilon_{FS}.
+%\end{equation}
+%where, $N_{\rm Before~Final~Selection}$ is the number of \wjets events just before applying the final selection 
+%(\mttwo $>$ 90\GeV for \binone and \SumMT $>$ 250\GeV for \bintwo) and $N_{\rm SR}$ is the final estimation of \wjets events in %the signal region.
 \begin{equation}
 N_{\rm SR} = N_{\rm Before~Final~Selection} \times \epsilon_{FS}.
 \end{equation}
-where, $N_{\rm Before~Final~Selection}$ is the number of \wjets events just before applying the final selection 
-(\mttwo $>$ 90\GeV for \binone and \SumMT $>$ 250\GeV for \bintwo) and $N_{\rm SR}$ is the final estimation of \wjets events in the signal region.
-
+Where $\epsilon_{FS}$ is $\epsilon_{ \rm M_{T2}}= \frac{N (\rm M_{T2}>90)}{N (\rm M_{T2}>40)}$ for \binone and $\epsilon_{\SumMT}=\frac{N (\SumMT>250)}{N(40<\rm M_{T2}<90)}$ for \bintwo and $N_{\rm Before~Final~Selection}$ is the number of \wjets events just before applying the final selection 
+(\mttwo $>$ 90\GeV for \binone and \SumMT $>$ 250\GeV for \bintwo). %and $N_{\rm SR}$ is the final estimation of \wjets events in the signal region.
+ To improve the statistics of Monte Carlo samples, we ralax some kinematic selections.
 
 The $\epsilon_{FS}$ is first evaluated in a \wjets sample with a pair of opposite-charge \Tau where the \Tau candidates are selected similar to those in signal region. 
 Additional signal selection requirements, such as \deltaphi or lepton veto, are applied one by one such that two orthogonal subsamples (passing and failing) are obtained. The $\epsilon_{FS}$ quantity is calculated in all subsamples. The values are found to be compatible within the statistical uncertainties; their weighted average is taken as the final estimate for $\epsilon_{FS}$ with weights corresponding to the size of the simulated sample at each step. %The uncertainty on the \Tau energy scale introduces the largest variation on $\epsilon_{FS}$. This variation is considered as a systematic uncertainty on the estimated efficiency.
 The uncertainty on $\epsilon_{FS}$  also takes into account the effect of the \Tau energy scale.
 
-The \wjets MC is validated in data using a same-sign \muTau control sample, where both the normalization and $\epsilon_{FS}$ are checked. 
+The \wjets Monte Carlo is validated in data using a same-sign \muTau control sample, where both the normalization and $\epsilon_{FS}$ are checked. 
 The normalization is found to be compatible between data and simulation, within uncertainties. For $\epsilon_{FS}$, 
-to take into account the difference between the data and MC values, the MC prediction in each
+to take into account the difference between the data and Monte Carlo values, the Monte Carlo prediction in each
 of the two search regions is corrected by the ratio of the two values and its uncertainty is also
 taken into account. This part of the systematic uncertainty is referred to as ``sys. shape''"
 
@@ -109,12 +114,12 @@ Signal Region & \wjets Estimation Results\\
 
 \subsection{Drell-Yan background estimation}
 The Drell-Yan (DY) background yield is obtained from Monte Carlo simulation. The Monte Carlo sample is inclusive for leptons and 
-includes decay to different lepton pairs ($ee$, $\mu\mu$ and $\tau\tau$). It is validated that the contribution from $ee$ and $\mu\mu$
-is very small, but for the \leptonTau channels the contribution from these events which have a real lepton and a misidentified \Tau 
-is evaluated in the next section, when \wjets contribution is estimated.
+includes decay to different lepton pairs ($ee$, $\mu\mu$ and $\tau\tau$). %It is validated that the contribution from $ee$ and $\mu\mu$
+%is very small, but for the \leptonTau channels the contribution from these events which have a real lepton and a misidentified \Tau 
+%is evaluated in the next section, when \wjets contribution is estimated.
 The simulation is validated in a \muTau control region obtained by removing the \deltaphi
-requirement and by inverting the \Z boson veto and also (\mttwo $<$ 20\GeV,  40 $<$ \tauMT $<$ 100\GeV).  
-The distribution of invariant mass of ($\mu, \Tau$) system for data and Monte Carlo events have a good agreement.
+requirement and by inverting the \Z boson veto and also by choosing \mttwo $<$ 20\GeV,  40 $<$ \tauMT $<$ 100\GeV.  
+The distribution of invariant mass of ($\mu, \Tau$) system for data and Monte Carlo events are in a good agreement.
 The transverse momentum of the \Z boson system, which is correlated with 
 \mttwo, is also well reproduced in simulation. Table \ref{tbl:DYbkg}
 \begin{table}[!htb]
@@ -137,7 +142,7 @@ Signal Region      &  DY Estimation\\
 \end{table}
 summarizes the DY contribution in different signal regions. 
 For $\ell\Tau$ channels, only the contributions from the real lepton + \Tau are reported. 
-A separate method is developed to estimate the misidentified contamination in these channels.
+A separate method is developed to estimate the misidentified contamination in these channels in the following action.
 
 
 \subsection{\texorpdfstring{Misidentified \Tau in the $\ell\Tau$ channels}{Misidentified tau in the lepton-tau channels}}
@@ -178,7 +183,7 @@ be $r_{\rm Real}$ = 0.766 $\pm$ 0.003 independent of \mttwo.
 For both fake rate and real rate, 5\% relative systematic uncertainty is assigned to the central values, although 
 by varying the selections, no significant change in the values is seen.
 
-To validate the fake rate method, it is applied to a \wjets Monte Carlo event sample. 
+To validate the fake rate method, it is applied to a \wjets Monte Carlo sample. 
 It correctly
 predicts the number of $\ell\Tau$ background events in this sample, within the 
 uncertainties.
