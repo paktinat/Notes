@@ -2,14 +2,14 @@
 \label{sect:CMSRec}
 The central feature of the CMS apparatus is a superconducting solenoid of 6\unit{m} internal diameter, providing a magnetic field of 3.8\unit{T}. Within the superconducting solenoid volume are a silicon pixel and strip tracker, a lead tungstate crystal electromagnetic calorimeter (ECAL), and a brass and scintillator hadron calorimeter (HCAL), each composed of a barrel and two endcap sections. Muons are measured in gas-ionization detectors embedded in the steel flux-return yoke outside the solenoid. Extensive forward calorimetry complements the coverage provided by the barrel and endcap detectors. 
 A more detailed description of the CMS detector, together with a definition of the coordinate system used and the relevant kinematic variables, can be found in reference \cite{Chatrchyan:2008zzk}.
-For completeness, a short review is given here. 
+%For completeness, a short review is given here. 
 
 
 Events from pp interactions must satisfy the requirements of a two-level trigger system.
 The first level (L1) of the CMS trigger system, composed of custom hardware processors, uses information from the calorimeters and muon detectors to select the most interesting events in a fixed time interval of less than 4\mus. The high-level trigger (HLT) processor farm further decreases the event rate from around 100\unit{kHz} to around 400\unit{Hz}, before data storage. 
 
-The particle-flow event algorithm~\cite{CMS-PAS-PFT-09-001,CMS-PAS-PFT-10-001} reconstructs and identifies each individual particle with an optimized combination of information from the various elements of the CMS detector. The energy of photons is directly obtained from the ECAL measurement, corrected for zero-suppression effects. The energy of electrons is determined from a combination of the electron momentum at the primary interaction vertex as determined by the tracker, the energy of the corresponding ECAL cluster, and the energy sum of all bremsstrahlung photons spatially compatible with originating from the electron track. The energy of muons is obtained from the curvature of the corresponding track. The energy of charged hadrons is determined from a combination of their momentum measured in the tracker and the matching ECAL and HCAL energy deposits, corrected for zero-suppression effects and for the response function of the calorimeters to hadronic showers. Finally, the energy of neutral hadrons is obtained from the corresponding corrected ECAL and HCAL energy. 
-
+The particle-flow event algorithm~\cite{CMS-PAS-PFT-09-001,CMS-PAS-PFT-10-001} reconstructs and identifies each individual particle with an optimized combination of information from the various elements of the CMS detector. 
+%The energy of photons is directly obtained from the ECAL measurement, corrected for zero-suppression effects. The energy of electrons is determined from a combination of the electron momentum at the primary interaction vertex as determined by the tracker, the energy of the corresponding ECAL cluster, and the energy sum of all bremsstrahlung photons spatially compatible with originating from the electron track. The energy of muons is obtained from the curvature of the corresponding track. The energy of charged hadrons is determined from a combination of their momentum measured in the tracker and the matching ECAL and HCAL energy deposits, corrected for zero-suppression effects and for the response function of the calorimeters to hadronic showers. Finally, the energy of neutral hadrons is obtained from the corresponding corrected ECAL and HCAL energy. 
 Jets are reconstructed with the anti-\kt clustering
 algorithm~\cite{Cacciari:2008gp} with a distance parameter of 0.5. We apply
 \pt- and $\eta$-dependent corrections to account for residual
@@ -25,11 +25,10 @@ In this analysis the "medium" working point is used. The working point correspon
 light-quark jet misidentification rate of 1.5\%, and $\cPqc$-quark jet misidentification rate of 20\% 
 for jets with a \pt\ value greater than 60\GeV.
 Jets with  \PT $>$ 40\GeV and $\abs{\eta} < 5.0$ and b-tagged jets with \PT $>$ 20\GeV and $\abs{\eta} < 2.4$ are considered in this analysis.
-% {\bf (Do you really use jets up to 5.0 in eta?)} 
 
 
-The particles from the particle-flow algorithm are used to reconstruct the missing transverse energy vector $\VEtmiss$, defined as the negative of the vector sum of the transverse momenta of all reconstructed particles.  Corrections are applied to ensure consistency between
-$\VEtmiss$ and the corrections to jet energies described above.  The missing transverse energy in the event (\MPT) is defined as the magnitude of $\VEtmiss$.
+The particles from the particle-flow algorithm are used to reconstruct the missing transverse momentum  vector \ptvecmiss, defined as the negative of the vector sum of the transverse momenta of all reconstructed particles.  Corrections are applied to ensure consistency between
+\ptvecmiss and the corrections to jet energies described above.  The missing transverse momentum in the event (\MPT) is defined as the magnitude of \ptvecmiss.
 
 
 
@@ -47,14 +46,14 @@ those arising in QCD processes.
 The events of $\cPZ$+jets, \wjets, $\cPqt\cPaqt$, and di-boson, 
 backgrounds to this search, are generated using the \MADGRAPH 5.1~\cite{Alwall:2011uj} generator. 
 Single-top-quark and Higgs boson background events are generated by {\POWHEG} 1.0~\cite{Nason:2004rx,Frixione:2007vw,Alioli:2009je,Alioli:2010xd}.
-In the following figures and tables, the events containing at least a top quark and $\cPZ$ are referred to as ``Top'' and ``ZX'', respectively. 
-Different Higgs boson productions, gluon fusion, vector boson fusion and associated production of Higgs with $\cPZ$ or $\PW$ or $\cPqt\cPaqt$ are considered and referred to as ``Higgs''. To generate the Monte Carlo events the masses of the top quark and Higgs boson are 172.5\GeV and 125\GeV, respectively.
+In the following figures and tables, the events containing at least one top quark and one $\cPZ$ boson are referred to as ``Top'' and ``ZX'', respectively. 
+Various Higgs boson production events in gluon fusion, vector boson fusion and association with $\cPZ$ or $\PW$ or $\cPqt\cPaqt$ are referred to as ``Higgs''. The masses of the top quark and Higgs boson are set to be 172.5\GeV and 125\GeV, respectively.
 
-The simplified model which is used to describe the signal events is shown 
-in Fig.~\ref{fig:Productions} (left). In every event two  \chione 
-are produced and decay exclusively to the shown final states which contain two $\tau$, two $\nu_{\tau}$ and two neutralino (\PSGczDo).
-The mediators in the decay of \chione can be either \sTau or $\sNu_{\tau}$. All  \sTau and $\sNu_{\tau}$ 
-are produced  on-shell. They have equal masses which is the mean value of the masses of the \chione   and \PSGczDo.
+%The simplified model which is used to describe the signal events is shown in Fig.~\ref{fig:Productions} (left). 
+In signal samples, a pair of \chione 
+are produced and decay exclusively to the shown final states which contain two $\tau$, two $\nu_{\tau}$ and two neutralino (\PSGczDo) Fig.~\ref{fig:Productions} (left) .
+The mediators in the decay of \chione can be either \sTau or $\sNu_{\tau}$. 
+The masses of \sTau and $\sNu_{\tau}$ are set to be equal and at the mean value of the \chione and \PSGczDo. Thus they are produced on-shell.
 The two distinct decay chains in the left diagram of Fig.~\ref{fig:Productions} are assumed to have equal branching ratios, which is 50\%. For parton shower and fragmentation, all generators are interfaced with \PYTHIA 6.4~\cite{Sjostrand:2006za}.
 \PYTHIA is also used to generate signal events (chargino pair-production). To improve the modeling of $\Pgt$ decays, 
 we use the \TAUOLA~\cite{Davidson:2010rw} package. 
