@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: MT2/
-//=========  (Sun Feb 14 11:05:40 2016) by ROOT version5.34/03
+//=========  (Sun Feb 14 11:35:52 2016) by ROOT version5.34/03
    TCanvas *MT2 = new TCanvas("MT2", "",15,110,600,630);
    gStyle->SetOptFit(1);
    gROOT->SetEditHistograms();
@@ -505,7 +505,7 @@ tex->SetNDC();
    tex->Draw();
       tex = new TLatex(0.68,0.943,"19.6 fb^{-1} (8TeV)");
 tex->SetNDC();
-   tex->SetTextSize(0.0305);
+   tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
       tex = new TLatex(0.2130872,0.8708609,"CMS Preliminary");
