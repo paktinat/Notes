@@ -22,7 +22,7 @@
    THStack *h_stack = new THStack();
    h_stack->SetName("h_stack");
    h_stack->SetTitle("");
-   h_stack->SetMinimum(0.1);
+   h_stack->SetMinimum(0.3);
    h_stack->SetMaximum(200.0039);
    
    TH1F *h_stack_stack_1_stack_1 = new TH1F("h_stack_stack_1_stack_1","",120,0,120);
@@ -397,7 +397,7 @@ tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
    
-   TLegend *leg = new TLegend(0.66,0.66,0.91,0.92,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.66,0.6,0.91,0.92,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(62);
    leg->SetLineColor(1);

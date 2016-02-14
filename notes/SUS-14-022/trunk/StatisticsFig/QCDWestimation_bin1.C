@@ -24,8 +24,9 @@
    MT2->SetTitle("");
    MT2->SetMinimum(0.1);
    MT2->SetMaximum(1000);
+     Double_t xAxis1111[4] = {40, 65, 90, 115}; 
    
-   TH1F *MT2_stack_1_stack_1_stack_1_stack_1 = new TH1F("MT2_stack_1_stack_1_stack_1_stack_1","",3,40,115);
+     TH1F *MT2_stack_1_stack_1_stack_1_stack_1 = new TH1F("MT2_stack_1_stack_1_stack_1_stack_1","",3,xAxis1111);
    MT2_stack_1_stack_1_stack_1_stack_1->SetMinimum(0.03333333);
    MT2_stack_1_stack_1_stack_1_stack_1->SetMaximum(1800);
    MT2_stack_1_stack_1_stack_1_stack_1->SetDirectory(0);
@@ -276,7 +277,7 @@
    MT2->Add(MT2_QCD,"");
    MT2->Draw("hist");
    
-   TH1D *h__MC = new TH1D("h__MC","",3,40,115);
+   TH1D *h__MC = new TH1D("h__MC","",3, xAxis6);
    h__MC->SetBinContent(1,110.3696);
    h__MC->SetBinContent(2,5.701668);
    h__MC->SetBinContent(3,1.599932);

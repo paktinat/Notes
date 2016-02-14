@@ -11,13 +11,15 @@ where $P$ is the number of the  prompt \Tau's and $F$ is the number of the  fake
 \begin{equation}
  T = pP + fF
 \end{equation} 
-$p$ ($f$) is the prompt (fake) rate, the probability that a loosely selected prompt (fake) \Tau can pass the  tight  selection. The loose category ($L$) can be divided to two parts, 
-tight ($T$) and non-tight ($NT$), so one can write:
+$p$ ($f$) is the prompt (fake) rate, the probability that a loosely selected prompt (fake) \Tau can pass the  tight  selection. 
+%The loose category ($L$) can be divided to two parts, 
+%tight ($T$) and non-tight ($NT$), so one can write:
+Solving the system of two equations gives:
 \begin{equation}
-   F * (f - p) = ((1 - p) * L - NT)
+   F * (f - p) = (T - pL)
 \label{eq:F}
 \end{equation}
-$f$ * $F$ is the contamination of the fake \Tau's in the signal region. 
+Here, $f$ * $F$ is the contamination of the fake \Tau's in the signal region. 
 
 The fake rate ($f$) is measured as the ratio of the tightly selected \Tau's to the loosely 
 selected \Tau's in a data sample which is dominated by the fake \Tau's. The fake rate is estimated in an environment which is as 
@@ -144,7 +146,7 @@ $90.00-300.00$ & 0.79  $\pm$ 0.47 &  0.99 $\pm$ 1.06  & 1.25 $\pm$ 1.53\\
 \end{center}
 \end{table}
 Table \ref{tbl:LepTauEstimationClosure} and \ref{tbl:EleTauEstimationClosure} compare the MC truth and the estimation of \wjets events 
-from the method in different bins of \mttwo for \muTau and \eTau chhanels, respectively. 
+from the method in different bins of \mttwo for \muTau and \eTau channels, respectively. 
 Applying the method on data and comparing with MC truth is 
 shown in figure \ref{fig:LepTauEstimationData}.
 \begin{figure}[!Hhtb]
@@ -196,7 +198,7 @@ $90-300$ & 0.00 & 0.19 &  1.29 & 0.00 & 0.02 & 0.07 &  1.57 $\pm$ 0.62 &  2.73 $
 \end{center}
 \end{table}
 Table \ref{tbl:LepTauEstimationData} and \ref{tbl:EleTauEstimationData} compare the MC truth and the estimation from the 
-method in different bins of \mttwo for \muTau and \eTau chhanels, respectively. The numbers of the tighly selected events $T$ and 
+method in different bins of \mttwo for \muTau and \eTau channels, respectively. The numbers of the tightly selected events $T$ and 
 non-tight events $NT$, used in equation \ref{eq:F} are 5(4) and 6(3) for \muTau(\eTau) in data.
 
 The effect of varying the fake rate and prompt rate values within their statistical uncertainties has also been studied. 
