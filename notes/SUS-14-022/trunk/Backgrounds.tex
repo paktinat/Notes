@@ -36,20 +36,19 @@ illustrated in Fig.~\ref{fig:ABCDQCD}.
 \end{figure}
 In the sample dominated by QCD multijet events (CR1 and CR2), the isolation of misidentified \Tau objects is verified 
 to be almost completely uncorrelated with \mttwo or \SumMT.
+In addition, the requirement on \deltaphi
+is removed to increase the numbers of events in the control regions. 
 The QCD background in the signal region is estimated by counting events in the control regions with high \mttwo or \SumMT  
 and loosely isolated SS \tauTau (CR3)
 and scaling by the transfer factor to go from loosely isolated SS to tightly isolated opposite-sign (OS) 
-\tauTau which is evaluated in the low \mttwo or \SumMT regions (CR1 divided by CR2).
-
-In addition, the requirement on \deltaphi
-is removed to increase the numbers of events in the control regions. 
-The final estimate of the background
-is taken from CR3 extrapolation with corrections
-associated with the same-sign requirement and the efficiency of 
+\tauTau which is evaluated in the low \mttwo or \SumMT regions (CR1 divided by CR2). The final estimate of the background
+%is taken from CR3 extrapolation with corrections
+%associated with the same-sign requirement and 
+is corrected by the efficiency of 
 the \deltaphi requirement for QCD events. The latter efficiency is measured in CR1 and CR2, 
 which are dominated by QCD multijet events. The efficiency is a falling distribution as the function of 
 the search variable (\mttwo or \SumMT)
-and the value of the closest bin to CR3 ($65<\mttwo<90\GeV$ or $100<\SumMT<250\GeV$) is used conservatively as the 
+and the value of the closest bin to CR3 ($65<\mttwo<90\GeV$ or $200<\SumMT<250\GeV$) is used conservatively as the 
 value of the efficiency in CR3.
 
 The systematic uncertainties are associated with the uncertainty on the validity 
@@ -109,9 +108,10 @@ The contribution of the \wjets background in \tauTau channels is taken from simu
 N_{\rm SR} = N_{\rm Before~Final~Selection} \times \epsilon_{FS}.
 \end{equation}
 Here $N_{\rm SR}$ is the estimation of \wjets events in the signal region. $N_{\rm Before~Final~Selection}$ is the number of 
-\wjets events before applying the final selection (\mttwo $>$ 90\GeV for \binone and \SumMT $>$ 250\GeV for \bintwo), but after applying all other selections, including \mttwo $>$ 40\GeV for \binone and 40 $<\mttwo<$ 90\GeV for \bintwo.  $N_{\rm Before~Final~Selection}$ is 31.93$\pm$6.40 and 29.13$\pm$6.22 for \binone and
-\bintwo, respectively, 
-where the given uncertainties arise from the limited number of simulated events. 
+\wjets events before applying the final selection (\mttwo $>$ 90\GeV for \binone and \SumMT $>$ 250\GeV for \bintwo), but after applying all other selections, including \mttwo $>$ 40\GeV for \binone and 40 $<\mttwo<$ 90\GeV for \bintwo.  
+$\epsilon_{FS}$ is $\epsilon_{ \rm M_{T2}}= \frac{N (\rm M_{T2}>90)}{N (\rm M_{T2}>40)}$ for \binone or  
+$\epsilon_{\SumMT}=\frac{N (\SumMT>250)}{N(40<\rm M_{T2}<90)}$ for \bintwo. $N_{\rm Before~Final~Selection}$ is 31.93$\pm$6.40 and 29.13$\pm$6.22 for \binone and
+\bintwo, respectively, where the given uncertainties arise from the limited number of simulated events. 
 
 
 The  efficiency of the final selection ($\epsilon_{FS}$) is first evaluated in a \wjets simulated sample with a pair of opposite-sign \Tau where the \Tau candidates 
@@ -134,7 +134,7 @@ Table \ref{tbl:Wbkg} summarizes the results of  the method for different signal 
 \begin{table}[!htb]
 \begin{center}
 \caption{The \wjets estimation results in both search regions. 
-The systematic uncertainty (sys) comes from the maximum
+The systematic uncertainty ``sys'' comes from the maximum
 variation of the estimation found  from varying the \Tau energy scale within its uncertainty. 
 The ``shape'' takes into account the difference between the shape of the search variable distribution in data and simulation.}
 \begin{tabular}{|l|c|}
