@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: MT2/
-//=========  (Sat Jan 30 17:09:33 2016) by ROOT version5.34/03
-   TCanvas *MT2 = new TCanvas("MT2", "",12,84,600,630);
+//=========  (Sun Feb 14 11:05:40 2016) by ROOT version5.34/03
+   TCanvas *MT2 = new TCanvas("MT2", "",15,110,600,630);
    gStyle->SetOptFit(1);
    gROOT->SetEditHistograms();
    MT2->SetHighLightColor(2);
@@ -27,36 +27,36 @@
    MT2PreCut_MT2->SetMinimum(0.02);
    MT2PreCut_MT2->SetMaximum(9150.271);
    
-   TH1F *MT2PreCut_MT2_stack_2_stack_1_stack_1 = new TH1F("MT2PreCut_MT2_stack_2_stack_1_stack_1","",11,40,150);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->SetMinimum(0.005221657);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->SetMaximum(19509.12);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->SetDirectory(0);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->SetStats(0);
+   TH1F *MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1 = new TH1F("MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1","",11,40,150);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetMinimum(0.005221657);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetMaximum(19509.12);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetDirectory(0);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetStats(0);
 
    Int_t ci;   // for color index setting
    ci = TColor::GetColor("#000099");
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->SetLineColor(ci);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->SetLineWidth(2);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->SetMarkerSize(2);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetXaxis()->SetTitle("M_{T2}");
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetYaxis()->SetTitle("Events");
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetYaxis()->SetTitleSize(0.05);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetYaxis()->SetTitleOffset(1.3);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetYaxis()->SetTitleFont(42);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetZaxis()->SetLabelFont(42);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetZaxis()->SetLabelSize(0.035);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_MT2->SetHistogram(MT2PreCut_MT2_stack_2_stack_1_stack_1);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetLineColor(ci);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetLineWidth(2);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetMarkerSize(2);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("M_{T2}");
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events");
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetYaxis()->SetTitleSize(0.05);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetYaxis()->SetTitleOffset(1.3);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetYaxis()->SetTitleFont(42);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetZaxis()->SetLabelFont(42);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetZaxis()->SetLabelSize(0.035);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
+   MT2PreCut_MT2->SetHistogram(MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1);
    
    
    TH1D *MT2PreCut_MT2_Higgs18__6 = new TH1D("MT2PreCut_MT2_Higgs18__6","",11,40,150);
@@ -512,7 +512,7 @@ tex->SetNDC();
 tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.2399329,0.8377483,"e#tau");
+      tex = new TLatex(0.2399329,0.8377483,"e#tau_{h}");
 tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
