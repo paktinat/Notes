@@ -1,3 +1,4 @@
-gfal-copy gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/paktinat/ST_t-channel_4f_scaledown_leptonDecays_13TeV-amcatnlo-pythia8_TuneCUETP8M1_76x.root file:///Yourarea/gfal-copy gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/paktinat/ST_t-channel_4f_scaledown_leptonDecays_13TeV-amcatnlo-pythia8_TuneCUETP8M1_76x_from7500000.root file:///Yourarea/
+gfal-copy gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/paktinat/ST_t-channel_4f_scaledown_leptonDecays_13TeV-amcatnlo-pythia8_TuneCUETP8M1_76x.root file:///Yourarea/
+gfal-copy gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/paktinat/ST_t-channel_4f_scaledown_leptonDecays_13TeV-amcatnlo-pythia8_TuneCUETP8M1_76x_from7500000.root file:///Yourarea/
 gfal-copy gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/paktinat/ST_t-channel_4f_scaledown_leptonDecays_13TeV-amcatnlo-pythia8_TuneCUETP8M1_76x_from15000000.root file:///Yourarea/
 gfal-copy gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/paktinat/ST_t-channel_4f_scaledown_leptonDecays_13TeV-amcatnlo-pythia8_TuneCUETP8M1_76x_from22500000.root file:///Yourarea/
