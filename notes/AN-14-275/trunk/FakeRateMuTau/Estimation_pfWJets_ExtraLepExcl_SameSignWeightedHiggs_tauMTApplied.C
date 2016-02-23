@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: MT2_ratioc_ratio/
-//=========  (Sat Jun 13 14:57:37 2015) by ROOT version5.34/03
-   TCanvas *MT2_ratioc_ratio = new TCanvas("MT2_ratioc_ratio", "",679,68,600,600);
+//=========  (Mon Feb 22 16:14:23 2016) by ROOT version5.32/00
+   TCanvas *MT2_ratioc_ratio = new TCanvas("MT2_ratioc_ratio", "",3,26,600,600);
    gStyle->SetOptFit(1);
    MT2_ratioc_ratio->Range(0,0,1,1);
    MT2_ratioc_ratio->SetFillColor(0);
@@ -18,7 +18,7 @@
    TPad *MT2_ratio_plotpad = new TPad("MT2_ratio_plotpad", "Pad containing the overlay plot",0,0.211838,1,1);
    MT2_ratio_plotpad->Draw();
    MT2_ratio_plotpad->cd();
-   MT2_ratio_plotpad->Range(-50.06678,-2.596561,330.4406,3.097568);
+   MT2_ratio_plotpad->Range(-50.06678,-2.581339,330.4406,2.992695);
    MT2_ratio_plotpad->SetFillColor(0);
    MT2_ratio_plotpad->SetFillStyle(4000);
    MT2_ratio_plotpad->SetBorderMode(0);
@@ -39,11 +39,11 @@
    MT2->SetName("MT2");
    MT2->SetTitle("");
    MT2->SetMinimum(0.02);
-   MT2->SetMaximum(277.2461);
+   MT2->SetMaximum(224.2202);
    
    TH1F *MT2_stack_1 = new TH1F("MT2_stack_1","",6,0,300);
-   MT2_stack_1->SetMinimum(0.006512711);
-   MT2_stack_1->SetMaximum(506.9077);
+   MT2_stack_1->SetMinimum(0.006611959);
+   MT2_stack_1->SetMaximum(405.8226);
    MT2_stack_1->SetDirectory(0);
    MT2_stack_1->SetStats(0);
    MT2_stack_1->SetLineWidth(2);
@@ -69,6 +69,8 @@
    
    Double_t xAxis1[7] = {0, 20, 40, 50, 70, 90, 300}; 
    
+   TH1D *h__MC = new TH1D("h__MC","", 6, xAxis1);
+
    TH1D *MT2_QCD = new TH1D("MT2_QCD","",6, xAxis1);
    MT2_QCD->SetEntries(4);
    MT2_QCD->SetStats(0);
@@ -273,24 +275,34 @@
    MT2_Higgs->GetZaxis()->SetTitleFont(42);
    MT2->Add(MT2_Higgs,"");
    MT2->Draw("hist");
+
+   h__MC->Add(MT2_QCD);
+   h__MC->Add(MT2_W);
+   h__MC->Add(MT2_ZX);
+   h__MC->Add(MT2_Top);
+   h__MC->Add(MT2_WW);
+   h__MC->Add(MT2_Higgs);
+
+
    Double_t xAxis7[7] = {0, 20, 40, 50, 70, 90, 300}; 
-   
+  
    TH1D *h2_copy = new TH1D("h2_copy","",6, xAxis7);
-   h2_copy->SetBinContent(1,19.40169);
-   h2_copy->SetBinContent(2,17.45068);
-   h2_copy->SetBinContent(3,32.86785);
-   h2_copy->SetBinContent(4,55.44922);
-   h2_copy->SetBinContent(5,10.13775);
-   h2_copy->SetBinContent(6,0.9940734);
-   h2_copy->SetBinError(1,7.148468);
-   h2_copy->SetBinError(2,6.773736);
-   h2_copy->SetBinError(3,8.451937);
-   h2_copy->SetBinError(4,11.72198);
-   h2_copy->SetBinError(5,5.173124);
-   h2_copy->SetBinError(6,1.059176);
+   h2_copy->SetBinContent(1,17.5993 );
+   h2_copy->SetBinContent(2,27.941);
+   h2_copy->SetBinContent(3,30.4068 );
+   h2_copy->SetBinContent(4,49.374);
+   h2_copy->SetBinContent(5,5.79573);
+   h2_copy->SetBinContent(6,1.11233);
+
+   h2_copy->SetBinError(1,6.83998);
+   h2_copy->SetBinError(2,6.56287);
+   h2_copy->SetBinError(3,7.90066);
+   h2_copy->SetBinError(4,10.5467);
+   h2_copy->SetBinError(5,4.37239);
+   h2_copy->SetBinError(6,1.05646);
    h2_copy->SetMinimum(0.05);
-   h2_copy->SetMaximum(277.2461);
-   h2_copy->SetEntries(438);
+   h2_copy->SetMaximum(224.2202);
+   h2_copy->SetEntries(388);
    h2_copy->SetStats(0);
 
    ci = TColor::GetColor("#ff0000");
@@ -340,7 +352,7 @@
    MT2_susy->Draw("samehist");
    TLatex *   tex = new TLatex(0.13,0.943,"Closure (M_{T}^{#tau}>200 is applied)");
 tex->SetNDC();
-   tex->SetTextSize(0.05);
+   tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
       tex = new TLatex(0.68,0.943,"#sqrt{s} = 8 TeV, L = 19.60 fb^{-1}");
@@ -350,8 +362,8 @@ tex->SetNDC();
    tex->Draw();
    
    TH1F *MT2__1 = new TH1F("MT2__1","",6,0,300);
-   MT2__1->SetMinimum(0.006512711);
-   MT2__1->SetMaximum(506.9077);
+   MT2__1->SetMinimum(0.006611959);
+   MT2__1->SetMaximum(405.8226);
    MT2__1->SetDirectory(0);
    MT2__1->SetStats(0);
    MT2__1->SetLineWidth(2);
@@ -461,13 +473,13 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-//    entry=leg->AddEntry("MT2_susy","SMS","l");
-//    entry->SetLineColor(1);
-//    entry->SetLineStyle(3);
-//    entry->SetLineWidth(4);
-//    entry->SetMarkerColor(1);
-//    entry->SetMarkerStyle(21);
-//    entry->SetMarkerSize(1);
+   entry=leg->AddEntry("MT2_susy","SMS","l");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(3);
+   entry->SetLineWidth(4);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
    entry=leg->AddEntry("MT2_data","data","l");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
@@ -497,34 +509,18 @@ tex->SetNDC();
    MT2_ratio_ratiopad->SetFrameLineWidth(3);
    MT2_ratio_ratiopad->SetFrameBorderMode(0);
    MT2_ratio_ratiopad->SetFrameBorderSize(0);
-   Double_t xAxis9[7] = {0, 20, 40, 50, 70, 90, 300}; 
    
-   TH1D *h1_copy = new TH1D("h1_copy","",6, xAxis9);
-   h1_copy->SetBinContent(1,1);
-   h1_copy->SetBinContent(2,1);
-   h1_copy->SetBinContent(3,1);
-   h1_copy->SetBinContent(4,1);
-   h1_copy->SetBinContent(5,1);
-   h1_copy->SetBinContent(6,1);
-   h1_copy->SetBinError(1,0.2483643);
-   h1_copy->SetBinError(2,0.3363495);
-   h1_copy->SetBinError(3,0.3224975);
-   h1_copy->SetBinError(4,0.3185094);
-   h1_copy->SetBinError(5,0.368699);
-   h1_copy->SetBinError(6,0.8412826);
+
+     TH1F *h1_copy  = (TH1F*)h__MC->Clone();
+   h1_copy->Divide(h1_copy);
+
+
    h1_copy->SetMinimum(0);
    h1_copy->SetMaximum(2);
-   h1_copy->SetEntries(29.41263);
    h1_copy->SetStats(0);
    h1_copy->SetFillColor(1);
    h1_copy->SetFillStyle(3001);
-
-   ci = TColor::GetColor("#000066");
-   h1_copy->SetLineColor(ci);
    h1_copy->SetLineWidth(2);
-
-   ci = TColor::GetColor("#000066");
-   h1_copy->SetMarkerColor(ci);
    h1_copy->GetXaxis()->SetTitle("MT2");
    h1_copy->GetXaxis()->SetNdivisions(505);
    h1_copy->GetXaxis()->SetLabelFont(42);
@@ -545,29 +541,14 @@ tex->SetNDC();
    h1_copy->GetZaxis()->SetTitleSize(0.035);
    h1_copy->GetZaxis()->SetTitleFont(42);
    h1_copy->Draw("E2");
-   Double_t xAxis10[7] = {0, 20, 40, 50, 70, 90, 300}; 
    
-   TH1D *h2_copy__2 = new TH1D("h2_copy__2","",6, xAxis10);
-   h2_copy__2->SetBinContent(1,0.4326482);
-   h2_copy__2->SetBinContent(2,0.6452815);
-   h2_copy__2->SetBinContent(3,3.318017);
-   h2_copy__2->SetBinContent(4,1.704449);
-   h2_copy__2->SetBinContent(5,0.4957714);
-   h2_copy__2->SetBinContent(6,1.263149);
-   h2_copy__2->SetBinError(1,0.1765897);
-   h2_copy__2->SetBinError(2,0.2937536);
-   h2_copy__2->SetBinError(3,1.140394);
-   h2_copy__2->SetBinError(4,0.5264904);
-   h2_copy__2->SetBinError(5,0.2840898);
-   h2_copy__2->SetBinError(6,1.541429);
+   TH1F *h2_copy__2  = (TH1F*)h2_copy->Clone();
+   h2_copy__2->Divide(h__MC);
    h2_copy__2->SetMinimum(0.4);
    h2_copy__2->SetMaximum(3);
-   h2_copy__2->SetEntries(14.87733);
+   h2_copy__2->SetEntries(2.397098);
    h2_copy__2->SetDirectory(0);
    h2_copy__2->SetStats(0);
-
-   ci = TColor::GetColor("#ff0000");
-   h2_copy__2->SetFillColor(ci);
    h2_copy__2->SetLineWidth(2);
    h2_copy__2->SetMarkerStyle(20);
    h2_copy__2->GetXaxis()->SetNdivisions(505);
@@ -591,58 +572,9 @@ tex->SetNDC();
    line->SetLineStyle(7);
    line->SetLineWidth(2);
    line->Draw();
-   Double_t xAxis11[7] = {0, 20, 40, 50, 70, 90, 300}; 
    
-   TH1D *h1_copy__3 = new TH1D("h1_copy__3","",6, xAxis11);
-   h1_copy__3->SetBinContent(1,1);
-   h1_copy__3->SetBinContent(2,1);
-   h1_copy__3->SetBinContent(3,1);
-   h1_copy__3->SetBinContent(4,1);
-   h1_copy__3->SetBinContent(5,1);
-   h1_copy__3->SetBinContent(6,1);
-   h1_copy__3->SetBinError(1,0.2483643);
-   h1_copy__3->SetBinError(2,0.3363495);
-   h1_copy__3->SetBinError(3,0.3224975);
-   h1_copy__3->SetBinError(4,0.3185094);
-   h1_copy__3->SetBinError(5,0.368699);
-   h1_copy__3->SetBinError(6,0.8412826);
-   h1_copy__3->SetMinimum(0);
-   h1_copy__3->SetMaximum(2);
-   h1_copy__3->SetEntries(29.41263);
-   h1_copy__3->SetDirectory(0);
-   h1_copy__3->SetStats(0);
-   h1_copy__3->SetFillColor(1);
-   h1_copy__3->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#000066");
-   h1_copy__3->SetLineColor(ci);
-   h1_copy__3->SetLineWidth(2);
 
-   ci = TColor::GetColor("#000066");
-   h1_copy__3->SetMarkerColor(ci);
-   h1_copy__3->GetXaxis()->SetTitle("MT2");
-   h1_copy__3->GetXaxis()->SetNdivisions(505);
-   h1_copy__3->GetXaxis()->SetLabelFont(42);
-   h1_copy__3->GetXaxis()->SetLabelSize(0);
-   h1_copy__3->GetXaxis()->SetTitleSize(0.2);
-   h1_copy__3->GetXaxis()->SetTickLength(0.09);
-   h1_copy__3->GetXaxis()->SetTitleOffset(0.5);
-   h1_copy__3->GetXaxis()->SetTitleFont(42);
-   h1_copy__3->GetYaxis()->SetTitle("Data / MC");
-   h1_copy__3->GetYaxis()->SetNdivisions(509);
-   h1_copy__3->GetYaxis()->SetLabelFont(42);
-   h1_copy__3->GetYaxis()->SetLabelSize(0.19);
-   h1_copy__3->GetYaxis()->SetTitleSize(0.18);
-   h1_copy__3->GetYaxis()->SetTitleOffset(0.36);
-   h1_copy__3->GetYaxis()->SetTitleFont(42);
-   h1_copy__3->GetZaxis()->SetLabelFont(42);
-   h1_copy__3->GetZaxis()->SetLabelSize(0.035);
-   h1_copy__3->GetZaxis()->SetTitleSize(0.035);
-   h1_copy__3->GetZaxis()->SetTitleFont(42);
-   h1_copy__3->Draw("sameaxis");
-   MT2_ratio_ratiopad->Modified();
-   MT2_ratioc_ratio->cd();
-   MT2_ratioc_ratio->Modified();
-   MT2_ratioc_ratio->cd();
-   MT2_ratioc_ratio->SetSelected(MT2_ratioc_ratio);
 }
+
+
