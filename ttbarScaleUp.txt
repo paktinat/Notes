@@ -1,0 +1,6 @@
+gfal-copy gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/paktinat/TT_TuneCUETP8M1_13TeV-powheg-scaleup-pythia8_76x.root  file:///Yourarea/
+gfal-copy gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/paktinat/TT_TuneCUETP8M1_13TeV-powheg-scaleup-pythia8_76x_from8000000.root file:///Yourarea/
+gfal-copy gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/paktinat/TT_TuneCUETP8M1_13TeV-powheg-scaleup-pythia8_76x_from16000000.root  file:///Yourarea/
+gfal-copy gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/paktinat/TT_TuneCUETP8M1_13TeV-powheg-scaleup-pythia8_76x_from24000000.root  file:///Yourarea/
+gfal-copy gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/paktinat/TT_TuneCUETP8M1_13TeV-powheg-scaleup-pythia8_76x_from32000000.root  file:///Yourarea/
+
