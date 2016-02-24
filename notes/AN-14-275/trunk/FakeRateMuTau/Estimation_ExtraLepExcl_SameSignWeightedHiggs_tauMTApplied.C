@@ -396,7 +396,7 @@
 tex->SetNDC();
    tex->SetTextSize(0.0354902);
    tex->SetLineWidth(2);
-   tex->Draw();
+   //   tex->Draw();
       tex = new TLatex(0.68,0.943,"#sqrt{s} = 8 TeV, L = 19.60 fb^{-1}");
 tex->SetNDC();
    tex->SetTextSize(0.0305);
