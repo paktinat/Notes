@@ -24,7 +24,11 @@
    h_stack->SetTitle("");
    h_stack->SetMinimum(0.3);
    h_stack->SetMaximum(200.0039);
+
+   Double_t xAxis10[5] = {40, 50, 70, 90, 120}; 
+   TH1D *h__MC2 = new TH1D("h__MC","",4, xAxis10);
    
+
    TH1F *h_stack_stack_1_stack_1_stack_1 = new TH1F("h_stack_stack_1_stack_1_stack_1","",120,0,120);
    h_stack_stack_1_stack_1_stack_1->SetMinimum(0.03772846);
    h_stack_stack_1_stack_1_stack_1->SetMaximum(332.048);
@@ -94,6 +98,7 @@
    TauMTCut_MT2_Higgs_Rebinned->GetZaxis()->SetTitleSize(0.035);
    TauMTCut_MT2_Higgs_Rebinned->GetZaxis()->SetTitleFont(42);
    h_stack->Add(TauMTCut_MT2_Higgs_Rebinned,"");
+   h__MC2->Add(TauMTCut_MT2_Higgs_Rebinned);
    Double_t xAxis2[5] = {40, 50, 70, 90, 120}; 
    
    TH1D *TauMTCut_MT2_WW_Rebinned = new TH1D("TauMTCut_MT2_WW_Rebinned","",4, xAxis2);
@@ -138,6 +143,7 @@
    TauMTCut_MT2_WW_Rebinned->GetZaxis()->SetTitleSize(0.035);
    TauMTCut_MT2_WW_Rebinned->GetZaxis()->SetTitleFont(42);
    h_stack->Add(TauMTCut_MT2_WW_Rebinned,"");
+   h__MC2->Add(TauMTCut_MT2_WW_Rebinned);
    Double_t xAxis3[5] = {40, 50, 70, 90, 120}; 
    
    TH1D *TauMTCut_MT2_Top_Rebinned = new TH1D("TauMTCut_MT2_Top_Rebinned","",4, xAxis3);
@@ -182,6 +188,7 @@
    TauMTCut_MT2_Top_Rebinned->GetZaxis()->SetTitleSize(0.035);
    TauMTCut_MT2_Top_Rebinned->GetZaxis()->SetTitleFont(42);
    h_stack->Add(TauMTCut_MT2_Top_Rebinned,"");
+   h__MC2->Add(TauMTCut_MT2_Top_Rebinned);
    Double_t xAxis4[5] = {40, 50, 70, 90, 120}; 
    
    TH1D *TauMTCut_MT2_ZX_Rebinned = new TH1D("TauMTCut_MT2_ZX_Rebinned","",4, xAxis4);
@@ -226,20 +233,21 @@
    TauMTCut_MT2_ZX_Rebinned->GetZaxis()->SetTitleSize(0.035);
    TauMTCut_MT2_ZX_Rebinned->GetZaxis()->SetTitleFont(42);
    h_stack->Add(TauMTCut_MT2_ZX_Rebinned,"");
+   h__MC2->Add(TauMTCut_MT2_ZX_Rebinned);
    Double_t xAxis5[5] = {40, 50, 70, 90, 120}; 
    
    TH1D *Total200_fromMuTau_MT2_data_Rebinned = new TH1D("Total200_fromMuTau_MT2_data_Rebinned","",4, xAxis5);
-   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(0,40.97312);
-   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(1,2.596472);
-   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(2,28.54152);
-   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(3,8.359853);
-   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(4,2.734164);
-   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(5,2.734164);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(0,40.97312*1.21);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(1,2.596472*1.21);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(2,28.54152*1.21);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(3,8.359853*1.21);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(4,2.734164*1.21);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(5,2.734164*1.21);
    Total200_fromMuTau_MT2_data_Rebinned->SetBinError(0,13.16947);
-   Total200_fromMuTau_MT2_data_Rebinned->SetBinError(1,3.704278);
-   Total200_fromMuTau_MT2_data_Rebinned->SetBinError(2,8.572413);
-   Total200_fromMuTau_MT2_data_Rebinned->SetBinError(3,5.100058);
-   Total200_fromMuTau_MT2_data_Rebinned->SetBinError(4,2.775038);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinError(1,4.47);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinError(2,10.27);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinError(3,6.16);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinError(4,3.36);
    Total200_fromMuTau_MT2_data_Rebinned->SetBinError(5,2.775038);
    Total200_fromMuTau_MT2_data_Rebinned->SetEntries(195);
    Total200_fromMuTau_MT2_data_Rebinned->SetStats(0);
@@ -270,23 +278,24 @@
    Total200_fromMuTau_MT2_data_Rebinned->GetZaxis()->SetTitleSize(0.035);
    Total200_fromMuTau_MT2_data_Rebinned->GetZaxis()->SetTitleFont(42);
    h_stack->Add(Total200_fromMuTau_MT2_data_Rebinned,"");
+   h__MC2->Add(Total200_fromMuTau_MT2_data_Rebinned);
    h_stack->Draw("hist");
    Double_t xAxis6[5] = {40, 50, 70, 90, 120}; 
    
-   TH1D *h__MC = new TH1D("h__MC","",4, xAxis6);
-   h__MC->SetBinContent(0,40.42799);
-   h__MC->SetBinContent(1,3.751973);
-   h__MC->SetBinContent(2,31.48643);
-   h__MC->SetBinContent(3,9.923709);
-   h__MC->SetBinContent(4,2.959665);
-   h__MC->SetBinContent(5,2.74758);
-   h__MC->SetBinError(0,13.17393);
-   h__MC->SetBinError(1,3.821297);
-   h__MC->SetBinError(2,8.838217);
-   h__MC->SetBinError(3,5.218686);
-   h__MC->SetBinError(4,2.77737);
-   h__MC->SetBinError(5,2.77642);
-   h__MC->SetEntries(250.9034);
+   TH1D *h__MC = h__MC2 ; //new TH1D("h__MC","",4, xAxis6);
+   // h__MC->SetBinContent(0,40.42799);
+   // h__MC->SetBinContent(1,3.751973);
+   // h__MC->SetBinContent(2,31.48643);
+   // h__MC->SetBinContent(3,9.923709);
+   // h__MC->SetBinContent(4,2.959665);
+   // h__MC->SetBinContent(5,2.74758);
+   // h__MC->SetBinError(0,13.17393);
+   // h__MC->SetBinError(1,3.821297);
+   // h__MC->SetBinError(2,8.838217);
+   // h__MC->SetBinError(3,5.218686);
+   // h__MC->SetBinError(4,2.77737);
+   // h__MC->SetBinError(5,2.77642);
+   // h__MC->SetEntries(250.9034);
    h__MC->SetFillColor(1);
    h__MC->SetFillStyle(3004);
    h__MC->SetLineColor(0);
