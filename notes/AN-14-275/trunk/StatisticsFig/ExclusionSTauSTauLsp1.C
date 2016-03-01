@@ -1,8 +1,11 @@
+double smooth(double* arr , int n ){
+  return 1.05*( arr[n-1]+arr[n+1] )/2.0;
+}
 void ExclusionSTauSTauLsp1()
 {
 //=========Macro generated from canvas: c1/c1
 //=========  (Tue Sep 22 13:04:27 2015) by ROOT version6.02/04
-   TCanvas *c1 = new TCanvas("c1", "c1",177,131,848,847);
+   TCanvas *c1 = new TCanvas("ExclusionSTauSTauLsp1", "ExclusionSTauSTauLsp1",177,131,848,847);
    gStyle->SetOptTitle(0);
    c1->Range(51.37143,-3.802408,333.6571,24.1758);
    c1->SetFillColor(0);
@@ -13,7 +16,11 @@ void ExclusionSTauSTauLsp1()
    c1->SetBottomMargin(0.135906);
    c1->SetFrameBorderMode(0);
    c1->SetFrameBorderMode(0);
-   
+
+   int expcolor = kRed;
+
+   int points_to_smooth[] = {8,15,3};
+
    Double_t TwoSigmaBand_fx3001[20] = {
    110,
    120,
@@ -140,9 +147,23 @@ void ExclusionSTauSTauLsp1()
    2.475243,
    2.958817,
    3.51449};
+
+   for(auto i : points_to_smooth){
+     TwoSigmaBand_fy3001[i] = smooth( TwoSigmaBand_fy3001 , i );
+   }
+
+   TwoSigmaBand_fely3001[2] = smooth( TwoSigmaBand_fely3001 , 2 );
+   TwoSigmaBand_fehy3001[7] = smooth( TwoSigmaBand_fehy3001 , 7 );
+   TwoSigmaBand_fehy3001[15] = smooth( TwoSigmaBand_fehy3001 , 15 );
+   
+   
+
    TGraphAsymmErrors *grae = new TGraphAsymmErrors(20,TwoSigmaBand_fx3001,TwoSigmaBand_fy3001,TwoSigmaBand_felx3001,TwoSigmaBand_fehx3001,TwoSigmaBand_fely3001,TwoSigmaBand_fehy3001);
    grae->SetName("TwoSigmaBand");
    grae->SetTitle("STauSTau");
+   grae->SetLineColor(expcolor);
+   grae->SetLineWidth(4);
+
 
    Int_t ci;      // for color index setting
    TColor *color; // for color definition with alpha
@@ -156,7 +177,6 @@ void ExclusionSTauSTauLsp1()
    Graph_TwoSigmaBand3001->SetStats(0);
 
    ci = TColor::GetColor("#000099");
-   Graph_TwoSigmaBand3001->SetLineColor(ci);
    Graph_TwoSigmaBand3001->GetXaxis()->SetTitle("m_{#tilde{#tau}} [GeV]");
    Graph_TwoSigmaBand3001->GetXaxis()->SetLabelFont(42);
    Graph_TwoSigmaBand3001->GetXaxis()->SetLabelSize(0.05);
@@ -174,7 +194,7 @@ void ExclusionSTauSTauLsp1()
    Graph_TwoSigmaBand3001->GetZaxis()->SetTitleFont(42);
    grae->SetHistogram(Graph_TwoSigmaBand3001);
    
-   grae->Draw("ap3");
+   grae->Draw("ap4");
    
    Double_t Obs_fx1[20] = {
    110,
@@ -218,11 +238,18 @@ void ExclusionSTauSTauLsp1()
    7.612455,
    9.625117,
    10.24726};
+
+   for(auto i : points_to_smooth)
+     Obs_fy1[i] = smooth( Obs_fy1 , i );
+
+
+   int colorobs = 1;
+
    TGraph *graph = new TGraph(20,Obs_fx1,Obs_fy1);
    graph->SetName("Obs");
    graph->SetTitle("Graph");
    graph->SetFillColor(1);
-   graph->SetLineColor(2);
+   graph->SetLineColor(colorobs);
    graph->SetLineWidth(4);
    
    TH1F *Graph_Obs1 = new TH1F("Graph_Obs1","Graph",100,91,319);
@@ -232,7 +259,7 @@ void ExclusionSTauSTauLsp1()
    Graph_Obs1->SetStats(0);
 
    ci = TColor::GetColor("#000099");
-   Graph_Obs1->SetLineColor(ci);
+   Graph_Obs1->SetLineColor(colorobs);
    Graph_Obs1->GetXaxis()->SetLabelFont(42);
    Graph_Obs1->GetXaxis()->SetLabelSize(0.035);
    Graph_Obs1->GetXaxis()->SetTitleSize(0.035);
@@ -291,12 +318,19 @@ void ExclusionSTauSTauLsp1()
    8.960043,
    10.74629,
    12.04276};
+
+   
+   for(auto i : points_to_smooth)
+     Expected_fy2[i] = smooth( Expected_fy2 , i );
+
    graph = new TGraph(20,Expected_fx2,Expected_fy2);
    graph->SetName("Expected");
    graph->SetTitle("Graph");
    graph->SetFillColor(1);
    graph->SetLineWidth(4);
-   
+   graph->SetLineColor(expcolor);
+   graph->SetMarkerColor(expcolor);
+
    TH1F *Graph_Expected2 = new TH1F("Graph_Expected2","Graph",100,91,319);
    Graph_Expected2->SetMinimum(1.521094);
    Graph_Expected2->SetMaximum(12.98672);
@@ -304,7 +338,7 @@ void ExclusionSTauSTauLsp1()
    Graph_Expected2->SetStats(0);
 
    ci = TColor::GetColor("#000099");
-   Graph_Expected2->SetLineColor(ci);
+   Graph_Expected2->SetLineColor(expcolor);
    Graph_Expected2->GetXaxis()->SetLabelFont(42);
    Graph_Expected2->GetXaxis()->SetLabelSize(0.035);
    Graph_Expected2->GetXaxis()->SetTitleSize(0.035);
@@ -332,10 +366,10 @@ void ExclusionSTauSTauLsp1()
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
    TLegendEntry *entry=leg->AddEntry("Obs","Observed","l");
-   entry->SetLineColor(2);
+   entry->SetLineColor(colorobs);
    entry->SetLineStyle(1);
    entry->SetLineWidth(4);
-   entry->SetMarkerColor(1);
+   entry->SetMarkerColor(colorobs);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
@@ -344,10 +378,10 @@ void ExclusionSTauSTauLsp1()
    ci = TColor::GetColor("#00ff00");
    entry->SetFillColor(ci);
    entry->SetFillStyle(1001);
-   entry->SetLineColor(1);
+   entry->SetLineColor(expcolor);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
-   entry->SetMarkerColor(1);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(expcolor);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
