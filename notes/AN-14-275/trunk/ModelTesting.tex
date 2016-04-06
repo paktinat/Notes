@@ -1,16 +1,31 @@
 \section{Information to test the new models}
 \label{sect:model}
-In the previous sections, a simplified SUSY model was used to optimize the selections and interpret the results. 
-Here, the main efficiencies and weights are reported versus the generated values, that can be used to examine 
-the new models approximately in a MC generator-level study. 
-The number of the remaining signal events and its uncertainty which can be evaluated by a generator-level study 
-should be combined statistically with the results in Tab. \ref{tbl:yieldSysSummary} to find the upper limit 
-on the number of the signal events
-and decide if a model is excluded or still allowed in the shadow of the analysis presented in the paper.
+We would like to quote our reconstruction efficiencies in a way that is as model independent as possible. For this
+we carefully define the acceptance, and provide details about the selection efficiency within that acceptance. In
+this way, anybody can use their favorite Monte Carlo generator of new physics, define an acceptance at the hard
+scatter level (e.g. status = 3 in Pythia 6), and correctly estimate the efficiency for this new physics model to within
+50\% or so (the so-called “outreach” program).
 
-Efficiencies are provided against the keinematic properties (e.g \pt) of visible $\tau$'s at generator level. The visible $\tau$ (\visTau), if it decays leptonically, is defined as the 4-vector of the lepton. In hadronic decays, the difference between the 4-vector of $\tau$ and its neutrino is attributed to the visible $\tau$. %It is, hereafter, referred to as \visTau.
+The event selection efficiency is a combination of
+\begin{itemize}
+\item the kinematic requirements on leptons and taus;
+\item the lepton identification and isolation efficiency;
+\item the efficiency of the \MPT requirement;
+\item the efficiency of the b-tagged jets veto;
+\item the efficiency of the extra lepton veto;
+\item the efficiency of the invariant mass requirement;
+\item the efficiency of the \mindphifour requirement;
+\item the efficiency of the \mttwo requirement;
+\item the efficiency of the \mt requirements.
+\end{itemize}
+
+
+Efficiencies are provided against the kinematic properties (e.g., \pt) of visible $\tau$ objects at generator level. The visible $\tau$ (\visTau), if it decays leptonically, is defined as the 4-vector of the lepton. In hadronic decays, the difference between the 4-vector of $\tau$ and its neutrino is attributed to the visible $\tau$. %It is, hereafter, referred to as \visTau.
+The visible $\tau$ objects are required to pass the offline kinematic selections ($\eta$ and \pt requirements). The \visMET variable is defined as the magnitude of the negative vector sum of \visTau pairs in the transverse plane. The 4-vector of the \visTau objects and \visMET are used to calculate the transverse mass (\mt) of the \visTau objects and also the visible \mttwo. All efficiencies are derived in the 
+``TChipChimSlepSnu'' sample, which is a chargino pair production sample. The chargino mass goes from 120 to 700 \GeV and the neutralino mass goes from 
+1 to 700 \GeV.
 Table \ref{tbl:EffTauLep}
-\begin{table}[!Hhtb]
+\begin{table}[!htb]
 \begin{center}
 \caption{Weights to select a lepton or \Tau in different channels. $\Tau^1$ and $\Tau^2$ stand for leading and next-to-leading \Tau in the \tauTau channel.}
 \begin{tabular}{|c|c|c|c|c|c|}
@@ -32,9 +47,10 @@ $>$ 200                   &    0.89       &    0.92              &         0.29 
 \label{tbl:EffTauLep}
 \end{center}
 \end{table}
-shows the weights of selecting a lepton or \Tau for different channels versus the \pt(\visTau). The \visMET variable is defined as the magnitude of the negative vector sum of \visTau pairs in the transverse plane. 
+shows the weights of selecting a lepton or \Tau for different channels versus the \pt(\visTau). 
+The values are calculated in the events that pass  \visMET $>$ 30 \GeV.
 Table \ref{tbl:EffMet}
-\begin{table}[!Hhtb]
+\begin{table}[!htb]
 \begin{center}
 \caption{Efficiency to pass the \MPT  requirement in different channels versus the \visMET.}
 \begin{tabular}{|c|c|}
@@ -64,8 +80,9 @@ $>$ 200                &    1.0  \\\hline
 shows the efficiency in different channels to pass the \MPT $>$ 30 \GeV as a function of the \visMET. 
 %The mass of the system of the selected pair is used to parametrize 
 %the efficiency to pass the cuts on the reconstructed invariant mass. 
+The following efficiencies are calculated in the generated events that pass  \visMET $>$ 30 \GeV.
 Table \ref{tbl:EffMass}
-\begin{table}[!Hhtb]
+\begin{table}[!htb]
 \begin{center}
 \caption{Efficiency to pass the invariant mass requirements in different channels versus the visible mass.}
 \begin{tabular}{|c|c|c|}
@@ -103,10 +120,10 @@ $>$ 115              &    1.00     &   1.00   \\\hline
 \end{table}
 shows the efficiency in different channels to pass the requirement of the reconstructed invariant mass versus the invariant mass of  
 \visTau pair (visible mass). The requirements
-on the invariant mass of the reconstructed pair are ($>$ 15 \GeV) and ( $<$ 45 or $>$ 75 \GeV) for the $\ell\Tau$ channels 
-and ( $<$ 55 or $>$ 85 \GeV) for the \tauTau channel. 
-The 4-vector of the particles of \visTau pair and \visMET are used to calculate the visible \mttwo. The efficiency to pass the (\mttwo $>$ 90 \GeV) requirement in $\ell\Tau$ and \tauTau \binone is shown in Tab. \ref{tbl:EffMT2}. 
-\begin{table}[!Hhtb]
+on the invariant mass of the reconstructed pair are ($>$ 15 \GeV) and ($<$ 45 or $>$ 75 \GeV) for the $\ell\Tau$ channels 
+and ($<$ 55 or $>$ 85 \GeV) for the \tauTau channel. 
+The efficiency to pass the (\mttwo $>$ 90 \GeV) requirement in $\ell\Tau$ and \tauTau \binone is shown in Table \ref{tbl:EffMT2}. 
+\begin{table}[!htb]
 \begin{center}
 \caption{Efficiency to pass the  \mttwo $>$ 90 \GeV requirement in different channels versus the visible \mttwo.}
 \begin{tabular}{|c|c|c|}
@@ -134,8 +151,8 @@ $>$ 200                  &    0.97     &   1.00  \\\hline
 \label{tbl:EffMT2}
 \end{center}
 \end{table}
-In the $\ell\Tau$ channels, to calculate the visible \tauMT, the 4-vector of the visible \Tau and \visMET are used. Table \ref{tbl:EffTauMT}
-\begin{table}[!Hhtb]
+Table \ref{tbl:EffTauMT}
+\begin{table}[!htb]
 \begin{center}
 \caption{Efficiency to pass the  \tauMT requirement in $\ell\Tau$ channels versus the visible \tauMT.}
 \begin{tabular}{|c|c|}
@@ -164,7 +181,7 @@ shows the efficiency in the $\ell\Tau$ channels to pass the   \tauMT $>$ 200 \Ge
 
 
 In the \tauTau \bintwo, the reconstructed \mttwo is constrained between 40 and 90 \GeV. Table \ref{tbl:EffMT2SR2}
-\begin{table}[!Hhtb]
+\begin{table}[!htb]
 \begin{center}
 \caption{Efficiency to pass the \mttwo requirement in \tauTau \bintwo versus the visible \mttwo.}
 \begin{tabular}{|c|c|}
@@ -193,8 +210,8 @@ $>$ 140                  &   0.01    \\\hline
 \end{table}
 shows the efficiency in \tauTau \bintwo to pass the 40 $<$ \mttwo $<$ 90 \GeV requirement versus the visible \mttwo. 
 The last selection in this channel is
-the requirement on \SumMT which is calculated using the 4-vector of two \visTau and \visMET. Table \ref{tbl:EffSumMT} 
-\begin{table}[!Hhtb]
+the requirement on \SumMT which is the sum of the \mt of the two \visTau objects. Table \ref{tbl:EffSumMT} 
+\begin{table}[!htb]
 \begin{center}
 \caption{Efficiency to pass the \SumMT requirement in \tauTau \bintwo versus the visible \SumMT.}
 \begin{tabular}{|c|c|c|}
@@ -237,11 +254,11 @@ $>$ 500                &   0.81  \\\hline
 \end{table}
 shows the efficiency in \tauTau \bintwo to pass the \SumMT $>$ 250 \GeV requirement versus the generated \SumMT.
 
-To use these efficiencies, one needs to multiply the values one after another and combine the final value with the values reported in Tab. \ref{tbl:yieldSysSummary}  statistically, to decide if a signal point is not still excluded. In the generator level, only a pair of $\ell\Tau$ or \tauTau is selected and no other selection is applied.
+To use these efficiencies, one needs to multiply the values one after another and combine the final value with the values reported in Table \ref{tbl:yieldSysSummary}  statistically, to decide if a signal point is not still excluded. In the generator level, only a pair of $\ell\Tau$ or \tauTau is selected and no other selection is applied.
 
 To take into account the inefficiencies and misidentifications for charge reconstruction of the objects, b-tagging of the jets, identification of the extra leptons 
-and the minimum angle between the jets and \MPT in the transverse plane, the extra factors shown in Tab. \ref{tbl:EffSF} need to be applied.
-\begin{table}[!Hhtb]
+and the minimum angle between the jets and \MPT in the transverse plane, the extra factors shown in Table \ref{tbl:EffSF} need to be applied.
+\begin{table}[!htb] 
 \begin{center}
 \caption{Extra factors to take into account the inefficiencies and misidentifications introduced by detector simulation and reconstruction.}
 \begin{tabular}{|c|c|c|c|}
@@ -257,3 +274,4 @@ factor &       0.75    &       0.48       &    0.56 \\\hline
 
 The efficiencies were used to reproduce the yields in the SMS plane. The results were in agreement with the yields from the full chain of 
 simulation and reconstruction within ~10\%.
+
