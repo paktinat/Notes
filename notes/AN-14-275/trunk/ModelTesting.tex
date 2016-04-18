@@ -47,7 +47,8 @@ $>$ 200                   &    0.89       &    0.92              &         0.28 
 \label{tbl:EffTauLep}
 \end{center}
 \end{table}
-shows the efficiencies of selecting a lepton or \Tau for different channels versus the transverse momentum (\pt) of the \visTau. 
+shows the efficiencies of selecting a lepton or \Tau for different channels versus the transverse momentum (\pt) of the \visTau. The efficiencies include 
+the scale factors and efficiencies of object identification and isolation and trigger also.
 The values are calculated in the events that pass  \genMET $>$ 30 \GeV.
 Table \ref{tbl:EffMet}
 \begin{table}[!htb]
@@ -259,22 +260,33 @@ To use these efficiencies, one needs to multiply the values one after another an
 In the generator level, a pair of $\ell\Tau$ or \tauTau is selected, when the \visTau objects pass
 the corresponding offline kinematic selections.
 
-To take into account the inefficiencies and misidentifications for charge reconstruction of the objects, b-tagging of the jets, identification of the extra leptons 
-and the minimum angle between the jets and \MPT in the transverse plane, the extra factors shown in Table \ref{tbl:EffSF} need to be applied.
-\begin{table}[!htb] 
-\begin{center}
-\caption{Extra factors to take into account the inefficiencies and misidentifications introduced by detector simulation and reconstruction.}
-\begin{tabular}{|c|c|c|c|}
-\hline\hline
-       &   $\ell\Tau$  &  \tauTau \binone & \tauTau \bintwo\\
-\hline\hline
-factor &       0.75    &       0.48       &    0.56 \\\hline
-\hline
-\end{tabular}
-\label{tbl:EffSF}
-\end{center}
-\end{table}
+%To take into account the inefficiencies and misidentifications for charge reconstruction of the objects, b-tagging of the jets, identification of the extra leptons 
+%and the minimum angle between the jets and \MPT in the transverse plane, the extra factors shown in Table \ref{tbl:EffSF} need to be applied.
+%\begin{table}[!htb] 
+%\begin{center}
+%\caption{Extra factors to take into account the inefficiencies and misidentifications introduced by detector simulation and reconstruction.}
+%\begin{tabular}{|c|c|c|c|}
+%\hline\hline
+%       &   $\ell\Tau$  &  \tauTau \binone & \tauTau \bintwo\\
+%\hline\hline
+%factor &       0.75    &       0.48       &    0.56 \\\hline
+%\hline
+%\end{tabular}
+%\label{tbl:EffSF}
+%\end{center}
+%\end{table}
 
-The efficiencies were used to reproduce the yields in the SMS plane. The results were in agreement with the yields from the full chain of 
-simulation and reconstruction within ~10\%.
-
+The efficiencies are used to reproduce the yields in the SMS plane. 
+%The results are in agreement with the yields from the full chain of 
+%simulation and reconstruction within ~30\%. 
+Figure \ref{fig:NormalizedDiff}
+\begin{figure}[!Hhtb]
+\centering
+\includegraphics[width=0.5\textwidth,keepaspectratio=true]{ModelTesting/NormalizedDiffmuTau.pdf}
+%\includegraphics[width=0.475\textwidth,keepaspectratio=true]{StatisticsFig/MT2muTau_tauMTgt200_DDFake.pdf}
+\caption{The relative difference between the results of the proposed method and the common analysis is shown for each SMS point. The results are shown for \muTau channel.}
+\label{fig:NormalizedDiff}
+\end{figure}
+shows the relative difference of the yields driven by the
+efficiencies and the yields from the full chain of simulation and reconstruction for each point of the SMS plane. The relative
+difference is less than 30\% in the main part of the SMS plane.
