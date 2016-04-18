@@ -52,7 +52,35 @@ list of cuts mentioned in the text, respectively. Also shown are the estimated \
 \label{fig:wjets_1}
 \end{figure}
 
-Each of the three graphs in both plots in figure~\ref{fig:wjets_1} are fitted with a pol0 function. In either of the two plots, the fit range excludes the first bin since the other bins are a subset of the first bin and we want to fit some statistically-independent values. The results are summarized in table~\ref{tbl:fitpars}.
+Each of the three graphs in both plots in figure~\ref{fig:wjets_1} are fitted with a pol0 function. 
+%In either of the two plots, the fit range excludes the first bin since the other bins are a subset of the first bin and we want to fit some statistically-independent values. 
+In either of the two plots, the fit range includes only the bins 2, 4 and 6 which show the values for baseline selection plus either  lepton veto  or 
+$\mindphifour>$ 1 or Z veto. It can be shown that the used subsamples are statistically independent. In table~\ref{tbl:wbkgCorr} 
+\begin{table}[!Hhtb]
+\begin{center}
+\caption{The efficiency of each cut is measured in different subsamples. The cuts to select the subsamples are shown in different columns.}
+\begin{tabular}{|l|c|c|c|c|}
+\hline\hline
+                  &   baseline(BL)    & BL + lepton veto & BL + $\mindphifour>$ 1 & BL + Z veto \\ 
+\hline\hline
+                  & \multicolumn{4}{c|}{\binone} \\\hline
+lepton veto       & 0.079 $\pm$ 0.008 &       1.0        &  0.066 $\pm$ 0.009     & 0.073 $\pm$ 0.008\\
+$\mindphifour>$ 1 & 0.754 $\pm$ 0.036 & 0.63 $\pm$ 0.11  &        1.0             & 0.781 $\pm$ 0.039\\
+Z veto            & 0.913 $\pm$ 0.040 & 0.83 $\pm$ 0.12  &  0.946 $\pm$ 0.051     &       1.0   \\
+\hline\hline
+                  & \multicolumn{4}{c|}{\bintwo} \\\hline
+lepton veto       & 0.072 $\pm$ 0.008 &       1.0        &  0.059 $\pm$ 0.009     & 0.068 $\pm$ 0.008\\
+$\mindphifour>$ 1 & 0.767 $\pm$ 0.038 & 0.63 $\pm$ 0.17  &          1.0           & 0.792 $\pm$ 0.041\\
+Z veto            & 0.919 $\pm$ 0.042 & 0.87 $\pm$ 0.14  &  0.949 $\pm$ 0.052     &       1.0   \\
+\hline\hline
+\end{tabular}
+\label{tbl:wbkgCorr}
+\end{center}
+\end{table}
+the efficiency of each cut is 
+measured in different subsamples. The efficiencies in different subsamples are found consistent within the uncertainties, confirming 
+that the subsamples are statistically independent. 
+The results of the fit are summarized in table~\ref{tbl:fitpars}.
 \begin{table}[!Hhtb]
 \begin{center}
 \caption{The fit parameters obtained from \wjets estimation results in nominal, up and down scaled samples.}
@@ -61,9 +89,12 @@ Each of the three graphs in both plots in figure~\ref{fig:wjets_1} are fitted wi
 & \binone &\bintwo \\
   & Fit Parameters (pol0) & Fit Parameters (pol0) \\
 \hline\hline
-down & 0.79 $\pm$ 0.13 & 1.27 $\pm$ 0.20\\
-nominal & 0.94 $\pm$ 0.14 &  1.70 $\pm$ 0.23\\
-up & 1.02 $\pm$ 0.15 & 2.38 $\pm$ 0.29\\ 
+down    & 0.67 $\pm$ 0.18 & 1.76  $\pm$ 0.34\\
+nominal & 0.78 $\pm$ 0.19 & 2.25  $\pm$ 0.39\\
+up      & 0.84 $\pm$ 0.19 & 2.83  $\pm$ 0.45\\
+%down & 0.79 $\pm$ 0.13 & 1.27 $\pm$ 0.20\\
+%nominal & 0.94 $\pm$ 0.14 &  1.70 $\pm$ 0.23\\
+%up & 1.02 $\pm$ 0.15 & 2.38 $\pm$ 0.29\\ 
 %down & 0.79 $\pm$ 0.12 & 1.37 $\pm$ 0.19\\
 %nominal & 0.93 $\pm$ 0.13 &  1.81 $\pm$ 0.22\\
 %up & 1.02 $\pm$ 0.13 & 2.52 $\pm$ 0.27\\ 
@@ -72,7 +103,6 @@ up & 1.02 $\pm$ 0.15 & 2.38 $\pm$ 0.29\\
 \label{tbl:fitpars}
 \end{center}
 \end{table}
-
 The systematic that can be assigned in either of the two search regions is the maximum variation of the up and down central values with 
 respect to the nominal one. 
 
@@ -116,8 +146,10 @@ takes into account the difference between the shape of the search variable distr
 \hline\hline
 Signal Region & \wjets Estimation\\
 \hline
-\tauTau \binone & 0.72 $\pm$ 0.11 (stat.) $\pm$ 0.11 (sys. fit) $\pm$ 0.56 (sys. shape)\\
-\tauTau \bintwo & 2.58 $\pm$ 0.35 (stat.) $\pm$ 1.04 (sys. fit) $\pm$ 0.69 (sys. shape)\\
+\tauTau \binone & 0.60 $\pm$ 0.15 (stat.) $\pm$ 0.09 (sys. fit) $\pm$ 0.47 (sys. shape)\\
+\tauTau \bintwo & 3.44 $\pm$ 0.59 (stat.) $\pm$ 0.88 (sys. fit) $\pm$ 0.92 (sys. shape)\\
+%\tauTau \binone & 0.72 $\pm$ 0.11 (stat.) $\pm$ 0.11 (sys. fit) $\pm$ 0.56 (sys. shape)\\
+%\tauTau \bintwo & 2.58 $\pm$ 0.35 (stat.) $\pm$ 1.04 (sys. fit) $\pm$ 0.69 (sys. shape)\\
 %\tauTau \binone & 0.69 $\pm$ 0.13 (stat.) $\pm$ 0.14 (sys. fit) $\pm$ 0.52 (sys. shape)\\
 %\tauTau \bintwo & 2.70 $\pm$ 0.22 (stat.) $\pm$ 0.71 (sys. fit) $\pm$ 0.68 (sys. shape)\\
 \hline\hline 
