@@ -35,7 +35,7 @@ cuts, events are asked to fail the lepton veto cut and again an efficiency is re
 of $\mttwo>$ 90 \GeV from independent samples. This procedure is repeated until the list is completed. For the \bintwo, 
  to get the efficiency of cutting $\SumMT>250\GeV$, both $40 < \mttwo < 90 \GeV$ and b-jet veto cuts are applied in each sample.
             
-In order to evaluate the systematics, the cut efficiencies from the scaled samples with 
+In order to evaluate the systematic uncertainties, the cut efficiencies from the scaled samples with 
 up and down Tau Energy Scale (as the main source of systematics) are also evaluated.
 To make these scaled samples, the four-vector of all tau objects 
 are scaled up and down by 3\% and all $p_T$-related variables such as $E_T^{miss}$, $M_{T2}$ and $\SumMT$ are recalculated.\\
@@ -51,43 +51,46 @@ The next six bins correspond to the samples where passing and failing the
 list of cuts mentioned in the text, respectively. Also shown are the estimated \wjets events in up and down scaled samples to evaluate the systematics.}
 \label{fig:wjets_1}
 \end{figure}
-
-Each of the three graphs in both plots in figure~\ref{fig:wjets_1} are fitted with a pol0 function. 
-%In either of the two plots, the fit range excludes the first bin since the other bins are a subset of the first bin and we want to fit some statistically-independent values. 
-In either of the two plots, the fit range includes only the bins 2, 4 and 6 which show the values for baseline selection plus either  lepton veto  or 
-$\mindphifour>$ 1 or Z veto. It can be shown that the used subsamples are statistically independent. In table~\ref{tbl:wbkgCorr} 
+It can be seen that the estimated \wjets events in the subsample passing the baseline selection cuts is insensitive to a choice of three primary cuts 
+(lepton veto, Z veto and $\mindphifour>$ 1).
+%Each of the three graphs in both plots in figure~\ref{fig:wjets_1} are fitted with a pol0 function. 
+%In either of the two plots, the fit range excludes the first bin since the other bins are a subset of 
+%the first bin and we want to fit some statistically-independent values. 
+%In either of the two plots, the fit range includes only the bins 2, 4 and 6 which show the values for baseline selection plus either  lepton veto  or 
+%$\mindphifour>$ 1 or Z veto. 
+%It can be shown that the used subsamples are statistically independent. In table~\ref{tbl:wbkgCorr} 
+%\begin{table}[!Hhtb]
+%\begin{center}
+%\caption{The efficiency of each cut is measured in different subsamples. The cuts to select the subsamples are shown in different columns.}
+%\begin{tabular}{|l|c|c|c|c|}
+%\hline\hline
+%                  &   baseline(BL)    & BL + lepton veto & BL + $\mindphifour>$ 1 & BL + Z veto \\ 
+%\hline\hline
+%                  & \multicolumn{4}{c|}{\binone} \\\hline
+%lepton veto       & 0.079 $\pm$ 0.008 &       1.0        &  0.066 $\pm$ 0.009     & 0.073 $\pm$ 0.008\\
+%$\mindphifour>$ 1 & 0.754 $\pm$ 0.036 & 0.63 $\pm$ 0.11  &        1.0             & 0.781 $\pm$ 0.039\\
+%Z veto            & 0.913 $\pm$ 0.040 & 0.83 $\pm$ 0.12  &  0.946 $\pm$ 0.051     &       1.0   \\
+%\hline\hline
+%                  & \multicolumn{4}{c|}{\bintwo} \\\hline
+%lepton veto       & 0.072 $\pm$ 0.008 &       1.0        &  0.059 $\pm$ 0.009     & 0.068 $\pm$ 0.008\\
+%$\mindphifour>$ 1 & 0.767 $\pm$ 0.038 & 0.63 $\pm$ 0.17  &          1.0           & 0.792 $\pm$ 0.041\\
+%Z veto            & 0.919 $\pm$ 0.042 & 0.87 $\pm$ 0.14  &  0.949 $\pm$ 0.052     &       1.0   \\
+%\hline\hline
+%\end{tabular}
+%\label{tbl:wbkgCorr}
+%\end{center}
+%\end{table}
+%the efficiency of each cut is measured in different subsamples. 
+%The efficiencies in different subsamples are found consistent within the uncertainties
+%confirming that the subsamples are statistically independent. 
+The estimated \wjets events in this subsample are summarized in table~\ref{tbl:fitpars}.
 \begin{table}[!Hhtb]
 \begin{center}
-\caption{The efficiency of each cut is measured in different subsamples. The cuts to select the subsamples are shown in different columns.}
-\begin{tabular}{|l|c|c|c|c|}
-\hline\hline
-                  &   baseline(BL)    & BL + lepton veto & BL + $\mindphifour>$ 1 & BL + Z veto \\ 
-\hline\hline
-                  & \multicolumn{4}{c|}{\binone} \\\hline
-lepton veto       & 0.079 $\pm$ 0.008 &       1.0        &  0.066 $\pm$ 0.009     & 0.073 $\pm$ 0.008\\
-$\mindphifour>$ 1 & 0.754 $\pm$ 0.036 & 0.63 $\pm$ 0.11  &        1.0             & 0.781 $\pm$ 0.039\\
-Z veto            & 0.913 $\pm$ 0.040 & 0.83 $\pm$ 0.12  &  0.946 $\pm$ 0.051     &       1.0   \\
-\hline\hline
-                  & \multicolumn{4}{c|}{\bintwo} \\\hline
-lepton veto       & 0.072 $\pm$ 0.008 &       1.0        &  0.059 $\pm$ 0.009     & 0.068 $\pm$ 0.008\\
-$\mindphifour>$ 1 & 0.767 $\pm$ 0.038 & 0.63 $\pm$ 0.17  &          1.0           & 0.792 $\pm$ 0.041\\
-Z veto            & 0.919 $\pm$ 0.042 & 0.87 $\pm$ 0.14  &  0.949 $\pm$ 0.052     &       1.0   \\
-\hline\hline
-\end{tabular}
-\label{tbl:wbkgCorr}
-\end{center}
-\end{table}
-the efficiency of each cut is 
-measured in different subsamples. The efficiencies in different subsamples are found consistent within the uncertainties, confirming 
-that the subsamples are statistically independent. 
-The results of the fit are summarized in table~\ref{tbl:fitpars}.
-\begin{table}[!Hhtb]
-\begin{center}
-\caption{The fit parameters obtained from \wjets estimation results in nominal, up and down scaled samples.}
+\caption{The  \wjets estimation results from the baseline selection in nominal, up and down scaled samples.}
 \begin{tabular}{lcc}
 \hline\hline
+%  & \multicolumn{2}{c|}{estimation in baseline selection} \\
 & \binone &\bintwo \\
-  & Fit Parameters (pol0) & Fit Parameters (pol0) \\
 \hline\hline
 down    & 0.67 $\pm$ 0.18 & 1.76  $\pm$ 0.34\\
 nominal & 0.78 $\pm$ 0.19 & 2.25  $\pm$ 0.39\\
@@ -103,7 +106,7 @@ up      & 0.84 $\pm$ 0.19 & 2.83  $\pm$ 0.45\\
 \label{tbl:fitpars}
 \end{center}
 \end{table}
-The systematic that can be assigned in either of the two search regions is the maximum variation of the up and down central values with 
+The systematic that can be assigned in either of the two search regions is the maximum variation of the up and down values with 
 respect to the nominal one. 
 
 \subsubsection{MC validation for Wjets}
