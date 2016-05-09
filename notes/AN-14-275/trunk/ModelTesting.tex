@@ -268,7 +268,7 @@ Figure \ref{fig:NormalizedDiff}
 \begin{figure}[!Hhtb]
 \centering
 \includegraphics[width=0.475\textwidth,keepaspectratio=true]{ModelTesting/NormalizedDiffmuTau.pdf}
-\includegraphics[width=0.475\textwidth,keepaspectratio=true]{ModelTesting/NormalizedDiffmuTau.pdf}
+\includegraphics[width=0.475\textwidth,keepaspectratio=true]{ModelTesting/NormalizedDiffeleTau.pdf}
 \includegraphics[width=0.475\textwidth,keepaspectratio=true]{ModelTesting/NormalizedDiffTauTauBin1.pdf}
 \includegraphics[width=0.475\textwidth,keepaspectratio=true]{ModelTesting/NormalizedDiffTauTauBin2.pdf}
 \caption{The relative difference between the results of the proposed method and the common analysis is shown for each SMS point in different signal regions.}
@@ -276,15 +276,19 @@ Figure \ref{fig:NormalizedDiff}
 \end{figure}
 shows the relative difference of the yields driven by the
 efficiencies and the yields from the full chain of simulation and reconstruction for each point of the SMS plane. The relative
-difference is less than 30\% in the main part of the SMS plane.
-
-
+difference is less than 30\% in the main part of the SMS plane. Figure  \ref{fig:RelativeUncertainty} 
 \begin{figure}[!Hhtb]
 \centering
 \includegraphics[width=0.475\textwidth,keepaspectratio=true]{ModelTesting/RelativeUncertaintymuTau.pdf}
-\includegraphics[width=0.475\textwidth,keepaspectratio=true]{ModelTesting/RelativeUncertaintymuTau.pdf}
+\includegraphics[width=0.475\textwidth,keepaspectratio=true]{ModelTesting/RelativeUncertaintyeleTau.pdf}
 \includegraphics[width=0.475\textwidth,keepaspectratio=true]{ModelTesting/RelativeUncertaintyTauTauBin1.pdf}
 \includegraphics[width=0.475\textwidth,keepaspectratio=true]{ModelTesting/RelativeUncertaintyTauTauBin2.pdf}
-\caption{The relative uncertaity of the relative difference between the results of the proposed method and the common analysis is shown for each SMS point in different signal regions.}
+\caption{The relative uncertainty of the relative difference between the results of the proposed method and the common analysis is shown for each SMS point in different signal regions.}
 \label{fig:RelativeUncertainty}
 \end{figure}
+shows the relative uncertainty of the shown relative difference. It can be seen that the points that have large deviation from the values of the common analysis 
+usually have large relative uncertainty. A user of these efficiencies should be aware that some assumptions can be
+broken close to the diagonal (very low mass difference between chargino and neutralino) and non physical estimation 
+can be driven by using the reported efficiencies. This region which is known as the compressed region needs a separate analysis, 
+%because for example the used kinematic cuts are too hard to select the objects that appear in the decay of the chargino when the 
+because the mass difference of mother and daughter is comparable to the kinematic cuts which are used to select the objects.
