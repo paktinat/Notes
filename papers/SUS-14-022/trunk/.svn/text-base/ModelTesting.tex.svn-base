@@ -1,0 +1,260 @@
+\section{Information to test the new models}
+\label{sect:model}
+In the previous sections, a simplified SUSY model was used to optimize the selections and interpret the results. 
+Here, the main efficiencies and weights are reported versus the generated values, that can be used to examine 
+the new models approximately in a Monte Carlo generator-level study. 
+The number of the remaining signal events and its uncertainty which can be evaluated by a generator-level study 
+should be combined statistically with the results in Table \ref{tbl:yieldSysSummary} to find the upper limit 
+on the number of the signal events
+and decide if a model is excluded or still allowed in the shadow of the analysis presented in the paper.
+
+Efficiencies are provided against the kinematic properties (e.g., \pt) of visible $\tau$'s at generator level. The visible $\tau$ (\visTau), if it decays leptonically, is defined as the 4-vector of the lepton. In hadronic decays, the difference between the 4-vector of $\tau$ and its neutrino is attributed to the visible $\tau$. %It is, hereafter, referred to as \visTau.
+Table \ref{tbl:EffTauLep}
+\begin{table}[!htb]
+\begin{center}
+\caption{Weights to select a lepton or \Tau in different channels. $\Tau^1$ and $\Tau^2$ stand for leading and next-to-leading \Tau in the \tauTau channel.}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline\hline
+\pt(\visTau) (\GeV)  & e for $e\Tau$ & $\mu$ for $\mu\Tau$  & \Tau for $\ell\Tau$    &  $\Tau^1$ for \tauTau & $\Tau^2$ for \tauTau\\
+\hline\hline
+0-10                      &    0.15       &    0.05              &         0.001          &       0.0             & 0.52 \\\hline
+10-20                     &    0.14       &    0.72              &         0.004          &       0.0             & 0.54\\\hline
+20-30                     &    0.27       &    0.80              &         0.11           &       0.0             & 0.56\\\hline
+30-40                     &    0.68       &    0.85              &         0.22           &       0.0             & 0.55\\\hline
+40-60                     &    0.75       &    0.87              &         0.24           &       0.02            & 0.61\\\hline
+60-80                     &    0.80       &    0.88              &         0.25           &       0.08            & 0.69\\\hline
+80-120                    &    0.83       &    0.89              &         0.27           &       0.12            & 0.70\\\hline
+120-160                   &    0.85       &    0.90              &         0.28           &       0.15            & 0.70\\\hline
+160-200                   &    0.87       &    0.91              &         0.28           &       0.16            & 0.71\\\hline
+$>$ 200                   &    0.89       &    0.92              &         0.29           &       0.17            & 0.71\\\hline
+\hline
+\end{tabular}
+\label{tbl:EffTauLep}
+\end{center}
+\end{table}
+shows the weights of selecting a lepton or \Tau for different channels versus the \pt(\visTau). The \visMET variable is defined as the magnitude of the negative vector sum of \visTau pairs in the transverse plane. 
+Table \ref{tbl:EffMet}
+\begin{table}[!htb]
+\begin{center}
+\caption{Efficiency to pass the \MPT  requirement in different channels versus the \visMET.}
+\begin{tabular}{|c|c|}
+\hline\hline
+\visMET  (\GeV)        & all channels\\
+\hline\hline
+0-10                   &    0.52 \\\hline
+10-20                  &    0.57 \\\hline
+20-30                  &    0.68 \\\hline
+30-40                  &    0.79 \\\hline
+40-50                  &    0.87 \\\hline
+50-60                  &    0.93 \\\hline
+60-70                  &    0.95 \\\hline
+70-80                  &    0.97 \\\hline
+80-90                  &    0.98 \\\hline
+90-100                 &    0.98 \\\hline
+100-120                &    0.99 \\\hline
+120-140                &    0.99 \\\hline
+140-160                &    0.99 \\\hline
+160-200                &    1.0  \\\hline
+$>$ 200                &    1.0  \\\hline
+\hline
+\end{tabular}
+\label{tbl:EffMet}
+\end{center}
+\end{table}
+shows the efficiency in different channels to pass the \MPT $>$ 30 \GeV as a function of the \visMET. 
+%The mass of the system of the selected pair is used to parametrize 
+%the efficiency to pass the cuts on the reconstructed invariant mass. 
+Table \ref{tbl:EffMass}
+\begin{table}[!htb]
+\begin{center}
+\caption{Efficiency to pass the invariant mass requirements in different channels versus the visible mass.}
+\begin{tabular}{|c|c|c|}
+\hline\hline
+visible mass (\GeV)  & $\ell\Tau$  &  \tauTau \\
+\hline\hline
+0-5                  &    0.00     &   0.00   \\\hline
+5-10                 &    0.26     &   0.25   \\\hline
+10-15                &    0.65     &   0.60  \\\hline
+15-20                &    0.96     &   0.90  \\\hline
+20-25                &    0.99     &   0.94   \\\hline
+25-30                &    0.99     &   0.98   \\\hline
+30-35                &    0.99     &   1.00   \\\hline
+35-40                &    0.98     &   1.00   \\\hline
+40-45                &    0.83     &   0.99   \\\hline
+45-50                &    0.15     &   0.95   \\\hline
+50-55                &    0.03     &   0.68   \\\hline
+55-60                &    0.02     &   0.18   \\\hline
+60-65                &    0.02     &   0.06   \\\hline
+65-70                &    0.04     &   0.03   \\\hline
+70-75                &    0.22     &   0.05   \\\hline
+75-80                &    0.78     &   0.15   \\\hline
+80-85                &    0.92     &   0.41   \\\hline
+85-90                &    0.95     &   0.79   \\\hline
+90-95                &    0.97     &   0.93   \\\hline
+95-100               &    0.99     &   0.96   \\\hline
+100-105              &    1.00     &   0.98   \\\hline
+105-110              &    1.00     &   0.99   \\\hline
+110-115              &    1.00     &   0.99   \\\hline
+$>$ 115              &    1.00     &   1.00   \\\hline
+\hline
+\end{tabular}
+\label{tbl:EffMass}
+\end{center}
+\end{table}
+shows the efficiency in different channels to pass the requirement of the reconstructed invariant mass versus the invariant mass of  
+\visTau pair (visible mass). The requirements
+on the invariant mass of the reconstructed pair are ($>$ 15 \GeV) and ($<$ 45 or $>$ 75 \GeV) for the $\ell\Tau$ channels 
+and ($<$ 55 or $>$ 85 \GeV) for the \tauTau channel. 
+The 4-vector of the particles of \visTau pair and \visMET are used to calculate the visible \mttwo. The efficiency to pass the (\mttwo $>$ 90 \GeV) requirement in $\ell\Tau$ and \tauTau \binone is shown in Table \ref{tbl:EffMT2}. 
+\begin{table}[!htb]
+\begin{center}
+\caption{Efficiency to pass the  \mttwo $>$ 90 \GeV requirement in different channels versus the visible \mttwo.}
+\begin{tabular}{|c|c|c|}
+\hline\hline
+visible \mttwo (\GeV)    & $\ell\Tau$  &  \tauTau \binone \\
+\hline\hline
+0-20                     &    0.00     &   0.00  \\\hline
+20-40                    &    0.003    &   0.01  \\\hline
+40-50                    &    0.01     &   0.02  \\\hline
+50-60                    &    0.02     &   0.04  \\\hline
+60-70                    &    0.05     &   0.08  \\\hline
+70-80                    &    0.14     &   0.19  \\\hline
+80-90                    &    0.35     &   0.45  \\\hline
+90-100                   &    0.65     &   0.73  \\\hline
+100-110                  &    0.82     &   0.88  \\\hline
+110-120                  &    0.89     &   0.94  \\\hline
+120-130                  &    0.93     &   0.97  \\\hline
+130-140                  &    0.95     &   0.98  \\\hline
+140-160                  &    0.96     &   0.99  \\\hline
+160-180                  &    0.97     &   0.99  \\\hline
+180-200                  &    0.97     &   1.00  \\\hline
+$>$ 200                  &    0.97     &   1.00  \\\hline
+\hline
+\end{tabular}
+\label{tbl:EffMT2}
+\end{center}
+\end{table}
+In the $\ell\Tau$ channels, to calculate the visible \tauMT, the 4-vector of the visible \Tau and \visMET are used. Table \ref{tbl:EffTauMT}
+\begin{table}[!htb]
+\begin{center}
+\caption{Efficiency to pass the  \tauMT requirement in $\ell\Tau$ channels versus the visible \tauMT.}
+\begin{tabular}{|c|c|}
+\hline\hline
+visible \tauMT (\GeV)  & $\ell\Tau$ \\
+\hline\hline
+0-50                     &   0.35   \\\hline
+50-100                   &   0.1   \\\hline
+100-125                  &   0.05   \\\hline
+125-150                  &   0.07   \\\hline
+150-170                  &   0.14   \\\hline
+170-190                  &   0.32   \\\hline
+190-200                  &   0.55   \\\hline
+200-210                  &   0.68   \\\hline
+210-230                  &   0.83   \\\hline
+230-250                  &   0.91   \\\hline
+250-275                  &   0.95   \\\hline
+275-300                  &   0.97   \\\hline
+$>$ 300                  &   0.99   \\\hline
+\hline
+\end{tabular}
+\label{tbl:EffTauMT}
+\end{center}
+\end{table}
+shows the efficiency in the $\ell\Tau$ channels to pass the   \tauMT $>$ 200 \GeV requirement versus the generated \tauMT.
+
+
+In the \tauTau \bintwo, the reconstructed \mttwo is constrained between 40 and 90 \GeV. Table \ref{tbl:EffMT2SR2}
+\begin{table}[!htb]
+\begin{center}
+\caption{Efficiency to pass the \mttwo requirement in \tauTau \bintwo versus the visible \mttwo.}
+\begin{tabular}{|c|c|}
+\hline\hline
+generated \mttwo (\GeV)  &  \tauTau \bintwo \\
+\hline\hline
+0-10                     &   0.007   \\\hline
+10-20                    &   0.10    \\\hline
+20-30                    &   0.26    \\\hline
+30-40                    &   0.57    \\\hline
+40-50                    &   0.85    \\\hline
+50-60                    &   0.93    \\\hline
+60-70                    &   0.92    \\\hline
+70-80                    &   0.82    \\\hline
+80-90                    &   0.56    \\\hline
+90-100                   &   0.27    \\\hline
+100-110                  &   0.12    \\\hline
+110-120                  &   0.06    \\\hline
+120-130                  &   0.03    \\\hline
+130-140                  &   0.02    \\\hline
+$>$ 140                  &   0.01    \\\hline
+\hline
+\end{tabular}
+\label{tbl:EffMT2SR2}
+\end{center}
+\end{table}
+shows the efficiency in \tauTau \bintwo to pass the 40 $<$ \mttwo $<$ 90 \GeV requirement versus the visible \mttwo. 
+The last selection in this channel is
+the requirement on \SumMT which is calculated using the 4-vector of two \visTau and \visMET. Table \ref{tbl:EffSumMT} 
+\begin{table}[!htb]
+\begin{center}
+\caption{Efficiency to pass the \SumMT requirement in \tauTau \bintwo versus the visible \SumMT.}
+\begin{tabular}{|c|c|c|}
+\hline\hline
+visible \SumMT (\GeV)  &  \tauTau \bintwo\\
+\hline\hline
+$<$ 60                 &   0.00  \\\hline
+60-80                  &   0.84  \\\hline
+80-100                 &   0.68  \\\hline
+100-120                &   0.45  \\\hline
+120-140                &   0.29  \\\hline
+140-160                &   0.22  \\\hline
+160-180                &   0.18  \\\hline
+180-200                &   0.22  \\\hline
+200-210                &   0.28  \\\hline
+210-220                &   0.34  \\\hline
+220-230                &   0.41  \\\hline
+230-240                &   0.49  \\\hline
+240-250                &   0.59  \\\hline
+250-260                &   0.63  \\\hline
+260-270                &   0.70  \\\hline
+270-280                &   0.76  \\\hline
+280-290                &   0.78  \\\hline
+290-300                &   0.83  \\\hline
+300-320                &   0.87  \\\hline
+320-340                &   0.88  \\\hline
+340-360                &   0.91  \\\hline
+360-380                &   0.92  \\\hline
+380-400                &   0.92  \\\hline
+400-420                &   0.93  \\\hline
+420-440                &   0.93  \\\hline
+440-460                &   0.88  \\\hline
+460-480                &   0.89  \\\hline
+480-500                &   0.93  \\\hline
+$>$ 500                &   0.81  \\\hline
+\hline
+\end{tabular}
+\label{tbl:EffSumMT}
+\end{center}
+\end{table}
+shows the efficiency in \tauTau \bintwo to pass the \SumMT $>$ 250 \GeV requirement versus the generated \SumMT.
+
+To use these efficiencies, one needs to multiply the values one after another and combine the final value with the values reported in Table \ref{tbl:yieldSysSummary}  statistically, to decide if a signal point is not still excluded. In the generator level, only a pair of $\ell\Tau$ or \tauTau is selected and no other selection is applied.
+
+To take into account the inefficiencies and misidentifications for charge reconstruction of the objects, b-tagging of the jets, identification of the extra leptons 
+and the minimum angle between the jets and \MPT in the transverse plane, the extra factors shown in Table \ref{tbl:EffSF} need to be applied.
+\begin{table}[!htb] 
+\begin{center}
+\caption{Extra factors to take into account the inefficiencies and misidentifications introduced by detector simulation and reconstruction.}
+\begin{tabular}{|c|c|c|c|}
+\hline\hline
+       &   $\ell\Tau$  &  \tauTau \binone & \tauTau \bintwo\\
+\hline\hline
+factor &       0.75    &       0.48       &    0.56 \\\hline
+\hline
+\end{tabular}
+\label{tbl:EffSF}
+\end{center}
+\end{table}
+
+The efficiencies were used to reproduce the yields in the SMS plane. The results were in agreement with the yields from the full chain of 
+simulation and reconstruction within ~10\%.
+

@@ -1,0 +1,9 @@
+There are two versions of the figure : ABCDFullTex1.tex and ABCDFullTex2.tex
+Edit one of them and compile it with pdflatex command.
+
+Then make a shortcut to it in the upper directory using the following command :
+
+rm -rf ../ABCD.pdf
+ln -s ABCDFullTex1/2.pdf ../ABCD.pdf
+
+the tdr command inserts the linked file into the PAS.
