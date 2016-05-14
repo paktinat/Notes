@@ -204,10 +204,10 @@
    TH1D *MT2_W = new TH1D("MT2_W","",3, xAxis5);
    MT2_W->SetBinContent(1,29.77);
    MT2_W->SetBinContent(2,2.16);
-   MT2_W->SetBinContent(3,0.721364);
+   MT2_W->SetBinContent(3,0.698837);
    MT2_W->SetBinError(1,6.3);
    MT2_W->SetBinError(2,1.11);
-   MT2_W->SetBinError(3,0.58);
+   MT2_W->SetBinError(3,sqrt(0.21*0.21 + 0.095 * 0.095 + 0.545 * 0.545));
    MT2_W->SetEntries(64);
    MT2_W->SetStats(0);
 
@@ -276,16 +276,24 @@
    MT2_QCD->GetZaxis()->SetTitleFont(42);
    MT2->Add(MT2_QCD,"");
    MT2->Draw("hist");
-   
+
+//    TH1D *h__MC = MT2_Higgs->Clone();
    TH1D *h__MC = new TH1D("h__MC","",3, xAxis6);
-   h__MC->SetBinContent(1,110.3696);
-   h__MC->SetBinContent(2,5.701668);
-   h__MC->SetBinContent(3,1.599932);
-   h__MC->SetBinError(1,15.55324);
-   h__MC->SetBinError(2,2.226874);
-   h__MC->SetBinError(3,0.6462787);
-   h__MC->SetBinError(4,0.06252563);
-   h__MC->SetEntries(667);
+   h__MC->Add(MT2_Higgs);
+   h__MC->Add(MT2_WW);
+   h__MC->Add(MT2_Top);
+   h__MC->Add(MT2_ZX);
+   h__MC->Add(MT2_W);
+   h__MC->Add(MT2_QCD);
+//    TH1D *h__MC = new TH1D("h__MC","",3, xAxis6);
+//    h__MC->SetBinContent(1,110.3696);
+//    h__MC->SetBinContent(2,5.701668);
+//    h__MC->SetBinContent(3,1.599932);
+//    h__MC->SetBinError(1,15.55324);
+//    h__MC->SetBinError(2,2.226874);
+//    h__MC->SetBinError(3,0.6462787);
+//    h__MC->SetBinError(4,0.06252563);
+//    h__MC->SetEntries(667);
    h__MC->SetFillColor(1);
    h__MC->SetFillStyle(3004);
    h__MC->SetLineColor(0);

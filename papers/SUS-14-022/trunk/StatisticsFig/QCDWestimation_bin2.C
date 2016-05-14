@@ -208,10 +208,10 @@
    TH1D *MT2_W = new TH1D("MT2_W","",4, xAxis5);
    MT2_W->SetBinContent(2,15.56548);
    MT2_W->SetBinContent(3,9.05);
-   MT2_W->SetBinContent(4,2.58335);
+   MT2_W->SetBinContent(4,4.36216);
    MT2_W->SetBinError(2,5.872039);
    MT2_W->SetBinError(3,3.23);
-   MT2_W->SetBinError(4,1.29);
+   MT2_W->SetBinError(4,sqrt(1.05 * 1.05 + 1.14 * 1.14 + 1.16 * 1.16));
    MT2_W->SetEntries(64);
    MT2_W->SetStats(0);
 
@@ -349,18 +349,26 @@
    MT2_susy->GetZaxis()->SetTitleFont(42);
    MT2_susy->Draw("samehist");
    Double_t xAxis9[5] = {100, 150, 200, 250, 300}; 
+
+  TH1D *h__MC2 = new TH1D("h__MC2","",4, xAxis9);
+   h__MC2->Add(MT2_Higgs);
+   h__MC2->Add(MT2_WW);
+   h__MC2->Add(MT2_Top);
+   h__MC2->Add(MT2_ZX);
+   h__MC2->Add(MT2_W);
+   h__MC2->Add(MT2_QCD);
    
-   TH1D *h__MC2 = new TH1D("h__MC2","",4, xAxis9);
-   h__MC2->SetBinContent(1,12.97713);
-   h__MC2->SetBinContent(2,63.71524);
-   h__MC2->SetBinContent(3,17.1338);
-   h__MC2->SetBinContent(4,5.292047);
-   h__MC2->SetBinError(1,4.189159);
-   h__MC2->SetBinError(2,11.25064);
-   h__MC2->SetBinError(3,5.021858);
-   h__MC2->SetBinError(4,1.761986);
-   h__MC2->SetBinError(5,0.01049275);
-   h__MC2->SetEntries(532);
+//    TH1D *h__MC2 = new TH1D("h__MC2","",4, xAxis9);
+//    h__MC2->SetBinContent(1,12.97713);
+//    h__MC2->SetBinContent(2,63.71524);
+//    h__MC2->SetBinContent(3,17.1338);
+//    h__MC2->SetBinContent(4,5.292047);
+//    h__MC2->SetBinError(1,4.189159);
+//    h__MC2->SetBinError(2,11.25064);
+//    h__MC2->SetBinError(3,5.021858);
+//    h__MC2->SetBinError(4,1.761986);
+//    h__MC2->SetBinError(5,0.01049275);
+//    h__MC2->SetEntries(532);
    h__MC2->SetFillColor(1);
    h__MC2->SetFillStyle(3004);
    h__MC2->SetLineColor(0);
