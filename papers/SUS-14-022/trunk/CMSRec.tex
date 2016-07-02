@@ -29,8 +29,10 @@ separately for jets originating from b/$\cPqc$ quarks or from light quarks.
 Jets with  \PT $>$ 40\GeV and $\abs{\eta} < 5.0$ and b-tagged jets with \PT $>$ 20\GeV and $\abs{\eta} < 2.4$ are considered in this analysis.
 
 
-The particle-flow objects are used to reconstruct the missing transverse momentum  vector \ptvecmiss, defined as the negative of the vector sum of the transverse momenta of all reconstructed particles.  Corrections are applied to ensure consistency between
-\ptvecmiss and the corrections to the jet energies described above.  The missing transverse momentum in the event (\MPT) is defined as the magnitude of \ptvecmiss.
+The particle-flow objects are used to reconstruct the missing transverse momentum  vector \ptvecmiss, defined as the negative of the vector sum of the transverse momenta of all reconstructed particles.  
+%Corrections are applied to ensure consistency between
+%\ptvecmiss and the corrections to the jet energies described above.  
+The missing transverse momentum in the event (\MPT) is defined as the magnitude of \ptvecmiss.
 
 Hadronically-decaying $\tau$ leptons are reconstructed using the hadron-plus-strips algorithm~\cite{Khachatryan:2015dfa}.
 The constituents of the reconstructed jets are used to identify individual tau decay modes with one charged 
@@ -56,7 +58,7 @@ In the following figures and tables, the events containing at least one top quar
 Events from Higgs boson production via gluon fusion, vector boson fusion or in association with a $\cPZ$ or $\PW$ boson or a \ttbar pair are referred to as ``Higgs''. The masses of the top quark and Higgs boson are set to be 172.5\GeV and 125\GeV, respectively.
 
 %The simplified model which is used to describe the signal events is shown in Fig.~\ref{fig:Productions} (left). 
-For the signal MC samples, a pair of charginos (\chione) 
+For the signal Monte Carlo (MC) samples, a pair of charginos (\chione) 
 are produced and decay exclusively to the final states that contain two tau leptons, two tau neutrinos, and %$\tau$, two $\nu_{\tau}$ and 
 two neutralinos (\PSGczDo) as shown in Fig.~\ref{fig:Productions} (left). 
 The mediators in the decay of the \chione can be either a \sTau or a $\sNu_{\tau}$. 
@@ -73,18 +75,20 @@ In the data set considered in this paper,
 there were on average 21 proton-proton interactions (``pileup'') in each bunch crossing.
 Additional interactions are generated with \PYTHIA and superimposed on simulated events in a manner consistent with the
 luminosity profile of the data set.
-The detector response in the Monte Carlo background event samples is modeled by a
+The detector response in the MC background event samples is modeled by a
 detailed simulation
 of the CMS detector based on {\GEANTfour}~\cite{Agostinelli:2002hh}.  
 To reduce  computational requirements, signal events 
 are processed by the CMS fast simulation \cite{Abdullin:2011zz} instead of {\GEANTfour}. 
+It is verified that the CMS fast simulation gives a reasonable agreement with the detailed simulation for our favorite signal which has hadronic decays of 
+tau leptons in the final state.
 All simulated events are reconstructed with the same algorithms as collision data.
 
 The SM backgrounds are normalized using the most accurate calculations of the cross sections available 
-in the literature. These cross sections correspond to next-to-next-to-leading order (NNLO) accuracy for $\cPZ$+jets~\cite{Melnikov:2006kv} 
+in the literature. These cross sections correspond to next-to-next-to-leading-order (NNLO) accuracy for $\cPZ$+jets~\cite{Melnikov:2006kv} 
 and \wjets~\cite{xsec_WZ} events. For the $\cPqt\cPaqt$ simulated samples, the cross section used is calculated to full NNLO accuracy including
 %The cross section of $\cPqt\cPaqt$ simulated sample at full NNLO accuracy including 
 the resummation of next-to-next-to-leading-logarithmic (NNLL) terms~\cite{Czakon:2011xx}. %is used~\cite{Czakon:2011xx}. 
-The event yields from di-boson production are normalized to the next-to-leading order (NLO) cross section  taken from Ref.~\cite{Campbell:2011bn}. 
+The event yields from di-boson production are normalized to the next-to-leading-order (NLO) cross section  taken from Ref.~\cite{Campbell:2011bn}. 
 The \textsc{Resummino}~\cite{Fuks:2012qx,Fuks:2013vua,Fuks:2013lya} calculations at NLO+NLL are used to calculate the signal cross sections, where 
 NLL refers to next-to-leading-logarithmic precision.
