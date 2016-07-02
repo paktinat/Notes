@@ -6,7 +6,7 @@ A more detailed description of the CMS detector, together with a definition of t
 
 
 Events from pp interactions must satisfy the requirements of a two-level trigger system.
-The first level (L1) of the CMS trigger system, composed of custom hardware processors, uses information from the calorimeters and muon detectors to select the most interesting events in a fixed time interval of less than 4\mus. The high-level trigger (HLT) processor farm further decreases the event rate from around 100\unit{kHz} to around 400\unit{Hz}, before data storage. 
+The first level (L1) of the CMS trigger system, composed of custom hardware processors, uses information from the calorimeters and muon detectors to select the most interesting events in a fixed time interval of less than 4\mus. The high-level trigger (HLT) processor farm further decreases the event rate from around 100\unit{kHz} to less than 1\unit{kHz}, before data storage. 
 
 The particle-flow event algorithm~\cite{CMS-PAS-PFT-09-001,CMS-PAS-PFT-10-001} reconstructs and identifies each individual particle with an optimized combination of information from the various elements of the CMS detector. 
 %The energy of photons is directly obtained from the ECAL measurement, corrected for zero-suppression effects. The energy of electrons is determined from a combination of the electron momentum at the primary interaction vertex as determined by the tracker, the energy of the corresponding ECAL cluster, and the energy sum of all bremsstrahlung photons spatially compatible with originating from the electron track. The energy of muons is obtained from the curvature of the corresponding track. The energy of charged hadrons is determined from a combination of their momentum measured in the tracker and the matching ECAL and HCAL energy deposits, corrected for zero-suppression effects and for the response function of the calorimeters to hadronic showers. Finally, the energy of neutral hadrons is obtained from the corresponding corrected ECAL and HCAL energy. 
@@ -30,9 +30,9 @@ Jets with  \PT $>$ 40\GeV and $\abs{\eta} < 5.0$ and b-tagged jets with \PT $>$ 
 
 
 The particle-flow objects are used to reconstruct the missing transverse momentum  vector \ptvecmiss, defined as the negative of the vector sum of the transverse momenta of all reconstructed particles.  Corrections are applied to ensure consistency between
-\ptvecmiss and the corrections to jet energies described above.  The missing transverse momentum in the event (\MPT) is defined as the magnitude of \ptvecmiss.
+\ptvecmiss and the corrections to the jet energies described above.  The missing transverse momentum in the event (\MPT) is defined as the magnitude of \ptvecmiss.
 
-Hadronically-decaying $\tau$ leptons, referred to as \Tau, are reconstructed using the hadron-plus-strips algorithm~\cite{Khachatryan:2015dfa}.
+Hadronically-decaying $\tau$ leptons are reconstructed using the hadron-plus-strips algorithm~\cite{Khachatryan:2015dfa}.
 The constituents of the reconstructed jets are used to identify individual tau decay modes with one charged 
 hadron and up to two neutral pions, or three charged hadrons. 
 Additional discriminators are used to separate \Tau from electrons and muons.
@@ -56,7 +56,7 @@ In the following figures and tables, the events containing at least one top quar
 Events from Higgs boson production via gluon fusion, vector boson fusion or in association with a $\cPZ$ or $\PW$ boson or a \ttbar pair are referred to as ``Higgs''. The masses of the top quark and Higgs boson are set to be 172.5\GeV and 125\GeV, respectively.
 
 %The simplified model which is used to describe the signal events is shown in Fig.~\ref{fig:Productions} (left). 
-In signal samples, a pair of charginos (\chione) 
+For the signal MC samples, a pair of charginos (\chione) 
 are produced and decay exclusively to the final states that contain two tau leptons, two tau neutrinos, and %$\tau$, two $\nu_{\tau}$ and 
 two neutralinos (\PSGczDo) as shown in Fig.~\ref{fig:Productions} (left). 
 The mediators in the decay of the \chione can be either a \sTau or a $\sNu_{\tau}$. 
@@ -76,7 +76,7 @@ luminosity profile of the data set.
 The detector response in the Monte Carlo background event samples is modeled by a
 detailed simulation
 of the CMS detector based on {\GEANTfour}~\cite{Agostinelli:2002hh}.  
-On the other hand, in order to reduce  computational requirements, signal events 
+To reduce  computational requirements, signal events 
 are processed by the CMS fast simulation \cite{Abdullin:2011zz} instead of {\GEANTfour}. 
 All simulated events are reconstructed with the same algorithms as collision data.
 
