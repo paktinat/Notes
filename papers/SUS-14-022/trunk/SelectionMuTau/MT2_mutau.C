@@ -31,7 +31,7 @@
    h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1->SetDirectory(0);
    h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1->SetStats(0);
    h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1->SetLineWidth(2);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("M_{T2}");
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("M_{T2} (GeV)");
    h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
    h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
    h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
@@ -339,6 +339,9 @@
    h_stack->Add(h__QCD,"");
    h_stack->Draw("hist");
    Double_t xAxis7[12] = {40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150}; 
+
+   TExec *setex1 = new TExec("setex1", "gStyle->SetErrorX(0.5)");
+   setex1->Draw();
    
    TH1D *h__MC = new TH1D("h__MC","",11, xAxis7);
    h__MC->SetBinContent(1,3128.439);
@@ -386,6 +389,11 @@
    h__MC->GetZaxis()->SetTitleSize(0.035);
    h__MC->GetZaxis()->SetTitleFont(42);
    h__MC->Draw("E2 SAME");
+
+   TExec *setex2 = new TExec("setex1", "gStyle->SetErrorX(0.0)");
+   setex2->Draw();
+
+
    Double_t xAxis8[12] = {40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150}; 
    
    TH1D *h2_copy = new TH1D("h2_copy","",11, xAxis8);
@@ -431,7 +439,8 @@
    h2_copy->GetZaxis()->SetLabelSize(0.035);
    h2_copy->GetZaxis()->SetTitleSize(0.035);
    h2_copy->GetZaxis()->SetTitleFont(42);
-   h2_copy->Draw("sameE");
+   h2_copy->Draw("e1 same");
+
    Double_t xAxis9[12] = {40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150}; 
    
    TH1D *h_susy = new TH1D("h_susy","",11, xAxis9);
@@ -488,7 +497,7 @@ tex->SetNDC();
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.2030201,0.8725166,"CMS Preliminary");
+      tex = new TLatex(0.2030201,0.8725166,"CMS");
 tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
@@ -505,7 +514,7 @@ tex->SetNDC();
    leg->SetLineWidth(2);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("h2_copy","data","pl");
+   TLegendEntry *entry=leg->AddEntry("h2_copy","data","p");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);

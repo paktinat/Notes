@@ -38,7 +38,7 @@
    MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetLineColor(ci);
    MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetLineWidth(2);
    MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetMarkerSize(2);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("M_{T2}");
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("M_{T2} (GeV)");
    MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
    MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
    MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
@@ -356,6 +356,9 @@
    MT2PreCut_MT2_QCD13__1->GetZaxis()->SetTitleFont(42);
    MT2PreCut_MT2->Add(MT2PreCut_MT2_QCD13__1,"");
    MT2PreCut_MT2->Draw("hist");
+
+   TExec *setex1 = new TExec("setex1", "gStyle->SetErrorX(0.5)");
+   setex1->Draw();
    
    TH1D *h__MC = new TH1D("h__MC","",11,40,150);
    h__MC->SetBinContent(1,1826.86);
@@ -403,7 +406,11 @@
    h__MC->GetZaxis()->SetTitleSize(0.035);
    h__MC->GetZaxis()->SetTitleFont(42);
    h__MC->Draw("E2 SAME");
-   
+
+
+   TExec *setex2 = new TExec("setex2", "gStyle->SetErrorX(0.0)");
+   setex2->Draw();
+
    TH1D *h2_copy19__7 = new TH1D("h2_copy19__7","",11,40,150);
    h2_copy19__7->SetBinContent(1,2027);
    h2_copy19__7->SetBinContent(2,1427);
@@ -416,6 +423,7 @@
    h2_copy19__7->SetBinContent(9,2);
    h2_copy19__7->SetBinContent(10,3);
    h2_copy19__7->SetBinContent(11,2);
+
    h2_copy19__7->SetBinError(1,45.02222);
    h2_copy19__7->SetBinError(2,37.77565);
    h2_copy19__7->SetBinError(3,26.4764);
@@ -428,6 +436,8 @@
    h2_copy19__7->SetBinError(10,1.732051);
    h2_copy19__7->SetBinError(11,1.414214);
    h2_copy19__7->SetBinError(12,1);
+
+
    h2_copy19__7->SetMaximum(9150.271);
    h2_copy19__7->SetEntries(5456);
    h2_copy19__7->SetFillColor(1);
@@ -449,7 +459,7 @@
    h2_copy19__7->GetZaxis()->SetLabelSize(0.035);
    h2_copy19__7->GetZaxis()->SetTitleSize(0.035);
    h2_copy19__7->GetZaxis()->SetTitleFont(42);
-   h2_copy19__7->Draw("sameE");
+   h2_copy19__7->Draw("E1 SAME");
    
    TH1D *MT2PreCut_MT2_SUSY_380_120__8 = new TH1D("MT2PreCut_MT2_SUSY_380_120__8","",11,40,150);
    MT2PreCut_MT2_SUSY_380_120__8->SetBinContent(1,0.664911);
@@ -508,7 +518,7 @@ tex->SetNDC();
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.2130872,0.8708609,"CMS Preliminary");
+      tex = new TLatex(0.2130872,0.8708609,"CMS");
 tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
@@ -525,7 +535,7 @@ tex->SetNDC();
    leg->SetLineWidth(1);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("h2_copy19__7","data","pl");
+   TLegendEntry *entry=leg->AddEntry("h2_copy19__7","data","p");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
