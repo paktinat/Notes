@@ -1,9 +1,9 @@
 {
 //=========Macro generated from canvas: MT2muTau_tauMTgt200_DDFake/
-//=========  (Sun Feb 14 11:22:46 2016) by ROOT version5.34/03
-   TCanvas *MT2muTau_tauMTgt200_DDFake = new TCanvas("MT2muTau_tauMTgt200_DDFake", "",4,78,600,600);
+//=========  (Mon Jul  4 12:54:22 2016) by ROOT version5.34/03
+   TCanvas *MT2muTau_tauMTgt200_DDFake = new TCanvas("MT2muTau_tauMTgt200_DDFake", "",211,42,600,602);
    gStyle->SetOptFit(1);
-   MT2muTau_tauMTgt200_DDFake->Range(26.83544,-2.064317,128.1013,2.866347);
+   MT2muTau_tauMTgt200_DDFake->Range(26.83544,-1.457869,128.1013,2.793058);
    MT2muTau_tauMTgt200_DDFake->SetFillColor(0);
    MT2muTau_tauMTgt200_DDFake->SetBorderMode(0);
    MT2muTau_tauMTgt200_DDFake->SetBorderSize(2);
@@ -25,32 +25,36 @@
    h_stack->SetMinimum(0.3);
    h_stack->SetMaximum(200.0039);
    
-   TH1F *h_stack_stack_1_stack_1 = new TH1F("h_stack_stack_1_stack_1","",120,0,120);
-   h_stack_stack_1_stack_1->SetMinimum(0.03772846);
-   h_stack_stack_1_stack_1->SetMaximum(332.048);
-   h_stack_stack_1_stack_1->SetDirectory(0);
-   h_stack_stack_1_stack_1->SetStats(0);
-   h_stack_stack_1_stack_1->SetLineWidth(2);
-   h_stack_stack_1_stack_1->GetXaxis()->SetTitle("M_{T2}");
-   h_stack_stack_1_stack_1->GetXaxis()->SetRange(41,120);
-   h_stack_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
-   h_stack_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
-   h_stack_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
-   h_stack_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
-   h_stack_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
-   h_stack_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
-   h_stack_stack_1_stack_1->GetYaxis()->SetTitle("Events");
-   h_stack_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
-   h_stack_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
-   h_stack_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
-   h_stack_stack_1_stack_1->GetYaxis()->SetTitleSize(0.05);
-   h_stack_stack_1_stack_1->GetYaxis()->SetTitleOffset(1.3);
-   h_stack_stack_1_stack_1->GetYaxis()->SetTitleFont(42);
-   h_stack_stack_1_stack_1->GetZaxis()->SetLabelFont(42);
-   h_stack_stack_1_stack_1->GetZaxis()->SetLabelSize(0.035);
-   h_stack_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
-   h_stack_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
-   h_stack->SetHistogram(h_stack_stack_1_stack_1);
+   TH1F *h_stack_stack_1_stack_1_stack_1 = new TH1F("h_stack_stack_1_stack_1_stack_1","",120,0,120);
+   h_stack_stack_1_stack_1_stack_1->SetMinimum(0.1243802);
+   h_stack_stack_1_stack_1_stack_1->SetMaximum(312.9628);
+   h_stack_stack_1_stack_1_stack_1->SetDirectory(0);
+   h_stack_stack_1_stack_1_stack_1->SetStats(0);
+
+   Int_t ci;   // for color index setting
+   ci = TColor::GetColor("#000099");
+   h_stack_stack_1_stack_1_stack_1->SetLineColor(ci);
+   h_stack_stack_1_stack_1_stack_1->SetLineWidth(2);
+   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("M_{T2} (GeV)");
+   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetRange(41,120);
+   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
+   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
+   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
+   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
+   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
+   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
+   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events");
+   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
+   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
+   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
+   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetTitleSize(0.05);
+   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetTitleOffset(1.3);
+   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetTitleFont(42);
+   h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetLabelFont(42);
+   h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetLabelSize(0.035);
+   h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
+   h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
+   h_stack->SetHistogram(h_stack_stack_1_stack_1_stack_1);
    
    Double_t xAxis1[7] = {0, 20, 40, 50, 70, 90, 120}; 
    
@@ -110,7 +114,6 @@
    hAllMC__WWjets->SetEntries(2.146846);
    hAllMC__WWjets->SetStats(0);
 
-   Int_t ci;   // for color index setting
    ci = TColor::GetColor("#000066");
    hAllMC__WWjets->SetFillColor(ci);
 
@@ -359,7 +362,8 @@
    h1_susy->SetBinError(6,0.1105816);
    h1_susy->SetBinError(7,0.0865969);
    h1_susy->SetEntries(1021);
-   h1_susy->SetLineStyle(3);
+   h1_susy->SetLineColor(7);
+   h1_susy->SetLineStyle(7);
    h1_susy->SetLineWidth(4);
    h1_susy->GetXaxis()->SetNdivisions(505);
    h1_susy->GetXaxis()->SetLabelFont(42);
@@ -378,21 +382,21 @@
    h1_susy->GetZaxis()->SetTitleSize(0.035);
    h1_susy->GetZaxis()->SetTitleFont(42);
    h1_susy->Draw("samehist");
-   TLatex *   tex = new TLatex(0.1,0.943,"Preselection, m_{T}^{#tau} > 200 GeV");
+   TLatex *   tex = new TLatex(0.1258389,0.9440559,"Preselection, m_{T}^{#tau} > 200 GeV");
 tex->SetNDC();
    tex->SetTextSize(0.03);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.68,0.943,"19.6 fb^{-1} (8 TeV)");
+      tex = new TLatex(0.6694631,0.9440559,"19.6 fb^{-1} (8 TeV)");
 tex->SetNDC();
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.24,0.85,"CMS Preliminary");
+      tex = new TLatex(0.3389262,0.8601399,"CMS");
 tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.26,0.8,"#mu#tau_{h}");
+      tex = new TLatex(0.3607383,0.8164336,"#mu#tau_{h}");
 tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
@@ -405,7 +409,7 @@ tex->SetNDC();
    leg->SetLineWidth(2);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("h2_copyAll","data","pl");
+   TLegendEntry *entry=leg->AddEntry("h2_copyAll","data","p");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
@@ -483,8 +487,8 @@ tex->SetNDC();
    entry->SetMarkerSize(1);
    entry=leg->AddEntry("h1_susy","SUSY(380,1)","f");
    entry->SetFillStyle(1001);
-   entry->SetLineColor(1);
-   entry->SetLineStyle(3);
+   entry->SetLineColor(7);
+   entry->SetLineStyle(7);
    entry->SetLineWidth(4);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);

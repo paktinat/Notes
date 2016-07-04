@@ -1,19 +1,19 @@
 {
 //=========Macro generated from canvas: MT2/
-//=========  (Sun Feb 14 11:35:52 2016) by ROOT version5.34/03
-   TCanvas *MT2 = new TCanvas("MT2", "",15,110,600,630);
+//=========  (Mon Jul  4 12:27:27 2016) by ROOT version5.34/03
+   TCanvas *MT2 = new TCanvas("MT2", "",295,60,600,630);
    gStyle->SetOptFit(1);
    gROOT->SetEditHistograms();
    MT2->SetHighLightColor(2);
-   MT2->Range(13.24324,-3.75234,161.8919,4.895593);
+   MT2->Range(13.31066,-3.763505,161.9728,4.894268);
    MT2->SetFillColor(0);
    MT2->SetBorderMode(0);
    MT2->SetBorderSize(2);
    MT2->SetLogy();
-   MT2->SetLeftMargin(0.18);
-   MT2->SetRightMargin(0.08);
-   MT2->SetTopMargin(0.07);
-   MT2->SetBottomMargin(0.17);
+   MT2->SetLeftMargin(0.1795302);
+   MT2->SetRightMargin(0.08053691);
+   MT2->SetTopMargin(0.06976745);
+   MT2->SetBottomMargin(0.1710963);
    MT2->SetFrameLineWidth(3);
    MT2->SetFrameBorderMode(0);
    MT2->SetFrameBorderSize(0);
@@ -27,36 +27,36 @@
    MT2PreCut_MT2->SetMinimum(0.02);
    MT2PreCut_MT2->SetMaximum(9150.271);
    
-   TH1F *MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1 = new TH1F("MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1","",11,40,150);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetMinimum(0.005221657);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetMaximum(19509.12);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetDirectory(0);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetStats(0);
+   TH1F *MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1 = new TH1F("MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1","",11,40,150);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->SetMinimum(0.005221657);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->SetMaximum(19509.12);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->SetDirectory(0);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->SetStats(0);
 
    Int_t ci;   // for color index setting
    ci = TColor::GetColor("#000099");
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetLineColor(ci);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetLineWidth(2);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->SetMarkerSize(2);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("M_{T2} (GeV)");
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events");
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetYaxis()->SetTitleSize(0.05);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetYaxis()->SetTitleOffset(1.3);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetYaxis()->SetTitleFont(42);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetZaxis()->SetLabelFont(42);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetZaxis()->SetLabelSize(0.035);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_MT2->SetHistogram(MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->SetLineColor(ci);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->SetLineWidth(2);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->SetMarkerSize(2);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("M_{T2} (GeV)");
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events");
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleSize(0.05);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleOffset(1.3);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleFont(42);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetLabelFont(42);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetLabelSize(0.035);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
+   MT2PreCut_MT2->SetHistogram(MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1);
    
    
    TH1D *MT2PreCut_MT2_Higgs18__6 = new TH1D("MT2PreCut_MT2_Higgs18__6","",11,40,150);
@@ -356,9 +356,8 @@
    MT2PreCut_MT2_QCD13__1->GetZaxis()->SetTitleFont(42);
    MT2PreCut_MT2->Add(MT2PreCut_MT2_QCD13__1,"");
    MT2PreCut_MT2->Draw("hist");
-
-   TExec *setex1 = new TExec("setex1", "gStyle->SetErrorX(0.5)");
-   setex1->Draw();
+   TExec *exec = new TExec("setex1","gStyle->SetErrorX(0.5)");
+   exec->Draw();
    
    TH1D *h__MC = new TH1D("h__MC","",11,40,150);
    h__MC->SetBinContent(1,1826.86);
@@ -406,24 +405,21 @@
    h__MC->GetZaxis()->SetTitleSize(0.035);
    h__MC->GetZaxis()->SetTitleFont(42);
    h__MC->Draw("E2 SAME");
-
-
-   TExec *setex2 = new TExec("setex2", "gStyle->SetErrorX(0.0)");
-   setex2->Draw();
-
+   exec = new TExec("setex2","gStyle->SetErrorX(0.0)");
+   exec->Draw();
+   
    TH1D *h2_copy19__7 = new TH1D("h2_copy19__7","",11,40,150);
    h2_copy19__7->SetBinContent(1,2027);
    h2_copy19__7->SetBinContent(2,1427);
    h2_copy19__7->SetBinContent(3,701);
    h2_copy19__7->SetBinContent(4,225);
    h2_copy19__7->SetBinContent(5,46);
-   h2_copy19__7->SetBinContent(6,10);
+   h2_copy19__7->SetBinContent(6,9.603963);
    h2_copy19__7->SetBinContent(7,5);
    h2_copy19__7->SetBinContent(8,1);
    h2_copy19__7->SetBinContent(9,2);
    h2_copy19__7->SetBinContent(10,3);
    h2_copy19__7->SetBinContent(11,2);
-
    h2_copy19__7->SetBinError(1,45.02222);
    h2_copy19__7->SetBinError(2,37.77565);
    h2_copy19__7->SetBinError(3,26.4764);
@@ -436,10 +432,8 @@
    h2_copy19__7->SetBinError(10,1.732051);
    h2_copy19__7->SetBinError(11,1.414214);
    h2_copy19__7->SetBinError(12,1);
-
-
    h2_copy19__7->SetMaximum(9150.271);
-   h2_copy19__7->SetEntries(5456);
+   h2_copy19__7->SetEntries(5457);
    h2_copy19__7->SetFillColor(1);
    h2_copy19__7->SetLineWidth(2);
    h2_copy19__7->SetMarkerStyle(20);
@@ -464,8 +458,8 @@
    TH1D *MT2PreCut_MT2_SUSY_380_120__8 = new TH1D("MT2PreCut_MT2_SUSY_380_120__8","",11,40,150);
    MT2PreCut_MT2_SUSY_380_120__8->SetBinContent(1,0.664911);
    MT2PreCut_MT2_SUSY_380_120__8->SetBinContent(2,0.5718391);
-   MT2PreCut_MT2_SUSY_380_120__8->SetBinContent(3,0.7821587);
-   MT2PreCut_MT2_SUSY_380_120__8->SetBinContent(4,0.6971145);
+   MT2PreCut_MT2_SUSY_380_120__8->SetBinContent(3,0.8013537);
+   MT2PreCut_MT2_SUSY_380_120__8->SetBinContent(4,0.6046899);
    MT2PreCut_MT2_SUSY_380_120__8->SetBinContent(5,0.6109306);
    MT2PreCut_MT2_SUSY_380_120__8->SetBinContent(6,0.5397154);
    MT2PreCut_MT2_SUSY_380_120__8->SetBinContent(7,0.5164162);
@@ -486,8 +480,9 @@
    MT2PreCut_MT2_SUSY_380_120__8->SetBinError(10,0.03195533);
    MT2PreCut_MT2_SUSY_380_120__8->SetBinError(11,0.03064086);
    MT2PreCut_MT2_SUSY_380_120__8->SetBinError(12,0.05165145);
-   MT2PreCut_MT2_SUSY_380_120__8->SetEntries(2176);
-   MT2PreCut_MT2_SUSY_380_120__8->SetLineStyle(3);
+   MT2PreCut_MT2_SUSY_380_120__8->SetEntries(2179);
+   MT2PreCut_MT2_SUSY_380_120__8->SetLineColor(7);
+   MT2PreCut_MT2_SUSY_380_120__8->SetLineStyle(7);
    MT2PreCut_MT2_SUSY_380_120__8->SetLineWidth(4);
    MT2PreCut_MT2_SUSY_380_120__8->SetMarkerStyle(20);
    MT2PreCut_MT2_SUSY_380_120__8->SetMarkerSize(2);
@@ -508,21 +503,21 @@
    MT2PreCut_MT2_SUSY_380_120__8->GetZaxis()->SetTitleSize(0.035);
    MT2PreCut_MT2_SUSY_380_120__8->GetZaxis()->SetTitleFont(42);
    MT2PreCut_MT2_SUSY_380_120__8->Draw("samehist");
-   TLatex *   tex = new TLatex(0.13,0.943,"Preselection");
+   TLatex *   tex = new TLatex(0.1761745,0.9435216,"Preselection");
 tex->SetNDC();
    tex->SetTextSize(0.03);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.68,0.943,"19.6 fb^{-1} (8TeV)");
+      tex = new TLatex(0.6694631,0.9435216,"19.6 fb^{-1} (8TeV)");
 tex->SetNDC();
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.2130872,0.8708609,"CMS");
+      tex = new TLatex(0.3624161,0.8737542,"CMS");
 tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.2399329,0.8377483,"e#tau_{h}");
+      tex = new TLatex(0.3875839,0.833887,"e#tau_{h}");
 tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
@@ -626,8 +621,8 @@ tex->SetNDC();
    entry->SetMarkerSize(1);
    entry=leg->AddEntry("MT2PreCut_MT2_SUSY_380_120__8","SUSY(380,1)","f");
    entry->SetFillStyle(1001);
-   entry->SetLineColor(1);
-   entry->SetLineStyle(3);
+   entry->SetLineColor(7);
+   entry->SetLineStyle(7);
    entry->SetLineWidth(4);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);

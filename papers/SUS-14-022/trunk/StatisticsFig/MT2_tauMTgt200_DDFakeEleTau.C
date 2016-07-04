@@ -1,9 +1,9 @@
 {
 //=========Macro generated from canvas: MT2_tauMTgt200_DDFakeEleTau/
-//=========  (Sun Feb 14 11:25:05 2016) by ROOT version5.34/03
-   TCanvas *MT2_tauMTgt200_DDFakeEleTau = new TCanvas("MT2_tauMTgt200_DDFakeEleTau", "",4,78,600,600);
+//=========  (Mon Jul  4 12:50:07 2016) by ROOT version5.34/03
+   TCanvas *MT2_tauMTgt200_DDFakeEleTau = new TCanvas("MT2_tauMTgt200_DDFakeEleTau", "",257,98,600,602);
    gStyle->SetOptFit(1);
-   MT2_tauMTgt200_DDFakeEleTau->Range(26.83544,-2.064317,128.1013,2.866347);
+   MT2_tauMTgt200_DDFakeEleTau->Range(26.83544,-1.457869,128.1013,2.793058);
    MT2_tauMTgt200_DDFakeEleTau->SetFillColor(0);
    MT2_tauMTgt200_DDFakeEleTau->SetBorderMode(0);
    MT2_tauMTgt200_DDFakeEleTau->SetBorderSize(2);
@@ -24,45 +24,41 @@
    h_stack->SetTitle("");
    h_stack->SetMinimum(0.3);
    h_stack->SetMaximum(200.0039);
-
-   Double_t xAxis10[5] = {40, 50, 70, 90, 120}; 
-   TH1D *h__MC2 = new TH1D("h__MC","",4, xAxis10);
    
-
-   TH1F *h_stack_stack_1_stack_1_stack_1 = new TH1F("h_stack_stack_1_stack_1_stack_1","",120,0,120);
-   h_stack_stack_1_stack_1_stack_1->SetMinimum(0.03772846);
-   h_stack_stack_1_stack_1_stack_1->SetMaximum(332.048);
-   h_stack_stack_1_stack_1_stack_1->SetDirectory(0);
-   h_stack_stack_1_stack_1_stack_1->SetStats(0);
+   TH1F *h_stack_stack_1_stack_1_stack_1_stack_1_stack_2 = new TH1F("h_stack_stack_1_stack_1_stack_1_stack_1_stack_2","",120,0,120);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->SetMinimum(0.1243802);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->SetMaximum(312.9628);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->SetDirectory(0);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->SetStats(0);
 
    Int_t ci;   // for color index setting
    ci = TColor::GetColor("#000099");
-   h_stack_stack_1_stack_1_stack_1->SetLineColor(ci);
-   h_stack_stack_1_stack_1_stack_1->SetLineWidth(2);
-   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("M_{T2}");
-   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetRange(41,120);
-   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
-   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
-   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
-   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
-   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
-   h_stack_stack_1_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
-   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events");
-   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
-   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
-   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
-   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetTitleSize(0.05);
-   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetTitleOffset(1.3);
-   h_stack_stack_1_stack_1_stack_1->GetYaxis()->SetTitleFont(42);
-   h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetLabelFont(42);
-   h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetLabelSize(0.035);
-   h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
-   h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
-   h_stack->SetHistogram(h_stack_stack_1_stack_1_stack_1);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->SetLineColor(ci);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->SetLineWidth(2);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetXaxis()->SetTitle("M_{T2} (GeV)");
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetXaxis()->SetRange(41,120);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetXaxis()->SetNdivisions(505);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetXaxis()->SetLabelFont(42);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetXaxis()->SetLabelSize(0.05);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetXaxis()->SetTitleSize(0.05);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetXaxis()->SetTitleOffset(1.1);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetXaxis()->SetTitleFont(42);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetYaxis()->SetTitle("Events");
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetYaxis()->SetNdivisions(505);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetYaxis()->SetLabelFont(42);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetYaxis()->SetLabelSize(0.05);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetYaxis()->SetTitleSize(0.05);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetYaxis()->SetTitleOffset(1.3);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetYaxis()->SetTitleFont(42);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetZaxis()->SetLabelFont(42);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetZaxis()->SetLabelSize(0.035);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetZaxis()->SetTitleSize(0.035);
+   h_stack_stack_1_stack_1_stack_1_stack_1_stack_2->GetZaxis()->SetTitleFont(42);
+   h_stack->SetHistogram(h_stack_stack_1_stack_1_stack_1_stack_1_stack_2);
    
-   Double_t xAxis1[5] = {40, 50, 70, 90, 120}; 
+   Double_t xAxis9[5] = {40, 50, 70, 90, 120}; 
    
-   TH1D *TauMTCut_MT2_Higgs_Rebinned = new TH1D("TauMTCut_MT2_Higgs_Rebinned","",4, xAxis1);
+   TH1D *TauMTCut_MT2_Higgs_Rebinned = new TH1D("TauMTCut_MT2_Higgs_Rebinned","",4, xAxis9);
    TauMTCut_MT2_Higgs_Rebinned->SetBinContent(0,-0.07679207);
    TauMTCut_MT2_Higgs_Rebinned->SetBinContent(1,0.005385817);
    TauMTCut_MT2_Higgs_Rebinned->SetBinContent(2,9.458594e-11);
@@ -98,10 +94,9 @@
    TauMTCut_MT2_Higgs_Rebinned->GetZaxis()->SetTitleSize(0.035);
    TauMTCut_MT2_Higgs_Rebinned->GetZaxis()->SetTitleFont(42);
    h_stack->Add(TauMTCut_MT2_Higgs_Rebinned,"");
-   h__MC2->Add(TauMTCut_MT2_Higgs_Rebinned);
-   Double_t xAxis2[5] = {40, 50, 70, 90, 120}; 
+   Double_t xAxis10[5] = {40, 50, 70, 90, 120}; 
    
-   TH1D *TauMTCut_MT2_WW_Rebinned = new TH1D("TauMTCut_MT2_WW_Rebinned","",4, xAxis2);
+   TH1D *TauMTCut_MT2_WW_Rebinned = new TH1D("TauMTCut_MT2_WW_Rebinned","",4, xAxis10);
    TauMTCut_MT2_WW_Rebinned->SetBinContent(0,-0.250828);
    TauMTCut_MT2_WW_Rebinned->SetBinContent(1,0.2455386);
    TauMTCut_MT2_WW_Rebinned->SetBinContent(2,1.317099);
@@ -143,10 +138,9 @@
    TauMTCut_MT2_WW_Rebinned->GetZaxis()->SetTitleSize(0.035);
    TauMTCut_MT2_WW_Rebinned->GetZaxis()->SetTitleFont(42);
    h_stack->Add(TauMTCut_MT2_WW_Rebinned,"");
-   h__MC2->Add(TauMTCut_MT2_WW_Rebinned);
-   Double_t xAxis3[5] = {40, 50, 70, 90, 120}; 
+   Double_t xAxis11[5] = {40, 50, 70, 90, 120}; 
    
-   TH1D *TauMTCut_MT2_Top_Rebinned = new TH1D("TauMTCut_MT2_Top_Rebinned","",4, xAxis3);
+   TH1D *TauMTCut_MT2_Top_Rebinned = new TH1D("TauMTCut_MT2_Top_Rebinned","",4, xAxis11);
    TauMTCut_MT2_Top_Rebinned->SetBinContent(0,-0.2165999);
    TauMTCut_MT2_Top_Rebinned->SetBinContent(1,0.8233909);
    TauMTCut_MT2_Top_Rebinned->SetBinContent(2,1.455251);
@@ -188,10 +182,9 @@
    TauMTCut_MT2_Top_Rebinned->GetZaxis()->SetTitleSize(0.035);
    TauMTCut_MT2_Top_Rebinned->GetZaxis()->SetTitleFont(42);
    h_stack->Add(TauMTCut_MT2_Top_Rebinned,"");
-   h__MC2->Add(TauMTCut_MT2_Top_Rebinned);
-   Double_t xAxis4[5] = {40, 50, 70, 90, 120}; 
+   Double_t xAxis12[5] = {40, 50, 70, 90, 120}; 
    
-   TH1D *TauMTCut_MT2_ZX_Rebinned = new TH1D("TauMTCut_MT2_ZX_Rebinned","",4, xAxis4);
+   TH1D *TauMTCut_MT2_ZX_Rebinned = new TH1D("TauMTCut_MT2_ZX_Rebinned","",4, xAxis12);
    TauMTCut_MT2_ZX_Rebinned->SetBinContent(0,-0.0009098457);
    TauMTCut_MT2_ZX_Rebinned->SetBinContent(1,0.08118604);
    TauMTCut_MT2_ZX_Rebinned->SetBinContent(2,0.1725647);
@@ -233,16 +226,15 @@
    TauMTCut_MT2_ZX_Rebinned->GetZaxis()->SetTitleSize(0.035);
    TauMTCut_MT2_ZX_Rebinned->GetZaxis()->SetTitleFont(42);
    h_stack->Add(TauMTCut_MT2_ZX_Rebinned,"");
-   h__MC2->Add(TauMTCut_MT2_ZX_Rebinned);
-   Double_t xAxis5[5] = {40, 50, 70, 90, 120}; 
+   Double_t xAxis13[5] = {40, 50, 70, 90, 120}; 
    
-   TH1D *Total200_fromMuTau_MT2_data_Rebinned = new TH1D("Total200_fromMuTau_MT2_data_Rebinned","",4, xAxis5);
-   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(0,40.97312*1.21);
-   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(1,2.596472*1.21);
-   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(2,28.54152*1.21);
-   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(3,8.359853*1.21);
-   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(4,2.734164*1.21);
-   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(5,2.734164*1.21);
+   TH1D *Total200_fromMuTau_MT2_data_Rebinned = new TH1D("Total200_fromMuTau_MT2_data_Rebinned","",4, xAxis13);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(0,49.57748);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(1,3.141731);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(2,34.53524);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(3,10.11542);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(4,3.308338);
+   Total200_fromMuTau_MT2_data_Rebinned->SetBinContent(5,3.308338);
    Total200_fromMuTau_MT2_data_Rebinned->SetBinError(0,13.16947);
    Total200_fromMuTau_MT2_data_Rebinned->SetBinError(1,4.47);
    Total200_fromMuTau_MT2_data_Rebinned->SetBinError(2,10.27);
@@ -278,24 +270,23 @@
    Total200_fromMuTau_MT2_data_Rebinned->GetZaxis()->SetTitleSize(0.035);
    Total200_fromMuTau_MT2_data_Rebinned->GetZaxis()->SetTitleFont(42);
    h_stack->Add(Total200_fromMuTau_MT2_data_Rebinned,"");
-   h__MC2->Add(Total200_fromMuTau_MT2_data_Rebinned);
    h_stack->Draw("hist");
-   Double_t xAxis6[5] = {40, 50, 70, 90, 120}; 
+   Double_t xAxis14[5] = {40, 50, 70, 90, 120}; 
    
-   TH1D *h__MC = h__MC2 ; //new TH1D("h__MC","",4, xAxis6);
-   // h__MC->SetBinContent(0,40.42799);
-   // h__MC->SetBinContent(1,3.751973);
-   // h__MC->SetBinContent(2,31.48643);
-   // h__MC->SetBinContent(3,9.923709);
-   // h__MC->SetBinContent(4,2.959665);
-   // h__MC->SetBinContent(5,2.74758);
-   // h__MC->SetBinError(0,13.17393);
-   // h__MC->SetBinError(1,3.821297);
-   // h__MC->SetBinError(2,8.838217);
-   // h__MC->SetBinError(3,5.218686);
-   // h__MC->SetBinError(4,2.77737);
-   // h__MC->SetBinError(5,2.77642);
-   // h__MC->SetEntries(250.9034);
+   TH1D *h__MC = new TH1D("h__MC","",4, xAxis14);
+   h__MC->SetBinContent(0,49.03235);
+   h__MC->SetBinContent(1,4.297232);
+   h__MC->SetBinContent(2,37.48015);
+   h__MC->SetBinContent(3,11.67928);
+   h__MC->SetBinContent(4,3.533839);
+   h__MC->SetBinContent(5,3.321755);
+   h__MC->SetBinError(0,13.17393);
+   h__MC->SetBinError(1,4.567443);
+   h__MC->SetBinError(2,10.49289);
+   h__MC->SetBinError(3,6.25857);
+   h__MC->SetBinError(4,3.361926);
+   h__MC->SetBinError(5,2.77642);
+   h__MC->SetEntries(250.9034);
    h__MC->SetFillColor(1);
    h__MC->SetFillStyle(3004);
    h__MC->SetLineColor(0);
@@ -317,9 +308,9 @@
    h__MC->GetZaxis()->SetTitleSize(0.035);
    h__MC->GetZaxis()->SetTitleFont(42);
    h__MC->Draw("E2 SAME");
-   Double_t xAxis7[5] = {40, 50, 70, 90, 120}; 
+   Double_t xAxis15[5] = {40, 50, 70, 90, 120}; 
    
-   TH1D *TauMTCut_MT2_data_Rebinned = new TH1D("TauMTCut_MT2_data_Rebinned","",4, xAxis7);
+   TH1D *TauMTCut_MT2_data_Rebinned = new TH1D("TauMTCut_MT2_data_Rebinned","",4, xAxis15);
    TauMTCut_MT2_data_Rebinned->SetBinContent(1,11);
    TauMTCut_MT2_data_Rebinned->SetBinContent(2,34);
    TauMTCut_MT2_data_Rebinned->SetBinContent(3,15);
@@ -332,6 +323,9 @@
    TauMTCut_MT2_data_Rebinned->SetBinError(5,2);
    TauMTCut_MT2_data_Rebinned->SetEntries(68);
    TauMTCut_MT2_data_Rebinned->SetStats(0);
+
+   ci = TColor::GetColor("#000099");
+   TauMTCut_MT2_data_Rebinned->SetLineColor(ci);
    TauMTCut_MT2_data_Rebinned->SetLineWidth(2);
    TauMTCut_MT2_data_Rebinned->SetMarkerStyle(20);
    TauMTCut_MT2_data_Rebinned->GetXaxis()->SetNdivisions(505);
@@ -351,9 +345,9 @@
    TauMTCut_MT2_data_Rebinned->GetZaxis()->SetTitleSize(0.035);
    TauMTCut_MT2_data_Rebinned->GetZaxis()->SetTitleFont(42);
    TauMTCut_MT2_data_Rebinned->Draw("sameE");
-   Double_t xAxis8[5] = {40, 50, 70, 90, 120}; 
+   Double_t xAxis16[5] = {40, 50, 70, 90, 120}; 
    
-   TH1D *TauMTCut_MT2_SUSY_380_0_Rebinned = new TH1D("TauMTCut_MT2_SUSY_380_0_Rebinned","",4, xAxis8);
+   TH1D *TauMTCut_MT2_SUSY_380_0_Rebinned = new TH1D("TauMTCut_MT2_SUSY_380_0_Rebinned","",4, xAxis16);
    TauMTCut_MT2_SUSY_380_0_Rebinned->SetBinContent(1,0.11693);
    TauMTCut_MT2_SUSY_380_0_Rebinned->SetBinContent(2,0.3424747);
    TauMTCut_MT2_SUSY_380_0_Rebinned->SetBinContent(3,0.3601004);
@@ -366,7 +360,8 @@
    TauMTCut_MT2_SUSY_380_0_Rebinned->SetBinError(5,0.09111579);
    TauMTCut_MT2_SUSY_380_0_Rebinned->SetEntries(969);
    TauMTCut_MT2_SUSY_380_0_Rebinned->SetStats(0);
-   TauMTCut_MT2_SUSY_380_0_Rebinned->SetLineStyle(3);
+   TauMTCut_MT2_SUSY_380_0_Rebinned->SetLineColor(7);
+   TauMTCut_MT2_SUSY_380_0_Rebinned->SetLineStyle(7);
    TauMTCut_MT2_SUSY_380_0_Rebinned->SetLineWidth(4);
    TauMTCut_MT2_SUSY_380_0_Rebinned->SetMarkerStyle(20);
    TauMTCut_MT2_SUSY_380_0_Rebinned->GetXaxis()->SetNdivisions(505);
@@ -386,21 +381,21 @@
    TauMTCut_MT2_SUSY_380_0_Rebinned->GetZaxis()->SetTitleSize(0.035);
    TauMTCut_MT2_SUSY_380_0_Rebinned->GetZaxis()->SetTitleFont(42);
    TauMTCut_MT2_SUSY_380_0_Rebinned->Draw("samehist");
-   TLatex *   tex = new TLatex(0.1,0.943,"Preselection, m_{T}^{#tau} > 200 GeV");
+   TLatex *   tex = new TLatex(0.1275168,0.9440559,"Preselection, m_{T}^{#tau} > 200 GeV");
 tex->SetNDC();
    tex->SetTextSize(0.03);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.68,0.943,"19.6 fb^{-1} (8 TeV)");
+      tex = new TLatex(0.6694631,0.9440559,"19.6 fb^{-1} (8 TeV)");
 tex->SetNDC();
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.24,0.85,"CMS Preliminary");
+      tex = new TLatex(0.3338926,0.8583916,"CMS");
 tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.26,0.8,"e#tau_{h}");
+      tex = new TLatex(0.3607383,0.8129371,"e#tau_{h}");
 tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
@@ -413,7 +408,7 @@ tex->SetNDC();
    leg->SetLineWidth(2);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("TauMTCut_MT2_data_Rebinned","data","lp");
+   TLegendEntry *entry=leg->AddEntry("TauMTCut_MT2_data_Rebinned","data","p");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
@@ -491,8 +486,8 @@ tex->SetNDC();
    entry->SetMarkerSize(1);
    entry=leg->AddEntry("TauMTCut_MT2_SUSY_380_0_Rebinned","SUSY(380,1)","f");
    entry->SetFillStyle(1001);
-   entry->SetLineColor(1);
-   entry->SetLineStyle(3);
+   entry->SetLineColor(7);
+   entry->SetLineStyle(7);
    entry->SetLineWidth(4);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
