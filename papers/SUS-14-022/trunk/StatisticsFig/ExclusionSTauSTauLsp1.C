@@ -147,10 +147,11 @@ void ExclusionSTauSTauLsp1()
    2.475243,
    2.958817,
    3.51449};
-
-   for(auto i : points_to_smooth){
+   
+   
+   for(auto i : points_to_smooth)
      TwoSigmaBand_fy3001[i] = smooth( TwoSigmaBand_fy3001 , i );
-   }
+     
 
    TwoSigmaBand_fely3001[2] = smooth( TwoSigmaBand_fely3001 , 2 );
    TwoSigmaBand_fehy3001[7] = smooth( TwoSigmaBand_fehy3001 , 7 );
@@ -177,7 +178,7 @@ void ExclusionSTauSTauLsp1()
    Graph_TwoSigmaBand3001->SetStats(0);
 
    ci = TColor::GetColor("#000099");
-   Graph_TwoSigmaBand3001->GetXaxis()->SetTitle("m_{#tilde{#tau}} [GeV]");
+   Graph_TwoSigmaBand3001->GetXaxis()->SetTitle("m_{#tilde{#tau}} (GeV)");
    Graph_TwoSigmaBand3001->GetXaxis()->SetLabelFont(42);
    Graph_TwoSigmaBand3001->GetXaxis()->SetLabelSize(0.05);
    Graph_TwoSigmaBand3001->GetXaxis()->SetTitleSize(0.05);
@@ -389,7 +390,7 @@ void ExclusionSTauSTauLsp1()
    TLatex *   tex = new TLatex(91.56716,22.34501,"");
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(91.56716,21.92252,"CMS Preliminary");
+      tex = new TLatex(91.56716,21.92252,"CMS");
    tex->SetTextSize(0.04026846);
    tex->SetLineWidth(2);
    tex->Draw();
