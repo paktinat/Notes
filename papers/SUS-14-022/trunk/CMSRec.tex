@@ -1,18 +1,18 @@
 \section{The CMS detector and event reconstruction}
 \label{sect:CMSRec}
-The central feature of the CMS apparatus is a superconducting solenoid of 6\unit{m} internal diameter, providing a magnetic field of 3.8\unit{T}. Within the superconducting solenoid volume are a silicon pixel and strip tracker, a lead tungstate crystal electromagnetic calorimeter (ECAL), and a brass and scintillator hadron calorimeter (HCAL), each composed of a barrel and two endcap sections. Muons are measured in gas-ionization detectors embedded in the steel flux-return yoke outside the solenoid. Extensive forward calorimetry complements the coverage provided by the barrel and endcap detectors. 
+The central feature of the CMS apparatus is a superconducting solenoid of 6\unit{m} internal diameter, providing a magnetic field of 3.8\unit{T}. Within the solenoid volume are a silicon pixel and strip tracker, a lead tungstate crystal electromagnetic calorimeter, and a brass and scintillator hadron calorimeter, each composed of a barrel and two endcap sections. Muons are measured in gas-ionization detectors embedded in the steel flux-return yoke outside the solenoid. Extensive forward calorimetry complements the coverage provided by the barrel and endcap detectors. 
 A more detailed description of the CMS detector, together with a definition of the coordinate system used and the relevant kinematic variables, can be found in Ref. \cite{Chatrchyan:2008zzk}.
 %For completeness, a short review is given here. 
 
 
 Events from pp interactions must satisfy the requirements of a two-level trigger system.
-The first level (L1) of the CMS trigger system, composed of custom hardware processors, uses information from the calorimeters and muon detectors to select the most interesting events in a fixed time interval of less than 4\mus. The high-level trigger (HLT) processor farm further decreases the event rate from around 100\unit{kHz} to less than 1\unit{kHz}, before data storage. 
+The first level of the CMS trigger system, composed of custom hardware processors, uses information from the calorimeters and muon detectors to select the most interesting events in a fixed time interval of less than 4\mus. The high-level trigger processor farm further decreases the event rate from around 100\unit{kHz} to less than 1\unit{kHz}, before data storage. 
 
 The particle-flow (PF) algorithm~\cite{CMS-PAS-PFT-09-001,CMS-PAS-PFT-10-001} reconstructs and identifies each individual particle with an optimized combination of information from the various elements of the CMS detector. 
 %The energy of photons is directly obtained from the ECAL measurement, corrected for zero-suppression effects. The energy of electrons is determined from a combination of the electron momentum at the primary interaction vertex as determined by the tracker, the energy of the corresponding ECAL cluster, and the energy sum of all bremsstrahlung photons spatially compatible with originating from the electron track. The energy of muons is obtained from the curvature of the corresponding track. The energy of charged hadrons is determined from a combination of their momentum measured in the tracker and the matching ECAL and HCAL energy deposits, corrected for zero-suppression effects and for the response function of the calorimeters to hadronic showers. Finally, the energy of neutral hadrons is obtained from the corresponding corrected ECAL and HCAL energy. 
 Jets are reconstructed from the PF candidates with the anti-$k_t$ clustering
 algorithm~\cite{Cacciari:2008gp} with a distance parameter of 0.5. We apply
-\pt- and $\eta$-dependent corrections to account for residual
+ (transverse momentum) \pt- and (pseudorapidity) $\eta$-dependent corrections to account for residual
 effects of nonuniform detector response~\cite{Chatrchyan:2011ds}.
 A correction to account for multiple pp collisions within the same or nearby
 bunch crossings (pileup interactions) is estimated on an event-by-event basis using the
@@ -40,8 +40,8 @@ The constituents of the reconstructed jets are used to identify individual $\tau
 hadron and up to two neutral pions, or three charged hadrons. 
 Additional discriminators are used to separate \Tau from electrons and muons.
 Prompt $\tau$ leptons are expected to be isolated in the detector.
-To discriminate them from QCD jets, we use a measure of isolation 
-based on the charged hadrons and photons falling within 
+To discriminate them from Quantum ChromoDynamics (QCD) jets, we use a measure of isolation 
+based on the transverse momentum of charged hadrons and photons falling within 
 a cone around the $\tau$ lepton momentum direction after correcting for the effect of
 pileup \cite{Khachatryan:2014wca}. The ``loose'', ``medium'', and ``tight'' working points are defined
 by requiring the measure of isolation not to exceed thresholds of 2.0, 1.0,
