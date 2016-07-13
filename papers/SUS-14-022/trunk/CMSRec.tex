@@ -40,13 +40,13 @@ The constituents of the reconstructed jets are used to identify individual $\tau
 hadron and up to two neutral pions, or three charged hadrons. 
 Additional discriminators are used to separate \Tau from electrons and muons.
 Prompt $\tau$ leptons are expected to be isolated in the detector.
-To discriminate them from Quantum ChromoDynamics (QCD) jets, we use a measure of isolation 
+To discriminate them from Quantum ChromoDynamics (QCD) jets, a measure of isolation is used 
 based on the transverse momentum of charged hadrons and photons falling within 
 a cone around the $\tau$ lepton momentum direction after correcting for the effect of
 pileup \cite{Khachatryan:2014wca}. The ``loose'', ``medium'', and ``tight'' working points are defined
 by requiring the measure of isolation not to exceed thresholds of 2.0, 1.0,
 and 0.8 GeV, respectively.
- A similar isolation algorithm is 
+ A similar measure of isolation divided by the transverse momentum of the charged lepton is 
 used in this analysis to separate leptons (e or $\mu$) from $\tau$ lepton decays from 
 those arising from hadron decays within jets.
 
@@ -77,7 +77,7 @@ Additional interactions are generated with \PYTHIA and superimposed on simulated
 The detector response in the  Monte Carlo (MC) background event samples is modeled by a
 detailed simulation
 of the CMS detector based on {\GEANTfour}~\cite{Agostinelli:2002hh}.  
-To reduce  computational requirements, signal events 
+As for the signal a grid of parameters is scanned and different signal points are generated. To reduce  computational requirements, signal events 
 are processed by the CMS fast simulation \cite{Abdullin:2011zz} instead of {\GEANTfour}. 
 It is verified that the CMS fast simulation gives a reasonable agreement with the detailed simulation for our favorite signal which has hadronic decays of 
 tau leptons in the final state.
