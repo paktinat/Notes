@@ -52,16 +52,14 @@ those arising from hadron decays within jets.
 
 \section{The Monte Carlo samples}
 \label{sect:MCSamples}
-Events from SM processes that may represent significant sources of backgrounds, $\cPZ$+jets, \wjets, $\cPqt\cPaqt$ and diboson, 
-are generated using the \MADGRAPH 5.1~\cite{Alwall:2011uj} generator. 
+The SUSY signal processes and SM samples, which are used to evaluate potential background contributions, are simulated using CTEQ6L1~\cite{Nadolsky:2008zw} parton distribution functions. The SM processes of $\cPZ$+jets, \wjets, $\cPqt\cPaqt$ and diboson, are generated using the \MADGRAPH 5.1~\cite{Alwall:2011uj} generator. 
 Single top quark and Higgs boson events are generated with {\POWHEG} 1.0~\cite{Nason:2004rx,Frixione:2007vw,Alioli:2009je,Alioli:2010xd}.
 In the following, the events containing at least one top quark or one $\cPZ$ boson are referred to as ``Top'' and ``ZX'', respectively. 
-Events from Higgs boson production via gluon fusion, vector-boson fusion, or in association with a $\cPZ$ or $\PW$ boson, or a \ttbar pair are referred to as ``Higgs''. The masses of the top quark and Higgs boson are set to be 172.5\GeV and 125\GeV, respectively.
+Events from Higgs boson production via gluon fusion, vector-boson fusion, or in association with a $\cPZ$ or $\PW$ boson, or a \ttbar pair are referred to as ``Higgs''. The masses of the top quark and Higgs boson are set to be 172.5\GeV~\cite{Khachatryan:2015hba} and 125\GeV~\cite{Aad:2015zhl}, respectively. 
 
 %The simplified model which is used to describe the signal events is shown in Fig.~\ref{fig:Productions} (left). 
-In signal samples, pairs of charginos (\chione) 
-are produced and decay exclusively to the final states that contain two $\tau$ leptons, two $\tau$ neutrinos, and %$\tau$, two $\nu_{\tau}$ and 
-two neutralinos, (\PSGczDo) as shown in Fig.~\ref{fig:Productions} (left). 
+In signal samples, pairs of charginos are produced and decay exclusively to the final states that contain 
+two $\tau$ leptons, two $\tau$ neutrinos, and two neutralinos, as shown in Fig.~\ref{fig:Productions} (left). 
 The mediator in the decay of the \chione can be either a \sTau or $\sNu_{\tau}$. 
 The masses of the \sTau and $\sNu_{\tau}$ are set to be equal to the mean value of the \chione and \PSGczDo masses; thus they are produced on-shell.
 The two distinct decay chains in the left diagram of Fig.~\ref{fig:Productions} 
@@ -69,7 +67,7 @@ are assumed to have equal branching fractions of 50\%.
 For description of the parton shower and fragmentation, all generators are interfaced with \PYTHIA 6.426~\cite{Sjostrand:2006za}, 
 %\PYTHIA
 which is also used to generate signal events (chargino pair production). To improve the modeling of the $\tau$ lepton decays, 
- the \TAUOLA 1.1.1a~\cite{Davidson:2010rw} package is used either for signal or background events. 
+ the \TAUOLA 1.1.1a~\cite{Davidson:2010rw} package is used for both signal and background events. 
 
 
 In the data set considered in this paper,
