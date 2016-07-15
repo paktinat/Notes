@@ -3,6 +3,7 @@
 //=========  (Mon Jul  4 12:31:30 2016) by ROOT version5.34/03
    TCanvas *MT2_Ratio_Preselection_unBlinded = new TCanvas("MT2_Ratio_Preselection_unBlinded", "",294,70,600,630);
    gStyle->SetOptFit(1);
+   gStyle->SetTextFont(42);
    MT2_Ratio_Preselection_unBlinded->Range(13.31066,-3.83404,161.9728,5.159975);
    MT2_Ratio_Preselection_unBlinded->SetFillColor(0);
    MT2_Ratio_Preselection_unBlinded->SetBorderMode(0);
@@ -42,7 +43,7 @@
    h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
    h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
    h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events");
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events / 10 GeV");
    h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
    h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
    h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
@@ -507,13 +508,13 @@ tex->SetNDC();
    
    TLegend *leg = new TLegend(0.64,0.65,0.91,0.92,NULL,"brNDC");
    leg->SetBorderSize(0);
-   leg->SetTextFont(62);
+   leg->SetTextFont(42);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
    leg->SetLineWidth(2);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("h2_copy","data","p");
+   TLegendEntry *entry=leg->AddEntry("h2_copy","Data","p");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
@@ -533,7 +534,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__Wjets","W","f");
+   entry=leg->AddEntry("h__Wjets","W+jets","f");
 
    ci = TColor::GetColor("#00cc00");
    entry->SetFillColor(ci);
@@ -559,7 +560,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__Top","Top","f");
+   entry=leg->AddEntry("h__Top","tX","f");
 
    ci = TColor::GetColor("#3366cc");
    entry->SetFillColor(ci);
@@ -585,7 +586,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__Higgs","Higgs","f");
+   entry=leg->AddEntry("h__Higgs","hX","f");
    entry->SetFillColor(2);
    entry->SetFillStyle(1001);
    entry->SetLineColor(2);
@@ -594,7 +595,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__MC","Uncertainties","f");
+   entry=leg->AddEntry("h__MC","Uncertainty","f");
    entry->SetFillColor(1);
    entry->SetFillStyle(3004);
    entry->SetLineStyle(1);

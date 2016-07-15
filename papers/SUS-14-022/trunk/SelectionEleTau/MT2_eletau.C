@@ -3,6 +3,7 @@
 //=========  (Mon Jul  4 12:27:27 2016) by ROOT version5.34/03
    TCanvas *MT2 = new TCanvas("MT2", "",295,60,600,630);
    gStyle->SetOptFit(1);
+   gStyle->SetTextFont(42);
    gROOT->SetEditHistograms();
    MT2->SetHighLightColor(2);
    MT2->Range(13.31066,-3.763505,161.9728,4.894268);
@@ -45,7 +46,7 @@
    MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
    MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
    MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events");
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events / 10 GeV");
    MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
    MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
    MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
@@ -524,13 +525,13 @@ tex->SetNDC();
    
    TLegend *leg = new TLegend(0.64,0.65,0.91,0.92,NULL,"brNDC");
    leg->SetBorderSize(0);
-   leg->SetTextFont(62);
+   leg->SetTextFont(42);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
    leg->SetLineWidth(1);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("h2_copy19__7","data","p");
+   TLegendEntry *entry=leg->AddEntry("h2_copy19__7","Data","p");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
@@ -550,7 +551,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2PreCut_MT2_W14__2","W","f");
+   entry=leg->AddEntry("MT2PreCut_MT2_W14__2","W+jets","f");
 
    ci = TColor::GetColor("#00cc00");
    entry->SetFillColor(ci);
@@ -576,7 +577,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2PreCut_MT2_Top16__4","Top","f");
+   entry=leg->AddEntry("MT2PreCut_MT2_Top16__4","tX","f");
 
    ci = TColor::GetColor("#3366cc");
    entry->SetFillColor(ci);
@@ -602,7 +603,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2PreCut_MT2_Higgs18__6","Higgs","f");
+   entry=leg->AddEntry("MT2PreCut_MT2_Higgs18__6","hX","f");
    entry->SetFillColor(2);
    entry->SetFillStyle(1001);
    entry->SetLineColor(2);
@@ -611,7 +612,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__MC","Uncertainties","f");
+   entry=leg->AddEntry("h__MC","Uncertainty","f");
    entry->SetFillColor(1);
    entry->SetFillStyle(3004);
    entry->SetLineStyle(1);

@@ -3,6 +3,7 @@
 //=========  (Mon Jul  4 12:50:07 2016) by ROOT version5.34/03
    TCanvas *MT2_tauMTgt200_DDFakeEleTau = new TCanvas("MT2_tauMTgt200_DDFakeEleTau", "",257,98,600,602);
    gStyle->SetOptFit(1);
+   gStyle->SetTextFont(42);
    MT2_tauMTgt200_DDFakeEleTau->Range(26.83544,-1.457869,128.1013,2.793058);
    MT2_tauMTgt200_DDFakeEleTau->SetFillColor(0);
    MT2_tauMTgt200_DDFakeEleTau->SetBorderMode(0);
@@ -271,6 +272,10 @@
    Total200_fromMuTau_MT2_data_Rebinned->GetZaxis()->SetTitleFont(42);
    h_stack->Add(Total200_fromMuTau_MT2_data_Rebinned,"");
    h_stack->Draw("hist");
+
+   TExec *exec = new TExec("setex1","gStyle->SetErrorX(0.5)");
+   exec->Draw();
+
    Double_t xAxis14[5] = {40, 50, 70, 90, 120}; 
    
    TH1D *h__MC = new TH1D("h__MC","",4, xAxis14);
@@ -308,6 +313,10 @@
    h__MC->GetZaxis()->SetTitleSize(0.035);
    h__MC->GetZaxis()->SetTitleFont(42);
    h__MC->Draw("E2 SAME");
+
+   exec = new TExec("setex2","gStyle->SetErrorX(0.0)");
+   exec->Draw();
+
    Double_t xAxis15[5] = {40, 50, 70, 90, 120}; 
    
    TH1D *TauMTCut_MT2_data_Rebinned = new TH1D("TauMTCut_MT2_data_Rebinned","",4, xAxis15);
@@ -381,7 +390,7 @@
    TauMTCut_MT2_SUSY_380_0_Rebinned->GetZaxis()->SetTitleSize(0.035);
    TauMTCut_MT2_SUSY_380_0_Rebinned->GetZaxis()->SetTitleFont(42);
    TauMTCut_MT2_SUSY_380_0_Rebinned->Draw("samehist");
-   TLatex *   tex = new TLatex(0.1275168,0.9440559,"Preselection, m_{T}^{#tau} > 200 GeV");
+   TLatex *   tex = new TLatex(0.1275168,0.9440559,"Preselection, M_{T}^{#tau} > 200 GeV");
 tex->SetNDC();
    tex->SetTextSize(0.03);
    tex->SetLineWidth(2);
@@ -402,20 +411,20 @@ tex->SetNDC();
    
    TLegend *leg = new TLegend(0.66,0.6,0.91,0.92,NULL,"brNDC");
    leg->SetBorderSize(0);
-   leg->SetTextFont(62);
+   leg->SetTextFont(42);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
    leg->SetLineWidth(2);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("TauMTCut_MT2_data_Rebinned","data","p");
+   TLegendEntry *entry=leg->AddEntry("TauMTCut_MT2_data_Rebinned","Data","p");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(20);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("Total200_fromMuTau_MT2_data_Rebinned","W","f");
+   entry=leg->AddEntry("Total200_fromMuTau_MT2_data_Rebinned","W+jets","f");
 
    ci = TColor::GetColor("#00cc00");
    entry->SetFillColor(ci);
@@ -441,7 +450,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("TauMTCut_MT2_Top_Rebinned","Top","f");
+   entry=leg->AddEntry("TauMTCut_MT2_Top_Rebinned","tX","f");
 
    ci = TColor::GetColor("#3366cc");
    entry->SetFillColor(ci);
@@ -467,7 +476,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("TauMTCut_MT2_Higgs_Rebinned","Higgs","f");
+   entry=leg->AddEntry("TauMTCut_MT2_Higgs_Rebinned","hX","f");
    entry->SetFillColor(2);
    entry->SetFillStyle(1001);
    entry->SetLineColor(2);
@@ -476,7 +485,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__MC","Uncertainties","f");
+   entry=leg->AddEntry("h__MC","Uncertainty","f");
    entry->SetFillColor(1);
    entry->SetFillStyle(3004);
    entry->SetLineStyle(1);

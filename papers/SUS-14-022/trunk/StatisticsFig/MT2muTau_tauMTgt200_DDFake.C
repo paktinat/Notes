@@ -3,6 +3,7 @@
 //=========  (Mon Jul  4 12:54:22 2016) by ROOT version5.34/03
    TCanvas *MT2muTau_tauMTgt200_DDFake = new TCanvas("MT2muTau_tauMTgt200_DDFake", "",211,42,600,602);
    gStyle->SetOptFit(1);
+   gStyle->SetTextFont(42);
    MT2muTau_tauMTgt200_DDFake->Range(26.83544,-1.457869,128.1013,2.793058);
    MT2muTau_tauMTgt200_DDFake->SetFillColor(0);
    MT2muTau_tauMTgt200_DDFake->SetBorderMode(0);
@@ -55,7 +56,7 @@
    h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
    h_stack_stack_1_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
    h_stack->SetHistogram(h_stack_stack_1_stack_1_stack_1);
-   
+
    Double_t xAxis1[7] = {0, 20, 40, 50, 70, 90, 120}; 
    
    TH1D *hAllMC__Higgs = new TH1D("hAllMC__Higgs","",6, xAxis1);
@@ -276,6 +277,10 @@
    h2_DDFake->GetZaxis()->SetTitleFont(42);
    h_stack->Add(h2_DDFake,"");
    h_stack->Draw("hist");
+
+   TExec *exec = new TExec("setex1","gStyle->SetErrorX(0.5)");
+   exec->Draw();
+
    Double_t xAxis6[7] = {0, 20, 40, 50, 70, 90, 120}; 
    
    TH1D *h__MC = new TH1D("h__MC","",6, xAxis6);
@@ -314,6 +319,10 @@
    h__MC->GetZaxis()->SetTitleSize(0.035);
    h__MC->GetZaxis()->SetTitleFont(42);
    h__MC->Draw("E2 SAME");
+
+   exec = new TExec("setex1","gStyle->SetErrorX(0.0)");
+   exec->Draw();
+   
    Double_t xAxis7[7] = {0, 20, 40, 50, 70, 90, 120}; 
    
    TH1D *h2_copyAll = new TH1D("h2_copyAll","",6, xAxis7);
@@ -382,7 +391,7 @@
    h1_susy->GetZaxis()->SetTitleSize(0.035);
    h1_susy->GetZaxis()->SetTitleFont(42);
    h1_susy->Draw("samehist");
-   TLatex *   tex = new TLatex(0.1258389,0.9440559,"Preselection, m_{T}^{#tau} > 200 GeV");
+   TLatex *   tex = new TLatex(0.1258389,0.9440559,"Preselection, M_{T}^{#tau} > 200 GeV");
 tex->SetNDC();
    tex->SetTextSize(0.03);
    tex->SetLineWidth(2);
@@ -403,20 +412,20 @@ tex->SetNDC();
    
    TLegend *leg = new TLegend(0.66,0.6,0.91,0.92,NULL,"brNDC");
    leg->SetBorderSize(0);
-   leg->SetTextFont(62);
+   leg->SetTextFont(42);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
    leg->SetLineWidth(2);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("h2_copyAll","data","p");
+   TLegendEntry *entry=leg->AddEntry("h2_copyAll","Data","p");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(20);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h2_DDFake","W","f");
+   entry=leg->AddEntry("h2_DDFake","W+jets","f");
 
    ci = TColor::GetColor("#00cc00");
    entry->SetFillColor(ci);
@@ -442,7 +451,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("hAllMC__Top","Top","f");
+   entry=leg->AddEntry("hAllMC__Top","tX","f");
 
    ci = TColor::GetColor("#3366cc");
    entry->SetFillColor(ci);
@@ -468,7 +477,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("hAllMC__Higgs","Higgs","f");
+   entry=leg->AddEntry("hAllMC__Higgs","hX","f");
    entry->SetFillColor(2);
    entry->SetFillStyle(1001);
    entry->SetLineColor(2);
@@ -477,7 +486,7 @@ tex->SetNDC();
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__MC","Uncertainties","f");
+   entry=leg->AddEntry("h__MC","Uncertainty","f");
    entry->SetFillColor(1);
    entry->SetFillStyle(3004);
    entry->SetLineStyle(1);
