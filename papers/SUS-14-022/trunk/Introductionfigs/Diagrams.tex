@@ -21,14 +21,14 @@
     \fmflabel{${\tau}^{\pm}$}{o5}
     \fmflabel{$\nu_{\tau}$}{o6}    
 
-    \fmf{plain,tension=3.0}{i1,b}
-    \fmf{plain,tension=3.0}{b,i2}
+    \fmf{plain}{i1,b}
+    \fmf{plain}{b,i2}
     \fmfblob{.1w}{b}
 
     \fmf{plain}{o1,v1}
     \fmf{plain}{o2,v2}
     \fmf{dots,label=$\tilde{\nu}_{\tau}$}{v2,v1}
-    \fmf{dots,tension=1.8,label=$\tilde{\chi}^{\mp}_{1}$}{v1,b}
+    \fmf{dots,label=$\tilde{\chi}^{\mp}_{1}$}{v1,b}
 
     \fmf{dashes}{o3,v2}
 
@@ -36,7 +36,7 @@
     \fmf{plain}{o5,v3}
     \fmf{plain}{o6,v4}
     \fmf{dots,label=$\tilde{\tau}^{\pm}$}{v3,v4}
-    \fmf{dots,tension=1.8,label=$\tilde{\chi}^{\pm}_{1}$}{v4,b}
+    \fmf{dots,label=$\tilde{\chi}^{\pm}_{1}$}{v4,b}
 
     \fmfdot{v1,v2,v3,v4}
 
@@ -58,7 +58,7 @@
 \begin{fmffile}{TSlepSlep}
 
   \begin{fmfgraph*}(100,40)
-    \fmfpen{thick}
+%    \fmfpen{thick}
     \fmfleft{i1,i2}
     \fmfright{o2,o3,o4,o5}
 
@@ -69,24 +69,24 @@
     \fmflabel{$\tilde{\chi}_{1}^{0}$}{o4}    
     \fmflabel{${\tau}^{\pm}$}{o5}
 
-    \fmf{plain,tension=2.0}{i1,b}
-    \fmf{plain,tension=2.0}{b,i2}
+    \fmf{plain}{i1,b}
+    \fmf{plain}{b,i2}
     \fmfblob{.1w}{b}
 
     \fmf{plain}{o2,v2}
-    \fmf{dots,tension=1.8,label=$\tilde{\tau}^{\mp}$}{b,v2}
+    \fmf{dots,tension = 1.8, label=$\tilde{\tau}^{\mp}$}{b,v2}
 
     \fmf{dashes}{o3,v2}
 
     \fmf{dashes}{o4,v3}
     \fmf{plain}{o5,v3}
-    \fmf{dots,tension=1.8,label=$\tilde{\tau}^{\pm}$}{v3,b}
+    \fmf{dots,tension = 1.8, label=$\tilde{\tau}^{\pm}$}{v3,b}
 
     \fmfdot{v2,v3}
 
     \fmffreeze
-    \fmfi{plain}{vpath (__i1,__b) shifted (thick*(-0.5,2))}
-    \fmfi{plain}{vpath (__i1,__b) shifted (thick*(0.5,-2))}
+    \fmfi{plain}{vpath (__i1,__b) shifted ((-0.5,2))}
+    \fmfi{plain}{vpath (__i1,__b) shifted ((0.5,-2))}
 
     \fmfi{plain}{vpath (__b,__i2) shifted (thick*(0.5,2))}
     \fmfi{plain}{vpath (__b,__i2) shifted (thick*(-0.5,-2))}
