@@ -10,7 +10,7 @@ Those backgrounds that are taken from simulation are either validated in dedicat
 \subsection{\texorpdfstring{The QCD multijet background estimation in the \tauTau channel}{The QCD multijet background estimation in the tau-tau channel}}
 \label{sect:bkgQCD}
 Events from QCD multijet production can appear in the signal regions if two hadronic jets are misidentified as a \tauTau pair.
-The isolation variable is a powerful discriminant between misidentified and genuine \Tau candidates. To estimate the QCD multijet contribution, three \tauTau control regions (CRs) are defined using the loose \Tau isolation requirement, together with lower thresholds on \mttwo or \SumMT variables. The former is changed from \mttwo $>$ 90\GeV to \mttwo $>$ 40\GeV, whereas the latter is reduced from \SumMT $>$ 250\GeV to \SumMT $>$ 100\GeV. In addition, the requirement on \deltaphi is removed to increase the number of events in the CRs. 
+The isolation variable is a powerful discriminant between misidentified and genuine \Tau candidates. To estimate the QCD multijet contribution, three \tauTau control regions (CRs) are defined using the loose \Tau isolation requirement, together with lower thresholds on \mttwo or \SumMT variables for the corresponding signal region. The former is changed from \mttwo $>$ 90\GeV to \mttwo $>$ 40\GeV, whereas the latter is reduced from \SumMT $>$ 250\GeV to \SumMT $>$ 100\GeV. In addition, the requirement on \deltaphi is removed to increase the number of events in the CRs. 
 %by relaxing the \Tau isolation requirement %(from ``medium'' to ``loose'') 
 %and relaxing the \mttwo or \SumMT requirements (from \mttwo $>$ 90\GeV to \mttwo $>$ 40\GeV and from \SumMT $>$ 250\GeV to \SumMT $>$ 100\GeV). 
 To reduce contamination from genuine \tauTau events 
@@ -36,21 +36,22 @@ which is the $y$-intercept of a horizontal line fitted to the ratio of the numbe
 The final estimate of the background 
 is corrected for the efficiency of 
 the \deltaphi requirement for QCD multijet events. This efficiency is measured in CR1 and CR2, 
-which are dominated by QCD multijet events. The efficiency is a falling distribution as a function of 
+in which the contribution of QCD multijet events is more than $80\%$. The efficiency is a falling distribution as a function of 
 the search variable (\mttwo or \SumMT)
-and the value of the closest bin to CR3 ($65<\mttwo<90\GeV$ or $200<\SumMT<250\GeV$) is used conservatively as the 
-value of the efficiency in CR3.
+and the value of the last bin ($65<\mttwo<90\GeV$ or $200<\SumMT<250\GeV$) is used conservatively as the 
+value of the efficiency in SR.
+
+The number of data events in CR3 after subtracting the non-QCD events is 4.81 $\pm$ 2.57 (8.62 $\pm$ 3.55) for the \binone (\bintwo) selection.
+The transfer factors are measured to be 0.91 $\pm$ 0.12 and 0.89 $\pm$ 0.11 in the low \mttwo and \SumMT, respectively, and 
+the \deltaphi efficiencies are found to be 0.03 $\pm$ 0.04 in \binone and 0.15 $\pm$ 0.08 in \bintwo. 
+The reported uncertainties are the quadratic sum of the statistical and systematic uncertainties.
+
 
 The systematic uncertainties in the background estimates include the uncertainty in the validity of the assumption that isolation and \mttwo or \SumMT are not correlated and the uncertainties in the residual 
 SM backgrounds which  are subtracted based on MC expectations. 
 The latter includes both the statistical uncertainty of the simulated 
 events and also a 22\% systematic uncertainty that will be discussed in Section~\ref{sect:sys}, 
 assigned uniformly to all simulated events.
-
-The number of data events in CR3 after subtracting the non-QCD events is 4.81 $\pm$ 2.57 (8.62 $\pm$ 3.55) for the \binone (\bintwo) selection.
-The transfer factors are measured to be 0.91 $\pm$ 0.12 and 0.89 $\pm$ 0.11 in the low \mttwo and \SumMT, respectively, and 
-the correction for the \deltaphi efficiency is 0.03 $\pm$ 0.04 in \binone and 0.15 $\pm$ 0.08 in \bintwo. 
-The reported uncertainties are the quadratic sum of the statistical and systematic uncertainties.
 
  
 Table \ref{4QCDbg} 
@@ -83,7 +84,7 @@ in Table \ref{4QCDbg} to extract the ``fit'' uncertainty.
 
 \subsection{\texorpdfstring{\wjets background estimation in the \tauTau channel}{W+jets background estimation in the tau-tau channel}}
 \label{sect:bkgW}
-The contribution of the \wjets background in the \tauTau channel is taken from simulated events. The simulation is validated using a data control sample: 
+The contribution of the \wjets background in the \tauTau channel is taken from simulated events.
 %In different signal regions after the final requirement of \mttwo $>$ 90\GeV or \SumMT $>$ 250\GeV, 
 %the \wjets Monte Carlo has large statistical uncertainties and the predicted value is not reliable. 
 %The efficiencies of the final selection requirements, $\epsilon_{\rm M_{T2}}=\frac{N_{\rm M_{T2}>90}}{N_{\rm M_{T2}>40}}$ for  \binone and $\epsilon_{\SumMT}=\frac{N_{\SumMT>250}}{N_{40<\rm M_{T2}<90}}$ for \bintwo, generally referred to as $\epsilon_{\rm{FS}}$, are evaluated in MC after relaxing some kinematic selections. 
@@ -118,7 +119,7 @@ The ratio of data to MC expectation is found to be 1.05 $\pm$ 0.13 (1.02 $\pm$ 0
 which is compatible with unity within the uncertainties. 
 For $\epsilon_{\rm{FS}}$, 
 to take into account the difference between the data and MC values, the MC prediction in each
-of the two signal regions is corrected by the ratio of the two values, which is 0.73 $\pm$ 0.57 (1.49 $\pm$ 0.38)
+of the two signal regions is corrected by the ratio of data over MC, which is 0.73 $\pm$ 0.57 (1.49 $\pm$ 0.38)
 for \binone(\bintwo), and its uncertainty is also taken to be the ``shape'' systematic uncertainty.
 
 Table \ref{tbl:Wbkg} summarizes the the estimated results for different signal regions for the \tauTau channel.
@@ -131,7 +132,7 @@ The ``shape'' uncertainty takes into account the difference between the shape of
 \begin{tabular}{|l|c|}
 \hline
 Signal Region & \wjets background estimate\\
-\hline
+\hline\hline
 \tauTau \binone & 0.70 $\pm$ 0.21 (stat) $\pm$ 0.09 (syst) $\pm$ 0.54 (shape)\\
 \tauTau \bintwo & 4.36 $\pm$ 1.05 (stat) $\pm$ 1.14 (syst) $\pm$ 1.16 (shape)\\
 \hline
