@@ -1,9 +1,8 @@
 {
 //=========Macro generated from canvas: QCDWestimation_bin2/
-//=========  (Fri Jul 15 17:55:32 2016) by ROOT version5.34/03
-   TCanvas *QCDWestimation_bin2 = new TCanvas("QCDWestimation_bin2", "",208,51,600,602);
+//=========  (Sat Jul 16 12:51:29 2016) by ROOT version5.34/03
+   TCanvas *QCDWestimation_bin2 = new TCanvas("QCDWestimation_bin2", "",208,73,600,604);
    gStyle->SetOptFit(1);
-   gStyle->SetTextFont(42);
    QCDWestimation_bin2->Range(67.30362,-2.253772,320.3822,3.669486);
    QCDWestimation_bin2->SetFillColor(0);
    QCDWestimation_bin2->SetBorderMode(0);
@@ -26,35 +25,35 @@
    MT2->SetMinimum(0.1);
    MT2->SetMaximum(1000);
    
-   TH1F *MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1 = new TH1F("MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1","",4,100,300);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetMinimum(0.03333333);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetMaximum(1800);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetDirectory(0);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetStats(0);
+   TH1F *MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1 = new TH1F("MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1","",4,100,300);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetMinimum(0.03333333);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetMaximum(1800);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetDirectory(0);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetStats(0);
 
    Int_t ci;   // for color index setting
    ci = TColor::GetColor("#000099");
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetLineColor(ci);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetLineWidth(2);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("#Sigma M_{T}^{#tau_{i}} (GeV)");
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events");
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleSize(0.05);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleOffset(1.3);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleFont(42);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetLabelFont(42);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetLabelSize(0.035);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
-   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
-   MT2->SetHistogram(MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetLineColor(ci);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetLineWidth(2);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("#Sigma M_{T}^{#tau_{i}} (GeV)");
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events");
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleSize(0.05);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleOffset(1.3);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleFont(42);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetLabelFont(42);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetLabelSize(0.035);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
+   MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
+   MT2->SetHistogram(MT2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1);
    
    Double_t xAxis1[5] = {100, 150, 200, 250, 300}; 
    
@@ -286,8 +285,6 @@
    MT2_QCD->GetZaxis()->SetTitleFont(42);
    MT2->Add(MT2_QCD,"");
    MT2->Draw("hist");
-   TExec *exec = new TExec("setex2","gStyle->SetErrorX(0.0)");
-   exec->Draw();
    Double_t xAxis7[5] = {100, 150, 200, 250, 300}; 
    
    TH1D *h2_copy = new TH1D("h2_copy","",4, xAxis7);
@@ -304,9 +301,6 @@
    h2_copy->SetEntries(114);
    h2_copy->SetStats(0);
    h2_copy->SetFillColor(2);
-
-   ci = TColor::GetColor("#000099");
-   h2_copy->SetLineColor(ci);
    h2_copy->SetLineWidth(2);
    h2_copy->SetMarkerStyle(20);
    h2_copy->GetXaxis()->SetNdivisions(505);
@@ -358,8 +352,6 @@
    MT2_susy->GetZaxis()->SetTitleSize(0.035);
    MT2_susy->GetZaxis()->SetTitleFont(42);
    MT2_susy->Draw("samehist");
-   exec = new TExec("setex1","gStyle->SetErrorX(0.5)");
-   exec->Draw();
    Double_t xAxis9[5] = {100, 150, 200, 250, 300}; 
    
    TH1D *h__MC2 = new TH1D("h__MC2","",4, xAxis9);
