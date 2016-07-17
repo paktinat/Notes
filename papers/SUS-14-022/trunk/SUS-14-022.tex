@@ -21,7 +21,7 @@
 %%%%%%%%%%%%%%%  Title page %%%%%%%%%%%%%%%%%%%%%%%%
 \cmsNoteHeader{SUS-14-022} % This is over-written in the CMS environment: useful as preprint no. for export versions
 % >> Title: please make sure that the non-TeX equivalent is in PDFTitle below
-\title{Search for electroweak production of charginos in final states with two tau leptons in pp collisions at $\sqrt{s}= 8~\mathrm{TeV}$}
+\title{Search for electroweak production of charginos in final states with two $\tau$ leptons in pp collisions at $\sqrt{s}= 8~\mathrm{TeV}$}
 
 % >> Authors
 %Author is always "The CMS Collaboration" for PAS and papers, so author, etc, below will be ignored in those cases
@@ -60,7 +60,7 @@ The observed events are found to be consistent with the standard model backgroun
 % (3) No curly braces {}.
 \hypersetup{%
 pdfauthor={IPM TauTau Group},%
-pdftitle={Search for electroweak production of charginos in final states with two $\tau$ leptons in pp collisions at $\sqrt{s}= 8~\mathrm{TeV}$},%
+pdftitle={Search for electroweak production of charginos in final states with two tau leptons in pp collisions at \sqrt{s}= 8 \TeV},%
 pdfsubject={CMS},%
 pdfkeywords={CMS, physics, software, computing}}
 
@@ -68,7 +68,7 @@ pdfkeywords={CMS, physics, software, computing}}
 % >> Text
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Begin text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% **DO NOT REMOVE THE BIBLIOGRAPHY** which is located before the appendix.
-%% You can take the text between here and the bibiliography as an example which you should replace with the actual text of your document.
+%% You can take the text between here and the bibliography as an example which you should replace with the actual text of your document.
 %% If you include other TeX files, be sure to use "\input{filename}" rather than "\input filename".
 %% The latter works for you, but our parser looks for the braces and will break when uploading the document.
 %%%%%%%%%%%%%%%
@@ -80,7 +80,6 @@ pdfkeywords={CMS, physics, software, computing}}
 \input{Backgrounds}
 \input{Systematic}
 \input{Statistics}
-\input{ModelTesting}
 \input{Conclusion}
 % >> acknowledgments (for journal papers)
 % Please include the latest version from https://twiki.cern.ch/twiki/bin/viewauth/CMS/Internal/PubAcknow.
@@ -96,6 +95,7 @@ Individuals have received support from the Marie-Curie programme and the Europea
 
 %% **DO NOT REMOVE BIBLIOGRAPHY**
 \bibliography{auto_generated}   % will be created by the tdr script.
-
+\appendix
+\input{ModelTesting}
 %%% DO NOT ADD \end{document}!
 
