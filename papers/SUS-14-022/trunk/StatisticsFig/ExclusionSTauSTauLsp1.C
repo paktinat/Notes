@@ -1,8 +1,8 @@
-void a()
+void ExclusionSTauSTauLsp1()
 {
 //=========Macro generated from canvas: ExclusionSTauSTauLsp1/ExclusionSTauSTauLsp1
-//=========  (Mon Jul 18 12:12:55 2016) by ROOT version6.07/07
-   TCanvas *ExclusionSTauSTauLsp1 = new TCanvas("ExclusionSTauSTauLsp1", "ExclusionSTauSTauLsp1",177,45,848,676);
+//=========  (Mon Jul 18 12:38:45 2016) by ROOT version6.07/07
+   TCanvas *ExclusionSTauSTauLsp1 = new TCanvas("ExclusionSTauSTauLsp1", "ExclusionSTauSTauLsp1",177,45,848,672);
    gStyle->SetOptTitle(0);
    ExclusionSTauSTauLsp1->Range(51.37143,-3.807417,333.6571,24.20766);
    ExclusionSTauSTauLsp1->SetFillColor(0);
@@ -144,34 +144,35 @@ void a()
    grae->SetName("TwoSigmaBand");
    grae->SetTitle("STauSTau");
    grae->SetFillColor(3);
+   grae->SetLineColor(2);
+   grae->SetLineWidth(4);
+   
+   TH1F *Graph_Graph_Graph_TwoSigmaBand300130013001 = new TH1F("Graph_Graph_Graph_TwoSigmaBand300130013001","STauSTau",100,91,319);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->SetMinimum(0);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->SetMaximum(21.40615);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->SetDirectory(0);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->SetStats(0);
 
    Int_t ci;      // for color index setting
    TColor *color; // for color definition with alpha
-   ci = TColor::GetColor("#ff0000");
-   grae->SetLineColor(ci);
-   grae->SetLineWidth(4);
-   
-   TH1F *Graph_Graph_TwoSigmaBand30013001 = new TH1F("Graph_Graph_TwoSigmaBand30013001","STauSTau",100,91,319);
-   Graph_Graph_TwoSigmaBand30013001->SetMinimum(0);
-   Graph_Graph_TwoSigmaBand30013001->SetMaximum(21.40615);
-   Graph_Graph_TwoSigmaBand30013001->SetDirectory(0);
-   Graph_Graph_TwoSigmaBand30013001->SetStats(0);
-
    ci = TColor::GetColor("#000099");
-   Graph_Graph_TwoSigmaBand30013001->SetLineColor(ci);
-   Graph_Graph_TwoSigmaBand30013001->GetXaxis()->SetTitle("m_{#tilde{#tau}} (GeV)");
-   Graph_Graph_TwoSigmaBand30013001->GetXaxis()->SetLabelFont(42);
-   Graph_Graph_TwoSigmaBand30013001->GetXaxis()->SetTitleOffset(1.18);
-   Graph_Graph_TwoSigmaBand30013001->GetXaxis()->SetTitleFont(42);
-   Graph_Graph_TwoSigmaBand30013001->GetYaxis()->SetTitle("95% CL upper limit on  #sigma_{upper limit} / #sigma_{pp #rightarrow #tilde{#tau} #tilde{#tau}}");
-   Graph_Graph_TwoSigmaBand30013001->GetYaxis()->SetLabelFont(42);
-   Graph_Graph_TwoSigmaBand30013001->GetYaxis()->SetTitleOffset(1.24);
-   Graph_Graph_TwoSigmaBand30013001->GetYaxis()->SetTitleFont(42);
-   Graph_Graph_TwoSigmaBand30013001->GetZaxis()->SetLabelFont(42);
-   Graph_Graph_TwoSigmaBand30013001->GetZaxis()->SetLabelSize(0.035);
-   Graph_Graph_TwoSigmaBand30013001->GetZaxis()->SetTitleSize(0.035);
-   Graph_Graph_TwoSigmaBand30013001->GetZaxis()->SetTitleFont(42);
-   grae->SetHistogram(Graph_Graph_TwoSigmaBand30013001);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->SetLineColor(ci);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->GetXaxis()->SetTitle("m_{#tilde{#tau}} (GeV)");
+   Graph_Graph_Graph_TwoSigmaBand300130013001->GetXaxis()->SetLabelFont(42);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->GetXaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->GetXaxis()->SetTitleSize(0.035);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->GetXaxis()->SetTitleFont(42);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->GetYaxis()->SetTitle("95% CL upper limit on  #sigma_{upper limit} / #sigma_{pp #rightarrow #tilde{#tau} #tilde{#tau}}");
+   Graph_Graph_Graph_TwoSigmaBand300130013001->GetYaxis()->SetLabelFont(42);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->GetYaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->GetYaxis()->SetTitleSize(0.035);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->GetYaxis()->SetTitleOffset(1.24);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->GetYaxis()->SetTitleFont(42);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->GetZaxis()->SetLabelFont(42);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->GetZaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->GetZaxis()->SetTitleSize(0.035);
+   Graph_Graph_Graph_TwoSigmaBand300130013001->GetZaxis()->SetTitleFont(42);
+   grae->SetHistogram(Graph_Graph_Graph_TwoSigmaBand300130013001);
    
    grae->Draw("ap4");
    
@@ -223,24 +224,27 @@ void a()
    graph->SetFillColor(1);
    graph->SetLineWidth(4);
    
-   TH1F *Graph_Graph_Obs11 = new TH1F("Graph_Graph_Obs11","Graph",100,91,319);
-   Graph_Graph_Obs11->SetMinimum(1.229018);
-   Graph_Graph_Obs11->SetMaximum(10.602);
-   Graph_Graph_Obs11->SetDirectory(0);
-   Graph_Graph_Obs11->SetStats(0);
-   Graph_Graph_Obs11->GetXaxis()->SetLabelFont(42);
-   Graph_Graph_Obs11->GetXaxis()->SetLabelSize(0.035);
-   Graph_Graph_Obs11->GetXaxis()->SetTitleSize(0.035);
-   Graph_Graph_Obs11->GetXaxis()->SetTitleFont(42);
-   Graph_Graph_Obs11->GetYaxis()->SetLabelFont(42);
-   Graph_Graph_Obs11->GetYaxis()->SetLabelSize(0.035);
-   Graph_Graph_Obs11->GetYaxis()->SetTitleSize(0.035);
-   Graph_Graph_Obs11->GetYaxis()->SetTitleFont(42);
-   Graph_Graph_Obs11->GetZaxis()->SetLabelFont(42);
-   Graph_Graph_Obs11->GetZaxis()->SetLabelSize(0.035);
-   Graph_Graph_Obs11->GetZaxis()->SetTitleSize(0.035);
-   Graph_Graph_Obs11->GetZaxis()->SetTitleFont(42);
-   graph->SetHistogram(Graph_Graph_Obs11);
+   TH1F *Graph_Graph_Graph_Obs111 = new TH1F("Graph_Graph_Graph_Obs111","Graph",100,91,319);
+   Graph_Graph_Graph_Obs111->SetMinimum(1.229018);
+   Graph_Graph_Graph_Obs111->SetMaximum(10.602);
+   Graph_Graph_Graph_Obs111->SetDirectory(0);
+   Graph_Graph_Graph_Obs111->SetStats(0);
+
+   ci = TColor::GetColor("#000099");
+   Graph_Graph_Graph_Obs111->SetLineColor(ci);
+   Graph_Graph_Graph_Obs111->GetXaxis()->SetLabelFont(42);
+   Graph_Graph_Graph_Obs111->GetXaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph_Obs111->GetXaxis()->SetTitleSize(0.035);
+   Graph_Graph_Graph_Obs111->GetXaxis()->SetTitleFont(42);
+   Graph_Graph_Graph_Obs111->GetYaxis()->SetLabelFont(42);
+   Graph_Graph_Graph_Obs111->GetYaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph_Obs111->GetYaxis()->SetTitleSize(0.035);
+   Graph_Graph_Graph_Obs111->GetYaxis()->SetTitleFont(42);
+   Graph_Graph_Graph_Obs111->GetZaxis()->SetLabelFont(42);
+   Graph_Graph_Graph_Obs111->GetZaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph_Obs111->GetZaxis()->SetTitleSize(0.035);
+   Graph_Graph_Graph_Obs111->GetZaxis()->SetTitleFont(42);
+   graph->SetHistogram(Graph_Graph_Graph_Obs111);
    
    graph->Draw("c");
    
@@ -290,44 +294,38 @@ void a()
    graph->SetName("Expected");
    graph->SetTitle("Graph");
    graph->SetFillColor(1);
-
-   ci = TColor::GetColor("#ff0000");
-   graph->SetLineColor(ci);
+   graph->SetLineColor(2);
    graph->SetLineWidth(4);
-
-   ci = TColor::GetColor("#ff0000");
-   graph->SetMarkerColor(ci);
+   graph->SetMarkerColor(2);
    
-   TH1F *Graph_Graph_Expected22 = new TH1F("Graph_Graph_Expected22","Graph",100,91,319);
-   Graph_Graph_Expected22->SetMinimum(1.521094);
-   Graph_Graph_Expected22->SetMaximum(12.98672);
-   Graph_Graph_Expected22->SetDirectory(0);
-   Graph_Graph_Expected22->SetStats(0);
-
-   ci = TColor::GetColor("#ff0000");
-   Graph_Graph_Expected22->SetLineColor(ci);
-   Graph_Graph_Expected22->GetXaxis()->SetLabelFont(42);
-   Graph_Graph_Expected22->GetXaxis()->SetLabelSize(0.035);
-   Graph_Graph_Expected22->GetXaxis()->SetTitleSize(0.035);
-   Graph_Graph_Expected22->GetXaxis()->SetTitleFont(42);
-   Graph_Graph_Expected22->GetYaxis()->SetLabelFont(42);
-   Graph_Graph_Expected22->GetYaxis()->SetLabelSize(0.035);
-   Graph_Graph_Expected22->GetYaxis()->SetTitleSize(0.035);
-   Graph_Graph_Expected22->GetYaxis()->SetTitleFont(42);
-   Graph_Graph_Expected22->GetZaxis()->SetLabelFont(42);
-   Graph_Graph_Expected22->GetZaxis()->SetLabelSize(0.035);
-   Graph_Graph_Expected22->GetZaxis()->SetTitleSize(0.035);
-   Graph_Graph_Expected22->GetZaxis()->SetTitleFont(42);
-   graph->SetHistogram(Graph_Graph_Expected22);
+   TH1F *Graph_Graph_Graph_Expected222 = new TH1F("Graph_Graph_Graph_Expected222","Graph",100,91,319);
+   Graph_Graph_Graph_Expected222->SetMinimum(1.521094);
+   Graph_Graph_Graph_Expected222->SetMaximum(12.98672);
+   Graph_Graph_Graph_Expected222->SetDirectory(0);
+   Graph_Graph_Graph_Expected222->SetStats(0);
+   Graph_Graph_Graph_Expected222->SetLineColor(2);
+   Graph_Graph_Graph_Expected222->GetXaxis()->SetLabelFont(42);
+   Graph_Graph_Graph_Expected222->GetXaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph_Expected222->GetXaxis()->SetTitleSize(0.035);
+   Graph_Graph_Graph_Expected222->GetXaxis()->SetTitleFont(42);
+   Graph_Graph_Graph_Expected222->GetYaxis()->SetLabelFont(42);
+   Graph_Graph_Graph_Expected222->GetYaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph_Expected222->GetYaxis()->SetTitleSize(0.035);
+   Graph_Graph_Graph_Expected222->GetYaxis()->SetTitleFont(42);
+   Graph_Graph_Graph_Expected222->GetZaxis()->SetLabelFont(42);
+   Graph_Graph_Graph_Expected222->GetZaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph_Expected222->GetZaxis()->SetTitleSize(0.035);
+   Graph_Graph_Graph_Expected222->GetZaxis()->SetTitleFont(42);
+   graph->SetHistogram(Graph_Graph_Graph_Expected222);
    
    graph->Draw("c");
    TLine *line = new TLine(91,1,319,1);
    line->SetLineStyle(7);
    line->Draw();
    
-   TLegend *leg = new TLegend(0.1749409,0.6346154,0.5567376,0.8397436,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.1761229,0.6474359,0.5579196,0.8525641,NULL,"brNDC");
    leg->SetBorderSize(1);
-   leg->SetTextSize(0.04166667);
+   leg->SetTextSize(0.03525641);
    leg->SetLineColor(0);
    leg->SetLineStyle(1);
    leg->SetLineWidth(1);
@@ -344,14 +342,10 @@ void a()
    entry=leg->AddEntry("TwoSigmaBand","Expected #pm 1 #sigma","fl");
    entry->SetFillColor(3);
    entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#ff0000");
-   entry->SetLineColor(ci);
+   entry->SetLineColor(2);
    entry->SetLineStyle(1);
    entry->SetLineWidth(4);
-
-   ci = TColor::GetColor("#ff0000");
-   entry->SetMarkerColor(ci);
+   entry->SetMarkerColor(2);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
@@ -359,16 +353,19 @@ void a()
    TLatex *   tex = new TLatex(91.56716,22.34501,"");
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(284.6075,19.89765,"CMS");
+      tex = new TLatex(91.56716,21.92252,"CMS");
+   tex->SetTextFont(42);
    tex->SetTextSize(0.04026846);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(105.0925,19.89765,"pp#rightarrow#tilde{#tau}#tilde{#tau} , #tilde{#tau}#rightarrow#tau_{h}#chi^{0}_{1}, m_{#chi^{0}_{1}}= 0 GeV");
+      tex = new TLatex(104.6119,20.23256,"pp#rightarrow#tilde{#tau}#tilde{#tau} , #tilde{#tau}#rightarrow#tau_{h}#chi^{0}_{1}, m_{#chi^{0}_{1}}= 0 GeV");
+   tex->SetTextFont(42);
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(263.9199,21.96286,"18.1 fb^{-1} (8 TeV)");
-   tex->SetTextSize(0.04);
+      tex = new TLatex(262.9189,21.95606,"18.1 fb^{-1} (8 TeV)");
+   tex->SetTextFont(42);
+   tex->SetTextSize(0.0400641);
    tex->SetLineWidth(2);
    tex->Draw();
    ExclusionSTauSTauLsp1->Modified();
