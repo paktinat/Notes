@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: MT2_Ratio_Preselection_unBlinded/
-//=========  (Sat Jul 16 15:19:43 2016) by ROOT version5.34/03
-   TCanvas *MT2_Ratio_Preselection_unBlinded = new TCanvas("MT2_Ratio_Preselection_unBlinded", "",294,114,600,634);
+//=========  (Mon Jul 18 15:03:36 2016) by ROOT version5.34/03
+   TCanvas *MT2_Ratio_Preselection_unBlinded = new TCanvas("MT2_Ratio_Preselection_unBlinded", "",294,136,600,634);
    gStyle->SetOptFit(1);
    MT2_Ratio_Preselection_unBlinded->Range(13.31066,-3.83404,161.9728,5.159975);
    MT2_Ratio_Preselection_unBlinded->SetFillColor(0);
@@ -25,35 +25,35 @@
    h_stack->SetMinimum(0.02);
    h_stack->SetMaximum(15642.19);
    
-   TH1F *h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1 = new TH1F("h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1","",11,40,150);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetMinimum(0.00506761);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetMaximum(34078.91);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetDirectory(0);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetStats(0);
+   TH1F *h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1 = new TH1F("h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1","",11,40,150);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetMinimum(0.00506761);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetMaximum(34078.91);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetDirectory(0);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetStats(0);
 
    Int_t ci;   // for color index setting
    ci = TColor::GetColor("#000099");
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetLineColor(ci);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetLineWidth(2);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("M_{T2} (GeV)");
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events / 10 GeV");
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleSize(0.05);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleOffset(1.3);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleFont(42);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetLabelFont(42);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetLabelSize(0.035);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
-   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
-   h_stack->SetHistogram(h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetLineColor(ci);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetLineWidth(2);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("M_{T2} (GeV)");
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events / 10 GeV");
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleSize(0.05);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleOffset(1.3);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleFont(42);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetLabelFont(42);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetLabelSize(0.035);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
+   h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
+   h_stack->SetHistogram(h_stack_stack_1_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1);
    
    Double_t xAxis1[12] = {40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150}; 
    
@@ -420,6 +420,9 @@
    h2_copy->SetMaximum(15642.19);
    h2_copy->SetEntries(7513);
    h2_copy->SetStats(0);
+
+   ci = TColor::GetColor("#000099");
+   h2_copy->SetLineColor(ci);
    h2_copy->SetLineWidth(2);
    h2_copy->SetMarkerStyle(20);
    h2_copy->GetXaxis()->SetNdivisions(505);
@@ -509,7 +512,7 @@ tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
    
-   TLegend *leg = new TLegend(0.64,0.65,0.91,0.92,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.6392617,0.650165,0.909396,0.9207921,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
@@ -522,19 +525,6 @@ tex->SetNDC();
    entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(20);
-   entry->SetMarkerSize(1);
-   entry=leg->AddEntry("h__QCD","QCD multijet","f");
-
-   ci = TColor::GetColor("#cccc00");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#cccc00");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry=leg->AddEntry("h__Wjets","W+jets","f");
 

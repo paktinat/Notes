@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: MT2/
-//=========  (Sat Jul 16 15:17:55 2016) by ROOT version5.34/03
-   TCanvas *MT2 = new TCanvas("MT2", "",295,71,600,634);
+//=========  (Mon Jul 18 15:02:37 2016) by ROOT version5.34/03
+   TCanvas *MT2 = new TCanvas("MT2", "",295,32,600,636);
    gStyle->SetOptFit(1);
    gROOT->SetEditHistograms();
    MT2->SetHighLightColor(2);
@@ -27,36 +27,36 @@
    MT2PreCut_MT2->SetMinimum(0.02);
    MT2PreCut_MT2->SetMaximum(9150.271);
    
-   TH1F *MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1 = new TH1F("MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1","",11,40,150);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetMinimum(0.005221657);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetMaximum(19509.12);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetDirectory(0);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetStats(0);
+   TH1F *MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1 = new TH1F("MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1","",11,40,150);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetMinimum(0.005221657);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetMaximum(19509.12);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetDirectory(0);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetStats(0);
 
    Int_t ci;   // for color index setting
    ci = TColor::GetColor("#000099");
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetLineColor(ci);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetLineWidth(2);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetMarkerSize(2);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("M_{T2} (GeV)");
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events / 10 GeV");
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleSize(0.05);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleOffset(1.3);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleFont(42);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetLabelFont(42);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetLabelSize(0.035);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
-   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
-   MT2PreCut_MT2->SetHistogram(MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetLineColor(ci);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetLineWidth(2);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->SetMarkerSize(2);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitle("M_{T2} (GeV)");
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetNdivisions(505);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelFont(42);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetLabelSize(0.05);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleSize(0.05);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleOffset(1.1);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetXaxis()->SetTitleFont(42);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitle("Events / 10 GeV");
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetNdivisions(505);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelFont(42);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetLabelSize(0.05);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleSize(0.05);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleOffset(1.3);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetYaxis()->SetTitleFont(42);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetLabelFont(42);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetLabelSize(0.035);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetTitleSize(0.035);
+   MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1->GetZaxis()->SetTitleFont(42);
+   MT2PreCut_MT2->SetHistogram(MT2PreCut_MT2_stack_2_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1_stack_1);
    
    
    TH1D *MT2PreCut_MT2_Higgs18__6 = new TH1D("MT2PreCut_MT2_Higgs18__6","",11,40,150);
@@ -435,6 +435,9 @@
    h2_copy19__7->SetMaximum(9150.271);
    h2_copy19__7->SetEntries(5459);
    h2_copy19__7->SetFillColor(1);
+
+   ci = TColor::GetColor("#000099");
+   h2_copy19__7->SetLineColor(ci);
    h2_copy19__7->SetLineWidth(2);
    h2_copy19__7->SetMarkerStyle(20);
    h2_copy19__7->GetXaxis()->SetNdivisions(505);
@@ -526,7 +529,7 @@ tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
    
-   TLegend *leg = new TLegend(0.64,0.65,0.91,0.92,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.6392617,0.650165,0.909396,0.9207921,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
@@ -539,19 +542,6 @@ tex->SetNDC();
    entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(20);
-   entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MT2PreCut_MT2_QCD13__1","QCD multijet","f");
-
-   ci = TColor::GetColor("#cccc00");
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
-
-   ci = TColor::GetColor("#cccc00");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry=leg->AddEntry("MT2PreCut_MT2_W14__2","W+jets","f");
 
