@@ -1,34 +1,39 @@
 \section{Systematic uncertainties}
 \label{sect:sys}
 Systematic uncertainties can affect the shape or normalization of the
-backgrounds estimated from simulation (\ttbar, Z+jets, dibosons, and Higgs boson events), 
+backgrounds estimated from simulation (\ttbar, Z+jets, diboson, and Higgs boson events), 
 as well as the signal acceptance. 
-%To calculate the uncertainties for signal, 3 signal pointsare used which are ($m(\chione) = 180\,\GeV$, $m(\PSGczDo) = 60\,\GeV$), (240, 40) and (380, 1) representing low, moderate and high delta mass respectively.
+%To calculate the uncertainties for signal, 3 signal points are used which are ($m(\chione) = 180\,\GeV$, $m(\PSGczDo) = 60\,\GeV$), (240, 40) and (380, 1) representing low, moderate and high delta mass respectively.
 The uncertainties are listed below, and summarized in Table~\ref{Tab.SYS}.
 \input{SystematicTab}
 
 \begin{itemize}
 
+
 \item  The energy scales for electron, muon, and \Tau objects affect the shape of the kinematic distributions.
  The systematic uncertainties in the muon and electron energy scales are negligible.
 The visible energy of \Tau object in the MC simulation is scaled up and down
 by 3\%, and all \Tau-related variables are recalculated. The resulting variations in
-final yields are taken as the systematic uncertainties. They are found to be 10--15\% for 
+final yields are taken as the systematic uncertainties. They are evaluated to be 10--15\% for 
 backgrounds and 2--15\% in different parts of the signal phase space.
 % which is accessible by the analysis, the value is almost constant in different points and a conservative value is selected.
+
+
+
+\item The uncertainty in the \Tau identification efficiency is 6\%. 
+  The uncertainty in the trigger efficiency of the \Tau part of the \eTau and
+  \muTau (\tauTau) triggers amount to 3.0\% (4.5\%) per \Tau candidate.
+  A ``tag-and-probe'' technique \cite{Chatrchyan:2014mua} on $\cPZ\to \Pgt\Pgt$ data events is used to estimate these 
+  uncertainties \cite{Khachatryan:2014wca}.
 
 
 \item The uncertainty in electron and muon trigger, identification, and
   isolation efficiencies is 2\% \cite{Khachatryan:2014wca}.
 
-\item The uncertainty in the \Tau identification efficiency is 6\%. 
-  The uncertainty in the trigger efficiency of the \Tau part of the \eTau and
-  \muTau (\tauTau) triggers amount to 3.0\% (4.5\%~per~\Tau~candidate).
-  A ``tag-and-probe'' technique \cite{Chatrchyan:2014mua} on $\cPZ\to \Pgt\Pgt$ data events is used to estimate these 
-  uncertainties \cite{Khachatryan:2014wca}.
 
-\item The uncertainty due to the scale factor on the b tagging
-efficiency and misidentification rate is evaluated by varying the 
+\item The uncertainty due to the scale 
+factor for the b-tagging efficiency and misidentification rate
+rate is evaluated by varying the 
 factors within their uncertainties. The yields of signal and background events are changed by 8\% 
 and 4\%, respectively \cite{Chatrchyan:2012jua}.
  
@@ -39,17 +44,17 @@ and 4\%, respectively \cite{Chatrchyan:2012jua}.
 \item The uncertainty in the signal acceptance due to parton distribution function (PDF) uncertainties 
   is taken to be 2\% from a similar analysis \cite{Khachatryan:2014qwa} which follows the PDF4LHC recommendations \cite{pdf4lhc}.
 
-\item The uncertainty in the luminosity  is $2.6\%$ \cite{CMS-PAS-LUM-13-001}.  This affects only the
-  normalization of the signal MC samples, because for the backgrounds  either control samples in data are used or the normalization is found from data.
+\item The uncertainty in the integrated luminosity  is $2.6\%$ \cite{CMS-PAS-LUM-13-001}.  This affects only the
+  normalization of the signal MC samples, because for the backgrounds  either control samples in data are used or the normalization is measured from data.
 
 \item The uncertainty in the signal acceptance associated with initial-state radiation (ISR)
 is evaluated by comparing the efficiencies of jet-related requirements between \PYTHIA
  and \MADGRAPH which is a matrix element event generator. Using the SM WW process which
- is expected to be similar to chargino pair production in terms of parton content and process, we assign a 3\% uncertainty in 
-the efficiency of  b tagged jets veto and a 6\% uncertainty in the \deltaphi requirement. The ISR
+ is expected to be similar to chargino pair production in terms of parton content and process, a 3\% uncertainty in 
+the efficiency of  b-tagged jets veto and a 6\% uncertainty in the \deltaphi requirement are assigned. The ISR
  uncertainty is not considered for the background samples, due to the usage of matrix element event generators.
 
-\item The uncertainties related to \MPT can arise from different sources, e.g.  the energy scales of lepton, \Tau, jet 
+\item The uncertainties related to \MPT can arise from different sources, e.g.  the energy scales of lepton, \Tau, and jet 
 objects, and unclustered energy.  The ``unclustered energy'' is the energy of the reconstructed objects which
  do not belong to any jet or lepton with \PT $>$ 10 \GeV. The effect of lepton and \Tau
  energy scales is discussed above. The contribution from the uncertainty in the jet energy scale (2--10\% depending on $\eta$  and \PT) and
