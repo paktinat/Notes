@@ -1,23 +1,21 @@
 \section{\texorpdfstring{Event selection for the \tauTau channel}{Event selection for the tau-tau channel}}
 \label{sect:tauTauCuts}
 In this channel data of proton-proton collisions,  corresponding to an integrated luminosity of 18.1 $\mathrm{fb}^{-1}$, are used.
-The events are first selected with a trigger \cite{Chatrchyan:2011nv} that requires the presence of
-two \Tau candidates with \PT $>$ 35\GeV and $|\eta|<$ 2.1, which pass loose identification and isolation criteria.
+The events are first selected with a trigger \cite{Chatrchyan:2011nv} that requires the presence of two isolated 
+\Tau candidates with \PT $>$ 35\GeV and $|\eta|<$ 2.1, passing loose identification requirements.
 
-Offline, %the measure of isolation of the two \Tau candidates must be less than 1.5\GeV (medium working point
-%of the $\tau$ isolation discriminator \cite{Khachatryan:2015dfa}), 
-the two \Tau candidates must pass the tight $\tau$ isolation discriminator,
-\PT $>$ 45\GeV and $|\eta|<$ 2.1, and have opposite electric charge (OS).
-In events with more than one \tauTau pair, we only consider the pair with the most isolated \Tau objects. 
+Offline, the two \Tau candidates must pass the tight $\tau$ isolation discriminator,
+\PT $>$ 45\GeV and $|\eta|<$ 2.1, and have opposite sign (OS).
+In events with more than one \tauTau pair, only the pair with the most isolated \Tau objects is considered. 
 
 Events with extra isolated electrons or muons of \PT $>$ 10\GeV and $|\eta| <$ 2.4 
-are rejected to suppress %the contribution of the associatiated production of \Z with vector bosons.
-backgrounds from diboson decays.
-Inspired from the MC studies, to reduce the contribution of the \Z$ \rightarrow$ \tauTau backgrounds, events are  rejected where the visible
-di-\Tau invariant mass is between 55 and 85\GeV (\Z boson veto).  
+are rejected to suppress backgrounds from diboson decays. 
+Inspired from the MC studies, 
+the contribution from the \Z$ \rightarrow$ \tauTau  background is reduced by rejecting events 
+where the visible di-\Tau invariant mass is between 55 and 85\GeV (\Z boson veto).  
 Furthermore, contributions from low-mass DY and QCD multijet production are 
 reduced by requiring the invariant mass to be greater than 15\GeV.
-Moreover, to further reduce \Z $\rightarrow$ \tauTau and QCD multijet events, %the loose requirements 
+To further reduce \Z $\rightarrow$ \tauTau and QCD multijet events, 
 \MPT $>$ 30\GeV and \mttwo $>$ 40\GeV are also required.
 The minimum angle \deltaphi in the transverse plane between the \ptvecmiss and any of the \Tau and jets, 
 including b-tagged jets, must be greater than 1.0 radians. 
@@ -25,7 +23,7 @@ This requirement reduces backgrounds from QCD multijet events and \wjets events.
 
 After applying the preselection described above,
 additional requirements are introduced to define two search regions.
-The first search region (\binone) targets models with large mass difference ($\Delta m$) 
+The first search region (\binone) targets models with a large mass difference ($\Delta m$) 
 between charginos and neutralinos.
 In this case, the \mttwo signal distribution can have a long tail beyond the 
 distribution of SM backgrounds.
@@ -35,7 +33,7 @@ provides additional discrimination between signal and SM background processes.
 
 The two signal regions (SR) are defined as:
 \begin{itemize}
-\item {\bf \binone}: \mttwo $>$ 90\GeV,
+\item {\bf \binone}: \mttwo $>$ 90\GeV;
 \item {\bf \bintwo}:  \mttwo $<$ 90\GeV, \SumMT $>$ 250\GeV, and b-tagged jets are vetoed.
 \end{itemize}
 The veto on b-tagged jets in SR2 reduces the
@@ -43,7 +41,7 @@ The veto on b-tagged jets in SR2 reduces the
 are expected in  the low-\mttwo region. Table \ref{Tab.Cuts} summarizes the selection requirements for different signal regions.
 \begin{table}[!htb]
 \begin{center}
-\caption{Definition of signal regions.}
+\caption{Definition of the signal regions.}
 \begin{tabular}{|c|c|c|}
 \hline
                & \tauTau & \tauTau               \\
@@ -54,7 +52,7 @@ are expected in  the low-\mttwo region. Table \ref{Tab.Cuts} summarizes the sele
 \multicolumn{3}{|c|}{\Z boson mass veto}              \\\hline
 \multicolumn{3}{|c|}{\MPT $>$ 30\GeV}            \\\hline
 \multicolumn{3}{|c|}{\deltaphi $> 1.0 $ radians}         \\\hline
-\multicolumn{3}{|c|}{$\mttwo > 40\GeV$}         \\\hline
+\multicolumn{3}{|c|}{$\mttwo > 40\GeV$}         \\\hline\hline
 b-tagged jet veto&  - & b-tagged jet veto  \\\hline
 \multicolumn{2}{|c|}{$\mttwo > 90\GeV$} & $\mttwo < 90\GeV$ \\\hline
 $\tauMT > 200\GeV$    &  - & $\SumMT > 250\GeV$ \\\hline
@@ -62,13 +60,3 @@ $\tauMT > 200\GeV$    &  - & $\SumMT > 250\GeV$ \\\hline
 \label{Tab.Cuts}
 \end{center}
 \end{table}
-%The distributions of $\mttwo$ and $\SumMT$ for data and the SM prediction are shown in Fig.~\ref{fig:comparison} before the application of the final requirements listed above. In the $\SumMT$ distribution, the b-tagged jets are vetoed and \mttwo $<$ 90\GeV is also applied. The SM predictions in Fig.~\ref{fig:comparison} are from simulated events, except for the QCD multijet prediction which is taken from same-sign di-tau data events, after subtracting a small contribution of same-sign non-QCD events estimated from Monte Carlo events. The data and SM predictions are in agreement within the statistical uncertainties.
-%The expected distributions for a SUSY signal corresponding to a moderate mass difference $(m_{\chione}=240\GeV,~m_{\PSGczDo}=40\GeV)$ are also shown for illustration purposes.
-%\begin{figure}[!htb]
-%\centering
-%\includegraphics[angle=0,scale=0.375]{TauTauFigs/MT2.pdf}
-%\includegraphics[angle=0,scale=0.375]{TauTauFigs/SumMT.pdf} \\ 
-%\caption{The distributions of \mttwo (left) and \SumMT (right) after applying all the selections. 
-%The last bins of the histograms correspond to the two signal regions (\binone and \bintwo). The signal distribution is shown for $m_{\chione}=240\GeV,~m_{\PSGczDo}=40\GeV$.}
-%\label{fig:comparison}
-%\end{figure}
