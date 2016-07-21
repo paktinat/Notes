@@ -3,8 +3,10 @@ void ExclusionSTauSTauLsp1()
 //=========Macro generated from canvas: ExclusionSTauSTauLsp1/ExclusionSTauSTauLsp1
 //=========  (Tue Jul 19 16:31:56 2016) by ROOT version6.07/07
    TCanvas *ExclusionSTauSTauLsp1 = new TCanvas("ExclusionSTauSTauLsp1", "ExclusionSTauSTauLsp1",0,45,1105,679);
+//   TCanvas *ExclusionSTauSTauLsp1 = new TCanvas("ExclusionSTauSTauLsp1", "ExclusionSTauSTauLsp1",177,131,848,847);
    gStyle->SetOptTitle(0);
    ExclusionSTauSTauLsp1->Range(4.446029,-3.052129,366.7901,22.80848);
+   //   ExclusionSTauSTauLsp1->Range(51.37143,-3.802408,333.6571,24.1758);
    ExclusionSTauSTauLsp1->SetFillColor(0);
    ExclusionSTauSTauLsp1->SetBorderMode(0);
    ExclusionSTauSTauLsp1->SetBorderSize(2);
@@ -165,7 +167,7 @@ void ExclusionSTauSTauLsp1()
    Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_TwoSigmaBand30013001300130013001300130023001300230013001->GetXaxis()->SetTitleSize(0.05);
    Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_TwoSigmaBand30013001300130013001300130023001300230013001->GetXaxis()->SetTitleOffset(1.03);
    Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_TwoSigmaBand30013001300130013001300130023001300230013001->GetXaxis()->SetTitleFont(42);
-   Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_TwoSigmaBand30013001300130013001300130023001300230013001->GetYaxis()->SetTitle("95% CL upper limit on  #sigma_{upper limit} / #sigma_{pp #rightarrow #tilde{#tau}#tilde{#tau}}");
+   Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_TwoSigmaBand30013001300130013001300130023001300230013001->GetYaxis()->SetTitle("95% CL upper limit on  #sigma / #sigma_{pp #rightarrow #tilde{#tau}#tilde{#tau}}");
    Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_TwoSigmaBand30013001300130013001300130023001300230013001->GetYaxis()->SetLabelFont(42);
    Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_TwoSigmaBand30013001300130013001300130023001300230013001->GetYaxis()->SetLabelSize(0.05);
    Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_Graph_TwoSigmaBand30013001300130013001300130023001300230013001->GetYaxis()->SetTitleSize(0.05);
@@ -362,7 +364,7 @@ void ExclusionSTauSTauLsp1()
    tex->SetTextSize(0.04026846);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(129.0524,19.67386,"pp#rightarrow#tilde{#tau}#tilde{#tau} , #tilde{#tau}#rightarrow#tau_{h}#chi^{0}_{1}, m_{#chi^{0}_{1}}= 0 GeV");
+      tex = new TLatex(129.0524,19.67386,"pp#rightarrow#tilde{#tau}#tilde{#tau} , #tilde{#tau}#rightarrow#tau_{h}#chi^{0}_{1}, m_{#chi^{0}_{1}}= 1 GeV");
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
@@ -376,4 +378,6 @@ void ExclusionSTauSTauLsp1()
    ExclusionSTauSTauLsp1->cd();
    ExclusionSTauSTauLsp1->SetSelected(ExclusionSTauSTauLsp1);
    ExclusionSTauSTauLsp1->ToggleToolBar();
+   ExclusionSTauSTauLsp1->SaveAs("ExclusionSTauSTauLsp1.pdf");
+   ExclusionSTauSTauLsp1->SaveAs("ExclusionSTauSTauLsp1.png");
 }
