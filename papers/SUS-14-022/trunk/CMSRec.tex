@@ -48,15 +48,18 @@ The SUSY signal processes and SM samples, which are used to evaluate potential b
 Single top quark and Higgs boson events are generated with {\POWHEG} 1.0~\cite{Nason:2004rx,Frixione:2007vw,Alioli:2009je,Alioli:2010xd}.
 In the following, the events containing at least one top quark or one $\cPZ$ boson are referred to as ``tX'' and ``ZX'', respectively. 
 Events from Higgs boson production via gluon fusion, vector-boson fusion, or in association with a $\PW$ or $\cPZ$  boson, or a \ttbar pair are referred to as ``hX''. The masses of the top quark and Higgs boson are set to be 172.5\GeV~\cite{Khachatryan:2015hba} and 125\GeV~\cite{Aad:2015zhl}, respectively. Since the 
-final state of the pair production of \PW bosons is very similar to our signal, in the following figures, its contribution is shown as an independent sample 
+final state of the pair production of \PW~bosons is very similar to our signal, in the following figures, its contribution is shown as an independent sample 
 labeled as ``WW''.
 
 In one of the signal samples, pairs of charginos are produced and decay exclusively to the final states that contain 
 two $\tau$ leptons, two $\tau$ neutrinos, and two neutralinos, as shown in Fig.~\ref{fig:Productions} (left). 
 The mediator in the decay of the \chione can be either a \sTau or $\sNu_{\tau}$. 
 The masses of the \sTau and $\sNu_{\tau}$ are set to be equal to the mean value of the \chione and \PSGczDo masses; thus they are produced on-shell. 
-If the masses are close to one of the \chione and \PSGczDo masses, in most of the events, the produced $\tau$ lepton will have a low \pt 
-and the efficiency of the event selection will drop dramatically.
+%If the masses are close to one of the \chione and \PSGczDo masses, in most of the events, the produced $\tau$ lepton will have a low \pt and the efficiency of the event selection will drop dramatically.
+If the \sTau ($\sNu_{\tau}$) mass is close to the \PSGczDo mass, the $\tau$ lepton from the \sTau (\chione) decay will have a low (high) energy, resulting in decreasing (increasing) the event selection efficiency, expecting weaker (stronger) limit on chargino mass.
+On contrary, in case where the \sTau ($\sNu_{\tau}$) mass is close to the \chione mass, the situations are opposite.
+Our scenario provides near-maximum sensitivity with m(\sTau) = m($\sNu_{\tau}$) which is equal to the mean value of the \chione and \PSGczDo masses. 
+
 The two distinct decay chains in the left diagram of Fig.~\ref{fig:Productions} 
 are assumed to have equal branching fractions of 50\%. 
 In the other signal sample, pairs of staus are produced that decay always to two $\tau$ leptons and two neutralinos, Fig.~\ref{fig:Productions} (right). 
@@ -71,9 +74,9 @@ Additional interactions are generated with \PYTHIA and superimposed on simulated
 The detector response in the  Monte Carlo (MC) background event samples is modeled by a
 detailed simulation
 of the CMS detector based on {\GEANTfour}~\cite{Agostinelli:2002hh}.  
-As for the signal a grid of parameters is scanned and different signal points are generated. To reduce  computational requirements, signal events 
+For the signal simulation a grid of parameters is scanned and different signal points are generated. To reduce  computational requirements, signal events 
 are processed by the CMS fast simulation \cite{Abdullin:2011zz} instead of {\GEANTfour}. 
-It is verified that the CMS fast simulation gives a reasonable agreement with the detailed simulation for our favorite signal which has hadronic decays of 
+It is verified that the CMS fast simulation gives a reasonable agreement with the detailed simulation for our signal which has hadronic decays of 
 tau leptons in the final state.
 The simulated events are reconstructed with similar algorithms used for collision data.
 
@@ -82,5 +85,5 @@ in the literature. These cross sections correspond to next-to-next-to-leading-or
 and \wjets~\cite{xsec_WZ} events. For the $\cPqt\cPaqt$ simulated samples, the cross section used is calculated to full NNLO accuracy including
 the resummation of next-to-next-to-leading-logarithmic (NNLL) terms~\cite{Czakon:2011xx}.
 The event yields from diboson production are normalized to the next-to-leading-order (NLO) cross section  taken from Ref.~\cite{Campbell:2011bn}. 
-The \textsc{Resummino}~\cite{Fuks:2012qx,Fuks:2013vua,Fuks:2013lya} calculations at NLO+NLL accuracy are used to calculate the signal cross sections, where 
+The \textsc{Resummino}~\cite{Fuks:2012qx,Fuks:2013vua,Fuks:2013lya} program is used to calculate the signal cross sections at NLO+NLL level where 
 NLL refers to next-to-leading-logarithmic precision.
