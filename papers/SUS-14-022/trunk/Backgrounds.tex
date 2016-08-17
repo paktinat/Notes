@@ -41,8 +41,8 @@ respectively.
 The reported uncertainties are the quadratic sum of the statistical and systematic uncertainties.
 
 
-The systematic uncertainty in the background estimates include the uncertainty in the validity of the assumption that isolation 
-and \mttwo or \SumMT are not correlated, \deltaphi efficiency is extrapolated correctly to signal region and the uncertainties in the residual 
+The systematic uncertainty in the background estimates includes the uncertainty in the validity of the assumption that isolation 
+and \mttwo or \SumMT are not correlated, the \deltaphi efficiency is extrapolated correctly to the signal regions and the uncertainties in the residual 
 SM backgrounds which  are subtracted based on MC expectations for different components of the background estimation. 
 The latter includes both the statistical uncertainty of the simulated 
 events and also a 22\% systematic uncertainty that will be discussed in Section~\ref{sect:sys}, 
@@ -74,7 +74,7 @@ in Table \ref{4QCDbg} to extract the ``fit'' uncertainty.
 
 \subsection{\texorpdfstring{\wjets background estimation in the \tauTau channel}{W+jets background estimation in the tau-tau channel}}
 \label{sect:bkgW}
-The contribution of the \wjets background in the \tauTau channel is taken from simulated events.
+The contribution of the \wjets background in the \tauTau channel is taken from simulated events, using the formula:
 \begin{equation}
 N_{\rm SR} = N_{\rm BFS} \times \epsilon_{\rm{FS}}.
 \end{equation}
@@ -86,7 +86,7 @@ The value of $N_{\rm BFS}$ is 31.9$\pm$6.4 (29.1$\pm$6.2) for \binone (\bintwo),
 
 The $\epsilon_{\rm{FS}}$ is evaluated in a simulated \wjets sample with a pair of opposite-sign \Tau candidates, where the \Tau candidates 
 are selected with the same identification requirements as in the signal region, but with looser kinematic selection criteria to improve statistical precision.
-Additional signal selection requirements on \deltaphi or the lepton veto, are applied one by one such that two orthogonal subsamples (passing and failing) are obtained. The $\epsilon_{\rm{FS}}$ quantity is calculated in all subsamples. The values are found to be consistent with the value from the relaxed sample 
+Additional signal selection requirements on \deltaphi or the lepton veto are applied one by one such that two orthogonal subsamples (passing and failing) are obtained. The $\epsilon_{\rm{FS}}$ quantity is calculated in all subsamples. The values are found to be consistent with the value from the relaxed sample 
 within the statistical uncertainties. 
 The measured $\epsilon_{\rm{FS}}$ values from the looser-selection samples are  
 0.028 $\pm$ 0.010 and 0.098 $\pm$ 0.032 for \binone and \bintwo, respectively.
@@ -131,7 +131,7 @@ requirement and by inverting the \Z boson veto and also by requiring \mttwo $<$ 
 The distributions of the invariant mass of the \muTau system for data and simulated events are in good agreement.
 The \PT of the \Z boson system, which is correlated with 
 \mttwo, is also well reproduced in simulation. Table \ref{tbl:DYbkg}
-summarizes the DY background contribution in different signal regions. 
+summarizes the DY background contribution in the different signal regions. 
 For \leptonTau channels, only the contributions from the genuine lepton + \Tau are reported. 
 A separate method is developed in Section~\ref{sect:bkgFake} to estimate the misidentified lepton contamination in these channels.
 \begin{table}[!htb]
@@ -153,8 +153,8 @@ Signal Region      &  DY background estimate\\
 
 \subsection{\texorpdfstring{Misidentified \Tau in the \leptonTau channels}{Misidentified tau in the lepton-tau channels}}
 \label{sect:bkgFake}
-The contribution from misidentified \Tau in the \leptonTau channels is estimated using a method which takes into account the probability that a loosely isolated misidentified or genuine \Tau,
-passes the tight isolation requirements.
+The contribution from misidentified \Tau in the \leptonTau channels is estimated using a method which takes into account the probability 
+that a loosely isolated misidentified or genuine \Tau passes the tight isolation requirements.
 If the signal selection is done using the \Tau candidates that pass the loose isolation, 
 the number of loose \Tau candidates ($N_{\rm l}$) is:
 
@@ -177,11 +177,11 @@ Here $r_{\rm m}\times N_{\rm m}$ is the contamination of misidentified \Tau cand
 
 The misidentification rate ($r_{\rm m}$) is measured as the ratio of tightly selected \Tau candidates to loosely 
 selected \Tau candidates in a sample dominated by misidentified \Tau candidates. 
-This is done in a data sample with the same selection as \leptonTau, except an inverted
+This is done in a data sample with the same selection as \leptonTau, except with an inverted
 \MPT requirement, i.e., \MPT $<$ 30\GeV. The misidentification rate is measured to be 0.54 $\pm$ 0.01.
 The genuine \Tau candidate rate ($r_{\rm g}$) is estimated in simulated DY events; it is found to 
 be $r_{\rm g}$ = 0.766 $\pm$ 0.003 and almost independent of \mttwo. 
-A conservative relative systematic uncertainty of 5\% is assigned to the central value of $r_{\rm g}$ to cover its 
+A relative systematic uncertainty of 5\% is assigned to the central value of $r_{\rm g}$ to cover its 
 variations for different values of \mttwo.
 The method is validated in the simulated \wjets sample using the misidentification rate which is evaluated with the same method as used for data. 
 %The result is compared to the case where $r_{\rm m}$ = 0.54 is used. 
