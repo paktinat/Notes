@@ -5,7 +5,9 @@ The backgrounds are studied in two categories: those with
 as a \Tau, and those with genuine \Tau candidates.
 The QCD multijet and \wjets events are the dominant sources in the first category, while \ttbar, Z+jets, Higgs boson, and diboson
 events dominate the second category. Background estimates are performed using control samples in data whenever possible. 
-Those backgrounds that are taken from simulation are either validated in dedicated control regions or corrected using data-to-simulation scale factors. The estimates of the main backgrounds are discussed below.
+Those backgrounds that are taken from simulation are either validated in dedicated control regions or corrected using data-to-simulation scale factors. 
+The estimates of the main backgrounds are discussed below, while the remaining contributions are small and are taken from simulation.
+
 
 \subsection{\texorpdfstring{The QCD multijet background estimation in the \tauTau channel}{The QCD multijet background estimation in the tau-tau channel}}
 \label{sect:bkgQCD}
@@ -42,8 +44,8 @@ The reported uncertainties are the quadratic sum of the statistical and systemat
 
 
 The systematic uncertainty in the background estimates includes the uncertainty in the validity of the assumption that isolation 
-and \mttwo or \SumMT are not correlated, the \deltaphi efficiency is extrapolated correctly to the signal regions and the uncertainties in the residual 
-SM backgrounds which  are subtracted based on MC expectations for different components of the background estimation. 
+and \mttwo or \SumMT are not correlated, the \deltaphi efficiency is extrapolated correctly to the signal regions, and the uncertainties in the residual 
+non-QCD SM backgrounds which  are subtracted based on MC expectations for different components of the background estimation. 
 The latter includes both the statistical uncertainty of the simulated 
 events and also a 22\% systematic uncertainty that will be discussed in Section~\ref{sect:sys}, 
 assigned uniformly to all simulated events.
@@ -132,7 +134,7 @@ The distributions of the invariant mass of the \muTau system for data and simula
 The \PT of the \Z boson system, which is correlated with 
 \mttwo, is also well reproduced in simulation. Table \ref{tbl:DYbkg}
 summarizes the DY background contribution in the different signal regions. 
-For \leptonTau channels, only the contributions from the genuine lepton + \Tau are reported. 
+For \leptonTau channels, only the contributions from the genuine lepton+\Tau are reported. 
 A separate method is developed in Section~\ref{sect:bkgFake} to estimate the misidentified lepton contamination in these channels.
 \begin{table}[!htb]
 \begin{center}
@@ -171,7 +173,7 @@ where $r_{\rm g}$ ($r_{\rm m}$) is the genuine (misidentified \Tau) rate, i.e., 
 One can obtain the following expression by eliminating $N_{\rm g}$:
 
 \begin{equation}
-   N_{\rm m}\times (r_{\rm m}-r_{\rm g}) = (N_{\rm t} - r_{\rm g}\times N_{\rm l}).
+   r_{\rm m}\times N_{\rm m}  = r_{\rm m}\times (N_{\rm t} - r_{\rm g}\times N_{\rm l})/(r_{\rm m}-r_{\rm g}).
 \end{equation}
 Here $r_{\rm m}\times N_{\rm m}$ is the contamination of misidentified \Tau candidates in the signal region. 
 

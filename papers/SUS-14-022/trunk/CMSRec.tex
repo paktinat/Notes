@@ -1,24 +1,35 @@
 \section{The CMS detector and event reconstruction}
 \label{sect:CMSRec} 
-The central feature of the CMS apparatus is a superconducting solenoid of 6\unit{m} internal diameter that provides a magnetic field of 3.8\unit{T}. Within the solenoid volume are a silicon pixel and strip tracker, a lead tungstate crystal electromagnetic calorimeter, and a brass and scintillator hadron calorimeter, each composed of a barrel and two endcap sections. Muons are measured in gas-ionization detectors embedded in the steel flux-return yoke outside the solenoid. Extensive forward calorimetry complements the coverage provided by the barrel and endcap detectors. 
-A more detailed description of the CMS detector, together with a definition of the coordinate system used and the relevant kinematic variables, can be found in Ref. \cite{Chatrchyan:2008zzk}.
+The central feature of the CMS apparatus is a superconducting solenoid of 6\unit{m} 
+internal diameter that provides a magnetic field of 3.8\unit{T}. Within the solenoid 
+volume are a silicon pixel and strip tracker, a lead tungstate crystal electromagnetic 
+calorimeter, and a brass and scintillator hadron calorimeter, each composed of a barrel 
+and two endcap sections. Muons are measured in gas-ionization detectors embedded in the 
+steel flux-return yoke outside the solenoid. Extensive forward calorimetry complements the coverage provided by the barrel and endcap detectors. 
+A more detailed description of the CMS detector, together with a definition of the coordinate system used 
+and the relevant kinematic variables, can be found in Ref. \cite{Chatrchyan:2008zzk}.
 
 Events from pp interactions must satisfy the requirements of a two-level trigger system.
-The first level of the CMS trigger system, composed of custom hardware processors, uses information from the calorimeters and muon detectors to select the most interesting events in a fixed time interval of less than 4\mus. The high-level trigger processor farm further decreases the event rate from around 100\unit{kHz} to less than 1\unit{kHz} before data storage \cite{Chatrchyan:2008zzk}. 
+The first level of the CMS trigger system, composed of custom hardware processors, uses information from the 
+calorimeters and muon detectors to select the most interesting events in a fixed time interval of less than 4\mus. 
+The high-level trigger processor farm further decreases the event rate from around 100\unit{kHz} to less than 1\unit{kHz} 
+before data storage \cite{Khachatryan:2016bia}.
 
-The particle-flow (PF) algorithm~\cite{CMS-PAS-PFT-09-001,CMS-PAS-PFT-10-001} reconstructs and identifies each individual particle with an optimized combination of information from the various elements of the CMS detector. 
+The particle-flow (PF) algorithm~\cite{CMS-PAS-PFT-09-001,CMS-PAS-PFT-10-001} reconstructs and identifies each 
+individual particle with an optimized combination of information from the various elements of the CMS detector. 
 Jets are reconstructed from the PF candidates with the anti-$k_t$ clustering
-algorithm~\cite{Cacciari:2008gp} using a distance parameter of 0.5. We apply
- (transverse momentum) \pt- and (pseudorapidity) $\eta$-dependent corrections to account for residual
+algorithm~\cite{Cacciari:2008gp} using a distance parameter of 0.5. We apply 
+transverse momentum (\pt)- and pseudorapidity ($\eta$)-dependent corrections to account for residual
 effects of nonuniform detector response~\cite{Chatrchyan:2011ds}.
 A correction to account for multiple pp collisions within the same or nearby
 bunch crossings (pileup interactions) is estimated on an event-by-event basis using the
 jet area method described in Ref.~\cite{Cacciari:2007fd}, and is
 applied to the reconstructed jet \pt.
-The combined secondary vertex algorithm is used to identify (``b tag'') jets 
-originating from b quarks.  This algorithm 
- is based on the reconstruction of secondary vertices, together with track-based lifetime information~\cite{Chatrchyan:2012jua}. 
-In this analysis a working point is chosen such that, for jets with a \PT value greater than 60\GeV, the efficiency for tagging a jet containing a b quark is 70\%, with a light-parton jet misidentification rate of 1.5\%, and $\cPqc$ quark jet misidentification rate of 20\%.
+The combined secondary vertex algorithm~\cite{Chatrchyan:2012jua} is used to identify (``b tag'') jets 
+originating from b quarks.  This algorithm  is based on the reconstruction of secondary vertices, together with track-based lifetime information. 
+In this analysis a working point is chosen such that, for jets with a \PT value greater than 60\GeV 
+the efficiency for tagging a jet containing a b quark is 70\% with a light-parton jet misidentification rate of 1.5\%, 
+and $\cPqc$ quark jet misidentification rate of 20\%.
 Scale factors are applied to the simulated events to reproduce the tagging efficiencies measured in data, 
 separately for jets originating from b or $\cPqc$ quarks, and from light-flavor partons.
 Jets with  \PT $>$ 40\GeV and $\abs{\eta} < 5.0$ and b-tagged jets with \PT $>$ 20\GeV and $\abs{\eta} < 2.4$ are considered in this analysis.
@@ -45,24 +56,29 @@ those arising from hadron decays within jets.
 
 \section{The Monte Carlo samples}
 \label{sect:MCSamples}
-The SUSY signal processes and SM samples, which are used to evaluate potential background contributions, are simulated using CTEQ6L1~\cite{Nadolsky:2008zw} parton distribution functions. The SM processes of $\cPZ$+jets, \wjets, $\cPqt\cPaqt$, and dibosons are generated using the \MADGRAPH 5.1~\cite{Alwall:2011uj} generator. 
+The SUSY signal processes and SM samples, which are used to evaluate potential background contributions, 
+are simulated using CTEQ6L1~\cite{Nadolsky:2008zw} parton distribution functions. 
+The SM processes of $\cPZ$+jets, \wjets, $\cPqt\cPaqt$, and dibosons are generated using the \MADGRAPH 5.1~\cite{Alwall:2011uj} generator. 
 Single top quark and Higgs boson events are generated with {\POWHEG} 1.0~\cite{Nason:2004rx,Frixione:2007vw,Alioli:2009je,Alioli:2010xd}.
-In the following, the events containing at least one top quark or one $\cPZ$ boson are referred to as ``tX'' and ``ZX'', respectively. 
-Events from Higgs boson production via gluon fusion, vector-boson fusion, or in association with a $\PW$ or $\cPZ$  boson or a \ttbar pair are referred to as ``hX''. The masses of the top quark and Higgs boson are set to be 172.5\GeV~\cite{Khachatryan:2015hba} and 125\GeV~\cite{Aad:2015zhl}, respectively. Since the 
+In the following, the events from Higgs boson production via gluon fusion, vector-boson fusion, or in association with a $\PW$ or $\cPZ$  boson 
+or a \ttbar pair are referred to as ``hX.'' Later on, 
+the events containing at least one top quark or one $\cPZ$ boson are referred to as ``tX'' and ``ZX,'' respectively. 
+The masses of the top quark and Higgs boson are set to be 172.5\GeV~\cite{Khachatryan:2015hba} and 125\GeV~\cite{Aad:2015zhl}, respectively. Since the 
 final state of the pair production of \PW~bosons is very similar to our signal, in the following figures its contribution is shown as an independent sample 
-labeled as ``WW''.
+labeled as ``WW.''
 
-In one of the signal samples, pairs of charginos are produced and decay exclusively to the final states that contain 
+In one of the signal samples, pairs of charginos are produced and decayed exclusively to the final states that contain 
 two $\tau$ leptons, two $\tau$ neutrinos, and two neutralinos, as shown in Fig.~\ref{fig:Productions} (left). 
 The mediator in the decay of the \chione can be either a \sTau or $\sNu_{\tau}$. 
-The masses of the \sTau and $\sNu_{\tau}$ are set to be equal to the mean value of the \chione and \PSGczDo masses; thus they are produced on-shell. 
-%If the masses are close to one of the \chione and \PSGczDo masses, in most of the events, the produced $\tau$ lepton will have a low \pt and the efficiency of the event selection will drop dramatically.
-If the \sTau ($\sNu_{\tau}$) mass is close to the \PSGczDo mass, the $\tau$ lepton from the \sTau (\chione) decay will have a low (high) energy, resulting in decreasing (increasing) the event selection efficiency, producing a weaker (stronger) limit on the chargino mass.
-In the case where the \sTau ($\sNu_{\tau}$) mass is close to the \chione mass, the situations are opposite.
-Our scenario provides near-maximum sensitivity with m(\sTau) = m($\sNu_{\tau}$) which is equal to the mean value of the \chione and \PSGczDo masses. 
-
 The two distinct decay chains in the left diagram of Fig.~\ref{fig:Productions} 
 are assumed to have equal branching fractions of 50\%. 
+The masses of the \sTau and $\sNu_{\tau}$ are set to be equal to the mean value of the \chione and \PSGczDo masses; thus they are produced on-shell. 
+If the \sTau ($\sNu_{\tau}$) mass is close to the \PSGczDo mass, the $\tau$ lepton from the \sTau (\chione) decay will 
+have a low (high) momentum, resulting in lower (higher) selection efficiency, producing a weaker (stronger) limit on the chargino mass.
+In the case where the \sTau ($\sNu_{\tau}$) mass is close to the \chione mass, the situations are opposite.
+Our scenario provides near-maximum sensitivity with m(\sTau) = m($\sNu_{\tau}$) equal to the mean value of the \chione and \PSGczDo masses. 
+
+
 In the other signal sample, pairs of staus are produced that decay always to two $\tau$ leptons and two neutralinos, Fig.~\ref{fig:Productions} (right). 
 To model  the parton shower and fragmentation, all generators are interfaced with \PYTHIA 6.426~\cite{Sjostrand:2006za}, 
 which is also used to generate signal events. To improve the modeling of the $\tau$ lepton decays, 
@@ -71,7 +87,7 @@ which is also used to generate signal events. To improve the modeling of the $\t
 In the data set considered in this paper,
 there are on average 21 proton-proton interactions in each bunch crossing.
 Additional interactions are generated with \PYTHIA and superimposed on simulated events in a manner consistent with 
- instantaneous luminosity profile of the data set.
+the instantaneous luminosity profile of the data set.
 The detector response in the  Monte Carlo (MC) background event samples is modeled by a
 detailed simulation
 of the CMS detector based on {\GEANTfour}~\cite{Agostinelli:2002hh}.  
