@@ -9,7 +9,7 @@ steel flux-return yoke outside the solenoid. Extensive forward calorimetry compl
 A more detailed description of the CMS detector, together with a definition of the coordinate system used 
 and the relevant kinematic variables, can be found in Ref. \cite{Chatrchyan:2008zzk}.
 
-Events from pp interactions must satisfy the requirements of a two-level trigger system.
+To be recorded for further study, events from pp interactions must satisfy criteria imposed by a two-level trigger system.
 The first level of the CMS trigger system, composed of custom hardware processors, uses information from the 
 calorimeters and muon detectors to select the most interesting events in a fixed time interval of less than 4\mus. 
 The high-level trigger processor farm further decreases the event rate from around 100\unit{kHz} to less than 1\unit{kHz} 
@@ -34,9 +34,8 @@ Scale factors are applied to the simulated events to reproduce the tagging effic
 separately for jets originating from b or $\cPqc$ quarks, and from light-flavor partons.
 Jets with  \PT $>$ 40\GeV and $\abs{\eta} < 5.0$ and b-tagged jets with \PT $>$ 20\GeV and $\abs{\eta} < 2.4$ are considered in this analysis.
 
-
 The PF candidates are used to reconstruct the missing transverse momentum  vector \ptvecmiss, 
-defined as the negative of the vector sum of the transverse momenta of all reconstructed particles.  
+defined as the negative of the vector sum of the transverse momenta of all PF candidates.  
 For each event, \MPT is defined as the magnitude of \ptvecmiss.
 
 Hadronically decaying $\tau$ leptons are reconstructed using the hadron-plus-strips algorithm~\cite{Khachatryan:2015dfa}.
@@ -50,55 +49,55 @@ a cone around the $\tau$ lepton momentum direction after correcting for the effe
 pileup. The ``loose'', ``medium'', and ``tight'' working points are defined
 by requiring the measure of isolation not to exceed thresholds of 2.0, 1.0,
 and 0.8 \GeV, respectively.
- A similar measure of isolation divided by the transverse momentum of the charged lepton is 
-used in this analysis to separate leptons (e or $\mu$) from $\tau$ lepton decays from 
-those arising from hadron decays within jets.
+A similar measure of isolation is computed for charged leptons (e or $\mu$), 
+where the isolation variable is divided by the \PT of the lepton. This quantity is 
+used to suppress the contribution from leptons produced in hadron decays in jets.
 
 \section{The Monte Carlo samples}
 \label{sect:MCSamples}
 The SUSY signal processes and SM samples, which are used to evaluate potential background contributions, 
 are simulated using CTEQ6L1~\cite{Nadolsky:2008zw} parton distribution functions. 
+To model the parton shower and fragmentation, all generators are interfaced with \PYTHIA 6.426~\cite{Sjostrand:2006za}.
 The SM processes of $\cPZ$+jets, \wjets, $\cPqt\cPaqt$, and dibosons are generated using the \MADGRAPH 5.1~\cite{Alwall:2011uj} generator. 
 Single top quark and Higgs boson events are generated with {\POWHEG} 1.0~\cite{Nason:2004rx,Frixione:2007vw,Alioli:2009je,Alioli:2010xd}.
 In the following, the events from Higgs boson production via gluon fusion, vector-boson fusion, or in association with a $\PW$ or $\cPZ$  boson 
 or a \ttbar pair are referred to as ``hX.'' Later on, 
 the events containing at least one top quark or one $\cPZ$ boson are referred to as ``tX'' and ``ZX,'' respectively. 
 The masses of the top quark and Higgs boson are set to be 172.5\GeV~\cite{Khachatryan:2015hba} and 125\GeV~\cite{Aad:2015zhl}, respectively. Since the 
-final state of the pair production of \PW~bosons is very similar to our signal, in the following figures its contribution is shown as an independent sample 
-labeled as ``WW.''
+final state arising from the pair production of \PW~bosons decaying into $\tau$ leptons is very similar 
+to our signal, in the following figures its contribution is shown as an independent sample labeled as ``WW.''
 
-In one of the signal samples, pairs of charginos are produced and decayed exclusively to the final states that contain 
+In one of the signal samples, pairs of charginos are produced with \PYTHIA 6.426 and decayed exclusively to the final states that contain 
 two $\tau$ leptons, two $\tau$ neutrinos, and two neutralinos, as shown in Fig.~\ref{fig:Productions} (left). 
-The mediator in the decay of the \chione can be either a \sTau or $\sNu_{\tau}$. 
-The two distinct decay chains in the left diagram of Fig.~\ref{fig:Productions} 
-are assumed to have equal branching fractions of 50\%. 
-The masses of the \sTau and $\sNu_{\tau}$ are set to be equal to the mean value of the \chione and \PSGczDo masses; thus they are produced on-shell. 
+The daughter sparticle in the two-body decay of the \chione can be either a \sTau or $\sNu_{\tau}$. 
+In this scenario, no decay modes are considered other than those shown in Fig.~\ref{fig:Productions} (left), so for m(\sTau) = m($\sNu_{\tau}$), the two decay chains 
+(via the \sTau or $\sNu_{\tau}$) have 50\% branching fraction.
+The masses of the \sTau and $\sNu_{\tau}$ are set to be equal to the mean value of the \chione and \PSGczDo masses and consequently are produced on mass shell.
 If the \sTau ($\sNu_{\tau}$) mass is close to the \PSGczDo mass, the $\tau$ lepton from the \sTau (\chione) decay will 
-have a low (high) momentum, resulting in lower (higher) selection efficiency, producing a weaker (stronger) limit on the chargino mass.
+have a low (high) momentum, resulting in a lower (higher) overall event selection efficiency, 
+producing a weaker (stronger) limit on the chargino mass.
 In the case where the \sTau ($\sNu_{\tau}$) mass is close to the \chione mass, the situations are opposite.
 Our scenario provides near-maximum sensitivity with m(\sTau) = m($\sNu_{\tau}$) equal to the mean value of the \chione and \PSGczDo masses. 
-
-
-In the other signal sample, pairs of staus are produced that decay always to two $\tau$ leptons and two neutralinos, Fig.~\ref{fig:Productions} (right). 
-To model  the parton shower and fragmentation, all generators are interfaced with \PYTHIA 6.426~\cite{Sjostrand:2006za}, 
-which is also used to generate signal events. To improve the modeling of the $\tau$ lepton decays, 
- the \TAUOLA 1.1.1a~\cite{Davidson:2010rw} package is used for both signal and background events. 
+In the other signal sample, pairs of staus are also produced with \PYTHIA 6.426, 
+that decay always to two $\tau$ leptons and two neutralinos, Fig.~\ref{fig:Productions} (right). 
+%To model  the parton shower and fragmentation, all generators are interfaced with \PYTHIA 6.426, which is also used to generate signal events. 
+To improve the modeling of the $\tau$ lepton decays, the \TAUOLA 1.1.1a~\cite{Davidson:2010rw} package is used for both signal and background events. 
 
 In the data set considered in this paper,
-there are on average 21 proton-proton interactions in each bunch crossing.
-Additional interactions are generated with \PYTHIA and superimposed on simulated events in a manner consistent with 
+there are on average 21 pp interactions in each bunch crossing.
+Such additional interactions are generated with \PYTHIA and superimposed on simulated events in a manner consistent with 
 the instantaneous luminosity profile of the data set.
 The detector response in the  Monte Carlo (MC) background event samples is modeled by a
 detailed simulation
 of the CMS detector based on {\GEANTfour}~\cite{Agostinelli:2002hh}.  
-For the signal simulation a grid of parameters is scanned and different signal points are generated. To reduce  computational requirements, signal events 
-are processed by the CMS fast simulation \cite{Abdullin:2011zz} instead of {\GEANTfour}. 
+For the simulation of signal events, many samples of events, corresponding to a grid of \chione and \PSGczDo mass values, must be generated. 
+To reduce  computational requirements, signal events are processed by the CMS fast simulation \cite{Abdullin:2011zz} instead of {\GEANTfour}. 
 It is verified that the CMS fast simulation is in reasonable agreement with the detailed simulation for our signal which has hadronic decays of 
 tau leptons in the final state.
 The simulated events are reconstructed with similar algorithms used for collision data.
 
-The SM backgrounds are normalized to the cross sections available 
-in the literature. These cross sections correspond to next-to-next-to-leading-order (NNLO) accuracy for $\cPZ$+jets~\cite{Melnikov:2006kv} 
+The yields for the simulated SM background samples are normalized to the cross sections available in the literature.
+These cross sections correspond to next-to-next-to-leading-order (NNLO) accuracy for $\cPZ$+jets~\cite{Melnikov:2006kv} 
 and \wjets~\cite{xsec_WZ} events. For the $\cPqt\cPaqt$ simulated samples, the cross section used is calculated to full NNLO accuracy including
 the resummation of next-to-next-to-leading-logarithmic (NNLL) terms~\cite{Czakon:2011xx}.
 The event yields from diboson production are normalized to the next-to-leading-order (NLO) cross section  taken from Ref.~\cite{Campbell:2011bn}. 
