@@ -508,7 +508,7 @@ tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.1275168,0.9390244,"Preselection, MT2<90, b-tagged jets vetoed");
+      tex = new TLatex(0.1275168,0.9475,"Preselection, M_{T2}<90 GeV, b jet veto");
 tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.02972028);
