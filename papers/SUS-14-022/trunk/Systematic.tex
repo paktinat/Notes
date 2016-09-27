@@ -3,7 +3,7 @@
 Systematic uncertainties can affect the shape or normalization of the
 backgrounds estimated from simulation (\ttbar, Z+jets, diboson, and Higgs boson events), 
 as well as the signal acceptance. 
-%To calculate the uncertainties for signal, 3 signal points are used which are ($m(\chione) = 180\,\GeV$, $m(\PSGczDo) = 60\,\GeV$), (240, 40) and (380, 1) representing low, moderate and high delta mass respectively.
+Systematic uncertainties of other background contributions are described in Sections \ref{sect:bkgQCD}, \ref{sect:bkgW} and \ref{sect:bkgFake}.
 The uncertainties are listed below, and summarized in Table~\ref{Tab.SYS}.
 
 \begin{itemize}
@@ -15,20 +15,14 @@ The visible energy of \Tau object in the MC simulation is scaled up and down
 by 3\%, and all \Tau-related variables are recalculated. The resulting variations in
 final yields are taken as the systematic uncertainties. They are evaluated to be 10--15\% for 
 backgrounds and 2--15\% in different parts of the signal phase space.
-% which is accessible by the analysis, the value is almost constant in different points and a conservative value is selected.
 
-
-
-\item The uncertainty in the \Tau identification efficiency is 6\%. 
-  The uncertainty in the trigger efficiency of the \Tau part of the \eTau and
-  \muTau (\tauTau) triggers amounts to 3.0\% (4.5\%) per \Tau candidate.
-  A ``tag-and-probe'' technique \cite{Chatrchyan:2014mua} on $\cPZ\to \Pgt\Pgt$ data events is used to estimate these 
-  uncertainties \cite{Khachatryan:2014wca}.
-
+\item The uncertainty in the \Tau identification efficiency is 6\%. The uncertainty in the trigger 
+efficiency of the \Tau part of the \eTau and \muTau (\tauTau) triggers amounts to 3.0\% (4.5\%) per 
+\Tau candidate. A ``tag-and-probe'' technique \cite{Chatrchyan:2014mua} on $\cPZ\to \Pgt\Pgt$ data 
+events is used to estimate these uncertainties \cite{Khachatryan:2014wca}.
 
 \item The uncertainty in electron and muon trigger, identification, and
-  isolation efficiencies is 2\% \cite{Khachatryan:2014wca}.
-
+isolation efficiencies is 2\% \cite{Khachatryan:2014wca}.
 
 \item The uncertainty due to the scale factor for the b-tagging efficiency and misidentification 
 rate is evaluated by varying the factors within their uncertainties. The yields of signal and background events are changed by 8\% 
@@ -50,7 +44,6 @@ in the \MADGRAPH+ \PYTHIA program.
 Using the SM WW process, which
  is expected to be similar to chargino pair production in terms of parton content and process, a 3\% uncertainty in 
 the efficiency of  b-tagged jets veto and a 6\% uncertainty in the \deltaphi requirement are assigned.
-%The ISR uncertainty is not considered for the background samples, due to the usage of matrix element event generators.
 
 \item The uncertainties related to \MPT can arise from different sources, e.g.  the energy scales of lepton, \Tau, and jet 
 objects, and unclustered energy.  The unclustered energy is the energy of the reconstructed objects which
@@ -64,14 +57,12 @@ objects, and unclustered energy.  The unclustered energy is the energy of the re
  \Tau candidate is assigned by comparing the \Tau isolation and identification efficiency in the fast
  and full simulations. 
 
-
 \item The statistical uncertainties due to limited numbers of simulated events also contributes to the overall uncertainties. 
 This uncertainty amounts to 3--15\% for the different parts of the signal phase space and 13--70\% for the backgrounds in different signal regions.
 
-
-\item For less important backgrounds like \ttbar,  dibosons, and Higgs boson production, the number of simulated events remaining after event selection is very small. 
-A 50\% uncertainty is considered for these backgrounds to account for the possible theoretical uncertainty in the
-cross section calculation as well as the shape mismodeling.
+\item For less important backgrounds like \ttbar,  dibosons, and Higgs boson production, the number of simulated 
+events remaining after event selection is very small. A 50\% uncertainty is considered for these backgrounds 
+to account for the possible theoretical uncertainty in the cross section calculation as well as the shape mismodeling.
 \end{itemize}
 
 \input{SystematicTab}
@@ -79,8 +70,5 @@ cross section calculation as well as the shape mismodeling.
 \noindent The systematic uncertainties that can alter the shapes are added in quadrature and 
 treated as correlated when two signal regions of the \tauTau channel are combined. Other systematic uncertainties of these two 
 channels and all of the systematic uncertainties of the \leptonTau channels are treated as uncorrelated.
-%The total uncertainties in the signal acceptance in the \leptonTau and \tauTau 
-%channels are 20\% and 25\%, respectively; 25\% and 28\% on Monte Carlo predictions for W+jets and DY events in the \leptonTau and \tauTau  channels, respectively.
-%The uncertainty of the other small backgrounds (Higgs boson, diboson, ttbar production) is 50\% for all channels.
 
 
