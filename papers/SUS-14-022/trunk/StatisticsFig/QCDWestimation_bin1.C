@@ -410,7 +410,7 @@ tex->SetNDC();
    TLegendEntry *entry=leg->AddEntry("h2_copy","Data","p");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(20);
    entry->SetMarkerSize(1);
