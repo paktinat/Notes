@@ -76,9 +76,11 @@ in Table \ref{4QCDbg} to extract the ``fit'' uncertainty.
 
 \subsection{\texorpdfstring{\wjets background estimation in the \tauTau channel}{W+jets background estimation in the tau-tau channel}}
 \label{sect:bkgW}
-The contribution of the \wjets background in the \tauTau channel is taken from simulated events, using the formula:
+In the \tauTau channel, the number of remaining events for \wjets from MC is zero,
+but it has a large statistical uncertainty due to the lack of the statistics in the simulated sample. To
+have a better estimation, the contribution of the \wjets background in the \tauTau channel is taken from simulated events, using the formula:
 \begin{equation}
-N_{\rm SR} = N_{\rm BFS} \times \epsilon_{\rm{FS}}.
+N_{\rm SR} = \epsilon_{\rm{FS}}N_{\rm BFS} .
 \end{equation}
 Here $N_{\rm SR}$ is the estimation of \wjets events in the signal region, $N_{\rm BFS}$ is the number of 
 \wjets events before applying the final selection criterion (\mttwo $>$ 90\GeV for \binone and \SumMT $>$ 250\GeV for \bintwo), but after applying all other selection criteria, including \mttwo $>$ 40\GeV for \binone and 40 $<\mttwo<$ 90\GeV for \bintwo.
@@ -168,13 +170,13 @@ where $N_{\rm g}$ is the number of genuine \Tau candidates and $N_{\rm m}$ is th
 \Tau candidates. If the selection is tightened, the number of tight \Tau candidates ($N_{\rm t}$)  is
 
 \begin{equation}
- N_{\rm t} = r_{\rm g}\times N_{\rm g} + r_{\rm m}\times N_{\rm m}
+ N_{\rm t} = r_{\rm g} N_{\rm g} + r_{\rm m} N_{\rm m}
 \end{equation} 
 where $r_{\rm g}$ ($r_{\rm m}$) is the genuine (misidentified \Tau) rate, i.e., the probability that a loosely selected genuine (misidentified) \Tau candidate passes the  tight  selection. 
 One can obtain the following expression by eliminating $N_{\rm g}$:
 
 \begin{equation}
-   r_{\rm m}\times N_{\rm m}  = r_{\rm m}\times (N_{\rm t} - r_{\rm g}\times N_{\rm l})/(r_{\rm m}-r_{\rm g}).
+   r_{\rm m} N_{\rm m}  = r_{\rm m} (N_{\rm t} - r_{\rm g} N_{\rm l})/(r_{\rm m}-r_{\rm g}).
 \end{equation}
 Here, the product $r_{\rm m} N_{\rm m}$ is the contamination of misidentified \Tau candidates in the signal region. 
 
@@ -218,9 +220,9 @@ quadratic sum of the individual components. All uncertainties are relative.
 The $r_{\rm m}$ ($r_{\rm g}$) is shorthand for misidentified (genuine) \Tau candidate rate.}
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
-Channel    & Total misid. & Stat &  $r_{\rm m}$ syst & $r_{\rm g}$  syst & Total uncert. \\\hline\hline
-\eTau      &   3.30     &  101\%    &  17\%    & 2\%  & 102\%  \\
-\muTau     &   8.15     &   56\%    &  18\%    & 5\%   & 59\%  \\
+Channel    & Total misid (events) & Stat (\%) &  $r_{\rm m}$ syst (\%) & $r_{\rm g}$  syst (\%) & Total uncert (\%) \\\hline\hline
+\eTau      &   3.30     &  101    &  17    & 2  & 102  \\
+\muTau     &   8.15     &   56    &  18    & 5   & 59  \\
 \hline
 \end{tabular}
 \label{Tab.FakeEstimation}
