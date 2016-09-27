@@ -5,6 +5,7 @@ void ExclusionSTauSTauLsp1()
    TCanvas *ExclusionSTauSTauLsp1 = new TCanvas("ExclusionSTauSTauLsp1", "ExclusionSTauSTauLsp1",0,45,1105,679);
 //   TCanvas *ExclusionSTauSTauLsp1 = new TCanvas("ExclusionSTauSTauLsp1", "ExclusionSTauSTauLsp1",177,131,848,847);
    gStyle->SetOptTitle(0);
+
    ExclusionSTauSTauLsp1->Range(4.446029,-3.052129,366.7901,22.80848);
    //   ExclusionSTauSTauLsp1->Range(51.37143,-3.802408,333.6571,24.1758);
    ExclusionSTauSTauLsp1->SetFillColor(0);
@@ -325,7 +326,8 @@ void ExclusionSTauSTauLsp1()
    
    graph->Draw("c");
    TLine *line = new TLine(110,1,300,1);
-   line->SetLineStyle(7);
+   line->SetLineStyle(3);
+   line->SetLineWidth(1);
    line->Draw();
    
    TLegend *leg = new TLegend(0.3291024,0.6515152,0.7107888,0.8572568,NULL,"brNDC");
