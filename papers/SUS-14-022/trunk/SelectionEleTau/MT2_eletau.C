@@ -655,7 +655,7 @@ tex->SetNDC();
    hOne->SetEntries(31.4133);
    hOne->SetStats(0);
    hOne->SetFillColor(1);
-   hOne->SetFillStyle(3003);
+   hOne->SetFillStyle(3004);
    hOne->SetLineWidth(2);
    hOne->SetLineColor( kBlack );
    hOne->SetMarkerColor( kBlack );

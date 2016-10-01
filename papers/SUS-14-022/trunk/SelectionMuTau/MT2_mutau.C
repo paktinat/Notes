@@ -462,6 +462,10 @@
    h2_copy->GetZaxis()->SetTitleSize(0.035);
    h2_copy->GetZaxis()->SetTitleFont(42);
    h2_copy->Draw("e1 same");
+  exec = new TExec("setex1","gStyle->SetErrorX(0.5)");
+   exec->Draw();
+
+
    Double_t xAxis9[12] = {40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150}; 
    
    TH1D *h_susy = new TH1D("h_susy","",11, xAxis9);
@@ -514,7 +518,7 @@ tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.03);
    tex->SetLineWidth(2);
-   tex->Draw();
+   //   tex->Draw();
       tex = new TLatex(0.6661074,0.9451827,"19.6 fb^{-1} (8TeV)");
 tex->SetNDC();
    tex->SetTextFont(42);
@@ -654,7 +658,7 @@ tex->SetNDC();
    //hOne->SetEntries(31.4133);
    hOne->SetStats(0);
    hOne->SetFillColor(1);
-   hOne->SetFillStyle(3001);
+   hOne->SetFillStyle(3004);
    hOne->SetLineWidth(2);
    hOne->SetLineColor( kBlack );
    hOne->SetMarkerColor( kBlack );
@@ -677,13 +681,15 @@ tex->SetNDC();
    hOne->GetZaxis()->SetLabelSize(0.035);
    hOne->GetZaxis()->SetTitleSize(0.035);
    hOne->GetZaxis()->SetTitleFont(42);
-   hOne->Draw("E6");
+   hOne->Draw("E2");
+   exec = new TExec("setex1","gStyle->SetErrorX(0.0)");
+   exec->Draw();
 
    
    TH1D *hRatio = h2_copy->Clone("hDataOverMC");
    hRatio->Divide( hMC );
    hRatio->SetMinimum(0);
-   hRatio->SetMaximum(2);
+   hRatio->SetMaximum(3);
    hRatio->SetDirectory(0);
    hRatio->SetStats(0);
    hRatio->SetLineWidth(2);
