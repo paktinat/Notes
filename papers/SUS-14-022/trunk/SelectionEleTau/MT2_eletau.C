@@ -457,8 +457,11 @@
    h2_copy19__7->GetZaxis()->SetLabelSize(0.035);
    h2_copy19__7->GetZaxis()->SetTitleSize(0.035);
    h2_copy19__7->GetZaxis()->SetTitleFont(42);
-   h2_copy19__7->Draw("E1 SAME");
-   
+   h2_copy19__7->Draw("E SAME");
+
+   exec = new TExec("setex1","gStyle->SetErrorX(0.5)");
+   exec->Draw();
+
    TH1D *MT2PreCut_MT2_SUSY_380_120__8 = new TH1D("MT2PreCut_MT2_SUSY_380_120__8","",11,40,150);
    MT2PreCut_MT2_SUSY_380_120__8->SetBinContent(1,0.664911);
    MT2PreCut_MT2_SUSY_380_120__8->SetBinContent(2,0.5718391);
@@ -512,7 +515,7 @@ tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.03);
    tex->SetLineWidth(2);
-   tex->Draw();
+   //   tex->Draw();
       tex = new TLatex(0.6694631,0.9435216,"19.6 fb^{-1} (8TeV)");
 tex->SetNDC();
    tex->SetTextFont(42);
@@ -642,17 +645,17 @@ tex->SetNDC();
    MT2RatioEleTau->SetFrameLineWidth(3);
    MT2RatioEleTau->SetFrameBorderMode(0);
    MT2RatioEleTau->SetFrameBorderSize(0);
+ 
 
-   TH1D* hOne = MT2PreCut_MT2->GetStack()->Last()->Clone("hOne");
-   //hOne->Sumw2();
+   TH1D* hOne = (TH1D*)h__MC->Clone("hOne");
    TH1D *hMC = MT2PreCut_MT2->GetStack()->Last()->Clone("hMC");
    hOne->Divide( hMC );
    hOne->SetMinimum(0);
    hOne->SetMaximum(2);
-   //hOne->SetEntries(31.4133);
+   hOne->SetEntries(31.4133);
    hOne->SetStats(0);
    hOne->SetFillColor(1);
-   hOne->SetFillStyle(3001);
+   hOne->SetFillStyle(3003);
    hOne->SetLineWidth(2);
    hOne->SetLineColor( kBlack );
    hOne->SetMarkerColor( kBlack );
@@ -675,9 +678,10 @@ tex->SetNDC();
    hOne->GetZaxis()->SetLabelSize(0.035);
    hOne->GetZaxis()->SetTitleSize(0.035);
    hOne->GetZaxis()->SetTitleFont(42);
-   hOne->Draw("E6");
+   hOne->Draw("E2");
+   exec = new TExec("setex1","gStyle->SetErrorX(0.0)");
+   exec->Draw();
 
-   
    TH1D *hRatio = h2_copy19__7->Clone("hDataOverMC");
    hRatio->Divide( hMC );
    hRatio->SetMinimum(0);
