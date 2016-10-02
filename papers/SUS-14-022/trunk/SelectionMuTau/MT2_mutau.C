@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: MT2_Ratio_Preselection_unBlinded/
 //=========  (Mon Jul 18 15:03:36 2016) by ROOT version5.34/03
-   TCanvas *MT2_Ratio_Preselection_unBlinded = new TCanvas("MT2_Ratio_Preselection_unBlinded", "",294,136,600,634);
+   TCanvas *MT2_Ratio_Preselection_unBlinded = new TCanvas("MT2_Ratio_Preselection_unBlinded", "",295,54,600,638);
    gStyle->SetOptFit(1);
    // MT2_Ratio_Preselection_unBlinded->Range(13.31066,-3.83404,161.9728,5.159975);
    // MT2_Ratio_Preselection_unBlinded->SetFillColor(0);
