@@ -327,7 +327,7 @@ void ExclusionSTauSTauLsp1()
    graph->Draw("c");
    TLine *line = new TLine(110,1,300,1);
    line->SetLineStyle(3);
-   line->SetLineWidth(1);
+   line->SetLineWidth(2);
    line->Draw();
    
    TLegend *leg = new TLegend(0.3291024,0.6515152,0.7107888,0.8572568,NULL,"brNDC");
