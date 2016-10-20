@@ -438,6 +438,7 @@
    h2_copy19__7->SetBinError(12,1);
    h2_copy19__7->SetMaximum(9150.271);
    h2_copy19__7->SetEntries(5460);
+   h2_copy19__7->SetLineColor(kBlack);
    h2_copy19__7->SetFillColor(1);
    h2_copy19__7->SetLineWidth(2);
    h2_copy19__7->SetMarkerStyle(20);
