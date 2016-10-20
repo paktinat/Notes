@@ -461,7 +461,7 @@
    h2_copy->GetZaxis()->SetLabelSize(0.035);
    h2_copy->GetZaxis()->SetTitleSize(0.035);
    h2_copy->GetZaxis()->SetTitleFont(42);
-   h2_copy->Draw("e1 same");
+   h2_copy->Draw("e same");
   exec = new TExec("setex1","gStyle->SetErrorX(0.5)");
    exec->Draw();
 
