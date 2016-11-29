@@ -357,9 +357,9 @@
    TauMTCut_MT2_SUSY_380_0_Rebinned->SetBinError(5,0.09111579);
    TauMTCut_MT2_SUSY_380_0_Rebinned->SetEntries(969);
    TauMTCut_MT2_SUSY_380_0_Rebinned->SetStats(0);
-   TauMTCut_MT2_SUSY_380_0_Rebinned->SetLineColor(7);
-   TauMTCut_MT2_SUSY_380_0_Rebinned->SetLineStyle(7);
-   TauMTCut_MT2_SUSY_380_0_Rebinned->SetLineWidth(4);
+   TauMTCut_MT2_SUSY_380_0_Rebinned->SetLineColor(6);
+   TauMTCut_MT2_SUSY_380_0_Rebinned->SetLineStyle(9);
+   TauMTCut_MT2_SUSY_380_0_Rebinned->SetLineWidth(3);
    TauMTCut_MT2_SUSY_380_0_Rebinned->SetMarkerStyle(20);
    TauMTCut_MT2_SUSY_380_0_Rebinned->GetXaxis()->SetNdivisions(505);
    TauMTCut_MT2_SUSY_380_0_Rebinned->GetXaxis()->SetLabelFont(42);

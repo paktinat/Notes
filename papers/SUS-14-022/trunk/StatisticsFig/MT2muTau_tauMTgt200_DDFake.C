@@ -362,9 +362,9 @@
    h1_susy->SetBinError(6,0.1105816);
    h1_susy->SetBinError(7,0.0865969);
    h1_susy->SetEntries(1021);
-   h1_susy->SetLineColor(7);
-   h1_susy->SetLineStyle(7);
-   h1_susy->SetLineWidth(4);
+   h1_susy->SetLineColor(6);
+   h1_susy->SetLineStyle(9);
+   h1_susy->SetLineWidth(3);
    h1_susy->GetXaxis()->SetNdivisions(505);
    h1_susy->GetXaxis()->SetLabelFont(42);
    h1_susy->GetXaxis()->SetLabelSize(0.07);

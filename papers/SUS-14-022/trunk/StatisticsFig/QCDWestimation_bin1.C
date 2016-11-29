@@ -356,9 +356,9 @@
    MT2_susy->SetBinError(4,0.2425826);
    MT2_susy->SetEntries(762);
    MT2_susy->SetStats(0);
-   MT2_susy->SetLineColor(7);
-   MT2_susy->SetLineStyle(7);
-   MT2_susy->SetLineWidth(4);
+   MT2_susy->SetLineColor(6);
+   MT2_susy->SetLineStyle(9);
+   MT2_susy->SetLineWidth(3);
    MT2_susy->SetMarkerStyle(20);
    MT2_susy->GetXaxis()->SetNdivisions(505);
    MT2_susy->GetXaxis()->SetLabelFont(42);

@@ -493,7 +493,7 @@
    h_susy->SetBinError(11,0.06930998);
    h_susy->SetBinError(12,0.06212784);
    h_susy->SetEntries(2310);
-   h_susy->SetLineColor(42);
+   h_susy->SetLineColor(6);
    h_susy->SetLineStyle(9);
    h_susy->SetLineWidth(4);
    h_susy->GetXaxis()->SetNdivisions(505);
