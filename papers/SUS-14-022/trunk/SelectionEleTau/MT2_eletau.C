@@ -489,8 +489,8 @@
    MT2PreCut_MT2_SUSY_380_120__8->SetBinError(11,0.03064086);
    MT2PreCut_MT2_SUSY_380_120__8->SetBinError(12,0.05165145);
    MT2PreCut_MT2_SUSY_380_120__8->SetEntries(2179);
-   MT2PreCut_MT2_SUSY_380_120__8->SetLineColor(7);
-   MT2PreCut_MT2_SUSY_380_120__8->SetLineStyle(7);
+   MT2PreCut_MT2_SUSY_380_120__8->SetLineColor(42);
+   MT2PreCut_MT2_SUSY_380_120__8->SetLineStyle(9);
    MT2PreCut_MT2_SUSY_380_120__8->SetLineWidth(4);
    MT2PreCut_MT2_SUSY_380_120__8->SetMarkerStyle(20);
    MT2PreCut_MT2_SUSY_380_120__8->SetMarkerSize(2);
